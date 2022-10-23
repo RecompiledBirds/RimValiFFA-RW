@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.Defs.RenderableDef>
+		<defName>EyeL</defName>
+		<bodyPart>left eye</bodyPart>
+		<north>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</north>
+		<south>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</south>
+		<east>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Eyes/EyeL</texPath>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+
+	<RVCRestructured.Defs.RenderableDef>
+		<defName>EyeR</defName>
+		<bodyPart>right eye</bodyPart>
+		<north>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</north>
+		<south>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</south>
+		<east>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Eyes/EyeR</texPath>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+</Defs>
