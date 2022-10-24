@@ -19,6 +19,17 @@
 			<renderableDefs>
 				<li>RimValiFFA_EyeL</li>
 				<li>RimValiFFA_EyeR</li>
+				<li>RimValiFFA_EarLL</li>
+				<li>RimValiFFA_EarLU</li>
+				<li>RimValiFFA_EarRL</li>
+				<li>RimValiFFA_EarRU</li>
+
+				<li>RimValiFFA_Head</li>
+
+				<li>RimValiFFA_Body</li>
+
+				<li>RimValiFFA_Tail</li>
+				<li>RimValiFFA_TailSkirt</li>
 			</renderableDefs>
 		</raceGraphics>
 		<restrictions>

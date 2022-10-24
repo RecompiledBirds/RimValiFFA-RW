@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.Defs.RenderableDef>
+		<defName>RimValiFFA_TailSkirt</defName>
+		<north>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</north>
+		<south>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</south>
+		<east>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Tail/TailSkirt/Male/MaleTailskirt</texPath>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+	<RVCRestructured.Defs.RenderableDef>
+		<defName>RimValiFFA_Tail</defName>
+		<north>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</north>
+		<south>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</south>
+		<east>
+			<position>(0,0,0)</position>
+			<size>1</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Tail/Male/MaleTail</texPath>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+</Defs>
