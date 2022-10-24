@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<RVCRestructured.Defs.RenderableDef>
-		<defName>EyeL</defName>
+		<defName>RimValiFFA_EyeL</defName>
 		<bodyPart>left eye</bodyPart>
 		<north>
 			<position>(0,0,0)</position>
@@ -24,7 +24,7 @@
 
 
 	<RVCRestructured.Defs.RenderableDef>
-		<defName>EyeR</defName>
+		<defName>RimValiFFA_EyeR</defName>
 		<bodyPart>right eye</bodyPart>
 		<north>
 			<position>(0,0,0)</position>
