@@ -16,7 +16,7 @@
 		</east>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Tail/TailSkirt/Male/MaleTailskirt</texPath>
+				<texPath>RimValiFFA/Tail/Tailskirt/Male/MaleTailskirt</texPath>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
