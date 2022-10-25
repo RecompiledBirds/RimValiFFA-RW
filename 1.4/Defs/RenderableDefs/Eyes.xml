@@ -3,16 +3,18 @@
 	<RVCRestructured.Defs.RenderableDef>
 		<defName>RimValiFFA_EyeL</defName>
 		<bodyPart>left eye</bodyPart>
+		<colorSet>Eyes</colorSet>
+		<linkPosWith>RimValiFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>1</size>
 		</south>
 		<east>
-			<position>(0,0,0)</position>
+			<position>(0,0.013,0)</position>
 			<size>1</size>
 		</east>
 		<textures>
@@ -26,16 +28,18 @@
 	<RVCRestructured.Defs.RenderableDef>
 		<defName>RimValiFFA_EyeR</defName>
 		<bodyPart>right eye</bodyPart>
+		<colorSet>Eyes</colorSet>
+		<linkPosWith>RimValiFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>1</size>
 		</south>
 		<east>
-			<position>(0,0,0)</position>
+			<position>(0,-0.013,0)</position>
 			<size>1</size>
 		</east>
 		<textures>

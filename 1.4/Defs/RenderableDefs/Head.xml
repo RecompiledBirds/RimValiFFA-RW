@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.Defs.RenderableDef>
+	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
 		<defName>RimValiFFA_Head</defName>
 		<north>
-			<position>(0,0,0)</position>
+			<position>(0,0.013,0.49)</position>
 			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,0.013,0.49)</position>
 			<size>1</size>
 		</south>
 		<east>
-			<position>(0,0,0)</position>
+			<position>(0.09,0.013,0.48)</position>
 			<size>1</size>
 		</east>
 		<textures>
@@ -20,6 +20,10 @@
 				<alternateMaskPaths>
 					<li>RimValiFFA/Heads/Male/Variant</li>
 				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Heads/Female/FemaleHead</li>
+				</alternateFemaleMaskPaths>
+				
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>

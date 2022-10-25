@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.Defs.RenderableDef>
+	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
 		<defName>RimValiFFA_EarLL</defName>
+		<linkPosWith>RimValiFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>1</size>
 		</south>
 		<east>
-			<position>(0,0,0)</position>
+			<position>(-0.2,-0.013,-0.01)</position>
 			<size>1</size>
 		</east>
 		<textures>
@@ -20,23 +21,27 @@
 				<alternateMaskPaths>
 					<li>RimValiFFA/Ears/Male/LowerLeft/Variant</li>
 				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/LowerLeft/FemaleLowerLeft</li>
+				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
 
 
-	<RVCRestructured.Defs.RenderableDef>
+	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
 		<defName>RimValiFFA_EarRL</defName>
+		<linkPosWith>RimValiFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>1</size>
 		</south>
 		<east>
-			<position>(0,0,0)</position>
+			<position>(-0.2,0.013,-0.01)</position>
 			<size>1</size>
 		</east>
 		<textures>
@@ -45,22 +50,26 @@
 				<alternateMaskPaths>
 					<li>RimValiFFA/Ears/Male/LowerRight/Variant</li>
 				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/LowerRight/FemaleLowerRight</li>
+				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
 
-	<RVCRestructured.Defs.RenderableDef>
+	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
 		<defName>RimValiFFA_EarLU</defName>
+		<linkPosWith>RimValiFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>1</size>
 		</south>
 		<east>
-			<position>(0,0,0)</position>
+			<position>(-0.256,-0.013,0.01)</position>
 			<size>1</size>
 		</east>
 		<textures>
@@ -69,23 +78,27 @@
 				<alternateMaskPaths>
 					<li>RimValiFFA/Ears/Male/UpperLeft/Variant</li>
 				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/UpperLeft/FemaleUpperLeft</li>
+				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
 
 
-	<RVCRestructured.Defs.RenderableDef>
+	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
 		<defName>RimValiFFA_EarRU</defName>
+		<linkPosWith>RimValiFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>1</size>
 		</south>
 		<east>
-			<position>(0,0,0)</position>
+			<position>(-0.256,0.013,0.01)</position>
 			<size>1</size>
 		</east>
 		<textures>
@@ -94,6 +107,9 @@
 				<alternateMaskPaths>
 					<li>RimValiFFA/Ears/Male/UpperRight/Variant</li>
 				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/UpperRight/FemaleUpperRight</li>
+				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>

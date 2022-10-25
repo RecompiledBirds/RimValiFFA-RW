@@ -31,6 +31,165 @@
 				<li>RimValiFFA_Tail</li>
 				<li>RimValiFFA_TailSkirt</li>
 			</renderableDefs>
+
+
+			<colorGenerators>
+				<li>
+					<name>Eyes</name>
+					<colorGenerator>
+						<colorOne Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(0, 0, 0)</min>
+									<max>(255, 255, 255)</max>
+								</li>
+							</options>
+						</colorOne>
+						<colorTwo Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(50, 50, 50)</min>
+									<max>(200, 200, 200)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>RGBA(40, 40, 40, 255)</min>
+									<max>RGBA(60, 60, 60, 255)</max>
+								</li>
+							</options>
+						</colorTwo>
+						<colorThree Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(50, 50, 50)</min>
+									<max>(200, 200, 200)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>(40, 40, 40)</min>
+									<max>(60, 60, 60)</max>
+								</li>
+							</options>
+						</colorThree>
+					</colorGenerator>
+				</li>
+				<li>
+					<name>Feathers</name>
+					<colorGenerator>
+						<colorOne Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(200, 200, 200)</min>
+									<max>(255, 255, 255)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>(220, 220, 220)</min>
+									<max>(240, 240, 240)</max>
+								</li>
+								<li>
+									<weight>5</weight>
+									<min>RGBA(40, 40, 40, 255)</min>
+									<max>RGBA(60, 60, 60, 255)</max>
+								</li>
+							</options>
+						</colorOne>
+						<colorTwo Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(50, 50, 50)</min>
+									<max>(200, 200, 200)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>RGBA(40, 40, 40, 255)</min>
+									<max>RGBA(60, 60, 60, 255)</max>
+								</li>
+							</options>
+						</colorTwo>
+						<colorThree Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(50, 50, 50)</min>
+									<max>(200, 200, 200)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>(40, 40, 40)</min>
+									<max>(60, 60, 60)</max>
+								</li>
+							</options>
+						</colorThree>
+					
+				</colorGenerator>
+					<colorGeneratorFemale>
+						<colorOne Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(185, 185, 185)</min>
+									<max>(215, 215, 215)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>(220, 220, 220)</min>
+									<max>(240, 240, 240)</max>
+								</li>
+								<li>
+									<weight>1</weight>
+									<min>RGBA(40, 40, 40, 255)</min>
+									<max>RGBA(60, 60, 60, 255)</max>
+								</li>
+							</options>
+						</colorOne>
+						<colorTwo Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(185, 185, 185)</min>
+									<max>(215, 215, 215)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>(220, 220, 220)</min>
+									<max>(240, 240, 240)</max>
+								</li>
+								<li>
+									<weight>1</weight>
+									<min>RGBA(40, 40, 40, 255)</min>
+									<max>RGBA(60, 60, 60, 255)</max>
+								</li>
+							</options>
+						</colorTwo>
+						<colorThree Class="ColorGenerator_Options">
+							<options>
+								<li>
+									<weight>10</weight>
+									<min>(185, 185, 185)</min>
+									<max>(215, 215, 215)</max>
+								</li>
+								<li>
+									<weight>2</weight>
+									<min>(220, 220, 220)</min>
+									<max>(240, 240, 240)</max>
+								</li>
+								<li>
+									<weight>1</weight>
+									<min>RGBA(40, 40, 40, 255)</min>
+									<max>RGBA(60, 60, 60, 255)</max>
+								</li>
+							</options>
+						</colorThree>
+					
+				</colorGeneratorFemale>
+				</li>
+			</colorGenerators>
 		</raceGraphics>
 		<restrictions>
 			
