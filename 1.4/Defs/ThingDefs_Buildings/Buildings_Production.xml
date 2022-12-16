@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="BenchBase" Name="RVFFA_BaseProductionBench" Abstract="True">
+		<thingClass>Building_WorkTable</thingClass>
 		<designationCategory>RVFFA_Production</designationCategory>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<placeWorkers>
@@ -38,6 +39,11 @@
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
+
+		<fillPercent>1</fillPercent>
+
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
 		
 	</ThingDef>
 
@@ -45,8 +51,6 @@
 		<defName>RVFFA_NanoForge</defName>
 		<label>Avali nanoforge</label>
 		<description>The Avali Nano-Printing Forge is a 3D printer, like most Avali crafting utilities. It works with immense heat, and nanotechnologies able to rearrange the structure and molecues of the items put in. Caution: Do not stick fingers, toes, feet, hands, tails, or other limbs inside, even if the device appears to be powered off.</description>
-
-		<thingClass>Building_WorkTable</thingClass>
 		
 		<size>(3,1)</size>
 
@@ -77,12 +81,36 @@
 			</damageData>
 		</graphicData>
 
-		<castEdgeShadows>true</castEdgeShadows>
-		<staticSunShadowHeight>0.20</staticSunShadowHeight>
-		
-		<fillPercent>1</fillPercent>
-
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 
+	</ThingDef>
+
+
+	<ThingDef ParentName="RVFFA_BaseProductionBench">
+		<defName>RVFFA_NanoLoom</defName>
+		<label>Avali Nanoloom</label>
+		<description>An avali research bench. Most avali would dimiss this kind of tech as simple, and somewhat bulky, while the humans just stare at the hologram it projects. You'll learn to make better versions later on, most likely, but this is a start. You'll need it to research avali tech.</description>
+
+		<size>(1,1)</size>
+
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Production/Loom/Loom</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,1.8)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+
+		<!--TODO: Recipes-->
+
+		<!-- TODO: RESEARCH-->
+
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		
 	</ThingDef>
 </Defs>
