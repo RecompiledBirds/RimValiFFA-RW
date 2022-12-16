@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef>
+		<defName>RVFFA_Resources</defName>
+		<label>Avali resources</label>
+		<parent>Root</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>RimValiFFA/Things/Aerogel/BaseAerogel/Aerogel/Aerogel_a</iconPath>
+	</ThingCategoryDef>
+</Defs>

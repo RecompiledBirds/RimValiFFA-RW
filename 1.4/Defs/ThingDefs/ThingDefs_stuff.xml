@@ -46,7 +46,7 @@
         </statBases>
 
         <thingCategories>
-            <li>AvaliResources</li>
+            <li>RVFFA_Resources</li>
         </thingCategories>
 
         <stuffProps>
@@ -57,8 +57,7 @@
 
             <commonality>0</commonality>
 
-            <color>RGBA(255,199,33,100)</color>
-
+            <color>RGBA(255,199,33,200)</color>
             <constructEffect>ConstructMetal</constructEffect>
             <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
             <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
