@@ -69,6 +69,10 @@
 			<li>RVFFA_PrintFerrogel</li>
 			<li>RVFFA_PrintFerrogelTwo</li>
 			<li>RVFFA_PrintFerrogelThree</li>
+
+			<li>RVFFA_SinterTungsten</li>
+			<li>RVFFA_SinterTungstenTwo</li>
+			<li>RVFFA_SinterTungstenThree</li>
 		</recipes>
 		<!-- TODO: RESEARCH-->
 

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase" Name="RVFFA_BaseItem" Abstract="True">
+		<techLevel>Industrial</techLevel>
+
+		<thingCategories>
+			<li>RVFFA_Resources</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Name="RVFFA_TungstenBase" ParentName="RockBase" Abstract="True">
+		<statBases>
+			<MaxHitPoints>5000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>RVFFA_Tungsten</mineableThing>
+			<mineableYield>20</mineableYield>
+			<mineableScatterCommonality>1</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~35</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+</Defs>

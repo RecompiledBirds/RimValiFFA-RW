@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="RVFFA_BaseItem">
+        <defName>RVFFA_Ferrogel</defName>
+        <label>Ferrogel</label>
+        <description>Often mistranslated to aerogel, ferrogel is the base building block of many avali technologies. It's been made in neat, stackable pucks for easy storage.</description>
+        <stackLimit>75</stackLimit>
+
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Aerogel/BaseAerogel/Aerogel</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>10</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.2</DeteriorationRate>
+            <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+            <BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+        </statBases>
+
+        <stuffProps>
+            <stuffAdjective>Ferrogel</stuffAdjective>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+
+            <commonality>0</commonality>
+
+            <color>RGBA(255,199,33,200)</color>
+            <constructEffect>ConstructMetal</constructEffect>
+            <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+
+            <statFactors>
+                <Beauty>1.5</Beauty>
+                <Flammability>0</Flammability>
+                <MarketValue>1.4</MarketValue>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <MaxHitPoints>0.5</MaxHitPoints>
+                <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+
+        </stuffProps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_ProcessedTungsten</defName>
+		<label>Processed Tungsten</label>
+		<description>Crushed tungsten; it's ready for the heat and pressure treatment to mold it now.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_Tungsten</ThingDef>
+		</descriptionHyperlinks>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Tungsten/TungstenPowder</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>12</MarketValue>
+			<Mass>1.2</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+
+
+		<stuffProps>
+			<stuffAdjective>Tungsten</stuffAdjective>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.5</commonality>
+			<color>(176,176,176)</color>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>4.0</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0</Flammability>
+				<MarketValue>.37</MarketValue>
+				<WorkToMake>4.6</WorkToMake>
+				<WorkToBuild>4.6</WorkToBuild>
+				<StuffPower_Insulation_Cold>1</StuffPower_Insulation_Cold>
+				<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+			</statFactors>
+			<statOffsets>
+				<Beauty>1</Beauty>
+			</statOffsets>
+		</stuffProps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+</Defs>
