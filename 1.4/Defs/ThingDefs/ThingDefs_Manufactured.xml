@@ -4,7 +4,6 @@
         <defName>RVFFA_Ferrogel</defName>
         <label>Ferrogel</label>
         <description>Often mistranslated to aerogel, ferrogel is the base building block of many avali technologies. It's been made in neat, stackable pucks for easy storage.</description>
-        <stackLimit>75</stackLimit>
 
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
@@ -145,5 +144,55 @@
 			</statOffsets>
 		</stuffProps>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>AvaliNanomachines</defName>
+		<label>nanomachines</label>
+		<comps>
+			<li Class= "RVCRestructured.Comps.HealableMaterialCompProperties">
+				<amountHealed>20</amountHealed>
+				<ticksBetweenHeal>30</ticksBetweenHeal>
+			</li>
+		</comps>
+		<description>A group of specialised nanomachines, capable of reshaping and reparing themselves.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Nanomachines/Nanomachines</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>4000</MarketValue>
+			<Mass>1.5</Mass>
+			<MaxHitPoints>100.0</MaxHitPoints>
+			<DeteriorationRate>0.1</DeteriorationRate>
+		</statBases>
+		<stuffProps>
+			<stuffAdjective>Nanomachine</stuffAdjective>
+			<categories>
+				<li>Metallic</li>
+				<li>Fabric</li>
+				<li>Leathery</li>
+				<li>Stony</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<color>(255,255,255)</color>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>10.0</MaxHitPoints>
+				<Beauty>1.2</Beauty>
+				<Flammability>0</Flammability>
+				<MarketValue>10.5</MarketValue>
+				<WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+			</statFactors>
+			<statOffsets>
+				<Beauty>4</Beauty>
+			</statOffsets>
+		</stuffProps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 	</ThingDef>
 </Defs>

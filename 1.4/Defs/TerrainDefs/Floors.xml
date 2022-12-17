@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TerrainDef ParentName="TileMetalBase">
+		<defName>RVFFA_TungstenTile</defName>
+		<label>Tungsten tile</label>
+
+		<renderPrecedence>240</renderPrecedence>
+		<description>Tungsten tiles, with a nice shine to them.</description>
+		<color>(163,134,116)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>2</Beauty>
+			<Cleanliness>0.5</Cleanliness>
+		</statBases>
+		<costList>
+			<RVFFA_ProcessedTungsten>7</RVFFA_ProcessedTungsten>
+		</costList>
+		<designationHotKey>Misc7</designationHotKey>
+		<tags>
+			<li>FineFloor</li>
+		</tags>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TileMetalBase">
+		<defName>AeroTungstenTile</defName>
+		<label>Aero-Tungsten Carbide tile</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A metallic, white tile. It looks quite nice.</description>
+		<color>(255,255,255)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>3</Beauty>
+			<Cleanliness>0.6</Cleanliness>
+		</statBases>
+		<costList>
+			<RVFFA_AeroTungstenCarbide>7</RVFFA_AeroTungstenCarbide>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<tags>
+			<li>FineFloor</li>
+		</tags>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="TileMetalBase">
+		<defName>RVFFA_FerrogelTile</defName>
+		<label>Ferrogel tile</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A bright orange tile made from ferrogel.</description>
+		<color>(244,119,33)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>1</Beauty>
+			<Cleanliness>0.3</Cleanliness>
+		</statBases>
+		<costList>
+			<RVFFA_Ferrogel>7</RVFFA_Ferrogel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+	</TerrainDef>
+
+	<TerrainDef ParentName="AvaliFloorBase">
+		<defName>RVFFA_RoomPattern</defName>
+		<label>{0} "room" pattern floor</label>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<renderPrecedence>240</renderPrecedence>
+		<description>This floor is often described as looking like a bunch of tiny cubicles/rooms.</description>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>1</Beauty>
+			<Cleanliness>0.2</Cleanliness>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<texturePath>RimValiFFA/Floors/r_o_o_m_s</texturePath>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+			<li>AddDesCat_RVFFA_Floors[ENDDESNAME]</li>
+			<li>AddDesDropDown_RVFFA_RoomFloor[ENDDNAME]</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>cloneMaterial_Metallic[ENDCATNAME]_RFC</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>cloneMaterial_Stony[ENDCATNAME]_RFC</li>
+		</tags>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="AvaliFloorBase">
+		<defName>RVFFA_FlowerFloor</defName>
+		<label>{0} flower floor</label>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A floor, woven of cloth into a flower.</description>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>2</Beauty>
+			<Cleanliness>0.1</Cleanliness>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<texturePath>RimValiFFA/Floors/flower_floor</texturePath>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+			<li>AddDesCat_RVFFA_Floors[ENDDESNAME]</li>
+			<li>AddDesDropDown_RVFFA_FlowerFloor[ENDDNAME]</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>cloneMaterial_Fabric[ENDCATNAME]_RFC</li>
+		</tags>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+
+	<TerrainDef Name="AvaliFloorBase" Abstract="True">
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<tags>
+			<li>Floor</li>
+		</tags>
+		<fertility>0</fertility>
+		<constructEffect>ConstructDirt</constructEffect>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</TerrainDef>
+
+	<TerrainDef ParentName="AvaliFloorBase">
+		<defName>RVFFA_ChaosFloor</defName>
+		<label>{0} "chaos" floor</label>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A stone floor made in a somewhat chaotic pattern.</description>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>1</Beauty>
+			<Cleanliness>0.2</Cleanliness>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<texturePath>RimValiFFA/Floors/chaos</texturePath>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+			<li>AddDesCat_RVFFA_Floors[ENDDESNAME]</li>
+			<li>AddDesDropDown_RVFFA_ChaosFloor[ENDDNAME]</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>cloneMaterial_Stony[ENDCATNAME]_RFC</li>
+		</tags>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="AvaliFloorBase">
+		<defName>RVFAA_DiamondFloor</defName>
+		<label>{0} diamond floor</label>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A floor made in a diamond pattern.</description>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>1</Beauty>
+			<Cleanliness>0.2</Cleanliness>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<texturePath>RimValiFFA/Floors/diamond</texturePath>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+			<li>AddDesCat_RVFFA_Floors[ENDDESNAME]</li>
+			<li>AddDesDropDown_RVFFA_DiamondFloors[ENDDNAME]</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>cloneMaterial_Metallic[ENDCATNAME]_RFC</li>
+			<li>cloneMaterial_Stony[ENDCATNAME]_RFC</li>
+		</tags>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="AvaliFloorBase">
+		<defName>RVFFA_ScrapFloor</defName>
+		<label>{0} scrap floor</label>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A floor made of metal bits and pieces.</description>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>1</Beauty>
+			<Cleanliness>0.2</Cleanliness>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<texturePath>RimValiFFA/Floors/scrap_floor</texturePath>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+			<li>AddDesCat_RVFFA_Floors[ENDDESNAME]</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>AddDesDropDown_RVFFA_ScrapTile[ENDDNAME]</li>
+			<li>cloneMaterial_Metallic[ENDCATNAME]_RFC</li>
+		</tags>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="AvaliFloorBase">
+		<defName>RVFFA_ShingleFloor</defName>
+		<label>{0} shingle floor</label>
+		<!-- The {0} gets replaced, as this is a template for generating floors from different materials at runtime. -->
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A floor made of stone shingles.</description>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>2</Beauty>
+			<Cleanliness>0.1</Cleanliness>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<texturePath>RimValiFFA/Floors/shingles</texturePath>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+			<li>AddDesCat_RVFFA_Floors[ENDDESNAME]</li>
+			<li>AddDesDropDown_RVFFA_ShingleFloors[ENDDNAME]</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>cloneMaterial_Stony[ENDCATNAME]_RFC</li>
+		</tags>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+	<TerrainDef ParentName="AvaliFloorBase">
+		<defName>RVFFA_WeaveFoor</defName>
+		<label>{0} weave floor</label>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<renderPrecedence>240</renderPrecedence>
+		<description>A floor, woven of cloth.</description>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>2</Beauty>
+			<Cleanliness>0.1</Cleanliness>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+
+		<designationHotKey>Misc7</designationHotKey>
+		<texturePath>RimValiFFA/Floors/weave_floor</texturePath>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+			<li>AddDesCat_RVFFA_Floors[ENDDESNAME]</li>
+			<li>AddDesDropDown_RVFFA_WeaveFloors[ENDDNAME]</li>
+			<li>removeFromResearch_Smithing[ENDRESNAME]_RFC</li>
+			<li>cloneMaterial_Fabric[ENDCATNAME]_RFC</li>
+		</tags>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</TerrainDef>
+
+</Defs>
