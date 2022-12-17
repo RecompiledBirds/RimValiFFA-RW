@@ -65,7 +65,11 @@
 		</costList>
 		
 		<!--TODO: Recipes-->
-		
+		<recipes>
+			<li>RVFFA_PrintFerrogel</li>
+			<li>RVFFA_PrintFerrogelTwo</li>
+			<li>RVFFA_PrintFerrogelThree</li>
+		</recipes>
 		<!-- TODO: RESEARCH-->
 
 		<graphicData>
