@@ -21,11 +21,7 @@
             <Mass>0.1</Mass>
             <Flammability>0</Flammability>
             <DeteriorationRate>0.2</DeteriorationRate>
-            <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
-            <BluntDamageMultiplier>0.5</BluntDamageMultiplier>
-        </statBases>
+          </statBases>
 
         <stuffProps>
             <stuffAdjective>Ferrogel</stuffAdjective>
@@ -103,5 +99,51 @@
 			</statOffsets>
 		</stuffProps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_AeroTungstenCarbide</defName>
+		<label>Aero-tungsten carbide</label>
+		<description>A supermaterial. This material is a hybrid of tungsten and aerogel, to make one of the strongest resources avali have ever made.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_ProcessedTungsten</ThingDef>
+		</descriptionHyperlinks>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Tungsten/AeroTungsten</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<Mass>1.5</Mass>
+			<MaxHitPoints>0.8</MaxHitPoints>
+		</statBases>
+
+		<stuffProps>
+			<stuffAdjective>Aero-Tungsten Carbide</stuffAdjective>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.5</commonality>
+			<color>(255,255,255)</color>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>8.5</MaxHitPoints>
+				<Beauty>1.2</Beauty>
+				<Flammability>0</Flammability>
+				<MarketValue>0.6</MarketValue>
+				<WorkToMake>5.2</WorkToMake>
+				<WorkToBuild>5.2</WorkToBuild>
+			</statFactors>
+			<statOffsets>
+				<Beauty>4</Beauty>
+			</statOffsets>
+		</stuffProps>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 	</ThingDef>
 </Defs>

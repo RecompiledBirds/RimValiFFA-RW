@@ -73,6 +73,10 @@
 			<li>RVFFA_SinterTungsten</li>
 			<li>RVFFA_SinterTungstenTwo</li>
 			<li>RVFFA_SinterTungstenThree</li>
+
+			<li>RVFFA_ForgeAeroTungstenCarbide</li>
+			<li>RVFFA_ForgeAeroTungstenCarbideTwo</li>
+			<li>RVFFA_ForgeAeroTungstenCarbideThree</li>
 		</recipes>
 		<!-- TODO: RESEARCH-->
 
