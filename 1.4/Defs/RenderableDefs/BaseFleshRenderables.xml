@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.Defs.RenderableDef Name="BaseAvaliFleshPart" Abstract="True">
+	<RVCRestructured.Defs.RenderableDef Name="RVFFA_BaseAvaliPart" Abstract="True">
 		<colorSet>Feathers</colorSet>
+	</RVCRestructured.Defs.RenderableDef>
+
+	<RVCRestructured.Defs.RenderableDef Name="RVFFA_BaseAvaliHeadPart" Abstract="True">
+		<linkPosWith>RimValiFFA_Head</linkPosWith>
 	</RVCRestructured.Defs.RenderableDef>
 </Defs>

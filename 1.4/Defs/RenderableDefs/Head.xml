@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliPart">
 		<defName>RimValiFFA_Head</defName>
 		<north>
 			<position>(0,0.013,0.49)</position>
