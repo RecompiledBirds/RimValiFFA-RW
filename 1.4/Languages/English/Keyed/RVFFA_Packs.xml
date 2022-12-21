@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<RVFFA_PackWorker_DoesNotExist>A pawn can't join, because they don't exist.</RVFFA_PackWorker_DoesNotExist>
+	<RVFFA_PackWorker_CanNotJoin>{0} can't join, because {1}</RVFFA_PackWorker_CanNotJoin> <!--{Name} can't join, because {reason}-->
+	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>
+	<RVFFA_PackWorker_SubjectIsWild>{0} is wild.</RVFFA_PackWorker_SubjectIsWild>
+	<RVFFA_PackWorker_SubjectIsInPackAlready>{0} is already in a pack.</RVFFA_PackWorker_SubjectIsInPackAlready>
+</LanguageData>
