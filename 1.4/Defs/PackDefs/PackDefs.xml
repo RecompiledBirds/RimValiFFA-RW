@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RimValiFFARW.Packs.PackDef>
+		<defName>testPack</defName>
+		<label>testPack</label>
+		<description>testDesc</description>
+
+		<!--<packWorkerType></packWorkerType>-->
+	</RimValiFFARW.Packs.PackDef>
+</Defs>
