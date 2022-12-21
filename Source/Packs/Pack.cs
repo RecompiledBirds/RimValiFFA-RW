@@ -25,12 +25,13 @@ namespace RimValiFFARW.Packs
         public HashSet<Pawn> Members => members;
         public PackWorker Worker => worker;
 
-        private Pack(PackDef def, IEnumerable<Pawn> pawns)
+        private Pack(PackDef def, IEnumerable<Pawn> pawns) 
         {
             this.def = def;
+            worker = def.GetNewPackWorker();
+            loadID = loadID ?? "RimValiPack_" + Packmanager.GetLastActivePackmanager.NextPackLoadID;
 
             members.AddRange(pawns);
-            worker = def.GetNewPackWorker();
 
             foreach(Pawn pawn in pawns)
             {

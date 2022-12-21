@@ -18,6 +18,7 @@ namespace RimValiFFARW.Packs
         }
 
         public virtual void NotifyMemberRemoved(Pawn member) { }
+
         public virtual void NotifyMemberAdded(Pawn member) { }
         
         public virtual bool PawnCanJoinPack(Pawn pawn, bool quietError)
