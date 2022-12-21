@@ -12,8 +12,12 @@ namespace RimValiFFARW.Packs
     {
         public Type packWorkerType = typeof(PackWorker);
 
+        public int minSize = 2;
+
         public int maxSize = 5;
         public int MaxSize => maxSize;
+
+        public int MinSize => minSize;
 
         public List<HediffDef> memberHediffs = new List<HediffDef>();
 

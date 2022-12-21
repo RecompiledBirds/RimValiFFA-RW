@@ -52,6 +52,7 @@ namespace RimValiFFARW.Packs
             pack = null;
 
             PackWorker packWorker = def?.GetNewPackWorker();
+            if (pawns.Count() < def.MinSize) return false; //TODO: Add a message of reject input to player
             if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawn, quietError))) return false;
 
             pack = new Pack(def, pawns);
