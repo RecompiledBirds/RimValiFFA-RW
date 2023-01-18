@@ -204,7 +204,7 @@
 		
 		<graphicData>
 			<texPath>RimValiFFA/Things/Cloth/NanoCarbon</texPath>
-		<graphicData>
+		</graphicData>
 
 		<statBases>
 			<MarketValue>1.3</MarketValue>
@@ -217,11 +217,11 @@
 
 			<categories Inherit="False">
 				<li>Metallic</li>
-			<categories>
+			</categories>
 
 			<stuffAdjective>Refined Carbon</stuffAdjective>
 			<commonality>0</commonality>
-			<color>(48,48,48)<color>
+			<color>(48,48,48)</color>
 
 			<statFactors>
                 <Flammability>0</Flammability>
@@ -232,7 +232,7 @@
                 <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
             </statFactors>
 		</stuffProps>
-	<ThingDef>
+	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseClothItem">
 		<defName>RVFFA_FerroWeave</defName>
@@ -358,7 +358,7 @@
 				<Flammability>0.2</Flammability>
       		</statFactors>
 		</stuffProps>
-	<ThingDef>
+	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseClothItem">
 		<defName>RVFFA_AeroTungstenFiber</defName>

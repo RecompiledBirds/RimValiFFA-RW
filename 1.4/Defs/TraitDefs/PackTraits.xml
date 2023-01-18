@@ -2,7 +2,7 @@
 <Defs>
     <TraitDef>
         <defName>RVFFA_PackBroken</defName>
-        <disabledWorkTags>Social<disabledWorkTags>
+        <disabledWorkTags>Social</disabledWorkTags>
         <commonality>5</commonality>
         <degreeDatas>
             <li>
@@ -19,4 +19,4 @@
             <li>Psychopath</li>
         </conflictingTraits>
     </TraitDef>
-<Defs>
+</Defs>

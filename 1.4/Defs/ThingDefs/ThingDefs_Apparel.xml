@@ -6,7 +6,7 @@
         <description>A two piece set of traditional avali wear. Consisting of a short piece that goes over the shoulders and barely covers their chest and another piece that goes sideways over their waist, leaving one thigh exposed and the other covered. It is generally considered lightweight and comfortable, even featuring some chimes for that sentimental noise.</description>
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/TraditionalWear/TraditionalWear_Avali_south</texPath>
-        <graphicData>
+        </graphicData>
 
 
         <costStuffCount>60</costStuffCount>
@@ -57,7 +57,7 @@
 
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/HUD/HUD_south</texPath>
-        <graphicData>
+        </graphicData>
 
         <equippedStatOffsets>
             <ShootingAccuracyPawn>+0.4</ShootingAccuracyPawn>
@@ -66,9 +66,9 @@
         </equippedStatOffsets>
 
         <costList>
-            <ComponentSpacer>4<ComponentSpacer>
+            <ComponentSpacer>4</ComponentSpacer>
             <RVFFA_ProcessedTungsten>15</RVFFA_ProcessedTungsten>
-            <RVFFA_Ferrogel>10<RVFFA_Ferrogel>
+            <RVFFA_Ferrogel>10</RVFFA_Ferrogel>
         </costList>
 
         <apparel>
@@ -87,7 +87,7 @@
 
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/AvaliHeaddress/Headdress_south</texPath>
-        <graphicData>
+        </graphicData>
 
         <statBases>
             <WorkToMake>750</WorkToMake>
@@ -145,7 +145,7 @@
 
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_Avali_south</texPath>
-        <graphicData>
+        </graphicData>
 
         <statBases>
             <WorkToMake>11200</WorkToMake>
@@ -164,7 +164,7 @@
                 <li>Neck</li>
                 <li>Shoulders</li>
                 <li>Arms</li>
-                <li>Legs<li>
+                <li>Legs</li>
             </bodyPartGroups>
             <wornGraphicPath>avali/Things/Apparel/BellCloak/Cloak</wornGraphicPath>
             <layers>
@@ -186,7 +186,7 @@
 
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_Avali_south</texPath>
-        <graphicData>
+        </graphicData>
 
         <statBases>
             <WorkToMake>17500</WorkToMake>
@@ -212,7 +212,7 @@
                 <li>Neck</li>
                 <li>Shoulders</li>
                 <li>Arms</li>
-                <li>Legs<li>
+                <li>Legs</li>
             </bodyPartGroups>
             <wornGraphicPath>avali/Things/Apparel/ThermalWraps/ThermalWraps</wornGraphicPath>
             <layers>
@@ -308,7 +308,7 @@
 
     <ThingDef ParentName="RVFFA_BaseArmor">
         <defName>RVFFA_ScoutArmor</defName>
-        <label>Illuminate Scout Armor<label>
+        <label>Illuminate Scout Armor</label>
         <description>A set of sleek Avali scout armour. Covering nearly their entire body barring their head and tail, this suit brings true scouting capabilities to the table. Whilst not as protective as other armours, it does increase the wearer’s speed with the help of its exo-skeleton. Allowing for better evasion of enemies or perhaps a more rapid approach with a close ranged weapon.</description>
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor_Avali_south</texPath>

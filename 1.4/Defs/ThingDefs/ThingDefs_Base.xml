@@ -117,7 +117,7 @@
 			</layers>
 
 			<tags>
-				<li>EVA<li>
+				<li>EVA</li>
 				<li>Avali</li>
 			</tags>
 
@@ -131,8 +131,8 @@
 	<ThingDef ParentName="RVFFA_BaseArmor" Name="RVFFA_BaseArmorHelmet" Abstract="True">
 		<apparel>
 			<bodyPartGroups Inherit="False">
-				<li>FullHead<li>
-			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
 			<layers Inherit="False">
 				<li>Overhead</li>
 			</layers>
@@ -142,11 +142,11 @@
 	<ThingDef ParentName="RVFFA_BaseApparel" Abstract="True" Name="RVFFA_BaseHelmet">
 		<apparel>
 			<bodyPartGroups>
-				<li>FullHead<li>
-			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
 			<layers>
-				<li>Overhead<li>
-			<layers>
+				<li>Overhead</li>
+			</layers>
 		</apparel>
 	</ThingDef>
 </Defs>
