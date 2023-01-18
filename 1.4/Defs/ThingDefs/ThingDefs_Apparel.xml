@@ -255,7 +255,7 @@
             <ComponentIndustrial>10</ComponentIndustrial>
             <ComponentSpacer>3</ComponentSpacer>
             <Plasteel>45</Plasteel>
-            <AeroTungstenCarbide>60</AeroTungstenCarbide>
+            <RVFFA_AeroTungstenCarbide>60</RVFFA_AeroTungstenCarbide>
         </costList>
 
         <apparel>
@@ -299,7 +299,7 @@
             <ComponentIndustrial>10</ComponentIndustrial>
             <ComponentSpacer>3</ComponentSpacer>
             <Plasteel>45</Plasteel>
-            <AeroTungstenCarbide>60</AeroTungstenCarbide>
+            <RVFFA_AeroTungstenCarbide>60</RVFFA_AeroTungstenCarbide>
         </costList>
         <apparel>
             <wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet</wornGraphicPath>
@@ -329,7 +329,7 @@
             <ComponentIndustrial>5</ComponentIndustrial>
             <ComponentSpacer>2</ComponentSpacer>
             <Plasteel>20</Plasteel>
-            <AvaliAerogel>10</AvaliAerogel>
+            <RVFFA_Ferrogel>10</RVFFA_Ferrogel>
         </costList>
         <apparel>
             <wornGraphicPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor</wornGraphicPath>
@@ -359,7 +359,7 @@
             <ComponentIndustrial>5</ComponentIndustrial>
             <ComponentSpacer>2</ComponentSpacer>
             <Plasteel>20</Plasteel>
-            <AvaliAerogel>10</AvaliAerogel>
+            <RVFFA_Ferrogel>10</RVFFA_Ferrogel>
         </costList>
         <apparel>
             <wornGraphicPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet</wornGraphicPath>
@@ -390,7 +390,7 @@
         </equippedStatOffsets>
         <costList>
             <ComponentIndustrial>5</ComponentIndustrial>
-            <AvaliTungstenPowder>30</AvaliTungstenPowder>
+            <RVFFA_ProcessedTungsten>30</RVFFA_ProcessedTungsten>
             <Steel>40</Steel>
         </costList>
         <apparel>
@@ -419,7 +419,7 @@
         </equippedStatOffsets>
         <costList>
             <ComponentIndustrial>5</ComponentIndustrial>
-            <AvaliTungstenPowder>30</AvaliTungstenPowder>
+            <RVFFA_ProcessedTungsten>30</RVFFA_ProcessedTungsten>
             <Steel>40</Steel>
         </costList>
         <apparel>
