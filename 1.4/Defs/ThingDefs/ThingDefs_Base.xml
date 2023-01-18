@@ -60,7 +60,22 @@
         
         <apparel>
             <useWornGraphicMask>true</useWornGraphicMask>
+
+			<tags>
+				<li>Avali</li>
+			</tags>
         </apparel>
         <colorGenerator Class="ColorGenerator_StandardApparel" />
     </ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseApparel" Abstract="True" Name="RVFFA_BaseHelmet">
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead<li>
+			<bodyPartGroups>
+			<layers>
+				<li>Overhead<li>
+			<layers>
+		</apparel>
+	</ThingDef
 </Defs>
