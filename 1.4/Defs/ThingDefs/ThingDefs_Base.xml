@@ -80,6 +80,8 @@
             </recipeUsers>
         </recipeMaker>
 
+		 <generateCommonality>2</generateCommonality>
+
 		<techLevel>Spacer</techLevel>
 		
 		<tradeTags>
@@ -112,6 +114,27 @@
 			<layers>
 				<li>Middle</li>
 				<li>Shell</li>
+			</layers>
+
+			<tags>
+				<li>EVA<li>
+				<li>Avali</li>
+			</tags>
+
+			<defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef Name="RVFFA_BaseArmorHelmet" Abstract="True">
+		<apparel>
+			<bodyPartGroups Inherit="False">
+				<li>FullHead<li>
+			<bodyPartGroups>
+			<layers Inherit="False">
+				<li>Overhead</li>
 			</layers>
 		</apparel>
 	</ThingDef>

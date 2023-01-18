@@ -224,4 +224,85 @@
             </defaultOutfitTags>
         </apparel>
     </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmor">
+        <defName>RVFFA_SpecOpsArmor</defName>
+        <label>Illuminate Spec Ops Armor</label>
+        <description>A set of dark Avali special operations armour. Covering nearly their entire body barring their head, this large suit of armour provides the wearer with much protection from any hostile elements. Be it temperature, bullets, physical attacks or even toxic particles. Regretfully, due to its large size and somewhat bulky nature—the wearer has a slightly harder time moving but that’s the cost for survival.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor_Avali_south</texPath>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>50000</WorkToMake>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Mass>5</Mass>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>10</EquipDelay>
+            <ArmorRating_Sharp>0.98</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.43</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>15</Insulation_Cold>
+            <Insulation_Heat>15</Insulation_Heat>
+        </statBases>
+
+        <equippedStatOffsets>
+            <MoveSpeed>-2</MoveSpeed>
+            <ToxicSensitivity>-0.5</ToxicSensitivity>
+        </equippedStatOffsets>
+
+        <costList>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <ComponentSpacer>3</ComponentSpacer>
+            <Plasteel>45</Plasteel>
+            <AeroTungstenCarbide>60</AeroTungstenCarbide>
+        </costList>
+
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+
+            <wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmorHelm">
+        <defName>RVFFA_SpecOpsHelm</defName>
+        <label>Illuminate Spec Ops Helmet</label>
+        <description>A dark Avali special operations helmet. Going over their head, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections and bulkiness as the rest of the suit does, it in turn also gives the wearer a simple LASER based targeting system that heightens their hit probability with ranged weapons.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet_south</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>21000</WorkToMake>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Mass>5</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.86</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.41</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>4</Insulation_Cold>
+            <Insulation_Heat>2</Insulation_Heat>
+            <EquipDelay>6</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>+0.2</ShootingAccuracyPawn>
+            <MoveSpeed>-1.5</MoveSpeed>
+            <ToxicSensitivity>-0.5</ToxicSensitivity>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <ComponentSpacer>3</ComponentSpacer>
+            <Plasteel>45</Plasteel>
+            <AeroTungstenCarbide>60</AeroTungstenCarbide>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet</wornGraphicPath>
+        </apparel>
+    </ThingDef>
 </Defs>
