@@ -31,7 +31,7 @@
             </li>
             </ingredients>
         <products>
-            <AvaliNanoCarbon>5</AvaliNanoCarbon>
+			<RVFFA_RefinedCarbon>5</RVFFA_RefinedCarbon>
         </products>
     </RecipeDef>
     
@@ -57,7 +57,7 @@
             </li>
             </ingredients>
         <products>
-            <AvaliNanoCarbon>25</AvaliNanoCarbon>
+			<RVFFA_RefinedCarbon>25</RVFFA_RefinedCarbon>
         </products>
     </RecipeDef>
 
@@ -83,7 +83,7 @@
             </li>
             </ingredients>
         <products>
-            <AvaliNanoCarbon>50</AvaliNanoCarbon>
+            <RVFFA_RefinedCarbon>50</RVFFA_RefinedCarbon>
         </products>
     </RecipeDef>
 </Defs>

@@ -260,7 +260,7 @@
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>80</lifeExpectancy>
 			<leatherDef>Leather_Human</leatherDef>
-			<nameCategory>RVFFA_AvaliNamer</nameCategory>
+			<nameCategory>HumanStandard</nameCategory>
 			<body>Human</body>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>

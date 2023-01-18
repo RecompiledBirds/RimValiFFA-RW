@@ -42,7 +42,6 @@
 	<ThingDef Name="RVFFA_BaseApparel" ParentName="ApparelMakeableBase" Abstract="True">
         <recipeMaker>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      		<researchPrerequisite>AvaliSpecOpsArmor</researchPrerequisite>
             <skillRequirements>
                 <Crafting>2</Crafting>
             </skillRequirements>

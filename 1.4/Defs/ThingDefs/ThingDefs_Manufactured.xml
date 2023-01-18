@@ -200,7 +200,7 @@
 		<defName>RVFFA_RefinedCarbon</defName>
 		<label>Refined Carbon</label>
 		<description>A type of avali fabric, stored in neat, stackable pucks (similar to &lt;color=#0099ff&gt;aerogel&lt;/color&gt;).</description>
-    	<descriptionHyperlinks><ThingDef>AvaliAerogel</ThingDef></descriptionHyperlinks>
+    	<descriptionHyperlinks><ThingDef>RVFFA_Ferrogel</ThingDef></descriptionHyperlinks>
 		
 		<graphicData>
 			<texPath>RimValiFFA/Things/Cloth/NanoCarbon</texPath>
@@ -320,7 +320,7 @@
 		</stuffProps>
 	</ThingDef>
 
-	<ThingDef ParentName="RVFFA_BaseItemCloth">
+	<ThingDef ParentName="RVFFA_BaseClothItem">
 		<defName>RVFFA_NanoCarbonFiber</defName>
 		<label>Nanocarbon fiber</label>
 		<description>A special type of nano fiber, with carbon woven in. This version is more resistant to damage like bullets, but is stiff, slowing the wearer.</description>

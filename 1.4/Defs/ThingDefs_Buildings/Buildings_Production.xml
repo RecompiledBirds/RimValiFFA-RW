@@ -123,19 +123,19 @@
 		</graphicData>
 
 		<recipes>
-			<li>RVFFA_FerroWeaveRecipe<li>
-			<li>RVFFA_FerroWeaveRecipeTwo<li>
-			<li>RVFFA_FerroWeaveRecipeThree<li>
+			<li>RVFFA_FerroWeaveRecipe</li>
+			<li>RVFFA_FerroWeaveRecipeTwo</li>
+			<li>RVFFA_FerroWeaveRecipeThree</li>
 
-			<li>RVFFA_NanoCarbonFiberRecipe<li>
-			<li>RVFFA_NanoCarbonFiberRecipeTwo<li>
-			<li>RVFFA_NanoCarbonFiberRecipeThree<li>
+			<li>RVFFA_NanoCarbonFiberRecipe</li>
+			<li>RVFFA_NanoCarbonFiberRecipeTwo</li>
+			<li>RVFFA_NanoCarbonFiberRecipeThree</li>
 
-			<li>RVFFA_NanofiberRecipe<li>
-			<li>RVFFA_NanofiberRecipeTwo<li>
-			<li>RVFFA_NanofiberRecipeThree<li>
+			<li>RVFFA_NanofiberRecipe</li>
+			<li>RVFFA_NanofiberRecipeTwo</li>
+			<li>RVFFA_NanofiberRecipeThree</li>
 
-			<li>RVFFA_AeroTungstenFiberRecipe<li>
+			<li>RVFFA_AeroTungstenFiberRecipe</li>
 		</recipes>
 		<!-- TODO: RESEARCH-->
 

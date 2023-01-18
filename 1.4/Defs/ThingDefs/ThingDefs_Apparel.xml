@@ -26,13 +26,12 @@
         </statBases>
 
         <apparel>
-            <wornGraphicPath>avali/Things/Apparel/TraditionalWear/TraditionalWear</wornGraphicPath>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/TraditionalWear/TraditionalWear</wornGraphicPath>
             <bodyPartGroups>
                 <li>Shoulders</li>
                 <li>Torso</li>
                 <li>Legs</li>
             </bodyPartGroups>
-            <wornGraphicPath>avali/Things/Apparel/TraditionalWear/TraditionalWear</wornGraphicPath>
             <layers>
                 <li>OnSkin</li>
             </layers>
@@ -59,10 +58,16 @@
             <texPath>RimValiFFA/Things/Apparel/HUD/HUD_south</texPath>
         </graphicData>
 
+		<statBases>
+			<Mass>0.1</Mass>
+			<MarketValue>200</MarketValue>
+		</statBases>
+
         <equippedStatOffsets>
             <ShootingAccuracyPawn>+0.4</ShootingAccuracyPawn>
             <ResearchSpeed>0.3</ResearchSpeed>
 	        <AimingDelayFactor>-0.35</AimingDelayFactor>
+			
         </equippedStatOffsets>
 
         <costList>
@@ -72,7 +77,7 @@
         </costList>
 
         <apparel>
-            <wornGraphicPath>avali/Things/Apparel/HUD/HUD</wornGraphicPath>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/HUD/HUD</wornGraphicPath>
             <defaultOutfitTags>
                 <li>Worker</li>
                 <li>Soldier</li>
@@ -118,6 +123,12 @@
             <texPath>RimValiFFA/Things/Apparel/AvaliHood/Hood_south</texPath>
         </graphicData>
 
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		
         <statBases>
             <WorkToMake>1000</WorkToMake>
             <MaxHitPoints>120</MaxHitPoints>
@@ -129,7 +140,7 @@
             <EquipDelay>1</EquipDelay>
         </statBases>
         <apparel>
-            <wornGraphicPath>avali/Things/Apparel/AvaliHood/Hood</wornGraphicPath>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/AvaliHood/Hood</wornGraphicPath>
             <defaultOutfitTags>
                 <li>Worker</li>
             </defaultOutfitTags>
@@ -142,7 +153,11 @@
         <description>An Avali bell cloak. Large bulbous sheets of fabric or leather attached to the neck of an Avali with a simple belt. These cloaks are commonly used by Avali who either travel around a lot or who want to wear something whilst still being able to wear stuff under it. Other than that these cloaks offer decent protection to the environment but only from small debris and particles.</description>
 
         <costStuffCount>100</costStuffCount>
-
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_Avali_south</texPath>
         </graphicData>
@@ -166,7 +181,7 @@
                 <li>Arms</li>
                 <li>Legs</li>
             </bodyPartGroups>
-            <wornGraphicPath>avali/Things/Apparel/BellCloak/Cloak</wornGraphicPath>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/BellCloak/Cloak</wornGraphicPath>
             <layers>
                 <li>Shell</li>
             </layers>
@@ -204,7 +219,7 @@
             <Flammability>20</Flammability>
         </equippedStatOffsets>
         <costList>
-            <AvaliAeroweave>30</AvaliAeroweave>
+            <RVFFA_FerroWeave>30</RVFFA_FerroWeave>
         </costList>
         <apparel>
             <bodyPartGroups>
@@ -214,7 +229,7 @@
                 <li>Arms</li>
                 <li>Legs</li>
             </bodyPartGroups>
-            <wornGraphicPath>avali/Things/Apparel/ThermalWraps/ThermalWraps</wornGraphicPath>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/ThermalWraps/ThermalWraps</wornGraphicPath>
             <layers>
                 <li>Shell</li>
             </layers>
@@ -248,7 +263,6 @@
 
         <equippedStatOffsets>
             <MoveSpeed>-2</MoveSpeed>
-            <ToxicSensitivity>-0.5</ToxicSensitivity>
         </equippedStatOffsets>
 
         <costList>
@@ -293,7 +307,6 @@
         <equippedStatOffsets>
             <ShootingAccuracyPawn>+0.2</ShootingAccuracyPawn>
             <MoveSpeed>-1.5</MoveSpeed>
-            <ToxicSensitivity>-0.5</ToxicSensitivity>
         </equippedStatOffsets>
         <costList>
             <ComponentIndustrial>10</ComponentIndustrial>
@@ -340,7 +353,10 @@
         <defName>RVFFA_ScoutHelment</defName>
         <label>Illuminate Scout Helmet</label>
         <description>A light Avali scout helmet. Going on their head and barely protecting the ears, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections as the rest of the suit, it in turn also features an antenna that allows them to communicate with homebase, sometimes even allowing them to receive information about the target they’re shooting at.</description>
-        <statBases>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet_south</texPath>
+		</graphicData>
+		<statBases>
             <WorkToMake>30000</WorkToMake>
             <MaxHitPoints>240</MaxHitPoints>
             <Mass>1.5</Mass>
@@ -402,7 +418,11 @@
         <defName>RVFFA_CombatHelmet</defName>
         <label>Illuminate Combat Helmet</label>
         <description>A bulky Avali combat helmet. Covering the entirety of an Avali’s head, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections and bulkiness as the rest of the suit, it brings a strong piece of headwear that is certain to improve chances of survival, albeit it doesn’t bring much advanced technology wise.</description>
-        <statBases>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Apparel/CombatHelmet/CombatHelmet_south</texPath>
+		</graphicData>
+		
+		<statBases>
             <WorkToMake>20000</WorkToMake>
             <MaxHitPoints>200</MaxHitPoints>
             <Mass>3</Mass>
