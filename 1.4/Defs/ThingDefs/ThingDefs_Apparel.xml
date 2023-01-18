@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="RVFFA_BaseApparel" ParentName="ApparelMakeableBase" Abstract="True">
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>2</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>AvaliNanoLoom</li>
+            </recipeUsers>
+        </recipeMaker>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.00</drawSize>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        
+        <apparel>
+            <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseApparel">
+        <defName>RVFFA_AvaliTDW</defName>
+        <label>Avali Traditional Wear</label>
+        <description>A two piece set of traditional avali wear. Consisting of a short piece that goes over the shoulders and barely covers their chest and another piece that goes sideways over their waist, leaving one thigh exposed and the other covered. It is generally considered lightweight and comfortable, even featuring some chimes for that sentimental noise.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/TraditionalWear/TraditionalWear_Avali_south</texPath>
+        <graphicData>
+
+
+        <costStuffCount>60</costStuffCount>
+        <stuffCategories>
+        <li>Fabric</li>
+        <li>Leathery</li>
+        </stuffCategories>
+
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <WorkToMake>2000</WorkToMake>
+            <Mass>0.2</Mass>
+            <StuffEffectMultiplierArmor>0.22</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.3</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+
+        <apparel>
+            <bodyPartGroups>
+                <li>Shoulders</li>
+                <li>Torso</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>avali/Things/Apparel/TraditionalWear/TraditionalWear</wornGraphicPath>
+            <layers>
+                <li>OnSkin</li>
+            </layers>
+            <tags>
+                <li>Avali</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+</Defs>
