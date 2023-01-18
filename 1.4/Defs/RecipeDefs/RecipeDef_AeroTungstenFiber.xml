@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <workAmount>100</workAmount>
+        <defName>RVFFA_AeroTungstenFiberRecipe</defName>
+        <label>Weave aero tungsten fiber</label>
+        <description>Weave aero tungsten fiber.</description>
+        <jobString>Weaving Aero-Tungsten fiber.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>RVFFA_AeroTungstenCarbide</li>
+            </thingDefs>
+            </filter>
+            <count>10</count>
+        </li>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>RVFFA_RefinedCarbon</li>
+            </thingDefs>
+            </filter>
+            <count>10</count>
+        </li>
+        <li>
+            <filter>
+            <thingDefs>
+                <li>Hyperweave</li>
+            </thingDefs>
+            </filter>
+            <count>2</count>
+        </li>
+        </ingredients>
+        <products>
+            <RVFFA_AeroTungstenFiber>25</RVFFA_AeroTungstenFiber>
+        </products>
+    </RecipeDef>
+</Defs>
