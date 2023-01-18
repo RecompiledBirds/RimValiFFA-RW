@@ -128,7 +128,7 @@
 		</apparel>
 	</ThingDef>
 
-	<ThingDef Name="RVFFA_BaseArmorHelmet" Abstract="True">
+	<ThingDef ParentName="RVFFA_BaseArmor" Name="RVFFA_BaseArmorHelmet" Abstract="True">
 		<apparel>
 			<bodyPartGroups Inherit="False">
 				<li>FullHead<li>
