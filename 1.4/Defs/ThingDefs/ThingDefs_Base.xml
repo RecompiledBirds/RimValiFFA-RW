@@ -8,6 +8,24 @@
 		</thingCategories>
 	</ThingDef>
 
+	<ThingDef Name="RVFFA_BaseClothItem" ParentName="RVFFA_BaseItem" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+      		<drawSize>0.85</drawSize>
+		</graphicData>
+		
+		<stuffProps>
+			<categories>
+				<li>Fabric</li>
+			</categories>
+			<constructEffect>ConstructMetal</constructEffect>
+      		<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      		<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+		</stuffProps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</ThingDef>
+
 	<ThingDef Name="RVFFA_TungstenBase" ParentName="RockBase" Abstract="True">
 		<statBases>
 			<MaxHitPoints>5000</MaxHitPoints>

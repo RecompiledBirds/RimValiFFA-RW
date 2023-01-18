@@ -195,4 +195,33 @@
 		</stuffProps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseClothItem">
+		<defName>RVFFA_NanoCarbon</defName>
+		<label>Refined Carbon</label>
+		<description>A type of avali fabric, stored in neat, stackable pucks (similar to &lt;color=#0099ff&gt;aerogel&lt;/color&gt;).</description>
+    	<descriptionHyperlinks><ThingDef>AvaliAerogel</ThingDef></descriptionHyperlinks>
+
+		<statBases>
+			<MarketValue>1.3</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+		</statBases>
+
+		<stuffProps>
+			<stuffAdjective>Refined Carbon</stuffAdjective>
+			<commonality>0</commonality>
+			<color>(48,48,48)<color>
+
+			<statFactors>
+                <Flammability>0</Flammability>
+                <MarketValue>1.3</MarketValue>
+                <WorkToMake>1.5</WorkToMake>
+                <WorkToBuild>1.5</WorkToBuild>
+                <MaxHitPoints>1.1</MaxHitPoints>
+                <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+		</stuffProps>
+	<ThingDef>
 </Defs>
