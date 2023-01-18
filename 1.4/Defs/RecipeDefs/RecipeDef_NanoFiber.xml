@@ -47,7 +47,7 @@
     </RecipeDef>
 
     <RecipeDef ParentName="RVFFA_BaseNanofiberRecipe">
-        <defName>RVFFA_NanofiberRecipeTwo</defName>
+        <defName>RVFFA_NanofiberRecipeThree</defName>
         <label>Weave Nano-Fiber (80)</label>
         <ingredients>
             <li>

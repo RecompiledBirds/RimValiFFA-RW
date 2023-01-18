@@ -2,7 +2,7 @@
 <Defs>
     <RecipeDef>
         <workAmount>100</workAmount>
-        <defName>RVFAA_AeroTungstenFiberRecipe</defName>
+        <defName>RVFFA_AeroTungstenFiberRecipe</defName>
         <label>Weave aero tungsten fiber</label>
         <description>Weave aero tungsten fiber.</description>
         <jobString>Weaving Aero-Tungsten fiber.</jobString>
