@@ -271,7 +271,7 @@
         </apparel>
     </ThingDef>
 
-    <ThingDef ParentName="RVFFA_BaseArmorHelm">
+    <ThingDef ParentName="RVFFA_BaseArmorHelmet">
         <defName>RVFFA_SpecOpsHelm</defName>
         <label>Illuminate Spec Ops Helmet</label>
         <description>A dark Avali special operations helmet. Going over their head, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections and bulkiness as the rest of the suit does, it in turn also gives the wearer a simple LASER based targeting system that heightens their hit probability with ranged weapons.</description>
