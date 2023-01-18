@@ -365,4 +365,65 @@
             <wornGraphicPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet</wornGraphicPath>
         </apparel>
     </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmor">
+        <defName>RVFFA_CombatArmor</defName>
+        <label>Illuminate Combat Armor</label>
+        <description>A set of bulky combat armour. Covering nearly their entire body barring their head and tailfeather, this suit gives the wearer much needed protection against bullet based or physical attacks. Whilst its bulky nature does make the wearer somewhat slower, it’s a somewhat cheap option when compared to more advanced suits. As such it is sometimes jokingly referred to as “Avali plate armour” because of it.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor_Avali_south</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>20000</WorkToMake>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Mass>3</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.34</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>10</Insulation_Cold>
+            <Insulation_Heat>10</Insulation_Heat>
+            <EquipDelay>4</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-1</MoveSpeed>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <AvaliTungstenPowder>30</AvaliTungstenPowder>
+            <Steel>40</Steel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmorHelmet">
+        <defName>RVFFA_CombatHelmet</defName>
+        <label>Illuminate Combat Helmet</label>
+        <description>A bulky Avali combat helmet. Covering the entirety of an Avali’s head, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections and bulkiness as the rest of the suit, it brings a strong piece of headwear that is certain to improve chances of survival, albeit it doesn’t bring much advanced technology wise.</description>
+        <statBases>
+            <WorkToMake>20000</WorkToMake>
+            <MaxHitPoints>200</MaxHitPoints>
+            <Mass>3</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>4</Insulation_Cold>
+            <Insulation_Heat>2</Insulation_Heat>
+            <EquipDelay>4</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.5</MoveSpeed>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <AvaliTungstenPowder>30</AvaliTungstenPowder>
+            <Steel>40</Steel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/CombatHelmet/CombatHelmet</wornGraphicPath>
+        </apparel>
+    </ThingDef>
 </Defs>
