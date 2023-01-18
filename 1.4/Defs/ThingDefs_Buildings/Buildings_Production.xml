@@ -63,8 +63,7 @@
 			<Steel>100</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
-		
-		<!--TODO: Recipes-->
+
 		<recipes>
 			<li>RVFFA_PrintFerrogel</li>
 			<li>RVFFA_PrintFerrogelTwo</li>
@@ -123,7 +122,6 @@
 			</damageData>
 		</graphicData>
 
-		<!--TODO: Recipes-->
 		<recipes>
 			<li>RVFFA_FerroWeaveRecipe<li>
 			<li>RVFFA_FerroWeaveRecipeTwo<li>
