@@ -41,11 +41,13 @@
 
 	<ThingDef Name="RVFFA_BaseApparel" ParentName="ApparelMakeableBase" Abstract="True">
         <recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      		<researchPrerequisite>AvaliSpecOpsArmor</researchPrerequisite>
             <skillRequirements>
                 <Crafting>2</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>AvaliNanoLoom</li>
+                <li>RVFFA_NanoLoom</li>
             </recipeUsers>
         </recipeMaker>
         <thingCategories>
@@ -57,7 +59,7 @@
             <drawSize>1.00</drawSize>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
-        
+        <uiIconScale>1.12</uiIconScale>
         <apparel>
             <useWornGraphicMask>true</useWornGraphicMask>
 
@@ -68,6 +70,52 @@
         <colorGenerator Class="ColorGenerator_StandardApparel" />
     </ThingDef>
 
+	<ThingDef ParentName="RVFFA_BaseApparel" Name="RVFFA_BaseArmor" Abstract="True">
+		<recipeMaker>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RVFFA_NanoForge</li>
+            </recipeUsers>
+        </recipeMaker>
+
+		<techLevel>Spacer</techLevel>
+		
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+				<weight>10</weight>
+				<only>(0.9,0.9,0.9,1)</only>
+				</li>
+				<li>
+				<weight>10</weight>
+				<only>(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+				<weight>10</weight>
+				<only>(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+				<weight>6</weight>
+				<min>(0.3,0.3,0.3,1)</min>
+				<max>(0.5,0.5,0.5,1)</max>
+				</li>
+			</options>
+		</colorGenerator>
+
+		<apparel>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
 	<ThingDef ParentName="RVFFA_BaseApparel" Abstract="True" Name="RVFFA_BaseHelmet">
 		<apparel>
 			<bodyPartGroups>
@@ -77,5 +125,5 @@
 				<li>Overhead<li>
 			<layers>
 		</apparel>
-	</ThingDef
+	</ThingDef>
 </Defs>
