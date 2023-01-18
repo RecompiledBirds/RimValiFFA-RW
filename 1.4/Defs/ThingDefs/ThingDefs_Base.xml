@@ -38,4 +38,29 @@
 			<mineableScatterLumpSizeRange>15~35</mineableScatterLumpSizeRange>
 		</building>
 	</ThingDef>
+
+	<ThingDef Name="RVFFA_BaseApparel" ParentName="ApparelMakeableBase" Abstract="True">
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>2</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>AvaliNanoLoom</li>
+            </recipeUsers>
+        </recipeMaker>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.00</drawSize>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        
+        <apparel>
+            <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+    </ThingDef>
 </Defs>

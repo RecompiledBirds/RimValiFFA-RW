@@ -1,30 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef Name="RVFFA_BaseApparel" ParentName="ApparelMakeableBase" Abstract="True">
-        <recipeMaker>
-            <skillRequirements>
-                <Crafting>2</Crafting>
-            </skillRequirements>
-            <recipeUsers Inherit="False">
-                <li>AvaliNanoLoom</li>
-            </recipeUsers>
-        </recipeMaker>
-        <thingCategories>
-            <li>Apparel</li>
-        </thingCategories>
-        
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>1.00</drawSize>
-            <shaderType>CutoutComplex</shaderType>
-        </graphicData>
-        
-        <apparel>
-            <useWornGraphicMask>true</useWornGraphicMask>
-        </apparel>
-        <colorGenerator Class="ColorGenerator_StandardApparel" />
-    </ThingDef>
-
     <ThingDef ParentName="RVFFA_BaseApparel">
         <defName>RVFFA_AvaliTDW</defName>
         <label>Avali Traditional Wear</label>
@@ -51,6 +26,7 @@
         </statBases>
 
         <apparel>
+            <wornGraphicPath>avali/Things/Apparel/TraditionalWear/TraditionalWear</wornGraphicPath>
             <bodyPartGroups>
                 <li>Shoulders</li>
                 <li>Torso</li>
@@ -65,6 +41,50 @@
             </tags>
             <defaultOutfitTags>
                 <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseApparel">
+        <defName>RVFFA_ReconHUD</defName>
+        <label>Recon HUD</label>
+        <description>An Avali HUD. Attached to the side of an Avali’s head, this piece sports three important components: A small antenna to relay and receive information, a hard translucent visor, and- most importantly of all- and a matrix of miniscule LASERs at the base of the visor. Whilst these can feed the Avali a lot of information, they sadly can only keep to one color and have to keep 2D as well.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/HUD/HUD_south</texPath>
+        <graphicData>
+
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>+0.4</ShootingAccuracyPawn>
+            <ResearchSpeed>0.3</ResearchSpeed>
+	        <AimingDelayFactor>-0.35</AimingDelayFactor>
+        </equippedStatOffsets>
+
+        <costList>
+            <ComponentSpacer>4<ComponentSpacer>
+            <RVFFA_ProcessedTungsten>15</RVFFA_ProcessedTungsten>
+            <RVFFA_Ferrogel>10<RVFFA_Ferrogel>
+        </costList>
+
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>avali/Things/Apparel/HUD/HUD</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>Avali</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+                <li>Soldier</li>
             </defaultOutfitTags>
         </apparel>
     </ThingDef>
