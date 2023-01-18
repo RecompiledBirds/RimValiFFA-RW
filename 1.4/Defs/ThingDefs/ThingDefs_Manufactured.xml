@@ -359,4 +359,35 @@
       		</statFactors>
 		</stuffProps>
 	<ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseClothItem">
+		<defName>RVFFA_AeroTungstenFiber</defName>
+		<label>Tungsten-aerofiber</label>
+		<description>Tungsten-Aero fiber is a strong, resilient material made from a combination of aero tungsten carbide, and nano carbon fiber.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cloth/TungstenAero-Fiber</texPath>
+		</graphicData>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<MarketValue>10</MarketValue>
+			<Mass>0.038</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<StuffPower_Armor_Sharp>2.05</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>2.9</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>29</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>28</StuffPower_Insulation_Heat>
+   		</statBases>
+
+		<stuffProps>
+			<stuffAdjective>Tungsten-aerofiber</stuffAdjective>
+			<commonality>0.5</commonality>
+      		<color>(135,94,70)</color>
+			<statOffsets>
+        		<Beauty>2</Beauty>
+      		</statOffsets>
+		</stuffProps>
+	</ThingDef>
 </Defs>
