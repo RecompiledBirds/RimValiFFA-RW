@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef Name="RVFFA_BaseRefineCarbon" Abstract="True">
+        <workAmount>30</workAmount>
+        <description>Extract refined carbon from the resources used.</description>
+        <jobString>Refining carbon</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+    </RecipeDef>
+
+    <RecipeDef ParentName="RVFFA_BaseRefineCarbon">
+        <label>Refine carbon (5)</label>
+        <defName>RVFFA_RefineCarbon</defName>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Steel</li>
+                </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>WoodLog</li>
+                </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            </ingredients>
+        <products>
+            <AvaliNanoCarbon>5</AvaliNanoCarbon>
+        </products>
+    </RecipeDef>
+    
+    <RecipeDef ParentName="RVFFA_BaseRefineCarbon">
+        <label>Refine carbon (25)</label>
+        <defName>RVFFA_RefineCarbonTwo</defName>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Steel</li>
+                </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>WoodLog</li>
+                </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            </ingredients>
+        <products>
+            <AvaliNanoCarbon>25</AvaliNanoCarbon>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="RVFFA_BaseRefineCarbon">
+        <label>Refine carbon (50)</label>
+        <defName>RVFFA_RefineCarbonThree</defName>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Steel</li>
+                </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>WoodLog</li>
+                </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            </ingredients>
+        <products>
+            <AvaliNanoCarbon>50</AvaliNanoCarbon>
+        </products>
+    </RecipeDef>
+</Defs>
