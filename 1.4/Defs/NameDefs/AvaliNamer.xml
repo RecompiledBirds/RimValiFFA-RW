@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RulePackDef>
+        <defName>RVFFA_AvaliNamer</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>Name->[FirstPartName][OtherPartName][OtherPartName] [FirstPartName][OtherPartName][OtherPartName]</li>
+                <li>Name->[FirstPartName][OtherPartName][OtherPartName] '[FirstPartName][OtherPartName]' [FirstPartName][OtherPartName][OtherPartName]</li>
+
+                <li>Name->[FirstPartName][OtherPartName] [FirstPartName][OtherPartName][OtherPartName]</li>
+                <li>Name->[FirstPartName][OtherPartName][OtherPartName] '[FirstPartName][OtherPartName]' [FirstPartName][OtherPartName]</li>
+
+                <li>Name->[FirstPartName][OtherPartName] [FirstPartName][OtherPartName]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>FirstPartName</keyword>
+                    <path>RVFFANamer/FirstSectionName</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>OtherPartName</keyword>
+                    <path>RVFFANamer/LastSectionName</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+        
+    </RulePackDef>
+</Defs>
