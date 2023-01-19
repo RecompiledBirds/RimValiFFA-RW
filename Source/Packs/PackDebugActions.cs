@@ -23,7 +23,11 @@ namespace RimValiFFARW.Packs
             colonists.TruncateToLength(5);
 
             bool madeAPack = Pack.TryMakeNewPackFromPawns(DefDatabase<PackDef>.GetRandom(), colonists, false, out Pack pack);
-            if (!madeAPack) return;
+            if (!madeAPack)
+            {
+                RVCLog.Log("Could not make a Pack!", RVCLogType.Error);
+                return;
+            }
 
             packmanager.AddPack(pack);
 
