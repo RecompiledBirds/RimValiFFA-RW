@@ -28,7 +28,7 @@ namespace RimValiFFARW.Packs
         private Pack(PackDef def, IEnumerable<Pawn> pawns) 
         {
             this.def = def;
-            worker = def.GetNewPackWorker();
+            worker = def.GetNewPackWorker;
             loadID = loadID ?? "RimValiPack_" + Packmanager.GetLastActivePackmanager.NextPackLoadID;
 
             members.AddRange(pawns);
@@ -41,17 +41,17 @@ namespace RimValiFFARW.Packs
 
         public Pack()
         {
-            worker = def.GetNewPackWorker();
+            worker = def.GetNewPackWorker;
             loadID = loadID ?? "RimValiPack_" + Packmanager.GetLastActivePackmanager.NextPackLoadID;
         }
 
-        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns) => def.GetNewPackWorker().CanPawnsMakePack(pawns);
+        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns) => def.GetNewPackWorker.CanPawnsMakePack(pawns);
 
         public static bool TryMakeNewPackFromPawns(PackDef def, IEnumerable<Pawn> pawns, bool quietError, out Pack pack)
         {
             pack = null;
 
-            PackWorker packWorker = def?.GetNewPackWorker();
+            PackWorker packWorker = def?.GetNewPackWorker;
             if (pawns.Count() < def.MinSize) return false; //TODO: Add a message of reject input to player
             if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawn, quietError))) return false;
 
