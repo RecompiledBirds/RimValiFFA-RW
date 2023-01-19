@@ -119,6 +119,7 @@ namespace RimValiFFARW.Packs
             if (!worker.MemberCanLeave(member, this)) return false;
             if (!members.Remove(member)) return false;
 
+            worker.RemoveMemberHediffs(memberHediffDic[member]);
             worker.NotifyMemberRemoved(member);
             return true;
         }
