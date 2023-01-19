@@ -35,5 +35,28 @@ namespace RimValiFFARW.Packs
         ///     Creates a new object of type <see cref="PackWorker"/> with the type as stated in the def file at <see cref="packWorkerType"/>
         /// </summary>
         public PackWorker GetNewPackWorker => packWorkerType.GetConstructor(new Type[] { typeof(PackDef) }).Invoke(new object[] { this }) as PackWorker;
+
+        public override IEnumerable<string> ConfigErrors()
+        {   
+            foreach (string error in base.ConfigErrors()) 
+            {
+                yield return error;
+            }
+
+            if (packWorkerType.BaseType != typeof(PackWorker))
+            {
+                yield return $"The PackDef {defName ?? "<missing defname>"} has no valid {nameof(packWorkerType)}! The given type must inherit from {typeof(PackWorker).Name}!";
+            }
+
+            if (minSize > maxSize)
+            {
+                yield return $"The PackDef {defName ?? "<missing defname>"} has an invalid {nameof(minSize)}! It must be bigger or equal {nameof(maxSize)}!";
+            }
+
+            if (maxSize <= 0)
+            {
+                yield return $"The PackDef {defName ?? "<missing defname>"} has an invalid {nameof(maxSize)}! It must be bigger or equal to 1!";
+            }
+        }
     }
 }
