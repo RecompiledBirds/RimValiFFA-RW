@@ -7,18 +7,28 @@ using Verse;
 
 namespace RimValiFFARW.Packs
 {
+    /// <summary>
+    ///     This helper class tracks the status of <see cref="Hediff"/>s as they are applied to, and removed from <see cref="Pawn"/>s
+    /// </summary>
     public class PackMemberHediffTracker : IExposable
     {
         private Pawn member;
         private HashSet<Hediff> packHediffs = new HashSet<Hediff>();
 
+        /// <summary>
+        ///     Returns the tracked <see cref="Pawn"/>
+        /// </summary>
         public Pawn Member => member;
 
-        public PackMemberHediffTracker(Pawn member)
-        {
-            this.member = member;
-        }
+        /// <summary>
+        ///     Creates a new <see cref="PackMemberHediffTracker"/> for a given <paramref name="member"/>
+        /// </summary>
+        /// <param name="member">The given <see cref="Pawn"/></param>
+        public PackMemberHediffTracker(Pawn member) => this.member = member;
 
+        /// <summary>
+        ///     The <see cref="IEnumerable{T}"/> of added <see cref="Hediff"/>s
+        /// </summary>
         public IEnumerable<Hediff> Hediffs => packHediffs;
 
         public bool AddHediff(Hediff hediff) => packHediffs.Add(hediff);
