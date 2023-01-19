@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseWeapon" Name="RVFFA_BaseAvaliGun" Abstract="True">
+        <techLevel>Industrial</techLevel>
+        <smeltable>true</smeltable>
+        <thingCategories>
+            <li>WeaponsRanged</li>
+        </thingCategories>
+        <inspectorTabs>
+            <li>ITab_Art</li>
+        </inspectorTabs>
+        <statBases>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="RVFFA_Weapon MakeableLathe" ParentName="RVFFA_BaseAvaliGun" Abstract="True">
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>RVFFA_NanoForge</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+</Defs>
