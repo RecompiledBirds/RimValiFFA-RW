@@ -125,4 +125,85 @@
             </skillRequirements>
         </recipeMaker>
     </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>RVFFA_SMGBullet</defName>
+        <label>Bullet</label>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>16</damageAmountBase>
+            <speed>150</speed>
+            <armorPenetrationBase>0.32</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef>
+        <defName>RVFFA_IlluminateSMG</defName>
+        <label>Illuminate SMG</label>
+        <description>A coil-based Illuminate SMG. Whilst it does theoretically have a better service range compared to its Terran counterparts, this weapon is best used for medium to short ranged engagements. Besides this fact, it still has two qualities that make it reliable—its accuracy and travel time.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/SMG</texPath>
+        </graphicData>
+        <soundInteract>Interact_SMG</soundInteract>
+        <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+        <statBases>
+            <WorkToMake>28000</WorkToMake>
+            <Mass>4.5</Mass>
+            <AccuracyTouch>0.70</AccuracyTouch>
+            <AccuracyShort>0.86</AccuracyShort>
+            <AccuracyMedium>0.72</AccuracyMedium>
+            <AccuracyLong>0.52</AccuracyLong>
+            <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+        </statBases>
+
+        <costList>
+            <Steel>150</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <RVFFA_ProcessedTungsten>12</RVFFA_ProcessedTungsten>
+        </costList>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RVFFA_SMGBullet</defaultProjectile>
+                <warmupTime>0.7</warmupTime>
+                <range>30.4</range>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <burstShotCount>2</burstShotCount>
+                <soundCast>Shot_HeavySMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>0</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
 </Defs>
