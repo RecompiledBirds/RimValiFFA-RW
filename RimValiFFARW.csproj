@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net48</TargetFramework>
@@ -17,6 +17,8 @@
 
 	<ItemGroup>
 		<Folder Include="1.4\Assemblies\" />
+		<Folder Include="Source\Packs\" />
+		<Folder Include="Source\WorldGen\" />
 	</ItemGroup>
 
 	<ItemGroup>

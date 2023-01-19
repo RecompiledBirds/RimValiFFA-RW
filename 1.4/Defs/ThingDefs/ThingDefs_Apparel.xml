@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="RVFFA_BaseApparel">
+        <defName>RVFFA_AvaliTDW</defName>
+        <label>Avali Traditional Wear</label>
+        <description>A two piece set of traditional avali wear. Consisting of a short piece that goes over the shoulders and barely covers their chest and another piece that goes sideways over their waist, leaving one thigh exposed and the other covered. It is generally considered lightweight and comfortable, even featuring some chimes for that sentimental noise.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/TraditionalWear/TraditionalWear_Avali_south</texPath>
+        </graphicData>
+
+
+        <costStuffCount>60</costStuffCount>
+        <stuffCategories>
+        <li>Fabric</li>
+        <li>Leathery</li>
+        </stuffCategories>
+
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <WorkToMake>2000</WorkToMake>
+            <Mass>0.2</Mass>
+            <StuffEffectMultiplierArmor>0.22</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.3</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/TraditionalWear/TraditionalWear</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Shoulders</li>
+                <li>Torso</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <layers>
+                <li>OnSkin</li>
+            </layers>
+            <tags>
+                <li>Avali</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseHelmet">
+        <defName>RVFFA_ReconHUD</defName>
+        <label>Recon HUD</label>
+        <description>An Avali HUD. Attached to the side of an Avali’s head, this piece sports three important components: A small antenna to relay and receive information, a hard translucent visor, and- most importantly of all- and a matrix of miniscule LASERs at the base of the visor. Whilst these can feed the Avali a lot of information, they sadly can only keep to one color and have to keep 2D as well.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/HUD/HUD_south</texPath>
+        </graphicData>
+
+		<statBases>
+			<Mass>0.1</Mass>
+			<MarketValue>200</MarketValue>
+		</statBases>
+
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>+0.4</ShootingAccuracyPawn>
+            <ResearchSpeed>0.3</ResearchSpeed>
+	        <AimingDelayFactor>-0.35</AimingDelayFactor>
+			
+        </equippedStatOffsets>
+
+        <costList>
+            <ComponentSpacer>4</ComponentSpacer>
+            <RVFFA_ProcessedTungsten>15</RVFFA_ProcessedTungsten>
+            <RVFFA_Ferrogel>10</RVFFA_Ferrogel>
+        </costList>
+
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/HUD/HUD</wornGraphicPath>
+            <defaultOutfitTags>
+                <li>Worker</li>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseHelmet">
+        <defName>RVFFA_Headress</defName>
+        <label>Avali traditional headress</label>
+        <description>A small traditional avali headdress. Simple sporting strings with chimes attached to them around the upper ears meet at a single point on the back of the head before branching off to allow for more chimes on the front and back of the head. Both for beautiful sounds and echolocation; the chimes make up the majority of this headdress.</description>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/AvaliHeaddress/Headdress_south</texPath>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>750</WorkToMake>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>0.03</Mass>
+            <Flammability>0.02</Flammability>
+            <EquipDelay>1</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <SocialImpact>1.25</SocialImpact>
+        </equippedStatOffsets>
+        <costStuffCount>25</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <costList>
+            <Steel>3</Steel>
+        </costList>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseHelmet">
+        <defName>RVFFA_Hood</defName>
+        <label>Avali hood</label>
+        <description>A large Avali hood. Going over their head, this hood covers most of it. Only leaving their eyes and ear-tips visible. Whether this is for concealing purposes, simple matter of taste or perhaps something more religious shouldn’t really matter as it serves for all pretty well. In the end it’s just a simple hood, and perhaps you should just use it to protect your pawns from the environment.</description>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/AvaliHood/Hood_south</texPath>
+        </graphicData>
+
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		
+        <statBases>
+            <WorkToMake>1000</WorkToMake>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Mass>0.04</Mass>
+            <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.4</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.02</Flammability>
+            <EquipDelay>1</EquipDelay>
+        </statBases>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/AvaliHood/Hood</wornGraphicPath>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseApparel">
+        <defName>RVFFA_BellCloak</defName>
+        <label>Bell Cloak</label>
+        <description>An Avali bell cloak. Large bulbous sheets of fabric or leather attached to the neck of an Avali with a simple belt. These cloaks are commonly used by Avali who either travel around a lot or who want to wear something whilst still being able to wear stuff under it. Other than that these cloaks offer decent protection to the environment but only from small debris and particles.</description>
+
+        <costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_Avali_south</texPath>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>11200</WorkToMake>
+            <MaxHitPoints>180</MaxHitPoints>
+            <Mass>0.6</Mass>
+	        <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.9</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.02</Flammability>
+            <EquipDelay>4</EquipDelay>
+        </statBases>
+
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/BellCloak/Cloak</wornGraphicPath>
+            <layers>
+                <li>Shell</li>
+            </layers>
+            <defaultOutfitTags>
+                <li>Worker</li>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseApparel">
+        <defName>RVFFA_ThermalWraps</defName>
+        <label>Thermal Wraps</label>
+        <description>A suit of Avali thermal wraps. Together with the very efficient weaving of the nano-printing loom, these wraps are perhaps the best insulators around. Able to protect Avali from both extreme heats and colds, these wraps cover nearly their entire body except for their talons, feet, and head. Because of their complex designs, some fabrics and leathers can leave this piece of apparel very expensive to purchase or make.</description>
+
+        <costStuffCount>150</costStuffCount>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_Avali_south</texPath>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>17500</WorkToMake>
+            <MaxHitPoints>250</MaxHitPoints>
+            <Mass>0.9</Mass>
+	        <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>1.0</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.02</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+            <ComfyTemperatureMax>15</ComfyTemperatureMax>
+            <Flammability>20</Flammability>
+        </equippedStatOffsets>
+        <costList>
+            <RVFFA_FerroWeave>30</RVFFA_FerroWeave>
+        </costList>
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/ThermalWraps/ThermalWraps</wornGraphicPath>
+            <layers>
+                <li>Shell</li>
+            </layers>
+            <defaultOutfitTags>
+                <li>Worker</li>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmor">
+        <defName>RVFFA_SpecOpsArmor</defName>
+        <label>Illuminate Spec Ops Armor</label>
+        <description>A set of dark Avali special operations armour. Covering nearly their entire body barring their head, this large suit of armour provides the wearer with much protection from any hostile elements. Be it temperature, bullets, physical attacks or even toxic particles. Regretfully, due to its large size and somewhat bulky nature—the wearer has a slightly harder time moving but that’s the cost for survival.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor_Avali_south</texPath>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>50000</WorkToMake>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Mass>5</Mass>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>10</EquipDelay>
+            <ArmorRating_Sharp>0.98</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.43</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>15</Insulation_Cold>
+            <Insulation_Heat>15</Insulation_Heat>
+        </statBases>
+
+        <equippedStatOffsets>
+            <MoveSpeed>-2</MoveSpeed>
+        </equippedStatOffsets>
+
+        <costList>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <ComponentSpacer>3</ComponentSpacer>
+            <Plasteel>45</Plasteel>
+            <RVFFA_AeroTungstenCarbide>60</RVFFA_AeroTungstenCarbide>
+        </costList>
+
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+
+            <wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmorHelmet">
+        <defName>RVFFA_SpecOpsHelm</defName>
+        <label>Illuminate Spec Ops Helmet</label>
+        <description>A dark Avali special operations helmet. Going over their head, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections and bulkiness as the rest of the suit does, it in turn also gives the wearer a simple LASER based targeting system that heightens their hit probability with ranged weapons.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet_south</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>21000</WorkToMake>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Mass>5</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.86</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.41</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>4</Insulation_Cold>
+            <Insulation_Heat>2</Insulation_Heat>
+            <EquipDelay>6</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>+0.2</ShootingAccuracyPawn>
+            <MoveSpeed>-1.5</MoveSpeed>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <ComponentSpacer>3</ComponentSpacer>
+            <Plasteel>45</Plasteel>
+            <RVFFA_AeroTungstenCarbide>60</RVFFA_AeroTungstenCarbide>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmor">
+        <defName>RVFFA_ScoutArmor</defName>
+        <label>Illuminate Scout Armor</label>
+        <description>A set of sleek Avali scout armour. Covering nearly their entire body barring their head and tail, this suit brings true scouting capabilities to the table. Whilst not as protective as other armours, it does increase the wearer’s speed with the help of its exo-skeleton. Allowing for better evasion of enemies or perhaps a more rapid approach with a close ranged weapon.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor_Avali_south</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>30000</WorkToMake>
+            <MaxHitPoints>240</MaxHitPoints>
+            <Mass>1.5</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.2</ArmorRating_Heat>
+            <Insulation_Cold>4</Insulation_Cold>
+            <Insulation_Heat>6</Insulation_Heat>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Plasteel>20</Plasteel>
+            <RVFFA_Ferrogel>10</RVFFA_Ferrogel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmorHelmet">
+        <defName>RVFFA_ScoutHelment</defName>
+        <label>Illuminate Scout Helmet</label>
+        <description>A light Avali scout helmet. Going on their head and barely protecting the ears, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections as the rest of the suit, it in turn also features an antenna that allows them to communicate with homebase, sometimes even allowing them to receive information about the target they’re shooting at.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet_south</texPath>
+		</graphicData>
+		<statBases>
+            <WorkToMake>30000</WorkToMake>
+            <MaxHitPoints>240</MaxHitPoints>
+            <Mass>1.5</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>4</Insulation_Cold>
+            <Insulation_Heat>2</Insulation_Heat>
+            <EquipDelay>4</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <AimingDelayFactor>-0.15</AimingDelayFactor>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Plasteel>20</Plasteel>
+            <RVFFA_Ferrogel>10</RVFFA_Ferrogel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmor">
+        <defName>RVFFA_CombatArmor</defName>
+        <label>Illuminate Combat Armor</label>
+        <description>A set of bulky combat armour. Covering nearly their entire body barring their head and tailfeather, this suit gives the wearer much needed protection against bullet based or physical attacks. Whilst its bulky nature does make the wearer somewhat slower, it’s a somewhat cheap option when compared to more advanced suits. As such it is sometimes jokingly referred to as “Avali plate armour” because of it.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor_Avali_south</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>20000</WorkToMake>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Mass>3</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.34</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>10</Insulation_Cold>
+            <Insulation_Heat>10</Insulation_Heat>
+            <EquipDelay>4</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-1</MoveSpeed>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <RVFFA_ProcessedTungsten>30</RVFFA_ProcessedTungsten>
+            <Steel>40</Steel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseArmorHelmet">
+        <defName>RVFFA_CombatHelmet</defName>
+        <label>Illuminate Combat Helmet</label>
+        <description>A bulky Avali combat helmet. Covering the entirety of an Avali’s head, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections and bulkiness as the rest of the suit, it brings a strong piece of headwear that is certain to improve chances of survival, albeit it doesn’t bring much advanced technology wise.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Apparel/CombatHelmet/CombatHelmet_south</texPath>
+		</graphicData>
+		
+		<statBases>
+            <WorkToMake>20000</WorkToMake>
+            <MaxHitPoints>200</MaxHitPoints>
+            <Mass>3</Mass>
+            <Flammability>0.02</Flammability>
+            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <Insulation_Cold>4</Insulation_Cold>
+            <Insulation_Heat>2</Insulation_Heat>
+            <EquipDelay>4</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.5</MoveSpeed>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <RVFFA_ProcessedTungsten>30</RVFFA_ProcessedTungsten>
+            <Steel>40</Steel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>RimValiFFA/Things/Apparel/CombatHelmet/CombatHelmet</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+</Defs>
