@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<RVCRestructured.Defs.RenderableDef>
-		<defName>RimValiFFA_EyeL</defName>
+		<defName>RVFFA_EyeL</defName>
 		<bodyPart>left eye</bodyPart>
 		<colorSet>Eyes</colorSet>
-		<linkPosWith>RimValiFFA_Head</linkPosWith>
+		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
@@ -26,10 +26,10 @@
 
 
 	<RVCRestructured.Defs.RenderableDef>
-		<defName>RimValiFFA_EyeR</defName>
+		<defName>RVFFA_EyeR</defName>
 		<bodyPart>right eye</bodyPart>
 		<colorSet>Eyes</colorSet>
-		<linkPosWith>RimValiFFA_Head</linkPosWith>
+		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>

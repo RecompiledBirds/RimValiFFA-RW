@@ -16,19 +16,19 @@
 			<bodyTex>RVC/Empty</bodyTex>
 			<headTex>RVC/Empty</headTex>
 			<renderableDefs>
-				<li>RimValiFFA_EyeL</li>
-				<li>RimValiFFA_EyeR</li>
-				<li>RimValiFFA_EarLL</li>
-				<li>RimValiFFA_EarLU</li>
-				<li>RimValiFFA_EarRL</li>
-				<li>RimValiFFA_EarRU</li>
+				<li>RVFFA_EyeL</li>
+				<li>RVFFA_EyeR</li>
+				<li>RVFFA_EarLL</li>
+				<li>RVFFA_EarLU</li>
+				<li>RVFFA_EarRL</li>
+				<li>RVFFA_EarRU</li>
 
-				<li>RimValiFFA_Head</li>
+				<li>RVFFA_Head</li>
 
-				<li>RimValiFFA_Body</li>
+				<li>RVFFA_Body</li>
 
-				<li>RimValiFFA_Tail</li>
-				<li>RimValiFFA_TailSkirt</li>
+				<li>RVFFA_Tail</li>
+				<li>RVFFA_TailSkirt</li>
 			</renderableDefs>
 
 

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
-		<defName>RimValiFFA_Body</defName>
+		<defName>RVFFA_Body</defName>
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<north>
 			<position>(0,0,0)</position>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
-		<defName>RimValiFFA_EarLL</defName>
-		<linkPosWith>RimValiFFA_Head</linkPosWith>
+		<defName>RVFFA_EarLL</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
@@ -30,8 +30,8 @@
 
 
 	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
-		<defName>RimValiFFA_EarRL</defName>
-		<linkPosWith>RimValiFFA_Head</linkPosWith>
+		<defName>RVFFA_EarRL</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
@@ -58,8 +58,8 @@
 	</RVCRestructured.Defs.RenderableDef>
 
 	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
-		<defName>RimValiFFA_EarLU</defName>
-		<linkPosWith>RimValiFFA_Head</linkPosWith>
+		<defName>RVFFA_EarLU</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
@@ -87,8 +87,8 @@
 
 
 	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
-		<defName>RimValiFFA_EarRU</defName>
-		<linkPosWith>RimValiFFA_Head</linkPosWith>
+		<defName>RVFFA_EarRU</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
 			<size>1</size>
