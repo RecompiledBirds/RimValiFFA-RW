@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BodyPartDef>
+		<defName>RimValiEar</defName>
+		<label>ear</label>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<hitPoints>12</hitPoints>
+		<frostbiteVulnerability>6</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<tags>
+			<li>HearingSource</li>
+			<li>SightSource</li>
+		</tags>
+		<destroyableByDamage>true</destroyableByDamage>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RimValiArmFeathers</defName>
+		<label>Arm feathers</label>
+		<hitPoints>10</hitPoints>
+		<permanentInjuryChanceFactor>18</permanentInjuryChanceFactor>
+		<delicate>true</delicate>
+		<skinCovered>false</skinCovered>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<beautyRelated>true</beautyRelated>
+		<bleedRate>0.3</bleedRate>
+	</BodyPartDef>
+</Defs>

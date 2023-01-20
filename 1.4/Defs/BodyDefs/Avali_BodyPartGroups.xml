@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BodyPartGroupDef>
+		<defName>RVFFA_LeftLeg</defName>
+		<label>left leg</label>
+		<listOrder>10</listOrder>
+	</BodyPartGroupDef>
+	<BodyPartGroupDef>
+		<defName>RVFFA_RightLeg</defName>
+		<label>right leg</label>
+		<listOrder>10</listOrder>
+	</BodyPartGroupDef>
+</Defs>

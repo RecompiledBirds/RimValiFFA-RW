@@ -89,7 +89,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>AvaliPistolBullet</defaultProjectile>
+                <defaultProjectile>RVFFA_PistolBullet</defaultProjectile>
                 <warmupTime>0.3</warmupTime>
                 <range>29.9</range>
                 <soundCast>Shot_Autopistol</soundCast>

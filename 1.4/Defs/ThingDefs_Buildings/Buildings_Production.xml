@@ -49,8 +49,8 @@
 
 	<ThingDef ParentName="RVFFA_BaseProductionBench">
 		<defName>RVFFA_NanoForge</defName>
-		<label>Avali nanoforge</label>
-		<description>The Avali Nano-Printing Forge is a 3D printer, like most Avali crafting utilities. It works with immense heat, and nanotechnologies able to rearrange the structure and molecues of the items put in. Caution: Do not stick fingers, toes, feet, hands, tails, or other limbs inside, even if the device appears to be powered off.</description>
+		<label>Nanolathe</label>
+		<description>The Nanolathe is a 3D a specialized printer, like most Avali crafting utilities. It works with immense heat, and nanotechnologies able to rearrange the structure and molecues of the items put in. Caution: Do not stick fingers, toes, feet, hands, tails, or other limbs inside, even if the device appears to be powered off.</description>
 		
 		<size>(3,1)</size>
 

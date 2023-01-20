@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<RVCRestructured.RVR.RaceDef ParentName="BasePawn">
-		<defName>RimVali_testRace</defName>
-		<label>Test RVR Race</label>
-		<description>A test race.</description>
+		<defName>RVFFA_Avali</defName>
+		<label>Avali</label>
+		<description>Cute, fluffy raptors with highly advanced tech. The primary solvent in avali biology is ammonia, making them mostly incompatible with humans. Avali don't like being hot, as their blood boils at a much lower temp then a human's blood, but they can survive in the cold no problem.</description>
 		<statBases>
 			<MarketValue>1750</MarketValue>
 			<MoveSpeed>4.6</MoveSpeed>
@@ -12,7 +12,6 @@
 			<LeatherAmount>75</LeatherAmount>
 			<RoyalFavorValue>3</RoyalFavorValue>
 		</statBases>
-
 		<raceGraphics>
 			<bodyTex>RVC/Empty</bodyTex>
 			<headTex>RVC/Empty</headTex>
@@ -126,8 +125,8 @@
 								</li>
 							</options>
 						</colorThree>
-					
-				</colorGenerator>
+
+					</colorGenerator>
 					<colorGeneratorFemale>
 						<colorOne Class="ColorGenerator_Options">
 							<options>
@@ -186,13 +185,18 @@
 								</li>
 							</options>
 						</colorThree>
-					
-				</colorGeneratorFemale>
+
+					</colorGeneratorFemale>
 				</li>
 			</colorGenerators>
 		</raceGraphics>
 		<restrictions>
-			
+			<restrictedBodyTypes>
+				<li>RVFFA_Avali</li>
+			</restrictedBodyTypes>
+			<allowedBodyTypes>
+				<li>RVFFA_Avali</li>
+			</allowedBodyTypes>
 		</restrictions>
 		<tools>
 			<li>
@@ -381,33 +385,8 @@
 		</recipes>
 		<ingredient>
 			<mergeCompatibilityTags>
-				<li>HumanMeat</li>
+				<li>AvaliMeat</li>
 			</mergeCompatibilityTags>
 		</ingredient>
 	</RVCRestructured.RVR.RaceDef>
-
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<race>RimVali_testRace</race>
-		<defName>TestPawn</defName>
-		<label>test pawn</label>
-		<defaultFactionType>PlayerColony</defaultFactionType>
-		<chemicalAddictionChance>0.06</chemicalAddictionChance>
-		<apparelTags>
-			<li>IndustrialBasic</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-		<apparelMoney>350~600</apparelMoney>
-		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
-		<techHediffsChance>0.03</techHediffsChance>
-		<techHediffsMoney>50~800</techHediffsMoney>
-		<techHediffsTags>
-			<li>Poor</li>
-			<li>Simple</li>
-			<li>ImplantEmpireCommon</li>
-		</techHediffsTags>
-		<techHediffsDisallowTags>
-			<li>PainCauser</li>
-		</techHediffsDisallowTags>
-		<initialResistanceRange>13~21</initialResistanceRange>
-	</PawnKindDef>
 </Defs>
