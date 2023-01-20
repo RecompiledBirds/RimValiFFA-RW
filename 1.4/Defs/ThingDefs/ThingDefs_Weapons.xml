@@ -291,4 +291,320 @@
             </skillRequirements>
         </recipeMaker>
     </ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_RifleBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/RifleBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>13</damageAmountBase>
+			<stoppingPower>0.5</stoppingPower>
+			<speed>177</speed>
+			<armorPenetrationBase>0.42</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_Rifle</defName>
+		<label>Illuminate Rifle</label>
+		<description>A common Illuminate pattern rifle. Praised by both soldiers and hunters for its reliability, it is practically standard issue for any weaponized operation. Its high range and very short travel time makes it perfect for picking off distant enemies.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Rifle</texPath>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>34000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.69</AccuracyTouch>
+			<AccuracyShort>0.81</AccuracyShort>
+			<AccuracyMedium>0.92</AccuracyMedium>
+			<AccuracyLong>0.86</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>7</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_RifleBullet</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<range>38.5</range>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_SniperBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SniperBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>33</damageAmountBase>
+			<speed>183</speed>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>0.54</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminateSniperRifle</defName>
+		<label>Illuminate Sniper Rifle</label>
+
+		<description>A high-powered Illuminate pattern sniper rifle. This sophisticated weapon optimizes the use of Helium-cooling to keep its powerful and plentiful coils from overheating in it’s user’s talons. With its long range and powerful bullet, it is highly loved by Illuminate snipers for picking off high-value targets with.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/SniperRifle</texPath>
+		</graphicData>
+
+		<soundInteract>Interact_Rifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>66000</WorkToMake>
+			<Mass>6.5</Mass>
+			<AccuracyTouch>0.6</AccuracyTouch>
+			<AccuracyShort>0.82</AccuracyShort>
+			<AccuracyMedium>0.88</AccuracyMedium>
+			<AccuracyLong>0.93</AccuracyLong>
+			<RangedWeapon_Cooldown>2.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>250</Steel>
+			<ComponentSpacer>5</ComponentSpacer>
+			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_SniperBullet</defaultProjectile>
+				<warmupTime>1.85</warmupTime>
+				<range>48</range>
+				<soundCast>Shot_SniperRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_ShotgunBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/ShotgunBullet</texPath>
+		</graphicData>
+		<projectile>
+			<stoppingPower>3</stoppingPower>
+			<damageAmountBase>24</damageAmountBase>
+			<speed>150</speed>
+			<armorPenetrationBase>0.33</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminateShotgun</defName>
+		<label>Illuminate Shotgun</label>
+		<description>An Illuminate Pattern shotgun. Together with its advanced coil technology and a simple choke at the end, it fires a highly concentrated wad of pellets towards its enemies. Whilst longer range than its Terran counterparts, it has to trade in short range usability to make this possible.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Shotgun</texPath>
+		</graphicData>
+
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>22000</WorkToMake>
+			<Mass>5.0</Mass>
+			<AccuracyTouch>0.68</AccuracyTouch>
+			<AccuracyShort>0.79</AccuracyShort>
+			<AccuracyMedium>0.82</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>70</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>3</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_ShotgunBullet</defaultProjectile>
+				<warmupTime>1.9</warmupTime>
+				<range>24</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RVFFA_Rocket</defName>
+		<label>rocket</label>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/Rocket</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<!-- Use default damage from explosion def -->
+			<explosionRadius>3.7</explosionRadius>
+			<speed>35</speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseGun">
+		<defName>RVFFA_IlluminateRocketLauncher</defName>
+		<label>Illuminate Rocket Launcher</label>
+		<description>An Illuminate rocket launcher. Anti-Tank weapons are important in any war, and this rocket launcher is no different. Using a fin-stabilized system together with a small jet system, this rocket ensures you hit where you aim. Despite its good range, near-perfect accuracy and high-explosive payload. It fires a slow and easy to dodge projectile and should be used with good prior planning.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/RocketLauncher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>2020</MarketValue>
+			<Mass>7</Mass>
+			<RangedWeapon_Cooldown>4.7</RangedWeapon_Cooldown>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>SingleUseWeapon</li>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_Rocket</defaultProjectile>
+				<forcedMissRadius>0.5</forcedMissRadius>
+				<warmupTime>4.5</warmupTime>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<range>34</range>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>
