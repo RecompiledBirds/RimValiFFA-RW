@@ -5,4 +5,5 @@
 	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>
 	<RVFFA_PackWorker_SubjectIsWild>{0} is wild.</RVFFA_PackWorker_SubjectIsWild>
 	<RVFFA_PackWorker_SubjectIsInPackAlready>{0} is already in a pack.</RVFFA_PackWorker_SubjectIsInPackAlready>
+	<RVFFA_PackWorker_PackTooSmall>{0} didn't have enough members to sustain itself.</RVFFA_PackWorker_PackTooSmall>
 </LanguageData>

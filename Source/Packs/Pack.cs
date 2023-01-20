@@ -45,6 +45,33 @@ namespace RimValiFFARW.Packs
         public PackWorker Worker => worker;
 
         /// <summary>
+        ///     A packs name
+        ///     TODO: Fully implement the Pack names
+        /// </summary>
+        public string Name => def.LabelCap;
+
+        /// <summary>
+        ///     A packs name Color
+        ///     TODO: Fully implement the Pack name colors
+        /// </summary>
+        public Color NameColor => Color.blue + Color.red;
+
+        /// <summary>
+        ///     A <see cref="Pack"/>s <see cref="Name"/> colored using <see cref="NameColor"/>
+        /// </summary>
+        public TaggedString NameColored
+        {
+            get 
+            { 
+                if (Name != null)
+                {
+                    return Name.Colorize(NameColor);
+                }
+                return def.LabelCap;
+            }
+        }
+
+        /// <summary>
         ///     Private Pack creation function. To be called by <see cref="TryMakeNewPackFromPawns(PackDef, IEnumerable{Pawn}, bool, out Pack)"/>
         /// </summary>
         /// <param name="def">The <see cref="PackDef"/> used to make a Pack.</param>
@@ -95,7 +122,11 @@ namespace RimValiFFARW.Packs
             pack = null;
 
             PackWorker packWorker = def?.GetNewPackWorker;
-            if (pawns.Count() < def.MinSize) return false; //TODO: Add a message of reject input to player
+            if (pawns.Count() < def.MinSize)
+            {
+                if (!quietError) Messages.Message("RVFFA_Pack_CountLowerThanMin".Translate(), new LookTargets(pawns), MessageTypeDefOf.RejectInput);
+                return false;
+            }
             if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawn, quietError))) return false;
 
             pack = new Pack(def, pawns);

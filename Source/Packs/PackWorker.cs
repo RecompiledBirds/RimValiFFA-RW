@@ -94,6 +94,11 @@ namespace RimValiFFARW.Packs
             //TODO: If pack really hates member
             //TODO: If member is last member in pack
             //TODO: If number of members is lower than minimum, by definition
+            if (pack.Members.Count < def.minSize)
+            {
+                reason = "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
+                return true;
+            }
             return false;
         }
 
