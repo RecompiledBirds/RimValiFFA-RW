@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- Shooting -->
 	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
 		<defName>RVFFA_AlpineScout</defName>
 		<identifier>RVFFA_AlpineScout</identifier>
@@ -22,7 +23,7 @@
 
 	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
 		<defName>RVFFA_SecurityGuard</defName>
-		<identifer>RVFFA_SecurityGuard</identifer>
+		<identifier>RVFFA_SecurityGuard</identifier>
 		<title>Security Guard</title>
 		<titleShort>Security</titleShort>
 		<baseDesc>[PAWN_nameDef] worked as a security enforcer in an Illuminate central complex. Actual breaches rarely happened, but [PAWN_pronoun] still had to stick to the protocol when questioning anyone who was an outsider. That even included [PAWN_possessive] packmates when they visited.</baseDesc>
@@ -46,7 +47,7 @@
 		<defName>RVFFA_Soldier</defName>
 		<identifier>RVFFA_Soldier</identifier>
 		<title>Avalian Soldier</title>
-		<titleShory>Soldier</titleShory>
+		<titleShort>Soldier</titleShort>
 		<baseDesc>[PAWN_nameDef] was a member of the well-trained and well-supplied defense force in the heart of Avalon. The troops typically join as a pack and forms squads that way, and they were highly mechanized to make up for the relative weakness in their stature.</baseDesc>
 		<skillGains>
 			<li>
@@ -78,7 +79,7 @@
 		</skillGains>
 		<possessions>
 			<li>
-				<key>RVFFA_SniperRifle</key>
+				<key>RVFFA_IlluminateSniperRifle</key>
 				<value>1</value>
 			</li>
 		</possessions>
@@ -107,6 +108,80 @@
 			<li>
 				<key>Social</key>
 				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<!-- Melee -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Fencer</defName>
+		<identifier>RVFFA_Fencer</identifier>
+		<title>Fencer</title>
+		<titleShort>Fencer</titleShort>
+		<baseDesc>Aside from the usual duties [PAWN_pronoun] has as a member in a pack of craftsmen, [PAWN_nameDef] has taken up the hobby of a unique kind of Avalian sword fighting. [PAWN_pronoun] enjoys the battle of reflexes and speed when sparring, but is still quite uncomfortable with the idea of wielding lethal weapons, especially guns.</baseDesc>
+
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>-5</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_HonorGuard</defName>
+		<identifier>RVFFA_HonorGuard</identifier>
+		<title>Honor Guard</title>
+		<titleShort>Guard</titleShort>
+		<baseDesc>[PAWN_nameDef] was a honor guard in Avalon who was present in many welcoming ceremonies and parades. Much of the training [PAWN_pronoun] received was more ceremonial than combat related, but it still made [PAWN_objective] more comfortable with a sword or spear than most Avali.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_RiotPolice</defName>
+		<identifier>RVFFA_RiotPolice</identifier>
+		<title>Riot Police</title>
+		<titleShort>Police</titleShort>
+		<baseDesc>[PAWN_nameDef] was stationed in a highly secure Avalian city center as a heavily armored enforcer. On the rare occasions [PAWN_pronoun] was needed, [PAWN_possessive] work mostly involved subduing troublemakers with a shock baton and the weight of [PAWN_possessive] armor.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_OracleGuard</defName>
+		<identifier>RVFFA_OracleGuard</identifier>
+		<title>Oracle Guard</title>
+		<titleShort>Supplicant</titleShort>
+		<baseDesc>[PAWN_nameDef] was one of the chosen guards of the Oracle itself. As a guard of the singularity, [PAWN_pronoun] stood at the doors with a meditative silence, the singularity's hum synchronized itself with the machine parts of [PAWN_possessive] being. Armed with the machine's enlightenment, and a quarterstaff charged with strange energy, [PAWN_pronoun] dreams of a greater purpose, and electric, ammonia sheep.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
 			</li>
 		</skillGains>
 	</BackstoryDef>

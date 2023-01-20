@@ -9,6 +9,6 @@
 		<spawnCategories>
 			<li>RVFFA_Illuminate</li>
 		</spawnCategories>
-		<shuffeable>True</shuffeable>
+		<shuffleable>true</shuffleable>
 	</BackstoryDef>
 </Defs>
