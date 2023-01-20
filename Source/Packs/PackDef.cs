@@ -21,6 +21,10 @@ namespace RimValiFFARW.Packs
 
         public int maxSize = 5;
 
+        public int minGroupOpinionNeededCreation = 60;
+
+        public int minGroupOpinionNeededSustain = 40;
+
         /// <summary>
         ///     The maximum size of a <see cref="Pack"/>
         /// </summary>

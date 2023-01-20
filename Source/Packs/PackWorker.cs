@@ -63,6 +63,9 @@ namespace RimValiFFARW.Packs
                 return false;
             }
 
+            //TODO: Implement Min Opinion Needed
+            //TODO: Implement Min Size Needed
+
             return true;
         }
 
@@ -76,7 +79,7 @@ namespace RimValiFFARW.Packs
         {
             if (!pack.Members.Contains(member))
             {
-                RVCLog.Log($"Tried to check if {member.Name.ToStringShort} could be removed from pack with loadID: {pack.GetUniqueLoadID()}, but the pawn isn't even inside that pack");
+                RVCLog.Log($"Tried to check if {member.NameShortColored} could be removed from pack with loadID: {pack.GetUniqueLoadID()}, but the pawn isn't even inside that pack");
                 return false;
             }
 
@@ -89,11 +92,22 @@ namespace RimValiFFARW.Packs
         /// <param name="member">The given <see cref="Pawn"/></param>
         /// <param name="pack">The given <see cref="Pack"/></param>
         /// <returns></returns>
-        public virtual bool MemberShouldLeave(Pawn member, Pack pack)
+        public virtual bool MemberShouldLeave(Pawn member, Pack pack, out string reason)
         {
-            //TODO: If pack really hates member
-            //TODO: If member is last member in pack
-            //TODO: If number of members is lower than minimum, by definition
+            reason = null;
+            double avgOpinionOfMember = EvaluateAverageOpinionForMember(member, pack);
+            if (def.minGroupOpinionNeededSustain < avgOpinionOfMember)
+            {
+                reason = "RVFFA_PackWorker_AverageOpinionOfMemberTooLow".Translate(member.NameShortColored, avgOpinionOfMember);
+                return true;
+            }
+
+            if (pack.Members.Count == 1)
+            {
+                reason = "RVFFA_PackWorker_LastInPack".Translate(member.NameShortColored);
+                return true;
+            }
+
             if (pack.Members.Count < def.minSize)
             {
                 reason = "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
@@ -165,5 +179,10 @@ namespace RimValiFFARW.Packs
         /// <param name="reasonTranslationKey">The given explaination</param>
         /// <returns></returns>
         protected string MakeCanNotJoinReasonStringForPawn(Pawn pawn, string reasonTranslationKey) => $"RVFFA_PackWorker_CanNotJoin".Translate(pawn.NameShortColored, $"{reasonTranslationKey.Translate(pawn.ProSubj())}");
+
+        /// <param name="member"></param>
+        /// <param name="pack"></param>
+        /// <returns>The average opinion of a <paramref name="member"/> in a <paramref name="pack"/></returns>
+        public virtual double EvaluateAverageOpinionForMember(Pawn member, Pack pack) => pack.Members.Average(otherMembers => otherMembers.relations.OpinionOf(member));
     }
 }

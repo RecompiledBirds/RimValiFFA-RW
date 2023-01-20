@@ -1,9 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<RVFFA_PackWorker_DoesNotExist>A pawn can't join, because they don't exist.</RVFFA_PackWorker_DoesNotExist>
-	<RVFFA_PackWorker_CanNotJoin>{0} can't join, because {1}</RVFFA_PackWorker_CanNotJoin> <!--{Name} can't join, because {reason}-->
-	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>
-	<RVFFA_PackWorker_SubjectIsWild>{0} is wild.</RVFFA_PackWorker_SubjectIsWild>
-	<RVFFA_PackWorker_SubjectIsInPackAlready>{0} is already in a pack.</RVFFA_PackWorker_SubjectIsInPackAlready>
+	<RVFFA_PackWorker_CanNotJoin>{0} can't join, because {1}</RVFFA_PackWorker_CanNotJoin>																<!--{Name} can't join, because {reason}-->
+	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>																		<!--{Name} is dead.-->
+	<RVFFA_PackWorker_SubjectIsWild>{0} is wild.</RVFFA_PackWorker_SubjectIsWild>																		<!--{Name} is already in a pack.-->
+	<RVFFA_PackWorker_SubjectIsInPackAlready>{0} is already in a pack.</RVFFA_PackWorker_SubjectIsInPackAlready>										
+	<RVFFA_PackWorker_AverageOpinionOfMemberTooLow>The packs average opinion of {0} sank too low! ({1})</RVFFA_PackWorker_AverageOpinionOfMemberTooLow>	<!--The packs average opinion of {Name} sank too low! ({Average Opinion})-->
+	<RVFFA_PackWorker_LastInPack>{0} was the last member of his pack.</RVFFA_PackWorker_LastInPack>
 	<RVFFA_PackWorker_PackTooSmall>{0} didn't have enough members to sustain itself.</RVFFA_PackWorker_PackTooSmall>
+	
+	<RVFFA_Pack_CountLowerThanMin>This set of pawns is too small for this type of Pack!</RVFFA_Pack_CountLowerThanMin>
 </LanguageData>
