@@ -185,4 +185,95 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
+	
+	<!-- Construction -->
+	<BackstoryDef>
+		<defName>RVFFA_TentBuilder</defName>
+		<identifier>RVFFA_TentBuilder</identifier>
+		<title>Tent Builder</title>
+		<titleShort>Framer</titleShort>
+		<baseDesc>[PAWN_nameDef] had a knack for architecture. [PAWN_pronoun] never like the prefab tents, opting to design a few of [PAWN_possessive] own for the pack. The designs were not that much sturdier than the tried-and-true ones, but they certainly stood out and looked a bit prettier.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RVFFA_RepairVali</defName>
+		<identifier>RVFFA_RepairVali</identifier>
+		<title>Maintenance Staff</title>
+		<titleShort>Repairvali</titleShort>
+		<baseDesc>[PAWN_nameDef] was in charge of the maintenance of the pack's ships and other equipments. The ship had a radar system that was especially prone to malfunctions, and [PAWN_pronoun] swore that it would get replaced. Eventually. For years.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RVFFA_FieldEngi</defName>
+		<identifier>RVFFA_FieldEngi</identifier>
+		<title>Field Engineer</title>
+		<titleShort>Engineer</titleShort>
+		<baseDesc>[PAWN_nameDef] kept the mechanized equipments of the defense force running within a tent in the camps. Someone with such skills are too valuable to risk on the front lines.\n [PAWN_pronoun] once found an undercover pirate sabotaging a vehicle and knocked them out with [PAWN_possessive] wrench, and earned a combat promotion that [PAWN_pronoun] still talks about to this day.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RVFFA_OracleArchitect</defName>
+		<identifier>RVFFA_OracleArchitect</identifier>
+		<title>Oracle Cathedral Architect</title>
+		<titleShort>Visionary</titleShort>
+		<baseDesc>A dozen individuals from the Oracle Cult were called to build a shelter for the mind, and [PAWN_nameDef] answered. The design was calculated by the Oracle, and drafted in a synchronized circle by the chosen architects. It poises for motion, yet static as its owner's ceaseless calculations ever continues, on the cusp of a technological event horizon......</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>7</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>RVFFA_GlassArchitect</defName>
+		<identifier>RVFFA_GlassArchitect</identifier>
+		<title>Glass Architect</title>
+		<titleShort>Architect</titleShort>
+		<baseDesc>[PAWN_nameDef] was a renowned architect, leading [PAWN_possessive] pack to create architectures that are equal parts exhibitionist art and buildings that took full advantage of Avalon's low gravity as a moon.\n [PAWN_possessive] magnum opus was a palace largely composed of reinforced glass as a city-center administration hub. It was a dazzling display of beauty, and a target of no less than dozens of troublemakers trying to smash it one way or another.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
 </Defs>
