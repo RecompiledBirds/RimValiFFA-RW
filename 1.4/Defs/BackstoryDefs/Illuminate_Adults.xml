@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_AlpineScout</defName>
+		<identifier>RVFFA_AlpineScout</identifier>
+		<slot>Adulthood</slot>
+		<title>Alpine Scout</title>
+		<titleShort>Alpine Scout</titleShort>
+		<baseDesc>Belonging in a pack of scouts tasked with keeping an important facility secure in the mountain region, [PAWN_nameDef] spent long nights at temporary camps watching for potential threats. Years of working with [PAWN_possessive] packmates allowed them to always count on one another without a word.\n Aside from keeping watch, the pack also put up many bridges and cleared paths for future traversals around the area, [PAWN_nameDef] knew the shortcuts like the back of [PAWN_possessive] wings.</baseDesc>
+
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_SecurityGuard</defName>
+		<identifer>RVFFA_SecurityGuard</identifer>
+		<title>Security Guard</title>
+		<titleShort>Security</titleShort>
+		<baseDesc>[PAWN_nameDef] worked as a security enforcer in an Illuminate central complex. Actual breaches rarely happened, but [PAWN_pronoun] still had to stick to the protocol when questioning anyone who was an outsider. That even included [PAWN_possessive] packmates when they visited.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Soldier</defName>
+		<identifier>RVFFA_Soldier</identifier>
+		<title>Avalian Soldier</title>
+		<titleShory>Soldier</titleShory>
+		<baseDesc>[PAWN_nameDef] was a member of the well-trained and well-supplied defense force in the heart of Avalon. The troops typically join as a pack and forms squads that way, and they were highly mechanized to make up for the relative weakness in their stature.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Sniper</defName>
+		<identifier>RVFFA_Sniper</identifier>
+		<title>Illuminate Sniper</title>
+		<titleShort>Sniper</titleShort>
+		<baseDesc>Trained and supplied by the Illuminate government, [PAWN_nameDef]'s extraordinary augments and skills combined made [PAWN_objective] a deadly sniper. [PAWN_possessive] targets mostly included notorious pirates and dissenters when they dared to make a presence in Illuminate grounds, but sometimes, [PAWN_possessive] skill were also used to get rid of someone who knows things they shouldn't.\n The nature of the job made [PAWN_nameDef] a target to whoever knew of [PAWN_objective]. [PAWN_pronoun] stayed away from [PAWN_possessive] pack to avoid them becoming a target for retaliation, relying on infrequent encrypted holo-calls to keep in touch.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-2</value>
+			</li>
+		</skillGains>
+		<possessions>
+			<li>
+				<key>RVFFA_SniperRifle</key>
+				<value>1</value>
+			</li>
+		</possessions>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_RougeShock</defName>
+		<identifier>RVFFA_RougeShock</identifier>
+		<title>Rouge Shock Trooper</title>
+		<titleShort>Trooper</titleShort>
+		<baseDesc>As a veteran in a pirate gang, [PAWN_nameDef] was present in some of the most infamous raids against high value cargo ships. A heavily armored captain in the front line, [PAWN_pronoun] developed the skills to remain calm and call the shots even in a seemingly chaotic and explosive brawl.\n After just barely evading capture by a devastating Illuminate raid, [PAWN_nameDef] managed to be taken under the wing by a pack of artisans with a fake identity and a sympathetic story about losing everything to pirates. [PAWN_pronoun] worked overnight to distract [PAWN_possessive] mind when [PAWN_possessive] past deeds kept [PAWN_objective] from sleeping.</baseDesc>
+
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+</Defs>
