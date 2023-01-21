@@ -455,9 +455,9 @@
 	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
 		<defName>RVFFA_ArtisticChef</defName>
 		<identifier>RVFFA_ArtisticChef</identifier>
-		<title>Private Bartender</title>
-		<titleShort>Bartender</titleShort>
-		<baseDesc>[PAWN_nameDef] worked as a chef, and became increasingly obsessed with creating the perfect flavor that came to [PAWN_possessive] dreams. [PAWN_pronoun] first turned to the finest fabricators, and when those failed, [PAWN_pronoun] turned to the exoplanets.\n Eventually, this quest brought [PAWN_objective] to the Oracle's doorstep, after all, what are the abstract concepts of flavor if not some perfectly mixed molecules against chemical receptors? The machine ought to have the answer to such a simple question.\n [PAWN_nameDef] took a step forward, and all sensations unfolded</baseDesc>
+		<title>Artistic Chef</title>
+		<titleShort>Chef</titleShort>
+		<baseDesc>[PAWN_nameDef] worked as a chef, and became increasingly obsessed with creating the perfect flavor that came to [PAWN_possessive] dreams. [PAWN_pronoun] first turned to the finest fabricators, and when those failed, [PAWN_pronoun] turned to the exoplanets.\n Eventually, this quest brought [PAWN_objective] to the Oracle's doorstep, after all, what are the abstract concepts of flavor if not some perfectly mixed molecules against chemical receptors? The machine ought to have the answer to such a simple question.\n [PAWN_nameDef] took a step forward, and all sensations unfolded.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Cooking</key>
@@ -468,5 +468,115 @@
 				<value>4</value>
 			</li>
 		</skillGains>
+	</BackstoryDef>
+	
+	<!-- Plants -->
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_HydroponicManager</defName>
+		<identifier>RVFFA_HydroponicManager</identifier>
+		<title>Hydroponic Manager</title>
+		<titleShort>Overseer</titleShort>
+		<baseDesc>Unlike many Avali with a more nomadic outlook, [PAWN_nameDef] worked and lived in a dedicated hydroponic complex along with [PAWN_possessive] pack. [PAWN_pronoun] enjoyed the quiet most of the time, and their work involved keeping the crop in check, and organizing the shipments.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>-3</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>-2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_CityGardener</defName>
+		<identifier>RVFFA_CityGardener</identifier>
+		<title>City Gardener</title>
+		<titleShort>Gardener</titleShort>
+		<baseDesc>[PAWN_nameDef] took work in an administrative center's plaza as a landscaper. The city center had enough techs to take care of all its plants automatically, but it was up to [PAWN_objective] to arrange them and oversee the growth cycles to keep the foliage consistently pleasing to the eyes.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_StrandedFarmer</defName>
+		<identifier>RVFFA_StrandedFarmer</identifier>
+		<title>Stranded Farmer</title>
+		<titleShort>Farmer</titleShort>
+		<baseDesc>
+			[PAWN_nameDef]'s vessel crashed due to a critical malfunction in the orbit of an uninhabited planet in a sparsely governed system, and the supplies would not last until rescue finally comes in years. [PAWN_pronoun] had to use [PAWN_possessive] botany knowledge to grow food the old fashioned way to sustain the pack.\n The rescuers came to find a small farm and a hut that the pack was disappointed to leave behind despite being happy for the rescue.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Exobotanist</defName>
+		<identifier>RVFFA_Exobotanist</identifier>
+		<title>Exobotanist</title>
+		<titleShort>Exobotanist</titleShort>
+		<baseDesc>Belonging in a pack of explorers, [PAWN_nameDef] has picked up the hobby of cataloguing plants in many uncharted areas and their possible use. Among the many entries that did nothing besides their unique looks, there were a few notable spices, psychedelics, and a surprisingly effective coagulator that saved a stranded packmate’s life.\n The plant is now named after [PAWN_objective], but didn’t get a wider use because of strict growing conditions it needed.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_CellularBotanist</defName>
+		<identifier>RVFFA_CellularBotanist</identifier>
+		<title>Cellular Botanist</title>
+		<titleShort>Herbalist</titleShort>
+		<baseDesc>Even though Avalian advanced chemistry labs can make nearly every compound imaginable, growing them inside gene-edited plants is still an easier and much more scalable solution. [PAWN_nameDef] made a living off engineering new plants for medicinal purposes. [PAWN_pronoun] collected royalties from cultivation plants, or sold the rights off for a pretty penny. The lucrative income made sure that [PAWN_pronoun] didn't have to do a single bit of work outside of [PAWN_possessive] lab.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<workDisables>ManualDumb</workDisables>
 	</BackstoryDef>
 </Defs>
