@@ -929,4 +929,99 @@
 		</skillGains>
 		<workDisables>Violent</workDisables>
 	</BackstoryDef>
+	
+	<!-- Social -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Clerk</defName>
+		<identifier>RVFFA_Clerk</identifier>
+		<title>Shop Clerk</title>
+		<titleShort>Clerk</titleShort>
+		<baseDesc>[PAWN_nameDef] worked in a minor Avali colony as a clerk, responsible for greeting customers and helping with their transactions. [PAWN_pronoun] put up smiles and greetings on the behalf of the establishment, both to leave a good impression and placate some disgruntled customers.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Caretaker</defName>
+		<identifier>RVFFA_Caretaker</identifier>
+		<title>Caretaker</title>
+		<titleShort>Caretaker</titleShort>
+		<baseDesc> [PAWN_nameDef] and [PAWN_possessive] pack worked as a caretaker for many packs of newborn kits that greet the caretaking center monthly. [PAWN_pronoun] became many kit's favorite, mostly due to [PAWN_possessive] open secret that [PAWN_pronoun] can be "bribed" with either a well-done crafting project or good behavior for some extra candy bars.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<disallowedTraits>
+			<Psychopath />
+			<Abrasive/>
+		</disallowedTraits>
+		<forcedTraits>
+			<Kind>0</Kind>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Actor</defName>
+		<identifier>RVFFA_Actor</identifier>
+		<title>Actor</title>
+		<titleShort>Actor</titleShort>
+		<baseDesc>[PAWN_nameDef] was the lead actor in a team of filmmakers comprised of several packs. [PAWN_pronoun] enjoyed immersing [PAWN_possessive] into the role of others, and learned the skill to break into a crying fit on demand, when the drama called for it.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Spokesperson</defName>
+		<identifier>RVFFA_Spokesperson</identifier>
+		<title>Corporate Spokesperson</title>
+		<titleShort>PR</titleShort>
+		<baseDesc>[PAWN_nameDef] took on a lucrative desk job as a public relation manager for a controversial exoplanet corp. [PAWN_pronoun] spun the news to the corp's side, and muddied the waters when the accusations pointed their way. Most importantly, [PAWN_pronoun] gave the soulless layers of boards and meetings a personality to face the public, and a mission statement that they rarely followed. Eventually, [PAWN_nameDef]'s morals caught up to [PAWN_objective], and [PAWN_pronoun] handed in [PAWN_possessive] resignation.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>9</value>
+			</li>
+		</skillGains>
+		<workDisables>DumbManual</workDisables>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_IlluminateSpy</defName>
+		<identifier>RVFFA_IlluminateSpy</identifier>
+		<title>Illuminate spy</title>
+		<titleShort>Spy</titleShort>
+		<baseDesc>[PAWN_nameDef] was an agent for the Illuminate that infiltrated highly organized groups of rebels in order to assess their threats and gather evidences. Infiltrating organizations for months on end alone required convincing cover stories that almost always ended with being the sole survivor of a broken pack. As a result, [PAWN_pronoun] spent more time packless than not. The work was rewarding, but high taxing on the psyches, and some long times later, [PAWN_nameDef] started exhibiting actual mental signs of pack-loss despite knowing otherwise. [PAWN_pronoun] was pulled from operations to properly recover in the presence of [PAWN_possessive] pack and spent time doing paperwork instead.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<workDisables>ManualDumb</workDisables>
+		<forcedTraits>
+			<Nerves>-1</Nerves>
+		</forcedTraits>
+	</BackstoryDef>
 </Defs>
