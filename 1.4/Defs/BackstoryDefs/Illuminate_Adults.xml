@@ -415,7 +415,7 @@
 		<identifier>RVFFA_FoodCritic</identifier>
 		<title>Food Critic</title>
 		<titleShort>Critic</titleShort>
-		<baseDesc> In some larger Avalian administrative centers with automatic nutrition synthesizers, works involving food mostly became composing recipes executable by the machines, and becoming a trained taste-test critic. [PAWN_nameDef] became a dependable source of such informations thanks to [PAWN_possessive] refined palette, and a convincing ability to win arguments about subjective taste.</baseDesc>
+		<baseDesc>In some larger Avalian administrative centers with automatic nutrition synthesizers, works involving food mostly became composing recipes executable by the machines, and becoming a trained taste-test critic. [PAWN_nameDef] became a dependable source of such informations thanks to [PAWN_possessive] refined palette, and a convincing ability to win arguments about subjective taste.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Cooking</key>
@@ -433,8 +433,7 @@
 		<identifier>RVFFA_Bartender</identifier>
 		<title>Private Bartender</title>
 		<titleShort>Bartender</titleShort>
-		<baseDesc>
-			[PAWN_nameDef] was fascinated with mixing drinks with colorful presentations. One turn in life followed by another, and suddenly, [PAWN_pronoun] found [PAWN_objective]self away from their pack and on the capital ship of a notorious pirate gang, trusted with serving some of the most wanted names in the system.\n [PAWN_nameDef] was warned to not even think about who [PAWN_possessive] customers were or what [PAWN_pronoun] heard they said. [PAWN_pronoun] agreed, but still wore a voice recorder disguised as a feather necklace from a friend. The fleet was raided by the Illuminate authorities before [PAWN_pronoun] could decide what to do with it, and it ended up becoming a bargaining chip for [PAWN_possessive] freedom.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was fascinated with mixing drinks with colorful presentations. One turn in life followed by another, and suddenly, [PAWN_pronoun] found [PAWN_objective]self away from their pack and on the capital ship of a notorious pirate gang, trusted with serving some of the most wanted names in the system.\n [PAWN_nameDef] was warned to not even think about who [PAWN_possessive] customers were or what [PAWN_pronoun] heard they said. [PAWN_pronoun] agreed, but still wore a voice recorder disguised as a feather necklace from a friend. The fleet was raided by the Illuminate authorities before [PAWN_pronoun] could decide what to do with it, and it ended up becoming a bargaining chip for [PAWN_possessive] freedom.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Cooking</key>
@@ -521,8 +520,7 @@
 		<identifier>RVFFA_StrandedFarmer</identifier>
 		<title>Stranded Farmer</title>
 		<titleShort>Farmer</titleShort>
-		<baseDesc>
-			[PAWN_nameDef]'s vessel crashed due to a critical malfunction in the orbit of an uninhabited planet in a sparsely governed system, and the supplies would not last until rescue finally comes in years. [PAWN_pronoun] had to use [PAWN_possessive] botany knowledge to grow food the old fashioned way to sustain the pack.\n The rescuers came to find a small farm and a hut that the pack was disappointed to leave behind despite being happy for the rescue.</baseDesc>
+		<baseDesc>[PAWN_nameDef]'s vessel crashed due to a critical malfunction in the orbit of an uninhabited planet in a sparsely governed system, and the supplies would not last until rescue finally comes in years. [PAWN_pronoun] had to use [PAWN_possessive] botany knowledge to grow food the old fashioned way to sustain the pack.\n The rescuers came to find a small farm and a hut that the pack was disappointed to leave behind despite being happy for the rescue.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Plants</key>
@@ -578,5 +576,87 @@
 			</li>
 		</skillGains>
 		<workDisables>ManualDumb</workDisables>
+	</BackstoryDef>
+	
+	<!-- Animals -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_ColonyRancher</defName>
+		<identifier>RVFFA_ColonyRancher</identifier>
+		<title>Colony Rancher</title>
+		<titleShort>Rancher</titleShort>
+		<baseDesc>[PAWN_nameDef] was stationed in an Avali exoplanet colony with particularly docile and edible wildlife. [PAWN_pronoun] got used to the life of herding the animals to graze the lands, and spent the profits the pack earned to improve their home away from home.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_AnimalCaretaker</defName>
+		<identifier>RVFFA_AnimalCaretaker</identifier>
+		<title>Exotic Animal Caretaker</title>
+		<titleShort>Zookeeper</titleShort>
+		<baseDesc>[PAWN_nameDef] worked in a Avalon city center's animal preserve that housed species endangered by either natural disasters or terraforming projects. [Pawn_possessive] job included checking that the artificial environments are running properly, and catering to some of the animal's extremely specific and strange diet.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_FossilHunter</defName>
+		<identifier>RVFFA_FossilHunter</identifier>
+		<title>Fossil Hunter</title>
+		<titleShort>Paleontologist</titleShort>
+		<baseDesc>[PAWN_nameDef] spent [PAWN_possessive] life in the study of ancient creatures and what came to be on the moon before Avali as a species. [PAWN_pronoun] could be frequently found at digging sites instead of regularly scheduled meetings, and was described by [PAWN_possessive] packmates and colleagues to be "a tad bit obsessed".\n Most of the samples [PAWN_pronoun] retrieved are only species that are already found, or some fragments that are too small to be properly categorized. However, the one time [PAWN_pronoun] did manage to actually discover a new extinct specie of megainsect, [PAWN_pronoun] made sure [Pawn_possessive] name was on it.
+		</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Greedy>0</Greedy>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Hermit</defName>
+		<identifier>RVFFA_Hermit</identifier>
+		<title>Lone Hunter</title>
+		<titleShort>Hermit</titleShort>
+		<baseDesc>For some reason, [PAWN_nameDef] never felt a bond with [PAWN_possessive] pack, and eventually retreated to an exoplanet forest where [PAWN_pronoun] lived alone in a wooden cabin, where [PAWN_pronoun] hunted for a living, supplementing it with foraging and a small farm. [PAWN_pronoun] found the life to be calming and simple, and the strange hounds [PAWN_pronoun] tamed proved to be much better at lending a helping hand and listening to [PAWN_objective] than anyone [PAWN_pronoun] ever knew.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>Social</workDisables>
 	</BackstoryDef>
 </Defs>
