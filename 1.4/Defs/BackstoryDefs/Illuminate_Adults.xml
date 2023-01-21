@@ -659,4 +659,100 @@
 		</skillGains>
 		<workDisables>Social</workDisables>
 	</BackstoryDef>
+	
+	<!-- Crafting -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_BionicDesigner</defName>
+		<identifier>RVFFA_BionicDesigner</identifier>
+		<title>Bionic Designer</title>
+		<titleShort>Prosthetist</titleShort>
+		<baseDesc>For those who were not satisfied with implants and bionics that came off the assembly lines and onto a shelf, [PAWN_nameDef] provided a more personal and customized approach, both in terms of size and aesthetics. [PAWN_pronoun] used to bundle in the installation for free, until a bionic arm on a client malfunctioned and punched [PAWN_objective] square in the face. [PAWN_pronoun] never touched another scalpel after that and left the installations to the hospitals.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<workDisables>Medicine</workDisables>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Craftsvali</defName>
+		<identifier>RVFFA_Craftsvali</identifier>
+		<title>Instrument Maker</title>
+		<titleShort>Craftsvali</titleShort>
+		<baseDesc>[PAWN_nameDef] made, fixed, and tuned string instruments for a living, the commonality of these instruments on Avalon meant that [PAWN_objective] had no shortages of business. A hand-crafted string is still more appreciated by the discerning musicians than the ones that came from the most advanced fabricators.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVVFA_Machinist</defName>
+		<identifier>RVVFA_Machinist</identifier>
+		<title>Colony Machinist</title>
+		<titleShort>Craftsvali</titleShort>
+		<baseDesc>[PAWN_nameDef] led [PAWN_possessive] life in an off-planet outpost that didn't have the infrastructure of the automated fabricators yet, and [PAWN_objective] worked the machining tables to fill that need. [PAWN_pronoun] mostly made gears for [PAWN_possessive] pack to work with, and grumpily fixed them when they got left out in the rain.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Weaponsmith</defName>
+		<identifier>RVFFA_Weaponsmith</identifier>
+		<title>Crystal Blade Forger</title>
+		<titleShort>Weaponsmith</titleShort>
+		<baseDesc>Avali crystal swords required a strict manufacturing process that could only be done at highly specific nano-forges, [PAWN_nameDef] was in charge of one such facility. [PAWN_pronoun] was the one to go to when troubleshooting and quality checks were needed, and when someone needed a good lecturing about why ignoring safety protocols around razor-sharp rocks is an incredibly bad idea. Despite [Pawn_possessive] expertise, [PAWN_nameDef] never really swung one of those weapons properly or had a need to use them. Deep knowledge of ergonomics and properties of nano-crystal doesn't really transfer well to sword fighting.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>-4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Daredevil</defName>
+		<identifier>RVFFA_Daredevil</identifier>
+		<title>Ship Modder</title>
+		<titleShort>Daredevil</titleShort>
+		<baseDesc>Bored in [PAWN_possessive] everyday job as a mechanic on Avalon, [PAWN_nameDef] took up racing ships between asteroids as a hobby to make "better" use of [PAWN_possessive] skills. [PAWN_nameDef] modified the engines of the ships and disengaged almost every built-in safeguard to optimize them for speed to get the slightest competitive edge against similarly venturesome opponents, much to the disagreement of [PAWN_possessive] very worried packmates. [PAWN_pronoun] never sold the ships [PAWN_pronoun] modded, the inches-thick stack of disclaimers and waivers that was required to sell one legally was more trouble than it's worth, and anyone racer worth their salt would very much rather trust their own gear than buy it from a potential opponent.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
 </Defs>
