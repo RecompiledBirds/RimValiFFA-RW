@@ -681,7 +681,7 @@
 				<value>1</value>
 			</li>
 		</skillGains>
-		<workDisables>Medicine</workDisables>
+		<workDisables>Caring</workDisables>
 	</BackstoryDef>
 
 	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
@@ -850,5 +850,83 @@
 		<forcedTraits>
 			<Beauty>1</Beauty>
 		</forcedTraits>
+	</BackstoryDef>
+	
+	<!-- Medical -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Veterinarian</defName>
+		<identifier>RVFFA_Veterinarian</identifier>
+		<title>Veterinarian</title>
+		<titleShort>Vet</titleShort>
+		<baseDesc>[PAWN_nameDef] worked in an Avalian medical center with [PAWN_possessive] pack, but [PAWN_possessive] love for animals made [PAWN_objective] transfer to the veterinarian wing. [PAWN_pronoun] liked the work, but there’s always one exoplanet specimen every couple of days that threatened to make the day’s work extraordinarily more difficult and dangerous than usual.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Surgeon</defName>
+		<identifier>RVFFA_Surgeon</identifier>
+		<title>Lead Surgeon</title>
+		<titleShort>Surgeon</titleShort>
+		<baseDesc>[PAWN_nameDef] worked as a lead surgeon that oversaw delicate medical procedures done by machines. Unlike [PAWN_possessive] packmates and colleagues, [PAWN_pronoun] never took off their eyes off the machines a single time when they are operating, and earned a reputation for being uptight around the facilities.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Medic</defName>
+		<identifier>RVFFA_Medic</identifier>
+		<title>Pack Medic</title>
+		<titleShort>Doctor</titleShort>
+		<baseDesc>[PAWN_nameDef] explored dangerous exoplanets with [PAWN_possessive] pack, and hauled first aid equipments around along with their usual baggage to be prepared for accidents. Fortunately for them, all it was ever used for were minor bruises, scratches, and infections.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_TraumatizedMedic</defName>
+		<identifier>RVFFA_TraumatizedMedic</identifier>
+		<title>Traumatized Medic</title>
+		<titleShort>Medic</titleShort>
+		<baseDesc>[PAWN_nameDef] worked with [PAWN_possessive] pack as a closely knit team of Illuminate special forces that targeted high-profile pirates and other organized outlaw groups. [PAWN_pronoun] took on the role of a medic, and saved both [PAWN_possessive] packmates and other V.I.Ps from bleeding out on the missions. One night, while the pack was off-duty, the compound they stayed for rest in was targeted for retaliation. A huge incendiary bomb was detonated and only [PAWN_nameDef] was outside of the building. What followed for [PAWN_objective] was dragging incapacitated packmates out of the compound, and a haunting triage to decide who to patch up. [PAWN_pronoun] spent [PAWN_possessive] days taking care of [PAWN_possessive] broken pack and could never fight neither pirates or fire again.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>9</value>
+			</li>
+		</skillGains>
+		<workDisables>Violent</workDisables>
 	</BackstoryDef>
 </Defs>
