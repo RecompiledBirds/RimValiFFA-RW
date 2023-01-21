@@ -755,4 +755,100 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
+	
+	<!-- Artistic -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_WanderingMusician</defName>
+		<identifier>RVFFA_WanderingMusician</identifier>
+		<title>Wandering Musician</title>
+		<titleShort>Musician</titleShort>
+		<baseDesc>[PAWN_nameDef] travelled with [PAWN_possessive] pack as a small band. They played in city centers to pass time, or sometimes were paid to provide ambience to establishments that can afford their skill.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Engraver</defName>
+		<identifier>RVFFA_Engraver</identifier>
+		<title>Engraver</title>
+		<titleShort>Engraver</titleShort>
+		<baseDesc>[PAWN_nameDef] made [PAWN_possessive] living in a workshop that specialized in engraving complex nano-patterns onto trinkets and weapons. The machine [PAWN_pronoun] used was so delicate that even moving it for travel was too risky, which made [PAWN_objective] settle in a minor city center for business instead.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Dancer</defName>
+		<identifier>RVFFA_Dancer</identifier>
+		<title>Dancer</title>
+		<titleShort>Dancer</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack never found a calling, so they settled in a colony city center and looked for odd jobs. [PAWN_possessive] gleaming feathers, pretty face, and talent in dancing turned out to be particularly useful in attracting clients in some less than upright establishments.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Beauty>1</Beauty>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_MuralPainter</defName>
+		<identifier>RVFFA_MuralPainter</identifier>
+		<title>Mural Painter</title>
+		<titleShort>Painter</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack painted impressive murals on empty walls in an Avalon city center, taking advantage of the low gravity on Avalon to paint bold strokes as they flied alongside the wall. The performance, aided with drones, were almost as impressive as the art pieces themselves, and they earned some fame on the holonets for the stunts. Some of the murals were paid for by those who owned the building, but the pack was more than happy to vandalize headquarters of controversial corporations in their own artful way. No one knows how they got past the security or managed to dodge the vandalism charges they should have racked up, which only added to their interesting reputation.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Nimble>0</Nimble>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_PopStar</defName>
+		<identifier>RVFFA_PopStar</identifier>
+		<title>Pop Star</title>
+		<titleShort>Singer</titleShort>
+		<baseDesc>Using [PAWN_possessive] dazzling voice and creativity, [PAWN_nameDef] made a name for [PAWN_possessive]self as one of the most popular pop star in the center of Avalon. [PAWN_pronoun] started off performing over holonets, and it was only more recently that fans of [PAWN_possessive] had a chance at seeing the real [PAWN_nameDef] in a huge stadium. No one knew if [PAWN_nameDef] belonged to a pack, or who [PAWN_pronoun] was before [PAWN_pronoun] started off as a celebrity, which only added to the intrigue around [PAWN_objective]. [PAWN_pronoun] knew this as well, and kept it a tightly shut secret.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Beauty>1</Beauty>
+		</forcedTraits>
+	</BackstoryDef>
 </Defs>
