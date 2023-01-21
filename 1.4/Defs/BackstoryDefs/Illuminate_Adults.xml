@@ -362,16 +362,110 @@
 		<baseDesc>[PAWN_nameDef] took a job in clearing caves and other rock formations on an Avali colony, and often took some "creative liberties" in the formula of the explosives used. [PAWN_pronoun] usually used the modified formulas to create a larger yield explosion that's more efficient, but sometimes, [PAWN_pronoun] added in compounds just so the blast can have the exact color [PAWN_pronoun] wanted.\n Those who knew of [PAWN_nameDef]'s habits either called [PAWN_objective] "reckless" or "dangerously unhinged", but no one thought of the amount of discipline required to properly pull these stunts off. [PAWN_nameDef] has what it takes, and nothing made [PAWN_objective] more focused than mixing the next rock-destroying masterpiece.</baseDesc>
 		<skillGains>
 			<li>
-				<key>Social</key>
-				<value>-4</value>
+				<key>Crafting</key>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Mining</key>
+				<value>9</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+	
+	<!-- Cooking -->
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_ExoplanetHuner</defName>
+		<identifier>RVFFA_ExoplanetHuner</identifier>
+		<title>Exoplanet Hunter</title>
+		<titleShort>Hunter</titleShort>
+		<baseDesc>[PAWN_nameDef] belonged in a pack of explorers, and was the one to count on when the food supply needed to be topped off on exoplanets. Hunting alien animals and making sure they are safe to eat is a harder job than most people realize.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_PastryChef</defName>
+		<identifier>RVFFA_PastryChef</identifier>
+		<title>Pastry Chef</title>
+		<titleShort>Pâtissier</titleShort>
+		<baseDesc>[PAWN_nameDef] worked together with [PAWN_possessive] pack in an off-planet colony to provide food that satisfied the other colonist's stomachs and morale. A pastry recipe the pack used and kept a secret eventually gained a small cult following, and that minor colony became known as the place with "the best pretzels this side of the system."</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_FoodCritic</defName>
+		<identifier>RVFFA_FoodCritic</identifier>
+		<title>Food Critic</title>
+		<titleShort>Critic</titleShort>
+		<baseDesc> In some larger Avalian administrative centers with automatic nutrition synthesizers, works involving food mostly became composing recipes executable by the machines, and becoming a trained taste-test critic. [PAWN_nameDef] became a dependable source of such informations thanks to [PAWN_possessive] refined palette, and a convincing ability to win arguments about subjective taste.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Bartender</defName>
+		<identifier>RVFFA_Bartender</identifier>
+		<title>Private Bartender</title>
+		<titleShort>Bartender</titleShort>
+		<baseDesc>
+			[PAWN_nameDef] was fascinated with mixing drinks with colorful presentations. One turn in life followed by another, and suddenly, [PAWN_pronoun] found [PAWN_objective]self away from their pack and on the capital ship of a notorious pirate gang, trusted with serving some of the most wanted names in the system.\n [PAWN_nameDef] was warned to not even think about who [PAWN_possessive] customers were or what [PAWN_pronoun] heard they said. [PAWN_pronoun] agreed, but still wore a voice recorder disguised as a feather necklace from a friend. The fleet was raided by the Illuminate authorities before [PAWN_pronoun] could decide what to do with it, and it ended up becoming a bargaining chip for [PAWN_possessive] freedom.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
 				<value>6</value>
 			</li>
 			<li>
+				<key>Social</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_ArtisticChef</defName>
+		<identifier>RVFFA_ArtisticChef</identifier>
+		<title>Private Bartender</title>
+		<titleShort>Bartender</titleShort>
+		<baseDesc>[PAWN_nameDef] worked as a chef, and became increasingly obsessed with creating the perfect flavor that came to [PAWN_possessive] dreams. [PAWN_pronoun] first turned to the finest fabricators, and when those failed, [PAWN_pronoun] turned to the exoplanets.\n Eventually, this quest brought [PAWN_objective] to the Oracle's doorstep, after all, what are the abstract concepts of flavor if not some perfectly mixed molecules against chemical receptors? The machine ought to have the answer to such a simple question.\n [PAWN_nameDef] took a step forward, and all sensations unfolded</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>10</value>
+			</li>
+			<li>
 				<key>Intellectual</key>
-				<value>2</value>
+				<value>4</value>
 			</li>
 		</skillGains>
 	</BackstoryDef>
