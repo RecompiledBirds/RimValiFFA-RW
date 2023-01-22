@@ -383,6 +383,9 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
 		</recipes>
+		<inspectorTabs>
+			<li>RimValiFFARW.Packs.PackInspectionWindow</li>
+		</inspectorTabs>
 		<ingredient>
 			<mergeCompatibilityTags>
 				<li>AvaliMeat</li>
