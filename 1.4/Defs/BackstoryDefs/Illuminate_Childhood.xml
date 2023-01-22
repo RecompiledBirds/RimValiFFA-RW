@@ -76,4 +76,61 @@
 			<Gourmand>0</Gourmand>
 		</forcedTraits>
 	</BackstoryDef>
+	
+	<!-- Melee -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Acrobat</defName>
+		<identifier>RVFFA_Acrobat</identifier>
+		<title>Martial Arts Kit</title>
+		<titleShort>Acrobat</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] was obsessed with the Avalian martial arts that took advantage of the low gravity on the moon, and elected to take classes for it. The caretakers were encouraging about it, purely because it kept [PAWN_objective] active.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Bully</defName>
+		<identifier>RVFFA_Bully</identifier>
+		<title>Bully</title>
+		<titleShort>Bully</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack of kits frequently got into trouble for taking toys or snacks that don't belong to them, and their antics got more elaborate as they grew older, even making some traps that others would trip on. Surprisingly, they were quite fair with sharing their ill-gotten gains among themselves.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+			
+		<disallowedTraits>
+			<Kind>0</Kind>
+		</disallowedTraits>
+		<forcedTraits>
+			<Abrasive>0</Abrasive>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_MemWiped</defName>
+		<identifier>RVFFA_MemWiped</identifier>
+		<title>Memory Wiped</title>
+		<titleShort>Amnesiac</titleShort>
+		<baseDesc>[PAWN_nameDef] never knew what happened in [PAWN_possessive] own childhood other than that [PAWN_pronoun] came out of a medical pod, more refreshed than ever, before being greeted by [PAWN_possessive] pack. The only thing about [PAWN_objective] that was unusual is [PAWN_possessive] uncanny awareness of surroundings and the ability to quickly strike vitals in unarmed combat. After fruitlessly trying to find out about [PAWN_possessive] past that even [PAWN_possessive] own pack kept from [PAWN_objective], [PAWN_nameDef] left a letter one night and left. Maybe [PAWN_possessive] real pack is out there. Somewhere.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>7</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Nimble>0</Nimble>
+		</forcedTraits>
+	</BackstoryDef>
 </Defs>
