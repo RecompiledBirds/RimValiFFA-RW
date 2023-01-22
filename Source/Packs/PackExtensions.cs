@@ -22,7 +22,7 @@ namespace RimValiFFARW.Packs
         {
             bool isInPack = Packmanager.GetLastActivePackmanager.TryGetPackForPawn(pawn, out Pack _);
 
-            RVCLog.Log($"Pawn: {pawn.NameFullColored} is in Pack: {isInPack}");
+            //RVCLog.Log($"Pawn: {pawn.NameFullColored} is in Pack: {isInPack}");
 
             return isInPack;
         }

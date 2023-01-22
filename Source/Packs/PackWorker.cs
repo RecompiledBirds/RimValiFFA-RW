@@ -2,6 +2,7 @@
 using RVCRestructured;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -184,5 +185,17 @@ namespace RimValiFFARW.Packs
         /// <param name="pack"></param>
         /// <returns>The average opinion of a <paramref name="member"/> in a <paramref name="pack"/></returns>
         public virtual double EvaluateAverageOpinionForMember(Pawn member, Pack pack) => pack.Members.Average(otherMembers => otherMembers.relations.OpinionOf(member));
+
+        /// <param name="pack"></param>
+        /// <returns>Calculates the Average of all Pawn opinion averages inside the given <paramref name="pack"/></returns>
+        public virtual double EvaluateAverageOpinionForEveryMember(Pack pack)
+        {
+            double total = 0;
+            foreach(Pawn member in pack.Members)
+            {
+                total += pack.Members.Average(otherMember => otherMember.relations.OpinionOf(member));
+            }
+            return total / pack.Members.Count;
+        }
     }
 }

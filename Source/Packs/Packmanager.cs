@@ -70,7 +70,7 @@ namespace RimValiFFARW.Packs
         /// <returns>True if a <see cref="Pack"/> was found, False otherwise</returns>
         public bool TryGetPackForPawn(Pawn pawn, out Pack pack)
         {
-            Log.Message($"Dictionary: {memberPackTable.Join(kvp => $"{kvp.Value.GetUniqueLoadID()}", ", ")}");
+            //Log.Message($"Dictionary: {memberPackTable.Join(kvp => $"{kvp.Value.GetUniqueLoadID()}", ", ")}");
             return memberPackTable.TryGetValue(pawn, out pack);
         }
 
