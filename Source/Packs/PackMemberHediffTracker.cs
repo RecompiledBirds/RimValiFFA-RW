@@ -27,6 +27,11 @@ namespace RimValiFFARW.Packs
         public PackMemberHediffTracker(Pawn member) => this.member = member;
 
         /// <summary>
+        ///     Empty constructor for use in Loading
+        /// </summary>
+        public PackMemberHediffTracker() { }
+
+        /// <summary>
         ///     The <see cref="IEnumerable{T}"/> of added <see cref="Hediff"/>s
         /// </summary>
         public IEnumerable<Hediff> Hediffs => packHediffs;

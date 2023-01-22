@@ -17,11 +17,14 @@ namespace RimValiFFARW.Packs
     /// </summary>
     public class Pack : IExposable, ILoadReferenceable
     {
-        private readonly PackWorker worker;
+        private PackWorker worker;
 
         private PackDef def;
         private HashSet<Pawn> members = new HashSet<Pawn>();
         private Dictionary<Pawn, PackMemberHediffTracker> memberHediffDic = new Dictionary<Pawn, PackMemberHediffTracker>();
+
+        private List<Pawn> workingListPawn = new List<Pawn>();
+        private List<PackMemberHediffTracker> workingListTracker = new List<PackMemberHediffTracker>();
 
         private string loadID;
 
@@ -43,7 +46,7 @@ namespace RimValiFFARW.Packs
         /// <summary>
         ///     The internal <see cref="PackWorker"/> of a <see cref="Pack"/>
         /// </summary>
-        public PackWorker Worker => worker;
+        public PackWorker Worker => worker ?? (worker = def.GetNewPackWorker);
 
         /// <summary>
         ///     A packs name
@@ -81,7 +84,7 @@ namespace RimValiFFARW.Packs
         {
             this.def = def;
             worker = def.GetNewPackWorker;
-            loadID = loadID ?? "RimValiPack_" + Packmanager.GetLastActivePackmanager.NextPackLoadID;
+            loadID = "RimValiPack_" + Packmanager.GetLastActivePackmanager.NextPackLoadID;
 
             members.AddRange(pawns);
 
@@ -95,11 +98,7 @@ namespace RimValiFFARW.Packs
         ///     ONLY TO BE CALLED WHILE LOADING
         ///     Creates an empty class to be populated during loading
         /// </summary>
-        public Pack()
-        {
-            worker = def.GetNewPackWorker;
-            loadID = loadID ?? "RimValiPack_" + Packmanager.GetLastActivePackmanager.NextPackLoadID;
-        }
+        public Pack() { }
 
         /// <summary>
         ///     Creates and calls a <see cref="PackWorker"/> of a given <see cref="PackDef"/> to see if the given <paramref name="pawns"/>
@@ -200,7 +199,7 @@ namespace RimValiFFARW.Packs
             Scribe_Defs.Look(ref def, nameof(def));
             Scribe_Values.Look(ref loadID, nameof(loadID));
             Scribe_Collections.Look(ref members, nameof(members), LookMode.Reference);
-            Scribe_Collections.Look(ref memberHediffDic, nameof(memberHediffDic), LookMode.Reference, LookMode.Deep);
+            Scribe_Collections.Look(ref memberHediffDic, nameof(memberHediffDic), LookMode.Reference, LookMode.Deep, ref workingListPawn, ref workingListTracker);
         }
 
         /// <returns>Hopefully a working loadID</returns>
