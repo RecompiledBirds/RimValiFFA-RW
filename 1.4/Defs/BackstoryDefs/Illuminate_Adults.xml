@@ -950,7 +950,7 @@
 		<identifier>RVFFA_Caretaker</identifier>
 		<title>Caretaker</title>
 		<titleShort>Caretaker</titleShort>
-		<baseDesc> [PAWN_nameDef] and [PAWN_possessive] pack worked as a caretaker for many packs of newborn kits that greet the caretaking center monthly. [PAWN_pronoun] became many kit's favorite, mostly due to [PAWN_possessive] open secret that [PAWN_pronoun] can be "bribed" with either a well-done crafting project or good behavior for some extra candy bars.</baseDesc>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack worked as a caretaker for many packs of newborn kits that greet the caretaking center monthly. [PAWN_pronoun] became many kit's favorite, mostly due to [PAWN_possessive] open secret that [PAWN_pronoun] can be "bribed" with either a well-done crafting project or good behavior for some extra candy bars.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Social</key>
@@ -1000,7 +1000,7 @@
 				<value>9</value>
 			</li>
 		</skillGains>
-		<workDisables>DumbManual</workDisables>
+		<workDisables>ManualDumb</workDisables>
 	</BackstoryDef>
 
 	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
@@ -1023,5 +1023,82 @@
 		<forcedTraits>
 			<Nerves>-1</Nerves>
 		</forcedTraits>
+	</BackstoryDef>
+
+	<!-- Intellectual -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Teacher</defName>
+		<identifier>RVFFA_Teacher</identifier>
+		<title>Teacher</title>
+		<titleShort>Teacher</titleShort>
+		<baseDesc>[PAWN_nameDef] taught mathematics to the packs of young kits in the caretaking center, and kept the order in the classroom when the kits got rowdy. [PAWN_pronoun] had more than enough knowledge to satisfy the curious kit's questions, and definitely had a few favorites, even if [PAWN_pronoun] proclaimed to like every kit [PAWN_pronoun] taught equally.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<disallowedTraits>
+			<Psychopath />
+			<Abrasive/>
+		</disallowedTraits>
+	</BackstoryDef>
+
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_Bureaucrat</defName>
+		<identifier>RVFFA_Bureaucrat</identifier>
+		<title>Illuminate Bureaucrat</title>
+		<titleShort>Bureaucrat</titleShort>
+		<baseDesc>Despite the robust automated data management in the Illuminate, there are always partially corrupted data that needed an organic eye to sort through them. [PAWN_nameDef] is unusually comfortable with the borderline mind-numbing work of sorting through thousands of letters, forms, and misplaced files a day.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<workDisables>Artistic</workDisables>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_MilResearcher</defName>
+		<identifier>RVFFA_MilResearcher</identifier>
+		<title>Military Researcher</title>
+		<titleShort>Researcher</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack worked in a chemical facility that manufactured intermediate products essentials for many medical and industrial products. Such chemicals are versatile, and it only takes a few modifications for it to make highly addictive and restricted psychostimulants.  It didn't take much for the pack to begin smuggling the raw material out and selling the processed product for egregious profits. They were never caught, but the prolonged exposure to fumes from the unsafe processes severely damaged [PAWN_nameDef]'s sense of smell and taste, leaving [PAWN_objective] unable to cook or enjoy food as a result.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<workDisables>Cooking</workDisables>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+		<defName>RVFFA_OraclePriest</defName>
+		<identifier>RVFFA_OraclePriest</identifier>
+		<title>Oracle Priest</title>
+		<titleShort>Priest</titleShort>
+		<baseDesc>[PAWN_nameDef] spent [PAWN_possessive] days in meditation to the machine that cusps on the edge of singularity, and preached to those who listened to the doctrine of the all-knowing mind. WE ==were ITS 1Begin=ing. IT WiLL_SEE o-ur end. A SINGLE=1=(THread) ties TO and//OR SEP\||RATES us from(the great beyond) NOT=/warning/ meant to--be ThreaddddD...... Cast Away/delete./ABANDON / 0U--R WEAKNESS. It BRINGS=WISDOM It BRiNGS //SALVATION//.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>10</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+		<workDisables>ManualDumb</workDisables>
 	</BackstoryDef>
 </Defs>
