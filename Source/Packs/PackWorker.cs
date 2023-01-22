@@ -205,8 +205,46 @@ namespace RimValiFFARW.Packs
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="string"/>s that contain reasons for why a <see cref="Pack"/> should be disbanded</returns>
         public virtual IEnumerable<string> IsPackStillValid(Pack pack)
         {
+            foreach (Pawn member in pack.Members)
+            {
+                pack.Worker.MemberShouldLeave(member, pack, out string reason);
+                if (reason == null) continue;
+
+                Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member.NameShortColored, pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
+                CleanUpMember(member, pack); 
+                continue;
+            }
+
             if (pack.Members.Count < pack.Def.MinSizeToSustain) yield return "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
             if (pack.Worker.EvaluateAverageOpinionForEveryMember(pack) < pack.Def.minGroupOpinionNeededSustain) yield return "RVFFA_PackWorker_PackAverageOpinionTooLow".Translate(pack.NameColored);
+        }
+
+        /// <summary>
+        ///     Disbands a <see cref="Pack"/>, cleaning up every <see cref="Pawn"/> within
+        /// </summary>
+        /// <param name="pack">the given <see cref="Pack"/></param>
+        public virtual void Disband(Pack pack)
+        {
+            Packmanager.GetLastActivePackmanager.RemovePack(pack);
+            List<Pawn> membersToRemove = pack.Members.ToList();
+
+            while (membersToRemove.Count > 0)
+            {
+                Pawn member = membersToRemove[0];
+                CleanUpMember(member, pack);
+                membersToRemove.RemoveAt(0);
+            }
+        }
+
+        /// <summary>
+        ///     Cleans up a <paramref name="member"/>, deleting every <see cref="Hediff"/> through <see cref="Pack.RemoveMember(Pawn)"/>
+        /// </summary>
+        /// <param name="member">The given <see cref="Pawn"/></param>
+        /// <param name="pack">The given <see cref="Pack"/></param>
+        public virtual void CleanUpMember(Pawn member, Pack pack)
+        {
+            pack.RemoveMember(member);
+            Packmanager.GetLastActivePackmanager.RemoveMemberRelation(member);
         }
     }
 }

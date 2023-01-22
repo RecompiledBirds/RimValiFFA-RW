@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using Mono.Math;
+using RimWorld;
 using RimWorld.Planet;
 using RVCRestructured;
 using System;
@@ -16,11 +17,15 @@ namespace RimValiFFARW.Packs
     /// </summary>
     public class Packmanager : WorldComponent
     {
+        private const int packCheckTickDelay = 2000;
+
         private static Packmanager packmanager;
 
-        private HashSet<Pack> packs = new HashSet<Pack>();
         private Dictionary<Pawn, Pack> memberPackTable = new Dictionary<Pawn, Pack>();
+        private HashSet<Pack> packs = new HashSet<Pack>();
+        private List<Pack> packsList = new List<Pack>();
 
+        private int lastWorkedOnPackListIndex = 0;
         private int nextPackLoadID = -1;
 
         public static Packmanager GetLastActivePackmanager => packmanager;
@@ -48,17 +53,57 @@ namespace RimValiFFARW.Packs
         /// <param name="world">The given <see cref="World"/></param>
         public Packmanager(World world) : base(world) => packmanager = this;
 
+        public override void FinalizeInit()
+        {
+            packsList = packs.ToList();
+            base.FinalizeInit();
+        }
+
+        public override void WorldComponentTick()
+        {
+            if (Find.TickManager.TicksGame % packCheckTickDelay != 0) return;
+            if (packsList.Count == 0) return;
+
+            Pack pack = packsList[lastWorkedOnPackListIndex];
+
+            bool anyReasonsExist = false;
+            foreach(string reason in pack.Worker.IsPackStillValid(pack))
+            {
+                anyReasonsExist = true;
+                Messages.Message(reason, MessageTypeDefOf.NegativeEvent);
+            }
+
+            if (!anyReasonsExist) return;
+            if (PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack == pack) 
+                PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack = null;
+            pack.Worker.Disband(pack);
+
+            base.WorldComponentTick();
+        }
+
         /// <summary>
-        ///     Adds a new <see cref="Pack"/> to the manager, and also save
+        ///     Adds a new <see cref="Pack"/> to the manager, and also saves the <see cref="Pawn"/> to <see cref="Pack"/> relation in <see cref="memberPackTable"/>
         /// </summary>
         /// <param name="pack"></param>
-        /// <returns></returns>
+        /// <returns>if the <paramref name="pack"/> could be added successfully</returns>
         public bool AddPack(Pack pack)
         {
             if (!packs.Add(pack)) return false;
-            
             foreach(Pawn member in pack.Members) memberPackTable.Add(member, pack);
+            packsList.Add(pack);
+            return true;
+        }
 
+        /// <summary>
+        ///     Removes a <see cref="Pack"/> from the manager, and also removes the <see cref="Pawn"/> to <see cref="Pack"/> relation in <see cref="memberPackTable"/>
+        /// </summary>
+        /// <param name="pack"></param>
+        /// <returns>if the <paramref name="pack"/> could be removed successfully</returns>
+        public bool RemovePack(Pack pack)
+        {
+            if (!packs.Remove(pack)) return false;
+            foreach (Pawn member in pack.Members) memberPackTable.Remove(member);
+            packsList.Remove(pack);
             return true;
         }
 
@@ -78,8 +123,15 @@ namespace RimValiFFARW.Packs
         {
             base.ExposeData();
             Scribe_Values.Look(ref nextPackLoadID, nameof(nextPackLoadID));
+            Scribe_Values.Look(ref lastWorkedOnPackListIndex, nameof(lastWorkedOnPackListIndex));
+
             Scribe_Collections.Look(ref packs, nameof(packs), LookMode.Deep);
             Scribe_Collections.Look(ref memberPackTable, nameof(memberPackTable), LookMode.Reference, LookMode.Reference);
+        }
+
+        public void RemoveMemberRelation(Pawn member)
+        {
+            memberPackTable.Remove(member);
         }
     }
 }

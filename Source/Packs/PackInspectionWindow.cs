@@ -34,8 +34,17 @@ namespace RimValiFFARW.Packs
         private Rect memberListPartInner;
         private Rect boniListPartInner;
 
+        private static PackInspectionWindow packInspectionWindow;
         private List<Pawn> packMembers;
         private Pack pack;
+
+        public static PackInspectionWindow GetCurrentPackInspectionWindow => packInspectionWindow;
+
+        public Pack CurrentPack
+        {
+            get => pack;
+            set => pack = value;
+        }
 
         public override bool IsVisible => base.IsVisible;
 
@@ -43,6 +52,7 @@ namespace RimValiFFARW.Packs
         {
             size = winSize;
             labelKey = "RVFFA_PackInspectionWindow_LabelKey";
+            packInspectionWindow = this;
 
             titlePart = main.TopPartPixels(30f);
             descriptionPart = new Rect(titlePart.x, titlePart.yMax + CommonMargin, main.width, 75f);
@@ -76,15 +86,20 @@ namespace RimValiFFARW.Packs
             DrawDescriptionPart();
             DrawBoniList();
             DrawMemberList();
+            DrawStatusbar();
 
+            //TODO: Relation Average
+            //TODO: Pack Type and related Boni
+        }
+
+        private void DrawStatusbar()
+        {
+            if (pack == null) return;
             GUI.color = Color.gray;
             Text.Font = GameFont.Tiny;
             Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack.Worker.EvaluateAverageOpinionForMember(SelPawn, pack), pack.Worker.EvaluateAverageOpinionForEveryMember(pack)));
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
-
-            //TODO: Relation Average
-            //TODO: Pack Type and related Boni
         }
 
         private void DrawMemberList()
