@@ -88,8 +88,6 @@ namespace RimValiFFARW.Packs
             DrawMemberList();
             DrawStatusbar();
 
-            //TODO: Relation Average
-            //TODO: Pack Type and related Boni
         }
 
         private void DrawStatusbar()

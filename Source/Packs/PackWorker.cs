@@ -65,7 +65,6 @@ namespace RimValiFFARW.Packs
             }
 
             //TODO: Implement Min Opinion Needed
-            //TODO: Implement Min Size Needed
 
             return true;
         }

@@ -65,6 +65,9 @@ namespace RimValiFFARW.Packs
             if (packsList.Count == 0) return;
 
             Pack pack = packsList[lastWorkedOnPackListIndex];
+            lastWorkedOnPackListIndex++;
+
+            if (lastWorkedOnPackListIndex >= packsList.Count) lastWorkedOnPackListIndex = 0;
 
             bool anyReasonsExist = false;
             foreach(string reason in pack.Worker.IsPackStillValid(pack))
