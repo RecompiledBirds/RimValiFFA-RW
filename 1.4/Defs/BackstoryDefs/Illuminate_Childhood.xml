@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Shooting -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Misfit</defName>
+		<identifier>RVFFA_Misfit</identifier>
+		<title>Slingshot Modder</title>
+		<titleShort>Misfit</titleShort>
+		<baseDesc>[PAWN_nameDef] liked making and modding slingshots as a kit. [PAWN_pronoun] often rummaged through discarded building materials and electronics to look for any scraps that can make [PAWN_possessive] inventions hit better or harder, and sometimes got into trouble when the same inventions were responsible for some stones through expensive windows.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Gamer</defName>
+		<identifier>RVFFA_Gamer</identifier>
+		<title>Gamer Kit</title>
+		<titleShort>Lasertagger</titleShort>
+		<baseDesc>The favorite pastime of [PAWN_nameDef] and [PAWN_possessive] young pack was a virtual combat game at the caretaking center. [PAWN_nameDef] got quite good at popping heads with a fake laser pistol, but never got into a real fight outside of the game.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>-3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Survivor</defName>
+		<identifier>RVFFA_Survivor</identifier>
+		<title>Young Hunter</title>
+		<titleShort>Survivor</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack belonged to a fringe tribe of survivalists who refused to use many technologies and survived in the wild in small, hand-built shelters. [PAWN_pronoun] showed an aptitude for shooting early on, and was taught to handle a rifle at a very young age to hunt for food or defend [PAWN_possessive] pack from dangers. Discontent with living in the wild, the pack began collecting a stash of valuables, and eventually used it (and their young, adorable faces) to bribe a trade ship and get to a more civilized life.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Crashed</defName>
+		<identifier>RVFFA_Crashed</identifier>
+		<title>Crash Survivor</title>
+		<titleShort>Rescued</titleShort>
+		<baseDesc>The earliest memory that [PAWN_nameDef] had was being carried out of the remain of a burning spaceship by rescuers after a deadly low orbit crash that only [PAWN_pronoun] survived. The physical injury healed quickly thanks to the advanced treatments, but [PAWN_pronoun] never completely recovered from the mental shock. [PAWN_nameDef] used food, and later, experimentations with cooking as a coping mechanism, and shared the results with [PAWN_possessive] foster pack.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<workDisables>Violent</workDisables>
+		<forcedTraits>
+			<Gourmand>0</Gourmand>
+		</forcedTraits>
+	</BackstoryDef>
+</Defs>

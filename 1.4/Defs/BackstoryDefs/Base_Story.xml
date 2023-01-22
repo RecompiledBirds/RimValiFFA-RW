@@ -11,4 +11,8 @@
 		</spawnCategories>
 		<shuffleable>true</shuffleable>
 	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory" Name="RVFFA_BaseIlluminateChildhood" Abstract="True">
+		<slot>Childhood</slot>
+	</BackstoryDef>
 </Defs>
