@@ -109,7 +109,7 @@ namespace RimValiFFARW.Packs
                 return true;
             }
 
-            if (pack.Members.Count < def.minSize)
+            if (pack.Members.Count < def.minSizeToSustain)
             {
                 reason = "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
                 return true;
@@ -181,12 +181,12 @@ namespace RimValiFFARW.Packs
         /// <returns></returns>
         protected string MakeCanNotJoinReasonStringForPawn(Pawn pawn, string reasonTranslationKey) => $"RVFFA_PackWorker_CanNotJoin".Translate(pawn.NameShortColored, $"{reasonTranslationKey.Translate(pawn.ProSubj())}");
 
-        /// <param name="member"></param>
-        /// <param name="pack"></param>
+        /// <param name="member">the given <see cref="Pawn"/></param>
+        /// <param name="pack">the given <see cref="Pack"/></param>
         /// <returns>The average opinion of a <paramref name="member"/> in a <paramref name="pack"/></returns>
         public virtual double EvaluateAverageOpinionForMember(Pawn member, Pack pack) => pack.Members.Average(otherMembers => otherMembers.relations.OpinionOf(member));
 
-        /// <param name="pack"></param>
+        /// <param name="pack">the given <see cref="Pack"/></param>
         /// <returns>Calculates the Average of all Pawn opinion averages inside the given <paramref name="pack"/></returns>
         public virtual double EvaluateAverageOpinionForEveryMember(Pack pack)
         {
@@ -196,6 +196,17 @@ namespace RimValiFFARW.Packs
                 total += pack.Members.Average(otherMember => otherMember.relations.OpinionOf(member));
             }
             return total / pack.Members.Count;
+        }
+
+        /// <summary>
+        ///     Checks if a pack is still valid by making a bunch of comparisons
+        /// </summary>
+        /// <param name="pack">the given <see cref="Pack"/></param>
+        /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="string"/>s that contain reasons for why a <see cref="Pack"/> should be disbanded</returns>
+        public virtual IEnumerable<string> IsPackStillValid(Pack pack)
+        {
+            if (pack.Members.Count < pack.Def.MinSizeToSustain) yield return "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
+            if (pack.Worker.EvaluateAverageOpinionForEveryMember(pack) < pack.Def.minGroupOpinionNeededSustain) yield return "RVFFA_PackWorker_PackAverageOpinionTooLow".Translate(pack.NameColored);
         }
     }
 }

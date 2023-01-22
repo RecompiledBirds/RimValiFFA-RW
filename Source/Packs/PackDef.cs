@@ -18,7 +18,9 @@ namespace RimValiFFARW.Packs
         public List<HediffDef> memberHediffs = new List<HediffDef>();
         public Type packWorkerType = typeof(PackWorker);
 
-        public int minSize = 2;
+        public int minSizeToSustain = 2;
+
+        public int minSizeToCreate = 3;
 
         public int maxSize = 5;
 
@@ -32,9 +34,14 @@ namespace RimValiFFARW.Packs
         public int MaxSize => maxSize;
 
         /// <summary>
-        ///     The minimum size of a <see cref="Pack"/>
+        ///     The minimum size to sustain a <see cref="Pack"/>
         /// </summary>
-        public int MinSize => minSize;
+        public int MinSizeToSustain => minSizeToSustain;
+
+        /// <summary>
+        ///     The minimum size to create a <see cref="Pack"/>
+        /// </summary>
+        public int MinSizeToCreate => minSizeToCreate;
 
         /// <summary>
         ///     Creates a new object of type <see cref="PackWorker"/> with the type as stated in the def file at <see cref="packWorkerType"/>
@@ -53,9 +60,9 @@ namespace RimValiFFARW.Packs
                 yield return $"The PackDef {defName ?? "<missing defname>"} has no valid {nameof(packWorkerType)}! The given type must inherit from {typeof(PackWorker).Name}!";
             }
 
-            if (minSize > maxSize)
+            if (minSizeToSustain > maxSize)
             {
-                yield return $"The PackDef {defName ?? "<missing defname>"} has an invalid {nameof(minSize)}! It must be bigger or equal {nameof(maxSize)}!";
+                yield return $"The PackDef {defName ?? "<missing defname>"} has an invalid {nameof(minSizeToSustain)}! It must be bigger or equal {nameof(maxSize)}!";
             }
 
             if (maxSize <= 0)

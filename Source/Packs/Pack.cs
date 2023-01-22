@@ -122,7 +122,7 @@ namespace RimValiFFARW.Packs
             pack = null;
 
             PackWorker packWorker = def?.GetNewPackWorker;
-            if (pawns.Count() < def.MinSize)
+            if (pawns.Count() < def.MinSizeToCreate)
             {
                 if (!quietError) Messages.Message("RVFFA_Pack_CountLowerThanMin".Translate(), new LookTargets(pawns), MessageTypeDefOf.RejectInput);
                 return false;
