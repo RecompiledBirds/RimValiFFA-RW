@@ -555,7 +555,7 @@
 		<identifier>RVFFA_Empath</identifier>
 		<title>Young Empath</title>
 		<titleShort>Empath</titleShort>
-		<baseDesc>Empath)(Empath) [PAWN_nameDef] was born with an unusual sensitivity to emotions, and felt what others around [PAWN_objective] feel intimately. [PAWN_pronoun] was a good listener for [PAWN_possessive] packmates and other friends, but avoided more public places since [PAWN_pronoun] could not stand the noise. [PAWN_pronoun] did well in school, but could not get into any arguments or fights because of the overwhelming stress it causes [PAWN_objective].</baseDesc>
+		<baseDesc>[PAWN_nameDef] was born with an unusual sensitivity to emotions, and felt what others around [PAWN_objective] feel intimately. [PAWN_pronoun] was a good listener for [PAWN_possessive] packmates and other friends, but avoided more public places since [PAWN_pronoun] could not stand the noise. [PAWN_pronoun] did well in school, but could not get into any arguments or fights because of the overwhelming stress it causes [PAWN_objective].</baseDesc>
 		<skillGains>
 			<li>
 				<key>Social</key>
@@ -570,5 +570,61 @@
 		<forcedTraits>
 			<Kind>0</Kind>
 		</forcedTraits>
+	</BackstoryDef>
+
+	<!-- Intellectual -->
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Nerd</defName>
+		<identifier>RVFFA_Nerd</identifier>
+		<title>Teacher's Pet</title>
+		<titleShort>Nerd</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] was borderline obsessed with classwork and quickly became the teacher's favorite. [PAWN_pronoun] didn&#39;t make many friends outside of [PAWN_possessive] pack, who defended [PAWN_objective] from the bullies.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>-2</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-2</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Bookworm</defName>
+		<identifier>RVFFA_Bookworm</identifier>
+		<title>Library Kit</title>
+		<titleShort>Bookworm</titleShort>
+		<baseDesc>The caretaking center [PAWN_nameDef] was raised in had a huge library that contained many old books and media files. The library was ignored by many young kits except for [PAWN_nameDef], who enjoyed reading quietly. [PAWN_pronoun] was always warmly welcomed by the librarians with a cup of tea.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Possessed</defName>
+		<identifier>RVFFA_Possessed</identifier>
+		<title>Oracle-Born</title>
+		<titleShort>Possessed</titleShort>
+		<baseDesc>[PAWN_nameDef] was always favored by the singularity. [PAWN_objective] will serve [PAWN_possessive] purpose, in time.......</baseDesc>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>8</value>
+			</li>
+		</skillGains>
 	</BackstoryDef>
 </Defs>
