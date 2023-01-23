@@ -139,10 +139,7 @@
 		<identifier>RVFFA_EngiApprentice</identifier>
 		<title>Engineer's Apprentice</title>
 		<titleShort>Technician</titleShort>
-		<baseDesc>[PAWN_nameDef] was abandoned for unknown
-reasons as an egg, and was taken in by a pack of nomads that lived on their
-spaceship. [PAWN_pronoun] followed the ship's old technician around to learn about
-undocked ship repairs and eventually was trusted with some minor maintenance duty.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was abandoned for unknown reasons as an egg, and was taken in by a pack of nomads that lived on their spaceship. [PAWN_pronoun] followed the ship's old technician around to learn about undocked ship repairs and eventually was trusted with some minor maintenance duty.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Construction</key>
@@ -160,10 +157,7 @@ undocked ship repairs and eventually was trusted with some minor maintenance dut
 		<identifier>RVFFA_TreeHouseBuilder</identifier>
 		<title>Treehouse Builder</title>
 		<titleShort>Builder</titleShort>
-		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack was
-raised on a moon colony similar to the home world Avalon. The pack frequently
-wandered into the wild for adventures, and built many treehouses out of abandoned
-lightweight building materials and some wood.</baseDesc>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack was raised on a moon colony similar to the home world Avalon. The pack frequently wandered into the wild for adventures, and built many treehouses out of abandoned lightweight building materials and some wood.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Construction</key>
@@ -181,12 +175,7 @@ lightweight building materials and some wood.</baseDesc>
 		<identifier>RVFFA_LostApprentice</identifier>
 		<title>Lost Apprentice</title>
 		<titleShort>Apprentice</titleShort>
-		<baseDesc>[PAWN_nameDef] belonged to a pack of builders who
-maintained a dying art of building with interlocking structures without fasteners.
-[PAWN_pronoun] learned quick, but never took the craft seriously.
-As [PAWN_pronoun] stayed home one day because of a minor sickness, the pack’s
-ship engine critically malfunctioned. [PAWN_nameDef] was left with nothing but
-shelves upon shelves of books, and an obligation to pass on the knowledge.</baseDesc>
+		<baseDesc>[PAWN_nameDef] belonged to a pack of builders who maintained a dying art of building with interlocking structures without fasteners. [PAWN_pronoun] learned quick, but never took the craft seriously. As [PAWN_pronoun] stayed home one day because of a minor sickness, the pack’s ship engine critically malfunctioned. [PAWN_nameDef] was left with nothing but shelves upon shelves of books, and an obligation to pass on the knowledge.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Construction</key>
@@ -210,10 +199,7 @@ shelves upon shelves of books, and an obligation to pass on the knowledge.</base
 		<identifier>RVFFA_CaveExplorer</identifier>
 		<title>Cave Explorer</title>
 		<titleShort>Caver</titleShort>
-		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] young pack were
-fascinated with exploring caves, and frequently went deep into the local cavern
-systems to chip off things such as stalactites as trophies. As they got older, they
-gathered a large amount of gears for scanning and analyzing caves and the minerals.</baseDesc>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] young pack were fascinated with exploring caves, and frequently went deep into the local cavern systems to chip off things such as stalactites as trophies. As they got older, they gathered a large amount of gears for scanning and analyzing caves and the minerals.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Mining</key>
@@ -232,11 +218,7 @@ gathered a large amount of gears for scanning and analyzing caves and the minera
 		<identifier>RVFFA_CupcakeBaker</identifier>
 		<title>Cupcake Baker</title>
 		<titleShort>Baker</titleShort>
-		<baseDesc>At the caretaking center, [PAWN_nameDef] frequently went
-into the kitchens to experiment with all the ingredients available at the press of a
-button. [PAWN_pronoun] was at first kept from doing it, but eventually, the caretakers
-turned a blind eye or even lent a hand. [PAWN_pronoun] took that opportunity and
-made huge batches of cupcakes at a time for the other kits.</baseDesc>
+		<baseDesc>At the caretaking center, [PAWN_nameDef] frequently went into the kitchens to experiment with all the ingredients available at the press of a button. [PAWN_pronoun] was at first kept from doing it, but eventually, the caretakers turned a blind eye or even lent a hand. [PAWN_pronoun] took that opportunity and made huge batches of cupcakes at a time for the other kits.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Cooking</key>
@@ -254,10 +236,7 @@ made huge batches of cupcakes at a time for the other kits.</baseDesc>
 		<identifier>RVFFA_CulinaryStudent</identifier>
 		<title>Culinary Student</title>
 		<titleShort>Scullion</titleShort>
-		<baseDesc>[PAWN_nameDef] was fascinated with food as a kit, and
-eventually decided to learn how to cook dishes just the way how [PAWN_pronoun]
-likes it. [PAWN_pronoun] also helped with maintaining a small garden of herbs to keep
-fresh additives readily available.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was fascinated with food as a kit, and eventually decided to learn how to cook dishes just the way how [PAWN_pronoun] likes it. [PAWN_pronoun] also helped with maintaining a small garden of herbs to keep fresh additives readily available.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Cooking</key>
@@ -275,16 +254,66 @@ fresh additives readily available.</baseDesc>
 		<identifier>RVFFA_TasteTester</identifier>
 		<title>Taste Tester</title>
 		<titleShort>Gourmet</titleShort>
-		<baseDesc>[PAWN_nameDef] was born with unnaturally sensitive taste
-buds, and the talent was realized by the right people, who hired [PAWN_objective] as
-a taste tester for products, many of which are packaged snacks for kits like
-[PAWN_objective]self.
-[PAWN_pronoun] ate so much packaged food as a job that [PAWN_pronoun] wanted
-nothing to do with it in [PAWN_possessive] spare time, opting for learning to cook "actual food" instead.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was born with unnaturally sensitive taste buds, and the talent was realized by the right people, who hired [PAWN_objective] as a taste tester for products, many of which are packaged snacks for kits like [PAWN_objective]self. [PAWN_pronoun] ate so much packaged food as a job that [PAWN_pronoun] wanted nothing to do with it in [PAWN_possessive] spare time, opting for learning to cook "actual food" instead.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Cooking</key>
 				<value>6</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+<!-- Plants-->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Forager</defName>
+		<identifier>RVFFA_Forager</identifier>
+		<title>Forager</title>
+		<titleShort>Forager</titleShort>
+		<baseDesc>Born to a nomadic tribe, [PAWN_nameDef] and [PAWN_possessive] young pack wandered the wild for opportunities to resupply and look for adventures. [PAWN_pronoun] had a knack for identifying plants, and learned to forage many familiar herbs and fungi in the local areas they frequently traversed.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Gardner</defName>
+		<identifier>RVFFA_Gardner</identifier>
+		<title>Forager</title>
+		<titleShort>Forager</titleShort>
+		<baseDesc>[PAWN_nameDef] grew up with the duty of helping maintain a hydroponic garden. [PAWN_pronoun] spent [PAWN_possessive] time checking for pests, mixing the necessary solutions, and calling dibs on the freshly harvested berries.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_BotanicEmpath</defName>
+		<identifier>RVFFA_BotanicEmpath</identifier>
+		<title>Botanic Empath</title>
+		<titleShort>Empath</titleShort>
+		<baseDesc>[PAWN_nameDef] was born with a strong connection to all kinds of plant life, and felt as if [PAWN_pronoun] can talk to them. [PAWN_possessive] caretakers and packmates always found [PAWN_objective] wandering in a grove not far from home singing to [PAWN_objective]self. [PAWN_pronoun] claimed that the trees there taught [PAWN_objective] the songs. When the grove was cleared for a building&#39;s expansion, [PAWN_nameDef] shut [PAWN_objective]self inside a room, rarely coming out. It took weeks before [PAWN_pronoun] started talking again.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-4</value>
 			</li>
 		</skillGains>
 	</BackstoryDef>
