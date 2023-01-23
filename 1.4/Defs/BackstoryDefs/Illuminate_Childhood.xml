@@ -516,4 +516,59 @@
 		</skillGains>
 		<workDisables>Violent</workDisables>
 	</BackstoryDef>
+
+	<!-- Social -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Kit</defName>
+		<identifier>RVFFA_Kit</identifier>
+		<title>Young Kit</title>
+		<titleShort>Kit</titleShort>
+		<baseDesc>[PAWN_nameDef] was born in a caretaking center like many other kits, and spent [PAWN_possessive] time learning about the world or socialized with friends and packmates.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Thief</defName>
+		<identifier>RVFFA_Thief</identifier>
+		<title>Petty Thief</title>
+		<titleShort>Thief</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] often snagged candy bars and spare changes when others are not looking. [PAWN_objective] perfected the art of disposing of any "evidences" and keeping a straight face so no one suspects a thing.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Empath</defName>
+		<identifier>RVFFA_Empath</identifier>
+		<title>Young Empath</title>
+		<titleShort>Empath</titleShort>
+		<baseDesc>Empath)(Empath) [PAWN_nameDef] was born with an unusual sensitivity to emotions, and felt what others around [PAWN_objective] feel intimately. [PAWN_pronoun] was a good listener for [PAWN_possessive] packmates and other friends, but avoided more public places since [PAWN_pronoun] could not stand the noise. [PAWN_pronoun] did well in school, but could not get into any arguments or fights because of the overwhelming stress it causes [PAWN_objective].</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<workDisables>Violent</workDisables>
+		<forcedTraits>
+			<Kind>0</Kind>
+		</forcedTraits>
+	</BackstoryDef>
 </Defs>
