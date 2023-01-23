@@ -341,7 +341,7 @@
 		<identifier>RVFFA_Wildling</identifier>
 		<title>Wild Kit</title>
 		<titleShort>Wildling</titleShort>
-		<baseDesc>[PAWN_nameDef]&#39;s egg was the only thing to have survived a ship crash in the middle of an unexplored forest, and the egg was taken away by the local wildlife by the time rescues arrived. For a long time, [PAWN_pronoun] was presumed lost. A long time after, some exploration team spotted [PAWN_objective] in the forest among some other avians that have taken [PAWN_objective] in. [PAWN_pronoun] was eventually given a foster pack and a decent education, but still does not speak often at all.</baseDesc>
+		<baseDesc>[PAWN_nameDef]'s egg was the only thing to have survived a ship crash in the middle of an unexplored forest, and the egg was taken away by the local wildlife by the time rescues arrived. For a long time, [PAWN_pronoun] was presumed lost. A long time after, some exploration team spotted [PAWN_objective] in the forest among some other avians that have taken [PAWN_objective] in. [PAWN_pronoun] was eventually given a foster pack and a decent education, but still does not speak often at all.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Animals</key>
@@ -349,5 +349,64 @@
 			</li>
 		</skillGains>
 		<workDisables>Social</workDisables>
+	</BackstoryDef>
+
+	<!-- Crafting -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Jeweler</defName>
+		<identifier>RVFFA_Jeweler</identifier>
+		<title>Charm maker</title>
+		<titleShort>Jeweler</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] had a hobby of making necklaces and lucky charms out of shiny stones for [PAWN_possessive] packmates and other friends. [PAWN_objective] got surprisingly good at polishing and cutting stones without professional tools.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Weaver</defName>
+		<identifier>RVFFA_Weaver</identifier>
+		<title>Weaver</title>
+		<titleShort>Weaver</titleShort>
+		<baseDesc>[PAWN_nameDef] enjoyed [PAWN_possessive] spare time at the caretaking center learning about hand knitting and embroidering various clothings. [PAWN_objective] found it to be a calming break from the otherwise noisy environment.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Machinist</defName>
+		<identifier>RVFFA_Machinist</identifier>
+		<title>Mech Battler</title>
+		<titleShort>Machinist</titleShort>
+		<baseDesc>[PAWN_nameDef]&#39;s pack of kits were nothing short of geniuses when it came to machinery, and they frequented robot fighting competitions with their own handicrafts. The tournaments and prize pools got bigger as time went on, which only gave them more resources to improve their machines. They had to quit and put their skills towards doing repair gigs after a ban from a huge tournament. The reason involved an overloaded battery and a lot of thermite.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
 	</BackstoryDef>
 </Defs>
