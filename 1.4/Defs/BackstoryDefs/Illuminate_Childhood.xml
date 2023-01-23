@@ -397,7 +397,7 @@
 		<identifier>RVFFA_Machinist</identifier>
 		<title>Mech Battler</title>
 		<titleShort>Machinist</titleShort>
-		<baseDesc>[PAWN_nameDef]&#39;s pack of kits were nothing short of geniuses when it came to machinery, and they frequented robot fighting competitions with their own handicrafts. The tournaments and prize pools got bigger as time went on, which only gave them more resources to improve their machines. They had to quit and put their skills towards doing repair gigs after a ban from a huge tournament. The reason involved an overloaded battery and a lot of thermite.</baseDesc>
+		<baseDesc>[PAWN_nameDef]'s pack of kits were nothing short of geniuses when it came to machinery, and they frequented robot fighting competitions with their own handicrafts. The tournaments and prize pools got bigger as time went on, which only gave them more resources to improve their machines. They had to quit and put their skills towards doing repair gigs after a ban from a huge tournament. The reason involved an overloaded battery and a lot of thermite.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Crafting</key>
@@ -406,6 +406,61 @@
 			<li>
 				<key>Intellectual</key>
 				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<!-- Artistic -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Explorer</defName>
+		<identifier>RVFFA_Explorer</identifier>
+		<title>Explorer</title>
+		<titleShort>Explorer</titleShort>
+		<baseDesc>[PAWN_nameDef]&#39;s pack tagged along with more experienced explorers while out in the wild. During the breaks, [PAWN_pronoun] preferred to preserve the sceneries and flora with sketches, and never left for an expedition without a sketchbook.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Singer</defName>
+		<identifier>RVFFA_Singer</identifier>
+		<title>Singer</title>
+		<titleShort>Singer</titleShort>
+		<baseDesc>Raised in a caretaking center, [PAWN_nameDef] had a knack for singing, and often used [PAWN_possessive] talent to pass time. [PAWN_pronoun] drew many audiences, but often got irritated when [PAWN_possessive] less skilled friends or packmates decided to join in, which led to a few arguments.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_SwatchMixer</defName>
+		<identifier>RVFFA_SwatchMixer</identifier>
+		<title>Swatch Mixer</title>
+		<titleShort>Painter</titleShort>
+		<baseDesc>Since [PAWN_pronoun] was a young kit, [PAWN_nameDef] has been helping an old painter who has taken [PAWN_objective] in. [PAWN_pronoun] spent [PAWN_possessive] days mixing tea and rare, valuable pigments. As [PAWN_possessive] skill improved, [PAWN_pronoun] became one of the best at replicating colors with only [PAWN_possessive] eyes. When the old painter passed away, [PAWN_nameDef] inherited a trove of expensive artworks, which was worth enough to give [PAWN_objective] a comfortable living.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>2</value>
 			</li>
 		</skillGains>
 	</BackstoryDef>
