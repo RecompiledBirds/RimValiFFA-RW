@@ -202,4 +202,27 @@ shelves upon shelves of books, and an obligation to pass on the knowledge.</base
 			<!-- Sickly -->
 		</forcedTraits>
 	</BackstoryDef>
+
+
+<!-- Mining childhoods-->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CaveExplorer</defName>
+		<identifier>RVFFA_CaveExplorer</identifier>
+		<title>Cave Explorer</title>
+		<titleShort>Caver</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] young pack were
+fascinated with exploring caves, and frequently went deep into the local cavern
+systems to chip off things such as stalactites as trophies. As they got older, they
+gathered a large amount of gears for scanning and analyzing caves and the minerals.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Mining</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
 </Defs>
