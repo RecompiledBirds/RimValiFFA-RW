@@ -225,4 +225,67 @@ gathered a large amount of gears for scanning and analyzing caves and the minera
 			</li>
 		</skillGains>
 	</BackstoryDef>
+
+	<!-- Cooking -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CupcakeBaker</defName>
+		<identifier>RVFFA_CupcakeBaker</identifier>
+		<title>Cupcake Baker</title>
+		<titleShort>Baker</titleShort>
+		<baseDesc>At the caretaking center, [PAWN_nameDef] frequently went
+into the kitchens to experiment with all the ingredients available at the press of a
+button. [PAWN_pronoun] was at first kept from doing it, but eventually, the caretakers
+turned a blind eye or even lent a hand. [PAWN_pronoun] took that opportunity and
+made huge batches of cupcakes at a time for the other kits.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CulinaryStudent</defName>
+		<identifier>RVFFA_CulinaryStudent</identifier>
+		<title>Culinary Student</title>
+		<titleShort>Scullion</titleShort>
+		<baseDesc>[PAWN_nameDef] was fascinated with food as a kit, and
+eventually decided to learn how to cook dishes just the way how [PAWN_pronoun]
+likes it. [PAWN_pronoun] also helped with maintaining a small garden of herbs to keep
+fresh additives readily available.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_TasteTester</defName>
+		<identifier>RVFFA_TasteTester</identifier>
+		<title>Taste Tester</title>
+		<titleShort>Gourmet</titleShort>
+		<baseDesc>[PAWN_nameDef] was born with unnaturally sensitive taste
+buds, and the talent was realized by the right people, who hired [PAWN_objective] as
+a taste tester for products, many of which are packaged snacks for kits like
+[PAWN_objective]self.
+[PAWN_pronoun] ate so much packaged food as a job that [PAWN_pronoun] wanted
+nothing to do with it in [PAWN_possessive] spare time, opting for learning to cook "actual food" instead.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
 </Defs>
