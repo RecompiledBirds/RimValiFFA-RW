@@ -133,4 +133,73 @@
 			<Nimble>0</Nimble>
 		</forcedTraits>
 	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_EngiApprentice</defName>
+		<identifier>RVFFA_EngiApprentice</identifier>
+		<title>Engineer's Apprentice</title>
+		<titleShort>Technician</titleShort>
+		<baseDesc>[PAWN_nameDef] was abandoned for unknown
+reasons as an egg, and was taken in by a pack of nomads that lived on their
+spaceship. [PAWN_pronoun] followed the ship's old technician around to learn about
+undocked ship repairs and eventually was trusted with some minor maintenance duty.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_TreeHouseBuilder</defName>
+		<identifier>RVFFA_TreeHouseBuilder</identifier>
+		<title>Treehouse Builder</title>
+		<titleShort>Builder</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack was
+raised on a moon colony similar to the home world Avalon. The pack frequently
+wandered into the wild for adventures, and built many treehouses out of abandoned
+lightweight building materials and some wood.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_LostApprentice</defName>
+		<identifier>RVFFA_LostApprentice</identifier>
+		<title>Lost Apprentice</title>
+		<titleShort>Apprentice</titleShort>
+		<baseDesc>[PAWN_nameDef] belonged to a pack of builders who
+maintained a dying art of building with interlocking structures without fasteners.
+[PAWN_pronoun] learned quick, but never took the craft seriously.
+As [PAWN_pronoun] stayed home one day because of a minor sickness, the pack’s
+ship engine critically malfunctioned. [PAWN_nameDef] was left with nothing but
+shelves upon shelves of books, and an obligation to pass on the knowledge.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<!-- Fast learner-->
+			<!-- Sickly -->
+		</forcedTraits>
+	</BackstoryDef>
 </Defs>
