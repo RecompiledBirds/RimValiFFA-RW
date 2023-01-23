@@ -317,4 +317,37 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
+<!-- Animals -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CityKit</defName>
+		<identifier>RVFFA_CityKit</identifier>
+		<title>City Kit</title>
+		<titleShort>Kit</titleShort>
+		<baseDesc>[PAWN_nameDef] grew up on the quiet outskirt of a wealthy, established exoplanet city. Besides the usual duties of schoolwork, [PAWN_pronoun] often rescued injured critters and gave them a safe place to heal their injuries, and a few of them stayed with [PAWN_objective] as loyal pets.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Wildling</defName>
+		<identifier>RVFFA_Wildling</identifier>
+		<title>Wild Kit</title>
+		<titleShort>Wildling</titleShort>
+		<baseDesc>[PAWN_nameDef]&#39;s egg was the only thing to have survived a ship crash in the middle of an unexplored forest, and the egg was taken away by the local wildlife by the time rescues arrived. For a long time, [PAWN_pronoun] was presumed lost. A long time after, some exploration team spotted [PAWN_objective] in the forest among some other avians that have taken [PAWN_objective] in. [PAWN_pronoun] was eventually given a foster pack and a decent education, but still does not speak often at all.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>7</value>
+			</li>
+		</skillGains>
+		<workDisables>Social</workDisables>
+	</BackstoryDef>
 </Defs>
