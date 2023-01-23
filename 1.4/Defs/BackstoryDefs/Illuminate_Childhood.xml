@@ -464,4 +464,56 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
+
+	<!-- Medical -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Rascal</defName>
+		<identifier>RVFFA_Rascal</identifier>
+		<title>Rowdy Kit</title>
+		<titleShort>Rascal</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack frequently got into trouble, either with other packs of kits that they knew or out in the wild. [PAWN_nameDef] went along with the shenanigans, but always packed some bandages for the inevitable scrapes and bruises.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_ChildCaretaker</defName>
+		<identifier>RVFFA_ChildCaretaker</identifier>
+		<title>Caretaker</title>
+		<titleShort>Caretaker</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack of kits had a couple of members that would frequently get sick, and [PAWN_pronoun] took it upon [PAWN_objective]self to take care of [PAWN_possessive] packmates when they were afflicted with minor illnesses. [PAWN_objective] learned a bit about medicine and preparing easy-to-digest food in the process.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_BunkerMedic</defName>
+		<identifier>RVFFA_BunkerMedic</identifier>
+		<title>Bunker Medic</title>
+		<titleShort>Medic</titleShort>
+		<baseDesc>[PAWN_nameDef] was in a pack of young kit stuck on an exoplanet colony during a riot. They spent their days in a hospital converted from a bunker to hide from the volatile dangers aboveground, only rarely going out at night to scavenge for supplies or keep watch of the surroundings. [PAWN_nameDef] had to spend [PAWN_possessive] time helping the medics patch up the wounded soldiers and innocent bystanders caught in the crossfire. The experience taught [PAWN_objective] a lot about first aid, but also deeply traumatized [PAWN_objective].</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+		<workDisables>Violent</workDisables>
+	</BackstoryDef>
 </Defs>
