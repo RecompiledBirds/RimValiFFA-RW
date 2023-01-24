@@ -151,6 +151,8 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
+	
+	<!-- Construction childhoods -->
 
 	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
 		<defName>RVFFA_TreeHouseBuilder</defName>
