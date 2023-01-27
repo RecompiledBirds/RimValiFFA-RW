@@ -5,6 +5,7 @@
 	<RVFFA_PackWorker_CanNotJoin>{0} can't join, because {1}</RVFFA_PackWorker_CanNotJoin>																<!--{Name} can't join, because {reason}-->
 	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>																		<!--{Name} is dead.-->
 	<RVFFA_PackWorker_SubjectIsWild>{0} is wild.</RVFFA_PackWorker_SubjectIsWild>																		<!--{Name} is already in a pack.-->
+	<RVFFA_PackWorker_SubjectGroupOpinionTooLow>{0} don't like each other enough to make a pack.</RVFFA_PackWorker_SubjectGroupOpinionTooLow>
 	<RVFFA_PackWorker_SubjectIsInPackAlready>{0} is already in a pack.</RVFFA_PackWorker_SubjectIsInPackAlready>										
 	<RVFFA_PackWorker_AverageOpinionOfMemberTooLow>The packs average opinion of {0} sank too low! ({1})</RVFFA_PackWorker_AverageOpinionOfMemberTooLow>	<!--The packs average opinion of {Name} sank too low! ({Average Opinion})-->
 	<RVFFA_PackWorker_LastInPack>{0} was the last member of his pack.</RVFFA_PackWorker_LastInPack>
@@ -13,7 +14,7 @@
 	<RVFFA_PackWorker_PackAverageOpinionTooLow>The average opinion of each member towards other members in {0} dropped too low!</RVFFA_PackWorker_PackAverageOpinionTooLow>
 	
 	<!--Pack Class-->
-	<RVFFA_Pack_CountLowerThanMin>This set of pawns is too small for this type of Pack!</RVFFA_Pack_CountLowerThanMin>
+	<RVFFA_Pack_CountLowerThanMin>This set of pawns is too small for this type of Pack! You have {0} and need at least {1} pawns.</RVFFA_Pack_CountLowerThanMin>
 	
 	<!--Pack Inspection Window Class-->
 	<RVFFA_PackInspectionWindow_LabelKey>Pack</RVFFA_PackInspectionWindow_LabelKey>

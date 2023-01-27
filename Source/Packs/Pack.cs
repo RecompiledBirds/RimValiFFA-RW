@@ -107,7 +107,7 @@ namespace RimValiFFARW.Packs
         /// <param name="def">The given <see cref="PackDef"/></param>
         /// <param name="pawns">The given <see cref="IEnumerable{T}"/> of <see cref="Pawn"/>s</param>
         /// <returns>If the <paramref name="pawns"/> can create a <see cref="Pack"/></returns>
-        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns) => def.GetNewPackWorker.CanPawnsMakePack(pawns);
+        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns, bool quietError) => def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError);
 
         /// <summary>
         ///     Attempts to make a <see cref="Pack"/>, checking if the given parameters are impossible to make a <see cref="Pack"/> with
@@ -122,11 +122,7 @@ namespace RimValiFFARW.Packs
             pack = null;
 
             PackWorker packWorker = def?.GetNewPackWorker;
-            if (pawns.Count() < def.MinSizeToCreate)
-            {
-                if (!quietError) Messages.Message("RVFFA_Pack_CountLowerThanMin".Translate(), new LookTargets(pawns), MessageTypeDefOf.RejectInput);
-                return false;
-            }
+            if (def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError)) return false;
             if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawn, quietError))) return false;
 
             pack = new Pack(def, pawns);

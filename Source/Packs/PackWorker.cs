@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using RVCRestructured;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace RimValiFFARW.Packs
         /// </summary>
         /// <param name="member">The added <see cref="Pawn"/></param>
         public virtual void NotifyMemberAdded(Pawn member) { }
-        
+
         /// <summary>
         ///     Checks if a <paramref name="pawn"/> can join a <see cref="Pack"/>.
         ///     Throws errors if they can't, describing why.
@@ -64,8 +65,6 @@ namespace RimValiFFARW.Packs
                 return false;
             }
 
-            //TODO: Implement Min Opinion Needed
-
             return true;
         }
 
@@ -95,7 +94,7 @@ namespace RimValiFFARW.Packs
         public virtual bool MemberShouldLeave(Pawn member, Pack pack, out string reason)
         {
             reason = null;
-            double avgOpinionOfMember = EvaluateAverageOpinionForMember(member, pack);
+            double avgOpinionOfMember = EvaluateAverageOpinionForPawn(member, pack);
             if (def.minGroupOpinionNeededSustain < avgOpinionOfMember)
             {
                 reason = "RVFFA_PackWorker_AverageOpinionOfMemberTooLow".Translate(member.NameShortColored, avgOpinionOfMember);
@@ -113,6 +112,7 @@ namespace RimValiFFARW.Packs
                 reason = "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
                 return true;
             }
+
             return false;
         }
 
@@ -121,9 +121,20 @@ namespace RimValiFFARW.Packs
         /// </summary>
         /// <param name="pawns">The given <see cref="IEnumerable{T}"/> of <see cref="Pawn"/>s</param>
         /// <returns>True if the <paramref name="pawns"/> can make a new <see cref="Pack"/>, false otherwise.</returns>
-        public virtual bool CanPawnsMakePack(IEnumerable<Pawn> pawns)
+        public virtual bool CanPawnsMakePack(IEnumerable<Pawn> pawns, PackDef def, bool quietError)
         {
-            if (pawns.Any(pawn => pawn.IsInPack())) return false;
+            if (EvaluateAverageOpinionForEveryPawn(pawns) < def.minGroupOpinionNeededCreation)
+            {
+                MessageOf(new LookTargets(pawns), "RVFFA_PackWorker_SubjectGroupOpinionTooLow".Translate(pawns.Join(pawn => pawn.NameShortColored)), quietError);
+                return false;
+            }
+
+            if (pawns.Count() < def.MinSizeToCreate)
+            {
+                MessageOf(new LookTargets(pawns), "RVFFA_Pack_CountLowerThanMin".Translate(pawns.Count(), def.MinSizeToCreate), quietError);
+                return false;
+            }
+
             return true;
         }
 
@@ -166,7 +177,7 @@ namespace RimValiFFARW.Packs
         /// <param name="lookTarget">The given <see cref="Pawn"/></param>
         /// <param name="message">The message the player is notified with</param>
         /// <param name="doNot">If it shouldn't</param>
-        private static void MessageOf(Pawn lookTarget, string message, bool doNot)
+        private static void MessageOf(LookTargets lookTarget, string message, bool doNot)
         {
             if (doNot) return;
             Messages.Message(message, lookTarget, MessageTypeDefOf.RejectInput, false);
@@ -183,18 +194,25 @@ namespace RimValiFFARW.Packs
         /// <param name="member">the given <see cref="Pawn"/></param>
         /// <param name="pack">the given <see cref="Pack"/></param>
         /// <returns>The average opinion of a <paramref name="member"/> in a <paramref name="pack"/></returns>
-        public virtual double EvaluateAverageOpinionForMember(Pawn member, Pack pack) => pack.Members.Average(otherMembers => otherMembers.relations.OpinionOf(member));
+        public virtual double EvaluateAverageOpinionForPawn(Pawn member, Pack pack) => pack.Members.Average(otherMembers => otherMembers.relations.OpinionOf(member));
 
         /// <param name="pack">the given <see cref="Pack"/></param>
         /// <returns>Calculates the Average of all Pawn opinion averages inside the given <paramref name="pack"/></returns>
-        public virtual double EvaluateAverageOpinionForEveryMember(Pack pack)
+        public virtual double EvaluateAverageOpinionForEveryPawn(Pack pack) => EvaluateAverageOpinionForEveryPawn(pack.Members);
+
+        /// <param name="pawns">the given <see cref="IEnumerable{T}"/> of <see cref="Pawn"/>s</param>
+        /// <returns>Calculates the Average of all Pawn opinion averages inside the given <paramref name="pawns"/> <see cref="IEnumerable{T}"/></returns>
+        public virtual double EvaluateAverageOpinionForEveryPawn(IEnumerable<Pawn> pawns)
         {
             double total = 0;
-            foreach(Pawn member in pack.Members)
+            double count = 0;
+            foreach (Pawn member in pawns)
             {
-                total += pack.Members.Average(otherMember => otherMember.relations.OpinionOf(member));
+                total += pawns.Average(otherMember => otherMember.relations.OpinionOf(member));
+                count++;
             }
-            return total / pack.Members.Count;
+
+            return total / count;
         }
 
         /// <summary>
@@ -215,7 +233,7 @@ namespace RimValiFFARW.Packs
             }
 
             if (pack.Members.Count < pack.Def.MinSizeToSustain) yield return "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
-            if (pack.Worker.EvaluateAverageOpinionForEveryMember(pack) < pack.Def.minGroupOpinionNeededSustain) yield return "RVFFA_PackWorker_PackAverageOpinionTooLow".Translate(pack.NameColored);
+            if (pack.Worker.EvaluateAverageOpinionForEveryPawn(pack) < pack.Def.minGroupOpinionNeededSustain) yield return "RVFFA_PackWorker_PackAverageOpinionTooLow".Translate(pack.NameColored);
         }
 
         /// <summary>

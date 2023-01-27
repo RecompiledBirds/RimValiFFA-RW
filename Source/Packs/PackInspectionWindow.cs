@@ -95,7 +95,7 @@ namespace RimValiFFARW.Packs
             if (pack == null) return;
             GUI.color = Color.gray;
             Text.Font = GameFont.Tiny;
-            Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack.Worker.EvaluateAverageOpinionForMember(SelPawn, pack), pack.Worker.EvaluateAverageOpinionForEveryMember(pack)));
+            Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack.Worker.EvaluateAverageOpinionForPawn(SelPawn, pack), pack.Worker.EvaluateAverageOpinionForEveryPawn(pack)));
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
         }
