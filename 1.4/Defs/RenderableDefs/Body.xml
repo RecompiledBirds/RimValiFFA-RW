@@ -5,15 +5,15 @@
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<north>
 			<position>(0,0,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0,-0.2,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
 			<position>(0,-0.2,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>

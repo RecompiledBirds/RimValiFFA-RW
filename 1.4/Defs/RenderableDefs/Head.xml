@@ -4,15 +4,15 @@
 		<defName>RVFFA_Head</defName>
 		<north>
 			<position>(0,0.013,0.49)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0,0.013,0.49)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
 			<position>(0.09,0.013,0.48)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>

@@ -5,15 +5,15 @@
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0,0.01,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
 			<position>(-0.2,-0.013,-0.01)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>
@@ -34,15 +34,15 @@
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0,0.01,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.2,0.013,-0.01)</position>
-			<size>1</size>
+			<position>(-0.1,-0.3024662,0.4)</position>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>
@@ -61,17 +61,21 @@
 		<defName>RVFFA_EarLU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(0,0,0)</position>
-			<size>1</size>
+			<position>(0,-0.3044662,0.4)</position>
+			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.01,0)</position>
-			<size>1</size>
+			<position>(0,0.029,0.4)</position>
+			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.256,-0.013,0.01)</position>
-			<size>1</size>
+			<position>(-0.1,-0.3024662,0.4)</position>
+			<size>0.8</size>
 		</east>
+		<west>
+			<position>(0.1,-1,0.4)</position>
+			<size>0.8</size>
+		</west>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/UpperLeft/MaleUpperLeft</texPath>
@@ -90,16 +94,16 @@
 		<defName>RVFFA_EarRU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(0,0,0)</position>
-			<size>1</size>
+			<position>(0,-0.3044662,0.4)</position>
+			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.01,0)</position>
-			<size>1</size>
+			<position>(0,0.029,0.4)</position>
+			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.256,0.013,0.01)</position>
-			<size>1</size>
+			<position>(-0.1,-0.3014662,0.4)</position>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>

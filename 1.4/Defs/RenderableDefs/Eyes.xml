@@ -7,15 +7,15 @@
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0,0.01,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
 			<position>(0,0.013,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>
@@ -32,15 +32,15 @@
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0,0.01,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
 			<position>(0,-0.013,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>

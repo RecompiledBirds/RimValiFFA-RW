@@ -6,15 +6,15 @@
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<north>
 			<position>(0,0.1,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0,0,0)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
 			<position>(-0.167,0.1,-0.19)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>
@@ -32,15 +32,15 @@
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<north>
 			<position>(-0.1,0.1,0.051)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</north>
 		<south>
 			<position>(0.2,-0.01,0.1)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</south>
 		<east>
 			<position>(-0.53,0,0.156)</position>
-			<size>1</size>
+			<size>0.8</size>
 		</east>
 		<textures>
 			<li>

@@ -20,11 +20,11 @@
             <rulesRaw>
                 <li Class="Rule_File">
                     <keyword>FirstPartName</keyword>
-                    <path>RVFFANamer/FirstSectionName</path>
+                    <path>RVFFANameGen/FirstSectionName</path>
                 </li>
                 <li Class="Rule_File">
                     <keyword>OtherPartName</keyword>
-                    <path>RVFFANamer/LastSectionName</path>
+                    <path>RVFFANameGen/LastSectionName</path>
                 </li>
             </rulesRaw>
         </rulePack>
