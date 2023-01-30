@@ -123,8 +123,8 @@ namespace RimValiFFARW.Packs
             pack = null;
 
             PackWorker packWorker = def?.GetNewPackWorker;
-            if (def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError)) return false;
-            if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawn, quietError))) return false;
+            if (!def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError)) return false;
+            if (!pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawn, quietError))) return false;
 
             pack = new Pack(def, pawns);
             pack.ApplyHediffsToPackMembers();
@@ -188,10 +188,7 @@ namespace RimValiFFARW.Packs
             foreach (Hediff hediff in worker.ApplyMissingMemberHediffs(memberHediffDic[member]))
             {
                 memberHediffDic[member].AddHediff(hediff);
-                RVCLog.Log($"Tried adding {hediff.def.LabelCap} to {member.LabelShortCap}");
             }
-
-            RVCLog.Log($"Here with {member.LabelCap}");
         }
 
         public void ExposeData()

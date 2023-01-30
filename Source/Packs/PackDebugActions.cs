@@ -24,15 +24,9 @@ namespace RimValiFFARW.Packs
             colonists.TruncateToLength(def.MaxSize);
 
             bool madeAPack = Pack.TryMakeNewPackFromPawns(def, colonists, false, out Pack pack);
-            if (!madeAPack)
-            {
-                RVCLog.Log("Could not make a Pack!", RVCLogType.Error);
-                return;
-            }
+            if (!madeAPack) return;
 
             packmanager.AddPack(pack);
-
-            RVCLog.Log($"Made a Pack: {madeAPack} using {colonists.Join()}");
         }
     }
 }
