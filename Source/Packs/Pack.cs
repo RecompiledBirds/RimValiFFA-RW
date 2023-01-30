@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MonoMod.Utils;
 using RimWorld;
+using RVCRestructured;
 using UnityEngine;
 using Verse;
 
@@ -187,7 +188,10 @@ namespace RimValiFFARW.Packs
             foreach (Hediff hediff in worker.ApplyMissingMemberHediffs(memberHediffDic[member]))
             {
                 memberHediffDic[member].AddHediff(hediff);
+                RVCLog.Log($"Tried adding {hediff.def.LabelCap} to {member.LabelShortCap}");
             }
+
+            RVCLog.Log($"Here with {member.LabelCap}");
         }
 
         public void ExposeData()

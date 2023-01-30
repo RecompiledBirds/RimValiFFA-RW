@@ -36,7 +36,7 @@ namespace RimValiFFARW.Packs
         /// </summary>
         public IEnumerable<Hediff> Hediffs => packHediffs;
 
-        public bool AddHediff(Hediff hediff) => packHediffs.Add(hediff); //TODO: Check that they are correctly applied
+        public bool AddHediff(Hediff hediff) => packHediffs.Add(hediff);
 
         public bool RemoveHediff(Hediff hediff) => packHediffs.Remove(hediff);
 

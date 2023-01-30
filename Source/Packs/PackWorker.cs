@@ -143,7 +143,7 @@ namespace RimValiFFARW.Packs
         /// </summary>
         /// <param name="tracker">The given <see cref="PackMemberHediffTracker"/></param>
         /// <returns>True if the <paramref name="tracker"/> had already added hediffs</returns>
-        public virtual bool MemberHasHediffsAlready(PackMemberHediffTracker tracker) => def.memberHediffs.Any(def => !tracker.HasHediffOfDef(def));
+        public virtual bool MemberHasHediffsAlready(PackMemberHediffTracker tracker) => def.memberHediffs.Any(def => tracker.HasHediffOfDef(def));
 
         /// <summary>
         ///     Runs through all <see cref="Hediff"/>s that were missing from the given <see cref="PackMemberHediffTracker"/> and adds them
@@ -164,7 +164,8 @@ namespace RimValiFFARW.Packs
         /// <param name="tracker">The given <see cref="PackMemberHediffTracker"/></param>
         public virtual void RemoveMemberHediffs(PackMemberHediffTracker tracker)
         {
-            foreach (Hediff hediff in tracker.Hediffs)
+            List<Hediff> workingList = tracker.Hediffs.ToList();
+            foreach (Hediff hediff in workingList)
             {
                 tracker.Member.health.RemoveHediff(hediff);
                 tracker.RemoveHediff(hediff);
