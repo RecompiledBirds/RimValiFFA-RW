@@ -15,28 +15,31 @@ namespace RimValiFFARW.Packs
 {
     public class PackInspectionWindow : ITab
     {
-        private const float listRectTemplateHeight = 30f;
+        private const float ListRectTemplateHeight = 30f;
+        private const float MaxMemberListHeight = 140f;
         private const float CommonMargin = 5f;
 
-        private static readonly Vector2 winSize = new Vector2(700, 400);
+        private static readonly Vector2 winSize = new Vector2(600, 333);
         private static readonly Rect main = new Rect(CommonMargin, 0f, winSize.x - CommonMargin * 2f, winSize.y - CommonMargin); //695 x 390
-        private readonly Color otherGrey = new Color(.15f, .15f, .15f, .10f);
+        //private readonly Color otherGrey = new Color(.15f, .15f, .15f, .10f);
         private readonly Rect titlePart;
+        private readonly Rect contentPart;
         private readonly Rect descriptionPart;
         private readonly Rect boniListPartOuter;
-        private readonly Rect memberListPartOuter;
-        private readonly Rect statusBar;
 
         private bool playerWasNotifiedOfPackMissing = false;
         private Vector2 descriptionScrollVector;
         private Vector2 memberScrollVector;
         private Vector2 boniScrollVector;
+        private Rect memberListPartOuter;
         private Rect memberListPartInner;
         private Rect boniListPartInner;
+        private Rect statusBar;
 
         private static PackInspectionWindow packInspectionWindow;
         private List<Pawn> packMembers;
         private Pack pack;
+        private Pawn pawn;
 
         public static PackInspectionWindow GetCurrentPackInspectionWindow => packInspectionWindow;
 
@@ -46,7 +49,7 @@ namespace RimValiFFARW.Packs
             set => pack = value;
         }
 
-        public override bool IsVisible => base.IsVisible;
+        public override bool IsVisible => SelPawn.IsInPack();
 
         public PackInspectionWindow()
         {
@@ -55,32 +58,46 @@ namespace RimValiFFARW.Packs
             packInspectionWindow = this;
 
             titlePart = main.TopPartPixels(30f);
-            descriptionPart = new Rect(titlePart.x, titlePart.yMax + CommonMargin, main.width, 75f);
-            boniListPartOuter = new Rect(descriptionPart.x, descriptionPart.yMax + CommonMargin * 2f, main.width, 105f);
-            memberListPartOuter = new Rect(boniListPartOuter.x, boniListPartOuter.yMax + CommonMargin, main.width, 140f);
-            statusBar = new Rect(memberListPartOuter.x, memberListPartOuter.yMax + CommonMargin, main.width, 20f);
+            contentPart = new Rect(titlePart.x, titlePart.yMax + CommonMargin, main.width, 125f);
+            descriptionPart = new Rect(contentPart.x, contentPart.y, main.width * .7f - CommonMargin * 2f, contentPart.height);
+            boniListPartOuter = new Rect(descriptionPart.xMax + CommonMargin * 2f, contentPart.y, main.width * .3f, contentPart.height).Rounded();
         }
 
         public override void OnOpen()
         {
             Packmanager.GetLastActivePackmanager.TryGetPackForPawn(SelPawn, out Pack pack);
+            pawn = SelPawn;
             this.pack = pack;
             base.OnOpen();
 
             if (pack is null) return;
             packMembers = pack.Members.ToList();
 
-            boniListPartInner = boniListPartOuter.GetInnerScrollRect(listRectTemplateHeight * pack.Def.memberHediffs.Count);
-            memberListPartInner = memberListPartOuter.GetInnerScrollRect(listRectTemplateHeight * pack.Members.Count);
+            float memberListHeight = Mathf.Min(MaxMemberListHeight, ListRectTemplateHeight * (pack.Members.Count - 1));
+            memberListPartOuter = new Rect(titlePart.x, boniListPartOuter.yMax + CommonMargin * 2f, main.width, memberListHeight);
+            statusBar = new Rect(titlePart.x, memberListPartOuter.yMax + CommonMargin, main.width, 20f);
+
+            boniListPartInner = boniListPartOuter.GetInnerScrollRect(ListRectTemplateHeight * pack.Def.memberHediffs.Count);
+            memberListPartInner = memberListPartOuter.GetInnerScrollRect(ListRectTemplateHeight * (pack.Members.Count - 1));
+
+            size = winSize - new Vector2(0, MaxMemberListHeight - memberListHeight);
+            UpdateSize();
         }
 
         protected override void FillTab()
         {
             //Widgets.DrawBox(TitlePart);
             //Widgets.DrawBox(descriptionPart);
+            //Widgets.DrawBoxSolidWithOutline(boniListPartOuter, otherGrey, Color.gray);
+            //Widgets.DrawBoxSolidWithOutline(memberListPartOuter, otherGrey, Color.gray);
 
-            Widgets.DrawBoxSolidWithOutline(boniListPartOuter, otherGrey, Color.gray);
-            Widgets.DrawBoxSolidWithOutline(memberListPartOuter, otherGrey, Color.gray);
+            if (pawn != SelPawn) OnOpen();
+
+            GUI.color = Color.gray;
+            Widgets.DrawLineVertical(descriptionPart.xMax + CommonMargin, descriptionPart.y, descriptionPart.height);
+            Widgets.DrawLineHorizontal(contentPart.x, contentPart.yMax + CommonMargin, contentPart.width);
+            Widgets.DrawLineHorizontal(memberListPartOuter.x, memberListPartOuter.yMax + CommonMargin, memberListPartOuter.width);
+            GUI.color = Color.white;
 
             DrawTitlePart();
             DrawDescriptionPart();
@@ -95,7 +112,7 @@ namespace RimValiFFARW.Packs
             if (pack == null) return;
             GUI.color = Color.gray;
             Text.Font = GameFont.Tiny;
-            Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack.Worker.EvaluateAverageOpinionForPawn(SelPawn, pack), pack.Worker.EvaluateAverageOpinionForEveryPawn(pack)));
+            Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack.Worker.EvaluateAverageOpinionForPawn(SelPawn, pack).ToString("0.##"), pack.Worker.EvaluateAverageOpinionForEveryPawn(pack).ToString("0.##")));
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
         }
@@ -103,23 +120,29 @@ namespace RimValiFFARW.Packs
         private void DrawMemberList()
         {
             if (pack is null) return;
+            bool selfEncountered = false;
+
             Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
             for (int i = 0; i < packMembers.Count; i++)
             {
                 Pawn otherMember = packMembers[i];
+
+                selfEncountered |= otherMember == SelPawn;
                 if (otherMember == SelPawn) continue;
+
+                int multiplier = i - (selfEncountered ? 1 : 0);
                 int opinion = SelPawn.relations.OpinionOf(otherMember);
                 Texture2D barTex = GetBarTexForOpinion(opinion);
 
-                Vector2 tempPos = new Vector2(0f, listRectTemplateHeight) * i + memberListPartInner.position;
-                Rect temp = new Rect(tempPos, new Vector2(memberListPartInner.width, listRectTemplateHeight));
+                Vector2 tempPos = new Vector2(0f, ListRectTemplateHeight) * multiplier + memberListPartInner.position;
+                Rect temp = new Rect(tempPos, new Vector2(memberListPartInner.width, ListRectTemplateHeight));
 
                 Rect tempMemberName = temp.LeftPartPixels(100f).MoveRect(new Vector2(CommonMargin, CommonMargin));
                 Rect tempOpinionPre = temp.RightPartPixels(temp.height);
                 Rect tempOpinion = tempOpinionPre.ContractedBy(CommonMargin);
-                Rect tempBar = new Rect(tempMemberName.xMax + CommonMargin, temp.y, temp.width - tempMemberName.width - CommonMargin * 2 - tempOpinionPre.width, listRectTemplateHeight).ContractedBy(CommonMargin);
+                Rect tempBar = new Rect(tempMemberName.xMax + CommonMargin, temp.y, temp.width - tempMemberName.width - CommonMargin * 2 - tempOpinionPre.width, ListRectTemplateHeight).ContractedBy(CommonMargin);
 
-                temp.DoRectHighlight(i % 2 == 0);
+                temp.DoRectHighlight(multiplier % 2 == 0);
                 MouseoverSounds.DoRegion(temp);
                 Widgets.DrawHighlightIfMouseover(temp);
                 if (Widgets.ButtonInvisible(temp)) Find.WindowStack.Add(new Dialog_InfoCard(otherMember));
@@ -140,19 +163,18 @@ namespace RimValiFFARW.Packs
 
             for (int i = 0; i < pack.Def.memberHediffs.Count; i++)
             {
-                Vector2 tempPos = new Vector2(0f, listRectTemplateHeight) * i + boniListPartInner.position;
-                Rect temp = new Rect(tempPos, new Vector2(boniListPartInner.width, listRectTemplateHeight));
+                Vector2 tempPos = new Vector2(0f, ListRectTemplateHeight) * i + boniListPartInner.position;
+                Rect temp = new Rect(tempPos, new Vector2(boniListPartInner.width, ListRectTemplateHeight));
 
-                Rect tempLabel = temp.LeftPartPixels(100f).MoveRect(new Vector2(CommonMargin, CommonMargin));
+                Rect tempLabel = temp.MoveRect(new Vector2(CommonMargin, CommonMargin));
                 Rect tempInfo = temp.RightPartPixels(temp.height).ContractedBy(CommonMargin);
-                Rect tempDesc = new Rect(tempLabel.xMax + CommonMargin, temp.y, temp.width - tempLabel.width - CommonMargin * 2 - tempInfo.width, listRectTemplateHeight).MoveRect(new Vector2(CommonMargin, CommonMargin));
 
                 temp.DoRectHighlight(i % 2 == 0);
                 Widgets.DrawHighlightIfMouseover(temp);
                 MouseoverSounds.DoRegion(temp);
 
                 Widgets.Label(tempLabel, pack.Def.memberHediffs[i].LabelCap);
-                Widgets.Label(tempDesc, pack.Def.memberHediffs[i].Description);
+                TooltipHandler.TipRegion(temp, pack.Def.memberHediffs[i].Description);
                 Widgets.InfoCardButton(tempInfo, pack.Def.memberHediffs[i]);
             }
 
@@ -184,7 +206,7 @@ namespace RimValiFFARW.Packs
             }
 
             Text.Font = GameFont.Medium;
-            Widgets.Label(titlePart, pack.NameColored);
+            Widgets.Label(titlePart, $"<b>{pack.NameColored}</b>");
             Text.Font = GameFont.Small;
 
             GUI.color = Color.gray;
