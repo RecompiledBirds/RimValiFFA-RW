@@ -19,12 +19,11 @@ namespace RimValiFFARW.Packs
 
             if (!currentMap.IsPlayerHome) return;
 
-            List<Pawn> colonists = currentMap.mapPawns.FreeColonistsSpawned.Where(pawn => !pawn.IsInPack()).ToList();
+            List<Pawn> colonists = currentMap.mapPawns.FreeColonistsSpawned.InRandomOrder().Where(pawn => !pawn.IsInPack()).ToList();
             PackDef def = DefDatabase<PackDef>.GetRandom();
             colonists.TruncateToLength(def.MaxSize);
 
-            bool madeAPack = Pack.TryMakeNewPackFromPawns(def, colonists, false, out Pack pack);
-            if (!madeAPack) return;
+            if (!Pack.TryMakeNewPackFromPawns(def, colonists, false, out Pack pack)) return;
 
             packmanager.AddPack(pack);
         }

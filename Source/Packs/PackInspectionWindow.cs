@@ -49,7 +49,7 @@ namespace RimValiFFARW.Packs
             set => pack = value;
         }
 
-        public override bool IsVisible => SelPawn.IsInPack();
+        //public override bool IsVisible => SelPawn.IsInPack();
 
         public PackInspectionWindow()
         {
@@ -93,18 +93,24 @@ namespace RimValiFFARW.Packs
 
             if (pawn != SelPawn) OnOpen();
 
-            GUI.color = Color.gray;
-            Widgets.DrawLineVertical(descriptionPart.xMax + CommonMargin, descriptionPart.y, descriptionPart.height);
-            Widgets.DrawLineHorizontal(contentPart.x, contentPart.yMax + CommonMargin, contentPart.width);
-            Widgets.DrawLineHorizontal(memberListPartOuter.x, memberListPartOuter.yMax + CommonMargin, memberListPartOuter.width);
-            GUI.color = Color.white;
-
             DrawTitlePart();
+            DrawSeperators();
             DrawDescriptionPart();
             DrawBoniList();
             DrawMemberList();
             DrawStatusbar();
+        }
 
+        private void DrawSeperators()
+        {
+            if (pack == null) return;
+            GUI.color = Color.gray;
+            Widgets.DrawLineVertical(descriptionPart.xMax + CommonMargin, descriptionPart.y, descriptionPart.height);
+
+            Widgets.DrawLineHorizontal(titlePart.x, titlePart.yMax, titlePart.width);
+            Widgets.DrawLineHorizontal(contentPart.x, contentPart.yMax + CommonMargin, contentPart.width);
+            Widgets.DrawLineHorizontal(memberListPartOuter.x, memberListPartOuter.yMax + CommonMargin, memberListPartOuter.width);
+            GUI.color = Color.white;
         }
 
         private void DrawStatusbar()
@@ -184,10 +190,6 @@ namespace RimValiFFARW.Packs
         private void DrawDescriptionPart()
         {
             Widgets.LabelScrollable(descriptionPart, pack?.Def.description ?? "RVFFA_PackInspectionWindow_PawnNotInPackDescription".Translate(), ref descriptionScrollVector);
-
-            GUI.color = Color.gray;
-            Widgets.DrawLineHorizontal(descriptionPart.x, descriptionPart.yMax + CommonMargin, descriptionPart.width);
-            GUI.color = Color.white;
         }
 
         private void DrawTitlePart()
@@ -208,10 +210,6 @@ namespace RimValiFFARW.Packs
             Text.Font = GameFont.Medium;
             Widgets.Label(titlePart, $"<b>{pack.NameColored}</b>");
             Text.Font = GameFont.Small;
-
-            GUI.color = Color.gray;
-            Widgets.DrawLineHorizontal(titlePart.x, titlePart.yMax, titlePart.width);
-            GUI.color = Color.white;
         }
 
         private Texture2D GetBarTexForOpinion(int opinion)
