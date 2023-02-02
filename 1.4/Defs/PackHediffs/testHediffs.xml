@@ -1,58 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef ParentName="DiseaseBase">
-		<defName>BOT_ClaustrophobicBreakdown</defName>
-		<label>claustrophobic breakdown</label>
-		<labelNoun>a claustrophobic breakdown</labelNoun>
-		<description>A severe amalgamation of symptoms due to claustrophobia. May include sweating, rapid heartbeat, confusion and disorientation as well as the fear of dying.</description>
-		<isBad>false</isBad>
-		<makesSickThought>false</makesSickThought>
-		<tendable>false</tendable>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>Moving</capacity>
-						<setMax>0.5</setMax>
-					</li>
-					<li>
-						<capacity>Manipulation</capacity>
-						<setMax>0.2</setMax>
-					</li>
-					<li>
-						<capacity>Talking</capacity>
-						<setMax>0.0</setMax>
-					</li>
-					<li>
-						<capacity>Eating</capacity>
-						<setMax>0.25</setMax>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<setMax>0.1</setMax>
-					</li>
-					<li>
-						<capacity>Hearing</capacity>
-						<setMax>0.1</setMax>
-					</li>
-					<li>
-						<capacity>Breathing</capacity>
-						<setMax>0.75</setMax>
-					</li>
-				</capMods>
-				<vomitMtbDays>0.5</vomitMtbDays>
-				<lifeThreatening>false</lifeThreatening>
-				<hungerRateFactor>1.2</hungerRateFactor>
-				<restFallFactor>1.5</restFallFactor>
-			</li>
-		</stages>
-	</HediffDef>
-
 	<HediffDef>
-		<defName>BOT_CongenitalAnalgesiaPainReducer</defName>
-		<label>can't feel pain</label>
-		<labelNoun>a claustrophobic breakdown</labelNoun>
-		<description>alagesia can't feel pain</description>
+		<defName>test0</defName>
+		<label>test0</label>
+		<labelNoun>test0</labelNoun>
+		<description>you have a heddiff</description>
 		<isBad>false</isBad>
 		<makesSickThought>false</makesSickThought>
 		<tendable>false</tendable>
@@ -62,7 +14,132 @@
 			<li>
 				<becomeVisible>false</becomeVisible>
 				<lifeThreatening>false</lifeThreatening>
-				<painFactor>0</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>test1</defName>
+		<label>test1</label>
+		<labelNoun>test1</labelNoun>
+		<description>you have a heddiff</description>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<chronic>true</chronic>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>test2</defName>
+		<label>test2</label>
+		<labelNoun>test2</labelNoun>
+		<description>you have a heddiff</description>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<chronic>true</chronic>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>test3</defName>
+		<label>test3</label>
+		<labelNoun>test3</labelNoun>
+		<description>you have a heddiff</description>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<chronic>true</chronic>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>test4</defName>
+		<label>test4</label>
+		<labelNoun>test4</labelNoun>
+		<description>you have a heddiff</description>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<chronic>true</chronic>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>test5</defName>
+		<label>test5</label>
+		<labelNoun>test5</labelNoun>
+		<description>you have a heddiff</description>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<chronic>true</chronic>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>test6</defName>
+		<label>test6</label>
+		<labelNoun>test6</labelNoun>
+		<description>you have a heddiff</description>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<chronic>true</chronic>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>test7</defName>
+		<label>test7</label>
+		<labelNoun>test7</labelNoun>
+		<description>you have a heddiff</description>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<chronic>true</chronic>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
 			</li>
 		</stages>
 	</HediffDef>

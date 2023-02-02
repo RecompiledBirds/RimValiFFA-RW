@@ -108,7 +108,7 @@ namespace RimValiFFARW.Packs
         /// <param name="def">The given <see cref="PackDef"/></param>
         /// <param name="pawns">The given <see cref="IEnumerable{T}"/> of <see cref="Pawn"/>s</param>
         /// <returns>If the <paramref name="pawns"/> can create a <see cref="Pack"/></returns>
-        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns, bool quietError) => def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError);
+        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns, bool quietError) => def?.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError) ?? false;
 
         /// <summary>
         ///     Attempts to make a <see cref="Pack"/>, checking if the given parameters are impossible to make a <see cref="Pack"/> with
@@ -122,9 +122,12 @@ namespace RimValiFFARW.Packs
         {
             pack = null;
 
+            Log.Message("1");
             PackWorker packWorker = def?.GetNewPackWorker;
             if (!def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError)) return false;
-            if (!pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawn, quietError))) return false;
+            Log.Message("2");
+            if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawns, pawn, quietError, out string _))) return false;
+            Log.Message("3");
 
             pack = new Pack(def, pawns);
             pack.ApplyHediffsToPackMembers();
@@ -160,7 +163,7 @@ namespace RimValiFFARW.Packs
         /// <returns>True if a member could be added, false otherwise.</returns>
         public bool AddMember(Pawn member, bool quietError = true)
         {
-            if (!worker.PawnCanJoinPack(member, quietError)) return false;
+            if (!worker.PawnCanJoinPack(members, member, quietError, out string _)) return false;
             if (!members.Add(member)) return false;
 
             worker.NotifyMemberAdded(member); 

@@ -36,32 +36,25 @@ namespace RimValiFFARW.Packs
         ///     Checks if a <paramref name="pawn"/> can join a <see cref="Pack"/>.
         ///     Throws errors if they can't, describing why.
         /// </summary>
+        /// <param name="existingPawns">The <see cref="Pawn"/>s that make up the <see cref="Pack"/> that the <paramref name="pawn"/> is trying to join</param>
         /// <param name="pawn">The given <see cref="Pawn"/></param>
         /// <param name="quietError">If the function should stay quiet about errors</param>
+        /// <param name="reason">The reason as to why a <paramref name="pawn"/> can't join</param>
         /// <returns>True if a <see cref="Pawn"/> can join a <see cref="Pack"/>, false otherwise</returns>
-        public virtual bool PawnCanJoinPack(Pawn pawn, bool quietError)
+        public virtual bool PawnCanJoinPack(IEnumerable<Pawn> existingPawns, Pawn pawn, bool quietError, out string reason)
         {
-            if (pawn == null)
-            {
-                MessageOf(pawn, "RVFFA_PackWorker_DoesNotExist".Translate(), quietError);
-                return false;
-            }
+            double avgOpinionOfMember = EvaluateAverageOpinionForPawn(pawn, existingPawns);
+            reason = null;
 
-            if (pawn.Dead)
-            {
-                MessageOf(pawn, MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsDead"), quietError);
-                return false;
-            }
+            if (pawn == null) reason = "RVFFA_PackWorker_DoesNotExist".Translate();
+            if (pawn.Dead) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsDead");
+            if (pawn.NonHumanlikeOrWildMan()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild");
+            if (pawn.IsInPack()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
+            if (def.minGroupOpinionNeededCreation > avgOpinionOfMember) reason = "RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup".Translate(pawn.NameShortColored, avgOpinionOfMember.ToString("0.##"), def.minGroupOpinionNeededCreation.ToString("0.##"));
 
-            if (pawn.NonHumanlikeOrWildMan())
+            if (reason != null)
             {
-                MessageOf(pawn, MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild"), quietError);
-                return false;
-            }
-
-            if(pawn.IsInPack())
-            {
-                MessageOf(pawn, MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready"), quietError);
+                MessageOf(pawn, reason, quietError);
                 return false;
             }
 
@@ -94,7 +87,7 @@ namespace RimValiFFARW.Packs
         public virtual bool MemberShouldLeave(Pawn member, Pack pack, out string reason)
         {
             reason = null;
-            double avgOpinionOfMember = EvaluateAverageOpinionForPawn(member, pack);
+            double avgOpinionOfMember = EvaluateAverageOpinionForPawn(member, pack.Members);
             if (def.minGroupOpinionNeededSustain < avgOpinionOfMember)
             {
                 reason = "RVFFA_PackWorker_AverageOpinionOfMemberTooLow".Translate(member.NameShortColored, avgOpinionOfMember);
@@ -131,7 +124,13 @@ namespace RimValiFFARW.Packs
 
             if (pawns.Count() < def.MinSizeToCreate)
             {
-                MessageOf(new LookTargets(pawns), "RVFFA_Pack_CountLowerThanMin".Translate(pawns.Count(), def.MinSizeToCreate), quietError);
+                MessageOf(new LookTargets(pawns), "RVFFA_PackWorker_CountLowerThanMin".Translate(pawns.Count(), def.MinSizeToCreate), quietError);
+                return false;
+            }
+
+            if (pawns.Count() > def.MaxSize)
+            {
+                MessageOf(new LookTargets(pawns), "RVFFA_PackWorker_CountHigherThanMax".Translate(pawns.Count(), def.MaxSize), quietError);
                 return false;
             }
 
@@ -195,7 +194,11 @@ namespace RimValiFFARW.Packs
         /// <param name="member">the given <see cref="Pawn"/></param>
         /// <param name="pack">the given <see cref="Pack"/></param>
         /// <returns>The average opinion of a <paramref name="member"/> in a <paramref name="pack"/></returns>
-        public virtual double EvaluateAverageOpinionForPawn(Pawn member, Pack pack) => pack.Members.Average(otherMembers => otherMembers.relations.OpinionOf(member));
+        public virtual double EvaluateAverageOpinionForPawn(Pawn member, IEnumerable<Pawn> members)
+        {
+            if (!members.Where(pawn => pawn != member).Any()) return 0d;
+            return members.Where(pawn => pawn != member).Average(otherMembers => otherMembers.relations.OpinionOf(member));
+        }
 
         /// <param name="pack">the given <see cref="Pack"/></param>
         /// <returns>Calculates the Average of all Pawn opinion averages inside the given <paramref name="pack"/></returns>
@@ -207,6 +210,9 @@ namespace RimValiFFARW.Packs
         {
             double total = 0;
             double count = 0;
+
+            if (pawns.Count() < 2) return 0;
+
             foreach (Pawn member in pawns)
             {
                 total += pawns.Average(otherMember => otherMember.relations.OpinionOf(member));
@@ -223,18 +229,28 @@ namespace RimValiFFARW.Packs
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="string"/>s that contain reasons for why a <see cref="Pack"/> should be disbanded</returns>
         public virtual IEnumerable<string> IsPackStillValid(Pack pack)
         {
+            bool testSingleMembers = true;
+            if (pack.Members.Count < pack.Def.MinSizeToSustain)
+            {
+                testSingleMembers = false;
+                yield return "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
+            }
+            if (pack.Worker.EvaluateAverageOpinionForEveryPawn(pack) < pack.Def.minGroupOpinionNeededSustain)
+            {
+                testSingleMembers = false;
+                yield return "RVFFA_PackWorker_PackAverageOpinionTooLow".Translate(pack.NameColored);
+            }
+
+            if (!testSingleMembers) yield break;
             foreach (Pawn member in pack.Members)
             {
                 pack.Worker.MemberShouldLeave(member, pack, out string reason);
                 if (reason == null) continue;
 
                 Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member.NameShortColored, pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
-                CleanUpMember(member, pack); 
-                continue;
+                CleanUpMember(member, pack);
+                break;
             }
-
-            if (pack.Members.Count < pack.Def.MinSizeToSustain) yield return "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
-            if (pack.Worker.EvaluateAverageOpinionForEveryPawn(pack) < pack.Def.minGroupOpinionNeededSustain) yield return "RVFFA_PackWorker_PackAverageOpinionTooLow".Translate(pack.NameColored);
         }
 
         /// <summary>
