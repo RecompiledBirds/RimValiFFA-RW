@@ -114,23 +114,27 @@ namespace RimValiFFARW.Packs
         /// </summary>
         /// <param name="pawns">The given <see cref="IEnumerable{T}"/> of <see cref="Pawn"/>s</param>
         /// <returns>True if the <paramref name="pawns"/> can make a new <see cref="Pack"/>, false otherwise.</returns>
-        public virtual bool CanPawnsMakePack(IEnumerable<Pawn> pawns, PackDef def, bool quietError)
+        public virtual bool CanPawnsMakePack(IEnumerable<Pawn> pawns, PackDef def, bool quietError, out string reason)
         {
-            if (EvaluateAverageOpinionForEveryPawn(pawns) < def.minGroupOpinionNeededCreation)
+            reason = null;
+            if (pawns.Count() < def.MinSizeToCreate)
             {
-                MessageOf(new LookTargets(pawns), "RVFFA_PackWorker_SubjectGroupOpinionTooLow".Translate(pawns.Join(pawn => pawn.NameShortColored)), quietError);
+                reason = "RVFFA_PackWorker_CountLowerThanMin".Translate(pawns.Count(), def.MinSizeToCreate);
+                MessageOf(new LookTargets(pawns), reason, quietError);
                 return false;
             }
 
-            if (pawns.Count() < def.MinSizeToCreate)
+            if (EvaluateAverageOpinionForEveryPawn(pawns) < def.minGroupOpinionNeededCreation)
             {
-                MessageOf(new LookTargets(pawns), "RVFFA_PackWorker_CountLowerThanMin".Translate(pawns.Count(), def.MinSizeToCreate), quietError);
+                reason = "RVFFA_PackWorker_SubjectGroupOpinionTooLow".Translate(pawns.SkipLast(1).Join(pawn => pawn.NameShortColored), pawns.Last());
+                MessageOf(new LookTargets(pawns), reason, quietError);
                 return false;
             }
 
             if (pawns.Count() > def.MaxSize)
             {
-                MessageOf(new LookTargets(pawns), "RVFFA_PackWorker_CountHigherThanMax".Translate(pawns.Count(), def.MaxSize), quietError);
+                reason = "RVFFA_PackWorker_CountHigherThanMax".Translate(pawns.Count(), def.MaxSize);
+                MessageOf(new LookTargets(pawns), reason, quietError);
                 return false;
             }
 
@@ -211,7 +215,7 @@ namespace RimValiFFARW.Packs
             double total = 0;
             double count = 0;
 
-            if (pawns.Count() < 2) return 0;
+            if (pawns.Count() < 1) return 100;
 
             foreach (Pawn member in pawns)
             {

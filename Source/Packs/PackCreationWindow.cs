@@ -78,6 +78,7 @@ namespace RimValiFFARW.Packs
 
         public override void DoWindowContents(Rect inRect)
         {
+            //TODO: Cleanup
             GUI.color = Color.gray;
             Widgets.DrawLineVertical(descriptionAndSelectionPart.xMax, descriptionAndSelectionPart.y, descriptionAndSelectionPart.height);
 
@@ -105,6 +106,7 @@ namespace RimValiFFARW.Packs
 
             Widgets.LabelScrollable(descriptionPart, packDef?.description ?? string.Empty, ref descriptionScroll);
             bool acceptPack = true;
+            string failreason0 = null;
             if (packDef != null)
             {
                 PackInspectionWindow.DrawBoniList(boniListPartOuter, boniListPartInner, packDef, ref boniScrollVector);
@@ -113,13 +115,13 @@ namespace RimValiFFARW.Packs
                 for (int i = 0; i < potentialMembers.Count; i++)
                 {
                     Pawn pawn = potentialMembers[i];
-                    acceptPack = DrawOpinionBar(pawn, fullTempPackMembers, packDef, memberListPartInner, i);
+                    acceptPack = DrawOpinionBar(pawn, fullTempPackMembers, packDef, memberListPartInner, i, out failreason0);
                 }
 
                 DrawAddPawnButton();
                 Widgets.EndScrollView();
             }
-            acceptPack &= Pack.CanPawnsMakePack(packDef, fullTempPackMembers, true);
+            acceptPack &= Pack.CanPawnsMakePack(packDef, fullTempPackMembers, true, out string failReason1);
 
             Widgets.DrawBoxSolidWithOutline(confirmationPart, otherGrey, Color.gray, 2);
             Text.Anchor = TextAnchor.MiddleLeft;
@@ -130,22 +132,24 @@ namespace RimValiFFARW.Packs
             {
                 Widgets.DrawBoxSolid(confirmationPart, new Color(1f, 0f, 0f, .2f));
             }
-            else
-            {
-                Widgets.DrawHighlightIfMouseover(confirmationPart);
-            }
 
-            if (Widgets.ButtonInvisible(confirmationPart, acceptPack) && acceptPack)
+            if ((failreason0 ?? failReason1) is string anyReason) TooltipHandler.TipRegion(confirmationPart, anyReason);
+            if (Widgets.ButtonInvisible(confirmationPart))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();
-                if(Pack.TryMakeNewPackFromPawns(packDef, fullTempPackMembers, true, out Pack pack)) 
+                if(acceptPack && Pack.TryMakeNewPackFromPawns(packDef, fullTempPackMembers, true, out Pack pack)) 
                 { 
                     Packmanager.GetLastActivePackmanager.AddPack(pack);
                     PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
                     Close();
                 }
+                else
+                {
+                    SoundDefOf.ClickReject.PlayOneShotOnCamera();
+                }
             }
 
+            Widgets.DrawHighlightIfMouseover(confirmationPart);
             DrawStatusbar();
         }
 
@@ -180,7 +184,7 @@ namespace RimValiFFARW.Packs
             }
         }
 
-        private bool DrawOpinionBar(Pawn otherMember, IEnumerable<Pawn> otherMembers, PackDef def, Rect rect, int locationModif)
+        private bool DrawOpinionBar(Pawn otherMember, IEnumerable<Pawn> otherMembers, PackDef def, Rect rect, int locationModif, out string reason)
         {
             bool nothingIllegal = true;
             int opinion = Convert.ToInt32(packWorker.EvaluateAverageOpinionForPawn(otherMember, otherMembers));
@@ -199,7 +203,7 @@ namespace RimValiFFARW.Packs
             MouseoverSounds.DoRegion(tempRect);
             Widgets.DrawHighlightIfMouseover(tempRect);
             if (Widgets.ButtonInvisible(tempRect.LeftPartPixels(200f))) Find.WindowStack.Add(new Dialog_InfoCard(otherMember));
-            if (!packWorker.PawnCanJoinPack(otherMembers, otherMember, true, out string reason))
+            if (!packWorker.PawnCanJoinPack(otherMembers, otherMember, true, out reason))
             {
                 nothingIllegal = false;
                 Widgets.DrawBoxSolid(tempRect, new Color(1f, 0f, 0f, .2f));

@@ -5,7 +5,7 @@
 	<RVFFA_PackWorker_CanNotJoin>{0} can't join, because {1}</RVFFA_PackWorker_CanNotJoin>																<!--{Name} can't join, because {reason}-->
 	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>																		<!--{Name} is dead.-->
 	<RVFFA_PackWorker_SubjectIsWild>{0} is wild.</RVFFA_PackWorker_SubjectIsWild>																		<!--{Name} is already in a pack.-->
-	<RVFFA_PackWorker_SubjectGroupOpinionTooLow>{0} don't like each other enough to make a pack.</RVFFA_PackWorker_SubjectGroupOpinionTooLow>
+	<RVFFA_PackWorker_SubjectGroupOpinionTooLow>{0} and {1} don't like each other enough to make a pack.</RVFFA_PackWorker_SubjectGroupOpinionTooLow>
 	<RVFFA_PackWorker_SubjectIsInPackAlready>{0} is already in a pack.</RVFFA_PackWorker_SubjectIsInPackAlready>										
 	<RVFFA_PackWorker_AverageOpinionOfMemberTooLow>The packs average opinion of {0} sank too low! ({1})</RVFFA_PackWorker_AverageOpinionOfMemberTooLow>	<!--The packs average opinion of {Name} sank too low! ({Average Opinion})-->
 	<RVFFA_PackWorker_LastInPack>{0} was the last member of his pack.</RVFFA_PackWorker_LastInPack>
