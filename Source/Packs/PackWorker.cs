@@ -88,7 +88,7 @@ namespace RimValiFFARW.Packs
         {
             reason = null;
             double avgOpinionOfMember = EvaluateAverageOpinionForPawn(member, pack.Members);
-            if (def.minGroupOpinionNeededSustain < avgOpinionOfMember)
+            if (def.minGroupOpinionNeededSustain > avgOpinionOfMember)
             {
                 reason = "RVFFA_PackWorker_AverageOpinionOfMemberTooLow".Translate(member.NameShortColored, avgOpinionOfMember);
                 return true;

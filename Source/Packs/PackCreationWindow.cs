@@ -78,35 +78,52 @@ namespace RimValiFFARW.Packs
 
         public override void DoWindowContents(Rect inRect)
         {
-            //TODO: Cleanup
-            GUI.color = Color.gray;
-            Widgets.DrawLineVertical(descriptionAndSelectionPart.xMax, descriptionAndSelectionPart.y, descriptionAndSelectionPart.height);
+            DrawSeparators();
+            DrawTitle();
+            DrawDefSelectorButton();
+            DrawDescription();
+            DrawBoniAndMemberList(out bool acceptPack, out string failreason0);
+            DrawConfirmationButton(acceptPack, failreason0);
+            DrawStatusbar();
+        }
 
-            Widgets.DrawLineHorizontal(titlePart.x, titlePart.yMax, titlePart.width);
-            Widgets.DrawLineHorizontal(descriptionAndSelectionPart.x, descriptionAndSelectionPart.yMax + CommonMargin, contentPart.width);
-            Widgets.DrawLineHorizontal(contentPart.x, contentPart.yMax + CommonMargin, contentPart.width);
-            GUI.color = Color.white;
-
-            Text.Font = GameFont.Medium;
-            Widgets.Label(titlePart, $"<b>{"RVFFA_PackCreationWindow_Title".Translate()}</b>");
-            Text.Font = GameFont.Small;
-
-            Text.Font = GameFont.Medium;
+        private void DrawConfirmationButton(bool acceptPack, string failreason0)
+        {
+            Widgets.DrawBoxSolidWithOutline(confirmationPart, otherGrey, Color.gray, 2);
             Text.Anchor = TextAnchor.MiddleLeft;
-            Widgets.DrawBoxSolidWithOutline(defSelectorButton, otherGrey, Color.gray, ButtonOutlineWidth);
-            Widgets.DrawHighlightIfMouseover(defSelectorButton);
-            Widgets.Label(defSelectorButton.MoveRect(new Vector2(CommonMargin + ButtonOutlineWidth, 0f)), packDef?.LabelCap ?? $"{"RVFFA_PackCreationWindow_SelectPackDef".Translate()}");
-            Widgets.DrawTextureFitted(defSelectorButton.RightPartPixels(defSelectorButton.height).ContractedBy(3.5f).Rounded(), TexButton.Collapse, 1f);
+            Widgets.Label(confirmationPart.MoveRect(new Vector2(CommonMargin, 0f)), "RVFFA_PackCreationWindow_Confirmation".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
-            Text.Font = GameFont.Small;
 
-            if (Widgets.ButtonInvisible(defSelectorButton)) Find.WindowStack.Add(new FloatMenu(Options));
+            acceptPack &= Pack.CanPawnsMakePack(packDef, fullTempPackMembers, true, out string failReason1);
+            if (!acceptPack)
+            {
+                Widgets.DrawBoxSolid(confirmationPart, new Color(1f, 0f, 0f, .2f));
+            }
 
-            TooltipHandler.TipRegion(defSelectorButton, "RVFFA_PackCreationWindow_SelectPackDefButton".Translate());
+            if ((failreason0 ?? failReason1) is string anyReason) TooltipHandler.TipRegion(confirmationPart, anyReason);
+            if (Widgets.ButtonInvisible(confirmationPart))
+            {
+                SoundDefOf.Click.PlayOneShotOnCamera();
+                if (acceptPack && Pack.TryMakeNewPackFromPawns(packDef, fullTempPackMembers, true, out Pack pack))
+                {
+                    Packmanager.GetLastActivePackmanager.AddPack(pack);
+                    PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
+                    Close();
+                }
+                else
+                {
+                    SoundDefOf.ClickReject.PlayOneShotOnCamera();
+                }
+            }
 
-            Widgets.LabelScrollable(descriptionPart, packDef?.description ?? string.Empty, ref descriptionScroll);
-            bool acceptPack = true;
-            string failreason0 = null;
+            Widgets.DrawHighlightIfMouseover(confirmationPart);
+        }
+
+        private void DrawBoniAndMemberList(out bool acceptPack, out string failreason0)
+        {
+            acceptPack = true;
+            failreason0 = null;
+
             if (packDef != null)
             {
                 PackInspectionWindow.DrawBoniList(boniListPartOuter, boniListPartInner, packDef, ref boniScrollVector);
@@ -121,36 +138,44 @@ namespace RimValiFFARW.Packs
                 DrawAddPawnButton();
                 Widgets.EndScrollView();
             }
-            acceptPack &= Pack.CanPawnsMakePack(packDef, fullTempPackMembers, true, out string failReason1);
+        }
 
-            Widgets.DrawBoxSolidWithOutline(confirmationPart, otherGrey, Color.gray, 2);
+        private void DrawDescription()
+        {
+            Widgets.LabelScrollable(descriptionPart, packDef?.description ?? string.Empty, ref descriptionScroll);
+        }
+
+        private void DrawDefSelectorButton()
+        {
+            Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleLeft;
-            Widgets.Label(confirmationPart.MoveRect(new Vector2(CommonMargin, 0f)), "RVFFA_PackCreationWindow_Confirmation".Translate());
+            Widgets.DrawBoxSolidWithOutline(defSelectorButton, otherGrey, Color.gray, ButtonOutlineWidth);
+            Widgets.DrawHighlightIfMouseover(defSelectorButton);
+            Widgets.Label(defSelectorButton.MoveRect(new Vector2(CommonMargin + ButtonOutlineWidth, 0f)), packDef?.LabelCap ?? $"{"RVFFA_PackCreationWindow_SelectPackDef".Translate()}");
+            Widgets.DrawTextureFitted(defSelectorButton.RightPartPixels(defSelectorButton.height).ContractedBy(3.5f).Rounded(), TexButton.Collapse, 1f);
             Text.Anchor = TextAnchor.UpperLeft;
+            Text.Font = GameFont.Small;
 
-            if (!acceptPack)
-            {
-                Widgets.DrawBoxSolid(confirmationPart, new Color(1f, 0f, 0f, .2f));
-            }
+            if (Widgets.ButtonInvisible(defSelectorButton)) Find.WindowStack.Add(new FloatMenu(Options));
+            TooltipHandler.TipRegion(defSelectorButton, "RVFFA_PackCreationWindow_SelectPackDefButton".Translate());
+        }
 
-            if ((failreason0 ?? failReason1) is string anyReason) TooltipHandler.TipRegion(confirmationPart, anyReason);
-            if (Widgets.ButtonInvisible(confirmationPart))
-            {
-                SoundDefOf.Click.PlayOneShotOnCamera();
-                if(acceptPack && Pack.TryMakeNewPackFromPawns(packDef, fullTempPackMembers, true, out Pack pack)) 
-                { 
-                    Packmanager.GetLastActivePackmanager.AddPack(pack);
-                    PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
-                    Close();
-                }
-                else
-                {
-                    SoundDefOf.ClickReject.PlayOneShotOnCamera();
-                }
-            }
+        private void DrawTitle()
+        {
+            Text.Font = GameFont.Medium;
+            Widgets.Label(titlePart, $"<b>{"RVFFA_PackCreationWindow_Title".Translate()}</b>");
+            Text.Font = GameFont.Small;
+        }
 
-            Widgets.DrawHighlightIfMouseover(confirmationPart);
-            DrawStatusbar();
+        private void DrawSeparators()
+        {
+            GUI.color = Color.gray;
+            Widgets.DrawLineVertical(descriptionAndSelectionPart.xMax, descriptionAndSelectionPart.y, descriptionAndSelectionPart.height);
+
+            Widgets.DrawLineHorizontal(titlePart.x, titlePart.yMax, titlePart.width);
+            Widgets.DrawLineHorizontal(descriptionAndSelectionPart.x, descriptionAndSelectionPart.yMax + CommonMargin, contentPart.width);
+            Widgets.DrawLineHorizontal(contentPart.x, contentPart.yMax + CommonMargin, contentPart.width);
+            GUI.color = Color.white;
         }
 
         private void DrawAddPawnButton()
