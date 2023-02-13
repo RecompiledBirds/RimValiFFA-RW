@@ -9,7 +9,7 @@ namespace RimValiFFARW
     {
         public new StorageSettings allowedShellsSettings;
 
-        public List<ThingDef> loadedShells = new List<ThingDef>();
+        private List<ThingDef> loadedShells = new List<ThingDef>();
 
         public new AERIALChangeable Props => (AERIALChangeable)props;
 
@@ -31,7 +31,15 @@ namespace RimValiFFARW
             }
         }
 
-        public ThingDef PollNextProjectle
+        public int ShellsLoaded
+        {
+            get
+            {
+                return loadedShells.Count;
+            }
+        }
+
+        public ThingDef PollNextProjectile
         {
             get
             {

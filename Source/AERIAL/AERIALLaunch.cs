@@ -32,12 +32,8 @@ namespace RimValiFFARW
         {
             var comp = EquipmentSource.GetComp<AERIALChangeableProjectile>();
             Thing launcher = caster;
-            ThingDef projectile = Projectile;
-            if (projectile == null)
-            {
+            if (comp.PeekNextProjectile == null)
                 return false;
-            }
-
             Thing equipment = EquipmentSource;
             Vector3 drawPos = caster.DrawPos;
             TryFindShootLineFromTo(caster.Position, currentTarget, out ShootLine shootLine);
@@ -64,19 +60,17 @@ namespace RimValiFFARW
             IntVec3 pos = shootLine.Source;
             pos.x += 20;
             pos.z += 20;
-            var projectile2 = (Projectile)GenSpawn.Spawn(projectile, pos, caster.Map);
-            projectile2.Launch(launcher, drawPos, c, currentTarget, projectileHitFlags, equipment: equipment);
-            comp.loadedShells.RemoveAt(comp.loadedShells.Count - 1);
+            var projectile = (Projectile)GenSpawn.Spawn(comp.PollNextProjectile, pos, caster.Map);
+            projectile.Launch(launcher, drawPos, c, currentTarget, projectileHitFlags, equipment: equipment);
+            
 
-            if (!comp.loadedShells.NullOrEmpty())
+            if (comp.PeekNextProjectile!=null)
             {
                 pos = shootLine.Source;
                 pos.z -= 20;
                 pos.x -= 20;
-                projectile = Projectile;
-                projectile2 = (Projectile)GenSpawn.Spawn(projectile, pos, caster.Map);
-                projectile2.Launch(launcher, drawPos, c, currentTarget, projectileHitFlags, equipment: equipment);
-                comp.loadedShells.RemoveAt(comp.loadedShells.Count - 1);
+                projectile = (Projectile)GenSpawn.Spawn(comp.PollNextProjectile, pos, caster.Map);
+                projectile.Launch(launcher, drawPos, c, currentTarget, projectileHitFlags, equipment: equipment);
             }
 
             return true;

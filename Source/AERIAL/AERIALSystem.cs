@@ -163,7 +163,7 @@ namespace RimValiFFARW
             {
                 var compChangeableProjectile = gun.TryGetComp<AERIALChangeableProjectile>();
                 if (!compChangeableProjectile.allowedShellsSettings.AllowedToAccept(
-                        compChangeableProjectile.loadedShells[compChangeableProjectile.loadedShells.Count - 1]))
+                        compChangeableProjectile.PeekNextProjectile))
                 {
                     ExtractShell();
                 }
@@ -282,8 +282,7 @@ namespace RimValiFFARW
                 return;
             }
 
-            gun.TryGetComp<AERIALChangeableProjectile>().loadedShells
-                .RemoveAt(gun.TryGetComp<AERIALChangeableProjectile>().loadedShells.Count - 1);
+            ThingDef t = gun.TryGetComp<AERIALChangeableProjectile>().PollNextProjectile;
             burstWarmupTicksLeft = 1;
         }
 
@@ -305,7 +304,7 @@ namespace RimValiFFARW
             }
 
             stringBuilder.AppendLine("AERIALShellSpaceLeft".Translate(
-                $"{compChangeableProjectile.loadedShells.Count}/6".Named("RVFFA_AERIAL_SPACE")));
+                $"{compChangeableProjectile.ShellsLoaded}/6".Named("RVFFA_AERIAL_SPACE")));
             if (Spawned && Position.Roofed(Map))
             {
                 stringBuilder.AppendLine("CannotFire".Translate() + ": " + "Roofed".Translate().CapitalizeFirst());
@@ -321,8 +320,8 @@ namespace RimValiFFARW
                 if (compChangeableProjectile.Loaded)
                 {
                     stringBuilder.AppendLine("ShellLoaded".Translate(
-                        compChangeableProjectile.loadedShells[compChangeableProjectile.loadedShells.Count - 1].LabelCap,
-                        compChangeableProjectile.loadedShells[compChangeableProjectile.loadedShells.Count - 1]));
+                        compChangeableProjectile.PeekNextProjectile.LabelCap,
+                        compChangeableProjectile.PeekNextProjectile));
                 }
                 else
                 {
@@ -353,15 +352,12 @@ namespace RimValiFFARW
                 {
                     defaultLabel = "CommandExtractShell".Translate(),
                     defaultDesc = "CommandExtractShellDesc".Translate(),
-                    icon = compChangeableProjectile.loadedShells[compChangeableProjectile.loadedShells.Count - 1]
-                        .uiIcon,
-                    iconAngle = compChangeableProjectile.loadedShells[compChangeableProjectile.loadedShells.Count - 1]
-                        .uiIconAngle,
-                    iconOffset = compChangeableProjectile.loadedShells[compChangeableProjectile.loadedShells.Count - 1]
-                        .uiIconOffset,
+                    icon = compChangeableProjectile.PeekNextProjectile.uiIcon,
+                    iconAngle = compChangeableProjectile.PeekNextProjectile.uiIconAngle,
+                    iconOffset = compChangeableProjectile.PeekNextProjectile.uiIconOffset,
                     iconDrawScale =
                         GenUI.IconDrawScale(
-                            compChangeableProjectile.loadedShells[compChangeableProjectile.loadedShells.Count - 1]),
+                            compChangeableProjectile.PeekNextProjectile),
                     action = ExtractShell,
                 };
             }

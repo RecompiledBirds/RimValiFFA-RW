@@ -20,7 +20,7 @@ namespace RimValiFFARW
                 return false;
             }
 
-            return !(compChangeableProjectile.loadedShells.Count >= 6);
+            return !(compChangeableProjectile.ShellsLoaded >= 6);
         }
 
         public static Thing FindAmmo(Pawn pawn, AERIALSystem aerial)
