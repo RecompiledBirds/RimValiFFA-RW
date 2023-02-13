@@ -12,6 +12,7 @@
 			<LeatherAmount>75</LeatherAmount>
 			<RoyalFavorValue>3</RoyalFavorValue>
 		</statBases>
+		<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
 		<raceGraphics>
 			<bodyTex>RVC/Empty</bodyTex>
 			<headTex>RVC/Empty</headTex>

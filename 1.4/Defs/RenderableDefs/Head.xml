@@ -2,16 +2,17 @@
 <Defs>
 	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
 		<defName>RVFFA_Head</defName>
+		<bodyPart>Head</bodyPart>
 		<north>
-			<position>(0,0.013,0.49)</position>
+			<position>(0,0.013,0.4)</position>
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.013,0.49)</position>
+			<position>(0,0.003,0.4)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(0.09,0.013,0.48)</position>
+			<position>(0.09,0.013,0.4)</position>
 			<size>0.8</size>
 		</east>
 		<textures>
