@@ -139,7 +139,7 @@ namespace RimValiFFARW.Packs
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
-
+            
             if (Widgets.ButtonInvisible(tempDeleteButton))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();

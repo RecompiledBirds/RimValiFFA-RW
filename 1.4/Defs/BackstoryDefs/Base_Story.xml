@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef Name="RVFFA_BaseAvaliStory" Abstract="True">
+		<bodyTypeGlobal>RVFFA_Avali</bodyTypeGlobal>
+	</BackstoryDef>
+
+	<BackstoryDef Name="RVFFA_BaseIlluminateStory" Abstract="True">
+		<bodyTypeGlobal>RVFFA_Avali</bodyTypeGlobal>
+		<spawnCategories>
+			<li>RVFFA_Illuminate</li>
+		</spawnCategories>
+		<shuffleable>true</shuffleable>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory" Name="RVFFA_BaseIlluminateChildhood" Abstract="True">
+		<slot>Childhood</slot>
+	</BackstoryDef>
+</Defs>

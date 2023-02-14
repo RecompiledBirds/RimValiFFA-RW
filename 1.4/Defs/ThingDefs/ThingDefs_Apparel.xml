@@ -5,7 +5,7 @@
         <label>Avali Traditional Wear</label>
         <description>A two piece set of traditional avali wear. Consisting of a short piece that goes over the shoulders and barely covers their chest and another piece that goes sideways over their waist, leaving one thigh exposed and the other covered. It is generally considered lightweight and comfortable, even featuring some chimes for that sentimental noise.</description>
         <graphicData>
-            <texPath>RimValiFFA/Things/Apparel/TraditionalWear/TraditionalWear_Avali_south</texPath>
+            <texPath>RimValiFFA/Things/Apparel/TraditionalWear/TraditionalWear_RVFFA_Avali_south</texPath>
         </graphicData>
 
 
@@ -159,7 +159,7 @@
 		</stuffCategories>
 		
         <graphicData>
-            <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_Avali_south</texPath>
+            <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_RVFFA_Avali_south</texPath>
         </graphicData>
 
         <statBases>
@@ -200,7 +200,7 @@
         <costStuffCount>150</costStuffCount>
 
         <graphicData>
-            <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_Avali_south</texPath>
+            <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_RVFFA_Avali_south</texPath>
         </graphicData>
 
         <statBases>
@@ -245,7 +245,7 @@
         <label>Illuminate Spec Ops Armor</label>
         <description>A set of dark Avali special operations armour. Covering nearly their entire body barring their head, this large suit of armour provides the wearer with much protection from any hostile elements. Be it temperature, bullets, physical attacks or even toxic particles. Regretfully, due to its large size and somewhat bulky nature—the wearer has a slightly harder time moving but that’s the cost for survival.</description>
         <graphicData>
-            <texPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor_Avali_south</texPath>
+            <texPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor_RVFFA_Avali_south</texPath>
         </graphicData>
 
         <statBases>
@@ -324,7 +324,7 @@
         <label>Illuminate Scout Armor</label>
         <description>A set of sleek Avali scout armour. Covering nearly their entire body barring their head and tail, this suit brings true scouting capabilities to the table. Whilst not as protective as other armours, it does increase the wearer’s speed with the help of its exo-skeleton. Allowing for better evasion of enemies or perhaps a more rapid approach with a close ranged weapon.</description>
         <graphicData>
-            <texPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor_Avali_south</texPath>
+            <texPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor_RVFFA_Avali_south</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>30000</WorkToMake>
@@ -387,7 +387,7 @@
         <label>Illuminate Combat Armor</label>
         <description>A set of bulky combat armour. Covering nearly their entire body barring their head and tailfeather, this suit gives the wearer much needed protection against bullet based or physical attacks. Whilst its bulky nature does make the wearer somewhat slower, it’s a somewhat cheap option when compared to more advanced suits. As such it is sometimes jokingly referred to as “Avali plate armour” because of it.</description>
         <graphicData>
-            <texPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor_Avali_south</texPath>
+            <texPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor_RVFFA_Avali_south</texPath>
         </graphicData>
         <statBases>
             <WorkToMake>20000</WorkToMake>

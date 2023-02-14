@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Shooting -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Misfit</defName>
+		<identifier>RVFFA_Misfit</identifier>
+		<title>Slingshot Modder</title>
+		<titleShort>Misfit</titleShort>
+		<baseDesc>[PAWN_nameDef] liked making and modding slingshots as a kit. [PAWN_pronoun] often rummaged through discarded building materials and electronics to look for any scraps that can make [PAWN_possessive] inventions hit better or harder, and sometimes got into trouble when the same inventions were responsible for some stones through expensive windows.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Gamer</defName>
+		<identifier>RVFFA_Gamer</identifier>
+		<title>Gamer Kit</title>
+		<titleShort>Lasertagger</titleShort>
+		<baseDesc>The favorite pastime of [PAWN_nameDef] and [PAWN_possessive] young pack was a virtual combat game at the caretaking center. [PAWN_nameDef] got quite good at popping heads with a fake laser pistol, but never got into a real fight outside of the game.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>-3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Survivor</defName>
+		<identifier>RVFFA_Survivor</identifier>
+		<title>Young Hunter</title>
+		<titleShort>Survivor</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack belonged to a fringe tribe of survivalists who refused to use many technologies and survived in the wild in small, hand-built shelters. [PAWN_pronoun] showed an aptitude for shooting early on, and was taught to handle a rifle at a very young age to hunt for food or defend [PAWN_possessive] pack from dangers. Discontent with living in the wild, the pack began collecting a stash of valuables, and eventually used it (and their young, adorable faces) to bribe a trade ship and get to a more civilized life.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Crashed</defName>
+		<identifier>RVFFA_Crashed</identifier>
+		<title>Crash Survivor</title>
+		<titleShort>Rescued</titleShort>
+		<baseDesc>The earliest memory that [PAWN_nameDef] had was being carried out of the remain of a burning spaceship by rescuers after a deadly low orbit crash that only [PAWN_pronoun] survived. The physical injury healed quickly thanks to the advanced treatments, but [PAWN_pronoun] never completely recovered from the mental shock. [PAWN_nameDef] used food, and later, experimentations with cooking as a coping mechanism, and shared the results with [PAWN_possessive] foster pack.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<workDisables>Violent</workDisables>
+		<forcedTraits>
+			<Gourmand>0</Gourmand>
+		</forcedTraits>
+	</BackstoryDef>
+	
+	<!-- Melee -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Acrobat</defName>
+		<identifier>RVFFA_Acrobat</identifier>
+		<title>Martial Arts Kit</title>
+		<titleShort>Acrobat</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] was obsessed with the Avalian martial arts that took advantage of the low gravity on the moon, and elected to take classes for it. The caretakers were encouraging about it, purely because it kept [PAWN_objective] active.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Bully</defName>
+		<identifier>RVFFA_Bully</identifier>
+		<title>Bully</title>
+		<titleShort>Bully</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack of kits frequently got into trouble for taking toys or snacks that don't belong to them, and their antics got more elaborate as they grew older, even making some traps that others would trip on. Surprisingly, they were quite fair with sharing their ill-gotten gains among themselves.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+			
+		<disallowedTraits>
+			<Kind>0</Kind>
+		</disallowedTraits>
+		<forcedTraits>
+			<Abrasive>0</Abrasive>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_MemWiped</defName>
+		<identifier>RVFFA_MemWiped</identifier>
+		<title>Memory Wiped</title>
+		<titleShort>Amnesiac</titleShort>
+		<baseDesc>[PAWN_nameDef] never knew what happened in [PAWN_possessive] own childhood other than that [PAWN_pronoun] came out of a medical pod, more refreshed than ever, before being greeted by [PAWN_possessive] pack. The only thing about [PAWN_objective] that was unusual is [PAWN_possessive] uncanny awareness of surroundings and the ability to quickly strike vitals in unarmed combat. After fruitlessly trying to find out about [PAWN_possessive] past that even [PAWN_possessive] own pack kept from [PAWN_objective], [PAWN_nameDef] left a letter one night and left. Maybe [PAWN_possessive] real pack is out there. Somewhere.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>7</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Nimble>0</Nimble>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_EngiApprentice</defName>
+		<identifier>RVFFA_EngiApprentice</identifier>
+		<title>Engineer's Apprentice</title>
+		<titleShort>Technician</titleShort>
+		<baseDesc>[PAWN_nameDef] was abandoned for unknown reasons as an egg, and was taken in by a pack of nomads that lived on their spaceship. [PAWN_pronoun] followed the ship's old technician around to learn about undocked ship repairs and eventually was trusted with some minor maintenance duty.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+	
+	<!-- Construction childhoods -->
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_TreeHouseBuilder</defName>
+		<identifier>RVFFA_TreeHouseBuilder</identifier>
+		<title>Treehouse Builder</title>
+		<titleShort>Builder</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack was raised on a moon colony similar to the home world Avalon. The pack frequently wandered into the wild for adventures, and built many treehouses out of abandoned lightweight building materials and some wood.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_LostApprentice</defName>
+		<identifier>RVFFA_LostApprentice</identifier>
+		<title>Lost Apprentice</title>
+		<titleShort>Apprentice</titleShort>
+		<baseDesc>[PAWN_nameDef] belonged to a pack of builders who maintained a dying art of building with interlocking structures without fasteners. [PAWN_pronoun] learned quick, but never took the craft seriously. As [PAWN_pronoun] stayed home one day because of a minor sickness, the pack’s ship engine critically malfunctioned. [PAWN_nameDef] was left with nothing but shelves upon shelves of books, and an obligation to pass on the knowledge.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<!-- Fast learner-->
+			<!-- Sickly -->
+		</forcedTraits>
+	</BackstoryDef>
+
+
+<!-- Mining childhoods-->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CaveExplorer</defName>
+		<identifier>RVFFA_CaveExplorer</identifier>
+		<title>Cave Explorer</title>
+		<titleShort>Caver</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] young pack were fascinated with exploring caves, and frequently went deep into the local cavern systems to chip off things such as stalactites as trophies. As they got older, they gathered a large amount of gears for scanning and analyzing caves and the minerals.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Mining</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<!-- Cooking -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CupcakeBaker</defName>
+		<identifier>RVFFA_CupcakeBaker</identifier>
+		<title>Cupcake Baker</title>
+		<titleShort>Baker</titleShort>
+		<baseDesc>At the caretaking center, [PAWN_nameDef] frequently went into the kitchens to experiment with all the ingredients available at the press of a button. [PAWN_pronoun] was at first kept from doing it, but eventually, the caretakers turned a blind eye or even lent a hand. [PAWN_pronoun] took that opportunity and made huge batches of cupcakes at a time for the other kits.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CulinaryStudent</defName>
+		<identifier>RVFFA_CulinaryStudent</identifier>
+		<title>Culinary Student</title>
+		<titleShort>Scullion</titleShort>
+		<baseDesc>[PAWN_nameDef] was fascinated with food as a kit, and eventually decided to learn how to cook dishes just the way how [PAWN_pronoun] likes it. [PAWN_pronoun] also helped with maintaining a small garden of herbs to keep fresh additives readily available.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_TasteTester</defName>
+		<identifier>RVFFA_TasteTester</identifier>
+		<title>Taste Tester</title>
+		<titleShort>Gourmet</titleShort>
+		<baseDesc>[PAWN_nameDef] was born with unnaturally sensitive taste buds, and the talent was realized by the right people, who hired [PAWN_objective] as a taste tester for products, many of which are packaged snacks for kits like [PAWN_objective]self. [PAWN_pronoun] ate so much packaged food as a job that [PAWN_pronoun] wanted nothing to do with it in [PAWN_possessive] spare time, opting for learning to cook "actual food" instead.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+<!-- Plants-->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Forager</defName>
+		<identifier>RVFFA_Forager</identifier>
+		<title>Forager</title>
+		<titleShort>Forager</titleShort>
+		<baseDesc>Born to a nomadic tribe, [PAWN_nameDef] and [PAWN_possessive] young pack wandered the wild for opportunities to resupply and look for adventures. [PAWN_pronoun] had a knack for identifying plants, and learned to forage many familiar herbs and fungi in the local areas they frequently traversed.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Gardner</defName>
+		<identifier>RVFFA_Gardner</identifier>
+		<title>Forager</title>
+		<titleShort>Forager</titleShort>
+		<baseDesc>[PAWN_nameDef] grew up with the duty of helping maintain a hydroponic garden. [PAWN_pronoun] spent [PAWN_possessive] time checking for pests, mixing the necessary solutions, and calling dibs on the freshly harvested berries.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_BotanicEmpath</defName>
+		<identifier>RVFFA_BotanicEmpath</identifier>
+		<title>Botanic Empath</title>
+		<titleShort>Empath</titleShort>
+		<baseDesc>[PAWN_nameDef] was born with a strong connection to all kinds of plant life, and felt as if [PAWN_pronoun] can talk to them. [PAWN_possessive] caretakers and packmates always found [PAWN_objective] wandering in a grove not far from home singing to [PAWN_objective]self. [PAWN_pronoun] claimed that the trees there taught [PAWN_objective] the songs. When the grove was cleared for a building&#39;s expansion, [PAWN_nameDef] shut [PAWN_objective]self inside a room, rarely coming out. It took weeks before [PAWN_pronoun] started talking again.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+<!-- Animals -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_CityKit</defName>
+		<identifier>RVFFA_CityKit</identifier>
+		<title>City Kit</title>
+		<titleShort>Kit</titleShort>
+		<baseDesc>[PAWN_nameDef] grew up on the quiet outskirt of a wealthy, established exoplanet city. Besides the usual duties of schoolwork, [PAWN_pronoun] often rescued injured critters and gave them a safe place to heal their injuries, and a few of them stayed with [PAWN_objective] as loyal pets.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Wildling</defName>
+		<identifier>RVFFA_Wildling</identifier>
+		<title>Wild Kit</title>
+		<titleShort>Wildling</titleShort>
+		<baseDesc>[PAWN_nameDef]'s egg was the only thing to have survived a ship crash in the middle of an unexplored forest, and the egg was taken away by the local wildlife by the time rescues arrived. For a long time, [PAWN_pronoun] was presumed lost. A long time after, some exploration team spotted [PAWN_objective] in the forest among some other avians that have taken [PAWN_objective] in. [PAWN_pronoun] was eventually given a foster pack and a decent education, but still does not speak often at all.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>7</value>
+			</li>
+		</skillGains>
+		<workDisables>Social</workDisables>
+	</BackstoryDef>
+
+	<!-- Crafting -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Jeweler</defName>
+		<identifier>RVFFA_Jeweler</identifier>
+		<title>Charm maker</title>
+		<titleShort>Jeweler</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] had a hobby of making necklaces and lucky charms out of shiny stones for [PAWN_possessive] packmates and other friends. [PAWN_objective] got surprisingly good at polishing and cutting stones without professional tools.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Weaver</defName>
+		<identifier>RVFFA_Weaver</identifier>
+		<title>Weaver</title>
+		<titleShort>Weaver</titleShort>
+		<baseDesc>[PAWN_nameDef] enjoyed [PAWN_possessive] spare time at the caretaking center learning about hand knitting and embroidering various clothings. [PAWN_objective] found it to be a calming break from the otherwise noisy environment.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Machinist</defName>
+		<identifier>RVFFA_Machinist</identifier>
+		<title>Mech Battler</title>
+		<titleShort>Machinist</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack of kits were nothing short of geniuses when it came to machinery, and they frequented robot fighting competitions with their own handicrafts. The tournaments and prize pools got bigger as time went on, which only gave them more resources to improve their machines. They had to quit and put their skills towards doing repair gigs after a ban from a huge tournament. The reason involved an overloaded battery and a lot of thermite.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<!-- Artistic -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Explorer</defName>
+		<identifier>RVFFA_Explorer</identifier>
+		<title>Explorer</title>
+		<titleShort>Explorer</titleShort>
+		<baseDesc>[PAWN_nameDef]&#39;s pack tagged along with more experienced explorers while out in the wild. During the breaks, [PAWN_pronoun] preferred to preserve the sceneries and flora with sketches, and never left for an expedition without a sketchbook.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Singer</defName>
+		<identifier>RVFFA_Singer</identifier>
+		<title>Singer</title>
+		<titleShort>Singer</titleShort>
+		<baseDesc>Raised in a caretaking center, [PAWN_nameDef] had a knack for singing, and often used [PAWN_possessive] talent to pass time. [PAWN_pronoun] drew many audiences, but often got irritated when [PAWN_possessive] less skilled friends or packmates decided to join in, which led to a few arguments.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_SwatchMixer</defName>
+		<identifier>RVFFA_SwatchMixer</identifier>
+		<title>Swatch Mixer</title>
+		<titleShort>Painter</titleShort>
+		<baseDesc>Since [PAWN_pronoun] was a young kit, [PAWN_nameDef] has been helping an old painter who has taken [PAWN_objective] in. [PAWN_pronoun] spent [PAWN_possessive] days mixing tea and rare, valuable pigments. As [PAWN_possessive] skill improved, [PAWN_pronoun] became one of the best at replicating colors with only [PAWN_possessive] eyes. When the old painter passed away, [PAWN_nameDef] inherited a trove of expensive artworks, which was worth enough to give [PAWN_objective] a comfortable living.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<!-- Medical -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Rascal</defName>
+		<identifier>RVFFA_Rascal</identifier>
+		<title>Rowdy Kit</title>
+		<titleShort>Rascal</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack frequently got into trouble, either with other packs of kits that they knew or out in the wild. [PAWN_nameDef] went along with the shenanigans, but always packed some bandages for the inevitable scrapes and bruises.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_ChildCaretaker</defName>
+		<identifier>RVFFA_ChildCaretaker</identifier>
+		<title>Caretaker</title>
+		<titleShort>Caretaker</titleShort>
+		<baseDesc>[PAWN_nameDef]'s pack of kits had a couple of members that would frequently get sick, and [PAWN_pronoun] took it upon [PAWN_objective]self to take care of [PAWN_possessive] packmates when they were afflicted with minor illnesses. [PAWN_objective] learned a bit about medicine and preparing easy-to-digest food in the process.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_BunkerMedic</defName>
+		<identifier>RVFFA_BunkerMedic</identifier>
+		<title>Bunker Medic</title>
+		<titleShort>Medic</titleShort>
+		<baseDesc>[PAWN_nameDef] was in a pack of young kit stuck on an exoplanet colony during a riot. They spent their days in a hospital converted from a bunker to hide from the volatile dangers aboveground, only rarely going out at night to scavenge for supplies or keep watch of the surroundings. [PAWN_nameDef] had to spend [PAWN_possessive] time helping the medics patch up the wounded soldiers and innocent bystanders caught in the crossfire. The experience taught [PAWN_objective] a lot about first aid, but also deeply traumatized [PAWN_objective].</baseDesc>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+		<workDisables>Violent</workDisables>
+	</BackstoryDef>
+
+	<!-- Social -->
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Kit</defName>
+		<identifier>RVFFA_Kit</identifier>
+		<title>Young Kit</title>
+		<titleShort>Kit</titleShort>
+		<baseDesc>[PAWN_nameDef] was born in a caretaking center like many other kits, and spent [PAWN_possessive] time learning about the world or socialized with friends and packmates.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Thief</defName>
+		<identifier>RVFFA_Thief</identifier>
+		<title>Petty Thief</title>
+		<titleShort>Thief</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] often snagged candy bars and spare changes when others are not looking. [PAWN_objective] perfected the art of disposing of any "evidences" and keeping a straight face so no one suspects a thing.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Empath</defName>
+		<identifier>RVFFA_Empath</identifier>
+		<title>Young Empath</title>
+		<titleShort>Empath</titleShort>
+		<baseDesc>[PAWN_nameDef] was born with an unusual sensitivity to emotions, and felt what others around [PAWN_objective] feel intimately. [PAWN_pronoun] was a good listener for [PAWN_possessive] packmates and other friends, but avoided more public places since [PAWN_pronoun] could not stand the noise. [PAWN_pronoun] did well in school, but could not get into any arguments or fights because of the overwhelming stress it causes [PAWN_objective].</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<workDisables>Violent</workDisables>
+		<forcedTraits>
+			<Kind>0</Kind>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<!-- Intellectual -->
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Nerd</defName>
+		<identifier>RVFFA_Nerd</identifier>
+		<title>Teacher's Pet</title>
+		<titleShort>Nerd</titleShort>
+		<baseDesc>As a kit, [PAWN_nameDef] was borderline obsessed with classwork and quickly became the teacher's favorite. [PAWN_pronoun] didn&#39;t make many friends outside of [PAWN_possessive] pack, who defended [PAWN_objective] from the bullies.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>-2</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-2</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Bookworm</defName>
+		<identifier>RVFFA_Bookworm</identifier>
+		<title>Library Kit</title>
+		<titleShort>Bookworm</titleShort>
+		<baseDesc>The caretaking center [PAWN_nameDef] was raised in had a huge library that contained many old books and media files. The library was ignored by many young kits except for [PAWN_nameDef], who enjoyed reading quietly. [PAWN_pronoun] was always warmly welcomed by the librarians with a cup of tea.</baseDesc>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="RVFFA_BaseIlluminateChildhood">
+		<defName>RVFFA_Possessed</defName>
+		<identifier>RVFFA_Possessed</identifier>
+		<title>Oracle-Born</title>
+		<titleShort>Possessed</titleShort>
+		<baseDesc>[PAWN_nameDef] was always favored by the singularity. [PAWN_objective] will serve [PAWN_possessive] purpose, in time.......</baseDesc>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>8</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+</Defs>

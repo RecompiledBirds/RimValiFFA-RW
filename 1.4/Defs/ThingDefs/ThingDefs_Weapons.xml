@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseWeapon" Name="RVFFA_BaseAvaliGun" Abstract="True">
+        <techLevel>Industrial</techLevel>
+        <smeltable>true</smeltable>
+        <thingCategories>
+            <li>WeaponsRanged</li>
+        </thingCategories>
+        <inspectorTabs>
+            <li>ITab_Art</li>
+        </inspectorTabs>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="RVFFA_WeaponMakeableLathe" ParentName="RVFFA_BaseAvaliGun" Abstract="True">
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>RVFFA_NanoForge</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet" Name="RVFFA_BaseBullet" Abstract="True">
+        <label>bullet</label>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseBullet">
+        <defName>RVFFA_PistolBullet</defName>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>8</damageAmountBase>
+            <stoppingPower>0.5</stoppingPower>
+            <speed>150</speed>
+            <armorPenetrationBase>0.185</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+        <defName>RVFFA_IlluminatePistol</defName>
+        <label>Illuminate Pistol</label>
+        <description>A common Illuminate pattern pistol. Unlike its Terran counterparts this weapon uses coil-based acceleration. Whilst It has more accuracy and a shorter travel time than a Terran auto pistol, it hits with less power when compared to one.</description>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/Pistol</texPath>
+        </graphicData>
+
+        <uiIconScale>1.4</uiIconScale>
+
+        <statBases>
+            <WorkToMake>4500</WorkToMake>
+            <Mass>1.5</Mass>
+            <AccuracyTouch>0.87</AccuracyTouch>
+            <AccuracyShort>0.92</AccuracyShort>
+            <AccuracyMedium>0.77</AccuracyMedium>
+            <AccuracyLong>0.55</AccuracyLong>
+            <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+        </statBases>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RVFFA_PistolBullet</defaultProjectile>
+                <warmupTime>0.3</warmupTime>
+                <range>29.9</range>
+                <soundCast>Shot_Autopistol</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>0</muzzleFlashScale>
+                <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+                <burstShotCount>1</burstShotCount>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>1.8</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>1.8</cooldownTime>
+            </li>
+        </tools>
+
+        <costList>
+            <Steel>10</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
+        </costList>
+
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>2</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseBullet">
+        <defName>RVFFA_SMGBullet</defName>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>16</damageAmountBase>
+            <speed>150</speed>
+            <armorPenetrationBase>0.32</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+        <defName>RVFFA_IlluminateSMG</defName>
+        <label>Illuminate SMG</label>
+        <description>A coil-based Illuminate SMG. Whilst it does theoretically have a better service range compared to its Terran counterparts, this weapon is best used for medium to short ranged engagements. Besides this fact, it still has two qualities that make it reliable—its accuracy and travel time.</description>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/SMG</texPath>
+        </graphicData>
+        <soundInteract>Interact_SMG</soundInteract>
+        <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+        <statBases>
+            <WorkToMake>28000</WorkToMake>
+            <Mass>4.5</Mass>
+            <AccuracyTouch>0.70</AccuracyTouch>
+            <AccuracyShort>0.86</AccuracyShort>
+            <AccuracyMedium>0.72</AccuracyMedium>
+            <AccuracyLong>0.52</AccuracyLong>
+            <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+        </statBases>
+
+        <costList>
+            <Steel>150</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <RVFFA_ProcessedTungsten>12</RVFFA_ProcessedTungsten>
+        </costList>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RVFFA_SMGBullet</defaultProjectile>
+                <warmupTime>0.7</warmupTime>
+                <range>30.4</range>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <burstShotCount>2</burstShotCount>
+                <soundCast>Shot_HeavySMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>0</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_BaseBullet">
+        <defName>RVFFA_MinigunBullet</defName>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>7</damageAmountBase>
+            <speed>88</speed>
+            <armorPenetrationBase>0.47</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+        <defName>RVFFA_IlluminateMachineGun</defName>
+        <label>Illuminate Machinegun</label>
+        <graphicData>
+            <texPath>RimValiFFA/Things/Weapons/Guns/Vali_Illuminate_Minigun</texPath>
+        </graphicData>
+        <soundInteract>Interact_SMG</soundInteract>
+        <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+
+        <statBases>
+            <WorkToMake>37500</WorkToMake>
+            <Mass>6.5</Mass>
+            <MarketValue>1445</MarketValue>
+            <AccuracyTouch>0.36</AccuracyTouch>
+            <AccuracyShort>0.43</AccuracyShort>
+            <AccuracyMedium>0.39</AccuracyMedium>
+            <AccuracyLong>0.20</AccuracyLong>
+            <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+        </statBases>
+
+        <costList>
+            <Steel>150</Steel>
+            <ComponentSpacer>3</ComponentSpacer>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
+        </costList>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RVFFA_MinigunBullet</defaultProjectile>
+                <warmupTime>1.8</warmupTime>
+                <range>35</range>
+                <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+                <burstShotCount>22</burstShotCount>
+                <soundCast>Shot_HeavySMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>0</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                        <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>17</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_RifleBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/RifleBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>13</damageAmountBase>
+			<stoppingPower>0.5</stoppingPower>
+			<speed>177</speed>
+			<armorPenetrationBase>0.42</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_Rifle</defName>
+		<label>Illuminate Rifle</label>
+		<description>A common Illuminate pattern rifle. Praised by both soldiers and hunters for its reliability, it is practically standard issue for any weaponized operation. Its high range and very short travel time makes it perfect for picking off distant enemies.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Rifle</texPath>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>34000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.69</AccuracyTouch>
+			<AccuracyShort>0.81</AccuracyShort>
+			<AccuracyMedium>0.92</AccuracyMedium>
+			<AccuracyLong>0.86</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>7</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_RifleBullet</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<range>38.5</range>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_SniperBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SniperBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>33</damageAmountBase>
+			<speed>183</speed>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>0.54</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminateSniperRifle</defName>
+		<label>Illuminate Sniper Rifle</label>
+
+		<description>A high-powered Illuminate pattern sniper rifle. This sophisticated weapon optimizes the use of Helium-cooling to keep its powerful and plentiful coils from overheating in it’s user’s talons. With its long range and powerful bullet, it is highly loved by Illuminate snipers for picking off high-value targets with.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/SniperRifle</texPath>
+		</graphicData>
+
+		<soundInteract>Interact_Rifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>66000</WorkToMake>
+			<Mass>6.5</Mass>
+			<AccuracyTouch>0.6</AccuracyTouch>
+			<AccuracyShort>0.82</AccuracyShort>
+			<AccuracyMedium>0.88</AccuracyMedium>
+			<AccuracyLong>0.93</AccuracyLong>
+			<RangedWeapon_Cooldown>2.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>250</Steel>
+			<ComponentSpacer>5</ComponentSpacer>
+			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_SniperBullet</defaultProjectile>
+				<warmupTime>1.85</warmupTime>
+				<range>48</range>
+				<soundCast>Shot_SniperRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_ShotgunBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/ShotgunBullet</texPath>
+		</graphicData>
+		<projectile>
+			<stoppingPower>3</stoppingPower>
+			<damageAmountBase>24</damageAmountBase>
+			<speed>150</speed>
+			<armorPenetrationBase>0.33</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminateShotgun</defName>
+		<label>Illuminate Shotgun</label>
+		<description>An Illuminate Pattern shotgun. Together with its advanced coil technology and a simple choke at the end, it fires a highly concentrated wad of pellets towards its enemies. Whilst longer range than its Terran counterparts, it has to trade in short range usability to make this possible.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Shotgun</texPath>
+		</graphicData>
+
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>22000</WorkToMake>
+			<Mass>5.0</Mass>
+			<AccuracyTouch>0.68</AccuracyTouch>
+			<AccuracyShort>0.79</AccuracyShort>
+			<AccuracyMedium>0.82</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>70</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>3</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_ShotgunBullet</defaultProjectile>
+				<warmupTime>1.9</warmupTime>
+				<range>24</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RVFFA_Rocket</defName>
+		<label>rocket</label>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/Rocket</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<!-- Use default damage from explosion def -->
+			<explosionRadius>3.7</explosionRadius>
+			<speed>35</speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseGun">
+		<defName>RVFFA_IlluminateRocketLauncher</defName>
+		<label>Illuminate Rocket Launcher</label>
+		<description>An Illuminate rocket launcher. Anti-Tank weapons are important in any war, and this rocket launcher is no different. Using a fin-stabilized system together with a small jet system, this rocket ensures you hit where you aim. Despite its good range, near-perfect accuracy and high-explosive payload. It fires a slow and easy to dodge projectile and should be used with good prior planning.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/RocketLauncher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>2020</MarketValue>
+			<Mass>7</Mass>
+			<RangedWeapon_Cooldown>4.7</RangedWeapon_Cooldown>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>SingleUseWeapon</li>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_Rocket</defaultProjectile>
+				<forcedMissRadius>0.5</forcedMissRadius>
+				<warmupTime>4.5</warmupTime>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<range>34</range>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
