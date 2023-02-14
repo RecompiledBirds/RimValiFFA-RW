@@ -21,6 +21,10 @@
 	<RVFFA_PackInspectionWindow_PawnNotInPackDescription>This window will show more information once the selected pawn joins a pack.</RVFFA_PackInspectionWindow_PawnNotInPackDescription>
 	<RVFFA_PackInspectionWindow_StatusBar>Average group opinion of {0}: {1} | Average of all average opinions in the pack: {2}</RVFFA_PackInspectionWindow_StatusBar>
 	<RVFFA_PackInspectionWindow_Creation>Create a pack with {0}...</RVFFA_PackInspectionWindow_Creation>
+	<RVFFA_PackInspectionWindow_Edit>Edit pack...</RVFFA_PackInspectionWindow_Edit>
+	<RVFFA_PackInspectionWindow_DeletePack>Disband pack</RVFFA_PackInspectionWindow_DeletePack>
+	<RVFFA_PackInspectionWindow_DeletePackSure>Are you sure you want to disband {0}?</RVFFA_PackInspectionWindow_DeletePackSure>
+	<RVFFA_PackInspectionWindow_DeletePackSureTitle>Pack Deletion</RVFFA_PackInspectionWindow_DeletePackSureTitle>
 	
 	<!--Pack Creation Window Class-->
 	<RVFFA_PackCreationWindow_Title>Pack Creation</RVFFA_PackCreationWindow_Title>
@@ -28,6 +32,11 @@
 	<RVFFA_PackCreationWindow_SelectPackDefButton>Click to select a different Pack type</RVFFA_PackCreationWindow_SelectPackDefButton>
 	<RVFFA_PackCreationWindow_AddAPawn>Add a Pawn...</RVFFA_PackCreationWindow_AddAPawn>
 	<RVFFA_PackCreationWindow_AddAnotherPawn>Add another Pawn...</RVFFA_PackCreationWindow_AddAnotherPawn>
-	<RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup>The group's average opinion of {0} isn't high enough for them to be included in a pack (is {1}, but must be at least {2})</RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup>
+	<RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup>The group's average opinion of {0} isn't high enough for them to be included in this pack (is {1}, but must be at least {2})</RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup>
 	<RVFFA_PackCreationWindow_Confirmation>Comfirm Pack creation</RVFFA_PackCreationWindow_Confirmation>
+	
+	<!--Pack Edit Window-->
+	<RVFFA_PackEditWindow_Title>Pack Editor for: {0}</RVFFA_PackEditWindow_Title>
+	<RVFFA_PackEditWindow_PawnToBeRemoved>{0} is being removed</RVFFA_PackEditWindow_PawnToBeRemoved>
+	<RVFFA_PackEditWindow_StatusBar>Pack size min to create/min to sustain: {0}/{1}. You can't change a packs name in the edit menu, only in the tab</RVFFA_PackEditWindow_StatusBar>
 </LanguageData>

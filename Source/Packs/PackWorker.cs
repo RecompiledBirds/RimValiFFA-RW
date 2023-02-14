@@ -41,7 +41,7 @@ namespace RimValiFFARW.Packs
         /// <param name="quietError">If the function should stay quiet about errors</param>
         /// <param name="reason">The reason as to why a <paramref name="pawn"/> can't join</param>
         /// <returns>True if a <see cref="Pawn"/> can join a <see cref="Pack"/>, false otherwise</returns>
-        public virtual bool PawnCanJoinPack(IEnumerable<Pawn> existingPawns, Pawn pawn, bool quietError, out string reason)
+        public virtual bool PawnCanJoinPack(IEnumerable<Pawn> existingPawns, Pawn pawn, bool ignoreIsInPack, bool quietError, out string reason)
         {
             double avgOpinionOfMember = EvaluateAverageOpinionForPawn(pawn, existingPawns);
             reason = null;
@@ -49,7 +49,7 @@ namespace RimValiFFARW.Packs
             if (pawn == null) reason = "RVFFA_PackWorker_DoesNotExist".Translate();
             if (pawn.Dead) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsDead");
             if (pawn.NonHumanlikeOrWildMan()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild");
-            if (pawn.IsInPack()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
+            if (pawn.IsInPack() && !ignoreIsInPack) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
             if (def.minGroupOpinionNeededCreation > avgOpinionOfMember) reason = "RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup".Translate(pawn.NameShortColored, avgOpinionOfMember.ToString("0.##"), def.minGroupOpinionNeededCreation.ToString("0.##"));
 
             if (reason != null)

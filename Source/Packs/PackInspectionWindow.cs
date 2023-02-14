@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using RVCRestructured;
+using RVCRestructured.RVR;
 using RVCRestructured.Windows;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace RimValiFFARW.Packs
         //private readonly Color otherGrey = new Color(.15f, .15f, .15f, .10f);
         private readonly Rect titlePart;
         private readonly Rect contentPart;
+        private readonly Rect packEditButton;
         private readonly Rect descriptionPart;
         private readonly Rect boniListPartOuter;
 
@@ -61,6 +63,7 @@ namespace RimValiFFARW.Packs
 
             titlePart = main.TopPartPixels(30f);
             contentPart = new Rect(titlePart.x, titlePart.yMax + CommonMargin, main.width, 125f);
+            packEditButton = new Rect(titlePart.xMax - (18f * 2f) - CommonMargin, titlePart.y + 4f, 18f, 18f);
             descriptionPart = new Rect(contentPart.x, contentPart.y, main.width * .7f - CommonMargin * 2f, contentPart.height);
             boniListPartOuter = new Rect(descriptionPart.xMax + CommonMargin * 2f, contentPart.y, main.width * .3f, contentPart.height).Rounded();
         }
@@ -125,8 +128,29 @@ namespace RimValiFFARW.Packs
             GUI.color = Color.gray;
             Text.Font = GameFont.Tiny;
             Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack.Worker.EvaluateAverageOpinionForPawn(SelPawn, pack.Members).ToString("0.##"), pack.Worker.EvaluateAverageOpinionForEveryPawn(pack).ToString("0.##")));
+
+            Text.Anchor = TextAnchor.UpperCenter;
+            
+            Rect tempDeleteButtonLabel = new Rect(statusBar.xMax - 90f, statusBar.y, 90f, statusBar.height);
+            Rect tempDeleteButton = new Rect(statusBar.xMax - 90f, statusBar.y + 2f, 90f, statusBar.height - 6f);
+            Widgets.DrawBoxSolidWithOutline(tempDeleteButton, new Color(1f, 0f, 0f, .2f), Color.gray);
+            Widgets.DrawHighlightIfMouseover(tempDeleteButton);
+            Widgets.Label(tempDeleteButtonLabel, "RVFFA_PackInspectionWindow_DeletePack".Translate());
+            Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
+
+            if (Widgets.ButtonInvisible(tempDeleteButton))
+            {
+                SoundDefOf.Click.PlayOneShotOnCamera();
+                Find.WindowStack.Add(new ConfirmationWindow(DisbandAction, () => { }, "RVFFA_PackInspectionWindow_DeletePackSure".Translate(pack.NameColored), "RVFFA_PackInspectionWindow_DeletePackSureTitle".Translate()));
+            }
+        }
+
+        private void DisbandAction()
+        {
+            pack.Worker.Disband(pack);
+            OnOpen();
         }
 
         private void DrawMemberList()
@@ -223,6 +247,13 @@ namespace RimValiFFARW.Packs
             Text.Font = GameFont.Medium;
             Widgets.Label(titlePart, $"<b>{pack.NameColored}</b>");
             Text.Font = GameFont.Small;
+
+            TooltipHandler.TipRegion(packEditButton, "RVFFA_PackInspectionWindow_Edit".Translate());
+            if(Widgets.ButtonImage(packEditButton, IconTextures.iconCustomize))
+            {
+                SoundDefOf.Click.PlayOneShotOnCamera();
+                Find.WindowStack.Add(new PackEditWindow(pack));
+            }
         }
 
         internal static Texture2D GetBarTexForOpinion(int opinion, PackDef def)

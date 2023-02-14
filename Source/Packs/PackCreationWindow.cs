@@ -17,13 +17,13 @@ namespace RimValiFFARW.Packs
 {
     public class PackCreationWindow : Window
     {
+        public static readonly Color otherGrey = new Color(.15f, .15f, .15f, .10f);
+
         private const float CommonMargin = 5f;
         private const int ButtonOutlineWidth = 3;
 
         private readonly List<Pawn> fullTempPackMembers = new List<Pawn>();
         private readonly List<Pawn> potentialMembers = new List<Pawn>();
-
-        private readonly Color otherGrey = new Color(.15f, .15f, .15f, .10f);
 
         private readonly Rect mainPart;
         private readonly Rect titlePart;
@@ -36,9 +36,10 @@ namespace RimValiFFARW.Packs
         private readonly Rect boniListPartOuter;
         private readonly Rect defSelectorButton;
 
+        private readonly Pawn firstPawn;
+
         private PackWorker packWorker;
         private PackDef packDef;
-        private Pawn firstPawn;
 
         private IEnumerable<Pawn> cachedAvailablePawns;
 
@@ -104,7 +105,7 @@ namespace RimValiFFARW.Packs
             if (Widgets.ButtonInvisible(confirmationPart))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();
-                if (acceptPack && Pack.TryMakeNewPackFromPawns(packDef, fullTempPackMembers, true, out Pack pack))
+                if (acceptPack && Pack.TryMakeNewPackFromPawns(packDef, fullTempPackMembers, false, true, out Pack pack))
                 {
                     Packmanager.GetLastActivePackmanager.AddPack(pack);
                     PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
@@ -132,7 +133,7 @@ namespace RimValiFFARW.Packs
                 for (int i = 0; i < potentialMembers.Count; i++)
                 {
                     Pawn pawn = potentialMembers[i];
-                    acceptPack = DrawOpinionBar(pawn, fullTempPackMembers, packDef, memberListPartInner, i, out failreason0);
+                    acceptPack &= DrawOpinionBar(pawn, fullTempPackMembers, packDef, memberListPartInner, i, out failreason0);
                 }
 
                 DrawAddPawnButton();
@@ -228,7 +229,7 @@ namespace RimValiFFARW.Packs
             MouseoverSounds.DoRegion(tempRect);
             Widgets.DrawHighlightIfMouseover(tempRect);
             if (Widgets.ButtonInvisible(tempRect.LeftPartPixels(200f))) Find.WindowStack.Add(new Dialog_InfoCard(otherMember));
-            if (!packWorker.PawnCanJoinPack(otherMembers, otherMember, true, out reason))
+            if (!packWorker.PawnCanJoinPack(otherMembers, otherMember, false, true, out reason))
             {
                 nothingIllegal = false;
                 Widgets.DrawBoxSolid(tempRect, new Color(1f, 0f, 0f, .2f));

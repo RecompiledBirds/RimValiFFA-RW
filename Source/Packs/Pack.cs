@@ -122,13 +122,13 @@ namespace RimValiFFARW.Packs
         /// <param name="quietError">If the function should throw errors</param>
         /// <param name="pack">The created <see cref="Pack"/> or Null if the process failed</param>
         /// <returns>True if a pack was formed, false otherwise</returns>
-        public static bool TryMakeNewPackFromPawns(PackDef def, IEnumerable<Pawn> pawns, bool quietError, out Pack pack)
+        public static bool TryMakeNewPackFromPawns(PackDef def, IEnumerable<Pawn> pawns, bool ignoreIsInPack, bool quietError, out Pack pack)
         {
             pack = null;
 
             PackWorker packWorker = def?.GetNewPackWorker;
             if (!def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError, out string _)) return false;
-            if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawns, pawn, quietError, out string _))) return false;
+            if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawns, pawn, ignoreIsInPack, quietError, out string _))) return false;
 
             pack = new Pack(def, pawns);
             pack.ApplyHediffsToPackMembers();
@@ -162,9 +162,9 @@ namespace RimValiFFARW.Packs
         /// <param name="member">The given member</param>
         /// <param name="quietError">If the function should throw errors</param>
         /// <returns>True if a member could be added, false otherwise.</returns>
-        public bool AddMember(Pawn member, bool quietError = true)
+        public bool AddMember(Pawn member, bool ignoreIsInPack, bool quietError = true)
         {
-            if (!worker.PawnCanJoinPack(members, member, quietError, out string _)) return false;
+            if (!worker.PawnCanJoinPack(members, member, ignoreIsInPack, quietError, out string _)) return false;
             if (!members.Add(member)) return false;
 
             worker.NotifyMemberAdded(member); 

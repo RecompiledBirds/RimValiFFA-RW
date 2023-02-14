@@ -45,7 +45,7 @@ namespace RimValiFFARW.Packs
         /// <summary>
         ///     Returns a readonly list of <see cref="Pack"/>s
         /// </summary>
-        public IEnumerable<Pack> PacksReadOnly => memberPackTable.Values;
+        public IEnumerable<Pack> PacksReadOnly => memberPackTable.Values.Distinct();
 
         /// <summary>
         ///     Creates a new <see cref="Packmanager"/>. Called during world creation.
