@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>RVFFA_StarterPackHediff</defName>
+		<label>starter pack member</label>
+		<labelNoun>starter pack member</labelNoun>
+		<description>This pawn has been here since the beginning</description>
+		
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<everCurableByItem>false</everCurableByItem>
+		<chronic>true</chronic>
+		<priceImpact>true</priceImpact>
+		<priceOffset>-100</priceOffset>
+		
+		<stages>
+			<li>
+				<fertilityFactor>1.1</fertilityFactor>
+				<socialFightChanceFactor>0.90</socialFightChanceFactor>
+				<becomeVisible>true</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+
+				<statOffsets>
+					<SocialImpact>0.05</SocialImpact>
+					<TradePriceImprovement>0.05</TradePriceImprovement>
+					<NegotiationAbility>0.05</NegotiationAbility>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

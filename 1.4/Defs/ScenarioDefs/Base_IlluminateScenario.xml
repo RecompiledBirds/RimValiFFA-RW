@@ -52,6 +52,12 @@
 					<thingDef>WoodLog</thingDef>
 					<count>300</count>
 				</li>
+				
+				<li Class="RimValiFFARW.Packs.ScenPart_StarterPack">
+					<def>RVFFA_StarterPack</def>
+					<!--<pawnCount>3</pawnCount>
+					<pawnChoiceCount>3</pawnChoiceCount>-->
+				</li>
 			</parts>
 		</scenario>
 	</ScenarioDef>

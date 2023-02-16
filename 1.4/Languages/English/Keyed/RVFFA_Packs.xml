@@ -41,4 +41,5 @@
 	<RVFFA_PackEditWindow_Title>Pack Editor for: {0}</RVFFA_PackEditWindow_Title>
 	<RVFFA_PackEditWindow_PawnToBeRemoved>{0} is being removed</RVFFA_PackEditWindow_PawnToBeRemoved>
 	<RVFFA_PackEditWindow_StatusBar>Pack size min to create/min to sustain: {0}/{1}. You can't change a packs name in the edit menu, only in the tab</RVFFA_PackEditWindow_StatusBar>
+	<RVFFA_PackEditWindow_ConfirmChanges>Confirm Changes</RVFFA_PackEditWindow_ConfirmChanges>
 </LanguageData>

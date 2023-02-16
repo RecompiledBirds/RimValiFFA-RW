@@ -28,6 +28,8 @@ namespace RimValiFFARW.Packs
 
         public int minGroupOpinionNeededSustain = 40;
 
+        public bool unique = false;
+
         /// <summary>
         ///     The maximum size of a <see cref="Pack"/>
         /// </summary>

@@ -62,7 +62,7 @@ namespace RimValiFFARW.Packs
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
 
-                foreach (PackDef def in DefDatabase<PackDef>.AllDefsListForReading)
+                foreach (PackDef def in DefDatabase<PackDef>.AllDefsListForReading.Where(def => !def.unique))
                 {
                     FloatMenuOption option = new FloatMenuOption(def.LabelCap, () =>
                     {
@@ -133,7 +133,7 @@ namespace RimValiFFARW.Packs
         {
             Widgets.DrawBoxSolidWithOutline(confirmationPart, otherGrey, Color.gray, 2);
             Text.Anchor = TextAnchor.MiddleLeft;
-            Widgets.Label(confirmationPart.MoveRect(new Vector2(CommonMargin, 0f)), "RVFFA_PackCreationWindow_Confirmation".Translate());
+            Widgets.Label(confirmationPart.MoveRect(new Vector2(CommonMargin, 0f)), "RVFFA_PackEditWindow_ConfirmChanges".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
             IEnumerable<Pawn> fullCurrentTempPackMembers = curPackMates.Union(newPackMates);
             string failReason1 = null;
