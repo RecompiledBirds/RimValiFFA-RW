@@ -52,7 +52,7 @@ namespace RimValiFFARW.Packs
 
         protected override float Margin => 0f;
 
-        public override Vector2 InitialSize => new Vector2(600, 388);
+        public override Vector2 InitialSize => new Vector2(600, 378);
 
         private bool CanAddMorePawnsToPack => curPackMates.Count + newPackMates.Count < (newPackDef?.maxSize ?? 0) && cachedAvailablePawns.Any();
 
@@ -93,7 +93,7 @@ namespace RimValiFFARW.Packs
             titlePart = new Rect(CommonMargin, 0f, InitialSize.x - CommonMargin * 2f, 30f);
             mainPart = new Rect(titlePart.x, titlePart.yMax + CommonMargin, titlePart.width, InitialSize.y - titlePart.yMax - CommonMargin * 3f);
             contentPart = new Rect(mainPart.x, mainPart.y, mainPart.width, 333f - CommonMargin * 3f);
-            statusPart = new Rect(mainPart.x, contentPart.yMax + CommonMargin * 2f, mainPart.width, 20f);
+            statusPart = new Rect(mainPart.x, contentPart.yMax + CommonMargin, mainPart.width, 20f);
 
             descriptionAndSelectionPart = new Rect(contentPart.x, contentPart.y, InitialSize.x * .7f + CommonMargin, 125f);
             defSelectorButton = new Rect(descriptionAndSelectionPart.x, descriptionAndSelectionPart.y, descriptionAndSelectionPart.width - CommonMargin, 30f);
@@ -122,7 +122,9 @@ namespace RimValiFFARW.Packs
             if (newPackDef == null) return;
             GUI.color = Color.gray;
             Text.Font = GameFont.Tiny;
+            Text.Anchor = TextAnchor.MiddleLeft;
             Widgets.Label(statusPart, "RVFFA_PackEditWindow_StatusBar".Translate(newPackDef.MinSizeToCreate, newPackDef.MinSizeToSustain));
+            Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
         }

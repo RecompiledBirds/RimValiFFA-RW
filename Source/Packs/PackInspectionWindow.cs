@@ -27,6 +27,7 @@ namespace RimValiFFARW.Packs
         private readonly Rect contentPart;
         private readonly Rect packEditButton;
         private readonly Rect descriptionPart;
+        private readonly Rect packRenameButton;
         private readonly Rect boniListPartOuter;
 
         private Vector2 newPackButtonSize = new Vector2(250f, 30f);
@@ -41,6 +42,7 @@ namespace RimValiFFARW.Packs
         private static PackInspectionWindow packInspectionWindow;
 
         private bool playerWasNotifiedOfPackMissing = false;
+        private bool renameMode = false;
         private List<Pawn> packMembers;
         private Pack pack;
         private Pawn pawn;
@@ -64,6 +66,7 @@ namespace RimValiFFARW.Packs
             titlePart = main.TopPartPixels(30f);
             contentPart = new Rect(titlePart.x, titlePart.yMax + CommonMargin, main.width, 125f);
             packEditButton = new Rect(titlePart.xMax - (18f * 2f) - CommonMargin, titlePart.y + 4f, 18f, 18f);
+            packRenameButton = packEditButton.MoveRect(new Vector2(-(packEditButton.width + CommonMargin), 0f));
             descriptionPart = new Rect(contentPart.x, contentPart.y, main.width * .7f - CommonMargin * 2f, contentPart.height);
             boniListPartOuter = new Rect(descriptionPart.xMax + CommonMargin * 2f, contentPart.y, main.width * .3f, contentPart.height).Rounded();
         }
@@ -71,8 +74,10 @@ namespace RimValiFFARW.Packs
         public override void OnOpen()
         {
             Packmanager.GetLastActivePackmanager.TryGetPackForPawn(SelPawn, out Pack pack);
+
             pawn = SelPawn;
             this.pack = pack;
+            renameMode = false;
             base.OnOpen();
 
             if (pack is null) return;
@@ -91,11 +96,6 @@ namespace RimValiFFARW.Packs
 
         protected override void FillTab()
         {
-            //Widgets.DrawBox(TitlePart);
-            //Widgets.DrawBox(descriptionPart);
-            //Widgets.DrawBoxSolidWithOutline(boniListPartOuter, otherGrey, Color.gray);
-            //Widgets.DrawBoxSolidWithOutline(memberListPartOuter, otherGrey, Color.gray);
-
             if (pawn != SelPawn) OnOpen();
 
             DrawTitlePart();
@@ -105,14 +105,14 @@ namespace RimValiFFARW.Packs
         private void DrawPackInfo()
         {
             if (pack == null) return;
-            DrawSeperators();
+            DrawSeparators();
             DrawDescriptionPart();
             DrawBoniList(boniListPartOuter, boniListPartInner, pack.Def, ref boniScrollVector);
             DrawMemberList();
             DrawStatusbar();
         }
 
-        private void DrawSeperators()
+        private void DrawSeparators()
         {
             GUI.color = Color.gray;
             Widgets.DrawLineVertical(descriptionPart.xMax + CommonMargin, descriptionPart.y, descriptionPart.height);
@@ -239,20 +239,36 @@ namespace RimValiFFARW.Packs
                 Widgets.LabelScrollable(descriptionPart, "RVFFA_PackInspectionWindow_PawnNotInPackDescription".Translate(), ref descriptionScrollVector);
                 if (playerWasNotifiedOfPackMissing) return;
 
-                Messages.Message("RVFFA_PackInspectionWindow_PawnNotInPackLabel".Translate(SelPawn.NameShortColored), MessageTypeDefOf.RejectInput);
+                //Messages.Message("RVFFA_PackInspectionWindow_PawnNotInPackLabel".Translate(SelPawn.NameShortColored), MessageTypeDefOf.RejectInput);
                 playerWasNotifiedOfPackMissing = true;
                 return;
             }
 
-            Text.Font = GameFont.Medium;
-            Widgets.Label(titlePart, $"<b>{pack.NameColored}</b>");
-            Text.Font = GameFont.Small;
+            if (renameMode)
+            {
+                string packName = pack.Name;
+                CharacterCardUtility.DoNameInputRect(new Rect(titlePart.x, titlePart.y + CommonMargin, titlePart.width * 0.6f, titlePart.height - CommonMargin * 2f).Rounded(), ref packName, 12);
+                pack.Name = packName;
+            }
+            else
+            {
+                Text.Font = GameFont.Medium;
+                Widgets.Label(titlePart, $"<b>{pack.NameColored}</b>");
+                Text.Font = GameFont.Small;
+            }
 
             TooltipHandler.TipRegion(packEditButton, "RVFFA_PackInspectionWindow_Edit".Translate());
             if(Widgets.ButtonImage(packEditButton, IconTextures.iconCustomize))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();
                 Find.WindowStack.Add(new PackEditWindow(pack));
+            }
+
+            TooltipHandler.TipRegion(packRenameButton, "RVFFA_PackInspectionWindow_RenamePack".Translate());
+            if (Widgets.ButtonImage(packRenameButton, IconTextures.iconRename))
+            {
+                SoundDefOf.Click.PlayOneShotOnCamera();
+                renameMode = !renameMode;
             }
         }
 

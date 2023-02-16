@@ -27,6 +27,7 @@ namespace RimValiFFARW.Packs
         private List<Pawn> workingListPawn = new List<Pawn>();
         private List<PackMemberHediffTracker> workingListTracker = new List<PackMemberHediffTracker>();
 
+        private string packName;
         private string loadID;
 
         /// <summary>
@@ -51,9 +52,13 @@ namespace RimValiFFARW.Packs
 
         /// <summary>
         ///     A packs name
-        ///     TODO: Fully implement the Pack names
+        ///     TODO: Make randomly generated pack names
         /// </summary>
-        public string Name => def.LabelCap;
+        public string Name
+        {
+            get => packName;
+            set => packName = value;
+        }
 
         /// <summary>
         ///     A packs name Color
@@ -137,7 +142,8 @@ namespace RimValiFFARW.Packs
             {
                 pack.Worker.NotifyMemberAdded(pawn);
             }
-            
+
+            pack.packName = "RVFFA_PackCreationWindow_PawnsPack".Translate(pawns.First().LabelShortCap);
             return true;
         }
 
@@ -199,6 +205,7 @@ namespace RimValiFFARW.Packs
         {
             Scribe_Defs.Look(ref def, nameof(def));
             Scribe_Values.Look(ref loadID, nameof(loadID));
+            Scribe_Values.Look(ref packName, nameof(packName));
             Scribe_Collections.Look(ref members, nameof(members), LookMode.Reference);
             Scribe_Collections.Look(ref memberHediffDic, nameof(memberHediffDic), LookMode.Reference, LookMode.Deep, ref workingListPawn, ref workingListTracker);
         }

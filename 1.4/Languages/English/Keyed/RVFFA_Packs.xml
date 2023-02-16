@@ -25,6 +25,7 @@
 	<RVFFA_PackInspectionWindow_DeletePack>Disband pack</RVFFA_PackInspectionWindow_DeletePack>
 	<RVFFA_PackInspectionWindow_DeletePackSure>Are you sure you want to disband {0}?</RVFFA_PackInspectionWindow_DeletePackSure>
 	<RVFFA_PackInspectionWindow_DeletePackSureTitle>Pack Deletion</RVFFA_PackInspectionWindow_DeletePackSureTitle>
+	<RVFFA_PackInspectionWindow_RenamePack>Rename Pack...</RVFFA_PackInspectionWindow_RenamePack>
 	
 	<!--Pack Creation Window Class-->
 	<RVFFA_PackCreationWindow_Title>Pack Creation</RVFFA_PackCreationWindow_Title>
@@ -34,6 +35,7 @@
 	<RVFFA_PackCreationWindow_AddAnotherPawn>Add another Pawn...</RVFFA_PackCreationWindow_AddAnotherPawn>
 	<RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup>The group's average opinion of {0} isn't high enough for them to be included in this pack (is {1}, but must be at least {2})</RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup>
 	<RVFFA_PackCreationWindow_Confirmation>Comfirm Pack creation</RVFFA_PackCreationWindow_Confirmation>
+	<RVFFA_PackCreationWindow_PawnsPack>{0}'s Pack</RVFFA_PackCreationWindow_PawnsPack>
 	
 	<!--Pack Edit Window-->
 	<RVFFA_PackEditWindow_Title>Pack Editor for: {0}</RVFFA_PackEditWindow_Title>
