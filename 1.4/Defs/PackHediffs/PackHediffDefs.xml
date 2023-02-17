@@ -4,7 +4,7 @@
 		<defName>RVFFA_StarterPackHediff</defName>
 		<label>starter pack member</label>
 		<labelNoun>starter pack member</labelNoun>
-		<description>This pawn has been here since the beginning</description>
+		<description>This pawn has been here since the beginning.</description>
 		
 		<isBad>false</isBad>
 		<makesSickThought>false</makesSickThought>
@@ -18,7 +18,7 @@
 		<stages>
 			<li>
 				<fertilityFactor>1.1</fertilityFactor>
-				<socialFightChanceFactor>0.90</socialFightChanceFactor>
+				<socialFightChanceFactor>0.60</socialFightChanceFactor>
 				<becomeVisible>true</becomeVisible>
 				<lifeThreatening>false</lifeThreatening>
 
@@ -26,6 +26,157 @@
 					<SocialImpact>0.05</SocialImpact>
 					<TradePriceImprovement>0.05</TradePriceImprovement>
 					<NegotiationAbility>0.05</NegotiationAbility>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RVFFA_MilitaryPack</defName>
+		<label>militarized pack member</label>
+		<labelNoun>militarized pack member</labelNoun>
+		<description>This valued pawn is focused on everything violence.</description>
+
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<everCurableByItem>false</everCurableByItem>
+		<chronic>true</chronic>
+		<priceImpact>true</priceImpact>
+		<priceOffset>200</priceOffset>
+
+		<stages>
+			<li>
+				<AimingDelayFactor>-0.1</AimingDelayFactor>
+				<socialFightChanceFactor>1.5</socialFightChanceFactor>
+				<MortarMissRadiusFactor>-0.15</MortarMissRadiusFactor>
+				<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+				
+				<becomeVisible>true</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+
+				<statOffsets>
+					<ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+					<SocialImpact>-0.2</SocialImpact>
+					<TradePriceImprovement>-0.1</TradePriceImprovement>
+					<NegotiationAbility>0.2</NegotiationAbility>
+				</statOffsets>
+				
+				<statFactors>
+					<MeleeDodgeChance>1.2</MeleeDodgeChance>
+					<MeleeHitChance>1.5</MeleeHitChance>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RVFFA_MiningPack</defName>
+		<label>mining pack member</label>
+		<labelNoun>mining pack member</labelNoun>
+		<description>Rock and Stone everyone!</description>
+
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<everCurableByItem>false</everCurableByItem>
+		<chronic>true</chronic>
+		<priceImpact>true</priceImpact>
+		<priceOffset>100</priceOffset>
+
+		<stages>
+			<li>
+				<socialFightChanceFactor>1.2</socialFightChanceFactor>
+				<IncomingDamageFactor>-0.02</IncomingDamageFactor>
+
+				<becomeVisible>true</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+
+				<statOffsets>
+					<SocialImpact>0.05</SocialImpact>
+					<MiningYield>0.1</MiningYield>
+					<SmoothingSpeed>0.1</SmoothingSpeed>
+					<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+				</statOffsets>
+
+				<statFactors>
+					<DeepDrillingSpeed>1.2</DeepDrillingSpeed>
+					<MiningSpeed>1.4</MiningSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RVFFA_AnimalHediff</defName>
+		<label>animal handling pack member</label>
+		<labelNoun>animal handling pack member</labelNoun>
+		<description>This pawn is specialized in animal handling.</description>
+
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<everCurableByItem>false</everCurableByItem>
+		<chronic>true</chronic>
+		<priceImpact>true</priceImpact>
+		<priceOffset>200</priceOffset>
+
+		<stages>
+			<li>
+				<AimingDelayFactor>0.1</AimingDelayFactor>
+				<socialFightChanceFactor>1.1</socialFightChanceFactor>
+				<IncomingDamageFactor>0.05</IncomingDamageFactor>
+
+				<becomeVisible>true</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+
+				<statOffsets>
+					<ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+					<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+					<TrainAnimalChance>0.2</TrainAnimalChance>
+					<TameAnimalChance>0.2</TameAnimalChance>
+					<BondAnimalChanceFactor>0.2</BondAnimalChanceFactor>
+				</statOffsets>
+
+				<statFactors>
+					<AnimalGatherSpeed>1.4</AnimalGatherSpeed>
+					<AnimalGatherYield>1.2</AnimalGatherYield>
+					<HuntingStealth>1.4</HuntingStealth>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RVFFA_FarmingHediff</defName>
+		<label>farming pack member</label>
+		<labelNoun>farming pack member</labelNoun>
+		<description>This pawn is specialized in agricultural activities.</description>
+
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<everCurableByItem>false</everCurableByItem>
+		<chronic>true</chronic>
+		<priceImpact>true</priceImpact>
+		<priceOffset>200</priceOffset>
+
+		<stages>
+			<li>
+				<IncomingDamageFactor>0.05</IncomingDamageFactor>
+
+				<becomeVisible>true</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+
+				<statOffsets>
+					<SmoothingSpeed>0.3</SmoothingSpeed>
+					<ConstructionSpeed>0.25</ConstructionSpeed>
+					<ConstructSuccessChance>0.5</ConstructSuccessChance>
+					<FixBrokenDownBuildingSuccessChance>0.5</FixBrokenDownBuildingSuccessChance>
 				</statOffsets>
 			</li>
 		</stages>
