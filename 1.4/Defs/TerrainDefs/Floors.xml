@@ -60,7 +60,25 @@
 		<designationHotKey>Misc7</designationHotKey>
 	</TerrainDef>
 
-	<TerrainDef ParentName="AvaliFloorBase">
+
+	<TerrainDef Name="RVFFA_AvaliFloorBase" ParentName="FloorBase" Abstract="True">
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<tags>
+			<li>Floor</li>
+		</tags>
+		<fertility>0</fertility>
+		<constructEffect>ConstructDirt</constructEffect>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+	</TerrainDef>
+	<!--
+
+	<TerrainDef ParentName="RVFFA_AvaliFloorBase">
 		<defName>RVFFA_RoomPattern</defName>
 		<label>{0} "room" pattern floor</label>
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
@@ -94,7 +112,7 @@
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 	</TerrainDef>
 
-	<TerrainDef ParentName="AvaliFloorBase">
+	<TerrainDef ParentName="RVFFA_AvaliFloorBase">
 		<defName>RVFFA_FlowerFloor</defName>
 		<label>{0} flower floor</label>
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
@@ -127,22 +145,7 @@
 	</TerrainDef>
 
 
-	<TerrainDef Name="AvaliFloorBase" Abstract="True">
-		<layerable>true</layerable>
-		<affordances>
-			<li>Light</li>
-			<li>Medium</li>
-			<li>Heavy</li>
-		</affordances>
-		<tags>
-			<li>Floor</li>
-		</tags>
-		<fertility>0</fertility>
-		<constructEffect>ConstructDirt</constructEffect>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-	</TerrainDef>
-
-	<TerrainDef ParentName="AvaliFloorBase">
+	<TerrainDef ParentName="RVFFA_AvaliFloorBase">
 		<defName>RVFFA_ChaosFloor</defName>
 		<label>{0} "chaos" floor</label>
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
@@ -174,7 +177,7 @@
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 	</TerrainDef>
 
-	<TerrainDef ParentName="AvaliFloorBase">
+	<TerrainDef ParentName="RVFFA_AvaliFloorBase">
 		<defName>RVFAA_DiamondFloor</defName>
 		<label>{0} diamond floor</label>
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
@@ -207,7 +210,7 @@
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 	</TerrainDef>
 
-	<TerrainDef ParentName="AvaliFloorBase">
+	<TerrainDef ParentName="RVFFA_AvaliFloorBase">
 		<defName>RVFFA_ScrapFloor</defName>
 		<label>{0} scrap floor</label>
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
@@ -222,7 +225,6 @@
 		<costList>
 			<Steel>2</Steel>
 		</costList>
-
 		<designationHotKey>Misc7</designationHotKey>
 		<texturePath>RimValiFFA/Floors/scrap_floor</texturePath>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -239,10 +241,9 @@
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 	</TerrainDef>
 
-	<TerrainDef ParentName="AvaliFloorBase">
+	<TerrainDef ParentName="RVFFA_AvaliFloorBase">
 		<defName>RVFFA_ShingleFloor</defName>
 		<label>{0} shingle floor</label>
-		<!-- The {0} gets replaced, as this is a template for generating floors from different materials at runtime. -->
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
 		<renderPrecedence>240</renderPrecedence>
 		<description>A floor made of stone shingles.</description>
@@ -272,7 +273,7 @@
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 	</TerrainDef>
 
-	<TerrainDef ParentName="AvaliFloorBase">
+	<TerrainDef ParentName="RVFFA_AvaliFloorBase">
 		<defName>RVFFA_WeaveFoor</defName>
 		<label>{0} weave floor</label>
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
@@ -303,5 +304,5 @@
 		</tags>
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 	</TerrainDef>
-
+-->
 </Defs>

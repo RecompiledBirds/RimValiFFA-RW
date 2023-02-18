@@ -13,7 +13,7 @@ namespace RimValiFFARW
 
         public new AERIALChangeable Props => (AERIALChangeable)props;
 
-        public new ThingDef Projectile => !Loaded ? null : loadedShells[loadedShells.Count - 1].projectileWhenLoaded;
+        public new ThingDef Projectile => !Loaded ? null : PeekNextProjectile;
 
         public new bool Loaded => loadedShells.Count > 0;
 
