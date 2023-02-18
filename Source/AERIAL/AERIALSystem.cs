@@ -305,8 +305,20 @@ namespace RimValiFFARW
                                          AttackVerb.verbProps.minRange.ToString("F0"));
             }
 
-            stringBuilder.AppendLine("AERIALShellSpaceLeft".Translate(
-                $"{compChangeableProjectile.ShellsLoaded}/6".Named("RVFFA_AERIAL_SPACE")));
+
+            if (compChangeableProjectile != null)
+            {
+                if (compChangeableProjectile.Loaded)
+                {
+                    stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALNextShell".Translate(compChangeableProjectile.PeekNextProjectile.LabelCap));
+                    stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALShellSpaceLeft".Translate($"{compChangeableProjectile.ShellsLoaded}".Named("RVFFA_AERIAL_SPACE"), AERIALChangeableProjectile.maxShells));
+                }
+                else
+                {
+                    stringBuilder.AppendLine("ShellNotLoaded".Translate());
+                }
+            }
+
             if (Spawned && Position.Roofed(Map))
             {
                 stringBuilder.AppendLine("CannotFire".Translate() + ": " + "Roofed".Translate().CapitalizeFirst());
@@ -315,20 +327,6 @@ namespace RimValiFFARW
             {
                 stringBuilder.AppendLine("CanFireIn".Translate() + ": " +
                                          burstCooldownTicksLeft.ToStringSecondsFromTicks());
-            }
-
-            if (compChangeableProjectile != null)
-            {
-                if (compChangeableProjectile.Loaded)
-                {
-                    stringBuilder.AppendLine("ShellLoaded".Translate(
-                        compChangeableProjectile.PeekNextProjectile.LabelCap,
-                        compChangeableProjectile.PeekNextProjectile));
-                }
-                else
-                {
-                    stringBuilder.AppendLine("ShellNotLoaded".Translate());
-                }
             }
 
             return stringBuilder.ToString().TrimEndNewlines();
