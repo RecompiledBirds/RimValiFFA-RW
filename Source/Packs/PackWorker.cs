@@ -221,7 +221,6 @@ namespace RimValiFFARW.Packs
 
             foreach (Pawn member in pawns)
             {
-                RVCLog.Log(pawns.Join(p => p.NameShortColored), RVCLogType.ErrorOnce);
                 total += pawns.Where(otherMember => otherMember != member).Average(otherMember => otherMember.relations.OpinionOf(member));
                 count++;
             }
