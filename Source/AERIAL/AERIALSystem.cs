@@ -52,7 +52,7 @@ namespace RimValiFFARW
         }
 
         private bool PlayerControlled => (Faction == Faction.OfPlayer);
-        private bool CanSetForcedTarget => PlayerControlled;
+        private bool CanSetForcedTarget => PlayerControlled && ChangeableProjectile.Loaded;
 
         private bool CanToggleHoldFire => PlayerControlled;
 
@@ -392,7 +392,7 @@ namespace RimValiFFARW
                 {
                     defaultLabel = "CommandSetForceAttackTarget".Translate(),
                     defaultDesc = "CommandSetForceAttackTargetDesc".Translate(),
-                    icon = compChangeableProjectile!=null ? ContentFinder<Texture2D>.Get(compChangeableProjectile.Projectile.graphicData.texPath) : ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
+                    icon = compChangeableProjectile != null ? ContentFinder<Texture2D>.Get(compChangeableProjectile.Projectile.graphicData.texPath) : ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
                     verb = AttackVerb,
                     hotKey = KeyBindingDefOf.Misc4,
                     drawRadius = false,
