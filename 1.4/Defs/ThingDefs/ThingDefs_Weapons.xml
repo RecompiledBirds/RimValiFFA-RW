@@ -553,6 +553,7 @@
 		<label>Illuminate Rocket Launcher</label>
 		<description>An Illuminate rocket launcher. Anti-Tank weapons are important in any war, and this rocket launcher is no different. Using a fin-stabilized system together with a small jet system, this rocket ensures you hit where you aim. Despite its good range, near-perfect accuracy and high-explosive payload. It fires a slow and easy to dodge projectile and should be used with good prior planning.</description>
 		<tickerType>Normal</tickerType>
+		<smeltable>false</smeltable>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Weapons/Guns/RocketLauncher</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

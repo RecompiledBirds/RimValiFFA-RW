@@ -18,10 +18,22 @@ namespace RimValiFFARW
         private bool holdFire;
 
         private CompPowerTrader power;
+        private AERIALChangeableProjectile changeableProjectile;
 
         public AERIALSystem()
         {
             top = new TurretTop(this);
+        }
+
+        public AERIALChangeableProjectile ChangeableProjectile
+        {
+            get
+            {
+                if (changeableProjectile == null)
+                    changeableProjectile = gun.TryGetComp<AERIALChangeableProjectile>();
+
+                return changeableProjectile;
+            }
         }
 
         public override LocalTargetInfo CurrentTarget => currentTargetInt;
@@ -31,7 +43,7 @@ namespace RimValiFFARW
 
 
         public override Verb AttackVerb => GunCompEq.PrimaryVerb;
-        private float warmUpTicks
+        private float WarmUpTicks
         {
             get
             {
@@ -53,7 +65,7 @@ namespace RimValiFFARW
                     return false;
                 }
 
-                var compChangeableProjectile = gun.TryGetComp<AERIALChangeableProjectile>();
+                var compChangeableProjectile = ChangeableProjectile;
                 return compChangeableProjectile != null && compChangeableProjectile.Loaded;
             }
         }
@@ -161,7 +173,7 @@ namespace RimValiFFARW
         {
             if (CanExtractShell)
             {
-                var compChangeableProjectile = gun.TryGetComp<AERIALChangeableProjectile>();
+                var compChangeableProjectile = ChangeableProjectile;
                 if (!compChangeableProjectile.allowedShellsSettings.AllowedToAccept(
                         compChangeableProjectile.PeekNextProjectile))
                 {
@@ -269,9 +281,9 @@ namespace RimValiFFARW
                 return;
             }
 
-            if (warmUpTicks > 0f)
+            if (WarmUpTicks > 0f)
             {
-                burstWarmupTicksLeft =warmUpTicks.SecondsToTicks();
+                burstWarmupTicksLeft =WarmUpTicks.SecondsToTicks();
                 return;
             }
 
@@ -282,7 +294,7 @@ namespace RimValiFFARW
                 return;
             }
 
-            ThingDef t = gun.TryGetComp<AERIALChangeableProjectile>().PollNextProjectile;
+            ThingDef t = ChangeableProjectile.PollNextProjectile;
             burstWarmupTicksLeft = 1;
         }
 
@@ -291,7 +303,7 @@ namespace RimValiFFARW
         {
             var stringBuilder = new StringBuilder();
             var inspectString = "";
-            var compChangeableProjectile = gun.TryGetComp<AERIALChangeableProjectile>();
+            var compChangeableProjectile = ChangeableProjectile;
             if (!inspectString.NullOrEmpty())
             {
                 stringBuilder.AppendLine(inspectString);
@@ -347,7 +359,7 @@ namespace RimValiFFARW
 
             if (CanExtractShell)
             {
-                var compChangeableProjectile = gun.TryGetComp<AERIALChangeableProjectile>();
+                var compChangeableProjectile = ChangeableProjectile;
                 yield return new Command_Action
                 {
                     defaultLabel = "CommandExtractShell".Translate(),
@@ -362,7 +374,7 @@ namespace RimValiFFARW
                 };
             }
 
-            var compChangeableProjectile2 = gun.TryGetComp<AERIALChangeableProjectile>();
+            var compChangeableProjectile2 =ChangeableProjectile;
             if (compChangeableProjectile2 != null)
             {
                 StorageSettings storeSettings = compChangeableProjectile2.GetStoreSettings();
@@ -374,7 +386,7 @@ namespace RimValiFFARW
 
             if (CanSetForcedTarget)
             {
-                var compChangeableProjectile = gun.TryGetComp<AERIALChangeableProjectile>();
+                var compChangeableProjectile = ChangeableProjectile;
 
                 var command_VerbTarget = new Command_VerbTarget
                 {
@@ -441,7 +453,7 @@ namespace RimValiFFARW
 
         private void ExtractShell()
         {
-            GenPlace.TryPlaceThing(gun.TryGetComp<AERIALChangeableProjectile>().NewRemoveShell(), Position, Map,
+            GenPlace.TryPlaceThing(ChangeableProjectile.NewRemoveShell(), Position, Map,
                 ThingPlaceMode.Near);
         }
 
