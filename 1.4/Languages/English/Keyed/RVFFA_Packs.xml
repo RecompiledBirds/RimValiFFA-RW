@@ -11,7 +11,7 @@
 	<RVFFA_PackWorker_AverageOpinionOfMemberTooLow>The packs average opinion of {0} sank too low! ({1})</RVFFA_PackWorker_AverageOpinionOfMemberTooLow>	<!--The packs average opinion of {Name} sank too low! ({Average Opinion})-->
 	<RVFFA_PackWorker_LastInPack>{0} was the last member of his pack.</RVFFA_PackWorker_LastInPack>
 	<RVFFA_PackWorker_PackTooSmall>{0} didn't have enough members to sustain itself.</RVFFA_PackWorker_PackTooSmall>
-	<RVFFA_PackWorker_MemberLeavesBecause>{0} left the pack {1} because {2}.</RVFFA_PackWorker_MemberLeavesBecause>
+	<RVFFA_PackWorker_MemberLeavesBecause>{0} left the pack {1} because {2}</RVFFA_PackWorker_MemberLeavesBecause>
 	<RVFFA_PackWorker_PackAverageOpinionTooLow>The average opinion of each member towards other members in {0} dropped too low!</RVFFA_PackWorker_PackAverageOpinionTooLow>
 	<RVFFA_PackWorker_CountLowerThanMin>This set of pawns is too small for this type of Pack! You have {0} and need at least {1} pawns.</RVFFA_PackWorker_CountLowerThanMin>
 	<RVFFA_PackWorker_CountHigherThanMax>This set of pawns is too big for this type of Pack! You have {0} and can have at max {1} pawns.</RVFFA_PackWorker_CountHigherThanMax>

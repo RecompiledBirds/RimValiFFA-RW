@@ -92,19 +92,25 @@ namespace RimValiFFARW.Packs
             double avgOpinionOfMember = EvaluateAverageOpinionForPawn(member, pack.Members);
             if (def.minGroupOpinionNeededSustain > avgOpinionOfMember)
             {
-                reason = "RVFFA_PackWorker_AverageOpinionOfMemberTooLow".Translate(member.NameShortColored, avgOpinionOfMember);
+                reason = "RVFFA_PackWorker_AverageOpinionOfMemberTooLow".Translate(member.ProSubj(), avgOpinionOfMember);
                 return true;
             }
 
             if (pack.Members.Count == 1)
             {
-                reason = "RVFFA_PackWorker_LastInPack".Translate(member.NameShortColored);
+                reason = "RVFFA_PackWorker_LastInPack".Translate(member.ProSubj());
                 return true;
             }
 
             if (pack.Members.Count < def.minSizeToSustain)
             {
                 reason = "RVFFA_PackWorker_PackTooSmall".Translate(pack.NameColored);
+                return true;
+            }
+
+            if (member.Dead)
+            {
+                reason = "RVFFA_PackWorker_SubjectIsDead".Translate(member.ProSubj());
                 return true;
             }
 
