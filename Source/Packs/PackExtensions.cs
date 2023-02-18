@@ -1,4 +1,5 @@
 ﻿using RVCRestructured;
+using RVCRestructured.RVR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,5 +27,12 @@ namespace RimValiFFARW.Packs
 
             return isInPack;
         }
+
+        /// <summary>
+        ///     Checks if a <see cref="Pawn"/> is an Avali
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static bool IsAvali(this Pawn pawn) => pawn.def is RaceDef raceDef && raceDef.defName == "RVFFA_Avali";
     }
 }

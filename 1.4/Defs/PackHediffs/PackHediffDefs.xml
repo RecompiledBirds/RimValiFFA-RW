@@ -32,7 +32,7 @@
 	</HediffDef>
 
 	<HediffDef>
-		<defName>RVFFA_MilitaryPack</defName>
+		<defName>RVFFA_MilitaryHediff</defName>
 		<label>militarized pack member</label>
 		<labelNoun>militarized pack member</labelNoun>
 		<description>This valued pawn is focused on everything violence.</description>
@@ -48,15 +48,15 @@
 
 		<stages>
 			<li>
-				<AimingDelayFactor>-0.1</AimingDelayFactor>
 				<socialFightChanceFactor>1.5</socialFightChanceFactor>
-				<MortarMissRadiusFactor>-0.15</MortarMissRadiusFactor>
-				<IncomingDamageFactor>-0.05</IncomingDamageFactor>
 				
 				<becomeVisible>true</becomeVisible>
 				<lifeThreatening>false</lifeThreatening>
 
 				<statOffsets>
+					<AimingDelayFactor>-0.1</AimingDelayFactor>
+					<MortarMissRadiusFactor>-0.15</MortarMissRadiusFactor>
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor>
 					<ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
 					<SocialImpact>-0.2</SocialImpact>
 					<TradePriceImprovement>-0.1</TradePriceImprovement>
@@ -72,7 +72,7 @@
 	</HediffDef>
 
 	<HediffDef>
-		<defName>RVFFA_MiningPack</defName>
+		<defName>RVFFA_MiningHediff</defName>
 		<label>mining pack member</label>
 		<labelNoun>mining pack member</labelNoun>
 		<description>Rock and Stone everyone!</description>
@@ -89,7 +89,6 @@
 		<stages>
 			<li>
 				<socialFightChanceFactor>1.2</socialFightChanceFactor>
-				<IncomingDamageFactor>-0.02</IncomingDamageFactor>
 
 				<becomeVisible>true</becomeVisible>
 				<lifeThreatening>false</lifeThreatening>
@@ -99,11 +98,12 @@
 					<MiningYield>0.1</MiningYield>
 					<SmoothingSpeed>0.1</SmoothingSpeed>
 					<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+					<IncomingDamageFactor>-0.02</IncomingDamageFactor>
 				</statOffsets>
 
 				<statFactors>
 					<DeepDrillingSpeed>1.2</DeepDrillingSpeed>
-					<MiningSpeed>1.4</MiningSpeed>
+					<MiningSpeed>1.3</MiningSpeed>
 				</statFactors>
 			</li>
 		</stages>
@@ -126,9 +126,7 @@
 
 		<stages>
 			<li>
-				<AimingDelayFactor>0.1</AimingDelayFactor>
 				<socialFightChanceFactor>1.1</socialFightChanceFactor>
-				<IncomingDamageFactor>0.05</IncomingDamageFactor>
 
 				<becomeVisible>true</becomeVisible>
 				<lifeThreatening>false</lifeThreatening>
@@ -139,9 +137,11 @@
 					<TrainAnimalChance>0.2</TrainAnimalChance>
 					<TameAnimalChance>0.2</TameAnimalChance>
 					<BondAnimalChanceFactor>0.2</BondAnimalChanceFactor>
+					<IncomingDamageFactor>0.05</IncomingDamageFactor>
 				</statOffsets>
 
 				<statFactors>
+					<AimingDelayFactor>1.1</AimingDelayFactor>
 					<AnimalGatherSpeed>1.4</AnimalGatherSpeed>
 					<AnimalGatherYield>1.2</AnimalGatherYield>
 					<HuntingStealth>1.4</HuntingStealth>
@@ -154,7 +154,40 @@
 		<defName>RVFFA_FarmingHediff</defName>
 		<label>farming pack member</label>
 		<labelNoun>farming pack member</labelNoun>
-		<description>This pawn is specialized in agricultural activities.</description>
+		<description>This pawn is specialized in agriculture.</description>
+
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<everCurableByItem>false</everCurableByItem>
+		<chronic>true</chronic>
+		<priceImpact>true</priceImpact>
+		<priceOffset>250</priceOffset>
+
+		<stages>
+			<li>
+				<socialFightChanceFactor>0.75</socialFightChanceFactor>
+				<fertilityFactor>1.25</fertilityFactor>
+
+				<becomeVisible>true</becomeVisible>
+				<lifeThreatening>false</lifeThreatening>
+
+				<statOffsets>
+					<PlantWorkSpeed>0.4</PlantWorkSpeed>
+					<PlantHarvestYield>0.2</PlantHarvestYield>
+					<DrugHarvestYield>0.1</DrugHarvestYield>
+					<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RVFFA_ConstructionHediff</defName>
+		<label>construction pack member</label>
+		<labelNoun>construction pack member</labelNoun>
+		<description>This pawn is specialized in construction.</description>
 
 		<isBad>false</isBad>
 		<makesSickThought>false</makesSickThought>
@@ -167,12 +200,12 @@
 
 		<stages>
 			<li>
-				<IncomingDamageFactor>0.05</IncomingDamageFactor>
 
 				<becomeVisible>true</becomeVisible>
 				<lifeThreatening>false</lifeThreatening>
 
 				<statOffsets>
+					<IncomingDamageFactor>0.05</IncomingDamageFactor>
 					<SmoothingSpeed>0.3</SmoothingSpeed>
 					<ConstructionSpeed>0.25</ConstructionSpeed>
 					<ConstructSuccessChance>0.5</ConstructSuccessChance>

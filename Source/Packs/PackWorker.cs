@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using RVCRestructured;
+using RVCRestructured.RVR;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -51,6 +52,7 @@ namespace RimValiFFARW.Packs
             if (pawn.NonHumanlikeOrWildMan()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild");
             if (pawn.IsInPack() && !ignoreIsInPack) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
             if (def.minGroupOpinionNeededCreation > avgOpinionOfMember) reason = "RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup".Translate(pawn.NameShortColored, avgOpinionOfMember.ToString("0.##"), def.minGroupOpinionNeededCreation.ToString("0.##"));
+            if (!pawn.IsAvali()) reason = "RVFFA_PackWorker_SubjectIsNotAvali".Translate();
 
             if (reason != null)
             {
@@ -215,11 +217,12 @@ namespace RimValiFFARW.Packs
             double total = 0;
             double count = 0;
 
-            if (pawns.Count() < 1) return 100;
+            if (pawns.Count() < 2) return 100;
 
             foreach (Pawn member in pawns)
             {
-                total += pawns.Average(otherMember => otherMember.relations.OpinionOf(member));
+                RVCLog.Log(pawns.Join(p => p.NameShortColored), RVCLogType.ErrorOnce);
+                total += pawns.Where(otherMember => otherMember != member).Average(otherMember => otherMember.relations.OpinionOf(member));
                 count++;
             }
 

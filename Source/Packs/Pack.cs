@@ -64,22 +64,12 @@ namespace RimValiFFARW.Packs
         ///     A packs name Color
         ///     TODO: Fully implement the Pack name colors
         /// </summary>
-        public Color NameColor => Color.blue + Color.red;
+        public Color NameColor => Color.gray;
 
         /// <summary>
         ///     A <see cref="Pack"/>s <see cref="Name"/> colored using <see cref="NameColor"/>
         /// </summary>
-        public TaggedString NameColored
-        {
-            get 
-            { 
-                if (Name != null)
-                {
-                    return Name.Colorize(NameColor);
-                }
-                return def.LabelCap;
-            }
-        }
+        public TaggedString NameColored => (Name ?? def.LabelCap).Colorize(NameColor);
 
         /// <summary>
         ///     Private Pack creation function. To be called by <see cref="TryMakeNewPackFromPawns(PackDef, IEnumerable{Pawn}, bool, out Pack)"/>
@@ -157,6 +147,7 @@ namespace RimValiFFARW.Packs
             if (!worker.MemberCanLeave(member, this)) return false;
             if (!members.Remove(member)) return false;
 
+            Packmanager.GetLastActivePackmanager.RemoveMemberRelation(member);
             worker.RemoveMemberHediffs(memberHediffDic[member]);
             worker.NotifyMemberRemoved(member);
             return true;
@@ -173,6 +164,7 @@ namespace RimValiFFARW.Packs
             if (!worker.PawnCanJoinPack(members, member, ignoreIsInPack, quietError, out string _)) return false;
             if (!members.Add(member)) return false;
 
+            Packmanager.GetLastActivePackmanager.AddMemberRelation(member, this);
             worker.NotifyMemberAdded(member); 
             ApplyHeddifsToMember(member);
             return true;

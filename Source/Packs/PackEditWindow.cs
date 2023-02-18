@@ -95,11 +95,11 @@ namespace RimValiFFARW.Packs
             contentPart = new Rect(mainPart.x, mainPart.y, mainPart.width, 333f - CommonMargin * 3f);
             statusPart = new Rect(mainPart.x, contentPart.yMax + CommonMargin, mainPart.width, 20f);
 
-            descriptionAndSelectionPart = new Rect(contentPart.x, contentPart.y, InitialSize.x * .7f + CommonMargin, 125f);
+            descriptionAndSelectionPart = new Rect(contentPart.x, contentPart.y, InitialSize.x * .6f + CommonMargin, 125f);
             defSelectorButton = new Rect(descriptionAndSelectionPart.x, descriptionAndSelectionPart.y, descriptionAndSelectionPart.width - CommonMargin, 30f);
             descriptionPart = new Rect(descriptionAndSelectionPart.x, defSelectorButton.yMax + CommonMargin, defSelectorButton.width, descriptionAndSelectionPart.height - CommonMargin - defSelectorButton.height);
 
-            boniListPartOuter = new Rect(descriptionAndSelectionPart.xMax + CommonMargin, descriptionAndSelectionPart.y, InitialSize.x * .3f - CommonMargin * 4f, descriptionAndSelectionPart.height);
+            boniListPartOuter = new Rect(descriptionAndSelectionPart.xMax + CommonMargin, descriptionAndSelectionPart.y, InitialSize.x * .4f - CommonMargin * 4f, descriptionAndSelectionPart.height);
             memberListPartOuter = new Rect(descriptionAndSelectionPart.x, descriptionAndSelectionPart.yMax + CommonMargin * 2f, contentPart.width, PackInspectionWindow.ListRectTemplateHeight * 5);
             confirmationPart = new Rect(descriptionAndSelectionPart.x, memberListPartOuter.yMax + CommonMargin, contentPart.width, 30f);
             curPackMates.AddRange(pack.Members);
@@ -172,8 +172,6 @@ namespace RimValiFFARW.Packs
                 {
                     Packmanager manager = Packmanager.GetLastActivePackmanager;
 
-                    Log.Message($"Switched from {pack.Def.label} to {newPackDef.label}");
-
                     manager.RemovePack(pack);
                     manager.AddPack(newPack);
                     PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
@@ -181,7 +179,6 @@ namespace RimValiFFARW.Packs
                 } 
                 else if(acceptPack && !isDefSwitched)
                 {
-                    Log.Message($"Added members {pack.NameColored}");
                     foreach (Pawn pawn in fullCurrentTempPackMembers) 
                     {
                         pack.AddMember(pawn, false);
@@ -192,6 +189,7 @@ namespace RimValiFFARW.Packs
                         pack.RemoveMember(pawn);
                     }
 
+                    PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
                     Close();
                 }
                 else
@@ -263,7 +261,7 @@ namespace RimValiFFARW.Packs
             MouseoverSounds.DoRegion(tempRect);
             Widgets.DrawHighlightIfMouseover(tempRect);
             if (Widgets.ButtonInvisible(tempRect.LeftPartPixels(200f))) Find.WindowStack.Add(new Dialog_InfoCard(otherMember));
-            if (!newPackWorker.PawnCanJoinPack(otherMembers, otherMember, true, true, out reason) && type == OpinionBarType.newMember)
+            if (!newPackWorker.PawnCanJoinPack(otherMembers, otherMember, true, true, out reason) && (type == OpinionBarType.newMember || type == OpinionBarType.curMember))
             {
                 nothingIllegal = false;
                 Widgets.DrawBoxSolid(tempRect, new Color(1f, 0f, 0f, .2f));

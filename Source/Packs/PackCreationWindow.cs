@@ -66,11 +66,11 @@ namespace RimValiFFARW.Packs
             contentPart = new Rect(mainPart.x, mainPart.y, mainPart.width, 333f - CommonMargin * 3f);
             statusPart = new Rect(mainPart.x, contentPart.yMax + CommonMargin * 2f, mainPart.width, 20f);
 
-            descriptionAndSelectionPart = new Rect(contentPart.x, contentPart.y, InitialSize.x * .7f + CommonMargin, 125f);
+            descriptionAndSelectionPart = new Rect(contentPart.x, contentPart.y, InitialSize.x * .6f + CommonMargin, 125f);
             defSelectorButton = new Rect(descriptionAndSelectionPart.x, descriptionAndSelectionPart.y, descriptionAndSelectionPart.width - CommonMargin, 30f);
             descriptionPart = new Rect(descriptionAndSelectionPart.x, defSelectorButton.yMax + CommonMargin, defSelectorButton.width, descriptionAndSelectionPart.height - CommonMargin - defSelectorButton.height);
 
-            boniListPartOuter = new Rect(descriptionAndSelectionPart.xMax + CommonMargin, descriptionAndSelectionPart.y, InitialSize.x * .3f - CommonMargin * 4f, descriptionAndSelectionPart.height);
+            boniListPartOuter = new Rect(descriptionAndSelectionPart.xMax + CommonMargin, descriptionAndSelectionPart.y, InitialSize.x * .4f - CommonMargin * 4f, descriptionAndSelectionPart.height);
             memberListPartOuter = new Rect(descriptionAndSelectionPart.x, descriptionAndSelectionPart.yMax + CommonMargin * 2f, contentPart.width, PackInspectionWindow.ListRectTemplateHeight * 5);
             confirmationPart = new Rect(descriptionAndSelectionPart.x, memberListPartOuter.yMax + CommonMargin, contentPart.width, 30f);
             fullTempPackMembers.Add(firstPawn);
@@ -257,7 +257,7 @@ namespace RimValiFFARW.Packs
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
 
-                foreach (PackDef def in DefDatabase<PackDef>.AllDefsListForReading)
+                foreach (PackDef def in DefDatabase<PackDef>.AllDefsListForReading.Where(def => !def.unique))
                 {
                     FloatMenuOption option = new FloatMenuOption(def.LabelCap, () =>
                     {

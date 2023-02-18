@@ -291,5 +291,11 @@ namespace RimValiFFARW.Packs
 
             return barTex;
         }
+
+        protected override void CloseTab()
+        {
+            packInspectionWindow = null;
+            base.CloseTab();
+        }
     }
 }

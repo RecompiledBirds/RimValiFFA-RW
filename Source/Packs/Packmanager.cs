@@ -132,6 +132,11 @@ namespace RimValiFFARW.Packs
             Scribe_Collections.Look(ref memberPackTable, nameof(memberPackTable), LookMode.Reference, LookMode.Reference);
         }
 
+        public void AddMemberRelation(Pawn Member, Pack pack)
+        {
+            memberPackTable.Add(Member, pack);
+        }
+
         public void RemoveMemberRelation(Pawn member)
         {
             memberPackTable.Remove(member);
