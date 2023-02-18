@@ -273,14 +273,6 @@
         </costList>
 
         <apparel>
-            <bodyPartGroups>
-                <li>Torso</li>
-                <li>Neck</li>
-                <li>Shoulders</li>
-                <li>Arms</li>
-                <li>Legs</li>
-            </bodyPartGroups>
-
             <wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor</wornGraphicPath>
         </apparel>
     </ThingDef>

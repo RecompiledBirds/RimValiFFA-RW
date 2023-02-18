@@ -119,6 +119,14 @@
 				<li>EVA</li>
 				<li>Avali</li>
 			</tags>
+			
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
 
 			<defaultOutfitTags>
                 <li>Soldier</li>
