@@ -171,16 +171,6 @@ namespace RimValiFFARW
 
         public override void Tick()
         {
-            if (CanExtractShell)
-            {
-                var compChangeableProjectile = ChangeableProjectile;
-                if (!compChangeableProjectile.allowedShellsSettings.AllowedToAccept(
-                        compChangeableProjectile.PeekNextProjectile))
-                {
-                    ExtractShell();
-                }
-            }
-
             if (Powered)
             {
                 if (forcedTarget.IsValid && !CanSetForcedTarget)
