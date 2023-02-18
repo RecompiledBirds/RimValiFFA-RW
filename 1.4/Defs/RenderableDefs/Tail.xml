@@ -31,7 +31,7 @@
 		<defName>RVFFA_Tail</defName>
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<north>
-			<position>(-0.08,0.1,0.051)</position>
+			<position>(-0.08,0.01,0.051)</position>
 			<size>0.8</size>
 		</north>
 		<south>
