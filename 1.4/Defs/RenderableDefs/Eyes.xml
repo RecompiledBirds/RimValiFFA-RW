@@ -10,7 +10,7 @@
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.01,0)</position>
+			<position>(0,0.001,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
@@ -35,7 +35,7 @@
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.01,0)</position>
+			<position>(0,0.001,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>

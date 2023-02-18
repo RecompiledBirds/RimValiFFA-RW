@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<JobDef>
-		<defName>RVFFA_AERIAL</defName>
+		<defName>RVFFA_RefuelAERIAL</defName>
 		<driverClass>RimValiFFARW.RefuelAERIALJobDriver</driverClass>
 		<reportString>Refueling Aerial.</reportString>
 		<casualInterruptible>false</casualInterruptible>

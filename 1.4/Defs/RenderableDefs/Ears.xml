@@ -8,11 +8,11 @@
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.01,0)</position>
+			<position>(0,0,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.15,0.01,0)</position>
+			<position>(-0.17,-0.0087,0.06)</position>
 			<size>0.8</size>
 		</east>
 		<textures>
@@ -37,11 +37,11 @@
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.01,0)</position>
+			<position>(0,0,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.1,-0.3024662,0)</position>
+			<position>(-0.17,0.0087,0.06)</position>
 			<size>0.8</size>
 		</east>
 		<textures>
@@ -61,21 +61,17 @@
 		<defName>RVFFA_EarLU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(0,0,0)</position>
+			<position>(0.02,0,0)</position>
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.029,0)</position>
+			<position>(-0.02,0,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.1,-0.01,0)</position>
+			<position>(-0.16,-0.01,0)</position>
 			<size>0.8</size>
 		</east>
-		<west>
-			<position>(0.1,-1,0)</position>
-			<size>0.8</size>
-		</west>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/UpperLeft/MaleUpperLeft</texPath>
@@ -94,15 +90,15 @@
 		<defName>RVFFA_EarRU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(0,0,0)</position>
+			<position>(-0.02,0,0)</position>
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.029,0)</position>
+			<position>(0.02,0,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.15,0.01,0.016)</position>
+			<position>(-0.16,0.01,0.016)</position>
 			<size>0.8</size>
 		</east>
 		<textures>
