@@ -5,6 +5,7 @@
 		<label>left leg</label>
 		<listOrder>10</listOrder>
 	</BodyPartGroupDef>
+	
 	<BodyPartGroupDef>
 		<defName>RVFFA_RightLeg</defName>
 		<label>right leg</label>
