@@ -89,7 +89,6 @@ namespace RimValiFFARW
         public void NewLoadShell(ThingDef shell, int count)
         {
             loadedShells.Add(shell);
-            Log.Message(loadedShells.Count.ToString());
         }
 
         public Thing NewRemoveShell()
