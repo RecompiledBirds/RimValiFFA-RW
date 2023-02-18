@@ -86,7 +86,7 @@ namespace RimValiFFARW
             }
         }
 
-        public void NewLoadShell(ThingDef shell, int count)
+        public void NewLoadShell(ThingDef shell)
         {
             loadedShells.Add(shell);
         }

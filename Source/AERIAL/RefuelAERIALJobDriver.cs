@@ -92,7 +92,7 @@ namespace RimValiFFARW
                     var building_TurretGun = (Building)actor.CurJob.targetA.Thing as AERIALSystem;
 
                     building_TurretGun.gun.TryGetComp<AERIALChangeableProjectile>()
-                        .NewLoadShell(actor.CurJob.targetB.Thing.def, 1);
+                        .NewLoadShell(actor.CurJob.targetB.Thing.def);
                     actor.carryTracker.innerContainer.ClearAndDestroyContents();
                 },
             };

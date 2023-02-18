@@ -147,7 +147,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseItem">
-		<defName>AvaliNanomachines</defName>
+		<defName>RVFFA_Nanomachines</defName>
 		<label>nanomachines</label>
 		<comps>
 			<li Class= "RVCRestructured.Comps.HealableMaterialCompProperties">

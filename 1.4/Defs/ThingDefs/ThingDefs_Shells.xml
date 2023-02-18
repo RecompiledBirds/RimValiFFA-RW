@@ -245,7 +245,7 @@
 		</comps>
 		<projectileWhenLoaded>RVFFA_ATOM_Projectile</projectileWhenLoaded>
 		<costList>
-			<AeroTungstenCarbide>15</AeroTungstenCarbide>
+			<RVFFA_AeroTungstenCarbide>15</RVFFA_AeroTungstenCarbide>
 			<RVFFA_ProcessedTungsten>30</RVFFA_ProcessedTungsten>
 			<Steel>30</Steel>
 			<Chemfuel>15</Chemfuel>
