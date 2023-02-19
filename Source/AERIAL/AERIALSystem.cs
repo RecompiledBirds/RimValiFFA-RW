@@ -73,25 +73,24 @@ namespace RimValiFFARW
 
 
 
-        public bool Powered
+        public bool NexusConnected
         {
             get
             {
-                if (power?.PowerNet == null || !power.PowerOn)
-                {
-                    return false;
-                }
-
-                // Nexus needs to:
-                // - be on the same power grid
-                // - be powered on
-                // - have automated defenses enabled
                 IEnumerable<ThingWithComps> connectedNexuses = power.PowerNet.connectors
                     .Where(connector => connector.parent.def == NexusDefOf.RVFFA_AvaliNexus)
                     .Select(compPower => compPower.parent);
 
                 return connectedNexuses.Any(nexus =>
                     nexus.TryGetComp<CompPowerTrader>()?.PowerOn == true);
+            }
+        }
+
+        public bool Powered
+        {
+            get
+            {
+                return power.PowerOn;
             }
         }
 
@@ -397,13 +396,16 @@ namespace RimValiFFARW
                     icon = compChangeableProjectile != null ? ContentFinder<Texture2D>.Get(compChangeableProjectile.Projectile.graphicData.texPath) : ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
                     verb = AttackVerb,
                     hotKey = KeyBindingDefOf.Misc4,
-                    drawRadius = false,
-                    disabled = !Powered,
+                    drawRadius = false
                 };
                 if (Spawned && Position.Roofed(Map))
                 {
                     command_VerbTarget.Disable("CannotFire".Translate() + ": " +
                                                "Roofed".Translate().CapitalizeFirst());
+                }
+                if (!Powered)
+                {
+                    command_VerbTarget.Disable("RVFFA_AERIALNotPowered".Translate().CapitalizeFirst());
                 }
 
                 yield return command_VerbTarget;

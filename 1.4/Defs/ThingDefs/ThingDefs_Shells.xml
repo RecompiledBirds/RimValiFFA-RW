@@ -227,7 +227,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_AERIALShellBase">
-		<defName>AERIAL_ATOM</defName>
+		<defName>RVFFA_AERIAL_ATOM</defName>
 		<label>ATOM rocket</label>
 		<description>A highly explosive and devastating rocket, launched from AERIAL.</description>
 		<graphicData>
@@ -270,6 +270,109 @@
 			<!-- damage amount is the damage def default -->
 			<speed>30</speed>
 			<explosionRadius>56</explosionRadius>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_AERIALShellBase">
+		<defName>RVFFA_AERIAL_EMP</defName>
+		<label>AERIAL EMP rocket</label>
+		<description>A rocket with an onboard EMP device, made to be launched from the AERIAL system.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Turrets/AERIAL/Shells/AERIAL_EMP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>56</explosiveRadius>
+				<explosiveDamageType>EMP</explosiveDamageType>
+				<explosiveExpandPerStackcount>2</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<projectileWhenLoaded>RVFFA_AERIAL_EMP_Projectile</projectileWhenLoaded>
+		<costList>
+			<RVFFA_AeroTungstenCarbide>10</RVFFA_AeroTungstenCarbide>
+			<RVFFA_ProcessedTungsten>20</RVFFA_ProcessedTungsten>
+			<Steel>20</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>AERIALResearch</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RVFFA_AERIAL_EMP_Projectile</defName>
+		<label>EMP shell</label>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Turrets/AERIAL/Shells/AERIAL_EMP_LAUNCHED</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>EMP</damageDef>
+			<!-- damage amount is the damage def default -->
+			<speed>36</speed>
+			<explosionRadius>20</explosionRadius>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_AERIALShellBase">
+		<defName>RVFFA_AERIAL_HE</defName>
+		<label>AERIAL HE rocket</label>
+		<description>A highly explosive rocket, launched from an AERIAL system.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Turrets/AERIAL/Shells/AERIAL_HE</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>40</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>2</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<projectileWhenLoaded>RVFFA_AERIAL_HE_Projectile</projectileWhenLoaded>
+		<costList>
+			<RVFFA_AeroTungstenCarbide>5</RVFFA_AeroTungstenCarbide>
+			<RVFFA_ProcessedTungsten>17</RVFFA_ProcessedTungsten>
+			<Steel>40</Steel>
+			<Chemfuel>30</Chemfuel>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>AERIALResearch</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RVFFA_AERIAL_HE_Projectile</defName>
+		<label>high-explosive shell</label>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Turrets/AERIAL/Shells/AERIAL_HE_LAUNCHED</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<!-- damage amount is the damage def default -->
+			<speed>50</speed>
+			<explosionRadius>20</explosionRadius>
 			<flyOverhead>true</flyOverhead>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<soundExplode>MortarBomb_Explode</soundExplode>

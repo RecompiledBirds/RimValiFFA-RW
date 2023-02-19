@@ -82,7 +82,7 @@ namespace RimValiFFARW
                 actor.CurJob.count = Math.Min(thing.stackCount, ammoNeeded);
             };
             yield return loadIfNeeded;
-            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, ammoNeeded);
+            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, GetActor().CurJob.count);
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell)
                 .FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);
@@ -95,7 +95,7 @@ namespace RimValiFFARW
                     var building_TurretGun = (Building)actor.CurJob.targetA.Thing as AERIALSystem;
 
                     building_TurretGun.gun.TryGetComp<AERIALChangeableProjectile>()
-                        .NewLoadShell(actor.CurJob.targetB.Thing.def, ammoNeeded);
+                        .NewLoadShell(actor.CurJob.targetB.Thing.def, actor.CurJob.count);
                     actor.carryTracker.innerContainer.ClearAndDestroyContents();
                 },
             };
