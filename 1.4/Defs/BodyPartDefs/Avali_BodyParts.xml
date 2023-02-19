@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<BodyPartDef>
-		<defName>RimValiEar</defName>
+		<defName>RVFFA_Ear</defName>
 		<label>ear</label>
 		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 		<hitPoints>12</hitPoints>

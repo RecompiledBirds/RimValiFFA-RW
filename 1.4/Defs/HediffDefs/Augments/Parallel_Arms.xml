@@ -20,7 +20,7 @@
 		</stages>
 	</HediffDef>
 
-	<ThingDef ParentName="AvaliBasicBodyPartBionicBase">
+	<ThingDef ParentName="RVFFA_BaseBionicPart">
 		<defName>RVFFA_Parrallel_Arm</defName>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Cybernetics/Arm</texPath>

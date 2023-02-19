@@ -13,7 +13,7 @@
 		</addedPartProps>
 	</HediffDef>
 
-	<ThingDef ParentName="AvaliBasicBodyPartBionicBase">
+	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
 		<defName>RVFFA_Tetradactyly_Utilization</defName>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Cybernetics/Arm</texPath>

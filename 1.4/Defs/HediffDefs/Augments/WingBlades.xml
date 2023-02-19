@@ -30,7 +30,7 @@
 		</comps>
 	</HediffDef>
 
-	<ThingDef ParentName="AvaliBasicBodyPartBionicBase">
+	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
 		<defName>RVFFA_WingBlades</defName>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Cybernetics/Arm</texPath>
