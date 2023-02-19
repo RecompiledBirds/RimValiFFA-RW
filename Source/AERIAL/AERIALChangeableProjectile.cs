@@ -7,6 +7,8 @@ namespace RimValiFFARW
 {
     public class AERIALChangeableProjectile : CompChangeableProjectile
     {
+        public static int maxShells = 6;
+
         public new StorageSettings allowedShellsSettings;
 
         private List<ThingDef> loadedShells = new List<ThingDef>();
@@ -21,6 +23,7 @@ namespace RimValiFFARW
 
         public new bool StorageTabVisible => true;
 
+        public bool FullyLoaded => loadedShells.Count >= maxShells;
 
         public ThingDef PeekNextProjectile
         {
@@ -88,9 +91,12 @@ namespace RimValiFFARW
             }
         }
 
-        public void NewLoadShell(ThingDef shell)
+        public void NewLoadShell(ThingDef shell, int count)
         {
-            loadedShells.Add(shell);
+            for (int i = 0; i < count;i++)
+            {
+                loadedShells.Add(shell);
+            }
         }
 
         public Thing NewRemoveShell()

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -7,8 +8,9 @@ namespace RimValiFFARW
 {
     public class RefuelAERIALJobDriver : JobDriver
     {
-        private static bool GunNeedsLoading(Building b)
+        private static bool GunNeedsLoading(Building b, out int ammoNeeded)
         {
+            ammoNeeded = 0;
             if (!(b is AERIALSystem aerialSystem))
             {
                 return false;
@@ -20,14 +22,13 @@ namespace RimValiFFARW
                 return false;
             }
 
-            return !(compChangeableProjectile.ShellsLoaded >= 6);
+            ammoNeeded = AERIALChangeableProjectile.maxShells - compChangeableProjectile.ShellsLoaded;
+            return !compChangeableProjectile.FullyLoaded;
         }
 
         public static Thing FindAmmo(Pawn pawn, AERIALSystem aerial)
         {
-            StorageSettings allowed = pawn.IsColonist
-                ? aerial.gun.TryGetComp<AERIALChangeableProjectile>().allowedShellsSettings
-                : null;
+            StorageSettings allowed = pawn.IsColonist ? aerial.gun.TryGetComp<AERIALChangeableProjectile>().allowedShellsSettings : null;
 
             bool Validator(Thing t)
             {
@@ -47,6 +48,8 @@ namespace RimValiFFARW
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
+            int ammoNeeded = 0;
+
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
             Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
             var loadIfNeeded = new Toil();
@@ -55,7 +58,7 @@ namespace RimValiFFARW
                 Pawn actor = loadIfNeeded.actor;
                 var building = (Building)actor.CurJob.targetA.Thing;
                 var building_TurretGun = building as AERIALSystem;
-                if (!GunNeedsLoading(building))
+                if (!GunNeedsLoading(building, out ammoNeeded))
                     //this.JumpToToil(gotoTurret);
                 {
                     return;
@@ -76,10 +79,10 @@ namespace RimValiFFARW
                 }
 
                 actor.CurJob.targetB = thing;
-                actor.CurJob.count = 1;
+                actor.CurJob.count = Math.Min(thing.stackCount, ammoNeeded);
             };
             yield return loadIfNeeded;
-            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, 1);
+            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, ammoNeeded);
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell)
                 .FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);
@@ -92,7 +95,7 @@ namespace RimValiFFARW
                     var building_TurretGun = (Building)actor.CurJob.targetA.Thing as AERIALSystem;
 
                     building_TurretGun.gun.TryGetComp<AERIALChangeableProjectile>()
-                        .NewLoadShell(actor.CurJob.targetB.Thing.def);
+                        .NewLoadShell(actor.CurJob.targetB.Thing.def, ammoNeeded);
                     actor.carryTracker.innerContainer.ClearAndDestroyContents();
                 },
             };

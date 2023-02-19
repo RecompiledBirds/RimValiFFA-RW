@@ -23,7 +23,7 @@
 				</capacities>
 				<power>5</power>
 				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>MosquitoTailAttackTool</linkedBodyPartsGroup>
 			</li>
 			<li>
 				<label>head</label>

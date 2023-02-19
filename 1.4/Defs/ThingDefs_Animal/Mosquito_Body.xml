@@ -113,11 +113,19 @@
 				</li>
 				<li>
 					<def>Tail</def>
-					<customLabel>rear right leg</customLabel>
+					<customLabel>tail</customLabel>
+					<groups>
+						<li>MosquitoTailAttackTool</li>
+					</groups>
 					<coverage>0.06</coverage>
 					<height>Bottom</height>
 				</li>
 			</parts>
 		</corePart>
 	</BodyDef>
+
+	<BodyPartGroupDef>
+		<defName>MosquitoTailAttackTool</defName>
+		<label>tail</label>
+	</BodyPartGroupDef>
 </Defs>
