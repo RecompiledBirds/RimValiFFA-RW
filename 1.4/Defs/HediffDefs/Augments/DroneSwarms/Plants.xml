@@ -18,7 +18,7 @@
 		</comps>
 	</HediffDef>
 
-	<ThingDef ParentName="AvaliBasicBodyPartBionicBase">
+	<ThingDef ParentName="RVFFA_BaseBionicPart">
 		<defName>RVFFA_MicroPlantingDrones</defName>
 
 		<label>Micro drone swarm (Plants)</label>
