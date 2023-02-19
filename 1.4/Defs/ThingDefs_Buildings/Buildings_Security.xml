@@ -452,7 +452,7 @@
 			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>AIMSRes</li>
+			<li>RVFFA_AIMSRes</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="CompProperties_Explosive">
@@ -535,7 +535,7 @@
 			<drawSize>(3,3)</drawSize>
 		</graphicData>
 		<researchPrerequisites>
-			<li>AERIALResearch</li>
+			<li>RVFFA_AERIAL</li>
 		</researchPrerequisites>
 		<comps Inherit="False">
 			<li Class="CompProperties_Forbiddable"/>

@@ -78,7 +78,7 @@ namespace RimValiFFARW
             get
             {
                 IEnumerable<ThingWithComps> connectedNexuses = power.PowerNet.connectors
-                    .Where(connector => connector.parent.def == NexusDefOf.RVFFA_AvaliNexus)
+                    .Where(connector => connector.parent.def == NexusDefOf.RVFFA_Nexus)
                     .Select(compPower => compPower.parent);
 
                 return connectedNexuses.Any(nexus =>

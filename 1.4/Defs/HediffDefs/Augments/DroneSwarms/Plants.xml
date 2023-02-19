@@ -43,7 +43,7 @@
 			<MarketValue>500</MarketValue>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>MicroDrones</researchPrerequisite>
+			<researchPrerequisite>RVFFA_MicroDrones</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 	

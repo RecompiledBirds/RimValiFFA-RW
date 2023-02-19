@@ -24,7 +24,7 @@
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_BasicAvaliImplants</researchPrerequisite>
+			<researchPrerequisite>RVFFA_BasicImplants</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
