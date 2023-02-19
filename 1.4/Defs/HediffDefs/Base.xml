@@ -25,7 +25,7 @@
 				<Crafting>8</Crafting>
 			</skillRequirements>
 			<recipeUsers>
-				<li>RVFFA_Nanolathe</li>
+				<li>RVFFA_NanoForge</li>
 			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>
@@ -58,7 +58,7 @@
 			</skillRequirements>
 			<researchPrerequisite>Bionics</researchPrerequisite>
 			<recipeUsers>
-				<li>RVFFA_Nanolathe</li>
+				<li>RVFFA_NanoForge</li>
 			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>
