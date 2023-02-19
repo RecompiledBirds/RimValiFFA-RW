@@ -34,7 +34,7 @@
 		</descriptionHyperlinks>
 		<costList>
 			<Plasteel>15</Plasteel>
-			<AeroTungstenCarbide>20</AeroTungstenCarbide>
+			<RVFFA_AeroTungstenCarbide>20</RVFFA_AeroTungstenCarbide>
 			<ComponentSpacer>10</ComponentSpacer>
 			<Steel>20</Steel>
 		</costList>

@@ -123,7 +123,7 @@
 							</groups>
 							<parts>
 								<li>
-									<def>RimValiEar</def>
+									<def>RVFFA_Ear</def>
 									<customLabel>left upper ear</customLabel>
 									<coverage>0.2</coverage>
 									<groups>
@@ -132,7 +132,7 @@
 									</groups>
 								</li>
 								<li>
-									<def>RimValiEar</def>
+									<def>RVFFA_Ear</def>
 									<customLabel>right upper ear</customLabel>
 									<coverage>0.2</coverage>
 									<groups>
@@ -141,7 +141,7 @@
 									</groups>
 								</li>
 								<li>
-									<def>RimValiEar</def>
+									<def>RVFFA_Ear</def>
 									<customLabel>right lower ear</customLabel>
 									<coverage>0.15</coverage>
 									<groups>
@@ -150,7 +150,7 @@
 									</groups>
 								</li>
 								<li>
-									<def>RimValiEar</def>
+									<def>RVFFA_Ear</def>
 									<customLabel>left lower ear</customLabel>
 									<coverage>0.15</coverage>
 									<groups>

@@ -31,7 +31,7 @@
 		<costList>
 			<Steel>20</Steel>
 			<ComponentIndustrial>4</ComponentIndustrial>
-			<AvaliAerogel>10</AvaliAerogel>
+			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>BasicAvaliBionics</researchPrerequisite>
@@ -46,7 +46,7 @@
 	</ThingDef>
 
 	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-		<defName>RVFFA_BasicBionicEar</defName>
+		<defName>RVFFA_InstallBasicBionicEar</defName>
 		<label>Install basic bionic Ear</label>
 		<description>Install a basic bionic Ear.</description>
 		<descriptionHyperlinks>
