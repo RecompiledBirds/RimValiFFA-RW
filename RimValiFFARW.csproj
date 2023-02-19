@@ -11,14 +11,25 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Source\WorldGen\**" />
+	  <EmbeddedResource Remove="Source\WorldGen\**" />
+	  <None Remove="Source\WorldGen\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3524" />
 		<PackageReference Include="Lib.Harmony" Version="2.2.2" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="1.4\Assemblies\" />
-		<Folder Include="Source\Packs\" />
-		<Folder Include="Source\WorldGen\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="RimValiCore RW">
+	    <HintPath>..\RimValiCore-RW\1.4\Assemblies\RimValiCore RW.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
 	</ItemGroup>
 
 </Project>

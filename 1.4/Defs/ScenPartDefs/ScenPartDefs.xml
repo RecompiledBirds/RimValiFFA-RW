@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ScenPartDef>
+		<defName>RVFFA_StarterPack</defName>
+		<label>pawns start in a pack</label>
+		<category>Misc</category>
+		<scenPartClass>RimValiFFARW.Packs.ScenPart_StarterPack</scenPartClass>
+		<maxUses>1</maxUses>
+	</ScenPartDef>
+</Defs>
