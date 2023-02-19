@@ -8,7 +8,7 @@
 			<drawSize>0.85</drawSize>
 		</graphicData>
 		<techHediffsTags>
-			<li>RVFFA_BasicAvali</li>
+			<li>RVFFA_Basic</li>
 		</techHediffsTags>
 
 		<label>Autophagic system rewrite augment</label>
@@ -28,7 +28,7 @@
 			<MarketValue>100</MarketValue>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_BasicAvaliBionics</researchPrerequisite>
+			<researchPrerequisite>RVFFA_BasicBionics</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 	
