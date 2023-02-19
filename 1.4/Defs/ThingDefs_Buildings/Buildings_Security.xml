@@ -387,7 +387,7 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>50</damageAmountBase>
-			<speed>100</speed>
+			<speed>300</speed>
 			<stoppingPower>5</stoppingPower>
 			<armorPenetrationBase>2</armorPenetrationBase>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>

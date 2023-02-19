@@ -11,6 +11,8 @@ namespace RimValiFFARW
 
         private List<ThingDef> loadedShells = new List<ThingDef>();
 
+        public List<ThingDef> LoadedShells { get { return loadedShells; } }
+
         public new AERIALChangeable Props => (AERIALChangeable)props;
 
         public new ThingDef Projectile => !Loaded ? null : PeekNextProjectile;

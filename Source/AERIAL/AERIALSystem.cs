@@ -339,7 +339,21 @@ namespace RimValiFFARW
             top.DrawTurret(Vector3.zero, 0.0f);
             base.Draw();
         }
+        public override void Destroy(DestroyMode mode)
+        {
+            if (mode != DestroyMode.Deconstruct)
+            {
+                foreach (ThingDef def in ChangeableProjectile.LoadedShells)
+                {
+                    Thing thing = GenSpawn.Spawn(def, this.Position, this.Map);
+                    thing.TryGetComp<CompExplosive>().StartWick();
+                }
+            }
 
+            base.Destroy(mode);
+
+            
+        }
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (Gizmo gizmo in base.GetGizmos())
