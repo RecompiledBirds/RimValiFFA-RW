@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>RVFFA_MicroPlantingDrones</defName>
+		<label>Micro drone swarm (Plants)</label>
+		<description>A pod containing a micro-drone swarm. When installed onto a pawn, they gain the ability to summon micro-drones from their body to assist them with certain tasks. Sadly enough these swarms are very resource intensive and as such can only be assigned to a singular task. This swarm has been made with planting in mind.</description>
+		<spawnThingOnRemoved>RVFFA_MicroPlantingDrones</spawnThingOnRemoved>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<PlantWorkSpeed>0.4</PlantWorkSpeed>
+					<PlantHarvestYield>0.2</PlantHarvestYield>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+		</comps>
+	</HediffDef>
+
+	<ThingDef ParentName="AvaliBasicBodyPartBionicBase">
+		<defName>RVFFA_MicroPlantingDrones</defName>
+
+		<label>Micro drone swarm (Plants)</label>
+		<description>A pod containing a micro-drone swarm. When installed onto a pawn, they gain the ability to summon micro-drones from their body to assist them with certain tasks. Sadly enough these swarms are very resource intensive and as such can only be assigned to a singular task. This swarm has been made with planting in mind.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>RVFFA_InstallMicroPlantingDrones</RecipeDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cybernetics/Torso</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>30</ComponentIndustrial>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>MicroDrones</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RVFFA_InstallMicroPlantingDrones</defName>
+		<label>Install micro drone swarm (plants)</label>
+		<description>Install micro drone swarm (plants).</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_MicroPlantingDrones</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing micro drone swarm (plants).</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_MicroPlantingDrones</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_MicroPlantingDrones</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ribcage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RVFFA_MicroPlantingDrones</addsHediff>
+	</RecipeDef>
+</Defs>
