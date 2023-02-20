@@ -7,6 +7,9 @@
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
          <workAmount>30</workAmount>
+		<researchPrerequisites>
+			<li>RVFFA_FerroweaveTech</li>
+		</researchPrerequisites>
     </RecipeDef>
 
     <RecipeDef ParentName="RVFFA_BaseFerroweaveRecipe">

@@ -86,7 +86,9 @@
 			<li>RVFFA_MakeSabot</li>
 
 		</recipes>
-		<!-- TODO: RESEARCH-->
+		<researchPrerequisites>
+			<li>RVFFA_LathingTech</li>
+		</researchPrerequisites>
 
 		<graphicData>
 			<texPath>RimValiFFA/Buildings/Production/NanoForge</texPath>
@@ -141,7 +143,9 @@
 
 			<li>RVFFA_AeroTungstenFiberRecipe</li>
 		</recipes>
-		<!-- TODO: RESEARCH-->
+		<researchPrerequisites>
+			<li>RVFFA_LoomTech</li>
+		</researchPrerequisites>
 
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 	</ThingDef>
@@ -213,7 +217,7 @@
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 
 		<researchPrerequisites>
-			<li>RVFFA_BasicTech</li>
+			<li>RVFFA_BasicStartTech</li>
 		</researchPrerequisites>
 
 		<inspectorTabs Inherit="false"/>

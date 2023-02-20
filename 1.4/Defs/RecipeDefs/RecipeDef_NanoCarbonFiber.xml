@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <RecipeDef Name="RVFFA_BaseNanoCRecipe" Abstract="True">
-        <description>Weave nano carbon fiber.</description>
-        <jobString>Weaving nano carbon fiber.</jobString>
+        <description>Weave nano-carbon fiber.</description>
+        <jobString>Weaving nano-carbon fiber.</jobString>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <workAmount>100</workAmount>
         <soundWorking>Recipe_Smelt</soundWorking>
+		<researchPrerequisites>
+			<li>RVFFA_CarbonNanoFiberTech</li>
+		</researchPrerequisites>
     </RecipeDef>
 
     <RecipeDef ParentName="RVFFA_BaseNanoCRecipe">

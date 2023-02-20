@@ -9,6 +9,9 @@
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
+		<researchPrerequisites>
+			<li>RVFFA_AeroTungstenFiberTech</li>
+		</researchPrerequisites>
         <ingredients>
         <li>
             <filter>

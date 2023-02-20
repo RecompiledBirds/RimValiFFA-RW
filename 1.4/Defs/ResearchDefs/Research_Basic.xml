@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef Name="RVFFA_BaseResearch" Abstract="True">
+		<tab>RVFFA_Research</tab>
+		<requiredResearchBuilding>RVFFA_ResearchBench</requiredResearchBuilding>
+		<techLevel>Spacer</techLevel>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>RVFFA_BasicStartTech</defName>
+		<label>Low-power Nexus connection</label>
+		<description>Establish a primitive connection to the Nexus. The primitiveness of this connection means the information we can transmit and recieve is limited. More advanced technologies will need something better...</description>
+		<tab>RVFFA_Research</tab>
+		<baseCost>300</baseCost>
+		<techLevel>Spacer</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_LathingTech</defName>
+		<label>Molecular lathing</label>
+		<description>Using extreme temperatures and nanotechnology, we can restructure materials at a molecular level.</description>
+		<baseCost>500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.05</researchViewY>
+		<prerequisites>
+			<li>RVFFA_BasicStartTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_FerrogelTech</defName>
+		<label>Ferrogel production</label>
+		<description>Ferrogel is a component in many Illuminate structures and weapons, and is highly versatile. It is of utmost important we have a nanolathe configuration to produce it.</description>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>3.05</researchViewY>
+		<prerequisites>
+			<li>RVFFA_LathingTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_CarbonTech</defName>
+		<label>Carbon Extraction</label>
+		<description>Our nanolathes should be able to extract carbon from given resources for future processing. Carbon is used in multiple crafting recipes, but ultimately does very little by itself.</description>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.05</researchViewY>
+		<baseCost>300</baseCost>
+		<prerequisites>
+			<li>RVFFA_FerrogelTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_TungstenProcessingTech</defName>
+		<label>Tungsten Processing</label>
+		<description>Tungsten is a vital resource for many Illuminate technologies, however it is next to useless in it's raw form. We can configure our nanolathes to process raw tungsten into a more usable form.</description>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>3.05</researchViewY>
+		<baseCost>300</baseCost>
+		<prerequisites>
+			<li>RVFFA_CarbonTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AeroTungstenTech</defName>
+		<label>Aero-tungsten Carbide Forging</label>
+		<description>Using our nanolathes, we can forge tungsten, ferrogel, and carbon into a high-durability metal.</description>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>3.05</researchViewY>
+		<baseCost>1500</baseCost>
+		<prerequisites>
+			<li>RVFFA_TungstenProcessingTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_Nanomachines</defName>
+		<label>Nanotechnology</label>
+		<description>Aerotungsten's unique properties can be exploited to create flexible computers on a molecular scale.</description>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>3.05</researchViewY>
+		<baseCost>4000</baseCost>
+		<prerequisites>
+			<li>RVFFA_AeroTungstenTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_LoomTech</defName>
+		<label>Molecular weaving</label>
+		<description>We can apply the processes used in looms on a molecular scale to create more resistant fabric-like materials</description>
+		<baseCost>500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.35</researchViewY>
+		<prerequisites>
+			<li>RVFFA_BasicStartTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_NanoFiberTech</defName>
+		<label>Nanofibers</label>
+		<description>By using our newly designed nanoloom, we can start to weave materials on a molecular level. This fiber is a perfect way to test our nanoloom, and make sure all functions work as intended. It is also somewhat better than normal fabric.</description>
+		<prerequisites>
+			<li>RVFFA_LoomTech</li>
+		</prerequisites>
+		<baseCost>200</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.35</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_CarbonNanoFiberTech</defName>
+		<label>Interlocking materials</label>
+		<description>Now that we have proven our nanoloom to be fully functional, we can start to interweave different types of materials. Carbon and nanofiber should create a particularly resistant fabric.</description>
+		<prerequisites>
+			<li>RVFFA_NanoFiberTech</li>
+		</prerequisites>
+		<baseCost>300</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>1.35</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_FerroweaveTech</defName>
+		<label>Ferrogel Insulation</label>
+		<description>Ferrogel is a particularly good insulation material. By interweaving it with nanofiber, we believe we could create a fabric with similar properties.</description>
+		<prerequisites>
+			<li>RVFFA_NanoFiberTech</li>
+		</prerequisites>
+		<baseCost>400</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.35</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AeroTungstenFiberTech</defName>
+		<label>Restructured aero-tungsten</label>
+		<description>We can interlace our fabric with aero-tungsten carbide to gain some of it's high structural stability in fabric. Naturally, it is not quite as strong.</description>
+		<prerequisites>
+			<li>RVFFA_CarbonNanoFiberTech</li>
+			<li>RVFFA_FerroweaveTech</li>
+		</prerequisites>
+		<baseCost>2000</baseCost>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>1.35</researchViewY>
+	</ResearchProjectDef>
+</Defs>
