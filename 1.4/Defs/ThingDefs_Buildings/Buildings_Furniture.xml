@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="RVFFA_BasePillowPile" ParentName="FurnitureWithQualityBase" Abstract="True">
+		<thingClass>Building_Bed</thingClass>
+		<rotatable>true</rotatable>
+		<fillPercent>0.15</fillPercent>
+		<pathCost>14</pathCost>
+		<passability>PassThroughOnly</passability>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>true</castEdgeShadows>
+		<uiIconScale>0.80</uiIconScale>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+
+		<building>
+			<bed_humanlike>true</bed_humanlike>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+			<destroySound>BuildingDestroyed_Soft_Small</destroySound>
+			<buildingTags>
+				<li>Bed</li>
+			</buildingTags>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+				</linkableFacilities>
+			</li>
+			<li Class=" RVCRestructured.RVCBeds.ResizedBedCompProperties"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="RVFFA_BasePillowPile">
+		<defName>RVFFA_PillowBed</defName>
+		<label>avali bed</label>
+		<description>A soft bed for Avali to sleep on. Not to be confused with an animal bed, as that wouldn't be appreciated.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Beds/AvaliBed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<costStuffCount>40</costStuffCount>
+		<size>(1,1)</size>
+
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToBuild>400</WorkToBuild>
+			<Mass>5</Mass>
+			<Comfort>0.75</Comfort>
+			<Beauty>2</Beauty>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BasePillowPile">
+		<defName>RVFFA_MediumPillowPile</defName>
+		<label>pile of pillows</label>
+		<description>A moderate clump of pillows piled neatly together for Avali to rest on. This pile has been arranged for a small Avali pack to sleep together on.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Beds/AvaliPillowsMedium</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+
+		<costStuffCount>90</costStuffCount>
+		<size>(2,2)</size>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToBuild>400</WorkToBuild>
+			<Mass>6.5</Mass>
+			<Comfort>0.75</Comfort>
+			<Beauty>2</Beauty>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BasePillowPile">
+		<defName>RVFFA_LargePillowPile</defName>
+		<label>large pile of pillows</label>
+		<description>A large clump of pillows piled neatly together for Avali to rest on. This pile has been arranged for an entire Avali pack to sleep together on.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Beds/AvaliPillowsLarge</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>3</drawSize>
+		</graphicData>
+
+		<costStuffCount>120</costStuffCount>
+		<size>(3,2)</size>
+
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToBuild>400</WorkToBuild>
+			<Mass>8</Mass>
+			<Comfort>0.75</Comfort>
+			<Beauty>2</Beauty>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+	</ThingDef>
+</Defs>
