@@ -44,6 +44,7 @@
 					<li>RVFFA_IlluminateEndTable</li>
 				</linkableFacilities>
 			</li>
+			<li Class="RVCRestructured.RVCBeds.ResizedBedCompProperties"/>
 		</comps>
 	</ThingDef>
 
