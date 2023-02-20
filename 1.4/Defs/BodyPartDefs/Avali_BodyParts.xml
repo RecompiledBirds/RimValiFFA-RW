@@ -28,4 +28,32 @@
 		<beautyRelated>true</beautyRelated>
 		<bleedRate>0.3</bleedRate>
 	</BodyPartDef>
+	
+	<ThingDef ParentName="BodyPartNaturalBase">
+		<defName>RVFFA_Tail</defName>
+		<label>Avali tail</label>
+		<description>An avali tail.</description>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<BodyPartDef>
+		<defName>RVFFA_Tail</defName>
+		<label>Tail</label>
+		<hitPoints>15</hitPoints>
+		<permanentInjuryChanceFactor>18</permanentInjuryChanceFactor>
+		<delicate>true</delicate>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<bleedRate>0.5</bleedRate>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+		<spawnThingOnRemoved>RVFFA_Tail</spawnThingOnRemoved>
+		<destroyableByDamage>true</destroyableByDamage>
+	</BodyPartDef>
 </Defs>

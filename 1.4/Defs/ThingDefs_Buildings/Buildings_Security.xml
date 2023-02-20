@@ -109,7 +109,9 @@
           <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
           <turretTopDrawSize>3</turretTopDrawSize>
         </building>
-	
+		<researchPrerequisites>
+			<li>RVFFA_BasicWeaponsTech</li>
+		</researchPrerequisites>
 	</ThingDef>
 
     <ThingDef ParentName="BaseWeaponTurret">
@@ -242,6 +244,9 @@
           <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
           <turretTopDrawSize>3</turretTopDrawSize>
         </building>
+		<researchPrerequisites>
+			<li>RVFFA_TurretTech</li>
+		</researchPrerequisites>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
@@ -375,6 +380,9 @@
           <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
           <turretTopDrawSize>3.5</turretTopDrawSize>
         </building>
+		<researchPrerequisites>
+			<li>RVFFA_TurretTech</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
@@ -452,7 +460,7 @@
 			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>RVFFA_AIMSRes</li>
+			<li>RVFFA_AIMSTech</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="CompProperties_Explosive">
@@ -535,7 +543,7 @@
 			<drawSize>(3,3)</drawSize>
 		</graphicData>
 		<researchPrerequisites>
-			<li>RVFFA_AERIAL</li>
+			<li>RVFFA_AERIALTech</li>
 		</researchPrerequisites>
 		<comps Inherit="False">
 			<li Class="CompProperties_Forbiddable"/>

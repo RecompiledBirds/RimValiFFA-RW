@@ -186,6 +186,7 @@
 		</graphicData>
 
 		<statBases Inherit="false">
+			<Mass>10</Mass>
 			<MaxHitPoints>250</MaxHitPoints>
 			<WorkToBuild>5000</WorkToBuild>
 			<WorkTableWorkSpeedFactor>1.42</WorkTableWorkSpeedFactor>

@@ -62,7 +62,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AIMSRes</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AIMSTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
@@ -112,7 +112,7 @@
 			<Chemfuel>15</Chemfuel>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AIMSRes</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AIMSTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
@@ -163,7 +163,7 @@
 			<Chemfuel>24</Chemfuel>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AIMSRes</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AIMSTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
@@ -252,7 +252,7 @@
 			<Uranium>10</Uranium>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AERIAL</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AERIALTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
@@ -304,7 +304,7 @@
 			<ComponentSpacer>3</ComponentSpacer>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AERIAL</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AERIALTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
@@ -355,7 +355,7 @@
 			<Chemfuel>30</Chemfuel>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AERIAL</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AERIALTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 

@@ -418,7 +418,7 @@
 					</groups>
 				</li>
 				<li>
-					<def>RimValiTail</def>
+					<def>RVFFA_Tail</def>
 					<customLabel>avali Tail</customLabel>
 					<coverage>0.05</coverage>
 					<height>Bottom</height>

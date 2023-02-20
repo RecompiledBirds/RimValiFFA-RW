@@ -51,7 +51,7 @@
 			<MarketValue>300</MarketValue>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>AdvancedAvaliBionics</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedBionicsTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
@@ -79,7 +79,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>RimValiTail</li>
+			<li>RVFFA_Tail</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>RVFFA_AdvTail</addsHediff>
 	</RecipeDef>
