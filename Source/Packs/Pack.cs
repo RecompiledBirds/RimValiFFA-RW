@@ -144,6 +144,7 @@ namespace RimValiFFARW.Packs
         /// <returns>True if successful, false if a member couldn't be removed for any reason.</returns>
         public bool RemoveMember(Pawn member)
         {
+            if (member == null) return false;
             if (!worker.MemberCanLeave(member, this)) return false;
             if (!members.Remove(member)) return false;
 
