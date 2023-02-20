@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Parentname="BedWithQualityBase" Name="RVFFA_BedWithQualityBase" Abstract="True">
+		<designationHotKey>Misc2</designationHotKey>
+		<castEdgeShadows>True</castEdgeShadows>
+		<size>(1,2)</size>
+
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li>RVFFA_IlluminateEndTable</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BedWithQualityBase">
+		<designationCategory>RVFFA_Furniture</designationCategory>
+		<defName>RVFFA_Hammock</defName>
+		<label>Avali hammock</label>
+		<description>A cozy hammock suspended between two poles specially designed for resting and Avali in mind. This setup is even usable while caravaning!</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Furniture/hammock_bed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>2.5</Mass>
+			<BedRestEffectiveness>0.95</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+			<Comfort>0.68</Comfort>
+			<WorkToBuild>600</WorkToBuild>
+		</statBases>
+		
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		
+		<costStuffCount>40</costStuffCount>
+		
+		<building>
+			<bed_showSleeperBody>false</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+			<bed_caravansCanUse>true</bed_caravansCanUse>
+			<destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+			<destroyShakeAmount>0</destroyShakeAmount>
+		</building>
+		
+		<pathCost>14</pathCost>
+		<passability>Standable</passability>
+	</ThingDef>
+
+	<ThingDef ParentName="BedWithQualityBase">
+		<designationCategory>RVFFA_Furniture</designationCategory>
+		<defName>RVFFA_Bed</defName>
+		<label>Avali bed</label>
+		<description>A cozy mattress and sheets on a frame for resting. Inspired by its Terran counterparts, this model has been redesigned to better suit an Avali's smaller stature.</description>
+		
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Furniture/casket_bed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,2)</drawSize>
+			<damageData>
+				<rect>(0,0.05,1,1.95)</rect>
+			</damageData>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+			<WorkToBuild>800</WorkToBuild>
+			<Mass>30</Mass>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<Comfort>0.75</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		
+		<costStuffCount>45</costStuffCount>
+		
+		<building>
+			<bed_showSleeperBody>False</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<staticSunShadowHeight>0.17</staticSunShadowHeight>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+	</ThingDef>
+	
+	<!--EndTable-->
+	<ThingDef ParentName="TableBase">
+		<designationCategory>RVFFA_Furniture</designationCategory>
+		<defName>RVFFA_IlluminateEndTable</defName>
+		<label>Avali end table</label>
+		<description>A small bedside table that makes nearby beds a little more comfortable. This one has been designed in a more Avalonian style, sporting an angular look as well as small crystals on the top that light up when receiving power.</description>
+		<surfaceType>Item</surfaceType>
+		<!--<size>(1,2)</size>-->
+		
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Furniture/TableLight/Unlit/EndTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<!--<drawSize>(1,2)</drawSize>-->
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Mass>5</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>3</Beauty>
+		</statBases>
+		<pathCost>30</pathCost>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<costStuffCount>30</costStuffCount>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Comfort>0.05</Comfort>
+				</statOffsets>
+				<maxSimultaneous>1</maxSimultaneous>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+			<li Class="RVCRestructured.Comps.DrawCompProps">
+				<texPath>RimValiFFA/Buildings/Furniture/TableLight/Lit/EndTableLit</texPath>
+				<offset>(0,0,0)</offset>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>30</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(255, 102, 0,0)</glowColor>
+			</li>
+		</comps>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<castEdgeShadows>false</castEdgeShadows>
+	</ThingDef>
+</Defs>
