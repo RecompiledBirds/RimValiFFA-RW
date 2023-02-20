@@ -31,6 +31,8 @@ namespace RimValiFFARW.StoryTellers
         public float offDays;
         public float onDays;
 
+        public float minAcceptablePawnThreshold;
+
         public RVFFA_Storyteller()
         {
             compClass = typeof(RVFFA_StoryTellerComp);
@@ -49,6 +51,15 @@ namespace RimValiFFARW.StoryTellers
                 return dislikedPawns > 0;
             }
         }
+
+        public bool HasDislikedPawnsWithThres
+        {
+            get
+            {
+                return HasDislikedPawns && Props.minAcceptablePawnThreshold<RatioDislikedLiked;
+            }
+        }
+
 
         public int RatioLikedDisliked
         {
@@ -232,7 +243,7 @@ namespace RimValiFFARW.StoryTellers
             if (!data.HasUpdatedInXDays(5))
                 return;
 
-            if(HasDislikedPawns && data.StorytellerState>=0 && Rand.Chance(0.1f))
+            if(HasDislikedPawnsWithThres && data.StorytellerState>=0 && Rand.Chance(0.1f))
             {
                 data.UpdateDays();
                 data.StorytellerState--;
@@ -241,21 +252,21 @@ namespace RimValiFFARW.StoryTellers
 
             if (data.StorytellerState == 0 && Rand.Chance(0.2f))
             {
-                data.StorytellerState += random.Next(-1, RatioDislikedLiked<0.4f? 1 : 0);
+                data.StorytellerState += random.Next(-1, HasDislikedPawnsWithThres ? 1 : 0);
                 data.UpdateDays();
                 return;
             }
 
             if(data.StorytellerState==StorytellerState.Angered && Rand.Chance(0.2f))
             {
-                data.StorytellerState += random.Next(0, RatioDislikedLiked<0.6f? 1 : 0);
+                data.StorytellerState += random.Next(0, HasDislikedPawnsWithThres ? 1 : 0);
                 data.UpdateDays();
                 return;
             }
 
             if (data.StorytellerState == StorytellerState.Friendly && Rand.Chance(0.5f))
             {
-                data.StorytellerState -= random.Next(RatioDislikedLiked<0.1f? 0:-1, 1);
+                data.StorytellerState -= random.Next(HasDislikedPawnsWithThres ? 0:-1, 1);
                 data.UpdateDays();
                 return;
             }
