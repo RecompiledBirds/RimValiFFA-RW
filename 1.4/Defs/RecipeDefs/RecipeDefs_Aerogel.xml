@@ -8,6 +8,10 @@
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
+
+		<researchPrerequisites>
+			<li>RVFFA_FerrogelTech</li>
+		</researchPrerequisites>
 	</RecipeDef>
 	
 	<RecipeDef ParentName="RVFFA_BaseFerogelRecipe">

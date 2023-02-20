@@ -1,16 +1,16 @@
 ﻿using RimWorld;
+using RVCRestructured.RVR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Verse;
 
-namespace RimValiFFARW.Nexus
+namespace RimValiFFARW
 {
     [DefOf]
-    public static class NexusDefOf
+    public static class RVFFA_Defs
     {
-        public static ThingDef RVFFA_Nexus;
+        public static RaceDef RVFFA_Avali;
     }
 }

@@ -34,7 +34,7 @@
 			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>BasicAvaliBionics</researchPrerequisite>
+			<researchPrerequisite>RVFFA_BasicBionics</researchPrerequisite>
 		</recipeMaker>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>

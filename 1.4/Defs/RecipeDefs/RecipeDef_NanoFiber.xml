@@ -7,6 +7,9 @@
         <effectWorking>Smelt</effectWorking>
         <workAmount>7</workAmount>
         <soundWorking>Recipe_Smelt</soundWorking>
+		<researchPrerequisites>
+			<li>RVFFA_NanoFiberTech</li>
+		</researchPrerequisites>
     </RecipeDef>
 
     <RecipeDef ParentName="RVFFA_BaseNanofiberRecipe">
