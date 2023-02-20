@@ -12,7 +12,7 @@ namespace RimValiFFARW.Nexus
     {
         public static Thing GenNexus()
         {
-            return ThingMaker.MakeThing(NexusDefOf.RVFFA_AvaliNexus);
+            return ThingMaker.MakeThing(NexusDefOf.RVFFA_Nexus);
         }
 
         public static Thing SpawnNexus(Map map, IntVec3 pos)

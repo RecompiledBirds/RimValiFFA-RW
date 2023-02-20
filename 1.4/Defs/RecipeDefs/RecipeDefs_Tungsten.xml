@@ -7,6 +7,10 @@
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
+
+		<researchPrerequisites>
+			<li>RVFFA_TungstenProcessingTech</li>
+		</researchPrerequisites>
 	</RecipeDef>
 
 	<RecipeDef ParentName="RVFFA_BaseTungstenRecipe">

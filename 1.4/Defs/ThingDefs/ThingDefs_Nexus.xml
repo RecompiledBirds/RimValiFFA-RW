@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="BuildingBase">
-		<defName>RVFFA_AvaliNexus</defName>
+		<defName>RVFFA_Nexus</defName>
 		<label>Illuminate Nexus Connection</label>
 		<description>This device allows all other devices on it's network to connect with the Illuminate.</description>
 		<graphicData>

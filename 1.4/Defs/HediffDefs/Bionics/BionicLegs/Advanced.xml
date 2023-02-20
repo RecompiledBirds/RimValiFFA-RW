@@ -25,7 +25,7 @@
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AdvancedBionics</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedBionicsTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 	
@@ -74,7 +74,7 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
 					<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
-					<HealthIncreasePercent>15</HealthIncreasePercent>
+					<RVC_HealthOffset>15</RVC_HealthOffset>
 				</statOffsets>
 			</li>
 		</stages>

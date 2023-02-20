@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef Name="RVFFA_NanomachinesRecipe" Abstract="True">
+		<label>Assemble nanomachines</label>
+		<description>Use aerotungsten carbide and other high-end resources to assemble nanomachinesS.</description>
+		<jobString>Assemble Nanomachines</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+
+		<researchPrerequisites>
+			<li>RVFFA_Nanomachines</li>
+		</researchPrerequisites>
+	</RecipeDef>
+
+	<RecipeDef ParentName="RVFFA_NanomachinesRecipe">
+		<defName>RVFFA_AssembleNanoMachines</defName>
+		<workAmount>5000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Ferrogel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_AeroTungstenCarbide</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_ProcessedTungsten</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<RVFFA_Nanomachines>25</RVFFA_Nanomachines>
+		</products>
+	</RecipeDef>
+
+</Defs>

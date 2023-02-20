@@ -28,11 +28,11 @@
 			<Mass>0.3</Mass>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AdvCooling</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedImplantsTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 	
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
 		<defName>RVFFA_InstallTemperatureImplantAdv</defName>
 		<label>Install advanced Temperature Control Augment (T.C.A.)</label>
 		<description>Install advanced Temperature Control Augment (T.C.A.).</description>

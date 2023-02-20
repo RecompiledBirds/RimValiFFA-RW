@@ -43,11 +43,11 @@
 			<MarketValue>500</MarketValue>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>MicroDrones</researchPrerequisite>
+			<researchPrerequisite>RVFFA_MicrodronesTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 	
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
 		<defName>RVFFA_InstallMicroPlantingDrones</defName>
 		<label>Install micro drone swarm (plants)</label>
 		<description>Install micro drone swarm (plants).</description>

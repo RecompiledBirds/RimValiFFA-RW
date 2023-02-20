@@ -67,6 +67,10 @@
 			</tags>
         </apparel>
         <colorGenerator Class="ColorGenerator_StandardApparel" />
+
+		<researchPrerequisites>
+			<li>RVVFA_BasicApparelTech</li>
+		</researchPrerequisites>
     </ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseApparel" Name="RVFFA_BaseArmor" Abstract="True">

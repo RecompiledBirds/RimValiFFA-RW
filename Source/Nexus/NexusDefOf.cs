@@ -11,6 +11,6 @@ namespace RimValiFFARW.Nexus
     [DefOf]
     public static class NexusDefOf
     {
-        public static ThingDef RVFFA_AvaliNexus;
+        public static ThingDef RVFFA_Nexus;
     }
 }

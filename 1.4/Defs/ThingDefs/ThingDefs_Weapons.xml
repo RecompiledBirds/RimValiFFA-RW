@@ -37,7 +37,7 @@
                 <li>RVFFA_NanoForge</li>
             </recipeUsers>
             <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -127,6 +127,7 @@
         </costList>
 
         <recipeMaker>
+			<researchPrerequisite>RVFFA_BasicWeaponsTech</researchPrerequisite>
             <skillRequirements>
                 <Crafting>2</Crafting>
             </skillRequirements>
@@ -1255,7 +1256,7 @@
 		</recipeMaker>
 	</ThingDef>
 
-	<!-- Revolver -->
+
 	<ThingDef ParentName="BaseBullet">
 		<defName>RVFFA_IW_Revolver_Bullet</defName>
 		<label>Bullet</label>
@@ -1331,6 +1332,323 @@
 			<skillRequirements>
 				<Crafting>2</Crafting>
 			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef Name="RVFFA_SharpMeleeWithQuality" Abstract="True" ParentName="BaseMeleeWeapon_Sharp">
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponMelee</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Scythe</defName>
+		<label>Illuminate Scythe</label>
+		<description>A high-tech Illuminate scythe. Unlike most Ferrogel weapons, this one’s blade isn’t actually supposed to break in the target. Despite this it still has an advanced printer in the blade’s base to replace it when it gets dull. Whilst its viability for actual combat is questionable, being attacked by this weapon is still going to deal great damage.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Scythe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>AvaliWeapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<costList>
+			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
+			<Steel>20</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>Scythe Handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>Scythe Blade</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>RVFFA_NanoForge</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Axe</defName>
+		<label>Illuminate Axe</label>
+		<description>A dangerous Illuminate battle axe. Truly meant for combat, this weapon uses vibrations to cut into the skin of the enemy, after multiple hits the blade will break off and stick in its target’s flesh before rapidly being reconstructed by the printer in its head. It is renowned for its brutality and the surprising force an Avali can strike down with it.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Axe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>AvaliWeapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<costList>
+			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
+			<Steel>15</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>Axe Handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>Avali Axe Blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>5.2</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>RVFFA_NanoForge</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Knife</defName>
+		<label>Illuminate knife</label>
+		<description>A small Illuminate survival knife. Whilst primarily used together with its vibrating blade as a tool to cut food and small objects with, it is still a dangerous hold-out weapon, able to use its vibrating blade to cut through an enemy with ease and being able to reprint the blade when it shatters in the enemy or simply gets too dull with just the same amount of ease.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Knife</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>AvaliWeapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<costList>
+			<RVFFA_Ferrogel>5</RVFFA_Ferrogel>
+			<Steel>5</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>knife Handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>1</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>Knife Blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>2.2</power>
+				<cooldownTime>0.2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_BasicWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>RVFFA_NanoForge</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Spear</defName>
+		<label>Illuminate Spear</label>
+		<description>An elegant and long Illuminate spear. Being popular for both the low amount of training required and the large amount of ferrogel able to be stored in it to reprint its head with. It is perhaps the most viable weapon to train beginners with but is also dangerous in the talons of masters with its sharp and explicitly fragile head.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Spear</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<RVFFA_Ferrogel>5</RVFFA_Ferrogel>
+			<Steel>35</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<weaponTags>
+			<li>AvaliWeapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>Avali Spear Handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>Avali Spear Blade</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>5</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>RVFFA_NanoForge</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Viroblae</defName>
+		<label>Illuminate Viroblade</label>
+		<description>The renowned and highly iconic Illuminate sword. Perhaps it is the vibrating blade and the song-like hum it creates that makes it so popular. Or perhaps it is the splintering ferrogel blade instead, creating many deadly injuries. Whatever the reason may be, this blade has a legendary reputation and a bodycount to support it.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Viroblade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>AvaliWeapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<costList>
+			<RVFFA_Ferrogel>15</RVFFA_Ferrogel>
+			<Steel>35</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>Viroblade Handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>3</cooldownTime>
+			</li>
+			<li>
+				<label>Viroblade guard</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>Viroblade</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>2.5</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>RVFFA_NanoForge</li>
+			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>
 </Defs>

@@ -46,7 +46,7 @@
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>BasicAvaliImplants</researchPrerequisite>
+			<researchPrerequisite>RVFFA_BasicImplantsTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
