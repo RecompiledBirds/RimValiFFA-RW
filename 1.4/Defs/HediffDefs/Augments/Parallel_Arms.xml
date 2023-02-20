@@ -46,7 +46,7 @@
 			<MarketValue>1600</MarketValue>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>AdvancedAvaliBionics</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedBionics</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 

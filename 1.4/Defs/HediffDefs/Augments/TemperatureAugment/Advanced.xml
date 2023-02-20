@@ -28,7 +28,7 @@
 			<Mass>0.3</Mass>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AdvCooling</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedCooling</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 	

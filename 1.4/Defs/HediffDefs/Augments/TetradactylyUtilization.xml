@@ -41,7 +41,7 @@
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>BasicAvaliBionics</researchPrerequisite>
+			<researchPrerequisite>RVFFA_BasicBionics</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
