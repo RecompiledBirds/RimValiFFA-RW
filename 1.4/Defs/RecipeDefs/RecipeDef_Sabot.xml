@@ -4,7 +4,7 @@
 		<defName>RVFFA_MakeSabot</defName>
 		<label>Forge sabots</label>
 		<description>Forge sabots from tungsten.</description>
-		<jobString>Forgin sabots</jobString>
+		<jobString>Forging sabots</jobString>
 		<workAmount>150</workAmount>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
@@ -30,5 +30,9 @@
 		<products>
 			<RVFFA_Sabot>5</RVFFA_Sabot>
 		</products>
+
+		<researchPrerequisites>
+			<li>RVFFA_TurretTech</li>
+		</researchPrerequisites>
 	</RecipeDef>
 </Defs>

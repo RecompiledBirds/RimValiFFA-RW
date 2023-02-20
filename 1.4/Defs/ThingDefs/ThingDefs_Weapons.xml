@@ -37,7 +37,7 @@
                 <li>RVFFA_NanoForge</li>
             </recipeUsers>
             <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -127,6 +127,7 @@
         </costList>
 
         <recipeMaker>
+			<researchPrerequisite>RVFFA_BasicWeaponsTech</researchPrerequisite>
             <skillRequirements>
                 <Crafting>2</Crafting>
             </skillRequirements>
@@ -1396,7 +1397,7 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<researchPrerequisite>AvaliAdvancedMelee</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
@@ -1455,7 +1456,7 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<researchPrerequisite>AvaliAdvancedMelee</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>7</Crafting>
 			</skillRequirements>
@@ -1514,7 +1515,7 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<researchPrerequisite>AvaliBasicWeapons</researchPrerequisite>
+			<researchPrerequisite>RVFFA_BasicWeaponsTech</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>2</Crafting>
 			</skillRequirements>
@@ -1573,7 +1574,7 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<researchPrerequisite>AvaliBasicWeapons</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
@@ -1641,7 +1642,7 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<researchPrerequisite>AvaliAdvancedMelee</researchPrerequisite>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>10</Crafting>
 			</skillRequirements>

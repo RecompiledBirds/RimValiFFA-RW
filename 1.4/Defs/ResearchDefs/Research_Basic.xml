@@ -22,7 +22,7 @@
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_LathingTech</defName>
-		<label>Molecular lathing</label>
+		<label>Molecular Lathing</label>
 		<description>Using extreme temperatures and nanotechnology, we can restructure materials at a molecular level.</description>
 		<baseCost>500</baseCost>
 		<researchViewX>1.00</researchViewX>
@@ -34,8 +34,8 @@
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_FerrogelTech</defName>
-		<label>Ferrogel production</label>
-		<description>Ferrogel is a component in many Illuminate structures and weapons, and is highly versatile. It is of utmost important we have a nanolathe configuration to produce it.</description>
+		<label>Ferrogel Production</label>
+		<description>Ferrogel is a component in many Illuminate structures and weapons, and is highly versatile. It is of utmost importance we have a nanolathe configuration to produce it.</description>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>3.05</researchViewY>
 		<prerequisites>
@@ -68,6 +68,150 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_BasicImplantsTech</defName>
+		<label>Implant Technology</label>
+		<description>Implants have always been a key component to the Illuminate's success. If we want to continue to be successful, we should study them ourselves as well.</description>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+		<baseCost>500</baseCost>
+		<prerequisites>
+			<li>RVFFA_TungstenProcessingTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AdvancedImplantsTech</defName>
+		<label>Advanced Implant Technology</label>
+		<description>Our current implant technologies are useful, but we could use them to do so much more.</description>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>5.05</researchViewY>
+		<baseCost>750</baseCost>
+		<prerequisites>
+			<li>RVFFA_TungstenProcessingTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_MicrodronesTech</defName>
+		<label>Micro-drones</label>
+		<description>Micro-drones are minature computer systems, though not quite small enough to justify the name "nanomachine". We can equip them to help the user in several tasks.</description>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>6.05</researchViewY>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>RVFFA_AdvancedImplantsTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_Nanomachines</defName>
+		<label>Nanotechnology</label>
+		<description>Aerotungsten's unique properties can be exploited to create flexible computers on a molecular scale.</description>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>7.05</researchViewY>
+		<baseCost>4000</baseCost>
+		<prerequisites>
+			<li>RVFFA_MicrodronesTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_BasicBionicsTech</defName>
+		<label>Simple Bionics</label>
+		<description>Many avali also have bionic limbs to compliment their augmentations. While we cannot manufacture anything near the Illuminate's production quality yet, we can produce simplistic bionics that give us slight improvements over organic limbs.</description>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>5.05</researchViewY>
+		<baseCost>600</baseCost>
+		<prerequisites>
+			<li>RVFFA_BasicImplantsTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AdvancedBionicsTech</defName>
+		<label>Advanced Bionics technolgies</label>
+		<description>We can further specialize our colonists with powerful, high-end bionic limbs.</description>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>6.05</researchViewY>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>RVFFA_BasicBionicsTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_BasicWeaponsTech</defName>
+		<label>Basic Illuminate Weaponry</label>
+		<description>Now that we have access to tungsten, we can start manufacturing weapons to defend ourselves.</description>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+		<baseCost>350</baseCost>
+		<prerequisites>
+			<li>RVFFA_TungstenProcessingTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AdvancedWeaponryTech</defName>
+		<label>Advanced Coilguns</label>
+		<description>With significant improvements to our coilgun designs, we can create more powerful, specialized weaponry.</description>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+		<baseCost>700</baseCost>
+		<prerequisites>
+			<li>RVFFA_BasicWeaponsTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_TurretTech</defName>
+		<label>Defensive Solutions</label>
+		<description>We should take steps to defend our colony. A clear, and straightfoward step towards this is unmanned turrets, which need little supervision when defending our colony from would-be attackers.</description>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+		<baseCost>950</baseCost>
+		<prerequisites>
+			<li>RVFFA_AdvancedWeaponryTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AIMSTech</defName>
+		<label>Suborbital Rocketry</label>
+		<description>We can enhance both our offensive and defensive capability with sub-orbital rocketry weapons, not unlike mortars used by other inhabitants of the rimworld. However, we can make our system significantly more accurate with computer assist systems.</description>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>RVFFA_TurretTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AERIALTech</defName>
+		<label>AERIAL</label>
+		<description>The AERIAL system is the final solution to all long-range attacks, featuring high-power explosives, a fully automated launch system, and the capacity to hold 6 rockets at one, as well as simultaneously fire two at once.</description>
+		<researchViewX>9.00</researchViewX>
+		<researchViewY>4.05</researchViewY>
+		<baseCost>5000</baseCost>
+		<prerequisites>
+			<li>RVFFA_AIMSTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AdvancedMeleeWeaponsTech</defName>
+		<label>Advanced Melee Tech</label>
+		<description>We can use ferrogel and tungsten to make higher-end Illuminate weaponry.</description>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>5.05</researchViewY>
+		<baseCost>650</baseCost>
+		<prerequisites>
+			<li>RVFFA_BasicWeaponsTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_AeroTungstenTech</defName>
 		<label>Aero-tungsten Carbide Forging</label>
 		<description>Using our nanolathes, we can forge tungsten, ferrogel, and carbon into a high-durability metal.</description>
@@ -78,22 +222,10 @@
 			<li>RVFFA_TungstenProcessingTech</li>
 		</prerequisites>
 	</ResearchProjectDef>
-
-	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
-		<defName>RVFFA_Nanomachines</defName>
-		<label>Nanotechnology</label>
-		<description>Aerotungsten's unique properties can be exploited to create flexible computers on a molecular scale.</description>
-		<researchViewX>6.00</researchViewX>
-		<researchViewY>3.05</researchViewY>
-		<baseCost>4000</baseCost>
-		<prerequisites>
-			<li>RVFFA_AeroTungstenTech</li>
-		</prerequisites>
-	</ResearchProjectDef>
 	
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_LoomTech</defName>
-		<label>Molecular weaving</label>
+		<label>Molecular Weaving</label>
 		<description>We can apply the processes used in looms on a molecular scale to create more resistant fabric-like materials</description>
 		<baseCost>500</baseCost>
 		<researchViewX>1.00</researchViewX>
@@ -116,8 +248,56 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVVFA_BasicApparelTech</defName>
+		<label>Common Illuminate Apparel</label>
+		<description>We can also use our nanoloom like a normal loom; it is equally capable of creating clothing.</description>
+		<prerequisites>
+			<li>RVFFA_NanoFiberTech</li>
+		</prerequisites>
+		<baseCost>600</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_ScoutingTech</defName>
+		<label>Scouting Equipment</label>
+		<description>It is highly likely that we will have to explore beyond our colony, for one reason or another. We should design armour to protect our scouts, while keeping them lightweight.</description>
+		<prerequisites>
+			<li>RVVFA_BasicApparelTech</li>
+		</prerequisites>
+		<baseCost>850</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_CombatTech</defName>
+		<label>Combat-ready Armour</label>
+		<description>We need to be ready for any type of opponent. With how frail the Avali are, combat armour will play a critical role in our survival.</description>
+		<prerequisites>
+			<li>RVFFA_ScoutingTech</li>
+		</prerequisites>
+		<baseCost>1100</baseCost>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_SpecOpsTech</defName>
+		<label>Elite Operations</label>
+		<description>We can take our combat capabilities even further. This suits powerful augmentations and user integration make it one of the most powerful Illuminate designs we can access.</description>
+		<prerequisites>
+			<li>RVFFA_CombatTech</li>
+		</prerequisites>
+		<baseCost>3000</baseCost>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_CarbonNanoFiberTech</defName>
-		<label>Interlocking materials</label>
+		<label>Interlocking Materials</label>
 		<description>Now that we have proven our nanoloom to be fully functional, we can start to interweave different types of materials. Carbon and nanofiber should create a particularly resistant fabric.</description>
 		<prerequisites>
 			<li>RVFFA_NanoFiberTech</li>
@@ -140,8 +320,20 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_ThermalWrapsTech</defName>
+		<label>Insulated Clothing</label>
+		<description>We can utilize ferroweave in combination with other fabrics to create highly insulative clothing..</description>
+		<prerequisites>
+			<li>RVFFA_FerroweaveTech</li>
+		</prerequisites>
+		<baseCost>650</baseCost>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>0.35</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_AeroTungstenFiberTech</defName>
-		<label>Restructured aero-tungsten</label>
+		<label>Restructured Aero-tungsten</label>
 		<description>We can interlace our fabric with aero-tungsten carbide to gain some of it's high structural stability in fabric. Naturally, it is not quite as strong.</description>
 		<prerequisites>
 			<li>RVFFA_CarbonNanoFiberTech</li>

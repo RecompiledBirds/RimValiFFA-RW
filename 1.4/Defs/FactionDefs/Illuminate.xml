@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="FactionBase">
+		<defName>RVFFA_IlluminateFaction</defName>
+		<label>Illuminate Colony</label>
+		<description>An Illuminate Colony.</description>
+		<pawnSingular>Avali</pawnSingular>
+		<pawnsPlural>Avali</pawnsPlural>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>20</configurationListOrderPriority>
+		<allowedCultures>
+			<li>Astropolitan</li>
+		</allowedCultures>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>Colony Leader</leaderTitle>
+		<minSettlementTemperatureChanceCurve>
+			<points>
+				<li>(-30,1000)</li>
+				<li>(-20,0)</li>
+			</points>
+		</minSettlementTemperatureChanceCurve>
+		<colorSpectrum>
+			<li>(1, 0.52, 0.05)</li>
+			<li>(1, 1, 1)</li>
+			<li>(0,0,0)</li>
+			<li>(0,1,0)</li>
+			<li>(1,0,0)</li>
+			<li>(0,0,1)</li>
+		</colorSpectrum>
+
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+
+		<techLevel>Spacer</techLevel>
+
+		<backstoryCategories>
+			<li>RVFFA_Illuminate</li>
+		</backstoryCategories>
+
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>RVFFA_IlluminateTrader</li>
+		</caravanTraderKinds>
+
+		<visitorTraderKinds>
+			<li>RVFFA_IlluminateTrader</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>RVFFA_IlluminateTrader</li>
+		</baseTraderKinds>
+
+		<allowedArrivalTemperatureRange>-200~8</allowedArrivalTemperatureRange>
+
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0, 35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(10000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<RVFFA_IlluminateSoldier>270</RVFFA_IlluminateSoldier>
+					<RVFFA_IlluminateEnhancedSoldier>300</RVFFA_IlluminateEnhancedSoldier>
+					<RVFFA_ColonyLeader>600</RVFFA_ColonyLeader>
+					<RVFFA_IlluminateSniper>350</RVFFA_IlluminateSniper>
+					<RVFFA_IlluminateFighter>250</RVFFA_IlluminateFighter>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<RVFFA_IlluminateVillager>100</RVFFA_IlluminateVillager>
+					<RVFFA_ColonyLeader>200</RVFFA_ColonyLeader>
+					<RVFFA_IlluminateSoldier>50</RVFFA_IlluminateSoldier>
+					<RVFFA_IlluminateFighter>50</RVFFA_IlluminateFighter>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<RVFFA_IlluminateTrader>200</RVFFA_IlluminateTrader>
+				</traders>
+				<carriers>
+					<Muffalo>5</Muffalo>
+				</carriers>
+				<guards>
+					<RVFFA_IlluminateSniper>350</RVFFA_IlluminateSniper>
+					<RVFFA_IlluminateEnhancedSoldier>500</RVFFA_IlluminateEnhancedSoldier>
+					<RVFFA_IlluminateSoldier>150</RVFFA_IlluminateSoldier>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<RVFFA_IlluminateVillager>100</RVFFA_IlluminateVillager>
+					<RVFFA_TownGuard>100</RVFFA_TownGuard>
+					<RVFFA_ColonyLeader>600</RVFFA_ColonyLeader>
+					<RVFFA_IlluminateSoldier>270</RVFFA_IlluminateSoldier>
+					<RVFFA_IlluminateFighter>250</RVFFA_IlluminateFighter>
+					<RVFFA_IlluminateEnhancedSoldier>300</RVFFA_IlluminateEnhancedSoldier>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/Expanding/Town</settlementTexturePath>
+		<factionIconPath>RimValiFFA/WorldIcons/Town</factionIconPath>
+	</FactionDef>
+</Defs>
