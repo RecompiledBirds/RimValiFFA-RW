@@ -81,7 +81,6 @@ namespace RimValiFFARW.StoryTellers
         public override void Initialize()
         {
             index = Find.Storyteller.storytellerComps.IndexOf(this);
-            random = new Random(Find.World.ConstantRandSeed);
             base.Initialize();
         }
 
