@@ -21,8 +21,9 @@
 				</categories>
 			</li>
 		</backstoryFilters>
-		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
-		<settlementTexturePath>RimValiFFA/WorldIcons/Town</settlementTexturePath>
+		
+		<factionIconPath>RimValiFFA/WorldIcons/Town</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/Expanding/Town</settlementTexturePath>
 		<startingResearchTags>
 			<li>ClassicStart</li>
 		</startingResearchTags>
