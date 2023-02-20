@@ -105,7 +105,7 @@ namespace RimValiFFARW.Packs
         public bool RemovePack(Pack pack)
         {
             if (!packs.Remove(pack)) return false;
-            foreach (Pawn member in pack.Members) memberPackTable.Remove(member);
+            memberPackTable.RemoveAll(kvp => kvp.Key == null || pack.Members.Contains(kvp.Key));
             packsList.Remove(pack);
             return true;
         }
@@ -139,7 +139,10 @@ namespace RimValiFFARW.Packs
 
         public void RemoveMemberRelation(Pawn member)
         {
-            memberPackTable.Remove(member);
+            if (member != null && memberPackTable.ContainsKey(member))
+            {
+                memberPackTable.Remove(member);
+            }
         }
     }
 }

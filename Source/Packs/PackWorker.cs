@@ -89,6 +89,12 @@ namespace RimValiFFARW.Packs
         public virtual bool MemberShouldLeave(Pawn member, Pack pack, out string reason)
         {
             reason = null;
+            if (member is null)
+            {
+                reason = "RVFFA_PackWorker_PawnWentMissing".Translate();
+                return true;
+            }
+
             double avgOpinionOfMember = EvaluateAverageOpinionForPawn(member, pack.Members);
             if (def.minGroupOpinionNeededSustain > avgOpinionOfMember)
             {
@@ -259,7 +265,7 @@ namespace RimValiFFARW.Packs
                 pack.Worker.MemberShouldLeave(member, pack, out string reason);
                 if (reason == null) continue;
 
-                Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member.NameShortColored, pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
+                Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member?.NameShortColored ?? "", pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
                 CleanUpMember(member, pack);
                 break;
             }
