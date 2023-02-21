@@ -13,7 +13,15 @@
 			<RoyalFavorValue>3</RoyalFavorValue>
 		</statBases>
 		<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
-
+		<!--
+		<cannibalismThoughts>
+			<thoughts>
+				<li>
+					
+				</li>
+			</thoughts>
+			<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
+		</cannibalismThoughts>-->
 		<raceGraphics>
 			<bodyTex>RVC/Empty</bodyTex>
 			<headTex>RVC/Empty</headTex>
@@ -199,6 +207,9 @@
 			<allowedBodyTypes>
 				<li>RVFFA_Avali</li>
 			</allowedBodyTypes>
+			<modRestrictedEquipment>
+				<li>Nesi.RimValiFFARW</li>
+			</modRestrictedEquipment>
 			<modRestrictedBuildings>
 				<li>Nesi.RimValiFFARW</li>
 			</modRestrictedBuildings>
@@ -221,7 +232,11 @@
 				<li>ButcheredHumanlikeCorpse</li>
 				<li>KnowButcheredHumanlikeCorpse</li>
 			</disabledThoughts>
-
+			<restrictedBeds>
+				<li>RVFFA_PillowBed</li>
+				<li>RVFFA_MediumPillowPile</li>
+				<li>RVFFA_LargePillowPile</li>
+			</restrictedBeds>
 			<disabledTraits>
 				<li>BodyPurist</li>
 				<li>Transhumanist</li>

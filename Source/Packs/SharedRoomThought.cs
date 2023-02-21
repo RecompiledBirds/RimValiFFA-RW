@@ -15,7 +15,7 @@ namespace RimValiFFARW.Packs
             Packmanager.GetLastActivePackmanager.TryGetPackForPawn(p, out Pack pack);
             if (pack == null)
                 return ThoughtState.Inactive;
-
+            if (p.GetRoom() == null) return ThoughtState.Inactive;
             if (pack.Members.All(x => x.GetRoom() == p.GetRoom())) return ThoughtState.ActiveAtStage(1);
 
             return ThoughtState.ActiveAtStage(0);
