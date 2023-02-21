@@ -7,12 +7,13 @@
 		<statBases>
 			<MarketValue>1750</MarketValue>
 			<MoveSpeed>4.6</MoveSpeed>
-			<ComfyTemperatureMin>16</ComfyTemperatureMin>
-			<ComfyTemperatureMax>26</ComfyTemperatureMax>
+			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+			<ComfyTemperatureMax>15</ComfyTemperatureMax>
 			<LeatherAmount>75</LeatherAmount>
 			<RoyalFavorValue>3</RoyalFavorValue>
 		</statBases>
 		<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
+
 		<raceGraphics>
 			<bodyTex>RVC/Empty</bodyTex>
 			<headTex>RVC/Empty</headTex>
@@ -198,6 +199,14 @@
 			<allowedBodyTypes>
 				<li>RVFFA_Avali</li>
 			</allowedBodyTypes>
+			<modRestrictedApparel>
+				<li>Nesi.RimValiFFARW</li>
+			</modRestrictedApparel>
+			<modAllowedApparel>
+				<li>ludeon.rimworld</li>
+				<li>ludeon.rimworld.royalty</li>
+			</modAllowedApparel>
+			<canUseAnyApparel>false</canUseAnyApparel>
 		</restrictions>
 		<tools>
 			<li>
