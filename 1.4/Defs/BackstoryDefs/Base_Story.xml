@@ -6,6 +6,7 @@
 
 	<BackstoryDef Name="RVFFA_BaseIlluminateStory" Abstract="True">
 		<bodyTypeGlobal>RVFFA_Avali</bodyTypeGlobal>
+		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>RVFFA_Illuminate</li>
 		</spawnCategories>

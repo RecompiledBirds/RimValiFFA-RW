@@ -208,6 +208,19 @@
 			</modAllowedApparel>
 			<canUseAnyApparel>false</canUseAnyApparel>
 		</restrictions>
+
+		<thoughtReplacer>
+			<thoughtReplacers>
+				<li>
+					<toReplace>SleptInBedroom</toReplace>
+					<replacer>RVFFA_SleptAlone</replacer>
+				</li>
+				<li>
+					<toReplace>SleptInBarracks</toReplace>
+					<replacer>RVFFA_SharedRoom</replacer>
+				</li>
+			</thoughtReplacers>
+		</thoughtReplacer>
 		<tools>
 			<li>
 				<label>left fist</label>

@@ -206,7 +206,7 @@
         <costStuffCount>150</costStuffCount>
 
         <graphicData>
-            <texPath>RimValiFFA/Things/Apparel/BellCloak/Cloak_RVFFA_Avali_south</texPath>
+            <texPath>RimValiFFA/Things/Apparel/ThermalWraps/ThermalWraps_RVFFA_Avali_south</texPath>
         </graphicData>
 
         <statBases>

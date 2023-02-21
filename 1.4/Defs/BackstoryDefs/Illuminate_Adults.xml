@@ -4,7 +4,6 @@
 	<BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
 		<defName>RVFFA_AlpineScout</defName>
 		<identifier>RVFFA_AlpineScout</identifier>
-		<slot>Adulthood</slot>
 		<title>Alpine Scout</title>
 		<titleShort>Alpine Scout</titleShort>
 		<baseDesc>Belonging in a pack of scouts tasked with keeping an important facility secure in the mountain region, [PAWN_nameDef] spent long nights at temporary camps watching for potential threats. Years of working with [PAWN_possessive] packmates allowed them to always count on one another without a word.\n Aside from keeping watch, the pack also put up many bridges and cleared paths for future traversals around the area, [PAWN_nameDef] knew the shortcuts like the back of [PAWN_possessive] wings.</baseDesc>
