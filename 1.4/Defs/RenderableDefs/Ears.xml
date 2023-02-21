@@ -57,7 +57,7 @@
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
 
-	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarLU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
@@ -86,7 +86,7 @@
 	</RVCRestructured.Defs.RenderableDef>
 
 
-	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>

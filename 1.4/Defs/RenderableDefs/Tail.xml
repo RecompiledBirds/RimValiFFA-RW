@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<linkPosWith>RVFFA_Body</linkPosWith>
 		<defName>RVFFA_TailSkirt</defName>
 		<flipLayerEastWest>false</flipLayerEastWest>
+		<showsInBed>false</showsInBed>
 		<north>
 			<position>(0,0.01,0)</position>
 			<size>0.8</size>
@@ -26,9 +27,10 @@
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
 
-	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<linkPosWith>RVFFA_Body</linkPosWith>
 		<defName>RVFFA_Tail</defName>
+		<showsInBed>false</showsInBed>
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<north>
 			<position>(-0.08,0.1,0.051)</position>

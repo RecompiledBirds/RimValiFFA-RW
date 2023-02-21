@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.Defs.RenderableDef ParentName="BaseAvaliFleshPart">
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_Head</defName>
 		<bodyPart>Head</bodyPart>
 		<north>
