@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDefs>
+		<defName>RVFFA_PackSharedRoom</defName>
+		<workerClass>RimValiFFARW.Packs.SharedRoomThought</workerClass>
+		<stages>
+			<li>
+				<label>Away from packmates</label>
+				<description>My packmates aren't here. This makes me feel anxious.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>With packmates</label>
+				<description>I'm sharing a room with my pack. This makes me happy.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThingDefs>
+</Defs>
