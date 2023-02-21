@@ -199,6 +199,12 @@
 			<allowedBodyTypes>
 				<li>RVFFA_Avali</li>
 			</allowedBodyTypes>
+			<modRestrictedBuildings>
+				<li>Nesi.RimValiFFARW</li>
+			</modRestrictedBuildings>
+			<modRestrictedResearch>
+				<li>Nesi.RimValiFFARW</li>
+			</modRestrictedResearch>
 			<modRestrictedApparel>
 				<li>Nesi.RimValiFFARW</li>
 			</modRestrictedApparel>
@@ -206,6 +212,20 @@
 				<li>ludeon.rimworld</li>
 				<li>ludeon.rimworld.royalty</li>
 			</modAllowedApparel>
+			<disabledThoughts>
+				<li>EnvironmentDark</li>
+				<li>Naked</li>
+				<li>SleepDisturbed</li>
+				<li>SharedBed</li>
+				<li>ObservedLayingCorpse</li>
+				<li>ButcheredHumanlikeCorpse</li>
+				<li>KnowButcheredHumanlikeCorpse</li>
+			</disabledThoughts>
+
+			<disabledTraits>
+				<li>BodyPurist</li>
+				<li>Transhumanist</li>
+			</disabledTraits>
 			<canUseAnyApparel>false</canUseAnyApparel>
 		</restrictions>
 
