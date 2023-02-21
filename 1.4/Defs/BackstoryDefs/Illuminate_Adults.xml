@@ -602,7 +602,7 @@
 		<identifier>RVFFA_AnimalCaretaker</identifier>
 		<title>Exotic Animal Caretaker</title>
 		<titleShort>Zookeeper</titleShort>
-		<baseDesc>[PAWN_nameDef] worked in a Avalon city center's animal preserve that housed species endangered by either natural disasters or terraforming projects. [Pawn_possessive] job included checking that the artificial environments are running properly, and catering to some of the animal's extremely specific and strange diet.</baseDesc>
+		<baseDesc>[PAWN_nameDef] worked in a Avalon city center's animal preserve that housed species endangered by either natural disasters or terraforming projects. [PAWN_possessive] job included checking that the artificial environments are running properly, and catering to some of the animal's extremely specific and strange diet.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Animals</key>
@@ -620,7 +620,7 @@
 		<identifier>RVFFA_FossilHunter</identifier>
 		<title>Fossil Hunter</title>
 		<titleShort>Paleontologist</titleShort>
-		<baseDesc>[PAWN_nameDef] spent [PAWN_possessive] life in the study of ancient creatures and what came to be on the moon before Avali as a species. [PAWN_pronoun] could be frequently found at digging sites instead of regularly scheduled meetings, and was described by [PAWN_possessive] packmates and colleagues to be "a tad bit obsessed".\n Most of the samples [PAWN_pronoun] retrieved are only species that are already found, or some fragments that are too small to be properly categorized. However, the one time [PAWN_pronoun] did manage to actually discover a new extinct specie of megainsect, [PAWN_pronoun] made sure [Pawn_possessive] name was on it.
+		<baseDesc>[PAWN_nameDef] spent [PAWN_possessive] life in the study of ancient creatures and what came to be on the moon before Avali as a species. [PAWN_pronoun] could be frequently found at digging sites instead of regularly scheduled meetings, and was described by [PAWN_possessive] packmates and colleagues to be "a tad bit obsessed".\n Most of the samples [PAWN_pronoun] retrieved are only species that are already found, or some fragments that are too small to be properly categorized. However, the one time [PAWN_pronoun] did manage to actually discover a new extinct specie of megainsect, [PAWN_pronoun] made sure [PAWN_possessive] name was on it.
 		</baseDesc>
 		<skillGains>
 			<li>
@@ -725,7 +725,7 @@
 		<identifier>RVFFA_Weaponsmith</identifier>
 		<title>Crystal Blade Forger</title>
 		<titleShort>Weaponsmith</titleShort>
-		<baseDesc>Avali crystal swords required a strict manufacturing process that could only be done at highly specific nano-forges, [PAWN_nameDef] was in charge of one such facility. [PAWN_pronoun] was the one to go to when troubleshooting and quality checks were needed, and when someone needed a good lecturing about why ignoring safety protocols around razor-sharp rocks is an incredibly bad idea. Despite [Pawn_possessive] expertise, [PAWN_nameDef] never really swung one of those weapons properly or had a need to use them. Deep knowledge of ergonomics and properties of nano-crystal doesn't really transfer well to sword fighting.</baseDesc>
+		<baseDesc>Avali crystal swords required a strict manufacturing process that could only be done at highly specific nano-forges, [PAWN_nameDef] was in charge of one such facility. [PAWN_pronoun] was the one to go to when troubleshooting and quality checks were needed, and when someone needed a good lecturing about why ignoring safety protocols around razor-sharp rocks is an incredibly bad idea. Despite [PAWN_possessive] expertise, [PAWN_nameDef] never really swung one of those weapons properly or had a need to use them. Deep knowledge of ergonomics and properties of nano-crystal doesn't really transfer well to sword fighting.</baseDesc>
 		<skillGains>
 			<li>
 				<key>Crafting</key>
