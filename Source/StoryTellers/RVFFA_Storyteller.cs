@@ -78,9 +78,9 @@ namespace RimValiFFARW.StoryTellers
         }
 
         private Random random;
+
         public override void Initialize()
         {
-            index = Find.Storyteller.storytellerComps.IndexOf(this);
             base.Initialize();
         }
 
@@ -92,8 +92,15 @@ namespace RimValiFFARW.StoryTellers
             }
         }
 
+        bool started = false;
         public override IEnumerable<FiringIncident> MakeIntervalIncidents(IIncidentTarget target)
         {
+            if (!started)
+            {
+                random = new Random(Find.World.ConstantRandSeed);
+                index = Find.Storyteller.storytellerComps.IndexOf(this);
+                started=true;
+            }
             Map map = Find.Maps.Find(x => x.Tile == target.Tile);
             UpdatePawnCount(map);
 
