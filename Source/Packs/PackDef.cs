@@ -57,7 +57,7 @@ namespace RimValiFFARW.Packs
                 yield return error;
             }
 
-            if (!(packWorkerType.BaseType == typeof(PackWorker) || packWorkerType == typeof(PackWorker)))
+            if (!(packWorkerType.IsSubclassOf(typeof(PackWorker)) || packWorkerType == typeof(PackWorker)))
             {
                 yield return $"The PackDef {defName ?? "<missing defname>"} has no valid {nameof(packWorkerType)}! The given type must inherit from {typeof(PackWorker).Name}!";
             }
