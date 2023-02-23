@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using Mono.Math;
+using RimValiFFARW.Packs.Activities;
 using RimWorld;
 using RimWorld.Planet;
 using RVCRestructured;
@@ -20,6 +21,7 @@ namespace RimValiFFARW.Packs
         private const int packCheckTickDelay = 2000;
 
         private static Packmanager packmanager;
+        private PackActivityManager packActivityManager;
 
         private Dictionary<Pawn, Pack> memberPackTable = new Dictionary<Pawn, Pack>();
         private HashSet<Pack> packs = new HashSet<Pack>();
@@ -56,10 +58,17 @@ namespace RimValiFFARW.Packs
         public override void FinalizeInit()
         {
             packsList = packs.ToList();
+            packActivityManager = packActivityManager ?? new PackActivityManager();
             base.FinalizeInit();
         }
 
         public override void WorldComponentTick()
+        {
+            TickSelf();
+            base.WorldComponentTick();
+        }
+
+        private void TickSelf()
         {
             if (Find.TickManager.TicksGame % packCheckTickDelay != 0) return;
             if (packsList.Count == 0) return;
@@ -70,18 +79,16 @@ namespace RimValiFFARW.Packs
             if (lastWorkedOnPackListIndex >= packsList.Count) lastWorkedOnPackListIndex = 0;
 
             bool anyReasonsExist = false;
-            foreach(string reason in pack.Worker.IsPackStillValid(pack))
+            foreach (string reason in pack.Worker.IsPackStillValid(pack))
             {
                 anyReasonsExist = true;
                 Messages.Message(reason, MessageTypeDefOf.NegativeEvent);
             }
 
             if (!anyReasonsExist) return;
-            if (PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack == pack) 
+            if (PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack == pack)
                 PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack = null;
             pack.Worker.Disband(pack);
-
-            base.WorldComponentTick();
         }
 
         /// <summary>
@@ -126,6 +133,7 @@ namespace RimValiFFARW.Packs
         {
             base.ExposeData();
             Scribe_Values.Look(ref nextPackLoadID, nameof(nextPackLoadID));
+            Scribe_Deep.Look(ref packActivityManager, nameof(packActivityManager));
             Scribe_Values.Look(ref lastWorkedOnPackListIndex, nameof(lastWorkedOnPackListIndex));
 
             Scribe_Collections.Look(ref packs, nameof(packs), LookMode.Deep);
