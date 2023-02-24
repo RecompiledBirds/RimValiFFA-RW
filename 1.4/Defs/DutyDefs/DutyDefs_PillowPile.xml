@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DutyDef>
+		<defName>RVFFA_PillowPileCuddle</defName>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="RimValiFFARW.Packs.Activities.LordJobs.LordToils.JobGivers.JobGiver_PillowPileAndCuddle"/>
+				<li Class="JobGiver_WanderNearDutyLocation">
+					<wanderRadius>6</wanderRadius>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+</Defs>

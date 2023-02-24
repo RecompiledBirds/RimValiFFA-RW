@@ -21,7 +21,6 @@ namespace RimValiFFARW.Packs
         private const int packCheckTickDelay = 2000;
 
         private static Packmanager packmanager;
-        private PackActivityManager packActivityManager;
 
         private Dictionary<Pawn, Pack> memberPackTable = new Dictionary<Pawn, Pack>();
         private HashSet<Pack> packs = new HashSet<Pack>();
@@ -58,7 +57,6 @@ namespace RimValiFFARW.Packs
         public override void FinalizeInit()
         {
             packsList = packs.ToList();
-            packActivityManager = packActivityManager ?? new PackActivityManager();
             base.FinalizeInit();
         }
 
@@ -133,7 +131,6 @@ namespace RimValiFFARW.Packs
         {
             base.ExposeData();
             Scribe_Values.Look(ref nextPackLoadID, nameof(nextPackLoadID));
-            Scribe_Deep.Look(ref packActivityManager, nameof(packActivityManager));
             Scribe_Values.Look(ref lastWorkedOnPackListIndex, nameof(lastWorkedOnPackListIndex));
 
             Scribe_Collections.Look(ref packs, nameof(packs), LookMode.Deep);

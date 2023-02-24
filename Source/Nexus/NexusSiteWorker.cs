@@ -19,7 +19,7 @@ namespace RimValiFFARW.Nexus
             List<Thing> things = new List<Thing>();
             things.Add(NexusUtils.GenNexus());
             slate.Set("nexusReward",things, false);
-            outExtraDescriptionRules.Add(new Rule_String("nexusConnection",GenLabel.ThingLabel(NexusDefOf.RVFFA_Nexus,ThingDefOf.Steel)));
+            outExtraDescriptionRules.Add(new Rule_String("nexusConnection",GenLabel.ThingLabel(RVFFA_ThingDefOf.RVFFA_Nexus,ThingDefOf.Steel)));
         }
     }
 }

@@ -17,13 +17,13 @@ namespace RimValiFFARW.Nexus
         {
             get
             {
-                if (PowerNet.powerComps.Any(x => x.parent.def == NexusDefOf.RVFFA_Nexus && x.PowerOn))
+                if (PowerNet.powerComps.Any(x => x.parent.def == RVFFA_ThingDefOf.RVFFA_Nexus && x.PowerOn))
                     return base.PowerOn;
                 return false;
             }
             set
             {
-                if (PowerNet.powerComps.Any(x => x.parent.def == NexusDefOf.RVFFA_Nexus && x.PowerOn))
+                if (PowerNet.powerComps.Any(x => x.parent.def == RVFFA_ThingDefOf.RVFFA_Nexus && x.PowerOn))
                 {
                     base.PowerOn = value;
                 }

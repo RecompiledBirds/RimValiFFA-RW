@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RimValiFFARW.Packs.Activities.PackActivityDef>
+		<defName>RVFFA_PillowPile</defName>
+		<label>pillow pile activity</label>
+		<description>this pack is making a pillow pile</description>
+		<worker>RimValiFFARW.Packs.Activities.Workers.PackActivityWorker_PillowPileWorker</worker>
+		<minPawns>3</minPawns>
+		<gatheringDef>RVFFA_PillowPile</gatheringDef>
+	</RimValiFFARW.Packs.Activities.PackActivityDef>
+
+	<GatheringDef>
+		<defName>RVFFA_PillowPile</defName>
+		<label>pillow pile activity</label>
+		<description>this pack is making a pillow pile</description>
+		<workerClass>RimValiFFARW.Packs.Activities.Workers.PackActivityWorker_PillowPileWorker</workerClass>
+		<randomSelectionWeight>0.5</randomSelectionWeight>
+		
+		<gatherSpotDefs>
+			<li>RVFFA_PillowBed</li>
+			<li>RVFFA_MediumPillowPile</li>
+			<li>RVFFA_LargePillowPile</li>
+		</gatherSpotDefs>
+
+		<letterTitle>Pillow Pile</letterTitle>
+		<letterText>{0} is about to be hanging out in a pillow pile</letterText>
+	</GatheringDef>
+</Defs>

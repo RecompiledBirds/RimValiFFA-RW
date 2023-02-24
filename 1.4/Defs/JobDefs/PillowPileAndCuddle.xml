@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JobDef>
+		<defName>RVFFA_PillowAndCuddle</defName>
+		<driverClass>RimValiFFARW.Packs.Activities.LordJobs.LordToils.JobGivers.JobDrivers.JobDriver_PillowAndCuddle</driverClass>
+		<reportString>cuddling with the pack</reportString>
+		<allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+		<carryThingAfterJob>false</carryThingAfterJob>
+		<dropThingBeforeJob>false</dropThingBeforeJob>
+	</JobDef>
+</Defs>

@@ -6,11 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace RimValiFFARW.Nexus
+namespace RimValiFFARW
 {
     [DefOf]
-    public static class NexusDefOf
+    public static class RVFFA_ThingDefOf
     {
         public static ThingDef RVFFA_Nexus;
+        public static ThingDef RVFFA_PillowBed;
+        public static ThingDef RVFFA_MediumPillowPile;
+        public static ThingDef RVFFA_LargePillowPile;
     }
 }

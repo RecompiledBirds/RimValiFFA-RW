@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using RimValiFFARW.Nexus;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -78,7 +77,7 @@ namespace RimValiFFARW
             get
             {
                 IEnumerable<ThingWithComps> connectedNexuses = power.PowerNet.connectors
-                    .Where(connector => connector.parent.def == NexusDefOf.RVFFA_Nexus)
+                    .Where(connector => connector.parent.def == RVFFA_ThingDefOf.RVFFA_Nexus)
                     .Select(compPower => compPower.parent);
 
                 return connectedNexuses.Any(nexus =>
