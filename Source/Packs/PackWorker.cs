@@ -230,6 +230,7 @@ namespace RimValiFFARW.Packs
             double count = 0;
 
             if (pawns.Count() < 2) return 100;
+            if (pawns.Any(pawn => pawn is null)) return 100;
 
             foreach (Pawn member in pawns)
             {
