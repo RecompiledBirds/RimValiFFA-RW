@@ -65,17 +65,17 @@
 		<stages>
 			<li>
 				<label>shared awful bedroom</label>
-				<description>I had to sleep in an awful room, but at least I wasn't room.</description>
+				<description>I had to sleep in an awful room, but at least I wasn't alone.</description>
 				<baseMoodEffect>-4</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared dull bedroom</label>
-				<description>I had to sleep in an awful room, but at least I wasn't room.</description>
+				<description>I had to sleep in an awful room, but at least I wasn't alone.</description>
 				<baseMoodEffect>-3</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared medicore bedroom</label>
-				<description>I had to sleep in an medicore room, but at least I wasn't room.</description>
+				<description>I had to sleep in an medicore room, but at least I wasn't alone.</description>
 				<baseMoodEffect>-2</baseMoodEffect>
 			</li>
 			<li>

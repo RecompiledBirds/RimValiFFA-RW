@@ -13,15 +13,19 @@
 			<RoyalFavorValue>3</RoyalFavorValue>
 		</statBases>
 		<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
-		<!--
+		
 		<cannibalismThoughts>
 			<thoughts>
 				<li>
-					
+					<race>RVFFA_Avali</race>
+					<rawEatenThought>RVFFA_AteAvaliLikeMeatDirect</rawEatenThought>
+					<rawCannibalThought>RVFFA_AteAvaliLikeMeatDirectCannibal</rawCannibalThought>
+					<cookedEatenThought>RVFFA_AteAvalilikeMeatAsIngredient</cookedEatenThought>
+					<cookedCannibalThought>RVFFA_AteAvalilikeMeatAsIngredientCannibal</cookedCannibalThought>
 				</li>
 			</thoughts>
 			<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
-		</cannibalismThoughts>-->
+		</cannibalismThoughts>
 		<raceGraphics>
 			<bodyTex>RVC/Empty</bodyTex>
 			<headTex>RVC/Empty</headTex>
@@ -440,6 +444,28 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+			
+			<li>RVFFA_InstallAdvTail</li>
+			<li>RVFFA_InstallBasicBionicTail</li>
+			<li>RVFFA_InstallBasicArm</li>
+			<li>RVFFA_InstallAdvArm</li>
+			<li>RVFFA_InstallAdvEar</li>
+			<li>RVFFA_InstallBasicBionicEar</li>
+			<li>RVFFA_InstallAdvancedBionicLeg</li>
+			<li>RVFFA_InstallBasicBionicLeg</li>
+			<li>RVFFA_InstallAutophagicSystemRewrite</li>
+			<li>RVFFA_InstallPackReplacement</li>
+			<li>RVFFA_Install_Parallel_Arm</li>
+			<li>RVFFA_InstallPositiveEnforcement</li>
+			<li>RVFFA_InstallSocialEnhancer</li>
+			<li>RVFFA_Install_Tetradactyly_Utilitizer</li>
+			<li>RVFFA_InstallVocalReplacements</li>
+			<li>RVFFA_InstallWingBlades</li>
+			<li>RVFFA_InstallBasicTemperatureControl</li>
+			<li>RVFFA_InstallTemperatureImplantAdv</li>
+			<li>RVFFA_InstallMicroPlantingDrones</li>
+			<li>RVFFA_InstallMiningDrones</li>
+			<li>RVFFA_InstallConstructionDrones</li>
 		</recipes>
 		<inspectorTabs>
 			<li>RimValiFFARW.Packs.PackInspectionWindow</li>
