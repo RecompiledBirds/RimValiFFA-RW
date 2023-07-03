@@ -178,8 +178,8 @@
                 <defaultProjectile>RVFFA_SMGBullet</defaultProjectile>
                 <warmupTime>0.7</warmupTime>
                 <range>30.4</range>
-                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                <burstShotCount>2</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <burstShotCount>6</burstShotCount>
                 <soundCast>Shot_HeavySMG</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
                 <muzzleFlashScale>0</muzzleFlashScale>
