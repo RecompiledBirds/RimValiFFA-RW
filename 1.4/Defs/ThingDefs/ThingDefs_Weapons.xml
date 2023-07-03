@@ -1443,15 +1443,15 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>4</power>
+				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
 				<label>Avali Axe Blade</label>
 				<capacities>
-					<li>Cut</li>
+					<li>Demolish</li>
 				</capacities>
-				<power>5.2</power>
+				<power>7.5</power>
 				<cooldownTime>1</cooldownTime>
 			</li>
 		</tools>
@@ -1502,7 +1502,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>1</power>
+				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
@@ -1510,7 +1510,7 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>2.2</power>
+				<power>16</power>
 				<cooldownTime>0.2</cooldownTime>
 			</li>
 		</tools>
