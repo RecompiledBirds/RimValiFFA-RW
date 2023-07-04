@@ -1511,7 +1511,7 @@
 					<li>Cut</li>
 				</capacities>
 				<power>16</power>
-				<cooldownTime>0.2</cooldownTime>
+				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
 		<recipeMaker>
@@ -1585,7 +1585,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
-		<defName>RVFFA_Viroblae</defName>
+		<defName>RVFFA_Viroblade</defName>
 		<label>Illuminate Viroblade</label>
 		<description>The renowned and highly iconic Illuminate sword. Perhaps it is the vibrating blade and the song-like hum it creates that makes it so popular. Or perhaps it is the splintering ferrogel blade instead, creating many deadly injuries. Whatever the reason may be, this blade has a legendary reputation and a bodycount to support it.</description>
 		<graphicData>
