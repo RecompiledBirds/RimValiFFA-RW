@@ -259,13 +259,13 @@
 
         <statBases>
             <WorkToMake>50000</WorkToMake>
-            <MaxHitPoints>400</MaxHitPoints>
+            <MaxHitPoints>5000</MaxHitPoints>
             <Mass>5</Mass>
             <Flammability>0.4</Flammability>
             <EquipDelay>10</EquipDelay>
             <ArmorRating_Sharp>0.98</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.43</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.93</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.8</ArmorRating_Heat>
             <Insulation_Cold>15</Insulation_Cold>
             <Insulation_Heat>15</Insulation_Heat>
         </statBases>
@@ -299,12 +299,12 @@
         </graphicData>
         <statBases>
             <WorkToMake>21000</WorkToMake>
-            <MaxHitPoints>400</MaxHitPoints>
+            <MaxHitPoints>5000</MaxHitPoints>
             <Mass>5</Mass>
             <Flammability>0.02</Flammability>
             <ArmorRating_Sharp>0.86</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.41</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.81</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.6</ArmorRating_Heat>
             <Insulation_Cold>4</Insulation_Cold>
             <Insulation_Heat>2</Insulation_Heat>
             <EquipDelay>6</EquipDelay>
@@ -334,13 +334,18 @@
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor_RVFFA_Avali_south</texPath>
         </graphicData>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
         <statBases>
             <WorkToMake>30000</WorkToMake>
-            <MaxHitPoints>240</MaxHitPoints>
+            <MaxHitPoints>900</MaxHitPoints>
             <Mass>1.5</Mass>
             <Flammability>0.02</Flammability>
             <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+            <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
             <ArmorRating_Heat>0.2</ArmorRating_Heat>
             <Insulation_Cold>4</Insulation_Cold>
             <Insulation_Heat>6</Insulation_Heat>
@@ -367,13 +372,18 @@
 		<graphicData>
 			<texPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet_south</texPath>
 		</graphicData>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
 		<statBases>
             <WorkToMake>30000</WorkToMake>
-            <MaxHitPoints>240</MaxHitPoints>
+            <MaxHitPoints>900</MaxHitPoints>
             <Mass>1.5</Mass>
             <Flammability>0.02</Flammability>
             <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
             <ArmorRating_Heat>0.3</ArmorRating_Heat>
             <Insulation_Cold>4</Insulation_Cold>
             <Insulation_Heat>2</Insulation_Heat>
@@ -403,14 +413,19 @@
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor_RVFFA_Avali_south</texPath>
         </graphicData>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+		</recipeMaker>
         <statBases>
             <WorkToMake>20000</WorkToMake>
-            <MaxHitPoints>150</MaxHitPoints>
+            <MaxHitPoints>4000</MaxHitPoints>
             <Mass>3</Mass>
             <Flammability>0.02</Flammability>
-            <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.34</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
             <Insulation_Cold>10</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
             <EquipDelay>4</EquipDelay>
@@ -438,15 +453,19 @@
 		<graphicData>
 			<texPath>RimValiFFA/Things/Apparel/CombatHelmet/CombatHelmet_south</texPath>
 		</graphicData>
-		
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+		</recipeMaker>
 		<statBases>
             <WorkToMake>20000</WorkToMake>
-            <MaxHitPoints>200</MaxHitPoints>
+            <MaxHitPoints>4000</MaxHitPoints>
             <Mass>3</Mass>
             <Flammability>0.02</Flammability>
-            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
             <Insulation_Cold>4</Insulation_Cold>
             <Insulation_Heat>2</Insulation_Heat>
             <EquipDelay>4</EquipDelay>

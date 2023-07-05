@@ -29,6 +29,24 @@
 					<count>50</count>
 				</li>
 
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RVFFA_Viroblade</thingDef>
+					<count>1</count>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RVFFA_IlluminatePistol</thingDef>
+					<count>1</count>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RVFFA_Knife</thingDef>
+					<count>1</count>
+				</li>
+
 				<li Class="ScenPart_GameStartDialog">
 					<def>GameStartDialog</def>
 					<textKey>GameStartDialog</textKey>
@@ -39,6 +57,12 @@
 					<def>StartingThing_Defined</def>
 					<thingDef>MedicineIndustrial</thingDef>
 					<count>30</count>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>RVFFA_Tungsten</thingDef>
+					<count>150</count>
 				</li>
 				
 				<li Class="ScenPart_StartingThing_Defined">
