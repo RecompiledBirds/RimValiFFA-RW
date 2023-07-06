@@ -245,7 +245,7 @@
 				<li>BodyPurist</li>
 				<li>Transhumanist</li>
 			</disabledTraits>
-			<canUseAnyApparel>false</canUseAnyApparel>
+			<canUseAnyApparel>true</canUseAnyApparel>
 		</restrictions>
 
 		<thoughtReplacer>
