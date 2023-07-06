@@ -3,9 +3,9 @@
 	<ScenarioDef Name="Illuminate Colony">
 		<defName>RVFFA_IlluminateColontStarter</defName>
 		<label>Illuminate Colony</label>
-		<description>A starting Illuminate colony of 4 avali. The classic rimworld and rimvali experience.</description>
+		<description>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</description>
 		<scenario>
-			<summary>A starting Illuminate colony of 4 avali. The classic rimworld and rimvali experience.</summary>
+			<summary>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</summary>
 			<playerFaction>
 				<def>PlayerFaction</def>
 				<factionDef>RVFFA_IlluminatePlayer</factionDef>
