@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.RVR.RaceDef ParentName="BasePawn">
+	<ThingDef ParentName="BasePawn">
 		<defName>RVFFA_Avali</defName>
 		<label>Avali</label>
 		<description>Cute, fluffy raptors with highly advanced tech. The primary solvent in avali biology is ammonia, making them mostly incompatible with humans. Avali don't like being hot, as their blood boils at a much lower temp then a human's blood, but they can survive in the cold no problem.</description>
@@ -12,24 +12,23 @@
 			<LeatherAmount>75</LeatherAmount>
 			<RoyalFavorValue>3</RoyalFavorValue>
 		</statBases>
-		<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
-		
-		<cannibalismThoughts>
-			<thoughts>
-				<li>
-					<race>RVFFA_Avali</race>
-					<rawEatenThought>RVFFA_AteAvaliLikeMeatDirect</rawEatenThought>
-					<rawCannibalThought>RVFFA_AteAvaliLikeMeatDirectCannibal</rawCannibalThought>
-					<cookedEatenThought>RVFFA_AteAvalilikeMeatAsIngredient</cookedEatenThought>
-					<cookedCannibalThought>RVFFA_AteAvalilikeMeatAsIngredientCannibal</cookedCannibalThought>
-				</li>
-			</thoughts>
-			<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
-		</cannibalismThoughts>
-		<raceGraphics>
-			<bodyTex>RVC/Empty</bodyTex>
-			<headTex>RVC/Empty</headTex>
-			<renderableDefs>
+		<comps>
+			<li Class="RVCRestructured.RVRCannibalismComp">
+				<thoughts>
+					<li>
+						<race>RVFFA_Avali</race>
+						<rawEatenThought>RVFFA_AteAvaliLikeMeatDirect</rawEatenThought>
+						<rawCannibalThought>RVFFA_AteAvaliLikeMeatDirectCannibal</rawCannibalThought>
+						<cookedEatenThought>RVFFA_AteAvalilikeMeatAsIngredient</cookedEatenThought>
+						<cookedCannibalThought>RVFFA_AteAvalilikeMeatAsIngredientCannibal</cookedCannibalThought>
+					</li>
+				</thoughts>
+				<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
+			</li>
+			<li Class="RVCRestructured.RVRGraphicsComp">
+				<bodyTex>RVC/Empty</bodyTex>
+				<headTex>RVC/Empty</headTex>
+				<renderableDefs>
 				<li>RVFFA_EyeL</li>
 				<li>RVFFA_EyeR</li>
 				<li>RVFFA_EarLL</li>
@@ -45,8 +44,8 @@
 				<li>RVFFA_TailSkirt</li>
 			</renderableDefs>
 
-
-			<colorGenerators>
+				<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
+				<colorGenerators>
 				<li>
 					<name>Eyes</name>
 					<colorGenerator>
@@ -203,63 +202,72 @@
 					</colorGeneratorFemale>
 				</li>
 			</colorGenerators>
-		</raceGraphics>
-		<restrictions>
-			<restrictedBodyTypes>
-				<li>RVFFA_Avali</li>
-			</restrictedBodyTypes>
-			<allowedBodyTypes>
-				<li>RVFFA_Avali</li>
-			</allowedBodyTypes>
-			<modRestrictedEquipment>
-				<li>Nesi.RimValiFFARW</li>
-			</modRestrictedEquipment>
-			<modRestrictedBuildings>
-				<li>Nesi.RimValiFFARW</li>
-			</modRestrictedBuildings>
-			<modRestrictedResearch>
-				<li>Nesi.RimValiFFARW</li>
-			</modRestrictedResearch>
-			<modRestrictedApparel>
-				<li>Nesi.RimValiFFARW</li>
-			</modRestrictedApparel>
-			<modAllowedApparel>
-				<li>ludeon.rimworld</li>
-				<li>ludeon.rimworld.royalty</li>
-			</modAllowedApparel>
-			<disabledThoughts>
-				<li>EnvironmentDark</li>
-				<li>Naked</li>
-				<li>SleepDisturbed</li>
-				<li>SharedBed</li>
-				<li>ObservedLayingCorpse</li>
-				<li>ButcheredHumanlikeCorpse</li>
-				<li>KnowButcheredHumanlikeCorpse</li>
-			</disabledThoughts>
-			<restrictedBeds>
-				<li>RVFFA_PillowBed</li>
-				<li>RVFFA_MediumPillowPile</li>
-				<li>RVFFA_LargePillowPile</li>
-			</restrictedBeds>
-			<disabledTraits>
-				<li>BodyPurist</li>
-				<li>Transhumanist</li>
-			</disabledTraits>
-			<canUseAnyApparel>true</canUseAnyApparel>
-		</restrictions>
-
-		<thoughtReplacer>
-			<thoughtReplacers>
-				<li>
-					<toReplace>SleptInBedroom</toReplace>
-					<replacer>RVFFA_SleptAlone</replacer>
-				</li>
-				<li>
-					<toReplace>SleptInBarracks</toReplace>
-					<replacer>RVFFA_SharedRoom</replacer>
-				</li>
-			</thoughtReplacers>
-		</thoughtReplacer>
+			</li>
+			<li Class="RVCRestructured.RVRRestrictionComp">
+				<restrictedBodyTypes>
+					<li>RVFFA_Avali</li>
+				</restrictedBodyTypes>
+				<allowedBodyTypes>
+					<li>RVFFA_Avali</li>
+				</allowedBodyTypes>
+				<modRestrictedEquipment>
+					<li>Nesi.RimValiFFARW</li>
+				</modRestrictedEquipment>
+				<modRestrictedBuildings>
+					<li>Nesi.RimValiFFARW</li>
+				</modRestrictedBuildings>
+				<modRestrictedResearch>
+					<li>Nesi.RimValiFFARW</li>
+				</modRestrictedResearch>
+				<modRestrictedApparel>
+					<li>Nesi.RimValiFFARW</li>
+				</modRestrictedApparel>
+				<modAllowedApparel>
+					<li>ludeon.rimworld</li>
+					<li>ludeon.rimworld.royalty</li>
+				</modAllowedApparel>
+				<disabledThoughts>
+					<li>EnvironmentDark</li>
+					<li>Naked</li>
+					<li>SleepDisturbed</li>
+					<li>SharedBed</li>
+					<li>ObservedLayingCorpse</li>
+					<li>ButcheredHumanlikeCorpse</li>
+					<li>KnowButcheredHumanlikeCorpse</li>
+				</disabledThoughts>
+				<restrictedBeds>
+					<li>RVFFA_PillowBed</li>
+					<li>RVFFA_MediumPillowPile</li>
+					<li>RVFFA_LargePillowPile</li>
+				</restrictedBeds>
+				<disabledTraits>
+					<li>BodyPurist</li>
+					<li>Transhumanist</li>
+				</disabledTraits>
+				<canUseAnyApparel>true</canUseAnyApparel>
+				<restrictedXenoTypes>
+					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
+				</restrictedXenoTypes>
+				<xenoTypeWhitelist>
+					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
+				</xenoTypeWhitelist>
+			</li>
+			<li Class="RVCRestructured.RVRThoughtComp">
+				<thoughtReplacers>
+					<li>
+						<toReplace>SleptInBedroom</toReplace>
+						<replacer>RVFFA_SleptAlone</replacer>
+					</li>
+					<li>
+						<toReplace>SleptInBarracks</toReplace>
+						<replacer>RVFFA_SharedRoom</replacer>
+					</li>
+				</thoughtReplacers>
+			</li>
+			<li Class="RVCRestructured.RVRCP">
+				
+			</li>
+		</comps>
 		<tools>
 			<li>
 				<label>left fist</label>
@@ -475,5 +483,5 @@
 				<li>AvaliMeat</li>
 			</mergeCompatibilityTags>
 		</ingredient>
-	</RVCRestructured.RVR.RaceDef>
+	</ThingDef>
 </Defs>

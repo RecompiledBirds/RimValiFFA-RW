@@ -30,9 +30,9 @@ namespace RimValiFFARW.Packs
 
         /// <summary>
         ///     Checks if a <see cref="Pawn"/> is an Avali
-        /// </summary>
+        /// </summary>B
         /// <param name="pawn"></param>
         /// <returns></returns>
-        public static bool IsAvali(this Pawn pawn) => pawn.def is RaceDef raceDef && raceDef.defName == "RVFFA_Avali";
+        public static bool IsAvali(this Pawn pawn) =>  pawn.def.defName == "RVFFA_Avali";
     }
 }

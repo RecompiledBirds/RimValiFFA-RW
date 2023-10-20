@@ -63,7 +63,7 @@
 				</li>
 				<li>
 					<def>Lung</def>
-					<customLabel>left avali lung</customLabel>
+					<customLabel>left lung</customLabel>
 					<coverage>0.025</coverage>
 					<depth>Inside</depth>
 					<groups>
@@ -72,7 +72,7 @@
 				</li>
 				<li>
 					<def>Lung</def>
-					<customLabel>right avali lung</customLabel>
+					<customLabel>right lung</customLabel>
 					<coverage>0.025</coverage>
 					<depth>Inside</depth>
 					<groups>
