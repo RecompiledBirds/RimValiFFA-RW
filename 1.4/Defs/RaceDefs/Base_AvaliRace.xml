@@ -25,6 +25,14 @@
 				</thoughts>
 				<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
 			</li>
+			
+			<li Class="RVCRestructured.RVRBodyGetterComp">
+				<allowedBodyTypes>
+					<li>RVFFA_Avali</li>
+				</allowedBodyTypes>
+
+			</li>
+			
 			<li Class="RVCRestructured.RVRGraphicsComp">
 				<bodyTex>RVC/Empty</bodyTex>
 				<headTex>RVC/Empty</headTex>
@@ -207,9 +215,7 @@
 				<restrictedBodyTypes>
 					<li>RVFFA_Avali</li>
 				</restrictedBodyTypes>
-				<allowedBodyTypes>
-					<li>RVFFA_Avali</li>
-				</allowedBodyTypes>
+				
 				<modRestrictedEquipment>
 					<li>Nesi.RimValiFFARW</li>
 				</modRestrictedEquipment>
