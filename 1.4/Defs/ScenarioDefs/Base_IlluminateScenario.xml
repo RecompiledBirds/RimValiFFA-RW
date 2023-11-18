@@ -3,9 +3,9 @@
 	<ScenarioDef Name="Illuminate Colony">
 		<defName>RVFFA_IlluminateColontStarter</defName>
 		<label>Illuminate Colony</label>
-		<description>A starting Illuminate colony of 4 avali. The classic rimworld and rimvali experience.</description>
+		<description>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</description>
 		<scenario>
-			<summary>A starting Illuminate colony of 4 avali. The classic rimworld and rimvali experience.</summary>
+			<summary>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</summary>
 			<playerFaction>
 				<def>PlayerFaction</def>
 				<factionDef>RVFFA_IlluminatePlayer</factionDef>
@@ -29,6 +29,24 @@
 					<count>50</count>
 				</li>
 
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RVFFA_Viroblade</thingDef>
+					<count>1</count>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RVFFA_IlluminatePistol</thingDef>
+					<count>1</count>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RVFFA_Knife</thingDef>
+					<count>1</count>
+				</li>
+
 				<li Class="ScenPart_GameStartDialog">
 					<def>GameStartDialog</def>
 					<textKey>GameStartDialog</textKey>
@@ -39,6 +57,12 @@
 					<def>StartingThing_Defined</def>
 					<thingDef>MedicineIndustrial</thingDef>
 					<count>30</count>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>RVFFA_Tungsten</thingDef>
+					<count>150</count>
 				</li>
 				
 				<li Class="ScenPart_StartingThing_Defined">

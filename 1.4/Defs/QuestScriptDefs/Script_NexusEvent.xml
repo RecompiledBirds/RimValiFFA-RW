@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!--
 	<QuestScriptDef>
 		<defName>RVFFA_NexusQuestTypeOne</defName>
 		<rootSelectionWeight>1.0</rootSelectionWeight>
@@ -97,5 +98,5 @@
 				</li>
 			</nodes>
 		</root>
-	</QuestScriptDef>
+	</QuestScriptDef>-->
 </Defs>

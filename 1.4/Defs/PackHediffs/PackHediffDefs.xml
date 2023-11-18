@@ -194,7 +194,7 @@
 		<tendable>false</tendable>
 		<makesAlert>false</makesAlert>
 		<everCurableByItem>false</everCurableByItem>
-		<chronic>true</chronic>
+		<chronic>false</chronic>
 		<priceImpact>true</priceImpact>
 		<priceOffset>200</priceOffset>
 

@@ -113,5 +113,20 @@
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/Expanding/Town</settlementTexturePath>
 		<factionIconPath>RimValiFFA/WorldIcons/Town</factionIconPath>
+
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+		</disallowedMemes>
+
+		<structureMemeWeights>
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">5</Structure_Archist>
+		</structureMemeWeights>
+
+		<xenotypeSet>
+			<xenotypeChances>
+				<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">1</RVFFA_BaseAvaliXenoType>
+			</xenotypeChances>
+		</xenotypeSet>
 	</FactionDef>
 </Defs>

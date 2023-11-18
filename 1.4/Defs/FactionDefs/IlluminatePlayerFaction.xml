@@ -36,5 +36,11 @@
 				<li>Synthread</li>
 			</thingDefs>
 		</apparelStuffFilter>
+
+		<xenotypeSet>
+			<xenotypeChances>
+				<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">1</RVFFA_BaseAvaliXenoType>
+			</xenotypeChances>
+		</xenotypeSet>
 	</FactionDef>
 </Defs>

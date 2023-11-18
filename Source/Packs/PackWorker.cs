@@ -230,6 +230,7 @@ namespace RimValiFFARW.Packs
             double count = 0;
 
             if (pawns.Count() < 2) return 100;
+            if (pawns.Any(pawn => pawn == null)) return 100;
 
             foreach (Pawn member in pawns)
             {
@@ -265,7 +266,7 @@ namespace RimValiFFARW.Packs
                 pack.Worker.MemberShouldLeave(member, pack, out string reason);
                 if (reason == null) continue;
 
-                Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member?.NameShortColored ?? "", pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
+                Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member?.NameShortColored ?? "???", pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
                 CleanUpMember(member, pack);
                 break;
             }

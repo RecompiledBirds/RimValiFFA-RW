@@ -186,6 +186,8 @@ namespace RimValiFFARW.StoryTellers
         }
         public void UpdatePawnCount(Map map)
         {
+            if (map == null)
+                return;
             dislikedPawns = GetDislikedPawns(map);
             likedPawns = GetLikedPawns(map);
         }

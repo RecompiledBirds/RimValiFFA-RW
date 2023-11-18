@@ -144,7 +144,11 @@ namespace RimValiFFARW.Packs
         /// <returns>True if successful, false if a member couldn't be removed for any reason.</returns>
         public bool RemoveMember(Pawn member)
         {
-            if (member == null) return false;
+            if (member == null)
+            {
+                RemoveNullMembers();
+                return false;
+            }
             if (!worker.MemberCanLeave(member, this)) return false;
             if (!members.Remove(member)) return false;
 
@@ -152,6 +156,12 @@ namespace RimValiFFARW.Packs
             worker.RemoveMemberHediffs(memberHediffDic[member]);
             worker.NotifyMemberRemoved(member);
             return true;
+        }
+
+        private void RemoveNullMembers()
+        {
+            members.RemoveWhere(x => x == null);
+            memberHediffDic.RemoveAll(x => x.Key == null);
         }
 
         /// <summary>

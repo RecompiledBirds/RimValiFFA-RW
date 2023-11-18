@@ -178,8 +178,8 @@
                 <defaultProjectile>RVFFA_SMGBullet</defaultProjectile>
                 <warmupTime>0.7</warmupTime>
                 <range>30.4</range>
-                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                <burstShotCount>2</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <burstShotCount>6</burstShotCount>
                 <soundCast>Shot_HeavySMG</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
                 <muzzleFlashScale>0</muzzleFlashScale>
@@ -1443,15 +1443,15 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>4</power>
+				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
 				<label>Avali Axe Blade</label>
 				<capacities>
-					<li>Cut</li>
+					<li>Demolish</li>
 				</capacities>
-				<power>5.2</power>
+				<power>7.5</power>
 				<cooldownTime>1</cooldownTime>
 			</li>
 		</tools>
@@ -1502,7 +1502,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>1</power>
+				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
@@ -1510,8 +1510,8 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>2.2</power>
-				<cooldownTime>0.2</cooldownTime>
+				<power>16</power>
+				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
 		<recipeMaker>
@@ -1585,7 +1585,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
-		<defName>RVFFA_Viroblae</defName>
+		<defName>RVFFA_Viroblade</defName>
 		<label>Illuminate Viroblade</label>
 		<description>The renowned and highly iconic Illuminate sword. Perhaps it is the vibrating blade and the song-like hum it creates that makes it so popular. Or perhaps it is the splintering ferrogel blade instead, creating many deadly injuries. Whatever the reason may be, this blade has a legendary reputation and a bodycount to support it.</description>
 		<graphicData>
