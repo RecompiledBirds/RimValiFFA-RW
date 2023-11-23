@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliTent">
+		<defName>RVFFA_TripoleTent</defName>
+		<label>Avali tripole tent</label>
+		<description>Three avali tent poles, with a covering.</description>
+		<size>(2,2)</size>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<drawSize>(2.3,2.3)</drawSize>
+			<drawOffset>(0,0,0.5)</drawOffset>
+			<texPath>RimValiFFA/Tents/Tri/Tri_Pole_Tent</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>4</Mass>
+			<Beauty>1</Beauty>
+		</statBases>
+		<costList>
+			<RVFFA_NanoFiber>6</RVFFA_NanoFiber>
+			<RVFFA_ProcessedTungsten>9</RVFFA_ProcessedTungsten>
+		</costList>
+	</ThingDef>
+</Defs>

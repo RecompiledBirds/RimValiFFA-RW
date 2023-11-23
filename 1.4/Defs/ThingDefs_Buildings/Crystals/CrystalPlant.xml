@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="PlantBaseNonEdible">
+		<defName>RVFFA_CrystalPlant</defName>
+		<label>Avali Crystal</label>
+		<description>A crystal.</description>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+		</statBases>
+		<graphicData>
+			<texPath>RimValiFFA/Crystal/Light_Crystal_Grown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RVFFA_Crystal</harvestedThingDef>
+			<harvestYield>6</harvestYield>
+			<immatureGraphicPath>RimValiFFA/Crystal/Light_Crystal_Growing</immatureGraphicPath>
+			<topWindExposure>0.1</topWindExposure>
+			<growDays>3</growDays>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<wildOrder>2</wildOrder>
+			<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+</Defs>

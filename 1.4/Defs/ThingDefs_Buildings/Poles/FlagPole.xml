@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliPole">
+		<defName>RVFFA_FlagPole</defName>
+		<label>Avali Flag Pole</label>
+		<description>An Avali flag pole.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Flagpole/Flagpole</texPath>
+		</graphicData>
+
+		<costList>
+			<RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
+			<RVFFA_NanoFiber>10</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+</Defs>

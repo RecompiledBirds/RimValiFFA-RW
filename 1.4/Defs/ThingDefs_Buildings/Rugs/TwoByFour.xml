@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliRug">
+		<defName>RVFFA_TwoByFourRug</defName>
+		<label>Avali 2x4 rug</label>
+
+		<statBases>
+			<Beauty>5</Beauty>
+			<Mass>4</Mass>
+		</statBases>
+
+		<size>(4,2)</size>
+		<graphicData>
+			<texPath>RimValiFFA/Rugs/TwoXFour/2x4_rug_1</texPath>
+			<drawSize>(4,2)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<RVFFA_NanoFiber>16</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseAvaliRug">
+		<defName>RVFFATwoByFourRugVariantTwo</defName>
+		<label>Avali 2x4 rug</label>
+
+		<statBases>
+			<Beauty>5</Beauty>
+			<Mass>4</Mass>
+		</statBases>
+
+		<size>(4,2)</size>
+		<graphicData>
+			<texPath>RimValiFFA/Rugs/TwoXFour/2x4_rug_2</texPath>
+			<drawSize>(4,2)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<RVFFA_NanoFiber>16</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+</Defs>

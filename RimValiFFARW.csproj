@@ -23,12 +23,14 @@
 
 	<ItemGroup>
 		<Folder Include="1.4\Assemblies\" />
+		<Folder Include="1.4\Defs\Buildings\" />
 		<Folder Include="1.4\Patches\" />
+		<Folder Include="Main\Textures\Textures\Avali\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Reference Include="RimValiCore RW">
-	    <HintPath>..\RimValiCore-RW\1.4\Assemblies\RimValiCore RW.dll</HintPath>
+	    <HintPath>..\Vine\1.4\Assemblies\RimValiCore RW.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	</ItemGroup>

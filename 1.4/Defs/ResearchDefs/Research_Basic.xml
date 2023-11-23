@@ -19,6 +19,20 @@
 			<li>Electricity</li>
 		</prerequisites>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_BaseCookingResearch</defName>
+		<label>Avali cooking</label>
+		<description>This specialised cooking station contains all the tools needed to cook, and a database of avali recipies.</description>
+		<baseCost>400</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.15</researchViewY>
+
+		<prerequisites>
+			<li>RVFFA_BasicStartTech</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_LathingTech</defName>

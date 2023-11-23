@@ -34,4 +34,20 @@
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>RVFFA_DoBillsAtCookingStation</defName>
+		<label>Cook foods</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RVFFA_CookingStation</li>
+		</fixedBillGiverDefs>
+		<verb>cook</verb>
+		<gerund>cooking at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 </Defs>

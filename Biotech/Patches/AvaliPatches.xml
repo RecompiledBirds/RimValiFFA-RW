@@ -2,7 +2,7 @@
 
 <Patch>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/RVCRestructured.RVR.RaceDef[defName="RVFFA_Avali"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_Avali"]/statBases</xpath>
 		<value>
 			<statBases>
 				<MarketValue>1750</MarketValue>
