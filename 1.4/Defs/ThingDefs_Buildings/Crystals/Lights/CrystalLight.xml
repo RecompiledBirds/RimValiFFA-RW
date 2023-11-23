@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="LampBase" Name="AvaliCrystalLampBase" Abstract="True">
+		<statBases>
+			<Mass>1</Mass>
+			<Beauty>2</Beauty>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<AvaliCrystal>3</AvaliCrystal>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>30</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(252, 186, 3,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="AvaliCrystalLampBase">
+		<defName>RVFFA_Lamp</defName>
+		<label>Avali Crystal Lamp</label>
+		<graphicData>
+			<texPath>RimValiFFA/CrystalLight/Crystal_Light_unlit</texPath>
+			<drawSize>(1.5,2)</drawSize>
+			<drawOffset>(0,0,0.5)</drawOffset>
+		</graphicData>
+		<comps>
+			<li Class="RimValiCore.DrawCompProps">
+				<texPath>RimValiFFA/CrystalLight/Crystal_Light</texPath>
+				<offset>(0,0,0)</offset>
+			</li>
+		</comps>
+		<size>(1,1)</size>
+	</ThingDef>
+
+	<ThingDef ParentName="AvaliCrystalLampBase">
+		<defName>RVFFA_CrystalWallLight</defName>
+		<label>Avali Crystal Wall Light</label>
+		<altitudeLayer>Item</altitudeLayer>
+		<graphicData>
+			<texPath>RimValiFFA/CrystalWallLamp/Crystal_Wall_Lamp</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>10</MaxHitPoints>
+			<WorkToBuild>100</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Mass>2</Mass>
+		</statBases>
+		<building>
+			<isEdifice>false</isEdifice>
+			<canPlaceOverWall>true</canPlaceOverWall>
+		</building>
+		<tickerType>Never</tickerType>
+		<useHitPoints>false</useHitPoints>
+		<placeWorkers>
+			<li>RimValiCore.WallPlaceworker</li>
+		</placeWorkers>
+	</ThingDef>
+</Defs>

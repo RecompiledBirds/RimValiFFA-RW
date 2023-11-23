@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="AvaliOnWallBase">
+		<defName>RVFFA_DreamCatcher</defName>
+		<label>Avali dream catcher</label>
+		<description>Avali dream catcher</description>
+		<graphicData>
+			<texPath>RimValiFFA/Dreamcatcher/dreamcatcher</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<costList>
+			<AvaliCrystal>5</AvaliCrystal>
+			<RVFFA_ProcessedTungsten>1</RVFFA_ProcessedTungsten>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>10</MaxHitPoints>
+			<WorkToBuild>100</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Beauty>1</Beauty>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+</Defs>

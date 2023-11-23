@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="AvaliOnWallBase">
+		<defName>RVFFA_WallTapestry</defName>
+		<label>Avali wall tapestry</label>
+		<description>Avali wall tapestry</description>
+		<graphicData>
+			<texPath>RimValiFFA/WallTapestry/WallTapestry</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<costList>
+			<RVFFA_NanoFiber>5</RVFFA_NanoFiber>
+			<RVFFA_ProcessedTungsten>1</RVFFA_ProcessedTungsten>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>10</MaxHitPoints>
+			<WorkToBuild>100</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Mass>2</Mass>
+			<Beauty>2</Beauty>
+		</statBases>
+	</ThingDef>
+</Defs>

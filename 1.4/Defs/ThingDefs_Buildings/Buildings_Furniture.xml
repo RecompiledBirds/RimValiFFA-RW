@@ -163,7 +163,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-<!--
+
 	<ThingDef ParentName="RVFFA_BedWithQualityBase">
 		<designationCategory>RVFFA_Furniture</designationCategory>
 		<defName>RVFFA_Hammock</defName>
@@ -260,7 +260,7 @@
 		<researchPrerequisites>
 			<li>ComplexFurniture</li>
 		</researchPrerequisites>
-	</ThingDef>-->
+	</ThingDef>
 
 	<ThingDef ParentName="TableBase">
 		<designationCategory>RVFFA_Furniture</designationCategory>
@@ -377,6 +377,293 @@
 		<costStuffCount>95</costStuffCount>
 		<building>
 			<buildingSizeCategory>Medium</buildingSizeCategory>
+		</building>
+	</ThingDef>
+
+
+	<ThingDef ParentName="AvaliFurnitureBase">
+		<defName>RVFFA_TribalLightPole</defName>
+		<label>Avali tribal light pole</label>
+		<description>Avali tribal light pole</description>
+		<graphicData>
+			<texPath>RimValiFFA_Vali_Tribal_Light_Pole_1x1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<statBases>
+			<Beauty>2</Beauty>
+			<Mass>3</Mass>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<costList>
+			<WoodLog>3</WoodLog>
+			<AvaliCrystal>1</AvaliCrystal>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>2.0</fuelConsumptionRate>
+				<fuelCapacity>20.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3.5</heatPerSecond>
+				<heatPushMaxTemperature>23</heatPushMaxTemperature>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="ArtableBedBase">
+		<defName>RVFFA_Beanbag</defName>
+		<label>Avali Beanbag</label>
+		<description>Avali Beanbag</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Beanbag/Vali_Beanbag</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0,0.05,1,1.95)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.1,0.15,0.1)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2,2)</size>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.5</Flammability>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>20</Mass>
+			<Comfort>0.6</Comfort>
+			<Beauty>3</Beauty>
+			<BedRestEffectiveness>1.2</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>0.4</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>0</SurgerySuccessChanceFactor>
+		</statBases>
+
+
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>75</costStuffCount>
+
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<castEdgeShadows>false</castEdgeShadows>
+		<designationHotKey>Misc3</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+	</ThingDef>
+
+
+
+	<ThingDef ParentName="ArtableBedBase">
+		<defName>RVFFA_BeanbagAlternate</defName>
+		<label>Avali Beanbag</label>
+		<description>Avali Beanbag</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Beanbag/Vali_Beanbag_2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0,0.05,1,1.95)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.1,0.15,0.1)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2,2)</size>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.5</Flammability>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>20</Mass>
+			<Comfort>0.6</Comfort>
+			<Beauty>3</Beauty>
+			<BedRestEffectiveness>1.2</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>0.4</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>0</SurgerySuccessChanceFactor>
+		</statBases>
+
+
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>75</costStuffCount>
+
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<castEdgeShadows>false</castEdgeShadows>
+		<designationHotKey>Misc3</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+	</ThingDef>
+
+	<ThingDef ParentName="ArtableBedBase">
+		<defName>RVFFA_Plush</defName>
+		<label>Avali Plush</label>
+		<description>Avali Plush</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/AvaliPlush/Avali_Plushie_Large</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0,0.05,1,1.95)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.1,0.15,0.1)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2,2)</size>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.5</Flammability>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>20</Mass>
+			<Comfort>1.2</Comfort>
+			<Beauty>4</Beauty>
+			<BedRestEffectiveness>2.2</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>1.0</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>0</SurgerySuccessChanceFactor>
+		</statBases>
+
+
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<castEdgeShadows>false</castEdgeShadows>
+		<designationHotKey>Misc3</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+	</ThingDef>
+
+	<ThingDef ParentName="AvaliFurnitureBase">
+		<defName>RVFFA_Curtain</defName>
+		<label>Avali Curtain</label>
+		<description>Avali curtain</description>
+		<graphicData>
+			<texPath>RimValiFFA/Curtains/AvaliCurtains</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.40</fillPercent>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Mass>15</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>7.5</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+		<costList>
+			<Steel>5</Steel>
+		</costList>
+		<canOverlapZones>true</canOverlapZones>
+		<pathCost>14</pathCost>
+		<rotatable>true</rotatable>
+		<size>(2,1)</size>
+		<uiIconOffset>(0, 0.15)</uiIconOffset>
+		<filthLeaving>Filth_Trash</filthLeaving>
+		<building>
+			<destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+			<destroyShakeAmount>0</destroyShakeAmount>
 		</building>
 	</ThingDef>
 </Defs>

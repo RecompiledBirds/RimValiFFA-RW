@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef Name="BaseAvaliCrystalGarden" Abstract="True" ParentName="AvaliFurnitureBase">
+		<thingClass>Building_PlantGrower</thingClass>
+		<fertility>1</fertility>
+        <building>
+            <defaultPlantToGrow>AvaliCrystalPlant</defaultPlantToGrow>
+            <sowTag>AvaliCrystal</sowTag>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+		<designationCategory>Production</designationCategory>
+		<castEdgeShadows>true</castEdgeShadows>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<defaultPlacingRot>East</defaultPlacingRot>
+		<passability>PassThroughOnly</passability>
+		<pathCost>40</pathCost>
+		<constructEffect>ConstructMetal</constructEffect>
+		<fillPercent>0.30</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>70</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<researchPrerequisites>
+			<li>Hydroponics</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+	
+</Defs>

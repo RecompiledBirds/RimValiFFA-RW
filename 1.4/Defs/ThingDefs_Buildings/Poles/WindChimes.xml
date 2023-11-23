@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliPole">
+		<defName>RVFFA_WindChimes</defName>
+
+		<label>Avali Wind Chimes</label>
+		<description>Avali wind chimes.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Windchimes/Windchimes</texPath>
+		</graphicData>
+
+		<costList>
+			<RVFFA_Tungsten>5</RVFFA_Tungsten>
+			<AvaliCrystal>5</AvaliCrystal>
+		</costList>
+	</ThingDef>
+	
+</Defs>

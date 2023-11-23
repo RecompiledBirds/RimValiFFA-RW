@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName ="AvaliFurnitureBase" Abstract="True" Name="BaseAvaliTent">
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<tickerType>Never</tickerType>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		
+	</ThingDef>
+</Defs>
