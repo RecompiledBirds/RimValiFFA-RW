@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="AvaliFurnitureBase">
+	<ThingDef ParentName="RVFFA_FurnitureBase">
 		<defName>RVFFA_Chair</defName>
 		<label>Avali Chair</label>
 		<description>Avali Chair</description>
@@ -43,7 +43,7 @@
 
 
 		<fillPercent>0.35</fillPercent>
-		<designationCategory>Furniture</designationCategory>
+		<designationCategory>RVFFA_Furniture</designationCategory>
 	</ThingDef>
 	
 </Defs>

@@ -15,9 +15,9 @@
 			<dieIfLeafless>false</dieIfLeafless>
 			<maxMeshCount>4</maxMeshCount>
 			<harvestTag>Standard</harvestTag>
-			<harvestedThingDef>AvaliCrystal</harvestedThingDef>
+			<harvestedThingDef>RVFFA_Crystal</harvestedThingDef>
 			<harvestYield>6</harvestYield>
-			<immatureGraphicPath>Avali/Crystal/Light_Crystal_Growing</immatureGraphicPath>
+			<immatureGraphicPath>RimValiFFA/Crystal/Light_Crystal_Growing</immatureGraphicPath>
 			<topWindExposure>0.1</topWindExposure>
 			<growDays>3</growDays>
 			<visualSizeRange>0.3~0.8</visualSizeRange>

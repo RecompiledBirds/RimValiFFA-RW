@@ -11,7 +11,7 @@
 
 		<costList>
 			<RVFFA_Tungsten>5</RVFFA_Tungsten>
-			<AvaliCrystal>5</AvaliCrystal>
+			<RVFFA_Crystal>5</RVFFA_Crystal>
 		</costList>
 	</ThingDef>
 	

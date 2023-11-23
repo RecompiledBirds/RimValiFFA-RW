@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--
 	<ThingDef ParentName="AvaliOnWallBase">
-		<defName>AvaliWallLight</defName>
+		<defName>RVFFA_WallLight</defName>
 		<label>Avali Wall Light</label>
 		<description>An avali wall lamp.</description>
 		<graphicData>
-			<texPath>Avali/WallLight/Wall_Light_Unlit</texPath>
+			<texPath>RimValiFFA/WallLight/Wall_Light_Unlit</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
@@ -26,9 +27,9 @@
 				<glowColor>(255, 255, 255,0)</glowColor>
 			</li>
 			<li Class="RimValiCore.DrawCompProps">
-				<texPath>Avali/WallLight/Wall_Light</texPath>
+				<texPath>RimValiFFA/WallLight/Wall_Light</texPath>
 				<offset>(0,0,0)</offset>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 </Defs>

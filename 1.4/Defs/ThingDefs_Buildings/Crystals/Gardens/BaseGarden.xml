@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Name="BaseAvaliCrystalGarden" Abstract="True" ParentName="AvaliFurnitureBase">
+	<ThingDef Name="BaseRVFFA_CrystalGarden" Abstract="True" ParentName="RVFFA_FurnitureBase">
 		<thingClass>Building_PlantGrower</thingClass>
 		<fertility>1</fertility>
         <building>
-            <defaultPlantToGrow>AvaliCrystalPlant</defaultPlantToGrow>
-            <sowTag>AvaliCrystal</sowTag>
+            <defaultPlantToGrow>RVFFA_CrystalPlant</defaultPlantToGrow>
+            <sowTag>RVFFA_Crystal</sowTag>
             <buildingTags>
                 <li>Production</li>
             </buildingTags>
         </building>
-		<designationCategory>Production</designationCategory>
+		<designationCategory>RVFFA_Production</designationCategory>
 		<castEdgeShadows>true</castEdgeShadows>
 		<altitudeLayer>LowPlant</altitudeLayer>
 		<defaultPlacingRot>East</defaultPlacingRot>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="LampBase" Name="AvaliCrystalLampBase" Abstract="True">
+	<ThingDef ParentName="LampBase" Name="RVFFA_CrystalLampBase" Abstract="True">
 		<statBases>
 			<Mass>1</Mass>
 			<Beauty>2</Beauty>
 		</statBases>
 		<costList>
 			<Steel>20</Steel>
-			<AvaliCrystal>3</AvaliCrystal>
+			<RVFFA_Crystal>3</RVFFA_Crystal>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -19,9 +19,10 @@
 				<glowColor>(252, 186, 3,0)</glowColor>
 			</li>
 		</comps>
+		<designationCategory>RVFFA_Furniture</designationCategory>
 	</ThingDef>
 
-	<ThingDef ParentName="AvaliCrystalLampBase">
+	<ThingDef ParentName="RVFFA_CrystalLampBase">
 		<defName>RVFFA_Lamp</defName>
 		<label>Avali Crystal Lamp</label>
 		<graphicData>
@@ -30,7 +31,7 @@
 			<drawOffset>(0,0,0.5)</drawOffset>
 		</graphicData>
 		<comps>
-			<li Class="RimValiCore.DrawCompProps">
+			<li Class="RVCRestructured.Comps.DrawCompProps">
 				<texPath>RimValiFFA/CrystalLight/Crystal_Light</texPath>
 				<offset>(0,0,0)</offset>
 			</li>
@@ -38,7 +39,8 @@
 		<size>(1,1)</size>
 	</ThingDef>
 
-	<ThingDef ParentName="AvaliCrystalLampBase">
+	<!--
+	<ThingDef ParentName="RVFFA_CrystalLampBase">
 		<defName>RVFFA_CrystalWallLight</defName>
 		<label>Avali Crystal Wall Light</label>
 		<altitudeLayer>Item</altitudeLayer>
@@ -64,4 +66,5 @@
 			<li>RimValiCore.WallPlaceworker</li>
 		</placeWorkers>
 	</ThingDef>
+	-->
 </Defs>

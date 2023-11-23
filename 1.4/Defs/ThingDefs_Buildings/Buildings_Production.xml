@@ -85,6 +85,8 @@
 
 			<li>RVFFA_MakeSabot</li>
 
+			<li>RVFFA_AssembleNanoMachines</li>
+
 		</recipes>
 		<researchPrerequisites>
 			<li>RVFFA_LathingTech</li>

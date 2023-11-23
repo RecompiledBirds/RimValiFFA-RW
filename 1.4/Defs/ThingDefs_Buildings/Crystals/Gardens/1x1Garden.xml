@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="BaseAvaliCrystalGarden">
-		<defName>SmallAvaliCrystalGarden</defName>
+	<ThingDef ParentName="BaseRVFFA_CrystalGarden">
+		<defName>SmallRVFFA_CrystalGarden</defName>
 		<label>Small Avali Crystal Garden</label>
 		<description>A small crystal garden.</description>
 

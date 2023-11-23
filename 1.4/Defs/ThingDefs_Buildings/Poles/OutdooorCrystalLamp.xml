@@ -11,7 +11,7 @@
 
 		<costList>
 			<RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
-			<AvaliCrystal>5</AvaliCrystal>
+			<RVFFA_Ferrogel>5</RVFFA_Ferrogel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps>

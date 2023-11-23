@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Abstract="True" Name="BaseAvaliRug" ParentName="AvaliFurnitureBase">
+	<ThingDef Abstract="True" Name="BaseAvaliRug" ParentName="RVFFA_FurnitureBase">
 		<description>An avali rug.</description>
 		<building>
 			<isEdifice>false</isEdifice>

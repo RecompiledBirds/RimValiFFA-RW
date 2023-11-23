@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="AvaliFurnitureBase">
+	<ThingDef ParentName="RVFFA_FurnitureBase">
 		<defName>RVFFA_TentPole</defName>
 		<label>Avali tent pole</label>
 		<description>An avali tent pole. Supports a roof.</description>
@@ -24,7 +24,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="AvaliFurnitureBase">
+	<ThingDef ParentName="RVFFA_FurnitureBase">
 		<defName>RVFFA_TentPoleVariantTwo</defName>
 		<label>Avali tent pole</label>
 		<description>An avali tent pole. Supports a roof.</description>

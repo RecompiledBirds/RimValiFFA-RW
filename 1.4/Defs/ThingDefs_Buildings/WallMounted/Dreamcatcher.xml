@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--
 	<ThingDef ParentName="AvaliOnWallBase">
 		<defName>RVFFA_DreamCatcher</defName>
 		<label>Avali dream catcher</label>
@@ -9,7 +10,7 @@
 			<graphicClass>Graphic_Multi</graphicClass>
 		</graphicData>
 		<costList>
-			<AvaliCrystal>5</AvaliCrystal>
+			<RVFFA_Ferrogel>5</RVFFA_Ferrogel>
 			<RVFFA_ProcessedTungsten>1</RVFFA_ProcessedTungsten>
 		</costList>
 		<rotatable>true</rotatable>
@@ -20,5 +21,5 @@
 			<Beauty>1</Beauty>
 			<Mass>2</Mass>
 		</statBases>
-	</ThingDef>
+	</ThingDef>-->
 </Defs>

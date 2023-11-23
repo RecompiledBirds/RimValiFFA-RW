@@ -184,7 +184,6 @@
 			<BedRestEffectiveness>0.95</BedRestEffectiveness>
 			<ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
 			<Comfort>0.68</Comfort>
-			<Beauty>4</Beauty>
 			<WorkToBuild>600</WorkToBuild>
 			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
 		</statBases>
@@ -226,7 +225,6 @@
 		<statBases>
 			<MaxHitPoints>140</MaxHitPoints>
 			<Flammability>1.0</Flammability>
-			<Beauty>1</Beauty>
 			<WorkToBuild>800</WorkToBuild>
 			<Mass>30</Mass>
 			<BedRestEffectiveness>1</BedRestEffectiveness>
@@ -381,12 +379,12 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="AvaliFurnitureBase">
+	<ThingDef ParentName="RVFFA_FurnitureBase">
 		<defName>RVFFA_TribalLightPole</defName>
 		<label>Avali tribal light pole</label>
 		<description>Avali tribal light pole</description>
 		<graphicData>
-			<texPath>RimValiFFA_Vali_Tribal_Light_Pole_1x1</texPath>
+			<texPath>RimValiFFA/Vali_Tribal_Light_Pole_1x1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
@@ -398,7 +396,7 @@
 		<tickerType>Normal</tickerType>
 		<costList>
 			<WoodLog>3</WoodLog>
-			<AvaliCrystal>1</AvaliCrystal>
+			<RVFFA_Ferrogel>1</RVFFA_Ferrogel>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Refuelable">
@@ -429,7 +427,7 @@
 		<defName>RVFFA_Beanbag</defName>
 		<label>Avali Beanbag</label>
 		<description>Avali Beanbag</description>
-
+		<designationCategory>RVFFA_Furniture</designationCategory>
 		<graphicData>
 			<texPath>RimValiFFA/Beanbag/Vali_Beanbag</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -498,7 +496,7 @@
 		<defName>RVFFA_BeanbagAlternate</defName>
 		<label>Avali Beanbag</label>
 		<description>Avali Beanbag</description>
-
+		<designationCategory>RVFFA_Furniture</designationCategory>
 		<graphicData>
 			<texPath>RimValiFFA/Beanbag/Vali_Beanbag_2</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -621,6 +619,7 @@
 		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
 		<castEdgeShadows>false</castEdgeShadows>
 		<designationHotKey>Misc3</designationHotKey>
+		<designationCategory>RVFFA_Furniture</designationCategory>
 		<techLevel>Medieval</techLevel>
 		<researchPrerequisites>
 			<li>ComplexFurniture</li>
@@ -628,7 +627,7 @@
 		<uiIconScale>0.90</uiIconScale>
 	</ThingDef>
 
-	<ThingDef ParentName="AvaliFurnitureBase">
+	<ThingDef ParentName="RVFFA_FurnitureBase">
 		<defName>RVFFA_Curtain</defName>
 		<label>Avali Curtain</label>
 		<description>Avali curtain</description>
