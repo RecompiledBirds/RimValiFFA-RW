@@ -127,45 +127,21 @@
 		</statBases>
 	</ThingDef>
 
-	<ThingDef Parentname="FurnitureWithQualityBase" Name="RVFFA_BedWithQualityBase" Abstract="True">
-		<thingClass>Building_Bed</thingClass>
-		<altitudeLayer>Building</altitudeLayer>
-		<designationCategory>RVFFA_Furniture</designationCategory>
-		<rotatable>true</rotatable>
-		<fillPercent>0.15</fillPercent>
-		<pathCost>14</pathCost>
-		<passability>PassThroughOnly</passability>
-		<canOverlapZones>false</canOverlapZones>
-		<castEdgeShadows>true</castEdgeShadows>
-		<uiIconScale>0.80</uiIconScale>
-		<size>(1,2)</size>
-
-		<techLevel>Medieval</techLevel>
-		<researchPrerequisites>
-			<li>ComplexFurniture</li>
-		</researchPrerequisites>
-
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-		</placeWorkers>
+	<ThingDef ParentName="SansComfortBedBase" Name="RVFFA_BedWithQualityBase" Abstract="True">
 
 		<comps>
-			<li Class="CompProperties_AssignableToPawn">
-				<drawAssignmentOverlay>false</drawAssignmentOverlay>
-				<compClass>CompAssignableToPawn_Bed</compClass>
-			</li>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>EndTable</li>
 					<li>Dresser</li>
 					<li>RVFFA_IlluminateEndTable</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
 				</linkableFacilities>
 			</li>
 		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BedWithQualityBase">
-		<designationCategory>RVFFA_Furniture</designationCategory>
 		<defName>RVFFA_Hammock</defName>
 		<label>Avali hammock</label>
 		<description>A cozy hammock suspended between two poles specially designed for resting and Avali in mind. This setup is even usable while caravaning!</description>
@@ -206,12 +182,11 @@
 		</building>
 	</ThingDef>
 
-	<ThingDef ParentName="RVFFA_BedWithQualityBase">
+	<ThingDef ParentName="BasicBedBase">
 		<designationCategory>RVFFA_Furniture</designationCategory>
 		<defName>RVFFA_Bed</defName>
 		<label>Avali bed</label>
 		<description>A cozy mattress and sheets on a frame for resting. Inspired by its Terran counterparts, this model has been redesigned to better suit an Avali's smaller stature.</description>
-
 		<graphicData>
 			<texPath>RimValiFFA/Buildings/Furniture/casket_bed</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -221,43 +196,20 @@
 				<rect>(0,0.05,1,1.95)</rect>
 			</damageData>
 		</graphicData>
-
 		<statBases>
 			<MaxHitPoints>140</MaxHitPoints>
-			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
 			<WorkToBuild>800</WorkToBuild>
 			<Mass>30</Mass>
 			<BedRestEffectiveness>1</BedRestEffectiveness>
-			<Comfort>0.75</Comfort>
-			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
-			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
 		</statBases>
-
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-
+		<size>(1,2)</size>
 		<costStuffCount>45</costStuffCount>
-
+		<designationHotKey>Misc2</designationHotKey>
+		<uiOrder>2010</uiOrder>
 		<building>
-			<bed_humanlike>true</bed_humanlike>
-			<bed_showSleeperBody>true</bed_showSleeperBody>
-			<bed_healPerDay>4</bed_healPerDay>
-			<destroySound>BuildingDestroyed_Soft_Medium</destroySound>
-			<buildingTags>
-				<li>Bed</li>
-			</buildingTags>
+			<paintable>true</paintable>
 		</building>
-
-		<fillPercent>0.4</fillPercent>
-		<pathCost>42</pathCost>
-		<staticSunShadowHeight>0.17</staticSunShadowHeight>
-		<techLevel>Medieval</techLevel>
-		<researchPrerequisites>
-			<li>ComplexFurniture</li>
-		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="TableBase">
@@ -586,9 +538,9 @@
 			<Flammability>1.5</Flammability>
 			<WorkToBuild>1000</WorkToBuild>
 			<Mass>20</Mass>
-			<Comfort>1.2</Comfort>
+			<Comfort>1</Comfort>
 			<Beauty>4</Beauty>
-			<BedRestEffectiveness>2.2</BedRestEffectiveness>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
 			<ImmunityGainSpeedFactor>1.0</ImmunityGainSpeedFactor>
 			<SurgerySuccessChanceFactor>0</SurgerySuccessChanceFactor>
 		</statBases>
