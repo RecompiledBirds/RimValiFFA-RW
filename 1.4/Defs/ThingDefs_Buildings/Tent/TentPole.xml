@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="RVFFA_FurnitureBase">
+		<defName>RVFFA_TentPole</defName>
+		<label>Avali tent pole</label>
+		<description>An avali tent pole. Supports a roof.</description>
+		<size>(1,1)</size>
+		<holdsRoof>true</holdsRoof>
+		<rotatable>true</rotatable>
+		<specialDisplayRadius>6.9</specialDisplayRadius>
+		<graphicData>
+			<drawSize>(1,1)</drawSize>
+			<drawOffset>(0,0,0.5)</drawOffset>
+			<texPath>RimValiFFA/Tents/Solo/Tent_Pole</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.9</Mass>
+			<Beauty>1</Beauty>
+		</statBases>
+		<costList>
+			<RVFFA_ProcessedTungsten>4</RVFFA_ProcessedTungsten>
+		</costList>
+	</ThingDef>
+
+
+	<ThingDef ParentName="RVFFA_FurnitureBase">
+		<defName>RVFFA_TentPoleVariantTwo</defName>
+		<label>Avali tent pole</label>
+		<description>An avali tent pole. Supports a roof.</description>
+		<size>(1,1)</size>
+		<holdsRoof>true</holdsRoof>
+		<rotatable>true</rotatable>
+		<specialDisplayRadius>6.9</specialDisplayRadius>
+		<graphicData>
+			<drawSize>(1,1)</drawSize>
+			<drawOffset>(0,0,0.5)</drawOffset>
+			<texPath>RimValiFFA/Tents/Solo/Solo_Tent_Pole_W_Tent</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.9</Mass>
+			<Beauty>1</Beauty>
+		</statBases>
+		<costList>
+			<RVFFA_NanoFiber>3</RVFFA_NanoFiber>
+			<RVFFA_ProcessedTungsten>4</RVFFA_ProcessedTungsten>
+		</costList>
+	</ThingDef>
+</Defs>

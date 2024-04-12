@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliTent">
+		<defName>RVFFA_DuopoleTent</defName>
+		<label>Avali duopole tent</label>
+		<description>Two avali tent poles, with a small covering.</description>
+		<size>(2,1)</size>
+		<rotatable>false</rotatable>
+		<graphicData>
+			<drawSize>(2,2)</drawSize>
+			<drawOffset>(0,0,0.5)</drawOffset>
+			<texPath>RimValiFFA/Tents/Duo/Duopole_Tent</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>4</Mass>
+			<Beauty>1</Beauty>
+		</statBases>
+		<costList>
+			<RVFFA_NanoFiber>5</RVFFA_NanoFiber>
+			<RVFFA_ProcessedTungsten>6</RVFFA_ProcessedTungsten>
+		</costList>
+	</ThingDef>
+</Defs>

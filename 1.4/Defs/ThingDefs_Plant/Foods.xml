@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MealLavishBase">
+    <defName>RVFFA_Taco</defName>
+    <label>Avali tacos</label>
+    <description>Avali tacos.</description>
+    <graphicData>
+      <texPath>RimValiFFA/Foods/tacos</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+     <statBases>
+      <MarketValue>40</MarketValue>
+      <WorkToMake>730</WorkToMake>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+
+
+ <ThingDef ParentName="MealLavishBase">
+    <defName>RVFFA_Pizza</defName>
+    <label>Avali pizza slice</label>
+    <description>An avali pizza slice.</description>
+    <graphicData>
+      <texPath>RimValiFFA/Foods/pizza</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+     <statBases>
+      <MarketValue>40</MarketValue>
+      <WorkToMake>800</WorkToMake>
+      <Nutrition>0.6</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+  
+
+  <ThingDef ParentName="MealCooked">
+    <defName>RVFFA_Cookie</defName>
+    <label>Avali cookies</label>
+    <description>Avali cookies.</description>
+    <graphicData>
+      <texPath>RimValiFFA/Foods/cookies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+     <statBases>
+      <MarketValue>15</MarketValue>
+      <WorkToMake>300</WorkToMake>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <joy>0.10</joy>
+      <joyKind>Gluttonous</joyKind>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef> 
+  
+
+   <ThingDef ParentName="MealFineBase">
+     <defName>RVFFA_Noodles</defName>
+     <label>Piru noodles</label>
+     <description>Piru noodles.\n "Send noods"</description>
+     <graphicData>
+      <texPath>RimValiFFA/Foods/piri_noods</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+     </graphicData>
+     <statBases>
+      <MarketValue>20</MarketValue>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+     <ingestible>
+      <preferability>MealFine</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+    <rotatable>false</rotatable>
+  </ThingDef>
+  
+
+   <ThingDef ParentName="MealLavishBase">
+     <defName>RVFFA_Roast</defName>
+     <label>Avali roast</label>
+     <description>Avali roast.</description>
+     <graphicData>
+      <texPath>RimValiFFA/Foods/vali_roast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+     </graphicData>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <WorkToMake>770</WorkToMake>
+      <Nutrition>1.1</Nutrition>
+    </statBases>
+     <ingestible>
+      <preferability>MealLavish</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>  
+  
+
+   <ThingDef ParentName="MealCooked">
+     <defName>RVFFA_FlatBread</defName>
+     <label>Piru flatbread</label>
+     <description>Piru flatbread.</description>
+     <graphicData>
+      <texPath>RimValiFFA/Foods/piri_flatbread</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+     </graphicData>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <WorkToMake>330</WorkToMake>
+      <Nutrition>0.6</Nutrition>
+    </statBases>
+     <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>  
+    
+
+ <ThingDef ParentName="MealFineBase">
+     <defName>RVFFA_OvoidStuffed</defName>
+     <label>Stuffed ovoid</label>
+     <description>A stuffed nakati ovoid.</description>
+     <graphicData>
+      <texPath>RimValiFFA/Foods/ovaid_stuffed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+     </graphicData>
+     <statBases>
+      <MarketValue>20</MarketValue>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+     <ingestible>
+      <preferability>MealFine</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>     
+  
+
+   <ThingDef ParentName="MealCooked">
+     <defName>RVFFA_BarkRoast</defName>
+     <label>Nakati bark roast</label>
+     <description>Nakati bark roast.</description>
+     <graphicData>
+      <texPath>RimValiFFA/Foods/nakati_bark_roast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+     </graphicData>
+     <statBases>
+      <MarketValue>15</MarketValue>
+      <WorkToMake>270</WorkToMake>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+     <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>   
+
+
+  <ThingDef ParentName="MealFineBase">
+    <defName>RVFFA_KiriStuffed</defName>
+    <label>Stuffed kiri</label>
+    <description>Stuffed kiri.</description>
+    <graphicData>
+      <texPath>RimValiFFA/Foods/kiri_stuffed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>       
+
+
+  <ThingDef ParentName="MealBase">
+    <defName>RVFFA_Jerky</defName>
+    <label>Avali jerky</label>
+    <description>Avali jerky.</description>
+    <graphicData>
+      <texPath>RimValiFFA/Foods/jerky</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.4</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.6</Flammability>
+      <WorkToMake>650</WorkToMake>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>70</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef> 
+
+
+ <ThingDef ParentName="MealBase">
+    <defName>RVFFA_LeatherKiri</defName>
+    <label>Kiri fruit leather</label>
+    <description>Kiri fruit leather.</description>
+    <graphicData>
+      <texPath>RimValiFFA/Foods/kiri_leather</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.4</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.6</Flammability>
+      <WorkToMake>630</WorkToMake>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Nutrition>0.1</Nutrition>
+    </statBases>
+     <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>70</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef> 
+
+
+  <ThingDef ParentName="MealLavishBase">
+    <defName>RVFFA_Stew</defName>
+    <label>Avali stew</label>
+    <description>Avali stew.</description>
+    <graphicData>
+      <texPath>RimValiFFA/Foods/vali_stew</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <WorkToMake>800</WorkToMake>
+      <Nutrition>1.2</Nutrition>
+    </statBases>
+     <ingestible>
+      <preferability>MealLavish</preferability>
+      <optimalityOffsetHumanlikes>2</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef> 
+</Defs>

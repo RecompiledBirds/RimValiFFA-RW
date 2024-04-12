@@ -25,11 +25,12 @@
 				</thoughts>
 				<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
 			</li>
-
+			
 			<li Class="RVCRestructured.RVRBodyGetterComp">
 				<allowedBodyTypes>
 					<li>RVFFA_Avali</li>
 				</allowedBodyTypes>
+
 			</li>
 			
 			<li Class="RVCRestructured.RVRGraphicsComp">
@@ -244,14 +245,13 @@
 					<li>RVFFA_PillowBed</li>
 					<li>RVFFA_MediumPillowPile</li>
 					<li>RVFFA_LargePillowPile</li>
+					<li>RVFFA_Bed</li>
+					<li>RVFFA_Hammock</li>
 				</restrictedBeds>
 				<disabledTraits>
 					<li>BodyPurist</li>
 					<li>Transhumanist</li>
 				</disabledTraits>
-				<restrictedTraits>
-					<li>RVFFA_PackBroken</li>
-				</restrictedTraits>
 				<canUseAnyApparel>true</canUseAnyApparel>
 				<restrictedXenoTypes>
 					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
@@ -260,7 +260,6 @@
 					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
 				</xenoTypeWhitelist>
 			</li>
-			
 			<li Class="RVCRestructured.RVRThoughtComp">
 				<thoughtReplacers>
 					<li>
@@ -273,10 +272,10 @@
 					</li>
 				</thoughtReplacers>
 			</li>
-			<li Class="RVCRestructured.RVRRecipeGetterComp">
+			<li Class="RVCRestructured.RVRCP">
 				
 			</li>
-			<li Class="RVCRestructured.RVRCP">
+			<li Class="RVCRestructured.RVRRecipeGetterComp">
 				
 			</li>
 		</comps>

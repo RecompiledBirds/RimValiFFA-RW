@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>RVFFA_Crystal</defName>
+		<label>Avali Crystal</label>
+		<description>Avali Crystal.</description>
+		<soundInteract>Grain_Drop</soundInteract>
+		<soundDrop>Grain_Drop</soundDrop>
+		<graphicData>
+			<texPath>RimValiFFA/Light_Crystal_Harvested</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.1</MarketValue>
+			<Mass>0.02</Mass>
+			<Beauty>0</Beauty>
+		</statBases>
+		<thingCategories>
+			<li>RVFFA_Resources</li>
+		</thingCategories>
+	</ThingDef>
+	
+</Defs>

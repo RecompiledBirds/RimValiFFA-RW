@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseRVFFA_CrystalGarden">
+		<defName>SmallRVFFA_CrystalGarden</defName>
+		<label>Small Avali Crystal Garden</label>
+		<description>A small crystal garden.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/CrystalGarden/CrystalGarden</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+
+		<statBases>
+			<Mass>1</Mass>
+		</statBases>
+
+		<costList>
+			<Steel>30</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+	</ThingDef>
+	
+</Defs>
