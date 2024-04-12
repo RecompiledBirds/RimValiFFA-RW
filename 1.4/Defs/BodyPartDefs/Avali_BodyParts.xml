@@ -56,4 +56,32 @@
 		<spawnThingOnRemoved>RVFFA_Tail</spawnThingOnRemoved>
 		<destroyableByDamage>true</destroyableByDamage>
 	</BodyPartDef>
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+		<defName>RVFFA_InstallTail</defName>
+		<label>Install avali tail</label>
+		<description>Install an avali tail.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_Tail</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing avali tail.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Tail</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_Tail</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RVFFA_Tail</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
 </Defs>
