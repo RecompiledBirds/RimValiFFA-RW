@@ -239,7 +239,7 @@ namespace RimValiFFARW.Packs
             Widgets.Label(tempMemberName, otherMember.NameShortColored);
             Widgets.Label(tempOpinion, opinion.ToString());
             Widgets.FillableBar(tempBar, (100f + opinion) / 200f, barTex);
-            Widgets.DrawTextureFitted(tempCloseButton, TexButton.DeleteX, 1f);
+            Widgets.DrawTextureFitted(tempCloseButton, TexButton.Delete, 1f);
             if (Widgets.ButtonInvisible(tempCloseButton))
             {
                 fullTempPackMembers.Remove(otherMember);

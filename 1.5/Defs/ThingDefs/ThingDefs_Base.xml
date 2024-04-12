@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase" Name="RVFFA_BaseItem" Abstract="True">
+		<techLevel>Industrial</techLevel>
+
+		<thingCategories>
+			<li>RVFFA_Resources</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Name="RVFFA_BaseClothItem" ParentName="RVFFA_BaseItem" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+      		<drawSize>0.85</drawSize>
+		</graphicData>
+		
+		<stuffProps>
+			<categories>
+				<li>Fabric</li>
+			</categories>
+			<constructEffect>ConstructMetal</constructEffect>
+      		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      		<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+		</stuffProps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</ThingDef>
+
+	<ThingDef Name="RVFFA_TungstenBase" ParentName="RockBase" Abstract="True">
+		<statBases>
+			<MaxHitPoints>5000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>RVFFA_Tungsten</mineableThing>
+			<mineableYield>20</mineableYield>
+			<mineableScatterCommonality>1</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~35</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef Name="RVFFA_BaseApparel" ParentName="ApparelMakeableBase" Abstract="True">
+        <recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>2</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RVFFA_NanoLoom</li>
+            </recipeUsers>
+        </recipeMaker>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.00</drawSize>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <uiIconScale>1.12</uiIconScale>
+        <apparel>
+            <useWornGraphicMask>true</useWornGraphicMask>
+
+			<tags>
+				<li>Avali</li>
+			</tags>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+
+		<researchPrerequisites>
+			<li>RVVFA_BasicApparelTech</li>
+		</researchPrerequisites>
+    </ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseApparel" Name="RVFFA_BaseArmor" Abstract="True">
+		<recipeMaker>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RVFFA_NanoForge</li>
+            </recipeUsers>
+        </recipeMaker>
+
+		 <generateCommonality>2</generateCommonality>
+
+		<techLevel>Spacer</techLevel>
+		
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+				<weight>10</weight>
+				<only>(0.9,0.9,0.9,1)</only>
+				</li>
+				<li>
+				<weight>10</weight>
+				<only>(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+				<weight>10</weight>
+				<only>(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+				<weight>6</weight>
+				<min>(0.3,0.3,0.3,1)</min>
+				<max>(0.5,0.5,0.5,1)</max>
+				</li>
+			</options>
+		</colorGenerator>
+
+		<apparel>
+			<layers>
+				<li>Middle</li>
+			</layers>
+
+			<tags>
+				<li>EVA</li>
+				<li>Avali</li>
+			</tags>
+			
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+
+			<defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseArmor" Name="RVFFA_BaseArmorHelmet" Abstract="True">
+		<apparel>
+			<bodyPartGroups Inherit="False">
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<layers Inherit="False">
+				<li>Overhead</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseApparel" Abstract="True" Name="RVFFA_BaseHelmet">
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+</Defs>

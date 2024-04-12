@@ -25,6 +25,13 @@
 				</thoughts>
 				<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
 			</li>
+
+			<li Class="RVCRestructured.RVRBodyGetterComp">
+				<allowedBodyTypes>
+					<li>RVFFA_Avali</li>
+				</allowedBodyTypes>
+			</li>
+			
 			<li Class="RVCRestructured.RVRGraphicsComp">
 				<bodyTex>RVC/Empty</bodyTex>
 				<headTex>RVC/Empty</headTex>
@@ -207,9 +214,7 @@
 				<restrictedBodyTypes>
 					<li>RVFFA_Avali</li>
 				</restrictedBodyTypes>
-				<allowedBodyTypes>
-					<li>RVFFA_Avali</li>
-				</allowedBodyTypes>
+				
 				<modRestrictedEquipment>
 					<li>Nesi.RimValiFFARW</li>
 				</modRestrictedEquipment>
@@ -244,6 +249,9 @@
 					<li>BodyPurist</li>
 					<li>Transhumanist</li>
 				</disabledTraits>
+				<restrictedTraits>
+					<li>RVFFA_PackBroken</li>
+				</restrictedTraits>
 				<canUseAnyApparel>true</canUseAnyApparel>
 				<restrictedXenoTypes>
 					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
@@ -252,6 +260,7 @@
 					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
 				</xenoTypeWhitelist>
 			</li>
+			
 			<li Class="RVCRestructured.RVRThoughtComp">
 				<thoughtReplacers>
 					<li>
@@ -264,10 +273,10 @@
 					</li>
 				</thoughtReplacers>
 			</li>
-			<li Class="RVCRestructured.RVRCP">
+			<li Class="RVCRestructured.RVRRecipeGetterComp">
 				
 			</li>
-			<li Class="RVCRestructured.RVRRecipeGetterComp">
+			<li Class="RVCRestructured.RVRCP">
 				
 			</li>
 		</comps>

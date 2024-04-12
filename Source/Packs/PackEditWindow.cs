@@ -284,7 +284,7 @@ namespace RimValiFFARW.Packs
                 Widgets.DrawBoxSolid(tempRect, new Color(otherGrey.r, otherGrey.g, otherGrey.b, .2f));
             }
 
-            Widgets.DrawTextureFitted(tempCloseButton, TexButton.DeleteX, 1f);
+            Widgets.DrawTextureFitted(tempCloseButton, TexButton.Delete, 1f);
             if (Widgets.ButtonInvisible(tempCloseButton))
             {
                 switch (type)

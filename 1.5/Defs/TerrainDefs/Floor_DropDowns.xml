@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DesignatorDropdownGroupDef>
+		<defName>RVFFA_ScrapTile</defName>
+		<label>Scrap floor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>RVFFA_ShingleFloors</defName>
+		<label>Shingle floor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>RVFFA_WeaveFloors</defName>
+		<label>Shingle floor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>RVFFA_DiamondFloors</defName>
+		<label>Diamond floor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>RVFFA_ChaosFloor</defName>
+		<label>Chaos floor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>RVFFA_FlowerFloor</defName>
+		<label>Flower floor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>RVFFA_RoomFloor</defName>
+		<label>"Room" pattern floor</label>
+	</DesignatorDropdownGroupDef>
+</Defs>

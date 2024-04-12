@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RVFFA_Parrallel_Arm</defName>
+		<label>Parallel arms</label>
+		<labelNoun>a set of parallel arms</labelNoun>
+		<description>A set of parallel arms. These arms replace the wearer’s arms with more precise and controllable parallel arms. Whilst these aren’t the most beautiful or resistant to damage, they help the wearer with work that requires control and fine details. Be it crafting, tailoring or medical work.</description>
+		<spawnThingOnRemoved>RVFFA_Parrallel_Arm</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<RVC_HealthOffset>-0.05</RVC_HealthOffset>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThingDef ParentName="RVFFA_BaseBionicPart">
+		<defName>RVFFA_Parrallel_Arm</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cybernetics/Arm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<label>Parallel arms</label>
+		<description>A set of parallel arms. These arms replace the wearer’s arms with more precise and controllable parallel arms. Whilst these aren’t the most beautiful or resistant to damage, they help the wearer with work that requires control and fine details. Be it crafting, tailoring or medical work.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>RVFFA_Install_Parallel_Arm</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<RVFFA_AeroTungstenCarbide>20</RVFFA_AeroTungstenCarbide>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Steel>20</Steel>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>1600</MarketValue>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedBionicsTech</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RVFFA_Install_Parallel_Arm</defName>
+		<label>Install parallel arms</label>
+		<description>Install a a set of parallel arms.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_Parrallel_Arm</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing set of parallel arms.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Parrallel_Arm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_Parrallel_Arm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RVFFA_Parrallel_Arm</addsHediff>
+	</RecipeDef>
+</Defs>

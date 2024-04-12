@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<linkPosWith>RVFFA_Body</linkPosWith>
+		<defName>RVFFA_TailSkirt</defName>
+		<flipLayerEastWest>false</flipLayerEastWest>
+		<showsInBed>false</showsInBed>
+		<north>
+			<position>(0,0.01,0)</position>
+			<size>0.8</size>
+		</north>
+		<south>
+			<position>(0,0,0)</position>
+			<size>0.8</size>
+		</south>
+		<east>
+			<position>(-0.12,0.1,-0.14)</position>
+			<size>0.8</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Tail/Tailskirt/Male/MaleTailskirt</texPath>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Tail/Tailskirt/Female/FemaleTailskirt</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<linkPosWith>RVFFA_Body</linkPosWith>
+		<defName>RVFFA_Tail</defName>
+		<showsInBed>false</showsInBed>
+		<flipLayerEastWest>false</flipLayerEastWest>
+		<north>
+			<position>(-0.08,0.1,0.051)</position>
+			<size>0.8</size>
+		</north>
+		<south>
+			<position>(0.2,-0.01,0.1)</position>
+			<size>0.8</size>
+		</south>
+		<east>
+			<position>(-0.4,0,0.13)</position>
+			<size>0.8</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Tail/Male/MaleTail</texPath>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Tail/Female/FemaleTail</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+</Defs>

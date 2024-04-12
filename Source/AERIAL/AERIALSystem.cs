@@ -187,7 +187,7 @@ namespace RimValiFFARW
                     ResetForcedTarget();
                 }
 
-                if (Active && !stunner.Stunned && Spawned)
+                if (Active && !this.IsStunned && Spawned)
                 {
                     GunCompEq.verbTracker.VerbsTick();
                     if (AttackVerb.state != VerbState.Bursting)
@@ -331,11 +331,12 @@ namespace RimValiFFARW
             return stringBuilder.ToString().TrimEndNewlines();
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            top.DrawTurret(Vector3.zero, 0.0f);
-            base.Draw();
+            top.DrawTurret(drawLoc,Vector3.zero,0.0f);
+            base.DrawAt(drawLoc,flip);
         }
+
         public override void Destroy(DestroyMode mode)
         {
             if (mode != DestroyMode.Deconstruct)
@@ -418,7 +419,7 @@ namespace RimValiFFARW
                     defaultLabel = "CommandStopForceAttack".Translate(),
                     defaultDesc = "CommandStopForceAttackDesc".Translate(),
                     icon = ContentFinder<Texture2D>.Get("UI/Commands/Halt"),
-                    disabled = !Powered,
+                    Disabled = !Powered,
                     action = delegate
                     {
                         ResetForcedTarget();

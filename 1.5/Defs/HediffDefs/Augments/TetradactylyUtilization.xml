@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RVFFA_Tetradactyly_Utilization</defName>
+		<label>Tetradactyly Utilitizer</label>
+		<labelNoun>Tetradactyly Utilitizer</labelNoun>
+		<description>A Tetradactyly Utilizer. This augment is installed on Avali who do not expect to use their wings for flight. Taking the wing's fourth digit, they mold and bend it into a more forward position, practically giving the Avali a fourth finger for more practical usage. Whilst this may be the case, they lose most steering control with their wings and a lot of fellow Avali may find the inclusion of a fourth digit uncanny.</description>
+		<spawnThingOnRemoved>RVFFA_Tetradactyly_Utilization</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
+		<defName>RVFFA_Tetradactyly_Utilization</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cybernetics/Arm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<label>Tetradactyly Utilitizer</label>
+		<description>A Tetradactyly Utilizer. This augment is installed on Avali who do not expect to use their wings for flight. Taking the wing's fourth digit, they mold and bend it into a more forward position, practically giving the Avali a fourth finger for more practical usage. Whilst this may be the case, they lose most steering control with their wings and a lot of fellow Avali may find the inclusion of a fourth digit uncanny.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>RVFFA_Install_Tetradactyly_Utilitizer</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>2</Plasteel>
+			<RVFFA_Ferrogel>2</RVFFA_Ferrogel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<techHediffsTags>
+			<li>BasicAvali</li>
+		</techHediffsTags>
+		<statBases>
+			<Mass>5</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedBionicsTech</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RVFFA_Install_Tetradactyly_Utilitizer</defName>
+		<label>Install Tetradactyly Utilitizer</label>
+		<description>Install a Tetradactyly Utilitizer.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_Tetradactyly_Utilization</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing Tetradactyly Utilitizer.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Tetradactyly_Utilization</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_Tetradactyly_Utilization</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RVFFA_Tetradactyly_Utilization</addsHediff>
+	</RecipeDef>
+</Defs>

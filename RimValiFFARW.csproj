@@ -7,7 +7,7 @@
 		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<RootNamespace>RimValiFFARW</RootNamespace>
-		<OutputPath>1.4/Assemblies</OutputPath>
+		<OutputPath>1.5/Assemblies</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -17,7 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3524" />
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4061" />
 		<PackageReference Include="Lib.Harmony" Version="2.2.2" />
 	</ItemGroup>
 
@@ -28,8 +28,7 @@
 
 	<ItemGroup>
 	  <Reference Include="RimValiCore RW">
-	    <HintPath>..\RimValiCore-RW\1.4\Assemblies\RimValiCore RW.dll</HintPath>
-	    <Private>False</Private>
+	    <HintPath>..\Vine\1.4\Assemblies\RimValiCore RW.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 
