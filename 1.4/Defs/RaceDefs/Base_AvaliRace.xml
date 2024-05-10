@@ -245,6 +245,8 @@
 					<li>RVFFA_PillowBed</li>
 					<li>RVFFA_MediumPillowPile</li>
 					<li>RVFFA_LargePillowPile</li>
+					<li>RVFFA_Bed</li>
+					<li>RVFFA_Hammock</li>
 				</restrictedBeds>
 				<disabledTraits>
 					<li>BodyPurist</li>

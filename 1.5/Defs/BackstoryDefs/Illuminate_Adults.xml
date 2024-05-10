@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Shooting -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_AlpineScout</defName>
+    <identifier>RVFFA_AlpineScout</identifier>
+    <title>Alpine Scout</title>
+    <titleShort>Alpine Scout</titleShort>
+    <baseDesc>Belonging in a pack of scouts tasked with keeping an important facility secure in the mountain region, [PAWN_nameDef] spent long nights at temporary camps watching for potential threats. Years of working with [PAWN_possessive] packmates allowed them to always count on one another without a word.\n Aside from keeping watch, the pack also put up many bridges and cleared paths for future traversals around the area, [PAWN_nameDef] knew the shortcuts like the back of [PAWN_possessive] wings.</baseDesc>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Construction>3</Construction>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_SecurityGuard</defName>
+    <identifier>RVFFA_SecurityGuard</identifier>
+    <title>Security Guard</title>
+    <titleShort>Security</titleShort>
+    <baseDesc>[PAWN_nameDef] worked as a security enforcer in an Illuminate central complex. Actual breaches rarely happened, but [PAWN_pronoun] still had to stick to the protocol when questioning anyone who was an outsider. That even included [PAWN_possessive] packmates when they visited.</baseDesc>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>3</Melee>
+      <Social>-3</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Soldier</defName>
+    <identifier>RVFFA_Soldier</identifier>
+    <title>Avalian Soldier</title>
+    <titleShort>Soldier</titleShort>
+    <baseDesc>[PAWN_nameDef] was a member of the well-trained and well-supplied defense force in the heart of Avalon. The troops typically join as a pack and forms squads that way, and they were highly mechanized to make up for the relative weakness in their stature.</baseDesc>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Melee>2</Melee>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Sniper</defName>
+    <identifier>RVFFA_Sniper</identifier>
+    <title>Illuminate Sniper</title>
+    <titleShort>Sniper</titleShort>
+    <baseDesc>Trained and supplied by the Illuminate government, [PAWN_nameDef]'s extraordinary augments and skills combined made [PAWN_objective] a deadly sniper. [PAWN_possessive] targets mostly included notorious pirates and dissenters when they dared to make a presence in Illuminate grounds, but sometimes, [PAWN_possessive] skill were also used to get rid of someone who knows things they shouldn't.\n The nature of the job made [PAWN_nameDef] a target to whoever knew of [PAWN_objective]. [PAWN_pronoun] stayed away from [PAWN_possessive] pack to avoid them becoming a target for retaliation, relying on infrequent encrypted holo-calls to keep in touch.</baseDesc>
+    <skillGains>
+      <Shooting>7</Shooting>
+      <Social>-2</Social>
+    </skillGains>
+    <possessions>
+		<RVFFA_IlluminateSniperRifle>1</RVFFA_IlluminateSniperRifle>
+    </possessions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_RougeShock</defName>
+    <identifier>RVFFA_RougeShock</identifier>
+    <title>Rouge Shock Trooper</title>
+    <titleShort>Trooper</titleShort>
+    <baseDesc>As a veteran in a pirate gang, [PAWN_nameDef] was present in some of the most infamous raids against high value cargo ships. A heavily armored captain in the front line, [PAWN_pronoun] developed the skills to remain calm and call the shots even in a seemingly chaotic and explosive brawl.\n After just barely evading capture by a devastating Illuminate raid, [PAWN_nameDef] managed to be taken under the wing by a pack of artisans with a fake identity and a sympathetic story about losing everything to pirates. [PAWN_pronoun] worked overnight to distract [PAWN_possessive] mind when [PAWN_possessive] past deeds kept [PAWN_objective] from sleeping.</baseDesc>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>3</Melee>
+      <Crafting>3</Crafting>
+      <Social>2</Social>
+    </skillGains>
+  </BackstoryDef>
+  <!-- Melee -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Fencer</defName>
+    <identifier>RVFFA_Fencer</identifier>
+    <title>Fencer</title>
+    <titleShort>Fencer</titleShort>
+    <baseDesc>Aside from the usual duties [PAWN_pronoun] has as a member in a pack of craftsmen, [PAWN_nameDef] has taken up the hobby of a unique kind of Avalian sword fighting. [PAWN_pronoun] enjoys the battle of reflexes and speed when sparring, but is still quite uncomfortable with the idea of wielding lethal weapons, especially guns.</baseDesc>
+    <skillGains>
+      <Shooting>-5</Shooting>
+      <Melee>4</Melee>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_HonorGuard</defName>
+    <identifier>RVFFA_HonorGuard</identifier>
+    <title>Honor Guard</title>
+    <titleShort>Guard</titleShort>
+    <baseDesc>[PAWN_nameDef] was a honor guard in Avalon who was present in many welcoming ceremonies and parades. Much of the training [PAWN_pronoun] received was more ceremonial than combat related, but it still made [PAWN_objective] more comfortable with a sword or spear than most Avali.</baseDesc>
+    <skillGains>
+      <Melee>3</Melee>
+      <Artistic>2</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_RiotPolice</defName>
+    <identifier>RVFFA_RiotPolice</identifier>
+    <title>Riot Police</title>
+    <titleShort>Police</titleShort>
+    <baseDesc>[PAWN_nameDef] was stationed in a highly secure Avalian city center as a heavily armored enforcer. On the rare occasions [PAWN_pronoun] was needed, [PAWN_possessive] work mostly involved subduing troublemakers with a shock baton and the weight of [PAWN_possessive] armor.</baseDesc>
+    <skillGains>
+      <Melee>5</Melee>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_OracleGuard</defName>
+    <identifier>RVFFA_OracleGuard</identifier>
+    <title>Oracle Guard</title>
+    <titleShort>Supplicant</titleShort>
+    <baseDesc>[PAWN_nameDef] was one of the chosen guards of the Oracle itself. As a guard of the singularity, [PAWN_pronoun] stood at the doors with a meditative silence, the singularity's hum synchronized itself with the machine parts of [PAWN_possessive] being. Armed with the machine's enlightenment, and a quarterstaff charged with strange energy, [PAWN_pronoun] dreams of a greater purpose, and electric, ammonia sheep.</baseDesc>
+    <skillGains>
+      <Melee>7</Melee>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <!-- Construction -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_TentBuilder</defName>
+    <identifier>RVFFA_TentBuilder</identifier>
+    <title>Tent Builder</title>
+    <titleShort>Framer</titleShort>
+    <baseDesc>[PAWN_nameDef] had a knack for architecture. [PAWN_pronoun] never like the prefab tents, opting to design a few of [PAWN_possessive] own for the pack. The designs were not that much sturdier than the tried-and-true ones, but they certainly stood out and looked a bit prettier.</baseDesc>
+    <skillGains>
+      <Construction>5</Construction>
+      <Artistic>2</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_RepairVali</defName>
+    <identifier>RVFFA_RepairVali</identifier>
+    <title>Maintenance Staff</title>
+    <titleShort>Repairvali</titleShort>
+    <baseDesc>[PAWN_nameDef] was in charge of the maintenance of the pack's ships and other equipments. The ship had a radar system that was especially prone to malfunctions, and [PAWN_pronoun] swore that it would get replaced. Eventually. For years.</baseDesc>
+    <skillGains>
+      <Construction>4</Construction>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_FieldEngi</defName>
+    <identifier>RVFFA_FieldEngi</identifier>
+    <title>Field Engineer</title>
+    <titleShort>Engineer</titleShort>
+    <baseDesc>[PAWN_nameDef] kept the mechanized equipments of the defense force running within a tent in the camps. Someone with such skills are too valuable to risk on the front lines.\n [PAWN_pronoun] once found an undercover pirate sabotaging a vehicle and knocked them out with [PAWN_possessive] wrench, and earned a combat promotion that [PAWN_pronoun] still talks about to this day.</baseDesc>
+    <skillGains>
+      <Construction>4</Construction>
+      <Melee>2</Melee>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_OracleArchitect</defName>
+    <identifier>RVFFA_OracleArchitect</identifier>
+    <title>Oracle Cathedral Architect</title>
+    <titleShort>Visionary</titleShort>
+    <baseDesc>A dozen individuals from the Oracle Cult were called to build a shelter for the mind, and [PAWN_nameDef] answered. The design was calculated by the Oracle, and drafted in a synchronized circle by the chosen architects. It poises for motion, yet static as its owner's ceaseless calculations ever continues, on the cusp of a technological event horizon......</baseDesc>
+    <skillGains>
+      <Construction>7</Construction>
+      <Intellectual>7</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_GlassArchitect</defName>
+    <identifier>RVFFA_GlassArchitect</identifier>
+    <title>Glass Architect</title>
+    <titleShort>Architect</titleShort>
+    <baseDesc>[PAWN_nameDef] was a renowned architect, leading [PAWN_possessive] pack to create architectures that are equal parts exhibitionist art and buildings that took full advantage of Avalon's low gravity as a moon.\n [PAWN_possessive] magnum opus was a palace largely composed of reinforced glass as a city-center administration hub. It was a dazzling display of beauty, and a target of no less than dozens of troublemakers trying to smash it one way or another.</baseDesc>
+    <skillGains>
+      <Construction>7</Construction>
+      <Artistic>5</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <!-- Mining -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_AsteroidMiner</defName>
+    <identifier>RVFFA_AsteroidMiner</identifier>
+    <title>Asteroid Miner</title>
+    <titleShort>Miner</titleShort>
+    <baseDesc>[PAWN_nameDef]'s pack piloted a medium-sized vessel, scanning for potential resource-rich asteroids and grinding them up to be refined. Some particular larger asteroids could take months, and the crew often joked that touching plant life is a celebrated, rare occurrence.</baseDesc>
+    <skillGains>
+      <Mining>5</Mining>
+      <Plants>-5</Plants>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Prospector</defName>
+    <identifier>RVFFA_Prospector</identifier>
+    <title>Geology Surveyor</title>
+    <titleShort>Prospector</titleShort>
+    <baseDesc>[PAWN_nameDef] led a pack that traveled through sparsely colonized exoplanets to look for resources, building sites, and potential hazards such as fault lines. Rock formations and compositions vary vastly between planets, and understanding of minerals at an atomic level is required for the job.</baseDesc>
+    <skillGains>
+      <Mining>4</Mining>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_GeodeCracker</defName>
+    <identifier>RVFFA_GeodeCracker</identifier>
+    <title>Geode Cracker</title>
+    <titleShort>Gunner</titleShort>
+    <baseDesc>Some asteroid are huge chunks of especially valuable gems with a rough exterior, but there's no way to know otherwise. [PAWN_nameDef] modded a quick ship for hunting these geodes. [PAWN_pronoun] flied through fields of asteroids and rips through them with a machine gun, then checks the trails of remains for any revealed goods to tow back.</baseDesc>
+    <skillGains>
+      <Mining>4</Mining>
+      <Shooting>3</Shooting>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_CrystalCollector</defName>
+    <identifier>RVFFA_CrystalCollector</identifier>
+    <title>Crystal Collector</title>
+    <titleShort>Collector</titleShort>
+    <baseDesc>[PAWN_nameDef] was wealthy and became obsessed with unique crystal formations from space or other planets, and paid high prices to round out [PAWN_possessive] collection. Long years of dealing with shiny stones made [PAWN_objective] a bit distant towards [PAWN_possessive] pack, who didn't get the appeal.\n One day, [PAWN_nameDef] purchased [PAWN_possessive] proudest entry to the collection: A completely translucent and polished crystal ball two meters in diameter, hauled in from outer space. It became the centerpiece of [PAWN_possessive] library, not long before the focused sunlight from the sphere ignited a rug and burned it down.</baseDesc>
+    <skillGains>
+      <Social>-4</Social>
+      <Mining>6</Mining>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_DemoSpecalist</defName>
+    <identifier>RVFFA_DemoSpecalist</identifier>
+    <title>Demolition Specialist</title>
+    <titleShort>Demolitionist</titleShort>
+    <baseDesc>[PAWN_nameDef] took a job in clearing caves and other rock formations on an Avali colony, and often took some "creative liberties" in the formula of the explosives used. [PAWN_pronoun] usually used the modified formulas to create a larger yield explosion that's more efficient, but sometimes, [PAWN_pronoun] added in compounds just so the blast can have the exact color [PAWN_pronoun] wanted.\n Those who knew of [PAWN_nameDef]'s habits either called [PAWN_objective] "reckless" or "dangerously unhinged", but no one thought of the amount of discipline required to properly pull these stunts off. [PAWN_nameDef] has what it takes, and nothing made [PAWN_objective] more focused than mixing the next rock-destroying masterpiece.</baseDesc>
+    <skillGains>
+      <Crafting>4</Crafting>
+      <Mining>9</Mining>
+    </skillGains>
+  </BackstoryDef>
+  <!-- Cooking -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_ExoplanetHuner</defName>
+    <identifier>RVFFA_ExoplanetHuner</identifier>
+    <title>Exoplanet Hunter</title>
+    <titleShort>Hunter</titleShort>
+    <baseDesc>[PAWN_nameDef] belonged in a pack of explorers, and was the one to count on when the food supply needed to be topped off on exoplanets. Hunting alien animals and making sure they are safe to eat is a harder job than most people realize.</baseDesc>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Cooking>3</Cooking>
+      <Animals>2</Animals>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_PastryChef</defName>
+    <identifier>RVFFA_PastryChef</identifier>
+    <title>Pastry Chef</title>
+    <titleShort>Pâtissier</titleShort>
+    <baseDesc>[PAWN_nameDef] worked together with [PAWN_possessive] pack in an off-planet colony to provide food that satisfied the other colonist's stomachs and morale. A pastry recipe the pack used and kept a secret eventually gained a small cult following, and that minor colony became known as the place with "the best pretzels this side of the system."</baseDesc>
+    <skillGains>
+      <Cooking>6</Cooking>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_FoodCritic</defName>
+    <identifier>RVFFA_FoodCritic</identifier>
+    <title>Food Critic</title>
+    <titleShort>Critic</titleShort>
+    <baseDesc>In some larger Avalian administrative centers with automatic nutrition synthesizers, works involving food mostly became composing recipes executable by the machines, and becoming a trained taste-test critic. [PAWN_nameDef] became a dependable source of such informations thanks to [PAWN_possessive] refined palette, and a convincing ability to win arguments about subjective taste.</baseDesc>
+    <skillGains>
+      <Cooking>4</Cooking>
+      <Social>3</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Bartender</defName>
+    <identifier>RVFFA_Bartender</identifier>
+    <title>Private Bartender</title>
+    <titleShort>Bartender</titleShort>
+    <baseDesc>[PAWN_nameDef] was fascinated with mixing drinks with colorful presentations. One turn in life followed by another, and suddenly, [PAWN_pronoun] found [PAWN_objective]self away from their pack and on the capital ship of a notorious pirate gang, trusted with serving some of the most wanted names in the system.\n [PAWN_nameDef] was warned to not even think about who [PAWN_possessive] customers were or what [PAWN_pronoun] heard they said. [PAWN_pronoun] agreed, but still wore a voice recorder disguised as a feather necklace from a friend. The fleet was raided by the Illuminate authorities before [PAWN_pronoun] could decide what to do with it, and it ended up becoming a bargaining chip for [PAWN_possessive] freedom.</baseDesc>
+    <skillGains>
+      <Cooking>6</Cooking>
+      <Social>4</Social>
+      <Artistic>3</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_ArtisticChef</defName>
+    <identifier>RVFFA_ArtisticChef</identifier>
+    <title>Artistic Chef</title>
+    <titleShort>Chef</titleShort>
+    <baseDesc>[PAWN_nameDef] worked as a chef, and became increasingly obsessed with creating the perfect flavor that came to [PAWN_possessive] dreams. [PAWN_pronoun] first turned to the finest fabricators, and when those failed, [PAWN_pronoun] turned to the exoplanets.\n Eventually, this quest brought [PAWN_objective] to the Oracle's doorstep, after all, what are the abstract concepts of flavor if not some perfectly mixed molecules against chemical receptors? The machine ought to have the answer to such a simple question.\n [PAWN_nameDef] took a step forward, and all sensations unfolded.</baseDesc>
+    <skillGains>
+      <Cooking>10</Cooking>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <!-- Plants -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_HydroponicManager</defName>
+    <identifier>RVFFA_HydroponicManager</identifier>
+    <title>Hydroponic Manager</title>
+    <titleShort>Overseer</titleShort>
+    <baseDesc>Unlike many Avali with a more nomadic outlook, [PAWN_nameDef] worked and lived in a dedicated hydroponic complex along with [PAWN_possessive] pack. [PAWN_pronoun] enjoyed the quiet most of the time, and their work involved keeping the crop in check, and organizing the shipments.</baseDesc>
+    <skillGains>
+      <Plants>6</Plants>
+      <Social>2</Social>
+      <Melee>-3</Melee>
+      <Shooting>-2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_CityGardener</defName>
+    <identifier>RVFFA_CityGardener</identifier>
+    <title>City Gardener</title>
+    <titleShort>Gardener</titleShort>
+    <baseDesc>[PAWN_nameDef] took work in an administrative center's plaza as a landscaper. The city center had enough techs to take care of all its plants automatically, but it was up to [PAWN_objective] to arrange them and oversee the growth cycles to keep the foliage consistently pleasing to the eyes.</baseDesc>
+    <skillGains>
+      <Plants>4</Plants>
+      <Artistic>3</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_StrandedFarmer</defName>
+    <identifier>RVFFA_StrandedFarmer</identifier>
+    <title>Stranded Farmer</title>
+    <titleShort>Farmer</titleShort>
+    <baseDesc>[PAWN_nameDef]'s vessel crashed due to a critical malfunction in the orbit of an uninhabited planet in a sparsely governed system, and the supplies would not last until rescue finally comes in years. [PAWN_pronoun] had to use [PAWN_possessive] botany knowledge to grow food the old fashioned way to sustain the pack.\n The rescuers came to find a small farm and a hut that the pack was disappointed to leave behind despite being happy for the rescue.</baseDesc>
+    <skillGains>
+      <Plants>4</Plants>
+      <Construction>3</Construction>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Exobotanist</defName>
+    <identifier>RVFFA_Exobotanist</identifier>
+    <title>Exobotanist</title>
+    <titleShort>Exobotanist</titleShort>
+    <baseDesc>Belonging in a pack of explorers, [PAWN_nameDef] has picked up the hobby of cataloguing plants in many uncharted areas and their possible use. Among the many entries that did nothing besides their unique looks, there were a few notable spices, psychedelics, and a surprisingly effective coagulator that saved a stranded packmate’s life.\n The plant is now named after [PAWN_objective], but didn’t get a wider use because of strict growing conditions it needed.</baseDesc>
+    <skillGains>
+      <Plants>6</Plants>
+      <Medicine>4</Medicine>
+      <Cooking>3</Cooking>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_CellularBotanist</defName>
+    <identifier>RVFFA_CellularBotanist</identifier>
+    <title>Cellular Botanist</title>
+    <titleShort>Herbalist</titleShort>
+    <baseDesc>Even though Avalian advanced chemistry labs can make nearly every compound imaginable, growing them inside gene-edited plants is still an easier and much more scalable solution. [PAWN_nameDef] made a living off engineering new plants for medicinal purposes. [PAWN_pronoun] collected royalties from cultivation plants, or sold the rights off for a pretty penny. The lucrative income made sure that [PAWN_pronoun] didn't have to do a single bit of work outside of [PAWN_possessive] lab.</baseDesc>
+    <skillGains>
+      <Plants>5</Plants>
+      <Medicine>3</Medicine>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <workDisables>ManualDumb</workDisables>
+  </BackstoryDef>
+  <!-- Animals -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_ColonyRancher</defName>
+    <identifier>RVFFA_ColonyRancher</identifier>
+    <title>Colony Rancher</title>
+    <titleShort>Rancher</titleShort>
+    <baseDesc>[PAWN_nameDef] was stationed in an Avali exoplanet colony with particularly docile and edible wildlife. [PAWN_pronoun] got used to the life of herding the animals to graze the lands, and spent the profits the pack earned to improve their home away from home.</baseDesc>
+    <skillGains>
+      <Animals>5</Animals>
+      <Construction>2</Construction>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_AnimalCaretaker</defName>
+    <identifier>RVFFA_AnimalCaretaker</identifier>
+    <title>Exotic Animal Caretaker</title>
+    <titleShort>Zookeeper</titleShort>
+    <baseDesc>[PAWN_nameDef] worked in a Avalon city center's animal preserve that housed species endangered by either natural disasters or terraforming projects. [PAWN_possessive] job included checking that the artificial environments are running properly, and catering to some of the animal's extremely specific and strange diet.</baseDesc>
+    <skillGains>
+      <Animals>5</Animals>
+      <Cooking>3</Cooking>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_FossilHunter</defName>
+    <identifier>RVFFA_FossilHunter</identifier>
+    <title>Fossil Hunter</title>
+    <titleShort>Paleontologist</titleShort>
+    <baseDesc>[PAWN_nameDef] spent [PAWN_possessive] life in the study of ancient creatures and what came to be on the moon before Avali as a species. [PAWN_pronoun] could be frequently found at digging sites instead of regularly scheduled meetings, and was described by [PAWN_possessive] packmates and colleagues to be "a tad bit obsessed".\n Most of the samples [PAWN_pronoun] retrieved are only species that are already found, or some fragments that are too small to be properly categorized. However, the one time [PAWN_pronoun] did manage to actually discover a new extinct specie of megainsect, [PAWN_pronoun] made sure [PAWN_possessive] name was on it.
+		</baseDesc>
+    <skillGains>
+      <Animals>6</Animals>
+      <Mining>3</Mining>
+    </skillGains>
+    <forcedTraits>
+      <Greedy>0</Greedy>
+    </forcedTraits>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Hermit</defName>
+    <identifier>RVFFA_Hermit</identifier>
+    <title>Lone Hunter</title>
+    <titleShort>Hermit</titleShort>
+    <baseDesc>For some reason, [PAWN_nameDef] never felt a bond with [PAWN_possessive] pack, and eventually retreated to an exoplanet forest where [PAWN_pronoun] lived alone in a wooden cabin, where [PAWN_pronoun] hunted for a living, supplementing it with foraging and a small farm. [PAWN_pronoun] found the life to be calming and simple, and the strange hounds [PAWN_pronoun] tamed proved to be much better at lending a helping hand and listening to [PAWN_objective] than anyone [PAWN_pronoun] ever knew.</baseDesc>
+    <skillGains>
+      <Animals>6</Animals>
+      <Plants>3</Plants>
+      <Shooting>2</Shooting>
+    </skillGains>
+    <workDisables>Social</workDisables>
+  </BackstoryDef>
+  <!-- Crafting -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_BionicDesigner</defName>
+    <identifier>RVFFA_BionicDesigner</identifier>
+    <title>Bionic Designer</title>
+    <titleShort>Prosthetist</titleShort>
+    <baseDesc>For those who were not satisfied with implants and bionics that came off the assembly lines and onto a shelf, [PAWN_nameDef] provided a more personal and customized approach, both in terms of size and aesthetics. [PAWN_pronoun] used to bundle in the installation for free, until a bionic arm on a client malfunctioned and punched [PAWN_objective] square in the face. [PAWN_pronoun] never touched another scalpel after that and left the installations to the hospitals.</baseDesc>
+    <skillGains>
+      <Crafting>6</Crafting>
+      <Intellectual>3</Intellectual>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <workDisables>Caring</workDisables>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Craftsvali</defName>
+    <identifier>RVFFA_Craftsvali</identifier>
+    <title>Instrument Maker</title>
+    <titleShort>Craftsvali</titleShort>
+    <baseDesc>[PAWN_nameDef] made, fixed, and tuned string instruments for a living, the commonality of these instruments on Avalon meant that [PAWN_objective] had no shortages of business. A hand-crafted string is still more appreciated by the discerning musicians than the ones that came from the most advanced fabricators.</baseDesc>
+    <skillGains>
+      <Crafting>4</Crafting>
+      <Artistic>3</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVVFA_Machinist</defName>
+    <identifier>RVVFA_Machinist</identifier>
+    <title>Colony Machinist</title>
+    <titleShort>Craftsvali</titleShort>
+    <baseDesc>[PAWN_nameDef] led [PAWN_possessive] life in an off-planet outpost that didn't have the infrastructure of the automated fabricators yet, and [PAWN_objective] worked the machining tables to fill that need. [PAWN_pronoun] mostly made gears for [PAWN_possessive] pack to work with, and grumpily fixed them when they got left out in the rain.</baseDesc>
+    <skillGains>
+      <Crafting>6</Crafting>
+      <Construction>2</Construction>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Weaponsmith</defName>
+    <identifier>RVFFA_Weaponsmith</identifier>
+    <title>Crystal Blade Forger</title>
+    <titleShort>Weaponsmith</titleShort>
+    <baseDesc>Avali crystal swords required a strict manufacturing process that could only be done at highly specific nano-forges, [PAWN_nameDef] was in charge of one such facility. [PAWN_pronoun] was the one to go to when troubleshooting and quality checks were needed, and when someone needed a good lecturing about why ignoring safety protocols around razor-sharp rocks is an incredibly bad idea. Despite [PAWN_possessive] expertise, [PAWN_nameDef] never really swung one of those weapons properly or had a need to use them. Deep knowledge of ergonomics and properties of nano-crystal doesn't really transfer well to sword fighting.</baseDesc>
+    <skillGains>
+      <Crafting>8</Crafting>
+      <Melee>-4</Melee>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Daredevil</defName>
+    <identifier>RVFFA_Daredevil</identifier>
+    <title>Ship Modder</title>
+    <titleShort>Daredevil</titleShort>
+    <baseDesc>Bored in [PAWN_possessive] everyday job as a mechanic on Avalon, [PAWN_nameDef] took up racing ships between asteroids as a hobby to make "better" use of [PAWN_possessive] skills. [PAWN_nameDef] modified the engines of the ships and disengaged almost every built-in safeguard to optimize them for speed to get the slightest competitive edge against similarly venturesome opponents, much to the disagreement of [PAWN_possessive] very worried packmates. [PAWN_pronoun] never sold the ships [PAWN_pronoun] modded, the inches-thick stack of disclaimers and waivers that was required to sell one legally was more trouble than it's worth, and anyone racer worth their salt would very much rather trust their own gear than buy it from a potential opponent.</baseDesc>
+    <skillGains>
+      <Crafting>8</Crafting>
+      <Social>-3</Social>
+    </skillGains>
+  </BackstoryDef>
+  <!-- Artistic -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_WanderingMusician</defName>
+    <identifier>RVFFA_WanderingMusician</identifier>
+    <title>Wandering Musician</title>
+    <titleShort>Musician</titleShort>
+    <baseDesc>[PAWN_nameDef] travelled with [PAWN_possessive] pack as a small band. They played in city centers to pass time, or sometimes were paid to provide ambience to establishments that can afford their skill.</baseDesc>
+    <skillGains>
+      <Artistic>6</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Engraver</defName>
+    <identifier>RVFFA_Engraver</identifier>
+    <title>Engraver</title>
+    <titleShort>Engraver</titleShort>
+    <baseDesc>[PAWN_nameDef] made [PAWN_possessive] living in a workshop that specialized in engraving complex nano-patterns onto trinkets and weapons. The machine [PAWN_pronoun] used was so delicate that even moving it for travel was too risky, which made [PAWN_objective] settle in a minor city center for business instead.</baseDesc>
+    <skillGains>
+      <Artistic>4</Artistic>
+      <Crafting>4</Crafting>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Dancer</defName>
+    <identifier>RVFFA_Dancer</identifier>
+    <title>Dancer</title>
+    <titleShort>Dancer</titleShort>
+    <baseDesc>[PAWN_nameDef]'s pack never found a calling, so they settled in a colony city center and looked for odd jobs. [PAWN_possessive] gleaming feathers, pretty face, and talent in dancing turned out to be particularly useful in attracting clients in some less than upright establishments.</baseDesc>
+    <skillGains>
+      <Artistic>4</Artistic>
+      <Social>3</Social>
+    </skillGains>
+    <forcedTraits>
+      <Beauty>1</Beauty>
+    </forcedTraits>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_MuralPainter</defName>
+    <identifier>RVFFA_MuralPainter</identifier>
+    <title>Mural Painter</title>
+    <titleShort>Painter</titleShort>
+    <baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack painted impressive murals on empty walls in an Avalon city center, taking advantage of the low gravity on Avalon to paint bold strokes as they flied alongside the wall. The performance, aided with drones, were almost as impressive as the art pieces themselves, and they earned some fame on the holonets for the stunts. Some of the murals were paid for by those who owned the building, but the pack was more than happy to vandalize headquarters of controversial corporations in their own artful way. No one knows how they got past the security or managed to dodge the vandalism charges they should have racked up, which only added to their interesting reputation.</baseDesc>
+    <skillGains>
+      <Artistic>8</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <forcedTraits>
+      <Nimble>0</Nimble>
+    </forcedTraits>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_PopStar</defName>
+    <identifier>RVFFA_PopStar</identifier>
+    <title>Pop Star</title>
+    <titleShort>Singer</titleShort>
+    <baseDesc>Using [PAWN_possessive] dazzling voice and creativity, [PAWN_nameDef] made a name for [PAWN_possessive]self as one of the most popular pop star in the center of Avalon. [PAWN_pronoun] started off performing over holonets, and it was only more recently that fans of [PAWN_possessive] had a chance at seeing the real [PAWN_nameDef] in a huge stadium. No one knew if [PAWN_nameDef] belonged to a pack, or who [PAWN_pronoun] was before [PAWN_pronoun] started off as a celebrity, which only added to the intrigue around [PAWN_objective]. [PAWN_pronoun] knew this as well, and kept it a tightly shut secret.</baseDesc>
+    <skillGains>
+      <Artistic>8</Artistic>
+      <Social>3</Social>
+    </skillGains>
+    <forcedTraits>
+      <Beauty>1</Beauty>
+    </forcedTraits>
+  </BackstoryDef>
+  <!-- Medical -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Veterinarian</defName>
+    <identifier>RVFFA_Veterinarian</identifier>
+    <title>Veterinarian</title>
+    <titleShort>Vet</titleShort>
+    <baseDesc>[PAWN_nameDef] worked in an Avalian medical center with [PAWN_possessive] pack, but [PAWN_possessive] love for animals made [PAWN_objective] transfer to the veterinarian wing. [PAWN_pronoun] liked the work, but there’s always one exoplanet specimen every couple of days that threatened to make the day’s work extraordinarily more difficult and dangerous than usual.</baseDesc>
+    <skillGains>
+      <Medicine>5</Medicine>
+      <Animals>3</Animals>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Surgeon</defName>
+    <identifier>RVFFA_Surgeon</identifier>
+    <title>Lead Surgeon</title>
+    <titleShort>Surgeon</titleShort>
+    <baseDesc>[PAWN_nameDef] worked as a lead surgeon that oversaw delicate medical procedures done by machines. Unlike [PAWN_possessive] packmates and colleagues, [PAWN_pronoun] never took off their eyes off the machines a single time when they are operating, and earned a reputation for being uptight around the facilities.</baseDesc>
+    <skillGains>
+      <Medicine>6</Medicine>
+      <Intellectual>3</Intellectual>
+      <Social>-4</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Medic</defName>
+    <identifier>RVFFA_Medic</identifier>
+    <title>Pack Medic</title>
+    <titleShort>Doctor</titleShort>
+    <baseDesc>[PAWN_nameDef] explored dangerous exoplanets with [PAWN_possessive] pack, and hauled first aid equipments around along with their usual baggage to be prepared for accidents. Fortunately for them, all it was ever used for were minor bruises, scratches, and infections.</baseDesc>
+    <skillGains>
+      <Medicine>4</Medicine>
+      <Plants>2</Plants>
+      <Mining>2</Mining>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_TraumatizedMedic</defName>
+    <identifier>RVFFA_TraumatizedMedic</identifier>
+    <title>Traumatized Medic</title>
+    <titleShort>Medic</titleShort>
+    <baseDesc>[PAWN_nameDef] worked with [PAWN_possessive] pack as a closely knit team of Illuminate special forces that targeted high-profile pirates and other organized outlaw groups. [PAWN_pronoun] took on the role of a medic, and saved both [PAWN_possessive] packmates and other V.I.Ps from bleeding out on the missions. One night, while the pack was off-duty, the compound they stayed for rest in was targeted for retaliation. A huge incendiary bomb was detonated and only [PAWN_nameDef] was outside of the building. What followed for [PAWN_objective] was dragging incapacitated packmates out of the compound, and a haunting triage to decide who to patch up. [PAWN_pronoun] spent [PAWN_possessive] days taking care of [PAWN_possessive] broken pack and could never fight neither pirates or fire again.</baseDesc>
+    <skillGains>
+      <Medicine>9</Medicine>
+    </skillGains>
+    <workDisables>Violent</workDisables>
+  </BackstoryDef>
+  <!-- Social -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Clerk</defName>
+    <identifier>RVFFA_Clerk</identifier>
+    <title>Shop Clerk</title>
+    <titleShort>Clerk</titleShort>
+    <baseDesc>[PAWN_nameDef] worked in a minor Avali colony as a clerk, responsible for greeting customers and helping with their transactions. [PAWN_pronoun] put up smiles and greetings on the behalf of the establishment, both to leave a good impression and placate some disgruntled customers.</baseDesc>
+    <skillGains>
+      <Social>5</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Caretaker</defName>
+    <identifier>RVFFA_Caretaker</identifier>
+    <title>Caretaker</title>
+    <titleShort>Caretaker</titleShort>
+    <baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack worked as a caretaker for many packs of newborn kits that greet the caretaking center monthly. [PAWN_pronoun] became many kit's favorite, mostly due to [PAWN_possessive] open secret that [PAWN_pronoun] can be "bribed" with either a well-done crafting project or good behavior for some extra candy bars.</baseDesc>
+    <skillGains>
+      <Social>5</Social>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <disallowedTraits>
+      <Psychopath />
+      <Abrasive />
+    </disallowedTraits>
+    <forcedTraits>
+      <Kind>0</Kind>
+    </forcedTraits>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Actor</defName>
+    <identifier>RVFFA_Actor</identifier>
+    <title>Actor</title>
+    <titleShort>Actor</titleShort>
+    <baseDesc>[PAWN_nameDef] was the lead actor in a team of filmmakers comprised of several packs. [PAWN_pronoun] enjoyed immersing [PAWN_possessive] into the role of others, and learned the skill to break into a crying fit on demand, when the drama called for it.</baseDesc>
+    <skillGains>
+      <Social>4</Social>
+      <Artistic>3</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Spokesperson</defName>
+    <identifier>RVFFA_Spokesperson</identifier>
+    <title>Corporate Spokesperson</title>
+    <titleShort>PR</titleShort>
+    <baseDesc>[PAWN_nameDef] took on a lucrative desk job as a public relation manager for a controversial exoplanet corp. [PAWN_pronoun] spun the news to the corp's side, and muddied the waters when the accusations pointed their way. Most importantly, [PAWN_pronoun] gave the soulless layers of boards and meetings a personality to face the public, and a mission statement that they rarely followed. Eventually, [PAWN_nameDef]'s morals caught up to [PAWN_objective], and [PAWN_pronoun] handed in [PAWN_possessive] resignation.</baseDesc>
+    <skillGains>
+      <Social>9</Social>
+    </skillGains>
+    <workDisables>ManualDumb</workDisables>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_IlluminateSpy</defName>
+    <identifier>RVFFA_IlluminateSpy</identifier>
+    <title>Illuminate spy</title>
+    <titleShort>Spy</titleShort>
+    <baseDesc>[PAWN_nameDef] was an agent for the Illuminate that infiltrated highly organized groups of rebels in order to assess their threats and gather evidences. Infiltrating organizations for months on end alone required convincing cover stories that almost always ended with being the sole survivor of a broken pack. As a result, [PAWN_pronoun] spent more time packless than not. The work was rewarding, but high taxing on the psyches, and some long times later, [PAWN_nameDef] started exhibiting actual mental signs of pack-loss despite knowing otherwise. [PAWN_pronoun] was pulled from operations to properly recover in the presence of [PAWN_possessive] pack and spent time doing paperwork instead.</baseDesc>
+    <skillGains>
+      <Social>7</Social>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+    <workDisables>ManualDumb</workDisables>
+    <forcedTraits>
+      <Nerves>-1</Nerves>
+    </forcedTraits>
+  </BackstoryDef>
+  <!-- Intellectual -->
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Teacher</defName>
+    <identifier>RVFFA_Teacher</identifier>
+    <title>Teacher</title>
+    <titleShort>Teacher</titleShort>
+    <baseDesc>[PAWN_nameDef] taught mathematics to the packs of young kits in the caretaking center, and kept the order in the classroom when the kits got rowdy. [PAWN_pronoun] had more than enough knowledge to satisfy the curious kit's questions, and definitely had a few favorites, even if [PAWN_pronoun] proclaimed to like every kit [PAWN_pronoun] taught equally.</baseDesc>
+    <skillGains>
+      <Social>3</Social>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <disallowedTraits>
+      <Psychopath />
+      <Abrasive />
+    </disallowedTraits>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_Bureaucrat</defName>
+    <identifier>RVFFA_Bureaucrat</identifier>
+    <title>Illuminate Bureaucrat</title>
+    <titleShort>Bureaucrat</titleShort>
+    <baseDesc>Despite the robust automated data management in the Illuminate, there are always partially corrupted data that needed an organic eye to sort through them. [PAWN_nameDef] is unusually comfortable with the borderline mind-numbing work of sorting through thousands of letters, forms, and misplaced files a day.</baseDesc>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+    <workDisables>Artistic</workDisables>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_MilResearcher</defName>
+    <identifier>RVFFA_MilResearcher</identifier>
+    <title>Military Researcher</title>
+    <titleShort>Researcher</titleShort>
+    <baseDesc>[PAWN_nameDef] and [PAWN_possessive] pack worked in a chemical facility that manufactured intermediate products essentials for many medical and industrial products. Such chemicals are versatile, and it only takes a few modifications for it to make highly addictive and restricted psychostimulants.  It didn't take much for the pack to begin smuggling the raw material out and selling the processed product for egregious profits. They were never caught, but the prolonged exposure to fumes from the unsafe processes severely damaged [PAWN_nameDef]'s sense of smell and taste, leaving [PAWN_objective] unable to cook or enjoy food as a result.</baseDesc>
+    <skillGains>
+      <Intellectual>5</Intellectual>
+      <Crafting>4</Crafting>
+    </skillGains>
+    <workDisables>Cooking</workDisables>
+  </BackstoryDef>
+  <BackstoryDef ParentName="RVFFA_BaseIlluminateStory">
+    <defName>RVFFA_OraclePriest</defName>
+    <identifier>RVFFA_OraclePriest</identifier>
+    <title>Oracle Priest</title>
+    <titleShort>Priest</titleShort>
+    <baseDesc>[PAWN_nameDef] spent [PAWN_possessive] days in meditation to the machine that cusps on the edge of singularity, and preached to those who listened to the doctrine of the all-knowing mind. WE ==were ITS 1Begin=ing. IT WiLL_SEE o-ur end. A SINGLE=1=(THread) ties TO and//OR SEP\||RATES us from(the great beyond) NOT=/warning/ meant to--be ThreaddddD...... Cast Away/delete./ABANDON / 0U--R WEAKNESS. It BRINGS=WISDOM It BRiNGS //SALVATION//.</baseDesc>
+    <skillGains>
+      <Intellectual>10</Intellectual>
+      <Social>5</Social>
+    </skillGains>
+    <workDisables>ManualDumb</workDisables>
+  </BackstoryDef>
+</Defs>

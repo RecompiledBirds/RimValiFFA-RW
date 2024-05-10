@@ -197,7 +197,7 @@ namespace RimValiFFARW.StoryTellers
             IncidentParms parms = this.GenerateParms(IncidentCategoryDefOf.ThreatBig, targ);
             List<IncidentDef> incidents = base.UsableIncidentsInCategory(IncidentCategoryDefOf.ThreatBig,parms).ToList();
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseHuman, parms));
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseAnimal, parms));
+       //     incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseAnimal, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DeepDrillInfestation, parms));
             IncidentDef incident = incidents.RandomElement();
 
@@ -213,9 +213,9 @@ namespace RimValiFFARW.StoryTellers
         {
             IncidentParms parms = this.GenerateParms(IncidentCategoryDefOf.ThreatBig, targ);
             List<IncidentDef> incidents = base.UsableIncidentsInCategory(IncidentCategoryDefOf.ThreatSmall, parms).ToList();
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseHuman,parms));
+         /*   incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseHuman,parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseAnimal, parms));
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.GiveQuest, parms));
+            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.GiveQuest, parms));*/
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.Misc, parms));
 
             IncidentDef incident = incidents.RandomElement();
@@ -231,11 +231,11 @@ namespace RimValiFFARW.StoryTellers
         {
             IncidentParms parms = this.GenerateParms(IncidentCategoryDefOf.ThreatBig, targ);
             List<IncidentDef> incidents = base.UsableIncidentsInCategory(IncidentCategoryDefOf.ThreatSmall, parms).ToList();
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.FactionArrival, parms));
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.OrbitalVisitor, parms));
+      //      incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.FactionArrival, parms));
+      //      incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.OrbitalVisitor, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.GiveQuest, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.Misc, parms));
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.ShipChunkDrop, parms));
+      //      incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.ShipChunkDrop, parms));
 
             IncidentDef incident = incidents.RandomElement();
             if (Rand.Chance(0.05f))

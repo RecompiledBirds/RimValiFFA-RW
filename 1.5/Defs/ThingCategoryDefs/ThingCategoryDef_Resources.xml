@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef>
+		<defName>RVFFA_Resources</defName>
+		<label>Avali resources</label>
+		<parent>Root</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>RimValiFFA/Things/Aerogel/BaseAerogel/Aerogel/Aerogel_a</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RVFFA_AIMSShells</defName>
+		<label>AIMS Shells</label>
+		<parent>RVFFA_Resources</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>RimValiFFA/Buildings/Turrets/AIMS/Shells/AIMS_HE</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RVFFA_AERIALShells</defName>
+		<label>AERIAL Shells</label>
+		<parent>RVFFA_Resources</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>RimValiFFA/Buildings/Turrets/AERIAL/Shells/AERIAL_ATOM</iconPath>
+	</ThingCategoryDef>
+</Defs>
