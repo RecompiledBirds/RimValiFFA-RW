@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<defName>RVFFA_Head</defName>
+		<bodyPart>Head</bodyPart>
+		<north>
+			<position>(0,0.013,0.4)</position>
+			<size>0.8</size>
+		</north>
+		<south>
+			<position>(0,0.023,0.4)</position>
+			<size>0.8</size>
+		</south>
+		<east>
+			<position>(0.09,0.013,0.4)</position>
+			<size>0.8</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Heads/Male/MaleHead</texPath>
+				<alternateMaskPaths>
+					<li>RimValiFFA/Heads/Male/Variant</li>
+				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Heads/Female/FemaleHead</li>
+				</alternateFemaleMaskPaths>
+				
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+</Defs>

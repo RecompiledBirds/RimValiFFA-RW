@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BenchBase" Name="RVFFA_BaseProductionBench" Abstract="True">
+		<thingClass>Building_WorkTable</thingClass>
+		<designationCategory>RVFFA_Production</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Flammability>0</Flammability>
+			<WorkTableWorkSpeedFactor>1.42</WorkTableWorkSpeedFactor>
+		</statBases>
+
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>250</basePowerConsumption>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+
+		<hasInteractionCell>true</hasInteractionCell>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+
+		<fillPercent>1</fillPercent>
+
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseProductionBench">
+		<defName>RVFFA_NanoForge</defName>
+		<label>Nanolathe</label>
+		<description>The Nanolathe is a specialized 3D printer, like most Avali crafting utilities. It works with immense heat, and nanotechnologies able to rearrange the structure and molecues of the items put in. Caution: Do not stick fingers, toes, feet, hands, tails, or other limbs inside, even if the device appears to be powered off.</description>
+		
+		<size>(3,1)</size>
+
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+
+		<recipes>
+			<li>RVFFA_PrintFerrogel</li>
+			<li>RVFFA_PrintFerrogelTwo</li>
+			<li>RVFFA_PrintFerrogelThree</li>
+
+			<li>RVFFA_SinterTungsten</li>
+			<li>RVFFA_SinterTungstenTwo</li>
+			<li>RVFFA_SinterTungstenThree</li>
+
+			<li>RVFFA_ForgeAeroTungstenCarbide</li>
+			<li>RVFFA_ForgeAeroTungstenCarbideTwo</li>
+			<li>RVFFA_ForgeAeroTungstenCarbideThree</li>
+
+			<li>RVFFA_RefineCarbon</li>
+			<li>RVFFA_RefineCarbonTwo</li>
+			<li>RVFFA_RefineCarbonThree</li>
+
+
+			<li>RVFFA_MakeSabot</li>
+
+		</recipes>
+		<researchPrerequisites>
+			<li>RVFFA_LathingTech</li>
+		</researchPrerequisites>
+
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Production/NanoForge</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+
+	</ThingDef>
+
+
+	<ThingDef ParentName="RVFFA_BaseProductionBench">
+		<defName>RVFFA_NanoLoom</defName>
+		<label>Avali Nanoloom</label>
+		<description>An avali research bench. Most avali would dimiss this kind of tech as simple, and somewhat bulky, while the humans just stare at the hologram it projects. You'll learn to make better versions later on, most likely, but this is a start. You'll need it to research avali tech.</description>
+
+		<size>(1,1)</size>
+
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Production/Loom/Loom</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,1.8)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+
+		<recipes>
+			<li>RVFFA_FerroWeaveRecipe</li>
+			<li>RVFFA_FerroWeaveRecipeTwo</li>
+			<li>RVFFA_FerroWeaveRecipeThree</li>
+
+			<li>RVFFA_NanoCarbonFiberRecipe</li>
+			<li>RVFFA_NanoCarbonFiberRecipeTwo</li>
+			<li>RVFFA_NanoCarbonFiberRecipeThree</li>
+
+			<li>RVFFA_NanofiberRecipe</li>
+			<li>RVFFA_NanofiberRecipeTwo</li>
+			<li>RVFFA_NanofiberRecipeThree</li>
+
+			<li>RVFFA_AeroTungstenFiberRecipe</li>
+		</recipes>
+		<researchPrerequisites>
+			<li>RVFFA_LoomTech</li>
+		</researchPrerequisites>
+
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseProductionBench">
+		<defName>RVFFA_ResearchBench</defName>
+		<label>Avali Research bench</label>
+		<description>An avali research bench. Most avali would dimiss this kind of tech as simple, and somewhat bulky, while the humans just stare at the hologram it projects. You'll learn to make better versions later on, most likely, but this is a start. You'll need it to research avali tech.</description>
+
+		<thingCategories Inherit="false">
+			<li>BuildingsProduction</li>
+		</thingCategories>
+
+		<thingClass>Building_ResearchBench</thingClass>
+		<size>(3,2)</size>
+
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+
+		<costStuffCount>150</costStuffCount>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Production/AvaliResearchTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+
+		<statBases Inherit="false">
+			<Mass>10</Mass>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<WorkTableWorkSpeedFactor>1.42</WorkTableWorkSpeedFactor>
+			<Flammability>1.0</Flammability>
+			<ResearchSpeedFactor>1.0</ResearchSpeedFactor>
+		</statBases>
+
+		<comps Inherit="false">
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>MultiAnalyzer</li>
+					<li>RVFFA_Nexus</li>
+				</linkableFacilities>
+			</li>
+			
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>250</basePowerConsumption>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+		</comps>
+
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<designationHotKey>Misc4</designationHotKey>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+
+		<researchPrerequisites>
+			<li>RVFFA_BasicStartTech</li>
+		</researchPrerequisites>
+
+		<inspectorTabs Inherit="false"/>
+	</ThingDef>
+</Defs>

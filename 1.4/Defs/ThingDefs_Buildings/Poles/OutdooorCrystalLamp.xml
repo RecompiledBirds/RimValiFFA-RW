@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliPole">
+		<defName>RVFFA_OutdoorCrystalLamppost</defName>
+
+		<label>Avali Crystal Lamp Post</label>
+		<description>An Avali crystal lamp post.</description>
+		<graphicData>
+			<texPath>RimValiFFA/OutdoorCrystalLamp/OutdoorCrystalLamp</texPath>
+		</graphicData>
+
+		<costList>
+			<RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
+			<RVFFA_Ferrogel>5</RVFFA_Ferrogel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>30</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(252, 186, 3,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

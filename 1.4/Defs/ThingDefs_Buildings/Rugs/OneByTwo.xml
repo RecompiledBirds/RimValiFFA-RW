@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliRug">
+		<defName>RVFFA_OneByTwoRug</defName>
+		<label>Avali 1x2 rug</label>
+
+		<statBases>
+			<Beauty>3</Beauty>
+			<Mass>1</Mass>
+		</statBases>
+
+		<size>(2,1)</size>
+		<graphicData>
+			<texPath>RimValiFFA/Rugs/OneXTwo/1x2_rug_1</texPath>
+			<drawSize>(2,1)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<RVFFA_NanoFiber>4</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseAvaliRug">
+		<defName>RVFFA_OneByTwoVariantTwo</defName>
+		<label>Avali 1x2 rug</label>
+
+		<statBases>
+			<Beauty>3</Beauty>
+			<Mass>1</Mass>
+		</statBases>
+
+		<size>(2,1)</size>
+		<graphicData>
+			<texPath>RimValiFFA/Rugs/OneXTwo/1x2_rug_2</texPath>
+			<drawSize>(2,1)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<RVFFA_NanoFiber>4</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseAvaliRug">
+		<defName>RVFFA_OneByTwoRugVariantThree</defName>
+		<label>Avali 1x2 rug</label>
+
+		<statBases>
+			<Beauty>3</Beauty>
+			<Mass>1</Mass>
+		</statBases>
+
+		<size>(2,1)</size>
+		<graphicData>
+			<texPath>RimValiFFA/Rugs/OneXTwo/1x2_rug_3</texPath>
+			<drawSize>(2,1)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<RVFFA_NanoFiber>4</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseAvaliRug">
+		<defName>RVFFAOneByTwoVariantFour</defName>
+		<label>Avali 1x2 rug</label>
+
+		<statBases>
+			<Beauty>3</Beauty>
+			<Mass>1</Mass>
+		</statBases>
+
+		<size>(2,1)</size>
+		<graphicData>
+			<texPath>RimValiFFA/Rugs/OneXTwo/1x2_rug_4</texPath>
+			<drawSize>(2,1)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<RVFFA_NanoFiber>4</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+</Defs>

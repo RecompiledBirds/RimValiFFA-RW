@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<defName>RVFFA_EarLL</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
+		<north>
+			<position>(0,0,0)</position>
+			<size>0.8</size>
+		</north>
+		<south>
+			<position>(0,0,0)</position>
+			<size>0.8</size>
+		</south>
+		<east>
+			<position>(-0.17,-0.0087,0.06)</position>
+			<size>0.8</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Ears/Male/LowerLeft/MaleLowerLeft</texPath>
+				<alternateMaskPaths>
+					<li>RimValiFFA/Ears/Male/LowerLeft/Variant</li>
+				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/LowerLeft/FemaleLowerLeft</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<defName>RVFFA_EarRL</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
+		<north>
+			<position>(0,0,0)</position>
+			<size>0.8</size>
+		</north>
+		<south>
+			<position>(0,0,0)</position>
+			<size>0.8</size>
+		</south>
+		<east>
+			<position>(-0.17,0.0087,0.06)</position>
+			<size>0.8</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Ears/Male/LowerRight/MaleLowerRight</texPath>
+				<alternateMaskPaths>
+					<li>RimValiFFA/Ears/Male/LowerRight/Variant</li>
+				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/LowerRight/FemaleLowerRight</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<defName>RVFFA_EarLU</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
+		<north>
+			<position>(0.02,0,0)</position>
+			<size>0.8</size>
+		</north>
+		<south>
+			<position>(-0.02,0,0)</position>
+			<size>0.8</size>
+		</south>
+		<east>
+			<position>(-0.16,-0.01,0)</position>
+			<size>0.8</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Ears/Male/UpperLeft/MaleUpperLeft</texPath>
+				<alternateMaskPaths>
+					<li>RimValiFFA/Ears/Male/UpperLeft/Variant</li>
+				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/UpperLeft/FemaleUpperLeft</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<defName>RVFFA_EarRU</defName>
+		<linkPosWith>RVFFA_Head</linkPosWith>
+		<north>
+			<position>(-0.02,0,0)</position>
+			<size>0.8</size>
+		</north>
+		<south>
+			<position>(0.02,0,0)</position>
+			<size>0.8</size>
+		</south>
+		<east>
+			<position>(-0.16,0.01,0.016)</position>
+			<size>0.8</size>
+		</east>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Ears/Male/UpperRight/MaleUpperRight</texPath>
+				<alternateMaskPaths>
+					<li>RimValiFFA/Ears/Male/UpperRight/Variant</li>
+				</alternateMaskPaths>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Ears/Female/UpperRight/FemaleUpperRight</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+</Defs>

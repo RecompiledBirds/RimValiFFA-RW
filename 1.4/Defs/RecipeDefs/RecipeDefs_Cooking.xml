@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef Name="RVFFA_MealRecipeBase" ParentName="CookMealBase" Abstract="True">
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+  </RecipeDef>
+
+<!-- Taco -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_TacoRecipe</defName>
+    <label>Make avali tacos (2)</label>
+    <description>Make some avali tacos! (2)</description>
+    <jobString>Cooking avali tacos. (2)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.75</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+        <li>RVFFA_PiruFlour</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <RVFFA_Taco>2</RVFFA_Taco>
+    </products>
+  </RecipeDef>
+
+
+<!-- Pizza -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_BakePizza</defName>
+    <label>Bake and cut an avali pizza (6)</label>
+    <description>Bake and cut an avali pizza! (6)</description>
+    <jobString>Baking an avali pizza. (6)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>1.25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>0.1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+        <li>RVFFA_PiruFlour</li>
+        <li>Milk</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <RVFFA_Pizza>6</RVFFA_Pizza>
+    </products>
+  </RecipeDef>
+  
+  
+  <!-- Cookies -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_BakeCookie</defName>
+    <label>Bake avali chocolate cookies (8)</label>
+    <description>Bake avali chocolate cookies. (8)</description>
+    <jobString>Baking avali chocolate cookies. (8)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chocolate</li>
+          </thingDefs>
+        </filter>
+        <count>0.4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <RVFFA_Cookie>8</RVFFA_Cookie>
+    </products>
+  </RecipeDef>
+  
+  
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_BakeKiriCookie</defName>
+    <label>Bake avali kiri cookies (5)</label>
+    <description>Bake avali kiri cookies. (5)</description>
+    <jobString>Baking avali kiri cookies. (5)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_RawKiri</li>
+          </thingDefs>
+        </filter>
+        <count>0.2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <RVFFA_Cookie>5</RVFFA_Cookie>
+    </products>
+  </RecipeDef>
+  
+  
+  <!-- Piru noodles -->
+   <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_CookPiruNoodles</defName>
+    <label>Cook piru noodles (3)</label>
+    <description>Cook avali noodles. (3)</description>
+    <jobString>Cooking piru noodles. (3)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+        <li>RVFFA_PiruFlour</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <RVFFA_Noodles>3</RVFFA_Noodles>
+    </products>
+  </RecipeDef>
+  
+  
+<!-- Roast -->
+ <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_MakeRoast</defName>
+    <label>Cook avali roast (2)</label>
+    <description>Cook an avali roast. (2)</description>
+    <jobString>Cooking an avali roast. (2)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>1.75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_RawKiri</li>
+          </thingDefs>
+        </filter>
+        <count>0.3</count>
+      </li>
+    </ingredients>    
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+				<li>PlantFoodRaw</li>	
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <RVFFA_Roast>2</RVFFA_Roast>
+    </products>
+  </RecipeDef>
+  
+  
+<!-- Flatbread -->
+   <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_BakeFlatbread</defName>
+    <label>Bake piru flatbread (5)</label>
+    <description>Bake piru flatbread. (5)</description>
+    <jobString>Baking piru flatbread. (5)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>RVFFA_PiruFlour</li>
+            </thingDefs>
+          </filter>
+          <count>1.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <RVFFA_FlatBread>5</RVFFA_FlatBread>
+    </products>
+  </RecipeDef>
+  
+  
+<!-- RVFFA_OvoidStuffed -->
+   <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_StuffOvoid</defName>
+    <label>Stuff nakati ovoids (3)</label>
+    <description>Stuff stuffed nakati ovoids. (3)</description>
+    <jobString>Stuffing nakati ovoids. (3)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>RVFFA_NakatiBark</li>
+            </thingDefs>
+          </filter>
+          <count>0.2</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1.25</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+        <li>RVFFA_NakatiBark</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <RVFFA_OvoidStuffed>3</RVFFA_OvoidStuffed>
+    </products>
+  </RecipeDef>  
+
+
+<!-- RoastedRVFFA_NakatiBark -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_RoastBark</defName>
+    <label>Roast nakati bark (6)</label>
+    <description>Roast nakati bark. (6)</description>
+    <jobString>Roasting nakati bark. (6)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>RVFFA_NakatiBark</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <RVFFA_BarkRoast>6</RVFFA_BarkRoast>
+    </products>
+  </RecipeDef> 
+  
+  
+<!-- StuffedKiri -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_MakedStuffedKiri</defName>
+    <label>Stuff kiri fruits (4)</label>
+    <description>Stuff kiri fruits. (4)</description>
+    <jobString>Stuffing kiri fruits. (4)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>RVFFA_RawKiri</li>
+            </thingDefs>
+          </filter>
+          <count>0.2</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1.75</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+        <li>RVFFA_RawKiri</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+		<RVFFA_KiriStuffed>4</RVFFA_KiriStuffed>
+    </products>
+  </RecipeDef> 
+  
+  
+<!-- Jerky -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_MakeJerky</defName>
+    <label>Dry avali jerky (15)</label>
+    <description>Dry avali jerky quickly. (15)</description>
+    <jobString>Dry avali jerky. (15)</jobString>
+    <ingredients>
+       <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_NakatiBark</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>1.2</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+				<li>PlantFoodRaw</li>	
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <RVFFA_Jerky>15</RVFFA_Jerky>
+    </products>
+  </RecipeDef>
+  
+
+<!-- RVFFA_LeatherKiri -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_CookKiriLeather</defName>
+    <label>Dry kiri fruit leather (6)</label>
+    <description>Dry kiri fruit leather. (6)</description>
+    <jobString>Drying kiri fruit leather. (6)</jobString>
+    <ingredients>
+       <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_RawKiri</li>
+          </thingDefs>
+        </filter>
+        <count>0.4</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+		<RVFFA_LeatherKiri>6</RVFFA_LeatherKiri>
+    </products>
+  </RecipeDef> 
+  
+  
+<!-- Stew -->
+  <RecipeDef ParentName="RVFFA_MealRecipeBase">
+    <defName>RVFFA_MakeStew</defName>
+    <label>Cook avali stew</label>
+    <description>Cook avali stew.</description>
+    <jobString>Cooking avali stew.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RVFFA_PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.3</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RVFFA_Avali</li>
+        <li>InsectJelly</li>
+        <li>RVFFA_PiruFlour</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <RVFFA_Stew>1</RVFFA_Stew>
+    </products>
+  </RecipeDef> 
+</Defs>

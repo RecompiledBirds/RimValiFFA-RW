@@ -85,6 +85,8 @@
 
 			<li>RVFFA_MakeSabot</li>
 
+			<li>RVFFA_AssembleNanoMachines</li>
+
 		</recipes>
 		<researchPrerequisites>
 			<li>RVFFA_LathingTech</li>
@@ -223,4 +225,90 @@
 
 		<inspectorTabs Inherit="false"/>
 	</ThingDef>
+
+
+	<ThingDef  ParentName="RVFFA_BaseProductionBench">
+		<defName>RVFFA_CookingStation</defName>
+		<label>Avali cooking station</label>
+		<description>This specialised cooking station contains everything you'd need to make a great Avali meal.</description>
+		<thingClass>Building_WorkTable_HeatPush</thingClass>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Stove/stove</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.4,2.9)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<costList>
+			<Steel>80</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>2000</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<size>(3,1)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<tickerType>Normal</tickerType>
+		<surfaceType>Item</surfaceType>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<recipes>
+			<li>RVFFA_BakeCookie</li>
+			<li>RVFFA_BakeKiriCookie</li>
+			<li>RVFFA_TacoRecipe</li>
+			<li>RVFFA_BakePizza</li>
+			<li>RVFFA_CookPiruNoodles</li>
+			<li>RVFFA_MakeRoast</li>
+			<li>RVFFA_BakeFlatbread</li>
+			<li>RVFFA_RoastBark</li>
+			<li>RVFFA_MakedStuffedKiri</li>
+			<li>RVFFA_MakeJerky</li>
+			<li>RVFFA_CookKiriLeather</li>
+			<li>RVFFA_MakeStew</li>
+		</recipes>
+		<comps>
+			<li Class="RVCRestructured.Comps.DrawCompProps">
+				<texPath>RimValiFFA/Buildings/Stove/stove_lit</texPath>
+				<offset>(0,0,0)</offset>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3</heatPerSecond>
+			</li>
+		</comps>
+		<building>
+			<isMealSource>true</isMealSource>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+		</building>
+		<designationHotKey>Misc8</designationHotKey>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RVFFA_BaseCookingResearch</li>
+		</researchPrerequisites>
+	</ThingDef>
+
 </Defs>

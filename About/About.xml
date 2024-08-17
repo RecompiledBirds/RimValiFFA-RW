@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>RimVali: Far From Avalon</name>
-	<author>Nesi</author>
+	<author>Ivy, Danimineiro</author>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -26,6 +26,7 @@
 	</loadAfter>
 	<supportedVersions>
 		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<packageId>Nesi.RimValiFFARW</packageId>
 	<description>Avali for rimworld!\n Grown with Vine!</description>

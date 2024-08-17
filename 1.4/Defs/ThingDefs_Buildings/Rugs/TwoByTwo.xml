@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAvaliRug">
+		<defName>RVFFA_TwoByTwoRub</defName>
+		<label>Avali 2x2 rug</label>
+
+		<statBases>
+			<Beauty>3</Beauty>
+			<Mass>2</Mass>
+		</statBases>
+
+		<size>(2,2)</size>
+		<graphicData>
+			<texPath>RimValiFFA/Rugs/2x2_circular_rug</texPath>
+			<drawSize>(2,2)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<RVFFA_NanoFiber>8</RVFFA_NanoFiber>
+		</costList>
+	</ThingDef>
+</Defs>

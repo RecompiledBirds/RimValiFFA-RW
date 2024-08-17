@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef Name="RVFFA_BaseFerroweaveRecipe" Abstract="True">
+        <description>Weave nano-fiber and ferrogel together to make ferroweave.</description>
+        <jobString>Weaving Ferroweave</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+         <workAmount>30</workAmount>
+		<researchPrerequisites>
+			<li>RVFFA_FerroweaveTech</li>
+		</researchPrerequisites>
+    </RecipeDef>
+
+    <RecipeDef ParentName="RVFFA_BaseFerroweaveRecipe">
+        <defName>RVFFA_FerroWeaveRecipe</defName>
+        <label>Weave Ferroweave</label>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>RVFFA_NanoFiber</li>
+                </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>RVFFA_Ferrogel</li>
+                </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <RVFFA_FerroWeave>10</RVFFA_FerroWeave>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="RVFFA_BaseFerroweaveRecipe">
+        <defName>RVFFA_FerroWeaveRecipeTwo</defName>
+        <label>Weave Ferroweave (50)</label>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>RVFFA_NanoFiber</li>
+                </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>RVFFA_Ferrogel</li>
+                </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <products>
+            <RVFFA_FerroWeave>50</RVFFA_FerroWeave>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="RVFFA_BaseFerroweaveRecipe">
+        <defName>RVFFA_FerroWeaveRecipeThree</defName>
+        <label>Weave Ferroweave (100)</label>
+        <ingredients>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>RVFFA_NanoFiber</li>
+                </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>RVFFA_Ferrogel</li>
+                </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <products>
+            <RVFFA_FerroWeave>100</RVFFA_FerroWeave>
+        </products>
+    </RecipeDef>
+</Defs>

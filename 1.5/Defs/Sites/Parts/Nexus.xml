@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SitePartDef>
+		<defName>RVFFA_NexusSitePart</defName>
+		<label>Nexus crash site</label>
+		<workerClass>RimValiFFARW.Nexus.NexusSiteWorker</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>RimValiFFA/Buildings/Production/SyncCrystal</expandingIconTexture>
+		<handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+		<tags>
+			<li>RVFFA_Nexus</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>RVFFA_NexusShipWreck</defName>
+		<linkWithSite>RVFFA_NexusSitePart</linkWithSite>
+		<genStep Class="RimValiFFARW.Nexus.WreckedAreaGen"/>
+	</GenStepDef>
+</Defs>
