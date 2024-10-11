@@ -31,236 +31,228 @@
 					<li>RVFFA_Avali</li>
 				</allowedBodyTypes>
 			</li>
-			
+
 			<li Class="RVCRestructured.RVRGraphicsComp">
 				<bodyTex>RVC/Empty</bodyTex>
 				<headTex>RVC/Empty</headTex>
 				<renderableDefs>
-				<li>RVFFA_EyeL</li>
-				<li>RVFFA_EyeR</li>
-				<li>RVFFA_EarLL</li>
-				<li>RVFFA_EarLU</li>
-				<li>RVFFA_EarRL</li>
-				<li>RVFFA_EarRU</li>
+					<li>RVFFA_EyeL</li>
+					<li>RVFFA_EyeR</li>
+					<li>RVFFA_EarLL</li>
+					<li>RVFFA_EarLU</li>
+					<li>RVFFA_EarRL</li>
+					<li>RVFFA_EarRU</li>
 
-				<li>RVFFA_Head</li>
+					<li>RVFFA_Head</li>
 
-				<li>RVFFA_Body</li>
+					<li>RVFFA_Body</li>
 
-				<li>RVFFA_Tail</li>
-				<li>RVFFA_TailSkirt</li>
-			</renderableDefs>
+					<li>RVFFA_Tail</li>
+					<li>RVFFA_TailSkirt</li>
+				</renderableDefs>
 
 				<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
 				<colorGenerators>
-				<li>
-					<name>Eyes</name>
-					<colorGenerator>
-						<colorOne Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(0, 0, 0)</min>
-									<max>(255, 255, 255)</max>
-								</li>
-							</options>
-						</colorOne>
-						<colorTwo Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(50, 50, 50)</min>
-									<max>(200, 200, 200)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>RGBA(40, 40, 40, 255)</min>
-									<max>RGBA(60, 60, 60, 255)</max>
-								</li>
-							</options>
-						</colorTwo>
-						<colorThree Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(50, 50, 50)</min>
-									<max>(200, 200, 200)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>(40, 40, 40)</min>
-									<max>(60, 60, 60)</max>
-								</li>
-							</options>
-						</colorThree>
-					</colorGenerator>
-				</li>
-				<li>
-					<name>Feathers</name>
-					<colorGenerator>
-						<colorOne Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(200, 200, 200)</min>
-									<max>(255, 255, 255)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>(220, 220, 220)</min>
-									<max>(240, 240, 240)</max>
-								</li>
-								<li>
-									<weight>5</weight>
-									<min>RGBA(40, 40, 40, 255)</min>
-									<max>RGBA(60, 60, 60, 255)</max>
-								</li>
-							</options>
-						</colorOne>
-						<colorTwo Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(50, 50, 50)</min>
-									<max>(200, 200, 200)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>RGBA(40, 40, 40, 255)</min>
-									<max>RGBA(60, 60, 60, 255)</max>
-								</li>
-							</options>
-						</colorTwo>
-						<colorThree Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(50, 50, 50)</min>
-									<max>(200, 200, 200)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>(40, 40, 40)</min>
-									<max>(60, 60, 60)</max>
-								</li>
-							</options>
-						</colorThree>
+					<li>
+						<name>Eyes</name>
+						<colorGenerator>
+							<colorOne Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(0, 0, 0)</min>
+										<max>(255, 255, 255)</max>
+									</li>
+								</options>
+							</colorOne>
+							<colorTwo Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorTwo>
+							<colorThree Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(40, 40, 40)</min>
+										<max>(60, 60, 60)</max>
+									</li>
+								</options>
+							</colorThree>
+						</colorGenerator>
+					</li>
+					<li>
+						<name>Feathers</name>
+						<colorGenerator>
+							<colorOne Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(200, 200, 200)</min>
+										<max>(255, 255, 255)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>5</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorOne>
+							<colorTwo Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorTwo>
+							<colorThree Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(40, 40, 40)</min>
+										<max>(60, 60, 60)</max>
+									</li>
+								</options>
+							</colorThree>
 
-					</colorGenerator>
-					<colorGeneratorFemale>
-						<colorOne Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(185, 185, 185)</min>
-									<max>(215, 215, 215)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>(220, 220, 220)</min>
-									<max>(240, 240, 240)</max>
-								</li>
-								<li>
-									<weight>1</weight>
-									<min>RGBA(40, 40, 40, 255)</min>
-									<max>RGBA(60, 60, 60, 255)</max>
-								</li>
-							</options>
-						</colorOne>
-						<colorTwo Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(185, 185, 185)</min>
-									<max>(215, 215, 215)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>(220, 220, 220)</min>
-									<max>(240, 240, 240)</max>
-								</li>
-								<li>
-									<weight>1</weight>
-									<min>RGBA(40, 40, 40, 255)</min>
-									<max>RGBA(60, 60, 60, 255)</max>
-								</li>
-							</options>
-						</colorTwo>
-						<colorThree Class="ColorGenerator_Options">
-							<options>
-								<li>
-									<weight>10</weight>
-									<min>(185, 185, 185)</min>
-									<max>(215, 215, 215)</max>
-								</li>
-								<li>
-									<weight>2</weight>
-									<min>(220, 220, 220)</min>
-									<max>(240, 240, 240)</max>
-								</li>
-								<li>
-									<weight>1</weight>
-									<min>RGBA(40, 40, 40, 255)</min>
-									<max>RGBA(60, 60, 60, 255)</max>
-								</li>
-							</options>
-						</colorThree>
+						</colorGenerator>
+						<colorGeneratorFemale>
+							<colorOne Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(185, 185, 185)</min>
+										<max>(215, 215, 215)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>1</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorOne>
+							<colorTwo Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(185, 185, 185)</min>
+										<max>(215, 215, 215)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>1</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorTwo>
+							<colorThree Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(185, 185, 185)</min>
+										<max>(215, 215, 215)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>1</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorThree>
 
-					</colorGeneratorFemale>
-				</li>
-			</colorGenerators>
+						</colorGeneratorFemale>
+					</li>
+				</colorGenerators>
 			</li>
 			<li Class="RVCRestructured.RVRRestrictionComp">
-				<restrictedBodyTypes>
-					<li>RVFFA_Avali</li>
-				</restrictedBodyTypes>
-				
-				<modRestrictedEquipment>
-					<li>Nesi.RimValiFFARW</li>
-				</modRestrictedEquipment>
-				<modRestrictedBuildings>
-					<li>Nesi.RimValiFFARW</li>
-				</modRestrictedBuildings>
-				<modRestrictedResearch>
-					<li>Nesi.RimValiFFARW</li>
-				</modRestrictedResearch>
-				<modRestrictedApparel>
-					<li>Nesi.RimValiFFARW</li>
-				</modRestrictedApparel>
-				<modAllowedApparel>
-					<li>ludeon.rimworld</li>
-					<li>ludeon.rimworld.royalty</li>
-				</modAllowedApparel>
-				<disabledThoughts>
-					<li>EnvironmentDark</li>
-					<li>Naked</li>
-					<li>SleepDisturbed</li>
-					<li>SharedBed</li>
-					<li>ObservedLayingCorpse</li>
-					<li>ButcheredHumanlikeCorpse</li>
-					<li>KnowButcheredHumanlikeCorpse</li>
-				</disabledThoughts>
-				<restrictedBeds>
-					<li>RVFFA_PillowBed</li>
-					<li>RVFFA_MediumPillowPile</li>
-					<li>RVFFA_LargePillowPile</li>
-				</restrictedBeds>
-				<disabledTraits>
-					<li>BodyPurist</li>
-					<li>Transhumanist</li>
-				</disabledTraits>
-				<restrictedTraits>
-					<li>RVFFA_PackBroken</li>
-				</restrictedTraits>
-				<canUseAnyApparel>true</canUseAnyApparel>
-				<restrictedXenoTypes>
-					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
-				</restrictedXenoTypes>
-				<xenoTypeWhitelist>
-					<li MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</li>
-				</xenoTypeWhitelist>
+				<restrictions>
+					<modRestrictions>
+						<Nesi.RimValiFFARW>
+							<BodyTypeDef>RequiredAndWhitelist</BodyTypeDef>
+							<Equipment>WhiteListSelf</Equipment>
+							<Building>WhiteListSelf</Building>
+							<ResearchDef>WhiteListSelf</ResearchDef>
+							<Apparel>WhiteListSelf</Apparel>
+						</Nesi.RimValiFFARW>
+					</modRestrictions>
+					
+					<defRestrictions>
+						<ThoughtDef>
+							<EnvironmentDark>BlackListSelf</EnvironmentDark>
+							<Naked>BlackListSelf</Naked>
+							<SleepDisturbed>BlackListSelf</SleepDisturbed>
+							<SharedBed>BlackListSelf</SharedBed>
+							<ObservedLayingCorpse>BlackListSelf</ObservedLayingCorpse>
+							<ButcheredHumanlikeCorpse>BlackListSelf</ButcheredHumanlikeCorpse>
+							<KnowButcheredHumanlikeCorpse>BlackListSelf</KnowButcheredHumanlikeCorpse>
+						</ThoughtDef>
+						<Beds>
+							<RVFFA_PillowBed>BlackListSelf</RVFFA_PillowBed>
+							<RVFFA_MediumPillowPile>BlackListSelf</RVFFA_MediumPillowPile>
+							<RVFFA_LargePillowPile>BlackListSelf</RVFFA_LargePillowPile>
+						</Beds>
+						<TraitDef>
+							<BodyPurist>BlackListSelf</BodyPurist>
+							<Transhumanist>BlackListSelf</Transhumanist>
+							<RVFFA_PackBroken>WhiteListSelf</RVFFA_PackBroken>
+						</TraitDef>
+						<XenotypeDef>
+							<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">WhiteListSelf</RVFFA_BaseAvaliXenoType>
+						</XenotypeDef>
+					</defRestrictions>
+					
+					<alwaysAllowed>
+						<Apparel/>
+					</alwaysAllowed>
+				</restrictions>
 			</li>
-			
+
 			<li Class="RVCRestructured.RVRThoughtComp">
 				<thoughtReplacers>
 					<li>
@@ -274,10 +266,10 @@
 				</thoughtReplacers>
 			</li>
 			<li Class="RVCRestructured.RVRRecipeGetterComp">
-				
+
 			</li>
 			<li Class="RVCRestructured.RVRCP">
-				
+
 			</li>
 		</comps>
 		<tools>
@@ -465,7 +457,7 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
-			
+
 			<li>RVFFA_InstallAdvTail</li>
 			<li>RVFFA_InstallBasicBionicTail</li>
 			<li>RVFFA_InstallBasicArm</li>
