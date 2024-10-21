@@ -6,15 +6,15 @@
 		<showsInBed>false</showsInBed>
 		<north>
 			<position>(0,0,0)</position>
-			<size>0.8</size>
+			<size>1</size>
 		</north>
 		<south>
-			<position>(0,-0.2,0)</position>
-			<size>0.8</size>
+			<position>(0,-.1,0)</position>
+			<size>1</size>
 		</south>
 		<east>
-			<position>(0,-0.2,0)</position>
-			<size>0.8</size>
+			<position>(0,-.1,0)</position>
+			<size>1</size>
 		</east>
 		<textures>
 			<li>
