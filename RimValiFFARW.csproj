@@ -11,8 +11,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Main\Textures\Textures\**" />
 	  <Compile Remove="Source\WorldGen\**" />
+	  <EmbeddedResource Remove="Main\Textures\Textures\**" />
 	  <EmbeddedResource Remove="Source\WorldGen\**" />
+	  <None Remove="Main\Textures\Textures\**" />
 	  <None Remove="Source\WorldGen\**" />
 	</ItemGroup>
 
@@ -25,7 +28,6 @@
 		<Folder Include="1.4\Assemblies\" />
 		<Folder Include="1.4\Defs\Buildings\" />
 		<Folder Include="1.4\Patches\" />
-		<Folder Include="Main\Textures\Textures\Avali\" />
 	</ItemGroup>
 
 	<ItemGroup>
