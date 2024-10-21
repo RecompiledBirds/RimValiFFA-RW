@@ -38,6 +38,7 @@
 				</li>
 				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 					<def>RVFFA_TailSkirt</def>
+					<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 				</li>
 				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
