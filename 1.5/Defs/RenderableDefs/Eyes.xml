@@ -10,13 +10,17 @@
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.001,0)</position>
+			<position>(0,.1,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(0,0.013,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>0.8</size>
 		</east>
+		<west>
+			<position>(0,0.01,0)</position>
+			<size>0.8</size>
+		</west>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Eyes/EyeL</texPath>
@@ -35,13 +39,17 @@
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0.001,0)</position>
+			<position>(0,.1,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(0,-0.013,0)</position>
+			<position>(0,.1,0)</position>
 			<size>0.8</size>
 		</east>
+		<west>
+			<position>(0,-.1,0)</position>
+			<size>0.8</size>
+		</west>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Eyes/EyeR</texPath>

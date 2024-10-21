@@ -4,15 +4,15 @@
 		<defName>RVFFA_EarLL</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(0,0,0)</position>
+			<position>(0,.01,0)</position>
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,-.01,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.17,-0.0087,0.06)</position>
+			<position>(-.34,-.01,0)</position>
 			<size>0.8</size>
 		</east>
 		<textures>
@@ -28,20 +28,19 @@
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
 
-
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRL</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(0,0,0)</position>
+			<position>(0,.01,0)</position>
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
+			<position>(0,-.01,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.17,0.0087,0.06)</position>
+			<position>(-.34,.1,0)</position>
 			<size>0.8</size>
 		</east>
 		<textures>
@@ -61,15 +60,15 @@
 		<defName>RVFFA_EarLU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(0.02,0,0)</position>
+			<position>(0.02,.01,0)</position>
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(-0.02,0,0)</position>
+			<position>(-0.02,-.01,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.16,-0.01,0)</position>
+			<position>(-.34,-.1,0)</position>
 			<size>0.8</size>
 		</east>
 		<textures>
@@ -85,20 +84,19 @@
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
 
-
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRU</defName>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
-			<position>(-0.02,0,0)</position>
+			<position>(-0.02,.01,0)</position>
 			<size>0.8</size>
 		</north>
 		<south>
-			<position>(0.02,0,0)</position>
+			<position>(0.02,-.01,0)</position>
 			<size>0.8</size>
 		</south>
 		<east>
-			<position>(-0.16,0.01,0.016)</position>
+			<position>(-.34,.1,0)</position>
 			<size>0.8</size>
 		</east>
 		<textures>

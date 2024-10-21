@@ -66,7 +66,7 @@ namespace RimValiFFARW.Packs
             titlePart = main.TopPartPixels(30f);
             contentPart = new Rect(titlePart.x, titlePart.yMax + CommonMargin, main.width, 125f);
             packEditButton = new Rect(titlePart.xMax - (18f * 2f) - CommonMargin, titlePart.y + 4f, 18f, 18f);
-            packRenameButton = packEditButton.MoveRect(new Vector2(-(packEditButton.width + CommonMargin), 0f));
+            packRenameButton = new Rect(packEditButton.x - packEditButton.width - CommonMargin, packEditButton.y, packEditButton.width, packEditButton.height);
             descriptionPart = new Rect(contentPart.x, contentPart.y, main.width * .7f - CommonMargin * 2f, contentPart.height);
             boniListPartOuter = new Rect(descriptionPart.xMax + CommonMargin * 2f, contentPart.y, main.width * .3f, contentPart.height).Rounded();
         }
