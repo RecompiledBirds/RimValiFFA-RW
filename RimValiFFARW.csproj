@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net48</TargetFramework>
+		<TargetFramework>net481</TargetFramework>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
 		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
@@ -31,10 +31,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="RimValiCore RW">
-	    <HintPath>..\RimValiCore-RW\1.4\Assemblies\RimValiCore RW.dll</HintPath>
+	  <Reference Include="RVCRestructured">
+	    <HintPath>..\RimValiCore-RW\1.5\Assemblies\RVCRestructured.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	</ItemGroup>
-
 </Project>
