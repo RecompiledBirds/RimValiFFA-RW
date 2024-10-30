@@ -6,16 +6,16 @@
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<showsInBed>false</showsInBed>
 		<north>
-			<position>(0,0.01,0)</position>
-			<size>0.8</size>
+			<position>(0,.1,0)</position>
+			<size>1</size>
 		</north>
 		<south>
-			<position>(0,0,0)</position>
-			<size>0.8</size>
+			<position>(0,-.1,0)</position>
+			<size>1</size>
 		</south>
 		<east>
-			<position>(-0.12,0.1,-0.14)</position>
-			<size>0.8</size>
+			<position>(-.235,.1,-.27)</position>
+			<size>1</size>
 		</east>
 		<textures>
 			<li>
@@ -28,21 +28,21 @@
 	</RVCRestructured.Defs.RenderableDef>
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
-		<linkPosWith>RVFFA_Body</linkPosWith>
+		<linkPosWith>RVFFA_TailSkirt</linkPosWith>
 		<defName>RVFFA_Tail</defName>
 		<showsInBed>false</showsInBed>
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<north>
-			<position>(-0.08,0.1,0.051)</position>
-			<size>0.8</size>
+			<position>(-.138,0.1,.088)</position>
+			<size>1</size>
 		</north>
 		<south>
-			<position>(0.2,-0.01,0.1)</position>
-			<size>0.8</size>
+			<position>(0,-.1,0)</position>
+			<size>1</size>
 		</south>
 		<east>
-			<position>(-0.4,0,0.13)</position>
-			<size>0.8</size>
+			<position>(-.5425,0,.518)</position>
+			<size>1</size>
 		</east>
 		<textures>
 			<li>
