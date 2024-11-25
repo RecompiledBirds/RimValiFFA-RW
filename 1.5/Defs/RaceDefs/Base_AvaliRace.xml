@@ -12,6 +12,7 @@
 			<LeatherAmount>75</LeatherAmount>
 			<RoyalFavorValue>3</RoyalFavorValue>
 		</statBases>
+
 		<comps>
 			<li Class="RVCRestructured.RVRCannibalismComp">
 				<thoughts>
@@ -341,6 +342,8 @@
 			<nameGenerator>RVFFA_AvaliNamer</nameGenerator>
 			<body>RVFFA_AvaliBody</body>
 			<baseBodySize>1</baseBodySize>
+			<bloodDef>RVFFA_Avali_Filth_Blood</bloodDef>
+			<bloodSmearDef>RVFFA_Avali_Filth_BloodSmear</bloodSmearDef>
 			<renderTree>RVFFA_RenderTree</renderTree>
 			<baseHealthScale>1</baseHealthScale>
 			<foodType>OmnivoreHuman</foodType>
