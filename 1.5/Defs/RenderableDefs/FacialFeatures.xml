@@ -7,7 +7,6 @@
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
 			<position>(0,0,0)</position>
-
 			<size>0.5</size>
 		</north>
 		<south>
@@ -15,9 +14,13 @@
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(0,0.013,0)</position>
+			<position>(0,0.001,0)</position>
 			<size>0.5</size>
 		</east>
+		<west>
+			<position>(0,0.001,0)</position>
+			<size>0.5</size>
+		</west>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Eyes/EyeL</texPath>
@@ -32,6 +35,34 @@
 		<colorSet>Eyes</colorSet>
 		<linkPosWith>RVFFA_Head</linkPosWith>
 		<north>
+			<position>(0,0.001,0)</position>
+			<size>0.5</size>
+		</north>
+		<south>
+			<position>(0,0.001,0)</position>
+			<size>0.5</size>
+		</south>
+		<east>
+			<position>(0,0.001,0)</position>
+			<size>0.5</size>
+		</east>
+		<west>
+			<position>(0,0.001,0)</position>
+			<size>0.5</size>
+		</west>
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Eyes/EyeR</texPath>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+	<RVCRestructured.Defs.RenderableDef>
+		<defName>RVFFA_Mouth</defName>
+		<bodyPart>mouth</bodyPart>
+		<colorSet>Feathers</colorSet>
+		<linkPosWith>RVFFA_Head</linkPosWith>
+		<north>
 			<position>(0,0,0)</position>
 			<size>0.5</size>
 		</north>
@@ -40,12 +71,16 @@
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(0,-0.013,0)</position>
+			<position>(0,0.001,0)</position>
 			<size>0.5</size>
 		</east>
+		<west>
+			<position>(0,0.001,0)</position>
+			<size>0.5</size>
+		</west>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Eyes/EyeR</texPath>
+				<texPath>RimValiFFA/Mouth/Mouth</texPath>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>

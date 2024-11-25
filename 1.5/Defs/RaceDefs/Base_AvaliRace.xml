@@ -33,8 +33,6 @@
 			</li>
 
 			<li Class="RVCRestructured.RVRGraphicsComp">
-				<bodyTex>RVC/Empty</bodyTex>
-				<headTex>RVC/Empty</headTex>
 				<renderableDefs>
 					<li>RVFFA_EyeL</li>
 					<li>RVFFA_EyeR</li>
@@ -49,8 +47,10 @@
 
 					<li>RVFFA_Tail</li>
 					<li>RVFFA_TailSkirt</li>
-				</renderableDefs>
 
+					<li>RVFFA_Mouth</li>
+				</renderableDefs>
+				<apparelScaleBody>1.75</apparelScaleBody>
 				<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
 				<colorGenerators>
 					<li>

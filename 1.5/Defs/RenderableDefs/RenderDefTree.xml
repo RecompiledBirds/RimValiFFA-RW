@@ -10,11 +10,70 @@
 					<def>RVFFA_Body</def>
 					<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+					<children>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Wounds - pre apparel</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>8</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Swaddle" MayRequire="Ludeon.RimWorld.Biotech">
+							<debugLabel>Baby swaddle</debugLabel>
+							<nodeClass>PawnRenderNode_Swaddle</nodeClass>
+							<workerClass>PawnRenderNodeWorker_Swaddle</workerClass>
+							<texPath>Things/Pawn/Humanlike/Apparel/SwaddledBaby/Swaddled_Child</texPath>
+							<swaddleColorOffset>0.1</swaddleColorOffset>
+							<brightnessRange>0.6~0.89</brightnessRange>
+							<baseLayer>10</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Parent">
+							<debugLabel>Apparel root</debugLabel>
+							<tagDef>ApparelBody</tagDef>
+							<baseLayer>20</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Wounds - post apparel</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+							<overlayOverApparel>true</overlayOverApparel>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>30</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Firefoam</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>40</baseLayer>
+						</li>
+					</children>
 				</li>
 				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 					<def>RVFFA_Head</def>
 					<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+					<children>
+						 <li Class="PawnRenderNodeProperties_Overlay">
+						  <debugLabel>Head wounds</debugLabel>
+						  <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+						  <overlayLayer>Head</overlayLayer>
+						  <baseLayer>65</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Parent">
+						  <debugLabel>Apparel root</debugLabel>
+						  <tagDef>ApparelHead</tagDef>
+						  <baseLayer>70</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+						  <debugLabel>Firefoam</debugLabel>
+						  <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+						  <overlayLayer>Head</overlayLayer>
+						  <baseLayer>85</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+						  <debugLabel>Status overlay</debugLabel>
+						  <workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
+						  <baseLayer>100</baseLayer>
+						</li>
+					</children>
 				</li>
 				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 					<def>RVFFA_EarLL</def>
@@ -43,6 +102,11 @@
 				</li>
 				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 					<def>RVFFA_Tail</def>
+					<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+				</li>
+				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+					<def>RVFFA_Mouth</def>
 					<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 				</li>

@@ -7,16 +7,17 @@
 		<showsInBed>false</showsInBed>
 		<north>
 			<position>(0,.1,0)</position>
-			<size>1</size>
+			<size>0.5</size>
 		</north>
 		<south>
 			<position>(0,-.1,0)</position>
-			<size>1</size>
+			<size>0.5</size>
 		</south>
 		<east>
-			<position>(-.235,.1,-.27)</position>
-			<size>1</size>
+			<position>(-.235,0.001,-.27)</position>
+			<size>0.5</size>
 		</east>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Tail/Tailskirt/Male/MaleTailskirt</texPath>
@@ -31,19 +32,20 @@
 		<linkPosWith>RVFFA_TailSkirt</linkPosWith>
 		<defName>RVFFA_Tail</defName>
 		<showsInBed>false</showsInBed>
-		<flipLayerEastWest>false</flipLayerEastWest>
+		
 		<north>
-			<position>(-.138,0.1,.088)</position>
-			<size>1</size>
+			<position>(-.138,0.001,.088)</position>
+			<size>0.5</size>
 		</north>
 		<south>
-			<position>(0,-.1,0)</position>
-			<size>1</size>
+			<position>(0.28,0.001,0.1)</position>
+			<size>0.5</size>
 		</south>
 		<east>
 			<position>(-.5425,0,.518)</position>
-			<size>1</size>
+			<size>0.5</size>
 		</east>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Tail/Male/MaleTail</texPath>
