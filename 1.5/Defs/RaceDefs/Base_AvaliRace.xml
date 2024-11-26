@@ -338,7 +338,7 @@
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>80</lifeExpectancy>
-			<leatherDef>Leather_Human</leatherDef>
+			<leatherDef>RVFFA_AvaliLeather</leatherDef>
 			<nameGenerator>RVFFA_AvaliNamer</nameGenerator>
 			<body>RVFFA_AvaliBody</body>
 			<baseBodySize>1</baseBodySize>

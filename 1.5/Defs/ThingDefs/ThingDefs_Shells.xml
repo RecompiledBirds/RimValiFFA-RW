@@ -8,7 +8,7 @@
 		<techLevel>Industrial</techLevel>
 		<statBases>
 			<MaxHitPoints>60</MaxHitPoints>
-			<MarketValue>55</MarketValue>
+			<MarketValue>500</MarketValue>
 			<Mass>1.25</Mass>
 			<Flammability>1.0</Flammability>
 			<DeteriorationRate>1.5</DeteriorationRate>
