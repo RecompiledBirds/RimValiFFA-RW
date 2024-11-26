@@ -31,6 +31,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Reference Include="RimValiCore RW">
+	    <HintPath>..\Vine\1.4\Assemblies\RimValiCore RW.dll</HintPath>
+	  </Reference>
 	  <Reference Include="RVCRestructured">
 	    <HintPath>..\Vine\1.5\Assemblies\RVCRestructured.dll</HintPath>
 	  </Reference>

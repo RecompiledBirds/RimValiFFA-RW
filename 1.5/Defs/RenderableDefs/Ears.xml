@@ -12,7 +12,7 @@
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(-.34,-0.001,0)</position>
+			<position>(-.24,-0.001,0)</position>
 			<size>0.5</size>
 		</east>
 		<textures>
@@ -40,7 +40,7 @@
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(-.34,0.001,0)</position>
+			<position>(-.24,0.001,0)</position>
 			<size>0.5</size>
 		</east>
 		<textures>
@@ -68,7 +68,7 @@
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(-.34,-0.001,0)</position>
+			<position>(-.24,-0.001,0)</position>
 			<size>0.5</size>
 		</east>
 		
@@ -97,7 +97,7 @@
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(-.34,0.001,0)</position>
+			<position>(-.24,0.001,0)</position>
 			<size>0.5</size>
 		</east>
 		

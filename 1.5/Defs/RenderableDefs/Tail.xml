@@ -6,7 +6,7 @@
 		<flipLayerEastWest>false</flipLayerEastWest>
 		<showsInBed>false</showsInBed>
 		<north>
-			<position>(0,.1,0)</position>
+			<position>(0,0.01,0)</position>
 			<size>0.5</size>
 		</north>
 		<south>
@@ -14,7 +14,7 @@
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(-.235,0.001,-.27)</position>
+			<position>(-.16,0.001,-.185)</position>
 			<size>0.5</size>
 		</east>
 		
@@ -34,15 +34,15 @@
 		<showsInBed>false</showsInBed>
 		
 		<north>
-			<position>(-.138,0.001,.088)</position>
+			<position>(-.1,1,.088)</position>
 			<size>0.5</size>
 		</north>
 		<south>
-			<position>(0.28,0.001,0.1)</position>
+			<position>(0.28,0.001,0.2)</position>
 			<size>0.5</size>
 		</south>
 		<east>
-			<position>(-.5425,0,.518)</position>
+			<position>(-.3425,0,.33)</position>
 			<size>0.5</size>
 		</east>
 		
