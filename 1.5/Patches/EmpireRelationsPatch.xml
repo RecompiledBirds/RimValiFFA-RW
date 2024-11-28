@@ -2,7 +2,7 @@
 <Patch>
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Royalty [Official DLC]</li>
+			<li>Royalty</li>
 		</mods>
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>

@@ -4,23 +4,6 @@
 		<defName>RVFFA_EyeL</defName>
 		<bodyPart>left eye</bodyPart>
 		<colorSet>Eyes</colorSet>
-		<linkPosWith>RVFFA_Head</linkPosWith>
-		<north>
-			<position>(0,0,0)</position>
-			<size>0.5</size>
-		</north>
-		<south>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</south>
-		<east>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</east>
-		<west>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</west>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Eyes/EyeL</texPath>
@@ -33,23 +16,7 @@
 		<defName>RVFFA_EyeR</defName>
 		<bodyPart>right eye</bodyPart>
 		<colorSet>Eyes</colorSet>
-		<linkPosWith>RVFFA_Head</linkPosWith>
-		<north>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</north>
-		<south>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</south>
-		<east>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</east>
-		<west>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</west>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Eyes/EyeR</texPath>
@@ -61,23 +28,7 @@
 		<defName>RVFFA_Mouth</defName>
 		<bodyPart>mouth</bodyPart>
 		<colorSet>Feathers</colorSet>
-		<linkPosWith>RVFFA_Head</linkPosWith>
-		<north>
-			<position>(0,0,0)</position>
-			<size>0.5</size>
-		</north>
-		<south>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</south>
-		<east>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</east>
-		<west>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</west>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Mouth/Mouth</texPath>

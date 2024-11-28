@@ -2,19 +2,7 @@
 <Defs>
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarLL</defName>
-		<linkPosWith>RVFFA_Head</linkPosWith>
-		<north>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</north>
-		<south>
-			<position>(0,0.001,0)</position>
-			<size>0.5</size>
-		</south>
-		<east>
-			<position>(-.24,-0.001,0)</position>
-			<size>0.5</size>
-		</east>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/LowerLeft/MaleLowerLeft</texPath>
@@ -30,19 +18,7 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRL</defName>
-		<linkPosWith>RVFFA_Head</linkPosWith>
-		<north>
-			<position>(0,.01,0)</position>
-			<size>0.5</size>
-		</north>
-		<south>
-			<position>(0,-.01,0)</position>
-			<size>0.5</size>
-		</south>
-		<east>
-			<position>(-.24,0.001,0)</position>
-			<size>0.5</size>
-		</east>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/LowerRight/MaleLowerRight</texPath>
@@ -58,19 +34,7 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarLU</defName>
-		<linkPosWith>RVFFA_Head</linkPosWith>
-		<north>
-			<position>(0.02,0.001,0)</position>
-			<size>0.5</size>
-		</north>
-		<south>
-			<position>(-0.02,0.001,0)</position>
-			<size>0.5</size>
-		</south>
-		<east>
-			<position>(-.24,-0.001,0)</position>
-			<size>0.5</size>
-		</east>
+		
 		
 		<textures>
 			<li>
@@ -87,19 +51,6 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRU</defName>
-		<linkPosWith>RVFFA_Head</linkPosWith>
-		<north>
-			<position>(-0.02,0.001,0)</position>
-			<size>0.5</size>
-		</north>
-		<south>
-			<position>(0.02,0.001,0)</position>
-			<size>0.5</size>
-		</south>
-		<east>
-			<position>(-.24,0.001,0)</position>
-			<size>0.5</size>
-		</east>
 		
 		<textures>
 			<li>
