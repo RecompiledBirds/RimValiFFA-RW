@@ -3,6 +3,7 @@
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_TailSkirt</defName>
 		<showsInBed>false</showsInBed>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Tail/Tailskirt/Male/MaleTailskirt</texPath>
@@ -16,6 +17,7 @@
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_Tail</defName>
 		<showsInBed>false</showsInBed>
+		
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Tail/Male/MaleTail</texPath>
