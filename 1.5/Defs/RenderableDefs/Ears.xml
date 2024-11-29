@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarLL</defName>
-		
+		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/LowerLeft/MaleLowerLeft</texPath>
@@ -18,7 +19,7 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRL</defName>
-		
+		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/LowerRight/MaleLowerRight</texPath>
@@ -34,7 +35,7 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarLU</defName>
-		
+		<showsInBed>true</showsInBed>
 		
 		<textures>
 			<li>
@@ -51,7 +52,7 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRU</defName>
-		
+		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/UpperRight/MaleUpperRight</texPath>
