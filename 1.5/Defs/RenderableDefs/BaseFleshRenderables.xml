@@ -2,5 +2,6 @@
 <Defs>
 	<RVCRestructured.Defs.RenderableDef Name="RVFFA_BaseAvaliFleshPart" Abstract="True">
 		<colorSet>Feathers</colorSet>
+		<showsInBed>true</showsInBed>
 	</RVCRestructured.Defs.RenderableDef>
 </Defs>
