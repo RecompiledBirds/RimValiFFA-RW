@@ -11,15 +11,11 @@
 					<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 					<drawData>
-						<dataNorth>
-							
-						</dataNorth>
-						<dataEast>
-							
-						</dataEast>
-						<dataSouth>
-							
-						</dataSouth>
+						<scale>0.5</scale>
+						<childScale>0.25</childScale>
+						<defaultData>
+							<offset>(0,0,-.2)</offset>
+						</defaultData>
 					</drawData>
 					<children>
 						<li Class="PawnRenderNodeProperties_Overlay">
