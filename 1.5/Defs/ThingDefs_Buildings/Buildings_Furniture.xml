@@ -281,6 +281,7 @@
 		</graphicData>
 
 		<statBases>
+			<WorkToBuild>500</WorkToBuild>
 			<MaxHitPoints>75</MaxHitPoints>
 			<Mass>5</Mass>
 			<Flammability>1.0</Flammability>
