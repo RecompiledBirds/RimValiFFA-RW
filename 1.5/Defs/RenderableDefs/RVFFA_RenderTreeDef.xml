@@ -108,13 +108,13 @@
 					<baseLayer>10</baseLayer>
 					<drawData>
 						<dataNorth>
-							<offset>(0.0,0.1,0.75)</offset>
+							<offset>(0,0,0.75)</offset>
 						</dataNorth>
 						<dataEast>
-							<offset>(0.09,0.1,0.75)</offset>
+							<offset>(0.09,0,0.75)</offset>
 						</dataEast>
 						<dataSouth>
-							<offset>(0.0,0.1,0.75)</offset>
+							<offset>(0,0,0.75)</offset>
 						</dataSouth>
 					</drawData>
 					<children>
