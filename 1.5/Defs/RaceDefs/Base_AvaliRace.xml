@@ -51,8 +51,6 @@
 
 					<li>RVFFA_Mouth</li>
 				</renderableDefs>
-				<apparelScaleBody>1.75</apparelScaleBody>
-				<hasUniqueHeadApparel>true</hasUniqueHeadApparel>
 				<colorGenerators>
 					<li>
 						<name>Eyes</name>

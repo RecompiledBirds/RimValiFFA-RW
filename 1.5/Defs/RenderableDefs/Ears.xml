@@ -35,7 +35,6 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarLU</defName>
-		<showsInBed>true</showsInBed>
 		
 		<textures>
 			<li>
@@ -52,7 +51,6 @@
 
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarRU</defName>
-		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
 				<texPath>RimValiFFA/Ears/Male/UpperRight/MaleUpperRight</texPath>
