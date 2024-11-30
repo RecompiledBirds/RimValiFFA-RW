@@ -105,18 +105,98 @@
 					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 					<tagDef>Head</tagDef>
 					<skipFlag>Head</skipFlag>
+					<baseLayer>10</baseLayer>
 					<drawData>
 						<dataNorth>
-							<offset>(0.0,0.1,0.75)</offset>
+							<offset>(0,0,0.75)</offset>
 						</dataNorth>
 						<dataEast>
-							<offset>(0.09,0.1,0.75)</offset>
+							<offset>(0.09,0,0.75)</offset>
 						</dataEast>
 						<dataSouth>
-							<offset>(0.0,0.1,0.75)</offset>
+							<offset>(0,0,0.75)</offset>
 						</dataSouth>
 					</drawData>
 					<children>
+						<li Class="PawnRenderNodeProperties_Parent">
+							<children>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarLL</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.34,-.1,.1)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.34,.1,.1)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarRL</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.34,.1,.1)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.34,-.1,.1)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarLU</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.27,-.1,0)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.27,.1,0)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarRU</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.27,.1,0)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.27,-.1,0)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_Mouth</def>
+									<baseLayer>15</baseLayer>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EyeL</def>
+									<baseLayer>15</baseLayer>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EyeR</def>
+									<baseLayer>15</baseLayer>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+								</li>
+							</children>
+						</li>
 						<li Class="PawnRenderNodeProperties_Overlay">
 							<debugLabel>Head wounds</debugLabel>
 							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
@@ -141,133 +221,6 @@
 							<debugLabel>Status overlay</debugLabel>
 							<workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
 							<baseLayer>100</baseLayer>
-						</li>
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
-							<def>RVFFA_EarLL</def>
-							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
-							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-							<drawData>
-
-								<dataEast>
-									<offset>(-0.2,-0.001,0.1)</offset>
-								</dataEast>
-								<dataWest>
-									<offset>(0.3,0.001,0.1)</offset>
-								</dataWest>
-								<dataNorth>
-									<layer>1</layer>
-								</dataNorth>
-							</drawData>
-						</li>
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
-							<def>RVFFA_EarRL</def>
-							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
-							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-							<drawData>
-								<dataEast>
-									<offset>(-0.3,0.001,0.1)</offset>
-									<layer>1</layer>
-								</dataEast>
-								<dataSouth>
-
-								</dataSouth>
-								<dataWest>
-									<offset>(0.3,-0.001,0.1)</offset>
-								</dataWest>
-								<dataNorth>
-									<layer>1</layer>
-								</dataNorth>
-							</drawData>
-						</li>
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
-							<def>RVFFA_EarLU</def>
-							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
-							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-							<drawData>
-								<dataEast>
-									<offset>(-0.3,-0.001,0)</offset>
-									<layer>-1</layer>
-								</dataEast>
-								<dataSouth>
-									<layer>0.001</layer>
-								</dataSouth>
-								<dataWest>
-									<offset>(0.3,0.001,0)</offset>
-								</dataWest>
-								<dataNorth>
-									<layer>1</layer>
-								</dataNorth>
-							</drawData>
-						</li>
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
-							<def>RVFFA_EarRU</def>
-							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
-							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-							<drawData>
-
-								<dataEast>
-									<offset>(-0.3,0.001,0)</offset>
-									<layer>1</layer>
-								</dataEast>
-								<dataSouth>
-									<layer>0.001</layer>
-								</dataSouth>
-								<dataWest>
-									<offset>(0.3,-0.001,0)</offset>
-								</dataWest>
-								<dataNorth>
-									<layer>1</layer>
-								</dataNorth>
-							</drawData>
-						</li>
-
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
-							<def>RVFFA_Mouth</def>
-							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
-							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-							<drawData>
-
-								<dataEast>
-									<layer>1</layer>
-								</dataEast>
-								<dataSouth>
-									<layer>1</layer>
-								</dataSouth>
-							</drawData>
-						</li>
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
-							<def>RVFFA_EyeL</def>
-							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
-							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-							<drawData>
-
-								<dataEast>
-									<layer>1</layer>
-								</dataEast>
-								<dataSouth>
-									<layer>1</layer>
-								</dataSouth>
-								<dataWest>
-									<layer>1</layer>
-								</dataWest>
-							</drawData>
-						</li>
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
-							<def>RVFFA_EyeR</def>
-							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
-							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-							<drawData>
-
-								<dataEast>
-									<layer>1</layer>
-								</dataEast>
-								<dataSouth>
-									<layer>1</layer>
-								</dataSouth>
-								<dataWest>
-									<layer>1</layer>
-								</dataWest>
-							</drawData>
 						</li>
 					</children>
 				</li>
