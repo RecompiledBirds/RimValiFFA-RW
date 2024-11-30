@@ -28,7 +28,7 @@
 
 	<RVCRestructured.Defs.RenderableDef>
 		<defName>RVFFA_Mouth</defName>
-		<bodyPart>mouth</bodyPart>
+		<bodyPart>jaw</bodyPart>
 		<colorSet>Feathers</colorSet>
 		<showsInBed>true</showsInBed>
 		<textures>
