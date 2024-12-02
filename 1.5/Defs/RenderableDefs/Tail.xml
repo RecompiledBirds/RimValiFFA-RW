@@ -6,9 +6,9 @@
 		
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Tail/Tailskirt/Male/MaleTailskirt</texPath>
+				<texPath>RimValiFFA/Avali/Tail/Tailskirt/Male/MaleTailskirt</texPath>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Tail/Tailskirt/Female/FemaleTailskirt</li>
+					<li>RimValiFFA/Avali/Tail/Tailskirt/Female/FemaleTailskirt</li>
 				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
@@ -20,9 +20,9 @@
 		
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Tail/Male/MaleTail</texPath>
+				<texPath>RimValiFFA/Avali/Tail/Male/MaleTail</texPath>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Tail/Female/FemaleTail</li>
+					<li>RimValiFFA/Avali/Tail/Female/FemaleTail</li>
 				</alternateFemaleMaskPaths>
 			</li>
 		</textures>

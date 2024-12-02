@@ -7,7 +7,7 @@
 		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Eyes/EyeL</texPath>
+				<texPath>RimValiFFA/Avali/Eyes/EyeL</texPath>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
@@ -21,7 +21,7 @@
 		
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Eyes/EyeR</texPath>
+				<texPath>RimValiFFA/Avali/Eyes/EyeR</texPath>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>
@@ -33,7 +33,7 @@
 		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Mouth/Mouth</texPath>
+				<texPath>RimValiFFA/Avali/Mouth/Mouth</texPath>
 			</li>
 		</textures>
 	</RVCRestructured.Defs.RenderableDef>

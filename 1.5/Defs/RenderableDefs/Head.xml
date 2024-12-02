@@ -7,12 +7,12 @@
 		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Heads/Male/MaleHead</texPath>
+				<texPath>RimValiFFA/Avali/Heads/Male/MaleHead</texPath>
 				<alternateMaskPaths>
-					<li>RimValiFFA/Heads/Male/Variant</li>
+					<li>RimValiFFA/Avali/Heads/Male/Variant</li>
 				</alternateMaskPaths>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Heads/Female/FemaleHead</li>
+					<li>RimValiFFA/Avali/Heads/Female/FemaleHead</li>
 				</alternateFemaleMaskPaths>
 				
 			</li>

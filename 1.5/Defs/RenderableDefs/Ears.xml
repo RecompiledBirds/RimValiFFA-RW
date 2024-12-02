@@ -6,12 +6,12 @@
 		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Ears/Male/LowerLeft/MaleLowerLeft</texPath>
+				<texPath>RimValiFFA/Avali/Ears/Male/LowerLeft/MaleLowerLeft</texPath>
 				<alternateMaskPaths>
-					<li>RimValiFFA/Ears/Male/LowerLeft/Variant</li>
+					<li>RimValiFFA/Avali/Ears/Male/LowerLeft/Variant</li>
 				</alternateMaskPaths>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Ears/Female/LowerLeft/FemaleLowerLeft</li>
+					<li>RimValiFFA/Avali/Ears/Female/LowerLeft/FemaleLowerLeft</li>
 				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
@@ -22,12 +22,12 @@
 		<showsInBed>true</showsInBed>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Ears/Male/LowerRight/MaleLowerRight</texPath>
+				<texPath>RimValiFFA/Avali/Ears/Male/LowerRight/MaleLowerRight</texPath>
 				<alternateMaskPaths>
-					<li>RimValiFFA/Ears/Male/LowerRight/Variant</li>
+					<li>RimValiFFA/Avali/Ears/Male/LowerRight/Variant</li>
 				</alternateMaskPaths>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Ears/Female/LowerRight/FemaleLowerRight</li>
+					<li>RimValiFFA/Avali/Ears/Female/LowerRight/FemaleLowerRight</li>
 				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
@@ -38,12 +38,12 @@
 		
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Ears/Male/UpperLeft/MaleUpperLeft</texPath>
+				<texPath>RimValiFFA/Avali/Ears/Male/UpperLeft/MaleUpperLeft</texPath>
 				<alternateMaskPaths>
-					<li>RimValiFFA/Ears/Male/UpperLeft/Variant</li>
+					<li>RimValiFFA/Avali/Ears/Male/UpperLeft/Variant</li>
 				</alternateMaskPaths>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Ears/Female/UpperLeft/FemaleUpperLeft</li>
+					<li>RimValiFFA/Avali/Ears/Female/UpperLeft/FemaleUpperLeft</li>
 				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
@@ -53,12 +53,12 @@
 		<defName>RVFFA_EarRU</defName>
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Ears/Male/UpperRight/MaleUpperRight</texPath>
+				<texPath>RimValiFFA/Avali/Ears/Male/UpperRight/MaleUpperRight</texPath>
 				<alternateMaskPaths>
-					<li>RimValiFFA/Ears/Male/UpperRight/Variant</li>
+					<li>RimValiFFA/Avali/Ears/Male/UpperRight/Variant</li>
 				</alternateMaskPaths>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Ears/Female/UpperRight/FemaleUpperRight</li>
+					<li>RimValiFFA/Avali/Ears/Female/UpperRight/FemaleUpperRight</li>
 				</alternateFemaleMaskPaths>
 			</li>
 		</textures>

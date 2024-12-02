@@ -6,9 +6,9 @@
 		
 		<textures>
 			<li>
-				<texPath>RimValiFFA/Body/Male/MaleBody</texPath>
+				<texPath>RimValiFFA/Avali/Body/Male/MaleBody</texPath>
 				<alternateFemaleMaskPaths>
-					<li>RimValiFFA/Body/Female/FemaleBody</li>
+					<li>RimValiFFA/Avali/Body/Female/FemaleBody</li>
 				</alternateFemaleMaskPaths>
 			</li>
 		</textures>
