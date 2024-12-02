@@ -218,6 +218,7 @@
 							<Building>WhiteListSelf</Building>
 							<ResearchDef>WhiteListSelf</ResearchDef>
 							<Apparel>WhiteListSelf</Apparel>
+							<Beds>WhiteListSelf</Beds>
 						</Nesi.RimValiFFARW>
 					</modRestrictions>
 					
@@ -231,11 +232,6 @@
 							<ButcheredHumanlikeCorpse>BlackListSelf</ButcheredHumanlikeCorpse>
 							<KnowButcheredHumanlikeCorpse>BlackListSelf</KnowButcheredHumanlikeCorpse>
 						</ThoughtDef>
-						<Beds>
-							<RVFFA_PillowBed>BlackListSelf</RVFFA_PillowBed>
-							<RVFFA_MediumPillowPile>BlackListSelf</RVFFA_MediumPillowPile>
-							<RVFFA_LargePillowPile>BlackListSelf</RVFFA_LargePillowPile>
-						</Beds>
 						<TraitDef>
 							<BodyPurist>BlackListSelf</BodyPurist>
 							<Transhumanist>BlackListSelf</Transhumanist>
