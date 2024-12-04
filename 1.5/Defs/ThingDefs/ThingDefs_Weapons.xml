@@ -644,6 +644,7 @@
 		<graphicData>
 			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Pistol_IndependentWorlds</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
 		</graphicData>
 		<uiIconScale>1.4</uiIconScale>
 		<soundInteract>Interact_Autopistol</soundInteract>
