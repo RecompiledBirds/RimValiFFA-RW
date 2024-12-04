@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace RimValiFFARW.Source.Harmony
+namespace RimValiFFARW
 {
     public static class BedUtilityPatch
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace RimValiFFARW.Source.Harmony
+namespace RimValiFFARW
 {
     [StaticConstructorOnStartup]
     public static class HarmonyPatcher

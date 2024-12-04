@@ -111,7 +111,7 @@ namespace RimValiFFARW
             Scribe_Values.Look(ref burstWarmupTicksLeft, "burstWarmupTicksLeft");
             Scribe_TargetInfo.Look(ref currentTargetInt, "currentTarget");
             Scribe_Values.Look(ref holdFire, "holdFire");
-            Scribe_Deep.Look(ref gun, "gun", Array.Empty<object>());
+            Scribe_Deep.Look(ref gun, "gun", []);
             BackCompatibility.PostExposeData(this);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
@@ -207,10 +207,7 @@ namespace RimValiFFARW
                             if (burstCooldownTicksLeft > 0)
                             {
                                 burstCooldownTicksLeft--;
-                                    if (progressBarEffecter == null)
-                                    {
-                                        progressBarEffecter = EffecterDefOf.ProgressBar.Spawn();
-                                    }
+                                    progressBarEffecter ??= EffecterDefOf.ProgressBar.Spawn();
 
                                     progressBarEffecter.EffectTick(this, TargetInfo.Invalid);
                                     MoteProgressBar mote = ((SubEffecter_ProgressBar)progressBarEffecter.children[0])
@@ -265,8 +262,7 @@ namespace RimValiFFARW
             {
                 SoundDefOf.TurretAcquireTarget.PlayOneShot(new TargetInfo(Position, Map));
             }
-
-            if (!currentTargetInt.IsValid)
+            else
             {
                 ResetCurrentTarget();
                 return;

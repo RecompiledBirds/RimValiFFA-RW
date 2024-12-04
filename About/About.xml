@@ -30,5 +30,7 @@
 	</supportedVersions>
 	<packageId>Nesi.RimValiFFARW</packageId>
 	<description>Avali for rimworld!\n Grown with Vine!</description>
+	<modIconPath IgnoreIfNoMatchingField="True">RimValiFFA/Symbols/avali_ideo_angy</modIconPath>
+	<modVersion IgnoreIfNoMatchingField="True">2.0.1</modVersion>
 	
 </ModMetaData>
