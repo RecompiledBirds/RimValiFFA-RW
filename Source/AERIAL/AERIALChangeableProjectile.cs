@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace RimValiFFARW
@@ -34,6 +35,45 @@ namespace RimValiFFARW
                 ThingDef? thing = PeekNextProjectile;
                 if (thing == null) return "None";
                 return thing.LabelCap;
+            }
+        }
+        public Texture2D PeekNextUiIcon
+        {
+            get
+            {
+                ThingDef? thing = PeekNextProjectile;
+                if (thing == null)
+                {
+                    return ThingDefOf.Shell_HighExplosive.uiIcon; 
+                }
+                return thing.uiIcon;
+            }
+        }
+
+
+        public float PeekNextUiIconAngle
+        {
+            get
+            {
+                ThingDef? thing = PeekNextProjectile;
+                if (thing == null)
+                {
+                    return ThingDefOf.Shell_HighExplosive.uiIconAngle;
+                }
+                return thing.uiIconAngle;
+            }
+        }
+
+        public Vector2 PeekNextUiIconOffset
+        {
+            get
+            {
+                ThingDef? thing = PeekNextProjectile;
+                if (thing == null)
+                {
+                    return ThingDefOf.Shell_HighExplosive.uiIconOffset;
+                }
+                return thing.uiIconOffset;
             }
         }
         public ThingDef? PeekNextProjectile

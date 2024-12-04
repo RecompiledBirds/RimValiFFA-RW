@@ -368,9 +368,9 @@ namespace RimValiFFARW
                 {
                     defaultLabel = "CommandExtractShell".Translate(),
                     defaultDesc = "CommandExtractShellDesc".Translate(),
-                    icon = compChangeableProjectile.PeekNextProjectile.uiIcon,
-                    iconAngle = compChangeableProjectile.PeekNextProjectile.uiIconAngle,
-                    iconOffset = compChangeableProjectile.PeekNextProjectile.uiIconOffset,
+                    icon = compChangeableProjectile.PeekNextUiIcon,
+                    iconAngle = compChangeableProjectile.PeekNextUiIconAngle,
+                    iconOffset = compChangeableProjectile.PeekNextUiIconOffset,
                     iconDrawScale =
                         GenUI.IconDrawScale(
                             compChangeableProjectile.PeekNextProjectile),
