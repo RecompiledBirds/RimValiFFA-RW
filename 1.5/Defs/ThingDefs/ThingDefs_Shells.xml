@@ -237,7 +237,7 @@
 		<comps>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>36</explosiveRadius>
-				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveDamageType>BombSuper</explosiveDamageType>
 				<explosiveExpandPerStackcount>2</explosiveExpandPerStackcount>
 				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
 				<wickTicks>30~60</wickTicks>
@@ -266,7 +266,7 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<damageDef>Bomb</damageDef>
+			<damageDef>RVFFA_ATOM_Damage</damageDef>
 			<!-- damage amount is the damage def default -->
 			<speed>30</speed>
 			<explosionRadius>56</explosionRadius>
@@ -300,8 +300,7 @@
 			<RVFFA_AeroTungstenCarbide>10</RVFFA_AeroTungstenCarbide>
 			<RVFFA_ProcessedTungsten>20</RVFFA_ProcessedTungsten>
 			<Steel>20</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_AERIALTech</researchPrerequisite>
@@ -321,7 +320,7 @@
 			<damageDef>EMP</damageDef>
 			<!-- damage amount is the damage def default -->
 			<speed>36</speed>
-			<explosionRadius>20</explosionRadius>
+			<explosionRadius>56</explosionRadius>
 			<flyOverhead>true</flyOverhead>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<soundExplode>MortarBomb_Explode</soundExplode>

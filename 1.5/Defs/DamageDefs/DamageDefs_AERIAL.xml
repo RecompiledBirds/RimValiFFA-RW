@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DamageDef ParentName="Bomb">
+		<defName>RVFFA_ATOM_Damage</defName>
+		<defaultDamage>1500</defaultDamage>
+		<expolosionPropagationSpeed>1</expolosionPropagationSpeed>
+		<defaultStoppingPower>5.0</defaultStoppingPower>
+		<explosionHeatEnergyPerCell>20</explosionHeatEnergyPerCell>
+		<defaultArmorPenetration>2.5</defaultArmorPenetration>
+	</DamageDef>
+</Defs>
