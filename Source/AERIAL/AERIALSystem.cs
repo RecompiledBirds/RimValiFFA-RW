@@ -292,9 +292,9 @@ namespace RimValiFFARW
 
         public override string GetInspectString()
         {
-            var stringBuilder = new StringBuilder();
-            var inspectString = "";
-            var compChangeableProjectile = ChangeableProjectile;
+            StringBuilder stringBuilder = new StringBuilder();
+            string inspectString = "";
+            AERIALChangeableProjectile compChangeableProjectile = ChangeableProjectile;
             if (!inspectString.NullOrEmpty())
             {
                 stringBuilder.AppendLine(inspectString);
