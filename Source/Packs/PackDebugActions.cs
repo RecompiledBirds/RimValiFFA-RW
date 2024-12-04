@@ -24,7 +24,7 @@ namespace RimValiFFARW.Packs
             PackDef def = DefDatabase<PackDef>.GetRandom();
             colonists.TruncateToLength(def.MaxSize);
 
-            if (!Pack.TryMakeNewPackFromPawns(def, colonists, false, false, out Pack pack)) return;
+            if (!Pack.TryMakeNewPackFromPawns(def, colonists, false, false, out Pack? pack)) return;
 
             packmanager.AddPack(pack);
         }

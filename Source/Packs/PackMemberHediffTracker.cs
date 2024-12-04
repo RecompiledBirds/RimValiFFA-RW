@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace RimValiFFARW.Packs
     /// </summary>
     public class PackMemberHediffTracker : IExposable
     {
+        [AllowNull]
         private Pawn member;
         private HashSet<Hediff> packHediffs = new HashSet<Hediff>();
 

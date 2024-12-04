@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -18,8 +19,10 @@ namespace RimValiFFARW.Packs
     /// </summary>
     public class Pack : IExposable, ILoadReferenceable
     {
+        [AllowNull]
         private PackWorker worker;
 
+        [AllowNull]
         private PackDef def;
         private HashSet<Pawn> members = new HashSet<Pawn>();
         private Dictionary<Pawn, PackMemberHediffTracker> memberHediffDic = new Dictionary<Pawn, PackMemberHediffTracker>();
@@ -27,7 +30,9 @@ namespace RimValiFFARW.Packs
         private List<Pawn> workingListPawn = new List<Pawn>();
         private List<PackMemberHediffTracker> workingListTracker = new List<PackMemberHediffTracker>();
 
+        [AllowNull]
         private string packName;
+        [AllowNull]
         private string loadID;
 
         /// <summary>
@@ -48,6 +53,7 @@ namespace RimValiFFARW.Packs
         /// <summary>
         ///     The internal <see cref="PackWorker"/> of a <see cref="Pack"/>
         /// </summary>
+        
         public PackWorker Worker => worker ?? (worker = def.GetNewPackWorker);
 
         /// <summary>
@@ -103,7 +109,7 @@ namespace RimValiFFARW.Packs
         /// <param name="def">The given <see cref="PackDef"/></param>
         /// <param name="pawns">The given <see cref="IEnumerable{T}"/> of <see cref="Pawn"/>s</param>
         /// <returns>If the <paramref name="pawns"/> can create a <see cref="Pack"/></returns>
-        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns, bool quietError, out string reason)
+        public static bool CanPawnsMakePack(PackDef def, IEnumerable<Pawn> pawns, bool quietError, [NotNullWhen(true)] out string? reason)
         {
             reason = null;
             return def?.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError, out reason) ?? false;
@@ -117,13 +123,13 @@ namespace RimValiFFARW.Packs
         /// <param name="quietError">If the function should throw errors</param>
         /// <param name="pack">The created <see cref="Pack"/> or Null if the process failed</param>
         /// <returns>True if a pack was formed, false otherwise</returns>
-        public static bool TryMakeNewPackFromPawns(PackDef def, IEnumerable<Pawn> pawns, bool ignoreIsInPack, bool quietError, out Pack pack)
+        public static bool TryMakeNewPackFromPawns(PackDef def, IEnumerable<Pawn> pawns, bool ignoreIsInPack, bool quietError, [NotNullWhen(true)] out Pack? pack)
         {
             pack = null;
-
-            PackWorker packWorker = def?.GetNewPackWorker;
-            if (!def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError, out string _)) return false;
-            if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawns, pawn, ignoreIsInPack, quietError, out string _))) return false;
+            
+            PackWorker packWorker = def.GetNewPackWorker;
+            if (!def.GetNewPackWorker.CanPawnsMakePack(pawns, def, quietError, out string? _)) return false;
+            if (pawns.Any(pawn => !packWorker.PawnCanJoinPack(pawns, pawn, ignoreIsInPack, quietError, out string? _))) return false;
 
             pack = new Pack(def, pawns);
             pack.ApplyHediffsToPackMembers();
@@ -172,7 +178,7 @@ namespace RimValiFFARW.Packs
         /// <returns>True if a member could be added, false otherwise.</returns>
         public bool AddMember(Pawn member, bool ignoreIsInPack, bool quietError = true)
         {
-            if (!worker.PawnCanJoinPack(members, member, ignoreIsInPack, quietError, out string _)) return false;
+            if (!worker.PawnCanJoinPack(members, member, ignoreIsInPack, quietError, out string? _)) return false;
             if (!members.Add(member)) return false;
 
             Packmanager.GetLastActivePackmanager.AddMemberRelation(member, this);

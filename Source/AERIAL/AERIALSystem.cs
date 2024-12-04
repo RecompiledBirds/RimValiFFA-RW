@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using RimValiFFARW.Nexus;
@@ -16,8 +17,9 @@ namespace RimValiFFARW
     public class AERIALSystem : Building_TurretGun
     {
         private bool holdFire;
-
+        [AllowNull]
         private CompPowerTrader power;
+        [AllowNull]
         private AERIALChangeableProjectile changeableProjectile;
 
         public AERIALSystem()
@@ -52,7 +54,7 @@ namespace RimValiFFARW
         }
 
         private bool PlayerControlled => (Faction == Faction.OfPlayer);
-        private bool CanSetForcedTarget => PlayerControlled && ChangeableProjectile.Loaded;
+        private new bool CanSetForcedTarget => PlayerControlled && ChangeableProjectile.Loaded;
 
         private bool CanToggleHoldFire => PlayerControlled;
 
@@ -109,7 +111,7 @@ namespace RimValiFFARW
             Scribe_Values.Look(ref burstWarmupTicksLeft, "burstWarmupTicksLeft");
             Scribe_TargetInfo.Look(ref currentTargetInt, "currentTarget");
             Scribe_Values.Look(ref holdFire, "holdFire");
-            Scribe_Deep.Look(ref gun, "gun", Array.Empty<object>());
+            Scribe_Deep.Look(ref gun, "gun", []);
             BackCompatibility.PostExposeData(this);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
@@ -205,10 +207,7 @@ namespace RimValiFFARW
                             if (burstCooldownTicksLeft > 0)
                             {
                                 burstCooldownTicksLeft--;
-                                    if (progressBarEffecter == null)
-                                    {
-                                        progressBarEffecter = EffecterDefOf.ProgressBar.Spawn();
-                                    }
+                                    progressBarEffecter ??= EffecterDefOf.ProgressBar.Spawn();
 
                                     progressBarEffecter.EffectTick(this, TargetInfo.Invalid);
                                     MoteProgressBar mote = ((SubEffecter_ProgressBar)progressBarEffecter.children[0])
@@ -263,8 +262,7 @@ namespace RimValiFFARW
             {
                 SoundDefOf.TurretAcquireTarget.PlayOneShot(new TargetInfo(Position, Map));
             }
-
-            if (!currentTargetInt.IsValid)
+            else
             {
                 ResetCurrentTarget();
                 return;
@@ -283,16 +281,16 @@ namespace RimValiFFARW
                 return;
             }
 
-            ThingDef t = ChangeableProjectile.PollNextProjectile;
+         
             burstWarmupTicksLeft = 1;
         }
 
 
         public override string GetInspectString()
         {
-            var stringBuilder = new StringBuilder();
-            var inspectString = "";
-            var compChangeableProjectile = ChangeableProjectile;
+            StringBuilder stringBuilder = new StringBuilder();
+            string inspectString = "";
+            AERIALChangeableProjectile compChangeableProjectile = ChangeableProjectile;
             if (!inspectString.NullOrEmpty())
             {
                 stringBuilder.AppendLine(inspectString);
@@ -309,7 +307,7 @@ namespace RimValiFFARW
             {
                 if (compChangeableProjectile.Loaded)
                 {
-                    stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALNextShell".Translate(compChangeableProjectile.PeekNextProjectile.LabelCap));
+                    stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALNextShell".Translate(compChangeableProjectile.PeekNextLabel));
                     stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALShellSpaceLeft".Translate($"{compChangeableProjectile.ShellsLoaded}".Named("RVFFA_AERIAL_SPACE"), AERIALChangeableProjectile.maxShells));
                 }
                 else
@@ -361,14 +359,14 @@ namespace RimValiFFARW
 
             if (CanExtractShell)
             {
-                var compChangeableProjectile = ChangeableProjectile;
+                AERIALChangeableProjectile compChangeableProjectile = ChangeableProjectile;
                 yield return new Command_Action
                 {
                     defaultLabel = "CommandExtractShell".Translate(),
                     defaultDesc = "CommandExtractShellDesc".Translate(),
-                    icon = compChangeableProjectile.PeekNextProjectile.uiIcon,
-                    iconAngle = compChangeableProjectile.PeekNextProjectile.uiIconAngle,
-                    iconOffset = compChangeableProjectile.PeekNextProjectile.uiIconOffset,
+                    icon = compChangeableProjectile.PeekNextUiIcon,
+                    iconAngle = compChangeableProjectile.PeekNextUiIconAngle,
+                    iconOffset = compChangeableProjectile.PeekNextUiIconOffset,
                     iconDrawScale =
                         GenUI.IconDrawScale(
                             compChangeableProjectile.PeekNextProjectile),
@@ -376,7 +374,7 @@ namespace RimValiFFARW
                 };
             }
 
-            var compChangeableProjectile2 =ChangeableProjectile;
+            AERIALChangeableProjectile compChangeableProjectile2 =ChangeableProjectile;
             if (compChangeableProjectile2 != null)
             {
                 StorageSettings storeSettings = compChangeableProjectile2.GetStoreSettings();
@@ -388,13 +386,13 @@ namespace RimValiFFARW
 
             if (CanSetForcedTarget)
             {
-                var compChangeableProjectile = ChangeableProjectile;
+                AERIALChangeableProjectile compChangeableProjectile = ChangeableProjectile;
 
                 var command_VerbTarget = new Command_VerbTarget
                 {
                     defaultLabel = "CommandSetForceAttackTarget".Translate(),
                     defaultDesc = "CommandSetForceAttackTargetDesc".Translate(),
-                    icon = compChangeableProjectile != null ? ContentFinder<Texture2D>.Get(compChangeableProjectile.Projectile.graphicData.texPath) : ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
+                    icon = compChangeableProjectile != null ? ContentFinder<Texture2D>.Get(compChangeableProjectile.Projectile?.graphicData.texPath) : ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
                     verb = AttackVerb,
                     hotKey = KeyBindingDefOf.Misc4,
                     drawRadius = false
@@ -414,7 +412,7 @@ namespace RimValiFFARW
 
             if (forcedTarget.IsValid)
             {
-                var command_Action = new Command_Action
+                Command_Action command_Action = new Command_Action
                 {
                     defaultLabel = "CommandStopForceAttack".Translate(),
                     defaultDesc = "CommandStopForceAttackDesc".Translate(),

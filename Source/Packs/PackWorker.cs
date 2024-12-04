@@ -5,6 +5,7 @@ using RVCRestructured.RVR;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,12 +43,17 @@ namespace RimValiFFARW.Packs
         /// <param name="quietError">If the function should stay quiet about errors</param>
         /// <param name="reason">The reason as to why a <paramref name="pawn"/> can't join</param>
         /// <returns>True if a <see cref="Pawn"/> can join a <see cref="Pack"/>, false otherwise</returns>
-        public virtual bool PawnCanJoinPack(IEnumerable<Pawn> existingPawns, Pawn pawn, bool ignoreIsInPack, bool quietError, out string reason)
+        public virtual bool PawnCanJoinPack(IEnumerable<Pawn> existingPawns, Pawn pawn, bool ignoreIsInPack, bool quietError, [NotNullWhen(false)] out string? reason)
         {
             double avgOpinionOfMember = EvaluateAverageOpinionForPawn(pawn, existingPawns);
             reason = null;
 
-            if (pawn == null) reason = "RVFFA_PackWorker_DoesNotExist".Translate();
+            if (pawn == null)
+            {
+                reason = "RVFFA_PackWorker_DoesNotExist".Translate();
+                MessageOf(pawn, reason, quietError);
+                return false;
+            }
             if (pawn.Dead) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsDead");
             if (pawn.NonHumanlikeOrWildMan()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild");
             if (pawn.IsInPack() && !ignoreIsInPack) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
@@ -86,7 +92,7 @@ namespace RimValiFFARW.Packs
         /// <param name="member">The given <see cref="Pawn"/></param>
         /// <param name="pack">The given <see cref="Pack"/></param>
         /// <returns></returns>
-        public virtual bool MemberShouldLeave(Pawn member, Pack pack, out string reason)
+        public virtual bool MemberShouldLeave(Pawn member, Pack pack, [NotNullWhen(true)] out string? reason)
         {
             reason = null;
             if (member is null)
@@ -128,7 +134,7 @@ namespace RimValiFFARW.Packs
         /// </summary>
         /// <param name="pawns">The given <see cref="IEnumerable{T}"/> of <see cref="Pawn"/>s</param>
         /// <returns>True if the <paramref name="pawns"/> can make a new <see cref="Pack"/>, false otherwise.</returns>
-        public virtual bool CanPawnsMakePack(IEnumerable<Pawn> pawns, PackDef def, bool quietError, out string reason)
+        public virtual bool CanPawnsMakePack(IEnumerable<Pawn> pawns, PackDef def, bool quietError, [NotNullWhen(false)]  out string? reason)
         {
             reason = null;
             if (pawns.Count() < def.MinSizeToCreate)
@@ -263,7 +269,7 @@ namespace RimValiFFARW.Packs
             if (!testSingleMembers) yield break;
             foreach (Pawn member in pack.Members)
             {
-                pack.Worker.MemberShouldLeave(member, pack, out string reason);
+                pack.Worker.MemberShouldLeave(member, pack, out string? reason);
                 if (reason == null) continue;
 
                 Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member?.NameShortColored ?? "???", pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
@@ -294,8 +300,9 @@ namespace RimValiFFARW.Packs
         /// </summary>
         /// <param name="member">The given <see cref="Pawn"/></param>
         /// <param name="pack">The given <see cref="Pack"/></param>
-        public virtual void CleanUpMember(Pawn member, Pack pack)
+        public virtual void CleanUpMember(Pawn? member, Pack pack)
         {
+            if(member == null) return;
             pack.RemoveMember(member);
             Packmanager.GetLastActivePackmanager.RemoveMemberRelation(member);
         }
