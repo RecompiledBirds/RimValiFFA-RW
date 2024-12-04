@@ -363,7 +363,7 @@ namespace RimValiFFARW
 
             if (CanExtractShell)
             {
-                var compChangeableProjectile = ChangeableProjectile;
+                AERIALChangeableProjectile compChangeableProjectile = ChangeableProjectile;
                 yield return new Command_Action
                 {
                     defaultLabel = "CommandExtractShell".Translate(),
@@ -378,7 +378,7 @@ namespace RimValiFFARW
                 };
             }
 
-            var compChangeableProjectile2 =ChangeableProjectile;
+            AERIALChangeableProjectile compChangeableProjectile2 =ChangeableProjectile;
             if (compChangeableProjectile2 != null)
             {
                 StorageSettings storeSettings = compChangeableProjectile2.GetStoreSettings();
@@ -390,7 +390,7 @@ namespace RimValiFFARW
 
             if (CanSetForcedTarget)
             {
-                var compChangeableProjectile = ChangeableProjectile;
+                AERIALChangeableProjectile compChangeableProjectile = ChangeableProjectile;
 
                 var command_VerbTarget = new Command_VerbTarget
                 {
@@ -416,7 +416,7 @@ namespace RimValiFFARW
 
             if (forcedTarget.IsValid)
             {
-                var command_Action = new Command_Action
+                Command_Action command_Action = new Command_Action
                 {
                     defaultLabel = "CommandStopForceAttack".Translate(),
                     defaultDesc = "CommandStopForceAttackDesc".Translate(),
