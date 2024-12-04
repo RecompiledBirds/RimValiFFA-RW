@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,13 @@ namespace RimValiFFARW.StoryTellers
 
         public int ratioDislikedPawns;
 
+        [AllowNull]
         public SimpleCurve acceptFractionByDaysPassedCurve;
 
+        [AllowNull]
         public SimpleCurve acceptPercentFactorPerProgressScoreCurve;
 
+        [AllowNull]
         public SimpleCurve acceptPercentFactorPerThreatPointsCurve;
 
         public int maxIncidents = 5;
@@ -77,6 +81,7 @@ namespace RimValiFFARW.StoryTellers
             }
         }
 
+
         private Random random;
 
         public override void Initialize()
@@ -88,16 +93,23 @@ namespace RimValiFFARW.StoryTellers
         {
             get
             {
-                return props as RVFFA_Storyteller;
+
+                return (RVFFA_Storyteller)props;
             }
         }
 
         bool started = false;
+
+        public RVFFA_StoryTellerComp()
+        {
+            random = new Random(Find.World.ConstantRandSeed);
+        }
+
         public override IEnumerable<FiringIncident> MakeIntervalIncidents(IIncidentTarget target)
         {
             if (!started)
             {
-                random = new Random(Find.World.ConstantRandSeed);
+               
                 index = Find.Storyteller.storytellerComps.IndexOf(this);
                 started=true;
             }

@@ -21,7 +21,7 @@ namespace RimValiFFARW.Packs
             PackDef def = DefDatabase<PackDef>.GetRandom();
             colonists.TruncateToLength(def.MaxSize);
 
-            if (!Pack.TryMakeNewPackFromPawns(DefDatabase<PackDef>.GetNamed("RVFFA_StarterPack"), colonists, false, false, out Pack pack)) return;
+            if (!Pack.TryMakeNewPackFromPawns(DefDatabase<PackDef>.GetNamed("RVFFA_StarterPack"), colonists, false, false, out Pack? pack)) return;
 
             packmanager.AddPack(pack);
             base.PostGameStart();

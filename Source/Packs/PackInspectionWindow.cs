@@ -1,9 +1,11 @@
-﻿using RimWorld;
+﻿using JetBrains.Annotations;
+using RimWorld;
 using RVCRestructured;
 using RVCRestructured.RVR;
 using RVCRestructured.Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
@@ -39,17 +41,20 @@ namespace RimValiFFARW.Packs
         private Rect boniListPartInner;
         private Rect statusBar;
 
+        [AllowNull]
         private static PackInspectionWindow packInspectionWindow;
 
         private bool playerWasNotifiedOfPackMissing = false;
         private bool renameMode = false;
-        private List<Pawn> packMembers;
-        private Pack pack;
+        private List<Pawn> packMembers =new List<Pawn>();
+        [AllowNull]
+        private Pack? pack;
+        [AllowNull]
         private Pawn pawn;
 
         public static PackInspectionWindow GetCurrentPackInspectionWindow => packInspectionWindow;
 
-        public Pack CurrentPack
+        public Pack? CurrentPack
         {
             get => pack;
             set => pack = value;
@@ -127,7 +132,7 @@ namespace RimValiFFARW.Packs
         {
             GUI.color = Color.gray;
             Text.Font = GameFont.Tiny;
-            Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack.Worker.EvaluateAverageOpinionForPawn(SelPawn, pack.Members).ToString("0.##"), pack.Worker.EvaluateAverageOpinionForEveryPawn(pack).ToString("0.##")));
+            Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack?.Worker.EvaluateAverageOpinionForPawn(SelPawn, pack.Members).ToString("0.##"), pack?.Worker.EvaluateAverageOpinionForEveryPawn(pack).ToString("0.##")));
 
             Text.Anchor = TextAnchor.UpperCenter;
             
@@ -143,20 +148,24 @@ namespace RimValiFFARW.Packs
             if (Widgets.ButtonInvisible(tempDeleteButton))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();
-                Find.WindowStack.Add(new ConfirmationWindow(DisbandAction, () => { }, "RVFFA_PackInspectionWindow_DeletePackSure".Translate(pack.NameColored), "RVFFA_PackInspectionWindow_DeletePackSureTitle".Translate()));
+                Find.WindowStack.Add(new ConfirmationWindow(DisbandAction, () => { }, "RVFFA_PackInspectionWindow_DeletePackSure".Translate(pack?.NameColored??"Unknown"), "RVFFA_PackInspectionWindow_DeletePackSureTitle".Translate()));
             }
         }
 
         private void DisbandAction()
         {
-            pack.Worker.Disband(pack);
+            pack?.Worker.Disband(pack);
             OnOpen();
         }
 
         private void DrawMemberList()
         {
             bool selfEncountered = false;
-
+            if (pack == null)
+            {
+                RVCLog.Error("Pack was null in drawmemberlist!");
+                return;
+            }
             Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
             for (int i = 0; i < packMembers.Count; i++)
             {
@@ -220,7 +229,7 @@ namespace RimValiFFARW.Packs
 
         private void DrawDescriptionPart()
         {
-            Widgets.LabelScrollable(descriptionPart, pack.Def.description, ref descriptionScrollVector);
+            Widgets.LabelScrollable(descriptionPart, pack?.Def.description, ref descriptionScrollVector);
         }
 
         private void DrawTitlePart()

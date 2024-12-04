@@ -1,6 +1,7 @@
 ﻿using RVCRestructured;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -48,7 +49,7 @@ namespace RimValiFFARW.Packs
         /// <summary>
         ///     Creates a new object of type <see cref="PackWorker"/> with the type as stated in the def file at <see cref="packWorkerType"/>
         /// </summary>
-        public PackWorker GetNewPackWorker => packWorkerType.GetConstructor(new Type[] { typeof(PackDef) }).Invoke(new object[] { this }) as PackWorker;
+        public PackWorker GetNewPackWorker => (PackWorker)packWorkerType.GetConstructor([typeof(PackDef)]).Invoke([this]);
 
         public override IEnumerable<string> ConfigErrors()
         {   

@@ -28,7 +28,7 @@ namespace RimValiFFARW
 
         public static Thing FindAmmo(Pawn pawn, AERIALSystem aerial)
         {
-            StorageSettings allowed = pawn.IsColonist ? aerial.gun.TryGetComp<AERIALChangeableProjectile>().allowedShellsSettings : null;
+            StorageSettings? allowed = pawn.IsColonist ? aerial.gun.TryGetComp<AERIALChangeableProjectile>().allowedShellsSettings : null;
 
             bool Validator(Thing t)
             {
@@ -57,14 +57,14 @@ namespace RimValiFFARW
             {
                 Pawn actor = loadIfNeeded.actor;
                 var building = (Building)actor.CurJob.targetA.Thing;
-                var building_TurretGun = building as AERIALSystem;
+                AERIALSystem building_TurretGun = (AERIALSystem)building;
                 if (!GunNeedsLoading(building, out ammoNeeded))
                     //this.JumpToToil(gotoTurret);
                 {
                     return;
                 }
 
-                Thing thing = FindAmmo(pawn, building_TurretGun);
+                Thing? thing = FindAmmo(pawn, building_TurretGun);
                 if (thing == null)
                 {
                     if (actor.Faction == Faction.OfPlayer)
@@ -77,9 +77,12 @@ namespace RimValiFFARW
 
                     actor.jobs.EndCurrentJob(JobCondition.Incompletable);
                 }
+                else
+                {
 
-                actor.CurJob.targetB = thing;
-                actor.CurJob.count = Math.Min(thing.stackCount, ammoNeeded);
+                    actor.CurJob.targetB = thing;
+                    actor.CurJob.count = Math.Min(thing.stackCount, ammoNeeded);
+                }
             };
             yield return loadIfNeeded;
             yield return Toils_Reserve.Reserve(TargetIndex.B, 10, GetActor().CurJob.count);
@@ -92,7 +95,7 @@ namespace RimValiFFARW
                 initAction = delegate
                 {
                     Pawn actor = loadIfNeeded.actor;
-                    var building_TurretGun = (Building)actor.CurJob.targetA.Thing as AERIALSystem;
+                    AERIALSystem building_TurretGun = (AERIALSystem)actor.CurJob.targetA.Thing;
 
                     building_TurretGun.gun.TryGetComp<AERIALChangeableProjectile>()
                         .NewLoadShell(actor.CurJob.targetB.Thing.def, actor.CurJob.count);

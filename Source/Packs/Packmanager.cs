@@ -5,6 +5,7 @@ using RimWorld.Planet;
 using RVCRestructured;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace RimValiFFARW.Packs
     {
         private const int packCheckTickDelay = 2000;
 
+        [AllowNull]
         private static Packmanager packmanager;
 
         private Dictionary<Pawn, Pack> memberPackTable = new Dictionary<Pawn, Pack>();

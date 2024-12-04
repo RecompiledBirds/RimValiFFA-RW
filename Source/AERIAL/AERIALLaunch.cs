@@ -10,8 +10,8 @@ namespace RimValiFFARW
         {
             get
             {
-                var comp = EquipmentSource?.GetComp<AERIALChangeableProjectile>();
-                if (comp?.Loaded == true)
+                AERIALChangeableProjectile comp = EquipmentSource.GetComp<AERIALChangeableProjectile>();
+                if (comp?.Loaded == true&&comp.Projectile!=null)
                 {
                     return comp.Projectile;
                 }

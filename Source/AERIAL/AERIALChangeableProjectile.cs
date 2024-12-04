@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using RimWorld;
 using Verse;
 
@@ -9,6 +10,7 @@ namespace RimValiFFARW
     {
         public static int maxShells = 6;
 
+        [AllowNull]
         public new StorageSettings allowedShellsSettings;
 
         private List<ThingDef> loadedShells = new List<ThingDef>();
@@ -17,7 +19,7 @@ namespace RimValiFFARW
 
         public new AERIALChangeable Props => (AERIALChangeable)props;
 
-        public new ThingDef Projectile => !Loaded ? null : PeekNextProjectile;
+        public new ThingDef? Projectile => !Loaded ? null : PeekNextProjectile;
 
         public new bool Loaded => loadedShells.Count > 0;
 
@@ -25,7 +27,16 @@ namespace RimValiFFARW
 
         public bool FullyLoaded => loadedShells.Count >= maxShells;
 
-        public ThingDef PeekNextProjectile
+        public string PeekNextLabel
+        {
+            get
+            {
+                ThingDef? thing = PeekNextProjectile;
+                if (thing == null) return "None";
+                return thing.LabelCap;
+            }
+        }
+        public ThingDef? PeekNextProjectile
         {
             get
             {
@@ -44,11 +55,11 @@ namespace RimValiFFARW
             }
         }
 
-        public ThingDef PollNextProjectile
+        public ThingDef? PollNextProjectile
         {
             get
             {
-                ThingDef res = PeekNextProjectile;
+                ThingDef? res = PeekNextProjectile;
                 if (res != null)
                     loadedShells.RemoveAt(0);
                 return res;
@@ -87,7 +98,7 @@ namespace RimValiFFARW
 
             if (loadedCount <= 0)
             {
-                loadedShells[loadedShells.Count - 1] = null;
+                loadedShells.RemoveAt(loadedCount - 1);
             }
         }
 

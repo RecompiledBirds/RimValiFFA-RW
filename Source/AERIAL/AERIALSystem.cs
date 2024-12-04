@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using RimValiFFARW.Nexus;
@@ -16,8 +17,9 @@ namespace RimValiFFARW
     public class AERIALSystem : Building_TurretGun
     {
         private bool holdFire;
-
+        [AllowNull]
         private CompPowerTrader power;
+        [AllowNull]
         private AERIALChangeableProjectile changeableProjectile;
 
         public AERIALSystem()
@@ -52,7 +54,7 @@ namespace RimValiFFARW
         }
 
         private bool PlayerControlled => (Faction == Faction.OfPlayer);
-        private bool CanSetForcedTarget => PlayerControlled && ChangeableProjectile.Loaded;
+        private new bool CanSetForcedTarget => PlayerControlled && ChangeableProjectile.Loaded;
 
         private bool CanToggleHoldFire => PlayerControlled;
 
@@ -283,7 +285,7 @@ namespace RimValiFFARW
                 return;
             }
 
-            ThingDef t = ChangeableProjectile.PollNextProjectile;
+         
             burstWarmupTicksLeft = 1;
         }
 
@@ -309,7 +311,7 @@ namespace RimValiFFARW
             {
                 if (compChangeableProjectile.Loaded)
                 {
-                    stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALNextShell".Translate(compChangeableProjectile.PeekNextProjectile.LabelCap));
+                    stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALNextShell".Translate(compChangeableProjectile.PeekNextLabel));
                     stringBuilder.AppendLine("RVFFA_AERIALSystem_AERIALShellSpaceLeft".Translate($"{compChangeableProjectile.ShellsLoaded}".Named("RVFFA_AERIAL_SPACE"), AERIALChangeableProjectile.maxShells));
                 }
                 else
@@ -394,7 +396,7 @@ namespace RimValiFFARW
                 {
                     defaultLabel = "CommandSetForceAttackTarget".Translate(),
                     defaultDesc = "CommandSetForceAttackTargetDesc".Translate(),
-                    icon = compChangeableProjectile != null ? ContentFinder<Texture2D>.Get(compChangeableProjectile.Projectile.graphicData.texPath) : ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
+                    icon = compChangeableProjectile != null ? ContentFinder<Texture2D>.Get(compChangeableProjectile.Projectile?.graphicData.texPath) : ContentFinder<Texture2D>.Get("UI/Commands/Attack"),
                     verb = AttackVerb,
                     hotKey = KeyBindingDefOf.Misc4,
                     drawRadius = false

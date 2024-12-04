@@ -4,6 +4,7 @@ using RVCRestructured.RVR;
 using RVCRestructured.Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,7 @@ namespace RimValiFFARW.Packs
         private PackWorker newPackWorker;
         private PackDef newPackDef;
 
+        [AllowNull]
         private IEnumerable<Pawn> cachedAvailablePawns;
 
         private Vector2 memberScrollVector;
@@ -112,7 +114,7 @@ namespace RimValiFFARW.Packs
             DrawSeparators();
             DrawDefSelectorButton();
             DrawDescription();
-            DrawBoniAndMemberList(out bool acceptPack, out string failreason0);
+            DrawBoniAndMemberList(out bool acceptPack, out string? failreason0);
             DrawConfirmationButton(acceptPack, failreason0);
             DrawStatusbar();
         }
@@ -129,14 +131,14 @@ namespace RimValiFFARW.Packs
             GUI.color = Color.white;
         }
 
-        private void DrawConfirmationButton(bool acceptPack, string failreason0)
+        private void DrawConfirmationButton(bool acceptPack, string? failreason0)
         {
             Widgets.DrawBoxSolidWithOutline(confirmationPart, otherGrey, Color.gray, 2);
             Text.Anchor = TextAnchor.MiddleLeft;
             Widgets.Label(confirmationPart.MoveRect(new Vector2(CommonMargin, 0f)), "RVFFA_PackEditWindow_ConfirmChanges".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
             IEnumerable<Pawn> fullCurrentTempPackMembers = curPackMates.Union(newPackMates);
-            string failReason1 = null;
+            string? failReason1 = null;
             bool isDefSwitched = pack.Def != newPackDef;
 
             int minimumNrOfMembers = (isDefSwitched ? newPackDef.MinSizeToCreate : newPackDef.MinSizeToSustain);
@@ -168,7 +170,7 @@ namespace RimValiFFARW.Packs
             if (Widgets.ButtonInvisible(confirmationPart))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();
-                if (acceptPack && isDefSwitched && Pack.TryMakeNewPackFromPawns(newPackDef, fullCurrentTempPackMembers, true, true, out Pack newPack))
+                if (acceptPack && isDefSwitched && Pack.TryMakeNewPackFromPawns(newPackDef, fullCurrentTempPackMembers, true, true, out Pack? newPack))
                 {
                     Packmanager manager = Packmanager.GetLastActivePackmanager;
 
@@ -238,7 +240,7 @@ namespace RimValiFFARW.Packs
             }
         }
 
-        private bool DrawOpinionBar(Pawn otherMember, IEnumerable<Pawn> otherMembers, PackDef def, Rect rect, int locationModif, OpinionBarType type, out string reason)
+        private bool DrawOpinionBar(Pawn otherMember, IEnumerable<Pawn> otherMembers, PackDef def, Rect rect, int locationModif, OpinionBarType type, [NotNullWhen(false)] out string? reason)
         {
             bool nothingIllegal = true;
             int opinion = Convert.ToInt32(newPackWorker.EvaluateAverageOpinionForPawn(otherMember, otherMembers));
@@ -310,7 +312,7 @@ namespace RimValiFFARW.Packs
             return nothingIllegal;
         }
 
-        private void DrawBoniAndMemberList(out bool acceptPack, out string failreason0)
+        private void DrawBoniAndMemberList(out bool acceptPack, out string? failreason0)
         {
             acceptPack = true;
             failreason0 = null;
