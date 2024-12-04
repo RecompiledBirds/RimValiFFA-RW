@@ -280,7 +280,11 @@
             <Plasteel>45</Plasteel>
             <RVFFA_AeroTungstenCarbide>60</RVFFA_AeroTungstenCarbide>
         </costList>
-
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
         <apparel>
             <wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor</wornGraphicPath>
         </apparel>
@@ -297,6 +301,11 @@
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet_south</texPath>
         </graphicData>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
         <statBases>
             <WorkToMake>21000</WorkToMake>
             <MaxHitPoints>5000</MaxHitPoints>
@@ -415,7 +424,7 @@
         </graphicData>
 		<recipeMaker>
 			<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
         <statBases>
@@ -455,7 +464,7 @@
 		</graphicData>
 		<recipeMaker>
 			<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<statBases>

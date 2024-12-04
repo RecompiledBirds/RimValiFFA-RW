@@ -454,6 +454,9 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">SurgicalInspection</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">BlissLobotomy</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">GhoulInfusion</li>
 
 			<li>RVFFA_InstallAdvTail</li>
 			<li>RVFFA_InstallBasicBionicTail</li>
