@@ -59,7 +59,7 @@
 			<RVFFA_ProcessedTungsten>15</RVFFA_ProcessedTungsten>
 			<Steel>15</Steel>
 			<Chemfuel>15</Chemfuel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_AIMSTech</researchPrerequisite>
