@@ -71,6 +71,7 @@
 
         <graphicData>
             <texPath>RimValiFFA/Things/Weapons/Guns/Pistol</texPath>
+			<drawSize>0.5</drawSize>
         </graphicData>
 
         <uiIconScale>1.4</uiIconScale>
@@ -152,6 +153,7 @@
         <description>A coil-based Illuminate SMG. Whilst it does theoretically have a better service range compared to its Terran counterparts, this weapon is best used for medium to short ranged engagements. Besides this fact, it still has two qualities that make it reliable—its accuracy and travel time.</description>
         <graphicData>
             <texPath>RimValiFFA/Things/Weapons/Guns/SMG</texPath>
+			<drawSize>0.5</drawSize>
         </graphicData>
         <soundInteract>Interact_SMG</soundInteract>
         <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
@@ -312,6 +314,7 @@
 		<description>A common Illuminate pattern rifle. Praised by both soldiers and hunters for its reliability, it is practically standard issue for any weaponized operation. Its high range and very short travel time makes it perfect for picking off distant enemies.</description>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Weapons/Guns/Rifle</texPath>
+			<drawSize>0.7</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<thingSetMakerTags>
@@ -331,6 +334,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<RVFFA_ProcessedTungsten>7</RVFFA_ProcessedTungsten>
 		</costList>
+		<uiIconScale>1.4</uiIconScale>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
