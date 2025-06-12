@@ -15,7 +15,7 @@
 	<v1.6>
 		<li>Main</li>
 		<li>1.6</li>
-		<li IfModActive="Ludeon.RimWorld.Biotech">Biotech</li>
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.6_Patches/Biotech</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">Ideology</li>
 	</v1.6>
 </loadFolders>

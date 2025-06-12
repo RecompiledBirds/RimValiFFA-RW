@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef ParentName="GeneMinTempBase">
+		<defName>RVFFA_AmmoniaBlood</defName>
+		<label>ammonia blood</label>
+		<labelShortAdj>cold</labelShortAdj>
+		<description>This creature's blood is a mixture of ammonia, lowering the temperature in which they can live in greatly.</description>
+		<iconPath>UI/Icons/Genes/Gene_MinTemperatureLargeDecrease</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<statOffsets>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<ComfyTemperatureMax>-10</ComfyTemperatureMax>
+		</statOffsets>
+		<biostatMet>-2</biostatMet>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>ice</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+	</GeneDef>
+</Defs>

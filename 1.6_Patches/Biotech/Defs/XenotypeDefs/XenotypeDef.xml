@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef>
+		<defName>RVFFA_BaseAvaliXenoType</defName>
+		<label>avali</label>
+		<description>A baseline avali.</description>
+		<iconPath>RimValiFFA/Symbols/avali_ideo_angy</iconPath>
+		<inheritable>true</inheritable>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<genes>
+			<li>DarkVision</li>
+			<li>Nearsighted</li>
+			<li>RVFFA_AmmoniaBlood</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

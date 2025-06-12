@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ScenarioDef Name="Illuminate Colony">
-		<defName>RVFFA_IlluminateColontStarter</defName>
+		<defName>RVFFA_IlluminateColonyStarter</defName>
 		<label>Illuminate Colony</label>
 		<description>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</description>
 		<scenario>
@@ -10,7 +10,32 @@
 				<def>PlayerFaction</def>
 				<factionDef>RVFFA_IlluminatePlayer</factionDef>
 			</playerFaction>
+			<surfaceLayer>
+				<def>SurfaceLayerFixed</def>
+				<tag>Surface</tag>
+				<layer>Surface</layer>
+				<settingsDef>Surface</settingsDef>
+				<hide>true</hide>
+				<connections>
+					<Orbit MayRequire="Ludeon.RimWorld.Odyssey">
+						<zoomMode>ZoomOut</zoomMode>
+					</Orbit>
+				</connections>
+			</surfaceLayer>
 			<parts>
+				<!-- Layers -->
+				<li MayRequire="Ludeon.RimWorld.Odyssey" Class="ScenPart_PlanetLayer">
+					<def>PlanetLayer</def>
+					<tag>Orbit</tag>
+					<layer>Orbit</layer>
+					<settingsDef>Orbit</settingsDef>
+					<hide>true</hide>
+					<connections>
+						<Surface>
+							<zoomMode>ZoomIn</zoomMode>
+						</Surface>
+					</connections>
+				</li>
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 					<def>ConfigPage_ConfigureStartingPawns</def>
 					<pawnCount>3</pawnCount>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDefs>
+	<ThoughtDef>
 		<defName>RVFFA_PackSharedRoom</defName>
 		<workerClass>RimValiFFARW.Packs.SharedRoomThought</workerClass>
 		<stages>
@@ -15,5 +15,5 @@
 				<baseMoodEffect>5</baseMoodEffect>
 			</li>
 		</stages>
-	</ThingDefs>
+	</ThoughtDef>
 </Defs>

@@ -43,7 +43,6 @@
 			<baseHungerRate>0.10</baseHungerRate>
 			<baseHealthScale>0.4</baseHealthScale>
 			<lifeExpectancy>10</lifeExpectancy>
-			<wildness>0.2</wildness>
 			<trainability>Intermediate</trainability>
 			<lifeStageAges>
 				<li>
