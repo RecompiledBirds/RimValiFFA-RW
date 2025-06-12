@@ -24,10 +24,7 @@
 			<li>AvaliWeapons</li>
 			<li>RVFFA_IlluminateWeapons</li>
 		</weaponTags>
-		<techHediffsMoney>
-			<min>1500</min>
-			<max>2000</max>
-		</techHediffsMoney>
+		<techHediffsMoney>1500~2000</techHediffsMoney>
 		<techHediffsTags>
 			<li>Advanced</li>
 			<li>Simple</li>

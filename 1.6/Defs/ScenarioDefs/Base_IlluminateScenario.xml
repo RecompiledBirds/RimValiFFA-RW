@@ -36,10 +36,34 @@
 						</Surface>
 					</connections>
 				</li>
+				<!--<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+					<def>ConfigurePawnsXenotypes</def>
+					<pawnChoiceCount>6</pawnChoiceCount>
+					<customSummary>Start with 3 avali.</customSummary>
+					<overrideKinds>
+						<li>
+							<xenotype>RVFFA_BaseAvaliXenoType</xenotype>
+							<pawnKind>RVFFA_IlluminateColonist</pawnKind>
+						</li>
+						<li>
+							<xenotype>RVFFA_BaseAvaliXenoType</xenotype>
+							<pawnKind>RVFFA_IlluminateColonist</pawnKind>
+						</li>
+					</overrideKinds>
+					<xenotypeCounts>
+						<li>
+							<xenotype>RVFFA_BaseAvaliXenoType</xenotype>
+							<count>3</count>
+							<description>avali</description>
+							<requiredAtStart>true</requiredAtStart>
+							<allowedDevelopmentalStages>Adult, Child</allowedDevelopmentalStages>
+						</li>
+					</xenotypeCounts>
+				</li>-->
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 					<def>ConfigPage_ConfigureStartingPawns</def>
 					<pawnCount>3</pawnCount>
-					<pawnChoiceCount>3</pawnChoiceCount>
+					<pawnChoiceCount>6</pawnChoiceCount>
 				</li>
 
 				<li Class="ScenPart_PlayerPawnsArriveMethod">
@@ -57,6 +81,7 @@
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>RVFFA_Viroblade</thingDef>
+					<stuff>Steel</stuff>
 					<count>1</count>
 				</li>
 
@@ -69,6 +94,7 @@
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>RVFFA_Knife</thingDef>
+					<stuff>Steel</stuff>
 					<count>1</count>
 				</li>
 

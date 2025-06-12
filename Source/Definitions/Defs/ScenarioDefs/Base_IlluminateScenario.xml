@@ -57,6 +57,7 @@
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>RVFFA_Viroblade</thingDef>
+					<stuff>Steel</stuff>
 					<count>1</count>
 				</li>
 
@@ -69,6 +70,7 @@
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>RVFFA_Knife</thingDef>
+					<stuff>Steel</stuff>
 					<count>1</count>
 				</li>
 

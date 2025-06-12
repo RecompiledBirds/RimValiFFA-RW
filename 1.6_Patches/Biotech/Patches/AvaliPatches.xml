@@ -15,13 +15,17 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ScenarioDef[defName="RVFFA_IlluminateColonyStarter"]/scenario/parts/li[1]</xpath>
+		<xpath>Defs/ScenarioDef[defName="RVFFA_IlluminateColonyStarter"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns"]</xpath>
 		<value>
 			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
 				<def>ConfigurePawnsXenotypes</def>
-				<pawnChoiceCount>3</pawnChoiceCount>
+				<pawnChoiceCount>6</pawnChoiceCount>
 				<customSummary>Start with 3 avali.</customSummary>
 				<overrideKinds>
+					<li>
+						<xenotype>RVFFA_BaseAvaliXenoType</xenotype>
+						<pawnKind>RVFFA_IlluminateColonist</pawnKind>
+					</li>
 					<li>
 						<xenotype>RVFFA_BaseAvaliXenoType</xenotype>
 						<pawnKind>RVFFA_IlluminateColonist</pawnKind>
