@@ -10,50 +10,65 @@
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>12.0</LangVersion>
-		<OutputPath>../../1.6/Assemblies</OutputPath>
-		<DefOutputPath>../../1.6/Defs/</DefOutputPath>
+		<VersionPath>../../1.6</VersionPath>
+		<OutputPath>$(VersionPath)/Assemblies</OutputPath>
+		<DefOutputPath>$(VersionPath)/Defs/</DefOutputPath>
+		<LangOutputPath>$(VersionPath)/Languages/</LangOutputPath>
+		<PatchOuputPath>$(VersionPath)/Patches/</PatchOuputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4488-beta" />
 	</ItemGroup>
 
+	<!-- Defs -->
 	<PropertyGroup>
 		<MainDefProjPath>..\Definitions\Defs\</MainDefProjPath>
 		<WeaponDefProjPath>..\RimVali-WeaponDefs\Defs\</WeaponDefProjPath>
+		<ENLanguagesProjPath>..\RimVali-Languages\Languages\</ENLanguagesProjPath>
+		<MainProjPatchesPath>..\RimVali-Patches\Patches\</MainProjPatchesPath>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!--Original Files-->
-		<Defs Include= "$(MainDefProjPath)**\*.xml"/>		
+		<Defs Include= "$(MainDefProjPath)**\*.xml"/>
 		<Defs Include= "$(WeaponDefProjPath)**\*.xml"/>
-		
-		<!--Get the original identities (file paths)-->
-		<MainDefsFilePaths Include= "$(MainDefProjPath)**\*.xml" MyPath="%(Identity)" />
-		<WeaponDefsFilePaths Include= "$(WeaponDefProjPath)**\*.xml" MyPath="%(Identity)" />
-
-		<!--Combine old and new path-->
-		<MainDefsCombined Include="@(MainDefsFilePaths -> '$(DefOutputPath)%(MyPath)')"/>
-		<WeaponDefsCombined Include="@(WeaponDefsFilePaths -> '$(DefOutputPath)%(MyPath)')"/>
-
-		<!--Replace old and include destination-->
-		<DefsDestinations Include="@(MainDefsCombined -> Replace($(MainDefProjPath), ''))"/>
-		<DefsDestinations Include="@(WeaponDefsCombined -> Replace($(WeaponDefProjPath), ''))"/>
-		
-		<!--<Defs Include=" $(WeaponDefProjPath)**\*.xml" MyPath="%(Identity)"/>-->
-		<FileWrites Include="@(DefsDestinations)"/>
-		<DirectoryWrites Include="@(DefDestinations -> '%(RelativeDir)')"/>
+		<Languages Include= "$(ENLanguagesProjPath)**\*.xml"/>
+		<MainProjPatches Include= "$(MainProjPatchesPath)**\*.xml"/>
 	</ItemGroup>
+	
+	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
+		<Copy SourceFiles="@(Defs)" DestinationFolder="$(DefOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
+		</Copy>
+		<Message Text="Copied Files:%0A@(CopiedFileList, '%0D')" Importance="high" />
 
-	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">		
-		<Copy SourceFiles="@(Defs)" DestinationFiles="@(DefsDestinations)" SkipUnchangedFiles="True">
+		<Copy SourceFiles="@(Languages)" DestinationFolder="$(LangOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
+		</Copy>
+		<Message Text="Copied Files:%0A@(CopiedFileList, '%0D')" Importance="high" />
+
+		<Copy SourceFiles="@(MainProjPatches)" DestinationFolder="$(PatchOuputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
 			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
 		</Copy>
 		<Message Text="Copied Files:%0A@(CopiedFileList, '%0D')" Importance="high" />
 	</Target>
 
+
+	
+	
+
+	<!-- Delete Directories on cleanup -->
 	<Target Name="RemoveDirectories" AfterTargets="Clean">
-		<Message Text="Deleting empty definition Folders:%0A@(DirectoryWrites, '%0D')" Importance="high" />
-		<RemoveDir Directories="@(DirectoryWrites)" />
+		<Message Text="Deleting Def Directory" Importance="high" />
+		<RemoveDir Directories="$(DefOutputPath)" />
+
+		<Message Text="Deleting Languages Directory" Importance="high" />
+		<RemoveDir Directories="$(LangOutputPath)" />
+
+		<Message Text="Deleting Patches Directory" Importance="high" />
+		<RemoveDir Directories="$(PatchOuputPath)" />
+
+		
 	</Target>
 </Project>

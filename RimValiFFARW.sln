@@ -17,9 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-NexusQuest", "Sourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-Main-Settings", "Source\RimVali-Settings\RimVali-Main-Settings.csproj", "{7F7CFF79-B3CF-45A6-9BC3-29153FD5EE43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-WeaponDefinitions", "Source\RimVali-WeaponDefs\RimVali-WeaponDefinitions.csproj", "{8E176D07-0A25-4AF1-8374-51E419281007}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Definitions", "Source\Definitions\Definitions.csproj", "{62E9F979-32BC-59A9-B667-BF3A82F4BD75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-WeaponDefinitions", "Source\RimVali-WeaponDefs\RimVali-WeaponDefinitions.csproj", "{8E176D07-0A25-4AF1-8374-51E419281007}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-Languages", "Source\RimVali-Languages\RimVali-Languages.csproj", "{9CB09956-473D-44EA-A3CB-0858A220551B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-Patches", "Source\RimVali-Patches\RimVali-Patches.csproj", "{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,14 +59,22 @@ Global
 		{7F7CFF79-B3CF-45A6-9BC3-29153FD5EE43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F7CFF79-B3CF-45A6-9BC3-29153FD5EE43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F7CFF79-B3CF-45A6-9BC3-29153FD5EE43}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E176D07-0A25-4AF1-8374-51E419281007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E176D07-0A25-4AF1-8374-51E419281007}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E176D07-0A25-4AF1-8374-51E419281007}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E176D07-0A25-4AF1-8374-51E419281007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E9F979-32BC-59A9-B667-BF3A82F4BD75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB09956-473D-44EA-A3CB-0858A220551B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB09956-473D-44EA-A3CB-0858A220551B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB09956-473D-44EA-A3CB-0858A220551B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB09956-473D-44EA-A3CB-0858A220551B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
