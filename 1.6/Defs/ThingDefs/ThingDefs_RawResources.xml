@@ -36,7 +36,9 @@
 		<defName>RVFFA_Wolframite</defName>
 		<label>Wolframite</label>
 		<description>A grey-ish white-ish mineral, rich in tungsten.</description>
-
+		<statBases>
+			<MaxHitPoints>6500</MaxHitPoints>
+		</statBases>
 		<graphicData>
 			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -44,6 +46,13 @@
 			<color>(164,172,195)</color>
 			<colorTwo>(129,126,109)</colorTwo>
 		</graphicData>
+
+		<building>
+			<mineableThing>RVFFA_Tungsten</mineableThing>
+			<mineableYield>50</mineableYield>
+			<mineableScatterCommonality>0.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>5~25</mineableScatterLumpSizeRange>
+		</building>
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_TungstenBase">

@@ -33,8 +33,9 @@
 			<isResourceRock>true</isResourceRock>
 			<mineableThing>RVFFA_Tungsten</mineableThing>
 			<mineableYield>20</mineableYield>
-			<mineableScatterCommonality>1</mineableScatterCommonality>
+			<mineableScatterCommonality>0.5</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>15~35</mineableScatterLumpSizeRange>
+			<veinMineable>true</veinMineable>
 		</building>
 	</ThingDef>
 

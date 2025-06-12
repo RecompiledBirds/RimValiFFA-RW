@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_PistolBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>8</damageAmountBase>
+			<stoppingPower>0.5</stoppingPower>
+			<speed>150</speed>
+			<armorPenetrationBase>0.185</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminatePistol</defName>
+		<label>Illuminate Pistol</label>
+		<description>A common Illuminate pattern pistol. Unlike its Terran counterparts this weapon uses coil-based acceleration. Whilst It has more accuracy and a shorter travel time than a Terran auto pistol, it hits with less power when compared to one.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Pistol</texPath>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+
+		<uiIconScale>1.4</uiIconScale>
+
+		<statBases>
+			<WorkToMake>4500</WorkToMake>
+			<Mass>1.5</Mass>
+			<AccuracyTouch>0.87</AccuracyTouch>
+			<AccuracyShort>0.92</AccuracyShort>
+			<AccuracyMedium>0.77</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+		</statBases>
+
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_PistolBullet</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>29.9</range>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+			</li>
+		</verbs>
+
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+
+		<costList>
+			<Steel>10</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
+		</costList>
+
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_BasicWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+</Defs>

@@ -204,7 +204,10 @@
         <description>A suit of Avali thermal wraps. Together with the very efficient weaving of the nano-printing loom, these wraps are perhaps the best insulators around. Able to protect Avali from both extreme heats and colds, these wraps cover nearly their entire body except for their talons, feet, and head. Because of their complex designs, some fabrics and leathers can leave this piece of apparel very expensive to purchase or make.</description>
 
         <costStuffCount>150</costStuffCount>
-
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
         <graphicData>
             <texPath>RimValiFFA/Things/Apparel/ThermalWraps/ThermalWraps_RVFFA_Avali_south</texPath>
         </graphicData>
@@ -222,7 +225,7 @@
         <equippedStatOffsets>
             <ComfyTemperatureMin>-30</ComfyTemperatureMin>
             <ComfyTemperatureMax>15</ComfyTemperatureMax>
-            <Flammability>20</Flammability>
+            <Flammability>2</Flammability>
         </equippedStatOffsets>
         <costList>
             <RVFFA_FerroWeave>30</RVFFA_FerroWeave>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_MinigunBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>7</damageAmountBase>
+			<speed>88</speed>
+			<armorPenetrationBase>0.47</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminateMachineGun</defName>
+		<label>Illuminate Machinegun</label>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Vali_Illuminate_Minigun</texPath>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+
+		<statBases>
+			<WorkToMake>37500</WorkToMake>
+			<Mass>6.5</Mass>
+			<MarketValue>1445</MarketValue>
+			<AccuracyTouch>0.36</AccuracyTouch>
+			<AccuracyShort>0.43</AccuracyShort>
+			<AccuracyMedium>0.39</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+		</statBases>
+
+		<costList>
+			<Steel>150</Steel>
+			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
+		</costList>
+
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_MinigunBullet</defaultProjectile>
+				<warmupTime>1.8</warmupTime>
+				<range>35</range>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<burstShotCount>22</burstShotCount>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>17</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>
