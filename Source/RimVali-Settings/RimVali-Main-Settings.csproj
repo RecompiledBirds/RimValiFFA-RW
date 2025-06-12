@@ -1,21 +1,47 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	  <TargetFramework>net472</TargetFramework>
-    <RootNamespace>RimVali_Settings</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
-	  <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
-	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	  <Nullable>enable</Nullable>
-	  <LangVersion>12.0</LangVersion>
-	  <OutputPath>../../1.6/Assemblies</OutputPath>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<RootNamespace>RimVali_Settings</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Nullable>enable</Nullable>
+		<LangVersion>12.0</LangVersion>
+		<VersionFolder>../../1.6/</VersionFolder>
+		<OutputPath>$(VersionFolder)Assemblies</OutputPath>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4488-beta" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4488-beta" />
+	</ItemGroup>
 
+	<PropertyGroup>
+		<MainDefProjPath>../Source/Definitions/Defs/</MainDefProjPath>
+		<WeaponDefProjPath>../Source/RimVali-WeaponDefs/Defs/</WeaponDefProjPath>
+		<DefOutputPath>$(VersionFolder)</DefOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Defs Include=" $(MainDefProjPath)**\*.xml" />
+		<Defs Include=" $(WeaponDefProjPath)**\*.xml"/>
+		<DefsDestinations Include="@(Defs->'$(DefOutputPath)%(Identity)')"/>
+		<FileWrites Include="@(DefsDestinations)"/>
+		<DirectoryWrites Include="@(DefDestinations -> '%(RelativeDir)')"/>
+	</ItemGroup>
+
+	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
+		<Copy SourceFiles="@(Defs)" DestinationFiles="@(DefsDestinations)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
+		</Copy>
+		<Message Text="Copied Files:%0A@(CopiedFileList, '%0D')" Importance="high" />
+	</Target>
+
+	<Target Name="RemoveDirectories" AfterTargets="Clean">
+		<Message Text="Deleting empty definition Folders:%0A@(DirectoryWrites, '%0D')" Importance="high" />
+		<RemoveDir Directories="@(DirectoryWrites)" />
+	</Target>
 </Project>
