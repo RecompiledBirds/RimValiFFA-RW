@@ -4,13 +4,7 @@
     <TargetFramework>net472</TargetFramework>
     <RootNamespace>RimVali_StoryTellers</RootNamespace>
 	  <ImplicitUsings>enable</ImplicitUsings>
-	  <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
-	  <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
-	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	  <Nullable>enable</Nullable>
-	  <LangVersion>12.0</LangVersion>
-	  <OutputPath>../../1.6/Assemblies</OutputPath>
+	 1
   </PropertyGroup>
 
   <ItemGroup>

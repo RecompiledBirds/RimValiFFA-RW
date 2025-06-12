@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-Main-Settings", "So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Definitions", "Source\Definitions\Definitions.csproj", "{62E9F979-32BC-59A9-B667-BF3A82F4BD75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-WeaponDefs", "Source\RimVali-WeaponDefs\RimVali-WeaponDefs.csproj", "{8E176D07-0A25-4AF1-8374-51E419281007}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-WeaponDefinitions", "Source\RimVali-WeaponDefs\RimVali-WeaponDefinitions.csproj", "{8E176D07-0A25-4AF1-8374-51E419281007}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -53,9 +53,6 @@
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
-			<recipeUsers>
-				<li>RVFFA_NanoForge</li>
-			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>
 </Defs>
