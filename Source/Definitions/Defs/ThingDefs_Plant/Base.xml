@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name = "RVFFA_BasePlant" Abstract="True"  ParentName="PlantBase">
+		<thingClass>Plant</thingClass>
+		<plant>
+			<growMinGlow>0</growMinGlow>
+			<growOptimalGlow>0</growOptimalGlow>
+			<cavePlant>true</cavePlant>
+			<sowTags>
+				<li>IcySoil</li>
+				<li>Hydroponic</li>
+			</sowTags>
+		</plant>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<comps>
+			<li Class="RVCRestructured.Plants.RVCPlantCompProperties">
+				<minPreferredTemp>-50</minPreferredTemp>
+				<maxPreferredTemp>0</maxPreferredTemp>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

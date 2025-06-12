@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RVFFA_WingBlades</defName>
+		<label>Wing blades</label>
+		<labelNoun>Wing blades</labelNoun>
+		<description>A set of wing blades. As the name implies, this augment replaces nearly if not all flight feathers on an Avali’s wings with sharp blades. With the right equipment or apparel these blades could easily be concealed to be used as a hold-out weapon when the wearer gets ambushed or lacks the proper weapon for close quarters combat.</description>
+		<spawnThingOnRemoved>RVFFA_WingBlades</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.9</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>Wing-blades</label>
+						<capacities>
+							<li>Stab</li>
+							<li>Cut</li>
+							<li>Scratch</li>
+						</capacities>
+						<linkedBodyPartsGroup>Arms</linkedBodyPartsGroup>
+						<power>18</power>
+						<cooldownTime>3</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
+		<defName>RVFFA_WingBlades</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cybernetics/Arm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<label>Wing blades</label>
+		<description>A set of wing blades. As the name implies, this augment replaces nearly if not all flight feathers on an Avali’s wings with sharp blades. With the right equipment or apparel these blades could easily be concealed to be used as a hold-out weapon when the wearer gets ambushed or lacks the proper weapon for close quarters combat.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>RVFFA_InstallWingBlades</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>2</Plasteel>
+			<RVFFA_Ferrogel>2</RVFFA_Ferrogel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>5</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedBionicsTech</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RVFFA_InstallWingBlades</defName>
+		<label>Install wing blades</label>
+		<description>Install wing blades.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_WingBlades</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing Wing blades.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_WingBlades</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_WingBlades</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Arm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RVFFA_WingBlades</addsHediff>
+	</RecipeDef>
+</Defs>

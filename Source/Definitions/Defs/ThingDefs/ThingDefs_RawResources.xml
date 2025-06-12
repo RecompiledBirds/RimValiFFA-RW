@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_Tungsten</defName>
+		<label>Raw Tungsten</label>
+
+		<description>Tungsten. A reddish-grayish ore. Avali commonly use it, especially in their rail weapons, as a bullet/projectile. However, it can't be used in this form.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_ProcessedTungsten</ThingDef>
+		</descriptionHyperlinks>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Tungsten/TungstenOre</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+
+		<deepCommonality>1</deepCommonality>
+		<deepCountPerPortion>9</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>10</min>
+			<max>35</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	
+	<ThingDef ParentName="RVFFA_TungstenBase">
+		<defName>RVFFA_Wolframite</defName>
+		<label>Wolframite</label>
+		<description>A grey-ish white-ish mineral, rich in tungsten.</description>
+
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(164,172,195)</color>
+			<colorTwo>(129,126,109)</colorTwo>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_TungstenBase">
+		<defName>RVFFA_Scheelite</defName>
+		<label>Scheelite</label>
+		<description>A red-ish grey-ish, rich in tungsten.</description>
+
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(145,142,135)</color>
+			<colorTwo>(158,110,72)</colorTwo>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="LeatherBase">
+		<defName>RVFFA_AvaliLeather</defName>
+		<label>Avali leather</label>
+		<description>The skin of an avali... the feathers are still on it. Humans and others find it soft. Avali find it horrifying.</description>
+		<graphicData>
+      		<color>(216,191,216)</color>
+    	</graphicData>
+		<statBases>
+			<MarketValue>4.3</MarketValue>
+			<StuffPower_Armor_Sharp>0.78</StuffPower_Armor_Sharp>
+			<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(216,191,216)</color>
+			<commonality>0.02</commonality>
+		</stuffProps>
+	</ThingDef>
+</Defs>

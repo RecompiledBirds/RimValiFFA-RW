@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<defName>RVFFA_TailSkirt</defName>
+		<showsInBed>false</showsInBed>
+		
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Avali/Tail/Tailskirt/Male/MaleTailskirt</texPath>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Avali/Tail/Tailskirt/Female/FemaleTailskirt</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+
+	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
+		<defName>RVFFA_Tail</defName>
+		<showsInBed>false</showsInBed>
+		
+		<textures>
+			<li>
+				<texPath>RimValiFFA/Avali/Tail/Male/MaleTail</texPath>
+				<alternateFemaleMaskPaths>
+					<li>RimValiFFA/Avali/Tail/Female/FemaleTail</li>
+				</alternateFemaleMaskPaths>
+			</li>
+		</textures>
+	</RVCRestructured.Defs.RenderableDef>
+</Defs>

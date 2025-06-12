@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--
+	<QuestScriptDef>
+		<defName>RVFFA_NexusQuestTypeOne</defName>
+		<rootSelectionWeight>1.0</rootSelectionWeight>
+		<autoAccept>true</autoAccept>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Nexus connection located</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription->We've recieved a tramission from the remains of our ship in orbit. It appears what remains of our ship AI has calculated the trajectory of the ship's nexus connection.\nWe should attempt to capture this system, as it will allow us to reconnect with the Illuminate and enhance our technologies.</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_SubScript">
+					<def>Util_RandomizePointsChallengeRating</def>
+					<parms>
+						<pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+						<pointsFactorThreeStar>2</pointsFactorThreeStar>
+					</parms>
+				</li>
+
+				<li Class="QuestNode_GetSiteTile">
+					<storeAs>siteTile</storeAs>
+					<preferCloserTiles>true</preferCloserTiles>
+				</li>
+				<li Class="QuestNode_ViolentQuestsAllowed">
+					<node Class="QuestNode_Set">
+						<name>siteThreatChance</name>
+						<value>2.0</value>
+					</node>
+				</li>
+
+				<li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+					<storeAs>sitePartDefs</storeAs>
+					<storeFactionAs>siteFaction</storeFactionAs>
+					<sitePartsTags>
+						<li>
+							<tag>RVFFA_Nexus</tag>
+						</li>
+						<li>
+							<tag>ItemStashQuestThreat</tag>
+							<chance>$siteThreatChance</chance>
+						</li>
+					</sitePartsTags>
+				</li>
+
+				<li Class="QuestNode_GetDefaultSitePartsParams">
+					<tile>$siteTile</tile>
+					<faction>$siteFaction</faction>
+					<sitePartDefs>$sitePartDefs</sitePartDefs>
+					<storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+				</li>
+				
+				<li Class="QuestNode_SubScript">
+					<def>Util_GenerateSite</def>
+					<parms>
+						<hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+					</parms>
+				</li>
+
+				<li Class="QuestNode_SpawnWorldObjects">
+					<worldObjects>$site</worldObjects>
+				</li>
+
+				<li Class="QuestNode_WorldObjectTimeout">
+					<worldObject>$site</worldObject>
+					<isQuestTimeout>true</isQuestTimeout>
+					<delayTicks>$(randInt(50,80)*60000)</delayTicks>
+					<inSignalDisable>site.MapGenerated</inSignalDisable>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestExpired">Information gathered by the ship AI suggests the nexus has either been destroyed on impact, or stolen by an unknown party.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<li Class="QuestNode_AddItemsReward">
+					<items>$nexusReward</items>
+					<inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+				</li>
+
+				<li Class="QuestNode_NoWorldObject">
+					<worldObject>$site</worldObject>
+					<node Class="QuestNode_End">
+					</node>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>-->
+</Defs>

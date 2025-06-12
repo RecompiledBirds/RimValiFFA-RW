@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
+		<defName>RVFFA_AdvancedBionicLeg</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cybernetics/Leg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<label>Advanced bionic Avali leg</label>
+		<description>An advanced bionic leg, featuring better self repair systems, and a direct neural connection to the users brain, allowing it to do almost exactly what they want in a very precise manner.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>RVFFA_InstallAdvancedBionicLeg</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<RVFFA_Ferrogel>2</RVFFA_Ferrogel>
+			<ComponentSpacer>4</ComponentSpacer>
+			<RVFFA_ProcessedTungsten>10</RVFFA_ProcessedTungsten>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>5</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedBionicsTech</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RVFFA_InstallAdvancedBionicLeg</defName>
+		<label>Install advanced bionic leg</label>
+		<description>Install a advanced bionic leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_AdvancedBionicLeg</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing advanced bionic leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_AdvancedBionicLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_AdvancedBionicLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RVFFA_AdvancedBionicLeg</addsHediff>
+	</RecipeDef>
+	
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RVFFA_AdvancedBionicLeg</defName>
+		<label>Advanced bionic leg</label>
+		<labelNoun>a advanced bionic leg</labelNoun>
+		<description>A advanced bionic avali leg.</description>
+		<spawnThingOnRemoved>RVFFA_AdvancedBionicLeg</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.6</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+					<RVC_HealthOffset>15</RVC_HealthOffset>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

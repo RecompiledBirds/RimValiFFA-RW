@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
+		<defName>RVFFA_VocalReplacements</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cybernetics/Head</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<label>Vocal replacements</label>
+		<description>A small kit of vocal replacements. After tinkering with and replacing the vocal cords of the wearer, it makes their voice sound more appealing and makes it more flexible, giving them better social gain from other pawns.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>RVFFA_InstallVocalReplacements</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Steel>5</Steel>
+			<RVFFA_ProcessedTungsten>10</RVFFA_ProcessedTungsten>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>5</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedImplantsTech</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>RVFFA_InstallVocalReplacements</defName>
+		<label>Install vocal replacements</label>
+		<description>Install a vocal replacements.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_VocalReplacements</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing vocal replacements.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_VocalReplacements</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_VocalReplacements</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Neck</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RVFFA_VocalReplacements</addsHediff>
+	</RecipeDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>RVFFA_VocalReplacements</defName>
+		<label>Vocal replacements</label>
+		<labelNoun>a vocal replacement</labelNoun>
+		<description>A small kit of vocal replacements. After tinkering with and replacing the vocal cords of the wearer, it makes their voice sound more appealing and makes it more flexible, giving them better social gain from other pawns.</description>
+		<spawnThingOnRemoved>RVFFA_VocalReplacements</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statFactors>
+					<SocialImpact>1.2</SocialImpact>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+		</comps>
+	</HediffDef>
+</Defs>
