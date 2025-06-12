@@ -34,24 +34,25 @@
 		<Defs Include= "$(MainDefProjPath)**\*.xml"/>
 		<Defs Include= "$(WeaponDefProjPath)**\*.xml"/>
 		<Languages Include= "$(ENLanguagesProjPath)**\*.xml"/>
+		<Languages Include= "$(ENLanguagesProjPath)**\*.txt"/>
 		<MainProjPatches Include= "$(MainProjPatchesPath)**\*.xml"/>
 	</ItemGroup>
 	
 	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
 		<Copy SourceFiles="@(Defs)" DestinationFolder="$(DefOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
-			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
+			<Output TaskParameter="CopiedFiles" ItemName="DefCopiedFileList"/>
 		</Copy>
-		<Message Text="Copied Files:%0A@(CopiedFileList, '%0D')" Importance="high" />
+		<Message Text="Copied Files:%0A@(DefCopiedFileList, '%0D')" Importance="high" />
 
 		<Copy SourceFiles="@(Languages)" DestinationFolder="$(LangOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
-			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
+			<Output TaskParameter="CopiedFiles" ItemName="LangCopiedFileList"/>
 		</Copy>
-		<Message Text="Copied Files:%0A@(CopiedFileList, '%0D')" Importance="high" />
+		<Message Text="Copied Files:%0A@(LangCopiedFileList, '%0D')" Importance="high" />
 
 		<Copy SourceFiles="@(MainProjPatches)" DestinationFolder="$(PatchOuputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
-			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
+			<Output TaskParameter="CopiedFiles" ItemName="PatchCopiedFileList"/>
 		</Copy>
-		<Message Text="Copied Files:%0A@(CopiedFileList, '%0D')" Importance="high" />
+		<Message Text="Copied Files:%0A@(PatchCopiedFileList, '%0D')" Importance="high" />
 	</Target>
 
 

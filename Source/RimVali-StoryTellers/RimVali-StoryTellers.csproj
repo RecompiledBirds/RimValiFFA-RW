@@ -5,6 +5,11 @@
 		<RootNamespace>RimVali_StoryTellers</RootNamespace>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<LangVersion>12.0</LangVersion>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<OutputPath>../../1.6/Assemblies</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
