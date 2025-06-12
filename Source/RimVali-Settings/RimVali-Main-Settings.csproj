@@ -9,10 +9,9 @@
 		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<Nullable>enable</Nullable>
 		<LangVersion>12.0</LangVersion>
-		<VersionFolder>../../1.6/</VersionFolder>
-		<OutputPath>$(VersionFolder)Assemblies</OutputPath>
+		<OutputPath>../../1.6/Assemblies</OutputPath>
+		<DefOutputPath>../../1.6/Defs/</DefOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -20,20 +19,33 @@
 	</ItemGroup>
 
 	<PropertyGroup>
-		<MainDefProjPath>../Source/Definitions/Defs/</MainDefProjPath>
-		<WeaponDefProjPath>../Source/RimVali-WeaponDefs/Defs/</WeaponDefProjPath>
-		<DefOutputPath>$(VersionFolder)</DefOutputPath>
+		<MainDefProjPath>..\Definitions\Defs\</MainDefProjPath>
+		<WeaponDefProjPath>..\RimVali-WeaponDefs\Defs\</WeaponDefProjPath>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Defs Include=" $(MainDefProjPath)**\*.xml" />
-		<Defs Include=" $(WeaponDefProjPath)**\*.xml"/>
-		<DefsDestinations Include="@(Defs->'$(DefOutputPath)%(Identity)')"/>
+		<!--Original Files-->
+		<Defs Include= "$(MainDefProjPath)**\*.xml"/>		
+		<Defs Include= "$(WeaponDefProjPath)**\*.xml"/>
+		
+		<!--Get the original identities (file paths)-->
+		<MainDefsFilePaths Include= "$(MainDefProjPath)**\*.xml" MyPath="%(Identity)" />
+		<WeaponDefsFilePaths Include= "$(WeaponDefProjPath)**\*.xml" MyPath="%(Identity)" />
+
+		<!--Combine old and new path-->
+		<MainDefsCombined Include="@(MainDefsFilePaths -> '$(DefOutputPath)%(MyPath)')"/>
+		<WeaponDefsCombined Include="@(WeaponDefsFilePaths -> '$(DefOutputPath)%(MyPath)')"/>
+
+		<!--Replace old and include destination-->
+		<DefsDestinations Include="@(MainDefsCombined -> Replace($(MainDefProjPath), ''))"/>
+		<DefsDestinations Include="@(WeaponDefsCombined -> Replace($(WeaponDefProjPath), ''))"/>
+		
+		<!--<Defs Include=" $(WeaponDefProjPath)**\*.xml" MyPath="%(Identity)"/>-->
 		<FileWrites Include="@(DefsDestinations)"/>
 		<DirectoryWrites Include="@(DefDestinations -> '%(RelativeDir)')"/>
 	</ItemGroup>
 
-	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
+	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">		
 		<Copy SourceFiles="@(Defs)" DestinationFiles="@(DefsDestinations)" SkipUnchangedFiles="True">
 			<Output TaskParameter="CopiedFiles" ItemName="CopiedFileList"/>
 		</Copy>
