@@ -39,7 +39,7 @@
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 					<def>ConfigPage_ConfigureStartingPawns</def>
 					<pawnCount>3</pawnCount>
-					<pawnChoiceCount>3</pawnChoiceCount>
+					<pawnChoiceCount>6</pawnChoiceCount>
 				</li>
 
 				<li Class="ScenPart_PlayerPawnsArriveMethod">
