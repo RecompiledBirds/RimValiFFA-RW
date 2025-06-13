@@ -3,7 +3,7 @@
 	<ThingDef ParentName="BasePawn">
 		<defName>RVFFA_Avali</defName>
 		<label>Avali</label>
-		<description>Cute, fluffy raptors with highly advanced tech. The primary solvent in avali biology is ammonia, making them mostly incompatible with humans. Avali don't like being hot, as their blood boils at a much lower temp then a human's blood, but they can survive in the cold no problem.</description>
+		<description>Cute, fluffy raptors with highly advanced tech. The primary solvent in avali biology is ammonia, making them mostly incompatible with humans. Avali don't like being hot, as their blood boils at a much lower temp than a human's blood, but they can survive in the cold no problem.</description>
 		<statBases>
 			<MarketValue>1750</MarketValue>
 			<MoveSpeed>4.6</MoveSpeed>
@@ -436,25 +436,6 @@
 			</hediffGiverSets>
 		</race>
 		<recipes>
-			<li>ExciseCarcinoma</li>
-			<li>AdministerMechSerumHealer</li>
-			<li>RemoveBodyPart</li>
-			<li>Euthanize</li>
-			<li>Anesthetize</li>
-			<li>CureScaria</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
-			<li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
-			<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
-
 			<li>RVFFA_InstallAdvTail</li>
 			<li>RVFFA_InstallBasicBionicTail</li>
 			<li>RVFFA_InstallBasicArm</li>

@@ -36,10 +36,14 @@ namespace RimValiFFARW.StoryTellers
         public float onDays;
 
         public float minAcceptablePawnThreshold;
-
+        
         public RVFFA_Storyteller()
         {
             compClass = typeof(RVFFA_StoryTellerComp);
+        }
+        public RVFFA_Storyteller(Type compClass)
+        {
+            this.compClass = typeof(RVFFA_StoryTellerComp);
         }
     }
     public class RVFFA_StoryTellerComp : StorytellerComp
@@ -82,8 +86,16 @@ namespace RimValiFFARW.StoryTellers
         }
 
 
-        private Random random;
-
+        private Random? random;
+        private Random Random
+        {
+            get
+            {
+                if(random==null)random= new Random(Find.World.ConstantRandSeed);
+                return random;
+            }
+            
+        }
         public override void Initialize()
         {
             base.Initialize();
@@ -100,10 +112,10 @@ namespace RimValiFFARW.StoryTellers
 
         bool started = false;
 
-        public RVFFA_StoryTellerComp()
-        {
-            random = new Random(Find.World.ConstantRandSeed);
-        }
+        //public RVFFA_StoryTellerComp()
+        //{
+        //    random = new Random(Find.World.ConstantRandSeed);
+        //}
 
         public override IEnumerable<FiringIncident> MakeIntervalIncidents(IIncidentTarget target)
         {
@@ -272,21 +284,21 @@ namespace RimValiFFARW.StoryTellers
 
             if (data.StorytellerState == 0 && Rand.Chance(0.2f))
             {
-                data.StorytellerState += random.Next(-1, HasDislikedPawnsWithThres ? 1 : 0);
+                data.StorytellerState += Random.Next(-1, HasDislikedPawnsWithThres ? 1 : 0);
                 data.UpdateDays();
                 return;
             }
 
             if(data.StorytellerState==StorytellerState.Angered && Rand.Chance(0.2f))
             {
-                data.StorytellerState += random.Next(0, HasDislikedPawnsWithThres ? 1 : 0);
+                data.StorytellerState += Random.Next(0, HasDislikedPawnsWithThres ? 1 : 0);
                 data.UpdateDays();
                 return;
             }
 
             if (data.StorytellerState == StorytellerState.Friendly && Rand.Chance(0.5f))
             {
-                data.StorytellerState -= random.Next(HasDislikedPawnsWithThres ? 0:-1, 1);
+                data.StorytellerState -= Random.Next(HasDislikedPawnsWithThres ? 0:-1, 1);
                 data.UpdateDays();
                 return;
             }

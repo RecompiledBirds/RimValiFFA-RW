@@ -436,7 +436,7 @@
 			</hediffGiverSets>
 		</race>
 		<recipes>
-			<li>ExciseCarcinoma</li>
+			<!--<li>ExciseCarcinoma</li>
 			<li>AdministerMechSerumHealer</li>
 			<li>RemoveBodyPart</li>
 			<li>Euthanize</li>
@@ -453,7 +453,7 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>-->
 
 			<li>RVFFA_InstallAdvTail</li>
 			<li>RVFFA_InstallBasicBionicTail</li>
