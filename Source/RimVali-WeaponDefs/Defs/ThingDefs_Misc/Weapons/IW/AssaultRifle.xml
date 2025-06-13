@@ -27,7 +27,7 @@
 		<uiIconScale>1.4</uiIconScale>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<weaponTags>
-			<li>IWAvaliWeapons</li>
+			<li>IWRVFFA_Weapons</li>
 		</weaponTags>
 		<statBases>
 			<WorkToMake>38000</WorkToMake>

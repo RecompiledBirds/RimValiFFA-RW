@@ -18,7 +18,10 @@
 		<label>Illuminate Sniper Rifle</label>
 
 		<description>A high-powered Illuminate pattern sniper rifle. This sophisticated weapon optimizes the use of Helium-cooling to keep its powerful and plentiful coils from overheating in it’s user’s talons. With its long range and powerful bullet, it is highly loved by Illuminate snipers for picking off high-value targets with.</description>
-
+		<weaponTags>
+			<li>RVFFA_Weapons</li>
+			<li>RVFFA_Sniper</li>
+		</weaponTags>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Weapons/Guns/SniperRifle</texPath>
 		</graphicData>

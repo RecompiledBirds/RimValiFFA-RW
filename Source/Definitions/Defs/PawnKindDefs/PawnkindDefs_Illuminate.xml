@@ -3,7 +3,7 @@
 	<PawnKindDef ParentName="RVFFA_BaseAvaliPawnKind" Name="RVFFA_IlluminateColonist">
 		<defName>RVFFA_IlluminateVillager</defName>
 		<label>Illuminate Colonist</label>
-		<combatPower>42</combatPower>
+		<combatPower>30</combatPower>
 		<backstoryCategories>
 			<li>RVFFA_Illuminate</li>
 		</backstoryCategories>
@@ -21,7 +21,7 @@
 		<apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
 		<weaponMoney>350~700</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 			<li>RVFFA_IlluminateWeapons</li>
 		</weaponTags>
 		<techHediffsMoney>1500~2000</techHediffsMoney>
@@ -85,7 +85,7 @@
 	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
 		<defName>RVFFA_IlluminateSoldier</defName>
 		<label>Illuminate Soldier</label>
-		<combatPower>120</combatPower>
+		<combatPower>60</combatPower>
 		<isFighter>true</isFighter>
 		<invNutrition>5</invNutrition>
 		<itemQuality>Excellent</itemQuality>
@@ -93,14 +93,14 @@
 		<maxGenerationAge>40</maxGenerationAge>
 		<gearHealthRange>1.2~2.4</gearHealthRange>
 		<apparelTags>
-			<li>Avali</li>
+			<li>RVFFA_ScoutGear</li>
 			<li>RVFFA_IlluminateApparel</li>
 		</apparelTags>
-		<apparelMoney>750~1500</apparelMoney>
+		<apparelMoney>1000~1500</apparelMoney>
 		<apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
-		<weaponMoney>300~700</weaponMoney>
+		<weaponMoney>300~1000</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 		</weaponTags>
 		<techHediffsMoney>2000~3000</techHediffsMoney>
 		<techHediffsTags>
@@ -126,14 +126,14 @@
 	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
 		<defName>RVFFA_IlluminateRocketerr</defName>
 		<label>Illuminate Solider</label>
-		<combatPower>10000</combatPower>
+		<combatPower>70</combatPower>
 		<isFighter>true</isFighter>
 		<backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
 		<maxGenerationAge>50</maxGenerationAge>
 		<gearHealthRange>0.9~2.5</gearHealthRange>
 		<apparelMoney>1000~9000</apparelMoney>
 		<apparelTags>
-			<li>AvaliArmor</li>
+			<li>RVFFA_CombatArmor</li>
 		</apparelTags>
 		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
 		<weaponMoney>2020~2000</weaponMoney>
@@ -151,7 +151,7 @@
 	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
 		<defName>RVFFA_TownGuard</defName>
 		<label>Illuminate Soldier</label>
-		<combatPower>140</combatPower>
+		<combatPower>60</combatPower>
 
 		<isFighter>true</isFighter>
 		<backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
@@ -159,12 +159,12 @@
 		<gearHealthRange>0.9~2.5</gearHealthRange>
 		<apparelMoney>2000~9000</apparelMoney>
 		<apparelTags>
-			<li>AvaliArmor</li>
+			<li>RVFFA_CombatArmor</li>
 		</apparelTags>
 		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
 		<weaponMoney>200~400</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 		</weaponTags>
 		<techHediffsMoney>5000~8000</techHediffsMoney>
 		<techHediffsTags>
@@ -177,7 +177,7 @@
 	<pawnKindDef ParentName="RVFFA_IlluminateColonist">
 		<defName>RVFFA_IlluminateSniper</defName>
 		<label>Illuminate Sniper</label>
-		<combatPower>170</combatPower>
+		<combatPower>70</combatPower>
 		<isFighter>true</isFighter>
 		<invNutrition>4</invNutrition>
 		<itemQuality>Excellent</itemQuality>
@@ -194,7 +194,7 @@
 		<weaponMoney>1700~2000</weaponMoney>
 		<weaponTags>
 			<li>AvaliRifle</li>
-			<li>SniperRifle</li>
+			<li>RVFFA_Sniper</li>
 		</weaponTags>
 		<techHediffsMoney>1000~2000</techHediffsMoney>
 		<techHediffsTags>
@@ -220,7 +220,7 @@
 		<defName>RVFFA_IlluminateFighter</defName>
 		<label>Illuminate Fighter</label>
 		<isFighter>true</isFighter>
-		<combatPower>170</combatPower>
+		<combatPower>70</combatPower>
 	
 
 		<invNutrition>4</invNutrition>
@@ -237,7 +237,7 @@
 		<apparelAllowHeadgearChance>0.6</apparelAllowHeadgearChance>
 		<weaponMoney>1000~3000</weaponMoney>
 		<weaponTags>
-			<li>AvaliMelee</li>
+			<li>RVFFA_Weapons</li>
 		</weaponTags>
 		<techHediffsMoney>1000~2000</techHediffsMoney>
 		<techHediffsTags>
@@ -262,7 +262,7 @@
 	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
 		<defName>RVFFA_IlluminateEnhancedSoldier</defName>
 		<label>Enhanced Illuminate Soilder</label>
-		<combatPower>200</combatPower>
+		<combatPower>70</combatPower>
 		<isFighter>true</isFighter>
 
 		<invNutrition>5</invNutrition>
@@ -271,13 +271,13 @@
 		<maxGenerationAge>40</maxGenerationAge>
 		<gearHealthRange>1.2~2.4</gearHealthRange>
 		<apparelTags>
-			<li>AvaliSpecOps</li>
+			<li>RVFFA_SpecOps</li>
 		</apparelTags>
 		<apparelMoney>5000~9000</apparelMoney>
 		<apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
 		<weaponMoney>700~1400</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 		</weaponTags>
 		<techHediffsMoney>5000~99999</techHediffsMoney>
 		<techHediffsTags>

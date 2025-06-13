@@ -25,6 +25,9 @@
 				<compClass>CompQuality</compClass>
 			</li>
 		</comps>
+		<weaponTags>
+			<li>RVFFA_Weapons</li>
+		</weaponTags>
 	</ThingDef>
 
 	<ThingDef Name="RVFFA_WeaponMakeableLathe" ParentName="RVFFA_BaseAvaliGun" Abstract="True">
@@ -54,7 +57,6 @@
 	<ThingDef ParentName="BaseHumanMakeableGun" Name="RVFFA_BaseIWGun" Abstract="True">
 		<weaponTags>
 			<li>RVFFA_IWAvaliWeapons</li>
-			<li>RVFFA_Weapons</li>
 		</weaponTags>
 	</ThingDef>
 </Defs>

@@ -22,7 +22,7 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 			<li>AvaliMelee</li>
 		</weaponTags>
 		<statBases>
