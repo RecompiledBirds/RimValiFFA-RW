@@ -10,14 +10,12 @@
 				<li>IcySoil</li>
 				<li>Hydroponic</li>
 			</sowTags>
+			<minOptimalGrowthTemperature>-40</minOptimalGrowthTemperature>
+			<maxOptimalGrowthTemperature>-5</maxOptimalGrowthTemperature>
+			<minGrowthTemperature>-50</minGrowthTemperature>
+			<maxGrowthTemperature>0</maxGrowthTemperature>
 		</plant>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
-		<comps>
-			<li Class="RVCRestructured.Plants.RVCPlantCompProperties">
-				<minPreferredTemp>-50</minPreferredTemp>
-				<maxPreferredTemp>0</maxPreferredTemp>
-			</li>
-		</comps>
 	</ThingDef>
 </Defs>

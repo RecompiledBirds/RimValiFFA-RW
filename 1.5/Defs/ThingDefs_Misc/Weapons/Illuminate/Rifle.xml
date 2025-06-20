@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_RifleBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/RifleBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>13</damageAmountBase>
+			<stoppingPower>0.5</stoppingPower>
+			<speed>177</speed>
+			<armorPenetrationBase>0.42</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_Rifle</defName>
+		<label>Illuminate Rifle</label>
+		<description>A common Illuminate pattern rifle. Praised by both soldiers and hunters for its reliability, it is practically standard issue for any weaponized operation. Its high range and very short travel time makes it perfect for picking off distant enemies.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Rifle</texPath>
+			<drawSize>0.7</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>34000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.69</AccuracyTouch>
+			<AccuracyShort>0.81</AccuracyShort>
+			<AccuracyMedium>0.92</AccuracyMedium>
+			<AccuracyLong>0.86</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>7</RVFFA_ProcessedTungsten>
+		</costList>
+		<uiIconScale>1.4</uiIconScale>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_RifleBullet</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<range>38.5</range>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

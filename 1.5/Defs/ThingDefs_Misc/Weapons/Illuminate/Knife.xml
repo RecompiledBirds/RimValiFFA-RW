@@ -40,19 +40,11 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
-				<label>knife Blade</label>
+				<label>Knife Blade</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>13</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>knife point</label>
-				<capacities>
-					<li>Stab</li>
-				</capacities>
-				<power>4</power>
+				<power>16</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
-		<defName>RVFFA_Axe</defName>
-		<label>Illuminate Axe</label>
-		<description>A dangerous Illuminate battle axe. Truly meant for combat, this weapon uses vibrations to cut into the skin of the enemy, after multiple hits the blade will break off and stick in its target’s flesh before rapidly being reconstructed by the printer in its head. It is renowned for its brutality and the surprising force an Avali can strike down with it.</description>
+		<defName>RVFFA_Scythe</defName>
+		<label>Illuminate Scythe</label>
+		<description>A high-tech Illuminate scythe. Unlike most Ferrogel weapons, this one’s blade isn’t actually supposed to break in the target. Despite this it still has an advanced printer in the blade’s base to replace it when it gets dull. Whilst its viability for actual combat is questionable, being attacked by this weapon is still going to deal great damage.</description>
 		<graphicData>
-			<texPath>RimValiFFA/Things/Weapons/Melee/Axe</texPath>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Scythe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<uiIconScale>1.2</uiIconScale>
@@ -22,45 +22,36 @@
 		</weaponTags>
 		<costList>
 			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
-			<Steel>15</Steel>
+			<Steel>20</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<WorkToMake>1400</WorkToMake>
+			<WorkToMake>3000</WorkToMake>
 			<Mass>0.6</Mass>
 		</statBases>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<tools>
 			<li>
-				<label>Illuminate Axe Handle</label>
+				<label>Scythe Handle</label>
 				<capacities>
 					<li>Blunt</li>
-					<li>Poke</li>
 				</capacities>
-				<power>10</power>
-				<cooldownTime>2.1</cooldownTime>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
-				<label>Illuminate Axe Blade</label>
+				<label>Scythe Blade</label>
 				<capacities>
-					<li>Demolish</li>
-					<li>Sharp</li>
+					<li>Stab</li>
 				</capacities>
-				<power>8.5</power>
-				<cooldownTime>0.5</cooldownTime>
-				<extraMeleeDamages>
-					<li>
-						<def>Cut</def>
-						<amount>10</amount>
-						<chance>0.2</chance>
-					</li>
-				</extraMeleeDamages>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>7</Crafting>
+				<Crafting>4</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 	</ThingDef>

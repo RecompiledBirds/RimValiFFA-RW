@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_SniperBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SniperBullet</texPath>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>33</damageAmountBase>
+			<speed>183</speed>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>0.54</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminateSniperRifle</defName>
+		<label>Illuminate Sniper Rifle</label>
+
+		<description>A high-powered Illuminate pattern sniper rifle. This sophisticated weapon optimizes the use of Helium-cooling to keep its powerful and plentiful coils from overheating in it’s user’s talons. With its long range and powerful bullet, it is highly loved by Illuminate snipers for picking off high-value targets with.</description>
+		<weaponTags>
+			<li>RVFFA_Weapons</li>
+			<li>RVFFA_Sniper</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/SniperRifle</texPath>
+		</graphicData>
+
+		<soundInteract>Interact_Rifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>66000</WorkToMake>
+			<Mass>6.5</Mass>
+			<AccuracyTouch>0.6</AccuracyTouch>
+			<AccuracyShort>0.82</AccuracyShort>
+			<AccuracyMedium>0.88</AccuracyMedium>
+			<AccuracyLong>0.93</AccuracyLong>
+			<RangedWeapon_Cooldown>2.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>250</Steel>
+			<ComponentSpacer>5</ComponentSpacer>
+			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_SniperBullet</defaultProjectile>
+				<warmupTime>1.85</warmupTime>
+				<range>48</range>
+				<soundCast>Shot_SniperRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+
+</Defs>

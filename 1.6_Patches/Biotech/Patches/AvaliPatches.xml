@@ -26,10 +26,6 @@
 						<xenotype>RVFFA_BaseAvaliXenoType</xenotype>
 						<pawnKind>RVFFA_IlluminateColonist</pawnKind>
 					</li>
-					<li>
-						<xenotype>RVFFA_BaseAvaliXenoType</xenotype>
-						<pawnKind>RVFFA_IlluminateColonist</pawnKind>
-					</li>
 				</overrideKinds>
 				<xenotypeCounts>
 					<li>
