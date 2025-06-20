@@ -114,7 +114,7 @@
 				</options>
 			</li>
 		</pawnGroupMakers>
-		<settlementTexturePath>World/WorldObjects/Expanding/Town</settlementTexturePath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<factionIconPath>RimValiFFA/WorldIcons/Town</factionIconPath>
 
 		<disallowedMemes>
