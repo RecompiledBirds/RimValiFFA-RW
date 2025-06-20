@@ -21,11 +21,12 @@
 			<li>AvaliMelee</li>
 		</weaponTags>
 		<costList>
-			<RVFFA_Ferrogel>15</RVFFA_Ferrogel>
-			<Steel>35</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
+			<Steel>45</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
 		</costList>
+		<costStuffCount>120</costStuffCount>
 		<statBases>
 			<WorkToMake>1400</WorkToMake>
 			<Mass>0.6</Mass>
@@ -37,7 +38,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>3</power>
+				<power>12</power>
 				<cooldownTime>3</cooldownTime>
 			</li>
 			<li>
@@ -45,16 +46,42 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>2</power>
+				<power>12</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
 				<label>Viroblade</label>
 				<capacities>
 					<li>Stab</li>
+					<li>Cut</li>
 				</capacities>
 				<power>25</power>
-				<cooldownTime>2.5</cooldownTime>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.99</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>Viroblade point</label>
+				<capacities>
+					<li>Stab</li>
+					<li>Cut</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>4</cooldownTime>
+				<armorPenetration>0.99</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>25</amount>
+						<chance>0.1</chance>
+					</li>
+				</extraMeleeDamages>
 			</li>
 		</tools>
 		<recipeMaker>

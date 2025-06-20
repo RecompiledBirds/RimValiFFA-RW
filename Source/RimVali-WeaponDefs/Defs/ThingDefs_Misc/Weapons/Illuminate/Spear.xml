@@ -30,6 +30,7 @@
 			<WorkToMake>1400</WorkToMake>
 			<Mass>0.6</Mass>
 		</statBases>
+		<costStuffCount>100</costStuffCount>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<tools>
 			<li>

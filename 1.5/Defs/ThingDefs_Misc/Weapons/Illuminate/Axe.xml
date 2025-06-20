@@ -20,10 +20,12 @@
 			<li>RVFFA_Weapons</li>
 			<li>AvaliMelee</li>
 		</weaponTags>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
-			<Steel>15</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
+			<Steel>45</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>15</ComponentSpacer>
 		</costList>
 		<statBases>
 			<WorkToMake>1400</WorkToMake>
@@ -32,20 +34,29 @@
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<tools>
 			<li>
-				<label>Axe Handle</label>
+				<label>Illuminate Axe Handle</label>
 				<capacities>
 					<li>Blunt</li>
+					<li>Poke</li>
 				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
+				<power>10</power>
+				<cooldownTime>2.1</cooldownTime>
 			</li>
 			<li>
-				<label>Avali Axe Blade</label>
+				<label>Illuminate Axe Blade</label>
 				<capacities>
 					<li>Demolish</li>
+					<li>Cut</li>
 				</capacities>
-				<power>7.5</power>
-				<cooldownTime>1</cooldownTime>
+				<power>8.5</power>
+				<cooldownTime>0.5</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
 			</li>
 		</tools>
 		<recipeMaker>

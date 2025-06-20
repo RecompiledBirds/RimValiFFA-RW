@@ -17,9 +17,10 @@
 			<li>Metallic</li>
 		</stuffCategories>
 		<costList>
-			<RVFFA_Ferrogel>5</RVFFA_Ferrogel>
-			<Steel>35</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
+			<Steel>45</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<weaponTags>
 			<li>RVFFA_Weapons</li>
@@ -29,29 +30,37 @@
 			<WorkToMake>1400</WorkToMake>
 			<Mass>0.6</Mass>
 		</statBases>
+		<costStuffCount>100</costStuffCount>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<tools>
 			<li>
-				<label>Avali Spear Handle</label>
+				<label>Illuminate Spear Handle</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>2</power>
-				<cooldownTime>2</cooldownTime>
+				<power>12</power>
+				<cooldownTime>3</cooldownTime>
 			</li>
 			<li>
-				<label>Avali Spear Blade</label>
+				<label>Illuminate Spear Blade</label>
 				<capacities>
 					<li>Stab</li>
 				</capacities>
-				<power>13</power>
-				<cooldownTime>5</cooldownTime>
+				<power>20</power>
+				<cooldownTime>1</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>25</amount>
+						<chance>0.3</chance>
+					</li>
+				</extraMeleeDamages>
 			</li>
 		</tools>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>4</Crafting>
+				<Crafting>6</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 	</ThingDef>

@@ -32,7 +32,7 @@
 			<AccuracyTouch>0.6</AccuracyTouch>
 			<AccuracyShort>0.65</AccuracyShort>
 			<AccuracyMedium>0.7</AccuracyMedium>
-			<AccuracyLong>0.67</AccuracyLong>
+			<AccuracyLong>0.95</AccuracyLong>
 			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>

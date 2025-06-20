@@ -48,7 +48,7 @@
 		</recipeMaker>
 	</ThingDef>
 	
-	<ThingDef Name="RVFFA_SharpMeleeWithQuality" Abstract="True" ParentName="BaseMeleeWeapon_Sharp">
+	<ThingDef Name="RVFFA_SharpMeleeWithQuality" Abstract="True" ParentName="RVFFA_BaseMeleeWeapon_Sharp">
 		<comps>
 			<li>
 				<compClass>CompQuality</compClass>

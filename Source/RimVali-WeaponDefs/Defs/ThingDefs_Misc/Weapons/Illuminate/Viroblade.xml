@@ -26,6 +26,7 @@
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>10</ComponentSpacer>
 		</costList>
+		<costStuffCount>120</costStuffCount>
 		<statBases>
 			<WorkToMake>1400</WorkToMake>
 			<Mass>0.6</Mass>
