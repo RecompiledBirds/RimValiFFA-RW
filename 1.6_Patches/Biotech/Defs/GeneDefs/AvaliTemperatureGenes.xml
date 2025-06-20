@@ -8,7 +8,7 @@
 		<iconPath>UI/Icons/Genes/Gene_MinTemperatureLargeDecrease</iconPath>
 		<displayOrderInCategory>20</displayOrderInCategory>
 		<statOffsets>
-			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>-10</ComfyTemperatureMax>
 		</statOffsets>
 		<biostatMet>-2</biostatMet>
