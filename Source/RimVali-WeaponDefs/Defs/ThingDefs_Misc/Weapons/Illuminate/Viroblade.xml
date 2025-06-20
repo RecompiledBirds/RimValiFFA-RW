@@ -23,8 +23,8 @@
 		<costList>
 			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
 			<Steel>45</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
 		</costList>
 		<statBases>
 			<WorkToMake>1400</WorkToMake>

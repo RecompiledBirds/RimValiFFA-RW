@@ -21,9 +21,10 @@
 			<li>AvaliMelee</li>
 		</weaponTags>
 		<costList>
-			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
-			<Steel>20</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
+			<Steel>50</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>8</ComponentSpacer>
 		</costList>
 		<statBases>
 			<WorkToMake>3000</WorkToMake>
@@ -44,8 +45,15 @@
 				<capacities>
 					<li>Stab</li>
 				</capacities>
-				<power>10</power>
+				<power>20</power>
 				<cooldownTime>2</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>25</amount>
+						<chance>0.5</chance>
+					</li>
+				</extraMeleeDamages>
 			</li>
 		</tools>
 		<recipeMaker>

@@ -21,9 +21,10 @@
 			<li>AvaliMelee</li>
 		</weaponTags>
 		<costList>
-			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
-			<Steel>15</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
+			<Steel>45</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>15</ComponentSpacer>
 		</costList>
 		<statBases>
 			<WorkToMake>1400</WorkToMake>

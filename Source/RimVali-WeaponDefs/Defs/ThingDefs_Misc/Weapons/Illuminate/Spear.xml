@@ -17,9 +17,10 @@
 			<li>Metallic</li>
 		</stuffCategories>
 		<costList>
-			<RVFFA_Ferrogel>15</RVFFA_Ferrogel>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
 			<Steel>45</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<weaponTags>
 			<li>RVFFA_Weapons</li>
