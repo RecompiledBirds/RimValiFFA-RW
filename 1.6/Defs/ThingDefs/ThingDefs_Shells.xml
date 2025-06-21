@@ -341,7 +341,7 @@
 		<comps>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>40</explosiveRadius>
-				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveDamageType>Bomb</explosiveDamageType>
 				<explosiveExpandPerStackcount>2</explosiveExpandPerStackcount>
 				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
 				<wickTicks>30~60</wickTicks>
@@ -369,7 +369,7 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<damageDef>Flame</damageDef>
+			<damageDef>Bomb</damageDef>
 			<!-- damage amount is the damage def default -->
 			<speed>50</speed>
 			<explosionRadius>20</explosionRadius>
