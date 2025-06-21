@@ -39,9 +39,9 @@
 			<wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsArmor/SpecOpsArmor</wornGraphicPath>
 		</apparel>
 
-		<researchPrerequisites Inherit="False">
-			<li>RVFFA_SpecOpsTech</li>
-		</researchPrerequisites>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_SpecOpsTech</researchPrerequisite>
+		</recipeMaker>
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseArmorHelmet">
@@ -67,6 +67,10 @@
 			<ShootingAccuracyPawn>+0.2</ShootingAccuracyPawn>
 			<MoveSpeed>-1.5</MoveSpeed>
 		</equippedStatOffsets>
+
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_SpecOpsTech</researchPrerequisite>
+		</recipeMaker>
 		<costList>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
@@ -79,8 +83,5 @@
 			</tags>
 			<wornGraphicPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet</wornGraphicPath>
 		</apparel>
-		<researchPrerequisites Inherit="False">
-			<li>RVFFA_SpecOpsTech</li>
-		</researchPrerequisites>
 	</ThingDef>
 </Defs>

@@ -69,7 +69,7 @@
 
 	<RecipeDef ParentName="RVFFA_BaseFerogelRecipe">
 		<defName>RVFFA_PrintFerrogelThree</defName>
-		<label>Print aerogel (40)</label>
+		<label>Print ferrogel (40)</label>
 		<ingredients>
 			<li>
 				<filter>

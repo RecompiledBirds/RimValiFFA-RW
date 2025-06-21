@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>RVFFA_IWPlayer</defName>
+		<label>Independent Colony</label>
+		<description>An independent colony.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>RVFFA_IlluminateColonist</basicMemberKind>
+		<pawnSingular>colonist</pawnSingular>
+		<pawnsPlural>colonists</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<allowedCultures>
+			<li>Astropolitan</li>
+		</allowedCultures>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>RVFFA_Illuminate</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		
+		<factionIconPath>RimValiFFA/WorldIcons/Town</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/Expanding/Town</settlementTexturePath>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+			<li>ClassicStart</li>
+			<li>ClassicStartTechprints</li>
+		</startingTechprintsResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+
+		<xenotypeSet>
+			<xenotypeChances>
+				<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">1</RVFFA_BaseAvaliXenoType>
+			</xenotypeChances>
+		</xenotypeSet>
+	</FactionDef>
+</Defs>

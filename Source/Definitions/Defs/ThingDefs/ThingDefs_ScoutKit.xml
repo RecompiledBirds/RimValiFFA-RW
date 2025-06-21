@@ -36,9 +36,9 @@
 			</tags>
 			<wornGraphicPath>RimValiFFA/Things/Apparel/ScoutArmor/ScoutArmor</wornGraphicPath>
 		</apparel>
-		<researchPrerequisites Inherit="False">
-			<li>RVFFA_ScoutingTech</li>
-		</researchPrerequisites>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_ScoutingTech</researchPrerequisite>
+		</recipeMaker>
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseArmorHelmet">
@@ -80,8 +80,8 @@
 			</tags>
 			<wornGraphicPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet</wornGraphicPath>
 		</apparel>
-		<researchPrerequisites Inherit="False">
-			<li>RVFFA_ScoutingTech</li>
-		</researchPrerequisites>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_ScoutingTech</researchPrerequisite>
+		</recipeMaker>
 	</ThingDef>
 </Defs>

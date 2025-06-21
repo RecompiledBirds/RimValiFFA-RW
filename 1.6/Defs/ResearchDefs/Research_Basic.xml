@@ -41,6 +41,7 @@
 		<prerequisites>
 			<li>RVFFA_LathingTech</li>
 		</prerequisites>
+		<baseCost>550</baseCost>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -248,7 +249,7 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
-		<defName>RVVFA_BasicApparelTech</defName>
+		<defName>RVFFA_BasicApparelTech</defName>
 		<label>Common Illuminate Apparel</label>
 		<description>We can also use our nanoloom like a normal loom; it is equally capable of creating clothing.</description>
 		<prerequisites>
@@ -264,7 +265,7 @@
 		<label>Scouting Equipment</label>
 		<description>It is highly likely that we will have to explore beyond our colony, for one reason or another. We should design armour to protect our scouts, while keeping them lightweight.</description>
 		<prerequisites>
-			<li>RVVFA_BasicApparelTech</li>
+			<li>RVFFA_BasicApparelTech</li>
 		</prerequisites>
 		<baseCost>850</baseCost>
 		<researchViewX>3.00</researchViewX>

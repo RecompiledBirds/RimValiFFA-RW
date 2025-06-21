@@ -1,25 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ScenarioDef Name="Illuminate Colony">
-		<defName>RVFFA_IlluminateColonyStarter</defName>
-		<label>Illuminate Colony</label>
-		<description>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</description>
+	<ScenarioDef>
+		<defName>RVFFA_IWColonyStarter</defName>
+		<label>Independent Colony</label>
+		<description>An independent tribe of 5 avali, lost on the rim.</description>
 		<scenario>
-			<summary>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</summary>
+			<summary>An independent tribe of 5 avali, lost on the rim.</summary>
 			<playerFaction>
 				<def>PlayerFaction</def>
-				<factionDef>RVFFA_IlluminatePlayer</factionDef>
+				<factionDef>RVFFA_IWPlayer</factionDef>
 			</playerFaction>
+			<surfaceLayer>
+				<def>SurfaceLayerFixed</def>
+				<tag>Surface</tag>
+				<layer>Surface</layer>
+				<settingsDef>Surface</settingsDef>
+				<hide>true</hide>
+				<connections>
+					<Orbit MayRequire="Ludeon.RimWorld.Odyssey">
+						<zoomMode>ZoomOut</zoomMode>
+					</Orbit>
+				</connections>
+			</surfaceLayer>
 			<parts>
+				<!-- Layers -->
+				<li MayRequire="Ludeon.RimWorld.Odyssey" Class="ScenPart_PlanetLayer">
+					<def>PlanetLayer</def>
+					<tag>Orbit</tag>
+					<layer>Orbit</layer>
+					<settingsDef>Orbit</settingsDef>
+					<hide>true</hide>
+					<connections>
+						<Surface>
+							<zoomMode>ZoomIn</zoomMode>
+						</Surface>
+					</connections>
+				</li>
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 					<def>ConfigPage_ConfigureStartingPawns</def>
-					<pawnCount>3</pawnCount>
-					<pawnChoiceCount>3</pawnChoiceCount>
+					<pawnCount>5</pawnCount>
+					<pawnChoiceCount>10</pawnChoiceCount>
 				</li>
 
 				<li Class="ScenPart_PlayerPawnsArriveMethod">
 					<def>PlayerPawnsArriveMethod</def>
-					<method>DropPods</method>
+					<method>Standing</method>
 					<visible>false</visible>
 				</li>
 
@@ -29,25 +54,18 @@
 					<count>50</count>
 				</li>
 
+
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
-					<thingDef>RVFFA_Viroblade</thingDef>
-					<stuff>Steel</stuff>
+					<thingDef>RVFFA_IWPistol</thingDef>
 					<count>1</count>
 				</li>
 
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
-					<thingDef>RVFFA_IlluminatePistol</thingDef>
+					<thingDef>MeleeWeapon_Knife</thingDef>
 					<stuff>Steel</stuff>
-					<count>1</count>
-				</li>
-
-				<li Class="ScenPart_StartingThing_Defined">
-					<def>StartingThing_Defined</def>
-					<thingDef>RVFFA_Knife</thingDef>
-						<stuff>Steel</stuff>
-					<count>1</count>
+					<count>2</count>
 				</li>
 
 				<li Class="ScenPart_GameStartDialog">
@@ -60,12 +78,6 @@
 					<def>StartingThing_Defined</def>
 					<thingDef>MedicineIndustrial</thingDef>
 					<count>30</count>
-				</li>
-
-				<li Class="ScenPart_ScatterThingsNearPlayerStart">
-					<def>ScatterThingsNearPlayerStart</def>
-					<thingDef>RVFFA_Tungsten</thingDef>
-					<count>150</count>
 				</li>
 				
 				<li Class="ScenPart_StartingThing_Defined">

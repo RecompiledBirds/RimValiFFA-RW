@@ -38,9 +38,9 @@
 			</tags>
 			<wornGraphicPath>RimValiFFA/Things/Apparel/CombatArmor/CombatArmor</wornGraphicPath>
 		</apparel>
-		<researchPrerequisites Inherit="False">
-			<li>RVFFA_CombatTech</li>
-		</researchPrerequisites>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_CombatTech</researchPrerequisite>
+		</recipeMaker>
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseArmorHelmet">
@@ -81,8 +81,8 @@
 			</tags>
 			<wornGraphicPath>RimValiFFA/Things/Apparel/CombatHelmet/CombatHelmet</wornGraphicPath>
 		</apparel>
-		<researchPrerequisites Inherit="False">
-			<li>RVFFA_CombatTech</li>
-		</researchPrerequisites>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_CombatTech</researchPrerequisite>
+		</recipeMaker>
 	</ThingDef>
 </Defs>
