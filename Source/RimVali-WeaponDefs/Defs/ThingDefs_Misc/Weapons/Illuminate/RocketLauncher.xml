@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RVFFA_Rocket</defName>
+		<label>rocket</label>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/Rocket</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<!-- Use default damage from explosion def -->
+			<explosionRadius>3.7</explosionRadius>
+			<speed>35</speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseGun">
+		<defName>RVFFA_IlluminateRocketLauncher</defName>
+		<label>Illuminate Rocket Launcher</label>
+		<description>An Illuminate rocket launcher. Anti-Tank weapons are important in any war, and this rocket launcher is no different. Using a fin-stabilized system together with a small jet system, this rocket ensures you hit where you aim. Despite its good range, near-perfect accuracy and high-explosive payload. It fires a slow and easy to dodge projectile and should be used with good prior planning.</description>
+		<tickerType>Normal</tickerType>
+		<smeltable>false</smeltable>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/RocketLauncher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>2020</MarketValue>
+			<Mass>7</Mass>
+			<RangedWeapon_Cooldown>4.7</RangedWeapon_Cooldown>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>SingleUseWeapon</li>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_Rocket</defaultProjectile>
+				<forcedMissRadius>0.5</forcedMissRadius>
+				<warmupTime>4.5</warmupTime>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<range>34</range>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

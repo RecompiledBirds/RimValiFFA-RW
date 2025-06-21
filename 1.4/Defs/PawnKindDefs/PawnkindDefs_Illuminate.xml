@@ -21,7 +21,7 @@
 		<apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
 		<weaponMoney>350~700</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 			<li>RVFFA_IlluminateWeapons</li>
 		</weaponTags>
 		<techHediffsMoney>
@@ -103,7 +103,7 @@
 		<apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
 		<weaponMoney>300~700</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 		</weaponTags>
 		<techHediffsMoney>2000~3000</techHediffsMoney>
 		<techHediffsTags>
@@ -167,7 +167,7 @@
 		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
 		<weaponMoney>200~400</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 		</weaponTags>
 		<techHediffsMoney>5000~8000</techHediffsMoney>
 		<techHediffsTags>
@@ -280,7 +280,7 @@
 		<apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
 		<weaponMoney>700~1400</weaponMoney>
 		<weaponTags>
-			<li>AvaliWeapons</li>
+			<li>RVFFA_Weapons</li>
 		</weaponTags>
 		<techHediffsMoney>5000~99999</techHediffsMoney>
 		<techHediffsTags>

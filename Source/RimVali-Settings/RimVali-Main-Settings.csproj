@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<RootNamespace>RimVali_Settings</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<LangVersion>12.0</LangVersion>
+		<VersionPath>../../1.6</VersionPath>
+		<OutputPath>$(VersionPath)/Assemblies</OutputPath>
+		<DefOutputPath>$(VersionPath)/Defs/</DefOutputPath>
+		<LangOutputPath>$(VersionPath)/Languages/</LangOutputPath>
+		<PatchOuputPath>$(VersionPath)/Patches/</PatchOuputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4488-beta" />
+	</ItemGroup>
+
+	<!-- Defs -->
+	<PropertyGroup>
+		<MainDefProjPath>..\Definitions\Defs\</MainDefProjPath>
+		<WeaponDefProjPath>..\RimVali-WeaponDefs\Defs\</WeaponDefProjPath>
+		<ENLanguagesProjPath>..\RimVali-Languages\Languages\</ENLanguagesProjPath>
+		<MainProjPatchesPath>..\RimVali-Patches\Patches\</MainProjPatchesPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--Original Files-->
+		<Defs Include= "$(MainDefProjPath)**\*.xml"/>
+		<Defs Include= "$(WeaponDefProjPath)**\*.xml"/>
+		<Languages Include= "$(ENLanguagesProjPath)**\*.xml"/>
+		<Languages Include= "$(ENLanguagesProjPath)**\*.txt"/>
+		<MainProjPatches Include= "$(MainProjPatchesPath)**\*.xml"/>
+	</ItemGroup>
+	
+	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
+		<Copy SourceFiles="@(Defs)" DestinationFolder="$(DefOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="DefCopiedFileList"/>
+		</Copy>
+		<Message Text="Copied Files:%0A@(DefCopiedFileList, '%0D')" Importance="high" />
+
+		<Copy SourceFiles="@(Languages)" DestinationFolder="$(LangOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="LangCopiedFileList"/>
+		</Copy>
+		<Message Text="Copied Files:%0A@(LangCopiedFileList, '%0D')" Importance="high" />
+
+		<Copy SourceFiles="@(MainProjPatches)" DestinationFolder="$(PatchOuputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="PatchCopiedFileList"/>
+		</Copy>
+		<Message Text="Copied Files:%0A@(PatchCopiedFileList, '%0D')" Importance="high" />
+	</Target>
+
+
+	
+	
+
+	<!-- Delete Directories on cleanup -->
+	<Target Name="RemoveDirectories" AfterTargets="Clean">
+		<Message Text="Deleting Def Directory" Importance="high" />
+		<RemoveDir Directories="$(DefOutputPath)" />
+
+		<Message Text="Deleting Languages Directory" Importance="high" />
+		<RemoveDir Directories="$(LangOutputPath)" />
+
+		<Message Text="Deleting Patches Directory" Importance="high" />
+		<RemoveDir Directories="$(PatchOuputPath)" />
+
+		
+	</Target>
+</Project>

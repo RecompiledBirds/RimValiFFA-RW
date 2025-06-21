@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseInsect">
+		<defName>RVFFA_Mosquito</defName>
+		<label>Mosquito</label>
+		<description>A large mosquito, originally found on the planet Avalon.</description>
+
+		<statBases>
+			<MoveSpeed>6</MoveSpeed>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<MarketValue>100</MarketValue>
+			<LeatherAmount>0</LeatherAmount>
+		</statBases>
+
+		<uiIconScale>2</uiIconScale>
+		<tools>
+			<li>
+				<label>Tail</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>MosquitoTailAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>RVFFA_MosquitoBody</body>
+			<baseBodySize>0.2</baseBodySize>
+			<baseHungerRate>0.10</baseHungerRate>
+			<baseHealthScale>0.4</baseHealthScale>
+			<lifeExpectancy>10</lifeExpectancy>
+			<trainability>Intermediate</trainability>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.03</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0.4</minAge>
+					<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+					<soundDeath>Pawn_Megascarab_Death</soundDeath>
+					<soundCall>Pawn_Megascarab_Call</soundCall>
+					<soundAngry>Pawn_Megascarab_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.12)</li>
+				<li>(0.07, 0, -0.05)</li>
+				<li>(0.0, 0, -0.08)</li>
+				<li>(-0.07, 0, -0.05)</li>
+			</headPosPerRotation>
+		</race>
+		<tradeTags>
+			<li>AnimalInsect</li>
+		</tradeTags>
+	</ThingDef>
+
+
+
+
+
+
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RVFFA_MosquitoKind</defName>
+		<label>Mosquito</label>
+		<race>RVFFA_Mosquito</race>
+		<combatPower>40</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.15</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RimValiFFA/Insect/Mosquito/Mosquito</texPath>
+					<drawSize>1</drawSize>
+					<color>(255,255,255)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>RimValiFFA/Insect/Mosquito/Mosquito</texPath>
+					<drawSize>1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>RimValiFFA/Insect/Mosquito/Mosquito</texPath>
+					<drawSize>1.25</drawSize>
+					<color>(255,255,255)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>RimValiFFA/Insect/Mosquito/Mosquito</texPath>
+					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>RimValiFFA/Insect/Mosquito/Mosquito</texPath>
+					<drawSize>1.5</drawSize>
+					<color>(255,255,255)</color>
+					<shadowData>
+						<volume>(0.2, 0.3, 0.2)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>RimValiFFA/Insect/Mosquito/Mosquito</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

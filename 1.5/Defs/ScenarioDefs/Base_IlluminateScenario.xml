@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ScenarioDef Name="Illuminate Colony">
-		<defName>RVFFA_IlluminateColontStarter</defName>
+		<defName>RVFFA_IlluminateColonyStarter</defName>
 		<label>Illuminate Colony</label>
 		<description>A starting Illuminate colony of 3 avali. The classic rimworld and rimvali experience.</description>
 		<scenario>
@@ -32,18 +32,21 @@
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>RVFFA_Viroblade</thingDef>
+					<stuff>Steel</stuff>
 					<count>1</count>
 				</li>
 
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>RVFFA_IlluminatePistol</thingDef>
+					<stuff>Steel</stuff>
 					<count>1</count>
 				</li>
 
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>RVFFA_Knife</thingDef>
+						<stuff>Steel</stuff>
 					<count>1</count>
 				</li>
 

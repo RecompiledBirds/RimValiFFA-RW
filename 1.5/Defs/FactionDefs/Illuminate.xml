@@ -69,45 +69,48 @@
 			<li>
 				<kindDef>Combat</kindDef>
 				<options>
-					<RVFFA_IlluminateSoldier>270</RVFFA_IlluminateSoldier>
-					<RVFFA_IlluminateEnhancedSoldier>300</RVFFA_IlluminateEnhancedSoldier>
-					<RVFFA_ColonyLeader>600</RVFFA_ColonyLeader>
-					<RVFFA_IlluminateSniper>350</RVFFA_IlluminateSniper>
-					<RVFFA_IlluminateFighter>250</RVFFA_IlluminateFighter>
+					<RVFFA_IlluminateSoldier>5</RVFFA_IlluminateSoldier>
+					<RVFFA_IlluminateEnhancedSoldier>5</RVFFA_IlluminateEnhancedSoldier>
+					<RVFFA_ColonyLeader>10</RVFFA_ColonyLeader>
+					<RVFFA_IlluminateSniper>5</RVFFA_IlluminateSniper>
+					<RVFFA_IlluminateFighter>5</RVFFA_IlluminateFighter>
 				</options>
 			</li>
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<RVFFA_IlluminateVillager>100</RVFFA_IlluminateVillager>
-					<RVFFA_ColonyLeader>200</RVFFA_ColonyLeader>
-					<RVFFA_IlluminateSoldier>50</RVFFA_IlluminateSoldier>
-					<RVFFA_IlluminateFighter>50</RVFFA_IlluminateFighter>
+					<RVFFA_IlluminateVillager>5</RVFFA_IlluminateVillager>
+					<RVFFA_ColonyLeader>10</RVFFA_ColonyLeader>
+					<RVFFA_IlluminateSoldier>10</RVFFA_IlluminateSoldier>
+					<RVFFA_IlluminateFighter>10</RVFFA_IlluminateFighter>
 				</options>
 			</li>
 			<li>
 				<kindDef>Trader</kindDef>
 				<traders>
-					<RVFFA_IlluminateTrader>200</RVFFA_IlluminateTrader>
+					<RVFFA_IlluminateTrader>1</RVFFA_IlluminateTrader>
 				</traders>
 				<carriers>
-					<Muffalo>5</Muffalo>
+					<Muffalo>6</Muffalo>
+					<Dromedary>5</Dromedary>
+					<Alpaca>2</Alpaca>
+					<Elephant>1</Elephant>
 				</carriers>
 				<guards>
-					<RVFFA_IlluminateSniper>350</RVFFA_IlluminateSniper>
-					<RVFFA_IlluminateEnhancedSoldier>500</RVFFA_IlluminateEnhancedSoldier>
-					<RVFFA_IlluminateSoldier>150</RVFFA_IlluminateSoldier>
+					<RVFFA_IlluminateSniper>3</RVFFA_IlluminateSniper>
+					<RVFFA_IlluminateEnhancedSoldier>7</RVFFA_IlluminateEnhancedSoldier>
+					<RVFFA_IlluminateSoldier>3</RVFFA_IlluminateSoldier>
 				</guards>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<RVFFA_IlluminateVillager>100</RVFFA_IlluminateVillager>
-					<RVFFA_TownGuard>100</RVFFA_TownGuard>
-					<RVFFA_ColonyLeader>600</RVFFA_ColonyLeader>
-					<RVFFA_IlluminateSoldier>270</RVFFA_IlluminateSoldier>
-					<RVFFA_IlluminateFighter>250</RVFFA_IlluminateFighter>
-					<RVFFA_IlluminateEnhancedSoldier>300</RVFFA_IlluminateEnhancedSoldier>
+					<RVFFA_IlluminateVillager>5</RVFFA_IlluminateVillager>
+					<RVFFA_TownGuard>10</RVFFA_TownGuard>
+					<RVFFA_ColonyLeader>10</RVFFA_ColonyLeader>
+					<RVFFA_IlluminateSoldier>10</RVFFA_IlluminateSoldier>
+					<RVFFA_IlluminateFighter>10</RVFFA_IlluminateFighter>
+					<RVFFA_IlluminateEnhancedSoldier>10</RVFFA_IlluminateEnhancedSoldier>
 				</options>
 			</li>
 		</pawnGroupMakers>

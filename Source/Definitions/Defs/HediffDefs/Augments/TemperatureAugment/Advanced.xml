@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
+		<defName>RVFFA_AdvancedTempControl</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cybernetics/Torso</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<techHediffsTags>
+			<li>AdvancedAvali</li>
+		</techHediffsTags>
+		<label>Advanced Temperature Control Augment (T.C.A.)</label>
+		<description>An advanced Temperature Control Augment (or just T.C.A.). This augment uses cooling and heating systems to regulate and keep the wearer within temperature ranges where the egg-whites won’t start decaying. This is the advanced version of it and is generally more reliable with regulating temperatures, but it isn’t powerful enough to deal with extremes.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>RVFFA_InstallTemperatureImplantAdv</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<RVFFA_ProcessedTungsten>20</RVFFA_ProcessedTungsten>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>0.3</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedImplantsTech</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>RVFFA_InstallTemperatureImplantAdv</defName>
+		<label>Install advanced Temperature Control Augment (T.C.A.)</label>
+		<description>Install advanced Temperature Control Augment (T.C.A.).</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_AdvancedTempControl</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing advanced Temperature Control Augment (T.C.A.).</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_AdvancedTempControl</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_AdvancedTempControl</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Torso</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RVFFA_AdvancedTempControl</addsHediff>
+	</RecipeDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>RVFFA_AdvancedTempControl</defName>
+		<label>Advanced T.C.A</label>
+		<description>An advanced Temperature Control Augment (or just TCA). This augment uses cooling and heating systems to regulate and keep the wearer within temperature ranges where the egg-whites won’t start decaying. This is the advanced version of it and is generally more reliable with regulating temperatures, but it isn’t powerful enough to deal with extremes.</description>
+		<spawnThingOnRemoved>RVFFA_AdvancedTempControl</spawnThingOnRemoved>
+		<ignoreIllegalLabelCharacterConfigError>True</ignoreIllegalLabelCharacterConfigError>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<ComfyTemperatureMax>45</ComfyTemperatureMax>
+					<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+		</comps>
+	</HediffDef>
+</Defs>

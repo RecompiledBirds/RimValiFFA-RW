@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BasePawn">
+		<defName>RVFFA_Avali</defName>
+		<label>Avali</label>
+		<description>Cute, fluffy raptors with highly advanced tech. The primary solvent in avali biology is ammonia, making them mostly incompatible with humans. Avali don't like being hot, as their blood boils at a much lower temp than a human's blood, but they can survive in the cold no problem.</description>
+		<statBases>
+			<MarketValue>1750</MarketValue>
+			<MoveSpeed>4.6</MoveSpeed>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<ComfyTemperatureMax>10</ComfyTemperatureMax>
+			<LeatherAmount>75</LeatherAmount>
+			<RoyalFavorValue>3</RoyalFavorValue>
+		</statBases>
+
+		<comps>
+			<li Class="RVCRestructured.RVRCannibalismComp">
+				<thoughts>
+					<li>
+						<race>RVFFA_Avali</race>
+						<rawEatenThought>RVFFA_AteAvaliLikeMeatDirect</rawEatenThought>
+						<rawCannibalThought>RVFFA_AteAvaliLikeMeatDirectCannibal</rawCannibalThought>
+						<cookedEatenThought>RVFFA_AteAvalilikeMeatAsIngredient</cookedEatenThought>
+						<cookedCannibalThought>RVFFA_AteAvalilikeMeatAsIngredientCannibal</cookedCannibalThought>
+					</li>
+				</thoughts>
+				<caresAboutUndefinedRaces>false</caresAboutUndefinedRaces>
+			</li>
+
+			<li Class="RVCRestructured.RVRBodyGetterComp">
+				<allowedBodyTypes>
+					<li>RVFFA_Avali</li>
+				</allowedBodyTypes>
+			</li>
+
+			<li Class="RVCRestructured.RVRGraphicsComp">
+				<renderableDefs>
+					<li>RVFFA_EyeL</li>
+					<li>RVFFA_EyeR</li>
+					<li>RVFFA_EarLL</li>
+					<li>RVFFA_EarLU</li>
+					<li>RVFFA_EarRL</li>
+					<li>RVFFA_EarRU</li>
+
+					<li>RVFFA_Head</li>
+
+					<li>RVFFA_Body</li>
+
+					<li>RVFFA_Tail</li>
+					<li>RVFFA_TailSkirt</li>
+
+					<li>RVFFA_Mouth</li>
+				</renderableDefs>
+				<colorGenerators>
+					<li>
+						<name>Eyes</name>
+						<colorGenerator>
+							<colorOne Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(0, 0, 0)</min>
+										<max>(255, 255, 255)</max>
+									</li>
+								</options>
+							</colorOne>
+							<colorTwo Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorTwo>
+							<colorThree Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(40, 40, 40)</min>
+										<max>(60, 60, 60)</max>
+									</li>
+								</options>
+							</colorThree>
+						</colorGenerator>
+					</li>
+					<li>
+						<name>Feathers</name>
+						<colorGenerator>
+							<colorOne Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(200, 200, 200)</min>
+										<max>(255, 255, 255)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>5</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorOne>
+							<colorTwo Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorTwo>
+							<colorThree Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(50, 50, 50)</min>
+										<max>(200, 200, 200)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(40, 40, 40)</min>
+										<max>(60, 60, 60)</max>
+									</li>
+								</options>
+							</colorThree>
+
+						</colorGenerator>
+						<colorGeneratorFemale>
+							<colorOne Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(185, 185, 185)</min>
+										<max>(215, 215, 215)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>1</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorOne>
+							<colorTwo Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(185, 185, 185)</min>
+										<max>(215, 215, 215)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>1</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorTwo>
+							<colorThree Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>(185, 185, 185)</min>
+										<max>(215, 215, 215)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>(220, 220, 220)</min>
+										<max>(240, 240, 240)</max>
+									</li>
+									<li>
+										<weight>1</weight>
+										<min>RGBA(40, 40, 40, 255)</min>
+										<max>RGBA(60, 60, 60, 255)</max>
+									</li>
+								</options>
+							</colorThree>
+
+						</colorGeneratorFemale>
+					</li>
+				</colorGenerators>
+			</li>
+			<li Class="RVCRestructured.RVRRestrictionComp">
+				<restrictions>
+					<modRestrictions>
+						<Nesi.RimValiFFARW>
+							<BodyTypeDef>RequiredAndWhitelist</BodyTypeDef>
+							<Equipment>WhiteListSelf</Equipment>
+							<Building>WhiteListSelf</Building>
+							<ResearchDef>WhiteListSelf</ResearchDef>
+							<Apparel>WhiteListSelf</Apparel>
+							<Beds>WhiteListSelf</Beds>
+						</Nesi.RimValiFFARW>
+					</modRestrictions>
+					
+					<defRestrictions>
+						<ThoughtDef>
+							<EnvironmentDark>BlackListSelf</EnvironmentDark>
+							<Naked>BlackListSelf</Naked>
+							<SleepDisturbed>BlackListSelf</SleepDisturbed>
+							<SharedBed>BlackListSelf</SharedBed>
+							<ObservedLayingCorpse>BlackListSelf</ObservedLayingCorpse>
+							<ButcheredHumanlikeCorpse>BlackListSelf</ButcheredHumanlikeCorpse>
+							<KnowButcheredHumanlikeCorpse>BlackListSelf</KnowButcheredHumanlikeCorpse>
+						</ThoughtDef>
+						<TraitDef>
+							<BodyPurist>BlackListSelf</BodyPurist>
+							<Transhumanist>BlackListSelf</Transhumanist>
+							<RVFFA_PackBroken>WhiteListSelf</RVFFA_PackBroken>
+						</TraitDef>
+						<XenotypeDef>
+							<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">WhiteListSelf</RVFFA_BaseAvaliXenoType>
+						</XenotypeDef>
+					</defRestrictions>
+					
+					<alwaysAllowed>
+						<Apparel/>
+					</alwaysAllowed>
+				</restrictions>
+			</li>
+
+			<li Class="RVCRestructured.RVRThoughtComp">
+				<thoughtReplacers>
+					<li>
+						<toReplace>SleptInBedroom</toReplace>
+						<replacer>RVFFA_SleptAlone</replacer>
+					</li>
+					<li>
+						<toReplace>SleptInBarracks</toReplace>
+						<replacer>RVFFA_SharedRoom</replacer>
+					</li>
+				</thoughtReplacers>
+			</li>
+			<li Class="RVCRestructured.RVRCP">
+
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.07</chanceFactor>
+				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>80</lifeExpectancy>
+			<leatherDef>RVFFA_AvaliLeather</leatherDef>
+			<nameGenerator>RVFFA_AvaliNamer</nameGenerator>
+			<body>RVFFA_AvaliBody</body>
+			<baseBodySize>1</baseBodySize>
+			<bloodDef>RVFFA_Avali_Filth_Blood</bloodDef>
+			<bloodSmearDef>RVFFA_Avali_Filth_BloodSmear</bloodSmearDef>
+			<renderTree>RVFFA_RenderTree</renderTree>
+			<baseHealthScale>1</baseHealthScale>
+			<foodType>OmnivoreHuman</foodType>
+			<gestationPeriodDays>18</gestationPeriodDays>
+			<meatMarketValue>0.8</meatMarketValue>
+			<manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>HumanlikeChild</def>
+					<minAge>3</minAge>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>9</minAge>
+				</li>
+				<li>
+					<def>HumanlikeTeenager</def>
+					<minAge>13</minAge>
+				</li>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>18</minAge>
+				</li>
+			</lifeStageAges>
+			<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+				<Firefighter>7</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>10</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+				<BasicWorker>7</BasicWorker>
+				<Warden>10</Warden>
+				<Handling>7</Handling>
+				<Cooking>7</Cooking>
+				<Hunting>7</Hunting>
+				<Construction>10</Construction>
+				<Growing>7</Growing>
+				<Mining>7</Mining>
+				<PlantCutting>7</PlantCutting>
+				<Smithing>13</Smithing>
+				<Tailoring>7</Tailoring>
+				<Art>10</Art>
+				<Crafting>7</Crafting>
+				<Hauling>3</Hauling>
+				<Cleaning>3</Cleaning>
+				<Research>13</Research>
+			</lifeStageWorkSettings>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<points>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>
+					<!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->
+					<li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li>
+					<!-- End exclude -->
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+					<li>(14,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+					<li>(16,100)</li>
+					<li>(50,100)</li>
+					<li>(60,30)</li>
+					<li>(70,18)</li>
+					<li>(80,10)</li>
+					<li>(90,3)</li>
+					<li>(100,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+				<li>Human</li>
+			</hediffGiverSets>
+		</race>
+		<recipes>
+			<li>RVFFA_InstallAdvTail</li>
+			<li>RVFFA_InstallBasicBionicTail</li>
+			<li>RVFFA_InstallBasicArm</li>
+			<li>RVFFA_InstallAdvArm</li>
+			<li>RVFFA_InstallAdvEar</li>
+			<li>RVFFA_InstallBasicBionicEar</li>
+			<li>RVFFA_InstallAdvancedBionicLeg</li>
+			<li>RVFFA_InstallBasicBionicLeg</li>
+			<li>RVFFA_InstallAutophagicSystemRewrite</li>
+			<li>RVFFA_InstallPackReplacement</li>
+			<li>RVFFA_Install_Parallel_Arm</li>
+			<li>RVFFA_InstallPositiveEnforcement</li>
+			<li>RVFFA_InstallSocialEnhancer</li>
+			<li>RVFFA_Install_Tetradactyly_Utilitizer</li>
+			<li>RVFFA_InstallVocalReplacements</li>
+			<li>RVFFA_InstallWingBlades</li>
+			<li>RVFFA_InstallBasicTemperatureControl</li>
+			<li>RVFFA_InstallTemperatureImplantAdv</li>
+			<li>RVFFA_InstallMicroPlantingDrones</li>
+			<li>RVFFA_InstallMiningDrones</li>
+			<li>RVFFA_InstallConstructionDrones</li>
+		</recipes>
+		<inspectorTabs>
+			<li>RimValiFFARW.Packs.PackInspectionWindow</li>
+		</inspectorTabs>
+		<ingredient>
+			<mergeCompatibilityTags>
+				<li>AvaliMeat</li>
+			</mergeCompatibilityTags>
+		</ingredient>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef>
+		<defName>RVFFA_MakeSabot</defName>
+		<label>Forge sabots</label>
+		<description>Forge sabots from tungsten.</description>
+		<jobString>Forging sabots</jobString>
+		<workAmount>150</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_ProcessedTungsten</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<RVFFA_Sabot>5</RVFFA_Sabot>
+		</products>
+
+		<researchPrerequisites>
+			<li>RVFFA_TurretTech</li>
+		</researchPrerequisites>
+	</RecipeDef>
+</Defs>

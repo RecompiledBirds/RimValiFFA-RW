@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_BaseBullet">
+		<defName>RVFFA_ShotgunBullet</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/ShotgunBullet</texPath>
+		</graphicData>
+		<projectile>
+			<stoppingPower>3</stoppingPower>
+			<damageAmountBase>24</damageAmountBase>
+			<speed>150</speed>
+			<armorPenetrationBase>0.33</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_WeaponMakeableLathe">
+		<defName>RVFFA_IlluminateShotgun</defName>
+		<label>Illuminate Shotgun</label>
+		<description>An Illuminate Pattern shotgun. Together with its advanced coil technology and a simple choke at the end, it fires a highly concentrated wad of pellets towards its enemies. Whilst longer range than its Terran counterparts, it has to trade in short range usability to make this possible.</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Shotgun</texPath>
+		</graphicData>
+
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>22000</WorkToMake>
+			<Mass>5.0</Mass>
+			<AccuracyTouch>0.68</AccuracyTouch>
+			<AccuracyShort>0.79</AccuracyShort>
+			<AccuracyMedium>0.82</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>70</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>3</RVFFA_ProcessedTungsten>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_ShotgunBullet</defaultProjectile>
+				<warmupTime>1.9</warmupTime>
+				<range>24</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

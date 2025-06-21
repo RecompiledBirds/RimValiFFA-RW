@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RVFFA_IW_Machinegun_Bullet</defName>
+		<label>Bullet</label>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<stoppingPower>0.5</stoppingPower>
+			<speed>100</speed>
+			<armorPenetrationBase>0.12</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>RVFFA_IW_Machinegun</defName>
+		<label>Independent Worlds light machine gun</label>
+		<description>A rapid-fire non-Illuminate LMG. Throwing away more popular doctrines of accuracy and controllability. This weapon is capable of firing enough projectiles to make a certain area wholly suppressed. Whilst it certainly has this high fire-power, this comes at the expense of the Avali wielder who needs time to zero it in again after usage.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Independent_MG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.4</uiIconScale>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>10.5</Mass>
+			<AccuracyTouch>0.18</AccuracyTouch>
+			<AccuracyShort>0.29</AccuracyShort>
+			<AccuracyMedium>0.3</AccuracyMedium>
+			<AccuracyLong>0.24</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_IW_Machinegun_Bullet</defaultProjectile>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<burstShotCount>28</burstShotCount>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<range>28.5</range>
+				<warmupTime>1.9</warmupTime>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<costList>
+			<Steel>125</Steel>
+			<ComponentIndustrial>17</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

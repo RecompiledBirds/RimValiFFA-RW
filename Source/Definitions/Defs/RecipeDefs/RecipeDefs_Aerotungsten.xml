@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef Name="RVFFA_BaseAeroTungstenCarbideRecipe" Abstract="True">
+		<label>Forge Aero-Tungsten Carbide</label>
+		<description>Create a supermaterial, forged from Aerogel, Tungsten, and several other resources.</description>
+		<jobString>Forging Aero-Tungsten</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+
+		<researchPrerequisites>
+			<li>RVFFA_AeroTungstenTech</li>
+		</researchPrerequisites>
+	</RecipeDef>
+
+	<RecipeDef ParentName="RVFFA_BaseAeroTungstenCarbideRecipe">
+		<defName>RVFFA_ForgeAeroTungstenCarbide</defName>
+		<label>Forge aero-tungsten carbide</label>
+		<workAmount>100</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Ferrogel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_ProcessedTungsten</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<RVFFA_AeroTungstenCarbide>25</RVFFA_AeroTungstenCarbide>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="RVFFA_BaseAeroTungstenCarbideRecipe">
+		<defName>RVFFA_ForgeAeroTungstenCarbideTwo</defName>
+		<label>Forge aero-tungsten carbide (50)</label>
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Ferrogel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_ProcessedTungsten</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<RVFFA_AeroTungstenCarbide>50</RVFFA_AeroTungstenCarbide>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="RVFFA_BaseAeroTungstenCarbideRecipe">
+		<defName>RVFFA_ForgeAeroTungstenCarbideThree</defName>
+		<label>Forge aero-tungsten carbide (125)</label>
+		<workAmount>1000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Ferrogel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_ProcessedTungsten</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<RVFFA_AeroTungstenCarbide>125</RVFFA_AeroTungstenCarbide>
+		</products>
+	</RecipeDef>
+</Defs>

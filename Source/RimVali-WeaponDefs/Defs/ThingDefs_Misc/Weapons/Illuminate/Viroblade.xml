@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Viroblade</defName>
+		<label>Illuminate Viroblade</label>
+		<description>The renowned and highly iconic Illuminate sword. Perhaps it is the vibrating blade and the song-like hum it creates that makes it so popular. Or perhaps it is the splintering ferrogel blade instead, creating many deadly injuries. Whatever the reason may be, this blade has a legendary reputation and a bodycount to support it.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Viroblade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>AvaliWeapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<costList>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
+			<Steel>45</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
+		</costList>
+		<costStuffCount>120</costStuffCount>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>Viroblade Handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>3</cooldownTime>
+			</li>
+			<li>
+				<label>Viroblade guard</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>Viroblade</label>
+				<capacities>
+					<li>Stab</li>
+					<li>Cut</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.99</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>Viroblade point</label>
+				<capacities>
+					<li>Stab</li>
+					<li>Cut</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>3</cooldownTime>
+				<armorPenetration>0.99</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>25</amount>
+						<chance>0.1</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

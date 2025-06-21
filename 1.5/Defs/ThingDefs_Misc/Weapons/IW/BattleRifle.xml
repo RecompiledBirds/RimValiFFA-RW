@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RVFFA_BattleRifleBullet</defName>
+		<label>Bullet</label>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SmallBullet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>11</damageAmountBase>
+			<stoppingPower>1.5</stoppingPower>
+			<speed>135</speed>
+			<armorPenetrationBase>0.19</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseIWGun">
+		<defName>RVFFA_BattleRifle</defName>
+		<label>Independent Worlds battle rifle</label>
+		<description>A popular non-Illuminate battle rifle. The design of these simple rifles has quickly spread throughout the Rimworld to offer Avali both defensive and hunting capacities. Together with a regular old blowback-action design and its fast but small bullet, it brings a decent fire-rate and equally decent range to the table.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/vali_Primitive_semiauto</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.4</uiIconScale>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.66</AccuracyTouch>
+			<AccuracyShort>0.72</AccuracyShort>
+			<AccuracyMedium>0.82</AccuracyMedium>
+			<AccuracyLong>0.63</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RVFFA_BattleRifleBullet</defaultProjectile>
+				<warmupTime>1.2</warmupTime>
+				<range>32</range>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>BlowbackOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

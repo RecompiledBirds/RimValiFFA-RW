@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseWeapon" Name="RVFFA_BaseAvaliGun" Abstract="True">
+		<techLevel>Industrial</techLevel>
+		<smeltable>true</smeltable>
+		<thingCategories>
+			<li>WeaponsRanged</li>
+		</thingCategories>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>RVFFA_Weapons</li>
+		</weaponTags>
+	</ThingDef>
+
+	<ThingDef Name="RVFFA_WeaponMakeableLathe" ParentName="RVFFA_BaseAvaliGun" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>RVFFA_NanoForge</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+			<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet" Name="RVFFA_BaseBullet" Abstract="True">
+		<label>bullet</label>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseHumanMakeableGun" Name="RVFFA_BaseIWGun" Abstract="True">
+		<weaponTags>
+			<li>RVFFA_IWAvaliWeapons</li>
+		</weaponTags>
+	</ThingDef>
+</Defs>

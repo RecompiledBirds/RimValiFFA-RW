@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<RootNamespace>RimVali_StoryTellers</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>12.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<OutputPath>../../1.6/Assemblies</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4495-beta" />
+		<PackageReference Include="Lib.Harmony" Version="2.3.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\RimVali-Defs\RimVali-DefOfs.csproj" />
+		<ProjectReference Include="..\RimVali-WeaponCode\RimVali-WeaponCode.csproj" />
+	</ItemGroup>
+
+</Project>

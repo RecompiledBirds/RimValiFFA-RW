@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Axe</defName>
+		<label>Illuminate Axe</label>
+		<description>A dangerous Illuminate battle axe. Truly meant for combat and for breaching, this weapon uses vibrations to cut into the skin of the enemy, after multiple hits the blade will break off and stick in its target’s flesh before rapidly being reconstructed by the printer in its head. It is renowned for its brutality and the surprising force an Avali can strike down with it.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Axe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>RVFFA_Weapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
+			<Steel>45</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>15</ComponentSpacer>
+		</costList>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>Illuminate Axe Handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2.1</cooldownTime>
+			</li>
+			<li>
+				<label>Illuminate Axe Blade</label>
+				<capacities>
+					<li>Demolish</li>
+					<li>Cut</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>0.5</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Cut</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnRenderTreeDef Name="RVFFA_BaseRenderTree">
+		<defName>RVFFA_RenderTree</defName>
+		<root Class="PawnRenderNodeProperties_Parent">
+			<debugLabel>Root</debugLabel>
+			<tagDef>Root</tagDef>
+			<drawData>
+				<scale>0.5</scale>
+				<childScale>0.25</childScale>
+				<defaultData>
+					<offset>(0,0,-.2)</offset>
+				</defaultData>
+			</drawData>
+			<children>
+				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+					<def>RVFFA_Body</def>
+					<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+					<tagDef>Body</tagDef>
+					<skipFlag>Body</skipFlag>
+					<children>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Wounds - pre apparel</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>8</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Swaddle" MayRequire="Ludeon.RimWorld.Biotech">
+							<debugLabel>Baby swaddle</debugLabel>
+							<nodeClass>PawnRenderNode_Swaddle</nodeClass>
+							<workerClass>PawnRenderNodeWorker_Swaddle</workerClass>
+							<texPath>Things/Pawn/Humanlike/Apparel/SwaddledBaby/Swaddled_Child</texPath>
+							<swaddleColorOffset>0.1</swaddleColorOffset>
+							<brightnessRange>0.6~0.89</brightnessRange>
+							<baseLayer>10</baseLayer>
+							<drawData>
+								<scale>1.75</scale>
+							</drawData>
+						</li>
+						<li Class="PawnRenderNodeProperties_Parent">
+							<debugLabel>Apparel root</debugLabel>
+							<tagDef>ApparelBody</tagDef>
+							<baseLayer>20</baseLayer>
+							<drawData>
+								<scale>1.75</scale>
+							</drawData>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Wounds - post apparel</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+							<overlayOverApparel>true</overlayOverApparel>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>30</baseLayer>
+							
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Firefoam</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>40</baseLayer>
+						</li>
+
+						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+							<def>RVFFA_TailSkirt</def>
+							<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+							<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+							<drawData>
+								<dataEast>
+									<offset>(-0.25,0.001,-0.285)</offset>
+								</dataEast>
+								<dataNorth>
+									<layer>1</layer>
+								</dataNorth>
+							</drawData>
+							<children>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_Tail</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<drawData>
+										<dataEast>
+											<offset>(-0.5,0,0.5)</offset>
+										</dataEast>
+										<dataNorth>
+											<offset>(-0.15,1.5,0.1)</offset>
+
+										</dataNorth>
+										<dataSouth>
+											<offset>(0.3,0,0.1)</offset>
+										</dataSouth>
+									</drawData>
+								</li>
+							</children>
+						</li>
+						
+					</children>
+				</li>
+				
+				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties_Head">
+					<debugLabel>Head</debugLabel>
+					<def>RVFFA_Head</def>
+					<extraOffset>(0,0,-.16)</extraOffset>
+					<workerClass>RVCRestructured.RVR.RNodeWorker_Head</workerClass>
+					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+					<tagDef>Head</tagDef>
+					<skipFlag>Head</skipFlag>
+					<baseLayer>10</baseLayer>
+					<drawData>
+						<dataNorth>
+							<offset>(0,0,0.75)</offset>
+						</dataNorth>
+						<dataEast>
+							<offset>(0.09,0,0.75)</offset>
+						</dataEast>
+						<dataSouth>
+							<offset>(0,0,0.75)</offset>
+						</dataSouth>
+					</drawData>
+					<children>
+						<li Class="PawnRenderNodeProperties_Parent">
+							<children>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarLL</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.34,-.1,.1)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.34,.1,.1)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarRL</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.34,.1,.1)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.34,-.1,.1)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarLU</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.27,-.1,0)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.27,.1,0)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EarRU</def>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+									<baseLayer>15</baseLayer>
+									<drawData>
+										<dataEast>
+											<offset>(-.27,.1,0)</offset>
+										</dataEast>
+										<dataWest>
+											<offset>(.27,-.1,0)</offset>
+										</dataWest>
+									</drawData>
+								</li>
+
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_Mouth</def>
+									<baseLayer>15</baseLayer>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EyeL</def>
+									<baseLayer>15</baseLayer>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+								</li>
+								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+									<def>RVFFA_EyeR</def>
+									<baseLayer>15</baseLayer>
+									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
+									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
+								</li>
+							</children>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Head wounds</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+							<overlayLayer>Head</overlayLayer>
+							<baseLayer>65</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Parent">
+							<debugLabel>Apparel root</debugLabel>
+							<tagDef>ApparelHead</tagDef>
+							<baseLayer>70</baseLayer>
+							<drawData>
+								<scale>1.75</scale>
+							</drawData>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Firefoam</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+							<overlayLayer>Head</overlayLayer>
+							<baseLayer>85</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Status overlay</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
+							<baseLayer>100</baseLayer>
+						</li>
+					</children>
+				</li>
+
+				<li Class="PawnRenderNodeProperties_Carried">
+					<debugLabel>Weapon/carried thing</debugLabel>
+					<workerClass>PawnRenderNodeWorker_Carried</workerClass>
+				</li>
+			</children>
+		</root>
+	</PawnRenderTreeDef>
+</Defs>

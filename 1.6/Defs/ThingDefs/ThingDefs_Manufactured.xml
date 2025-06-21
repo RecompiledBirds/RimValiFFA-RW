@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="RVFFA_BaseItem">
+        <defName>RVFFA_Ferrogel</defName>
+        <label>Ferrogel</label>
+        <description>Often mistranslated to aerogel, ferrogel is the base building block of many avali technologies. It's been made in neat, stackable pucks for easy storage.</description>
+
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+
+        <graphicData>
+            <texPath>RimValiFFA/Things/Aerogel/BaseAerogel/Aerogel</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>10</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.2</DeteriorationRate>
+			
+			<StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>5</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+          </statBases>
+
+        <stuffProps>
+            <stuffAdjective>Ferrogel</stuffAdjective>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+
+            <commonality>0</commonality>
+
+            <color>RGBA(255,199,33,200)</color>
+            <constructEffect>ConstructMetal</constructEffect>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+
+            <statFactors>
+                <Beauty>1.5</Beauty>
+                <Flammability>0</Flammability>
+                <MarketValue>1.4</MarketValue>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <MaxHitPoints>0.5</MaxHitPoints>
+                <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+
+        </stuffProps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_ProcessedTungsten</defName>
+		<label>Processed Tungsten</label>
+		<description>Crushed tungsten; it's ready for the heat and pressure treatment to mold it now.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_Tungsten</ThingDef>
+		</descriptionHyperlinks>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Tungsten/TungstenPowder</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>12</MarketValue>
+			<Mass>1.2</Mass>
+			<Flammability>0</Flammability>
+			<StuffPower_Armor_Sharp>1.0</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.65</StuffPower_Armor_Heat>
+
+			<StuffPower_Insulation_Cold>0.7</StuffPower_Insulation_Cold>
+			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+		</statBases>
+
+
+		<stuffProps>
+			<stuffAdjective>Tungsten</stuffAdjective>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.5</commonality>
+			<color>(176,176,176)</color>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>4.0</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0</Flammability>
+				<MarketValue>.37</MarketValue>
+				<WorkToMake>4.6</WorkToMake>
+				
+				<WorkToBuild>4.6</WorkToBuild>
+				<StuffPower_Insulation_Cold>1</StuffPower_Insulation_Cold>
+				<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+			</statFactors>
+			<statOffsets>
+				<Beauty>1</Beauty>
+			</statOffsets>
+		</stuffProps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_AeroTungstenCarbide</defName>
+		<label>Aero-tungsten carbide</label>
+		<description>A supermaterial. This material is a hybrid of tungsten and aerogel, to make one of the strongest resources avali have ever made.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_ProcessedTungsten</ThingDef>
+		</descriptionHyperlinks>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Tungsten/AeroTungsten</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<Mass>1.5</Mass>
+			<MaxHitPoints>0.8</MaxHitPoints>
+			<StuffPower_Armor_Sharp>2.0</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.2</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.3</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>1.3</StuffPower_Insulation_Cold>
+			<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+
+		<stuffProps>
+			<stuffAdjective>Aero-Tungsten Carbide</stuffAdjective>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.5</commonality>
+			<color>(255,255,255)</color>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>8.5</MaxHitPoints>
+				<Beauty>1.2</Beauty>
+				<Flammability>0</Flammability>
+				<MarketValue>0.6</MarketValue>
+				<WorkToMake>5.2</WorkToMake>
+				<WorkToBuild>5.2</WorkToBuild>
+			</statFactors>
+			<statOffsets>
+				<Beauty>4</Beauty>
+			</statOffsets>
+		</stuffProps>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_Nanomachines</defName>
+		<label>nanomachines</label>
+		<comps>
+			<li Class= "RVCRestructured.Comps.HealableMaterialCompProperties">
+				<amountHealed>20</amountHealed>
+				<ticksBetweenHeal>30</ticksBetweenHeal>
+			</li>
+		</comps>
+		<description>A group of specialised nanomachines, capable of reshaping and reparing themselves.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Nanomachines/Nanomachines</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>4000</MarketValue>
+			<Mass>1.5</Mass>
+			<MaxHitPoints>100.0</MaxHitPoints>
+			<DeteriorationRate>0.1</DeteriorationRate>
+			<StuffPower_Armor_Sharp>3.0</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.9</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>1.3</StuffPower_Insulation_Cold>
+			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+		</statBases>
+		<stuffProps>
+			<stuffAdjective>Nanomachine</stuffAdjective>
+			<categories>
+				<li>Metallic</li>
+				<li>Fabric</li>
+				<li>Leathery</li>
+				<li>Stony</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<color>(255,255,255)</color>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>10.0</MaxHitPoints>
+				<Beauty>1.2</Beauty>
+				<Flammability>0</Flammability>
+				<MarketValue>10.5</MarketValue>
+				<WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+			</statFactors>
+			<statOffsets>
+				<Beauty>4</Beauty>
+			</statOffsets>
+		</stuffProps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseClothItem">
+		<defName>RVFFA_RefinedCarbon</defName>
+		<label>Refined Carbon</label>
+		<description>A type of avali fabric, stored in neat, stackable pucks (similar to &lt;color=#0099ff&gt;aerogel&lt;/color&gt;).</description>
+    	<descriptionHyperlinks><ThingDef>RVFFA_Ferrogel</ThingDef></descriptionHyperlinks>
+		
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cloth/NanoCarbon</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>1.3</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+		</statBases>
+
+		<stuffProps>
+
+			<categories Inherit="False">
+				<li>Metallic</li>
+			</categories>
+
+			<stuffAdjective>Refined Carbon</stuffAdjective>
+			<commonality>0</commonality>
+			<color>(48,48,48)</color>
+
+			<statFactors>
+                <Flammability>0</Flammability>
+                <MarketValue>1.3</MarketValue>
+                <WorkToMake>1.5</WorkToMake>
+                <WorkToBuild>1.5</WorkToBuild>
+                <MaxHitPoints>1.1</MaxHitPoints>
+                <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseClothItem">
+		<defName>RVFFA_FerroWeave</defName>
+		<label>Ferroweave</label>
+		<description>Avali aeroweave. It's a terrible at conducting heat, which makes it an amazing insulator for clothing and such.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cloth/Aeroweave</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>3.5</MarketValue>
+			<Mass>0.08</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+			<MaxHitPoints>2.2</MaxHitPoints>
+			<BedRestEffectiveness>1.25</BedRestEffectiveness>
+			<StuffPower_Insulation_Cold>19.5</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>19.5</StuffPower_Insulation_Heat>
+			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>3.5</StuffPower_Armor_Heat>
+
+			<WorkToMake>1.9</WorkToMake>
+			<WorkToBuild>1.9</WorkToBuild>
+		</statBases>
+
+		<stuffProps>
+			<stuffAdjective>Ferroweave</stuffAdjective>
+			<commonality>0.5</commonality>
+      		<color>RGBA(244,119,33, 240)</color>
+
+			<statFactors>
+				<MaxHitPoints>2.2</MaxHitPoints>
+				<BedRestEffectiveness>1.25</BedRestEffectiveness>
+				<MarketValue>1.5</MarketValue>
+				<Mass>0.1</Mass>
+				<WorkToMake>1.5</WorkToMake>
+				<WorkToBuild>1.5</WorkToBuild>
+				<Flammability>0</Flammability>
+				<Beauty>1</Beauty>
+			</statFactors>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseClothItem">
+		<defName>RVFFA_NanoFiber</defName>
+		<label>Nanofiber</label>
+		<description>AvFali nanofiber is very important. They use it in clothing, their tents, and more! It's fairly strong too, for a cloth-like material</description>
+
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cloth/Nanofibre</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>2.1</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+			<MaxHitPoints>20</MaxHitPoints>
+			<StuffPower_Insulation_Cold>15</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>3.5</StuffPower_Insulation_Heat>
+			<StuffPower_Armor_Sharp>0.7</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.45</StuffPower_Armor_Heat>
+			<WorkToMake>1.1</WorkToMake>
+			<WorkToBuild>1.1</WorkToBuild>
+			<Beauty>1.1</Beauty>
+		</statBases>
+
+		<stuffProps>
+			<stuffAdjective>Nanofiber</stuffAdjective>
+			<commonality>0.5</commonality>
+      		<color>(186,178,164)</color>
+
+			<statFactors>
+				<MaxHitPoints>1.3</MaxHitPoints>
+				 <BedRestEffectiveness>1.1</BedRestEffectiveness>
+        		<MarketValue>1.2</MarketValue>
+        		<Mass>0.05</Mass>
+        		<WorkToMake>1.1</WorkToMake>
+        		<WorkToBuild>1.1</WorkToBuild>
+        		<Beauty>1.1</Beauty>
+        		<Flammability>0.2</Flammability>
+			</statFactors>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseClothItem">
+		<defName>RVFFA_NanoCarbonFiber</defName>
+		<label>Nanocarbon fiber</label>
+		<description>A special type of nano fiber, with carbon woven in. This version is more resistant to damage like bullets, but is stiff, slowing the wearer.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cloth/CarbonFiber</texPath>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>3.3</MarketValue>
+			<Mass>0.08</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+			<MaxHitPoints>2.2</MaxHitPoints>
+			<WorkToMake>1.9</WorkToMake>
+			<WorkToBuild>1.9</WorkToBuild>
+			<StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>22</StuffPower_Insulation_Heat>
+			<StuffPower_Armor_Sharp>2.05</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.75</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.3</StuffPower_Armor_Heat>
+    	</statBases>
+		
+		<stuffProps>
+			<color>RGBA(41, 41, 41, 255)</color>
+			<statFactors>
+				<MaxHitPoints>2.85</MaxHitPoints>
+				<BedRestEffectiveness>1.15</BedRestEffectiveness>
+
+				<MarketValue>2.2</MarketValue>
+				<Mass>0.08</Mass>
+				<WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+      		</statFactors>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseClothItem">
+		<defName>RVFFA_AeroTungstenFiber</defName>
+		<label>Tungsten-aerofiber</label>
+		<description>Tungsten-Aero fiber is a strong, resilient material made from a combination of aero tungsten carbide, and nano carbon fiber.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Cloth/TungstenAero-Fiber</texPath>
+		</graphicData>
+
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<MarketValue>10</MarketValue>
+			<Mass>0.038</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<StuffPower_Armor_Sharp>2.05</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>2.9</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>29</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>28</StuffPower_Insulation_Heat>
+   		</statBases>
+
+		<stuffProps>
+			<stuffAdjective>Tungsten-aerofiber</stuffAdjective>
+			<commonality>0.5</commonality>
+      		<color>(135,94,70)</color>
+			<statOffsets>
+        		<Beauty>2</Beauty>
+      		</statOffsets>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_Sabot</defName>
+		<label>Sabot</label>
+		<description>Ammunition for a large railgun.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Turrets/BFG/BFG_sabot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>2</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0.1</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+			<StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+		</statBases>
+	</ThingDef>
+</Defs>

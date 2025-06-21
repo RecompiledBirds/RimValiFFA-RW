@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.FactionRestrictionsDef>
+		<defName>RVFFA_IWResearchRestrictions</defName>
+		<factionDef>RVFFA_IWPlayer</factionDef>
+		<disallowedResearch>
+			<li>RVFFA_BasicStartTech</li>
+			<li>RVFFA_LathingTech</li>
+			<li>RVFFA_FerrogelTech</li>
+			<li>RVFFA_CarbonTech</li>
+			<li>RVFFA_TungstenProcessingTech</li>
+			<li>RVFFA_AdvancedImplantsTech</li>
+			<li>RVFFA_MicrodronesTech</li>
+			<li>RVFFA_Nanomachines</li>
+			<li>RVFFA_BasicBionicsTech</li>
+			<li>RVFFA_AdvancedBionicsTech</li>
+			<li>RVFFA_BasicWeaponsTech</li>
+			<li>RVFFA_AdvancedWeaponryTech</li>
+			<li>RVFFA_TurretTech</li>
+			<li>RVFFA_AIMSTech</li>
+			<li>RVFFA_AERIALTech</li>
+			<li>RVFFA_AdvancedMeleeWeaponsTech</li>
+			<li>RVFFA_AeroTungstenTech</li>
+			<li>RVFFA_LoomTech</li>
+			<li>RVFFA_NanoFiberTech</li>
+			<li>RVFFA_BasicApparelTech</li>
+			<li>RVFFA_ScoutingTech</li>
+			<li>RVFFA_CombatTech</li>
+			<li>RVFFA_SpecOpsTech</li>
+			<li>RVFFA_CarbonNanoFiberTech</li>
+			<li>RVFFA_FerroweaveTech</li>
+			<li>RVFFA_ThermalWrapsTech</li>
+			<li>RVFFA_AeroTungstenFiberTech</li>
+			<li>RVFFA_BasicImplantsTech</li>
+		</disallowedResearch>
+	</RVCRestructured.FactionRestrictionsDef>
+</Defs>

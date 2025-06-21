@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
+		<defName>RVFFA_Knife</defName>
+		<label>Illuminate knife</label>
+		<description>A small Illuminate survival knife. Whilst primarily used together with its vibrating blade as a tool to cut food and small objects with, it is still a dangerous hold-out weapon, able to use its vibrating blade to cut through an enemy with ease and being able to reprint the blade when it shatters in the enemy or simply gets too dull with just the same amount of ease.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Melee/Knife</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>AvaliWeapons</li>
+			<li>AvaliMelee</li>
+		</weaponTags>
+		<costList>
+			<RVFFA_Ferrogel>5</RVFFA_Ferrogel>
+			<Steel>5</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>1400</WorkToMake>
+			<Mass>0.6</Mass>
+		</statBases>
+		<costStuffCount>30</costStuffCount>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>knife Handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>knife Blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>knife point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>RVFFA_BasicWeaponsTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

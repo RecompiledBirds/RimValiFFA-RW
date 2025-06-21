@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <RootNamespace>RimVali_Defs</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+	  <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <Nullable>enable</Nullable>
+	  <LangVersion>12.0</LangVersion>
+	  <OutputPath>../../1.6/Assemblies</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4488-beta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="RVCRestructured">
+      <HintPath>..\..\..\Vine\1.6\Assemblies\RVCRestructured.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

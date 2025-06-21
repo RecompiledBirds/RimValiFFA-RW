@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Rimvali custom ignores
+*.dll
+
 # User-specific files
 *.rsuser
 *.suo
@@ -333,3 +336,6 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 /1.5/Assemblies/RimValiFFARW.dll
+/Main/Textures/RimValiFFA - Textures Requiring Update.zip
+/Main/Textures/Things - Textures Requiring Update.zip
+/1.6/Defs
