@@ -73,7 +73,7 @@
 					<li>Cut</li>
 				</capacities>
 				<power>25</power>
-				<cooldownTime>4</cooldownTime>
+				<cooldownTime>3</cooldownTime>
 				<armorPenetration>0.99</armorPenetration>
 				<extraMeleeDamages>
 					<li>

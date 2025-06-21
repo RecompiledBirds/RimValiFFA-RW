@@ -20,11 +20,12 @@
 			<li>RVFFA_Weapons</li>
 			<li>AvaliMelee</li>
 		</weaponTags>
+		<costStuffCount>50</costStuffCount>
 		<costList>
 			<RVFFA_Ferrogel>25</RVFFA_Ferrogel>
 			<Steel>50</Steel>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>8</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<statBases>
 			<WorkToMake>3000</WorkToMake>
@@ -57,10 +58,11 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<researchPrerequisite>RVFFA_AdvancedMeleeWeaponsTech</researchPrerequisite>
+			<researchPrerequisite>RVFFA_BasicWeaponsTech</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
+			
 		</recipeMaker>
 	</ThingDef>
 </Defs>

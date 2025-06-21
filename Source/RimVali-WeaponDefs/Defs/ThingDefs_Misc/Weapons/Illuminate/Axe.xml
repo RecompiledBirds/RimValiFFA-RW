@@ -3,7 +3,7 @@
 	<ThingDef ParentName="RVFFA_SharpMeleeWithQuality">
 		<defName>RVFFA_Axe</defName>
 		<label>Illuminate Axe</label>
-		<description>A dangerous Illuminate battle axe. Truly meant for combat, this weapon uses vibrations to cut into the skin of the enemy, after multiple hits the blade will break off and stick in its target’s flesh before rapidly being reconstructed by the printer in its head. It is renowned for its brutality and the surprising force an Avali can strike down with it.</description>
+		<description>A dangerous Illuminate battle axe. Truly meant for combat and for breaching, this weapon uses vibrations to cut into the skin of the enemy, after multiple hits the blade will break off and stick in its target’s flesh before rapidly being reconstructed by the printer in its head. It is renowned for its brutality and the surprising force an Avali can strike down with it.</description>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Weapons/Melee/Axe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

@@ -29,7 +29,7 @@
 		</tradeTags>
 	</ThingDef>
 
-	<ThingDef Name="RVFFA_BaseMeleeWeapon_Sharp" ParentName="BaseMeleeWeapon" Abstract="True">
+	<ThingDef Name="RVFFA_BaseMeleeWeapon_Sharp" ParentName="RVFFA_BaseMeleeWeapon" Abstract="True">
 		<weaponClasses>
 			<li>MeleePiercer</li>
 		</weaponClasses>
