@@ -194,7 +194,7 @@
 		<description>The AERIAL system is the final solution to all long-range attacks, featuring high-power explosives, a fully automated launch system, and the capacity to hold 6 rockets at one, as well as simultaneously fire two at once.</description>
 		<researchViewX>9.00</researchViewX>
 		<researchViewY>4.05</researchViewY>
-		<baseCost>5000</baseCost>
+		<baseCost>10000</baseCost>
 		<prerequisites>
 			<li>RVFFA_AIMSTech</li>
 		</prerequisites>

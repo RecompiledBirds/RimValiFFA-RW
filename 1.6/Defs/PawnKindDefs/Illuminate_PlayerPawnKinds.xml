@@ -12,11 +12,12 @@
 		<apparelMoney>350~1000</apparelMoney>
 		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 		<techHediffsChance>0.03</techHediffsChance>
-		<techHediffsMoney>50~800</techHediffsMoney>
+		<techHediffsMoney>100~1000</techHediffsMoney>
 		<techHediffsTags>
 			<li>Poor</li>
 			<li>Simple</li>
 			<li>ImplantEmpireCommon</li>
+			<li>RVFFA_Spawnable</li>
 		</techHediffsTags>
 		<techHediffsDisallowTags>
 			<li>PainCauser</li>
