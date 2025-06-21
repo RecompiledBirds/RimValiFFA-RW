@@ -239,6 +239,7 @@
 						</TraitDef>
 						<XenotypeDef>
 							<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">WhiteListSelf</RVFFA_BaseAvaliXenoType>
+							<RVFFA_Solfeather MayRequire="Ludeon.RimWorld.Biotech">WhiteListSelf</RVFFA_Solfeather>
 						</XenotypeDef>
 					</defRestrictions>
 					

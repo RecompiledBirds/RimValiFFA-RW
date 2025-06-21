@@ -18,6 +18,14 @@
 		<prerequisites>
 			<li>Electricity</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->nexus connection</li>
+
+				<li>subject_story->built a low power nexus connection</li>
+				<li>subject_story->built a facility for downloading nexus blueprints</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -30,6 +38,14 @@
 		<prerequisites>
 			<li>RVFFA_BasicStartTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->molecular lathing</li>
+
+				<li>subject_story->designed a molecular lathe</li>
+				<li>subject_story->built a prototype molecular lathe</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -42,6 +58,14 @@
 			<li>RVFFA_LathingTech</li>
 		</prerequisites>
 		<baseCost>550</baseCost>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->ferrogel synthesis</li>
+
+				<li>subject_story->created a method to forge ferrogel</li>
+				<li>subject_story->designed a method to synthesize ferrogel</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -54,6 +78,14 @@
 		<prerequisites>
 			<li>RVFFA_FerrogelTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->carbon extraction</li>
+
+				<li>subject_story->developed a method to extract carbon</li>
+				<li>subject_story->designed a revolutionary method to produce pure carbon</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -66,6 +98,14 @@
 		<prerequisites>
 			<li>RVFFA_CarbonTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->tungsten sintering</li>
+
+				<li>subject_story->created a nanoforge configuration for tungsten sintering</li>
+				<li>subject_story->thought of a new method to process tungsten on the rim</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -78,6 +118,14 @@
 		<prerequisites>
 			<li>RVFFA_TungstenProcessingTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->basic Illuminate implants</li>
+
+				<li>subject_story->downloaded and modified blueprints for Illuminate blueprints</li>
+				<li>subject_story->designed several implant prototypes</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -90,6 +138,14 @@
 		<prerequisites>
 			<li>RVFFA_TungstenProcessingTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->advanced Illuminate implants</li>
+
+				<li>subject_story->downloaded and modified blueprints for Illuminate blueprints</li>
+				<li>subject_story->designed several implant prototypes</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -102,6 +158,14 @@
 		<prerequisites>
 			<li>RVFFA_AdvancedImplantsTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Illuminate microdrones</li>
+
+				<li>subject_story->developed software to coordinate miniature drone swarms</li>
+				<li>subject_story->downloaded a system to coordinate drones using a nervous interface</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -114,6 +178,14 @@
 		<prerequisites>
 			<li>RVFFA_MicrodronesTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Illuminate nanomachines</li>
+
+				<li>subject_story->adapted Illuminate nanomachines to a lower-pressure atmosphere</li>
+				<li>subject_story->built a system of interlinked microbots</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -126,6 +198,14 @@
 		<prerequisites>
 			<li>RVFFA_BasicImplantsTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->simple Illuminate bionics</li>
+
+				<li>subject_story->built themselves a improved leg with the help of digital tools</li>
+				<li>subject_story->downloaded a new leg blueprint</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -138,6 +218,14 @@
 		<prerequisites>
 			<li>RVFFA_BasicBionicsTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->simple Illuminate bionics</li>
+
+				<li>subject_story->built themselves a highly advanced leg with the help of digital tools</li>
+				<li>subject_story->downloaded an advanced new leg blueprint</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -150,6 +238,14 @@
 		<prerequisites>
 			<li>RVFFA_TungstenProcessingTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject-> basic Illuminate weapons</li>
+
+				<li>subject_story->realized kitchen knifes work as a quick melee weapon</li>
+				<li>subject_story->downloaded a nanoforge configuration for a scythe</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -162,6 +258,14 @@
 		<prerequisites>
 			<li>RVFFA_BasicWeaponsTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->simple Illuminate bionics</li>
+
+				<li>subject_story->built themselves a improved leg with the help of digital tools</li>
+				<li>subject_story->downloaded a new leg blueprint</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -174,6 +278,13 @@
 		<prerequisites>
 			<li>RVFFA_AdvancedWeaponryTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Illuminate turrets</li>
+
+				<li>subject_story->worked dilligently to improve their colony's defenses</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -186,6 +297,13 @@
 		<prerequisites>
 			<li>RVFFA_TurretTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Illuminate AIMS</li>
+
+				<li>subject_story->modified a downloaded copy of the AIMS blueprint to work on this planet</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -198,6 +316,13 @@
 		<prerequisites>
 			<li>RVFFA_AIMSTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Illuminate AERIAL</li>
+
+				<li>subject_story->modified a downloaded copy of the AERIAL blueprint to work on this planet</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -210,6 +335,17 @@
 		<prerequisites>
 			<li>RVFFA_BasicWeaponsTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->advanced Illuminate melee weapons</li>
+
+				<li>subject_story->downloaded a blueprint for a Viroblade</li>
+				<li>subject_story->downloaded a nanoforge configureation for a Viroblade</li>
+
+				<li>subject_story->downloaded a blueprint for a Illuminate Axe</li>
+				<li>subject_story->downloaded a nanoforge configureation for a Illuminate Axe</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -222,6 +358,14 @@
 		<prerequisites>
 			<li>RVFFA_TungstenProcessingTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->synthesizing aero-tungsten carbide</li>
+
+				<li>subject_story->synthesized aero-tungsten carbide</li>
+				<li>subject_story->developed a high-density and strength material</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -234,6 +378,14 @@
 		<prerequisites>
 			<li>RVFFA_BasicStartTech</li>
 		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->molecular weaving</li>
+
+				<li>subject_story->designed a molecular loom</li>
+				<li>subject_story->built a prototype molecular loom</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -246,6 +398,15 @@
 		<baseCost>200</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>1.35</researchViewY>
+
+		<generalRules>
+			<rulesStrings>
+				<li>subject->nanowaving</li>
+
+				<li>subject_story->used a nanoloom to weave a high-strength cloth</li>
+				<li>subject_story->downloaded a nanoloom configuration to weave nanofiber</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -258,6 +419,14 @@
 		<baseCost>600</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>2.10</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->apparel weaving</li>
+
+				<li>subject_story->learned how to weave apparel on a nanoloom</li>
+				<li>subject_story->used a nanoloom to weave apparel for their pack</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -270,6 +439,14 @@
 		<baseCost>850</baseCost>
 		<researchViewX>3.00</researchViewX>
 		<researchViewY>2.10</researchViewY>
+
+		<generalRules>
+			<rulesStrings>
+				<li>subject->recon equipment</li>
+
+				<li>subject_story->developed recon equipment for their pack</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -282,6 +459,13 @@
 		<baseCost>1100</baseCost>
 		<researchViewX>4.00</researchViewX>
 		<researchViewY>2.10</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->combat equipment</li>
+
+				<li>subject_story->developed combat equipment for their pack</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -294,6 +478,13 @@
 		<baseCost>3000</baseCost>
 		<researchViewX>5.00</researchViewX>
 		<researchViewY>2.10</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->spec-ops equipment</li>
+
+				<li>subject_story->developed spec-ops equipment for their pack</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -306,6 +497,13 @@
 		<baseCost>300</baseCost>
 		<researchViewX>3.00</researchViewX>
 		<researchViewY>1.35</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->interlocked weaving</li>
+
+				<li>subject_story->used a nanoloom to weave highly advanced materials for more protective clothing</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -318,6 +516,13 @@
 		<baseCost>400</baseCost>
 		<researchViewX>3.00</researchViewX>
 		<researchViewY>0.35</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->ferroweaving</li>
+
+				<li>subject_story->used a nanoloom to weave highly insulated materials for clothing</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -330,6 +535,13 @@
 		<baseCost>650</baseCost>
 		<researchViewX>4.00</researchViewX>
 		<researchViewY>0.35</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->thermal wraps</li>
+
+				<li>subject_story->developed an outfit capable of protectign the wearer from extreme temperatures</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -343,5 +555,12 @@
 		<baseCost>2000</baseCost>
 		<researchViewX>4.00</researchViewX>
 		<researchViewY>1.35</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->restructured aero-tungsten</li>
+
+				<li>subject_story->developed a new, highly flexible clothing material</li>
+			</rulesStrings>
+		</generalRules>
 	</ResearchProjectDef>
 </Defs>

@@ -79,7 +79,7 @@ namespace RimValiFFARW.Packs
         {
             if (!pack.Members.Contains(member))
             {
-                RVCLog.Log($"Tried to check if {member.NameShortColored} could be removed from pack with loadID: {pack.GetUniqueLoadID()}, but the pawn isn't even inside that pack");
+                VineLog.Log($"Tried to check if {member.NameShortColored} could be removed from pack with loadID: {pack.GetUniqueLoadID()}, but the pawn isn't even inside that pack");
                 return false;
             }
 

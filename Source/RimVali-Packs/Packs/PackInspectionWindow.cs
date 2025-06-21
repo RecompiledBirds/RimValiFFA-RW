@@ -163,7 +163,7 @@ namespace RimValiFFARW.Packs
             bool selfEncountered = false;
             if (pack == null)
             {
-                RVCLog.Error("Pack was null in drawmemberlist!");
+                VineLog.Error("Pack was null in drawmemberlist!");
                 return;
             }
             Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
