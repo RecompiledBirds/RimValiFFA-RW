@@ -62,7 +62,7 @@
 			<recoilAmount>1.1</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>RVFFA_SniperBullet</defaultProjectile>
+			<defaultProjectile>RVFFA_SniperRifleBulletFMJ</defaultProjectile>
 			<warmupTime>1.6</warmupTime>
 			<range>90</range>
 			<soundCast>Shot_SniperRifle</soundCast>
@@ -75,7 +75,7 @@
 		<AmmoUser>
 			<magazineSize>7</magazineSize>
 			<reloadTime>4.9</reloadTime>
-			<ammoSet>AmmoSet_303British</ammoSet>
+			<ammoSet>RVFFA_SniperRifleAmmoSet</ammoSet>
 			<reloadOneAtATime>True</reloadOneAtATime>
 		</AmmoUser>
 		<FireModes>

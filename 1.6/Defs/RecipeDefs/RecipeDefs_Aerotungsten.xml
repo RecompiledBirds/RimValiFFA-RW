@@ -7,7 +7,7 @@
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
-
+		<workAmount>20000</workAmount>
 		<researchPrerequisites>
 			<li>RVFFA_AeroTungstenTech</li>
 		</researchPrerequisites>

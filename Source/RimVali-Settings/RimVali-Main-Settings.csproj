@@ -27,7 +27,7 @@
 		<BiotechPatchOutputPath>$(VersionedPatchesPath)/Biotech/</BiotechPatchOutputPath>
 		<IdeologyPatchOutputPath>$(VersionedPatchesPath)/Ideology/</IdeologyPatchOutputPath>
 	
-		<CEPatchOutputPath>$(VersionedPatchesPath)/CombatExtended/Patches/</CEPatchOutputPath>
+		<CEPatchOutputPath>$(VersionedPatchesPath)/CombatExtended/</CEPatchOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -46,7 +46,7 @@
 		<AboutPath>..\RimValiAboutInfo\About</AboutPath>
 		<LoadFolderPath>..\RimValiAboutInfo\LoadFolders.xml</LoadFolderPath>
 		<!-- Optional patches-->
-		<CEPatchesPath>..\Combat_ExtendedPatches\Patches\</CEPatchesPath>
+		<CEPatchesPath>..\Combat_ExtendedPatches\</CEPatchesPath>
 		<BiotechPatchesPath>..\BiotechPatches\</BiotechPatchesPath>
 		<IdeologyPatchesPath>..\IdeologyPatches\</IdeologyPatchesPath>
 	</PropertyGroup>
@@ -61,11 +61,11 @@
 		<MainProjPatches Include="$(MainProjPatchesPath)**\*.xml" />
 
 		<!-- About files-->
-		<About Include="$(AboutPath)/*"/>
+		<About Include="$(AboutPath)/*" />
 		<!-- Optional patches-->
 		<CEPatches Include="$(CEPatchesPath)**\*.xml" />
 		<BiotechPatches Include="$(BiotechPatchesPath)**\*.xml" />
-		<IdeologyPatchesPath Include="$(IdeologyPatchesPath)**\*.xml"/>
+		<IdeologyPatchesPath Include="$(IdeologyPatchesPath)**\*.xml" />
 	</ItemGroup>
 	
 	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
@@ -89,7 +89,7 @@
 			<Output TaskParameter="CopiedFiles" ItemName="AboutCopiedFileList" />
 		</Copy>
 		<Message Text="Copied Files:%0A@(AboutCopiedFileList, '%0D')" Importance="high" />
-		<Copy SourceFiles="$(LoadFolderPath)" DestinationFiles="$(LoadFoldersOutputPath)" SkipUnchangedFiles="True"/>
+		<Copy SourceFiles="$(LoadFolderPath)" DestinationFiles="$(LoadFoldersOutputPath)" SkipUnchangedFiles="True" />
 		<!-- Optional patches-->
 		<Copy SourceFiles="@(CEPatches)" DestinationFolder="$(CEPatchOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
 			<Output TaskParameter="CopiedFiles" ItemName="CEPatchCopiedList" />
@@ -128,9 +128,9 @@
 		<Message Text="Deleting About Directory" Importance="high" />
 		<RemoveDir Directories="$(AboutOutputPath)" />
 		<Message Text="Deleting LoadFolders.xml" Importance="high" />
-		<Delete Files="$(LoadFoldersOutputPath)"/>
+		<Delete Files="$(LoadFoldersOutputPath)" />
 
 		<Message Text="Deleting Ideology patches directory" Importance="high" />
-		<Delete Files="$(IdeologyPatchOutputPath)"/>
+		<Delete Files="$(IdeologyPatchOutputPath)" />
 	</Target>
 </Project>

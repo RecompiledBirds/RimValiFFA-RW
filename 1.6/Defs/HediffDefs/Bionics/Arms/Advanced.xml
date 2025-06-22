@@ -39,13 +39,14 @@
 			<RVFFA_Ferrogel>2</RVFFA_Ferrogel>
 			<ComponentSpacer>4</ComponentSpacer>
 			<RVFFA_ProcessedTungsten>10</RVFFA_ProcessedTungsten>
+			<RVFFA_AeroTungstenCarbide>35</RVFFA_AeroTungstenCarbide>
 		</costList>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
 		</thingSetMakerTags>
 		<statBases>
 			<Mass>0.3</Mass>
-			<MarketValue>300</MarketValue>
+			<MarketValue>4300</MarketValue>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_AdvancedBionicsTech</researchPrerequisite>

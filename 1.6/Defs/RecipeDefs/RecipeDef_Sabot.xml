@@ -5,7 +5,7 @@
 		<label>Forge sabots</label>
 		<description>Forge sabots from tungsten.</description>
 		<jobString>Forging sabots</jobString>
-		<workAmount>150</workAmount>
+		<workAmount>1500</workAmount>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
