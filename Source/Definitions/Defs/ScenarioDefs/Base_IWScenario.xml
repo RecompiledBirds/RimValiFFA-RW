@@ -57,7 +57,7 @@
 
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
-					<thingDef>RVFFA_IWPistol</thingDef>
+					<thingDef>Gun_Autopistol</thingDef>
 					<count>1</count>
 				</li>
 

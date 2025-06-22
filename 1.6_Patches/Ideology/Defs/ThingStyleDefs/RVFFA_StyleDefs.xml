@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingStyleDef>
+		<defName>RVFFA_IWAssaultRifleStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Primitive_Assault_Rifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWSniperRifleStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Primitive_Railrifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWRevolverStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Primitive_Revolver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWPistolStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Pistol_IndependentWorlds</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWMinigunStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Independent_MG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWLMGStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Primitive_GPMG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWHeavySMGStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Primitive_AngryTube</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWRifleStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/Vali_Primitive_Rifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+		<defName>RVFFA_IWChainShotgunStyle</defName>
+		<graphicData>
+			<texPath>RimValiFFA/Things/Weapons/Guns/IWWeapons/vali_Primitive_semiauto</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingStyleDef>
+</Defs>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<!--PackWorker Class-->
+	<RVFFA_PawnIsPackBroken>{0} is packbroken and cannot join a pack.</RVFFA_PawnIsPackBroken>
 	<RVFFA_PackWorker_DoesNotExist>A pawn can't join, because they don't exist.</RVFFA_PackWorker_DoesNotExist>
 	<RVFFA_PackWorker_CanNotJoin>{0} can't join, because {1}</RVFFA_PackWorker_CanNotJoin>																<!--{Name} can't join, because {reason}-->
 	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>																		<!--{Name} is dead.-->

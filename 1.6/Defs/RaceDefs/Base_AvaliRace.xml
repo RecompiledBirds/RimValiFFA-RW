@@ -250,19 +250,6 @@
 					</alwaysAllowed>
 				</restrictions>
 			</li>
-
-			<!--<li Class="RVCRestructured.RVRThoughtComp">
-				<thoughtReplacers>
-					<li>
-						<toReplace>SleptInBedroom</toReplace>
-						<replacer>RVFFA_SleptAlone</replacer>
-					</li>
-					<li>
-						<toReplace>SleptInBarracks</toReplace>
-						<replacer>RVFFA_SharedRoom</replacer>
-					</li>
-				</thoughtReplacers>
-			</li>-->
 			<li Class="RVCRestructured.RVRCP">
 
 			</li>

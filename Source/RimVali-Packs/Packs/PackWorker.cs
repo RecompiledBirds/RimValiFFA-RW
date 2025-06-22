@@ -157,7 +157,14 @@ namespace RimValiFFARW.Packs
                 MessageOf(new LookTargets(pawns), reason, quietError);
                 return false;
             }
-
+            foreach(Pawn pawn in pawns)
+            {
+                if (!pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken)) continue;
+                reason = "RVFFA_PawnIsPackBroken".Translate(pawn.Name.ToStringShort);
+                MessageOf(new LookTargets(pawn), reason, quietError);
+                return false;
+                
+            }
             return true;
         }
 

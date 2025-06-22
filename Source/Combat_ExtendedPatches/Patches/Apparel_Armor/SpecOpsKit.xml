@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Patches>
+<Patch>
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="RVFFA_CombatArmor"]/statBases/MaxHitPoints</xpath>
 		<value>
@@ -41,4 +41,4 @@
 				<MoveSpeed>0.2</MoveSpeed>
 		</value>
 	</Operation>
-</Patches>
+</Patch>

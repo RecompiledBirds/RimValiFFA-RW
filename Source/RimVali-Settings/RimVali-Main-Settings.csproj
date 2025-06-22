@@ -129,5 +129,8 @@
 		<RemoveDir Directories="$(AboutOutputPath)" />
 		<Message Text="Deleting LoadFolders.xml" Importance="high" />
 		<Delete Files="$(LoadFoldersOutputPath)"/>
+
+		<Message Text="Deleting Ideology patches directory" Importance="high" />
+		<Delete Files="$(IdeologyPatchOutputPath)"/>
 	</Target>
 </Project>

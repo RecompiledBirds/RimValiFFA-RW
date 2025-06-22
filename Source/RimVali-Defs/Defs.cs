@@ -22,5 +22,7 @@ namespace RimValiFFARW
         public static ThoughtDef RVFFA_AvaliSleptNotAlone;
         [AllowNull]
         public static ThoughtDef RVFFA_AvaliSleptWithPack;
+        [AllowNull]
+        public static TraitDef RVFFA_PackBroken;
     }
 }
