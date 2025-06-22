@@ -17,7 +17,7 @@
 			</li>
 			<li>
 				<label>had to sleep alone</label>
-				<description>I had to sleep alone in a medicore room.</description>
+				<description>I had to sleep alone in a mediocre room.</description>
 				<baseMoodEffect>-8</baseMoodEffect>
 			</li>
 			<li>
@@ -73,8 +73,8 @@
 				<baseMoodEffect>-3</baseMoodEffect>
 			</li>
 			<li>
-				<label>shared medicore room</label>
-				<description>I had to sleep in an medicore room, but at least I wasn't alone.</description>
+				<label>shared mediocre room</label>
+				<description>I had to sleep in an mediocre room, but at least I wasn't alone.</description>
 				<baseMoodEffect>-2</baseMoodEffect>
 			</li>
 			<li>
@@ -130,8 +130,8 @@
 				<baseMoodEffect>-1</baseMoodEffect>
 			</li>
 			<li>
-				<label>shared medicore room with pack</label>
-				<description>I had to sleep in an medicore room, but at least I was with my pack.</description>
+				<label>shared mediocre room with pack</label>
+				<description>I had to sleep in an mediocre room, but at least I was with my pack.</description>
 				<baseMoodEffect>0</baseMoodEffect>
 			</li>
 			<li>
