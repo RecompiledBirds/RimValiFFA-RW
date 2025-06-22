@@ -22,12 +22,14 @@ namespace RimValiFFARW.Packs
         private int lastSawPackmateOn;
         private int lastUpdateDay;
         public int PackLossProgression => packLossProgression;
+
+       
         public override void CompTickInterval(int delta)
         {
-            //Wait for 150 ticks before doing any checks
-            if (delta == 150) return;
-            if (!parent.Spawned || parent is not Pawn pawn) return;
             
+            if (!parent.Spawned || parent is not Pawn pawn) return;
+            //check every 150 ticks
+            if (!pawn.IsHashIntervalTick(150, delta)) return;
             int day = GenDate.DayOfYear(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(parent.Map.Tile).x);
             if (lastSawPackmateOn == day)
             {
