@@ -269,6 +269,7 @@ namespace RimValiFFARW.Packs
             if (!testSingleMembers) yield break;
             foreach (Pawn member in pack.Members)
             {
+                if (member == null) continue;
                 pack.Worker.MemberShouldLeave(member, pack, out string? reason);
                 if (reason == null) continue;
 
