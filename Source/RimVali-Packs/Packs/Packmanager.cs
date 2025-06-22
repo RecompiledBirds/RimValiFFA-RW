@@ -67,6 +67,11 @@ namespace RimValiFFARW.Packs
             if (packsList.Count == 0) return;
 
             Pack pack = packsList[lastWorkedOnPackListIndex];
+            if (pack == null)
+            {
+                packsList.RemoveAt(lastWorkedOnPackListIndex);
+                return;
+            }
             lastWorkedOnPackListIndex++;
 
             if (lastWorkedOnPackListIndex >= packsList.Count) lastWorkedOnPackListIndex = 0;
@@ -79,7 +84,7 @@ namespace RimValiFFARW.Packs
             }
 
             if (!anyReasonsExist) return;
-            if (PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack == pack) 
+            if (PackInspectionWindow.GetCurrentPackInspectionWindow?.CurrentPack == pack) 
                 PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack = null;
             pack.Worker.Disband(pack);
 

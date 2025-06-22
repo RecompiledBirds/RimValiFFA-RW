@@ -16,5 +16,11 @@ namespace RimValiFFARW
 
         [AllowNull]
         public static ThingDef RVFFA_Avali;
+        [AllowNull]
+        public static ThoughtDef RVFFA_AvaliSleptAlone;
+        [AllowNull]
+        public static ThoughtDef RVFFA_AvaliSleptNotAlone;
+        [AllowNull]
+        public static ThoughtDef RVFFA_AvaliSleptWithPack;
     }
 }

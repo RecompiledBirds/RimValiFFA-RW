@@ -20,4 +20,22 @@
 			</prefixSymbols>
 		</symbolPack>
 	</GeneDef>
+	
+	<GeneDef>
+		<defName>RVFFA_NanobotMetabolism</defName>
+		<label>nanobot metabolism</label>
+		<labelShortAdj>nanobots</labelShortAdj>
+		<displayCategory>Ability</displayCategory>
+		<description>This creature has been enhanced with nanobots that improve it's metabolism.</description>
+		<iconPath>RimValiFFA/Symbols/Rimvali_Logo_1</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<biostatMet>2</biostatMet>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>nanobots</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+	</GeneDef>
 </Defs>
