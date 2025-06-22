@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiotechPatches", "Source\Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimValiAboutInfo", "Source\RimValiAboutInfo\RimValiAboutInfo.csproj", "{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeologyPatches", "Source\IdeologyPatches\IdeologyPatches.csproj", "{DB436ACC-5926-4411-97DA-6C27E91C994E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB436ACC-5926-4411-97DA-6C27E91C994E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB436ACC-5926-4411-97DA-6C27E91C994E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB436ACC-5926-4411-97DA-6C27E91C994E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB436ACC-5926-4411-97DA-6C27E91C994E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

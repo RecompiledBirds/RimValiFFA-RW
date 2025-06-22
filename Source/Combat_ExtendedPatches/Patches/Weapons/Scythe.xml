@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_Spear"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_Scythe"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -9,26 +9,27 @@
 					<capacities>
 						<li>Poke</li>
 					</capacities>
-					<power>5</power>
+					<power>8</power>
 					<chanceFactor>0.33</chanceFactor>
 					<cooldownTime>1.44</cooldownTime>
 					<armorPenetrationBlunt>0.425</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
-					<label>Illuminate Spear</label>
+					<label>Illuminate Scythe Blade</label>
+					<armorPenetrationBlunt>0.7</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.7</armorPenetrationSharp>
+
 					<capacities>
 						<li>Stab</li>
 					</capacities>
 					<power>20</power>
-					<cooldownTime>1</cooldownTime>
-					<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
-					<armorPenetrationSharp>0.98</armorPenetrationSharp>
+					<cooldownTime>2</cooldownTime>
 					<extraMeleeDamages>
 						<li>
 							<def>Cut</def>
 							<amount>25</amount>
-							<chance>0.3</chance>
+							<chance>0.5</chance>
 						</li>
 					</extraMeleeDamages>
 				</li>
@@ -37,7 +38,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="RVFFA_Spear"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_Scythe"]/statBases</xpath>
 		<value>
 			<Bulk>3.5</Bulk>
 			<MeleeCounterParryBonus>0.35</MeleeCounterParryBonus>
@@ -45,7 +46,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="RVFFA_Spear"]</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_Scythe"]</xpath>
 		<value>
 			<equippedStatOffsets>
 				<MeleeCritChance>0.3</MeleeCritChance>
@@ -56,7 +57,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="RVFFA_Spear"]/weaponTags</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_Scythe"]/weaponTags</xpath>
 		<value>
 			<li>CE_OneHandedWeapon</li>
 		</value>
