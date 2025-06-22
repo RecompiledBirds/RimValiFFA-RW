@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_AvaliTDW"/statBases/StuffEffectMultiplierArmor</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_AvaliTDW"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_BellCloak"/statBases/StuffEffectMultiplierArmor</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_BellCloak"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>7</StuffEffectMultiplierArmor>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_ThermalWraps"/statBases/StuffEffectMultiplierArmor</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ThermalWraps"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>7.2</StuffEffectMultiplierArmor>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_Hood"/statBases/StuffEffectMultiplierArmor</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_Hood"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>5</StuffEffectMultiplierArmor>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_Headress"/statBases/StuffEffectMultiplierArmor</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_Headress"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_ReconHUD"/statBases/StuffEffectMultiplierArmor</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ReconHUD"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
 		</value>

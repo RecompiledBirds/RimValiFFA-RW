@@ -61,6 +61,7 @@
 		<statBases>
 			<Mass>0.1</Mass>
 			<MarketValue>200</MarketValue>
+			<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 		</statBases>
 
         <equippedStatOffsets>
@@ -103,6 +104,7 @@
             <Mass>0.03</Mass>
             <Flammability>0.02</Flammability>
             <EquipDelay>1</EquipDelay>
+			<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
         </statBases>
         <equippedStatOffsets>
             <SocialImpact>1.25</SocialImpact>

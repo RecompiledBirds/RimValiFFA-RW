@@ -14,7 +14,7 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
-			<MaxHitPoints>900</MaxHitPoints>
+			<MaxHitPoints>350</MaxHitPoints>
 			<Mass>1.5</Mass>
 			<Flammability>0.02</Flammability>
 			<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
