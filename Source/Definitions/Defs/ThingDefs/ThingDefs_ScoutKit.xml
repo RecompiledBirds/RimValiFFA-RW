@@ -30,6 +30,9 @@
 			<Plasteel>20</Plasteel>
 			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
 		</costList>
+		<equippedStatOffsets>
+			<MoveSpeed>1.0</MoveSpeed>
+		</equippedStatOffsets>
 		<apparel>
 			<tags>
 				<li>RVFFA_ScoutGear</li>

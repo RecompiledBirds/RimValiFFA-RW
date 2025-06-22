@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_RVFFA_ShotgunBuckshot</defName>
+		<label>make Illuminate Shotgun Ammo (Buckshot) x500</label>
+		<description>Craft 500 Illuminate Shotgun Ammo cartridges.</description>
+		<jobString>Making Illuminate Shotgun Ammo cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RVFFA_ShotgunBuckshot>500</RVFFA_ShotgunBuckshot>
+		</products>
+		<workAmount>2800</workAmount>
+	</RecipeDef>
+</Defs>

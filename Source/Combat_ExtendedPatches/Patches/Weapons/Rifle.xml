@@ -62,7 +62,7 @@
 			<recoilAmount>1.1</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>RVFFA_RifleBullet</defaultProjectile>
+			<defaultProjectile>RVFFA_RifleBulletFMJ</defaultProjectile>
 			<warmupTime>1.6</warmupTime>
 			<range>48</range>
 			<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
@@ -79,8 +79,8 @@
 		<AmmoUser>
 			<magazineSize>50</magazineSize>
 			<reloadTime>4.9</reloadTime>
-			<ammoSet>AmmoSet_303British</ammoSet>
-			<reloadOneAtATime>True</reloadOneAtATime>
+			<ammoSet>RVFFA_RifleAmmoSet</ammoSet>
+			<reloadOneAtATime>false</reloadOneAtATime>
 		</AmmoUser>
 		<FireModes>
 			<aiUseBurstMode>FALSE</aiUseBurstMode>

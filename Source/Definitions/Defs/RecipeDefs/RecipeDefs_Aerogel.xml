@@ -8,7 +8,7 @@
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
-
+		<workAmount>8000</workAmount>
 		<researchPrerequisites>
 			<li>RVFFA_FerrogelTech</li>
 		</researchPrerequisites>
