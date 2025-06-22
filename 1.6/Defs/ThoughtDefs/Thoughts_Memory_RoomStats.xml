@@ -17,7 +17,7 @@
 			</li>
 			<li>
 				<label>had to sleep alone</label>
-				<description>I had to sleep alone in a medicore room.</description>
+				<description>I had to sleep alone in a mediocre room.</description>
 				<baseMoodEffect>-8</baseMoodEffect>
 			</li>
 			<li>
@@ -73,8 +73,8 @@
 				<baseMoodEffect>-3</baseMoodEffect>
 			</li>
 			<li>
-				<label>shared medicore room</label>
-				<description>I had to sleep in an medicore room, but at least I wasn't alone.</description>
+				<label>shared mediocre room</label>
+				<description>I had to sleep in an mediocre room, but at least I wasn't alone.</description>
 				<baseMoodEffect>-2</baseMoodEffect>
 			</li>
 			<li>
@@ -122,52 +122,52 @@
 			<li>
 				<label>shared awful room with pack</label>
 				<description>I had to sleep in an awful room, but at least I was with my pack.</description>
-				<baseMoodEffect>-4</baseMoodEffect>
+				<baseMoodEffect>-2</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared dull room with pack</label>
 				<description>I had to sleep in an awful room, but at least I was with my pack.</description>
-				<baseMoodEffect>-3</baseMoodEffect>
+				<baseMoodEffect>-1</baseMoodEffect>
 			</li>
 			<li>
-				<label>shared medicore room with pack</label>
-				<description>I had to sleep in an medicore room, but at least I was with my pack.</description>
-				<baseMoodEffect>-2</baseMoodEffect>
+				<label>shared mediocre room with pack</label>
+				<description>I had to sleep in an mediocre room, but at least I was with my pack.</description>
+				<baseMoodEffect>0</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared decent room with pack</label>
 				<description>I got to sleep in a pretty decent bedroom. On top of that, I got to share it with my pack!!</description>
-				<baseMoodEffect>3</baseMoodEffect>
+				<baseMoodEffect>5</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared slightly impressive room with pack</label>
 				<description>I got to sleep in a slightly impressive bedroom. I like it. On top of that, I got to share it with my pack!</description>
-				<baseMoodEffect>4</baseMoodEffect>
+				<baseMoodEffect>6</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared impressive room with pack</label>
 				<description>I slept in an impressive bedroom. It was great. On top of that, I got to share it with my pack!</description>
-				<baseMoodEffect>5</baseMoodEffect>
+				<baseMoodEffect>7</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared very impressive room with pack</label>
 				<description>I slept in a very impressive bedroom. I love it. On top of that, I got to share it with my pack!</description>
-				<baseMoodEffect>7</baseMoodEffect>
+				<baseMoodEffect>9</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared extremely impressive bedroom room with pack</label>
 				<description>I slept in an extremely impressive bedroom. It was marvelous. On top of that, I got to share it with my pack!</description>
-				<baseMoodEffect>8</baseMoodEffect>
+				<baseMoodEffect>10</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared unbelievably impressive bedroom room with pack</label>
 				<description>I slept in an unbelievably impressive bedroom. It was truly astounding. On top of that, I got to share it with my pack!</description>
-				<baseMoodEffect>9</baseMoodEffect>
+				<baseMoodEffect>11</baseMoodEffect>
 			</li>
 			<li>
 				<label>shared wondrously impressive bedroom room with pack</label>
 				<description>I slept in a heavenly bedroom. It was wondrous. On top of that, I got to share it with my pack!</description>
-				<baseMoodEffect>10</baseMoodEffect>
+				<baseMoodEffect>12</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>

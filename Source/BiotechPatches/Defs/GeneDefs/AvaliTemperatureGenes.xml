@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef ParentName="GeneMinTempBase">
+		<defName>RVFFA_AmmoniaBlood</defName>
+		<label>ammonia blood</label>
+		<labelShortAdj>cold</labelShortAdj>
+		<description>This creature's blood is a mixture of ammonia, lowering the temperature in which they can live in greatly.</description>
+		<iconPath>UI/Icons/Genes/Gene_MinTemperatureLargeDecrease</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<statOffsets>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<ComfyTemperatureMax>-10</ComfyTemperatureMax>
+		</statOffsets>
+		<biostatMet>-2</biostatMet>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>ice</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>RVFFA_NanobotMetabolism</defName>
+		<label>nanobot metabolism</label>
+		<labelShortAdj>nanobots</labelShortAdj>
+		<displayCategory>Ability</displayCategory>
+		<description>This creature has been enhanced with nanobots that improve it's metabolism.</description>
+		<iconPath>RimValiFFA/Symbols/Rimvali_Logo_1</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<biostatMet>2</biostatMet>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>nanobots</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+	</GeneDef>
+</Defs>

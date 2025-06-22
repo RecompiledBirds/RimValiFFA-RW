@@ -25,6 +25,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-Languages", "Source
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-Patches", "Source\RimVali-Patches\RimVali-Patches.csproj", "{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combat_ExtendedPatches", "Source\Combat_ExtendedPatches\Combat_ExtendedPatches.csproj", "{F6311D13-6EB2-4AAE-A396-A67B60597814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiotechPatches", "Source\BiotechPatches\BiotechPatches.csproj", "{0C85449D-BEE3-4078-94D9-32E52B81C15D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimValiAboutInfo", "Source\RimValiAboutInfo\RimValiAboutInfo.csproj", "{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +81,18 @@ Global
 		{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F52FB4-8304-E6C4-D504-8C7F2DA1859C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6311D13-6EB2-4AAE-A396-A67B60597814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6311D13-6EB2-4AAE-A396-A67B60597814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6311D13-6EB2-4AAE-A396-A67B60597814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6311D13-6EB2-4AAE-A396-A67B60597814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C85449D-BEE3-4078-94D9-32E52B81C15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C85449D-BEE3-4078-94D9-32E52B81C15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C85449D-BEE3-4078-94D9-32E52B81C15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C85449D-BEE3-4078-94D9-32E52B81C15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1F01C2-CF52-417F-A1B6-3F204CB4BA85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
