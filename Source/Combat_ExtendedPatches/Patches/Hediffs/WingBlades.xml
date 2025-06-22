@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="RVFFA_WingBlades"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_VerbGiver">
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>Wing-blades</label>
+							<capacities>
+								<li>Stab</li>
+								<li>Cut</li>
+								<li>Scratch</li>
+							</capacities>
+							<linkedBodyPartsGroup>Arms</linkedBodyPartsGroup>
+							<power>20</power>
+							<cooldownTime>1.5</cooldownTime>
+						</li>
+					</tools>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+</Patch>
