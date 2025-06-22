@@ -10,7 +10,7 @@
 
 		<statBases>
 			<WorkToMake>50000</WorkToMake>
-			<MaxHitPoints>5000</MaxHitPoints>
+			<MaxHitPoints>600</MaxHitPoints>
 			<Mass>5</Mass>
 			<Flammability>0.4</Flammability>
 			<EquipDelay>10</EquipDelay>
@@ -22,7 +22,7 @@
 		</statBases>
 
 		<equippedStatOffsets>
-			<MoveSpeed>-2</MoveSpeed>
+			<MoveSpeed>-1</MoveSpeed>
 		</equippedStatOffsets>
 
 		<costList>
