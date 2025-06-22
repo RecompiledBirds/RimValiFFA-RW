@@ -15,13 +15,13 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="RVFFA_CombatArmor"]/statBases/ArmorRating_Blunt</xpath>
 		<value>
-			<ArmorRating_Sharp>38</ArmorRating_Sharp>
+			<ArmorRating_Blunt>38</ArmorRating_Blunt>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="RVFFA_CombatArmor"]/statBases/ArmorRating_Heat</xpath>
 		<value>
-			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.5</ArmorRating_Heat>
 		
 	</value>
 	</Operation>

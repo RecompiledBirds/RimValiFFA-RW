@@ -1,43 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_SpecOpsArmor"]/statBases/MaxHitPoints</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutArmor"]/statBases/MaxHitPoints</xpath>
 		<value>
-			<MaxHitPoints>1200</MaxHitPoints>
+			<MaxHitPoints>800</MaxHitPoints>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_SpecOpsArmor"]/statBases/ArmorRating_Sharp</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutArmor"]/statBases/ArmorRating_Sharp</xpath>
 		<value>
-			<ArmorRating_Sharp>28</ArmorRating_Sharp>
+			<ArmorRating_Sharp>18</ArmorRating_Sharp>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_SpecOpsArmor"]/statBases/ArmorRating_Blunt</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutArmor"]/statBases/ArmorRating_Blunt</xpath>
 		<value>
-			<ArmorRating_Blunt>55</ArmorRating_Blunt>
+			<ArmorRating_Blunt>38</ArmorRating_Blunt>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_SpecOpsArmor"]/statBases/ArmorRating_Heat</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutArmor"]/statBases/ArmorRating_Heat</xpath>
 		<value>
 			<ArmorRating_Heat>1</ArmorRating_Heat>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="RVFFA_SpecOpsArmor"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutArmor"]/statBases</xpath>
 		<value>
 			<Bulk>75</Bulk>
 			<WornBulk>8</WornBulk>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="RVFFA_SpecOpsArmor"]/equippedStatOffsets</xpath>
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutArmor"]/equippedStatOffsets</xpath>
 		<value>
 				<CarryWeight>45</CarryWeight>
 				<CarryBulk>7</CarryBulk>
 				<ToxicEnvironmentResistance>0.80</ToxicEnvironmentResistance>
 				<MoveSpeed>0.8</MoveSpeed>
+		</value>
+	</Operation>
+
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutHelmet"]/statBases</xpath>
+		<value>
+			<Bulk>4</Bulk>
+			<WornBulk>1</WornBulk>
+			<NightVisionEfficiency_Apparel>1.0</NightVisionEfficiency_Apparel>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutHelmet"]/statBases/Flammability</xpath>
+		<value>
+			<Flammability>0.25</Flammability>
+		</value>
+	</Operation>
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutHelmet"]/statBases/MaxHitPoints</xpath>
+		<value>
+			<MaxHitPoints>800</MaxHitPoints>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutHelmet"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>10</ArmorRating_Sharp>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutHelmet"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>20</ArmorRating_Blunt>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="RVFFA_ScoutHelmet"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<AimingAccuracy>0.25</AimingAccuracy>
+				<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+				<SmokeSensitivity>-1</SmokeSensitivity>
+			</equippedStatOffsets>
 		</value>
 	</Operation>
 </Patch>

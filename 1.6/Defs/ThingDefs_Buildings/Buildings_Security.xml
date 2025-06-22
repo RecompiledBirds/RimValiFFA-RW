@@ -94,45 +94,6 @@
           <Beauty>-20</Beauty>
           <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
         </statBases>
-
-        <costStuffCount>30</costStuffCount>
-        <costList>
-          <Steel>70</Steel>
-          <ComponentIndustrial>3</ComponentIndustrial>
-        </costList>	
-         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-        <building>
-          <combatPower>30</combatPower>
-          <ai_combatDangerous>true</ai_combatDangerous>
-          <turretGunDef>RVFFA_BasicTurretGun</turretGunDef>
-          <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
-          <turretTopDrawSize>3</turretTopDrawSize>
-        </building>
-		<researchPrerequisites>
-			<li>RVFFA_BasicWeaponsTech</li>
-		</researchPrerequisites>
-	</ThingDef>
-
-    <ThingDef ParentName="BaseWeaponTurret">
-        <defName>RVFFA_BasicTurretGun</defName>
-        <label>Basic avali turret gun</label>
-        <description>An automatic railgun, made to be mounted to an Avali turret.</description>
-        <graphicData>
-          <texPath>RimValiFFA/Buildings/Turrets/BasicTurret_Head</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>1.5</drawSize>
-        </graphicData>
-        <statBases>
-          <AccuracyTouch>0.20</AccuracyTouch>
-          <AccuracyShort>0.34</AccuracyShort>
-          <AccuracyMedium>0.51</AccuracyMedium>
-          <AccuracyLong>10</AccuracyLong>
-          <RangedWeapon_Cooldown>10.8</RangedWeapon_Cooldown>
-          <DeteriorationRate>0</DeteriorationRate>
-          <Mass>5</Mass>
-          <Flammability>0</Flammability>
-        </statBases>
 		<comps Inherit="False">
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
@@ -171,6 +132,45 @@
 				<fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
 			</li>
 		</comps>
+        <costStuffCount>30</costStuffCount>
+        <costList>
+          <Steel>70</Steel>
+          <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>	
+         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <building>
+          <combatPower>30</combatPower>
+          <ai_combatDangerous>true</ai_combatDangerous>
+          <turretGunDef>RVFFA_BasicTurretGun</turretGunDef>
+          <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
+          <turretTopDrawSize>3</turretTopDrawSize>
+        </building>
+		<researchPrerequisites>
+			<li>RVFFA_BasicWeaponsTech</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>RVFFA_BasicTurretGun</defName>
+        <label>Basic avali turret gun</label>
+        <description>An automatic railgun, made to be mounted to an Avali turret.</description>
+        <graphicData>
+          <texPath>RimValiFFA/Buildings/Turrets/BasicTurret_Head</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.5</drawSize>
+        </graphicData>
+        <statBases>
+          <AccuracyTouch>0.20</AccuracyTouch>
+          <AccuracyShort>0.34</AccuracyShort>
+          <AccuracyMedium>0.51</AccuracyMedium>
+          <AccuracyLong>10</AccuracyLong>
+          <RangedWeapon_Cooldown>10.8</RangedWeapon_Cooldown>
+          <DeteriorationRate>0</DeteriorationRate>
+          <Mass>5</Mass>
+          <Flammability>0</Flammability>
+        </statBases>
+		
         <verbs>
           <li>
             <verbClass>Verb_Shoot</verbClass>

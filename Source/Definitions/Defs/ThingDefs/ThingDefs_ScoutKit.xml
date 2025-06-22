@@ -42,7 +42,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseArmorHelmet">
-		<defName>RVFFA_ScoutHelment</defName>
+		<defName>RVFFA_ScoutHelmet</defName>
 		<label>Illuminate Scout Helmet</label>
 		<description>A light Avali scout helmet. Going on their head and barely protecting the ears, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections as the rest of the suit, it in turn also features an antenna that allows them to communicate with homebase, sometimes even allowing them to receive information about the target they’re shooting at.</description>
 		<graphicData>
