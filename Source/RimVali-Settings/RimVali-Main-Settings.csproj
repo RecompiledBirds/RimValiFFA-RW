@@ -10,11 +10,24 @@
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>12.0</LangVersion>
-		<VersionPath>../../1.6</VersionPath>
+		<!-- Target version paths -->
+		<RimworldVersion>1.6</RimworldVersion>
+		<VersionPath>../../$(RimworldVersion)</VersionPath>
 		<OutputPath>$(VersionPath)/Assemblies</OutputPath>
 		<DefOutputPath>$(VersionPath)/Defs/</DefOutputPath>
 		<LangOutputPath>$(VersionPath)/Languages/</LangOutputPath>
 		<PatchOuputPath>$(VersionPath)/Patches/</PatchOuputPath>
+		
+		<!-- About information & Loadfolders.xml-->
+		<AboutOutputPath>../../About/</AboutOutputPath>
+		<LoadFoldersOutputPath>../../LoadFolders.xml</LoadFoldersOutputPath>
+		
+		<!-- Optional Patches -->
+		<VersionedPatchesPath>../../$(RimworldVersion)_Patches</VersionedPatchesPath>
+		<BiotechPatchOutputPath>$(VersionedPatchesPath)/Biotech/</BiotechPatchOutputPath>
+		<IdeologyPatchOutputPath>$(VersionedPatchesPath)/Ideology/</IdeologyPatchOutputPath>
+	
+		<CEPatchOutputPath>$(VersionedPatchesPath)/CombatExtended/</CEPatchOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -23,36 +36,74 @@
 
 	<!-- Defs -->
 	<PropertyGroup>
+		<!-- Main mod data-->
 		<MainDefProjPath>..\Definitions\Defs\</MainDefProjPath>
 		<WeaponDefProjPath>..\RimVali-WeaponDefs\Defs\</WeaponDefProjPath>
 		<ENLanguagesProjPath>..\RimVali-Languages\Languages\</ENLanguagesProjPath>
 		<MainProjPatchesPath>..\RimVali-Patches\Patches\</MainProjPatchesPath>
+		
+		<!-- About and loadfolders-->
+		<AboutPath>..\RimValiAboutInfo\About</AboutPath>
+		<LoadFolderPath>..\RimValiAboutInfo\LoadFolders.xml</LoadFolderPath>
+		<!-- Optional patches-->
+		<CEPatchesPath>..\Combat_ExtendedPatches\</CEPatchesPath>
+		<BiotechPatchesPath>..\BiotechPatches\</BiotechPatchesPath>
+		<IdeologyPatchesPath>..\IdeologyPatches\</IdeologyPatchesPath>
 	</PropertyGroup>
 
-	<ItemGroup>
 		<!--Original Files-->
-		<Defs Include= "$(MainDefProjPath)**\*.xml"/>
-		<Defs Include= "$(WeaponDefProjPath)**\*.xml"/>
-		<Languages Include= "$(ENLanguagesProjPath)**\*.xml"/>
-		<Languages Include= "$(ENLanguagesProjPath)**\*.txt"/>
-		<MainProjPatches Include= "$(MainProjPatchesPath)**\*.xml"/>
+	<ItemGroup>
+		<!-- Main mod data-->
+		<Defs Include="$(MainDefProjPath)**\*.xml" />
+		<Defs Include="$(WeaponDefProjPath)**\*.xml" />
+		<Languages Include="$(ENLanguagesProjPath)**\*.xml" />
+		<Languages Include="$(ENLanguagesProjPath)**\*.txt" />
+		<MainProjPatches Include="$(MainProjPatchesPath)**\*.xml" />
+
+		<!-- About files-->
+		<About Include="$(AboutPath)/*" />
+		<!-- Optional patches-->
+		<CEPatches Include="$(CEPatchesPath)**\*.xml" />
+		<BiotechPatches Include="$(BiotechPatchesPath)**\*.xml" />
+		<IdeologyPatchesPath Include="$(IdeologyPatchesPath)**\*.xml" />
 	</ItemGroup>
 	
 	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
+		<!-- Main mod data-->
 		<Copy SourceFiles="@(Defs)" DestinationFolder="$(DefOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
-			<Output TaskParameter="CopiedFiles" ItemName="DefCopiedFileList"/>
+			<Output TaskParameter="CopiedFiles" ItemName="DefCopiedFileList" />
 		</Copy>
 		<Message Text="Copied Files:%0A@(DefCopiedFileList, '%0D')" Importance="high" />
 
 		<Copy SourceFiles="@(Languages)" DestinationFolder="$(LangOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
-			<Output TaskParameter="CopiedFiles" ItemName="LangCopiedFileList"/>
+			<Output TaskParameter="CopiedFiles" ItemName="LangCopiedFileList" />
 		</Copy>
 		<Message Text="Copied Files:%0A@(LangCopiedFileList, '%0D')" Importance="high" />
 
 		<Copy SourceFiles="@(MainProjPatches)" DestinationFolder="$(PatchOuputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
-			<Output TaskParameter="CopiedFiles" ItemName="PatchCopiedFileList"/>
+			<Output TaskParameter="CopiedFiles" ItemName="PatchCopiedFileList" />
 		</Copy>
 		<Message Text="Copied Files:%0A@(PatchCopiedFileList, '%0D')" Importance="high" />
+		<!-- About -->
+		<Copy SourceFiles="@(About)" DestinationFolder="$(AboutOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="AboutCopiedFileList" />
+		</Copy>
+		<Message Text="Copied Files:%0A@(AboutCopiedFileList, '%0D')" Importance="high" />
+		<Copy SourceFiles="$(LoadFolderPath)" DestinationFiles="$(LoadFoldersOutputPath)" SkipUnchangedFiles="True" />
+		<!-- Optional patches-->
+		<Copy SourceFiles="@(CEPatches)" DestinationFolder="$(CEPatchOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="CEPatchCopiedList" />
+		</Copy>
+		<Message Text="Copied Files:%0A@(CEPatchCopiedList, '%0D')" Importance="high" />
+		<Copy SourceFiles="@(BiotechPatches)" DestinationFolder="$(BiotechPatchOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="BiotechPatchesCopiedList" />
+		</Copy>
+		<Message Text="Copied Files:%0A@(BiotechPatchesCopiedList, '%0D')" Importance="high" />
+
+		<Copy SourceFiles="@(IdeologyPatchesPath)" DestinationFolder="$(IdeologyPatchOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="IdeologyPatchesCopiedList" />
+		</Copy>
+		<Message Text="Copied Files:%0A@(IdeologyPatchesCopiedList, '%0D')" Importance="high" />
 	</Target>
 
 
@@ -69,7 +120,17 @@
 
 		<Message Text="Deleting Patches Directory" Importance="high" />
 		<RemoveDir Directories="$(PatchOuputPath)" />
+		<Message Text="Deleting CE patches Directory" Importance="high" />
+		<RemoveDir Directories="$(CEPatchOutputPath)" />
+		<Message Text="Deleting Biotech patches Directory" Importance="high" />
+		<RemoveDir Directories="$(BiotechPatchOutputPath)" />
 
-		
+		<Message Text="Deleting About Directory" Importance="high" />
+		<RemoveDir Directories="$(AboutOutputPath)" />
+		<Message Text="Deleting LoadFolders.xml" Importance="high" />
+		<Delete Files="$(LoadFoldersOutputPath)" />
+
+		<Message Text="Deleting Ideology patches directory" Importance="high" />
+		<Delete Files="$(IdeologyPatchOutputPath)" />
 	</Target>
 </Project>

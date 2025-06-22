@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<StyleCategoryDef>
+		<defName>RVFFA_IWStyle</defName>
+		<label>Avali Independent Worlds</label>
+		<iconPath>RimValiFFA/Symbols/avali_ideo_one</iconPath>
+		<soundOngoingRitual>RitualSustainer_Techist</soundOngoingRitual>
+		<ritualVisualEffectDef>Techist</ritualVisualEffectDef>
+		<thingDefStyles>
+			<li>
+				<thingDef>Gun_AssaultRifle</thingDef>
+				<styleDef>RVFFA_IWAssaultRifleStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_SniperRifle</thingDef>
+				<styleDef>RVFFA_IWSniperRifleStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_Revolver</thingDef>
+				<styleDef>RVFFA_IWRevolverStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_Autopistol</thingDef>
+				<styleDef>RVFFA_IWPistolStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_Minigun</thingDef>
+				<styleDef>RVFFA_IWMinigunStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_HeavySMG</thingDef>
+				<styleDef>RVFFA_IWHeavySMGStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_LMG</thingDef>
+				<styleDef>RVFFA_IWLMGStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_BoltActionRifle</thingDef>
+				<styleDef>RVFFA_IWRifleStyle</styleDef>
+			</li>
+			<li>
+				<thingDef>Gun_ChainShotgun</thingDef>
+				<styleDef>RVFFA_IWChainShotgunStyle</styleDef>
+			</li>
+		</thingDefStyles>
+	</StyleCategoryDef>
+</Defs>

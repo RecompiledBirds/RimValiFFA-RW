@@ -231,6 +231,8 @@
 							<ObservedLayingCorpse>BlackListSelf</ObservedLayingCorpse>
 							<ButcheredHumanlikeCorpse>BlackListSelf</ButcheredHumanlikeCorpse>
 							<KnowButcheredHumanlikeCorpse>BlackListSelf</KnowButcheredHumanlikeCorpse>
+							<SleptInBedroom>BlackListSelf</SleptInBedroom>
+							<SleptInBarracks>BlackListSelf</SleptInBarracks>
 						</ThoughtDef>
 						<TraitDef>
 							<BodyPurist>BlackListSelf</BodyPurist>
@@ -239,6 +241,7 @@
 						</TraitDef>
 						<XenotypeDef>
 							<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">WhiteListSelf</RVFFA_BaseAvaliXenoType>
+							<RVFFA_Solfeather MayRequire="Ludeon.RimWorld.Biotech">WhiteListSelf</RVFFA_Solfeather>
 						</XenotypeDef>
 					</defRestrictions>
 					
@@ -247,21 +250,12 @@
 					</alwaysAllowed>
 				</restrictions>
 			</li>
-
-			<li Class="RVCRestructured.RVRThoughtComp">
-				<thoughtReplacers>
-					<li>
-						<toReplace>SleptInBedroom</toReplace>
-						<replacer>RVFFA_SleptAlone</replacer>
-					</li>
-					<li>
-						<toReplace>SleptInBarracks</toReplace>
-						<replacer>RVFFA_SharedRoom</replacer>
-					</li>
-				</thoughtReplacers>
-			</li>
 			<li Class="RVCRestructured.RVRCP">
 
+			</li>
+
+			<li Class="RimValiFFARW.Packs.PackInfoCompProps">
+				
 			</li>
 		</comps>
 		<tools>

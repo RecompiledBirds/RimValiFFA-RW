@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <RecipeDef Name="RVFFA_BaseRefineCarbon" Abstract="True">
-        <workAmount>30</workAmount>
         <description>Extract refined carbon from the resources used.</description>
         <jobString>Refining carbon</jobString>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
-
+		<workAmount>1000</workAmount>
 		<researchPrerequisites>
 			<li>RVFFA_CarbonTech</li>
 		</researchPrerequisites>

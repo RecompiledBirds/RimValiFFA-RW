@@ -65,11 +65,14 @@ namespace RimValiFFARW.Packs
         {
             if (Find.TickManager.TicksGame % packCheckTickDelay != 0) return;
             if (packsList.Count == 0) return;
-
+            if (lastWorkedOnPackListIndex > packsList.Count) lastWorkedOnPackListIndex = 0;
             Pack pack = packsList[lastWorkedOnPackListIndex];
+            if (pack == null)
+            {
+                packsList.RemoveAt(lastWorkedOnPackListIndex);
+                return;
+            }
             lastWorkedOnPackListIndex++;
-
-            if (lastWorkedOnPackListIndex >= packsList.Count) lastWorkedOnPackListIndex = 0;
 
             bool anyReasonsExist = false;
             foreach(string reason in pack.Worker.IsPackStillValid(pack))
@@ -79,7 +82,7 @@ namespace RimValiFFARW.Packs
             }
 
             if (!anyReasonsExist) return;
-            if (PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack == pack) 
+            if (PackInspectionWindow.GetCurrentPackInspectionWindow?.CurrentPack == pack) 
                 PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack = null;
             pack.Worker.Disband(pack);
 

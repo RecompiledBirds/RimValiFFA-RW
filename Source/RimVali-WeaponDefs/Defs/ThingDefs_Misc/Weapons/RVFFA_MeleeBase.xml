@@ -25,8 +25,11 @@
 			<li>ITab_Art</li>
 		</inspectorTabs>
 		<tradeTags>
-			<li>WeaponMelee</li>
+			<li>RVFFA_WeaponMelee</li>
 		</tradeTags>
+		<weaponTags Inherit="False">
+			<li>RVFFA_Weapons</li>
+		</weaponTags>
 	</ThingDef>
 
 	<ThingDef Name="RVFFA_BaseMeleeWeapon_Sharp" ParentName="RVFFA_BaseMeleeWeapon" Abstract="True">

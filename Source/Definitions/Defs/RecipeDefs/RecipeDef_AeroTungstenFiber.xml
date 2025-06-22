@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <RecipeDef>
-        <workAmount>100</workAmount>
+        <workAmount>40000</workAmount>
         <defName>RVFFA_AeroTungstenFiberRecipe</defName>
         <label>Weave aero tungsten fiber</label>
         <description>Weave aero tungsten fiber.</description>

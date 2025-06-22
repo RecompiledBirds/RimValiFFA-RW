@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeRVFFA_RifleAmmoFMJ</defName>
+		<label>make Illuminate Rifle Ammo (FMJ) x500</label>
+		<description>Craft 500 Illuminate Rifle Ammo cartridges.</description>
+		<jobString>Making Illuminate Rifle Ammo cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RVFFA_RifleAmmoFMJ>500</RVFFA_RifleAmmoFMJ>
+		</products>
+		<workAmount>2800</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeRVFFA_RifleAmmoAP</defName>
+		<label>make Illuminate Rifle Ammo (AP) x500</label>
+		<description>Craft 500 Illuminate Rifle Ammo cartridges.</description>
+		<jobString>Making Illuminate Rifle Ammo cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RVFFA_RifleAmmoAP>500</RVFFA_RifleAmmoAP>
+		</products>
+		<workAmount>3360</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeRVFFA_RifleAmmoHP</defName>
+		<label>make Illuminate Rifle Ammo (HP) x500</label>
+		<description>Craft 500 Illuminate Rifle Ammo cartridges.</description>
+		<jobString>Making Illuminate Rifle Ammo cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<RVFFA_RifleAmmoHP>500</RVFFA_RifleAmmoHP>
+		</products>
+		<workAmount>2800</workAmount>
+	</RecipeDef>
+</Defs>

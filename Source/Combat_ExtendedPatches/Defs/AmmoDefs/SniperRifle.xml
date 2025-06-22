@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef>
+		<defName>RVFFA_SniperRifleAmmo</defName>
+		<!-- This is just for stockpile purposes. -->
+		<label>Illuminate Sniper Rifle Ammunition</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>RVFFA_SniperRifleAmmoSet</defName>
+		<label>Illuminate Sniper Rifle Ammo</label>
+		<ammoTypes>
+			<!-- This list ties ammo items together to corresponding projectile. -->
+			<RVFFA_SniperRifleAmmoFMJ>RVFFA_SniperRifleBulletFMJ</RVFFA_SniperRifleAmmoFMJ>
+			<RVFFA_SniperRifleAmmoAP>RVFFA_SniperRifleBulletAP</RVFFA_SniperRifleAmmoAP>
+			<RVFFA_SniperRifleAmmoHP>RVFFA_SniperRifleBulletHP</RVFFA_SniperRifleAmmoHP>
+		</ammoTypes>
+		<similarTo>AmmoSet_Rifle</similarTo>
+	</CombatExtended.AmmoSetDef>
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="RVFFA_AmmoSniperRifle" ParentName="SmallAmmoBase" Abstract="True">
+		<description>Railgun-based ammunition found in only the most elite Illuminate minigun patterns.</description>
+		<statBases>
+			<Mass>0.026</Mass>
+			<Bulk>0.03</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<!-- This lets traders stock this kind of ammo. -->
+			<li>CE_AutoEnableCrafting</li>
+			<!-- This adds the ammo recipes to the Loading Bench when the ammo set is in-use. -->
+		</tradeTags>
+		<thingCategories>
+			<li>RVFFA_SniperRifleAmmo</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="RVFFA_AmmoSniperRifle">
+		<defName>RVFFA_SniperRifleAmmoFMJ</defName>
+		<label>Illuminate Sniper Rifle Ammunition (FMJ)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.12</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
+		<cookOffProjectile>RVFFA_SniperRifleBulletFMJ</cookOffProjectile>
+		<!-- If this round cooks off without `Realistic Cookoff` enabled, what projectile spawns? -->
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="RVFFA_AmmoSniperRifle">
+		<defName>RVFFA_SniperRifleAmmoAP</defName>
+		<label>Illuminate Sniper Rifle Ammunition (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.12</MarketValue>
+		</statBases>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
+		<cookOffProjectile>RVFFA_SniperRifleBulletAP</cookOffProjectile>
+		<!-- If this round cooks off without `Realistic Cookoff` enabled, what projectile spawns? -->
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="RVFFA_AmmoSniperRifle">
+		<defName>RVFFA_SniperRifleAmmoHP</defName>
+		<label>Illuminate Sniper Rifle Ammunition (HP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/HP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.12</MarketValue>
+		</statBases>
+		<ammoClass>HollowPoint</ammoClass>
+		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
+		<cookOffProjectile>RVFFA_SniperRifleBulletHP</cookOffProjectile>
+		<!-- If this round cooks off without `Realistic Cookoff` enabled, what projectile spawns? -->
+	</ThingDef>
+</Defs>

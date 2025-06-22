@@ -63,7 +63,7 @@
         <apparel>
             <useWornGraphicMask>true</useWornGraphicMask>
 
-			<tags>
+			<tags Inherit="False">
 				<li>Avali</li>
 			</tags>
         </apparel>

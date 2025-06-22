@@ -5,7 +5,7 @@
         <jobString>Weaving nano-carbon fiber.</jobString>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
-        <workAmount>100</workAmount>
+        <workAmount>1500</workAmount>
         <soundWorking>Recipe_Smelt</soundWorking>
 		<researchPrerequisites>
 			<li>RVFFA_CarbonNanoFiberTech</li>

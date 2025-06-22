@@ -23,6 +23,7 @@
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>brrainz.harmony</li>
 		<li>RimVali.Rewritten.Core</li>
+		<li>CETeam.CombatExtended</li>
 	</loadAfter>
 	<supportedVersions>
 		<li>1.4</li>
@@ -32,6 +33,6 @@
 	<packageId>Nesi.RimValiFFARW</packageId>
 	<description>Avali for rimworld!\n Grown with Vine!</description>
 	<modIconPath IgnoreIfNoMatchingField="True">RimValiFFA/Symbols/avali_ideo_angy</modIconPath>
-	<modVersion IgnoreIfNoMatchingField="True">3.0.2</modVersion>
+	<modVersion IgnoreIfNoMatchingField="True">3.0.3</modVersion>
 	
 </ModMetaData>

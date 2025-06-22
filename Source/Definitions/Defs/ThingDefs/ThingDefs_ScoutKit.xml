@@ -14,7 +14,7 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
-			<MaxHitPoints>900</MaxHitPoints>
+			<MaxHitPoints>350</MaxHitPoints>
 			<Mass>1.5</Mass>
 			<Flammability>0.02</Flammability>
 			<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
@@ -30,6 +30,9 @@
 			<Plasteel>20</Plasteel>
 			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
 		</costList>
+		<equippedStatOffsets>
+			<MoveSpeed>1.0</MoveSpeed>
+		</equippedStatOffsets>
 		<apparel>
 			<tags>
 				<li>RVFFA_ScoutGear</li>
@@ -42,7 +45,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseArmorHelmet">
-		<defName>RVFFA_ScoutHelment</defName>
+		<defName>RVFFA_ScoutHelmet</defName>
 		<label>Illuminate Scout Helmet</label>
 		<description>A light Avali scout helmet. Going on their head and barely protecting the ears, this piece of headwear is commonly paired with the rest of the suit. Giving the same protections as the rest of the suit, it in turn also features an antenna that allows them to communicate with homebase, sometimes even allowing them to receive information about the target they’re shooting at.</description>
 		<graphicData>

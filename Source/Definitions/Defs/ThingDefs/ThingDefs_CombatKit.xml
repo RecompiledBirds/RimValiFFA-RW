@@ -14,7 +14,7 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>20000</WorkToMake>
-			<MaxHitPoints>4000</MaxHitPoints>
+			<MaxHitPoints>400</MaxHitPoints>
 			<Mass>3</Mass>
 			<Flammability>0.02</Flammability>
 			<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -25,7 +25,7 @@
 			<EquipDelay>4</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-1</MoveSpeed>
+			<MoveSpeed>0.2</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentIndustrial>5</ComponentIndustrial>
@@ -57,7 +57,7 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>20000</WorkToMake>
-			<MaxHitPoints>4000</MaxHitPoints>
+			<MaxHitPoints>450</MaxHitPoints>
 			<Mass>3</Mass>
 			<Flammability>0.02</Flammability>
 			<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -67,9 +67,6 @@
 			<Insulation_Heat>2</Insulation_Heat>
 			<EquipDelay>4</EquipDelay>
 		</statBases>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.5</MoveSpeed>
-		</equippedStatOffsets>
 		<costList>
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<RVFFA_ProcessedTungsten>30</RVFFA_ProcessedTungsten>

@@ -79,7 +79,7 @@ namespace RimValiFFARW.Packs
         {
             if (!pack.Members.Contains(member))
             {
-                RVCLog.Log($"Tried to check if {member.NameShortColored} could be removed from pack with loadID: {pack.GetUniqueLoadID()}, but the pawn isn't even inside that pack");
+                VineLog.Log($"Tried to check if {member.NameShortColored} could be removed from pack with loadID: {pack.GetUniqueLoadID()}, but the pawn isn't even inside that pack");
                 return false;
             }
 
@@ -157,7 +157,14 @@ namespace RimValiFFARW.Packs
                 MessageOf(new LookTargets(pawns), reason, quietError);
                 return false;
             }
-
+            foreach(Pawn pawn in pawns)
+            {
+                if (!pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken)) continue;
+                reason = "RVFFA_PawnIsPackBroken".Translate(pawn.Name.ToStringShort);
+                MessageOf(new LookTargets(pawn), reason, quietError);
+                return false;
+                
+            }
             return true;
         }
 
@@ -269,6 +276,7 @@ namespace RimValiFFARW.Packs
             if (!testSingleMembers) yield break;
             foreach (Pawn member in pack.Members)
             {
+                if (member == null) continue;
                 pack.Worker.MemberShouldLeave(member, pack, out string? reason);
                 if (reason == null) continue;
 

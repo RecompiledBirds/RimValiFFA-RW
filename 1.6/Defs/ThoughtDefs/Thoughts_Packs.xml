@@ -2,17 +2,44 @@
 <Defs>
 	<ThoughtDef>
 		<defName>RVFFA_PackSharedRoom</defName>
-		<workerClass>RimValiFFARW.Packs.SharedRoomThought</workerClass>
+		<workerClass>RimValiFFARW.Packs.SharedMapThought</workerClass>
 		<stages>
 			<li>
-				<label>Away from packmates</label>
+				<label>Away from my pack</label>
 				<description>My packmates aren't here. This makes me feel anxious.</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 			<li>
-				<label>With packmates</label>
-				<description>I'm sharing a room with my pack. This makes me happy.</description>
+				<label>With my pack</label>
+				<description>I'm with my pack! They always make me feel a bit better.</description>
 				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RVFFA_PackNotHere</defName>
+		<workerClass>RimValiFFARW.Packs.PackNotHereWorker</workerClass>
+		<stages>
+			<li>
+				<label>Haven't seen my pack</label>
+				<description>I haven't seen my pack in a while.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>Worried about my pack</label>
+				<description>I haven't seen my pack in a few days... I hope they are okay.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+			<li>
+				<label>My pack is missing</label>
+				<description>My pack is gone. Am I the only one left?</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+			<li>
+				<label>Onset pack-loss</label>
+				<description>I feel so alone.</description>
+				<baseMoodEffect>-35</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>

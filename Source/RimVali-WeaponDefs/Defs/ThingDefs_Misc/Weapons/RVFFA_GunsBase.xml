@@ -53,10 +53,4 @@
 			<damageDef>Bullet</damageDef>
 		</projectile>
 	</ThingDef>
-
-	<ThingDef ParentName="BaseHumanMakeableGun" Name="RVFFA_BaseIWGun" Abstract="True">
-		<weaponTags>
-			<li>RVFFA_IWAvaliWeapons</li>
-		</weaponTags>
-	</ThingDef>
 </Defs>

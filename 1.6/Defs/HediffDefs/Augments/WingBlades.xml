@@ -8,7 +8,7 @@
 		<spawnThingOnRemoved>RVFFA_WingBlades</spawnThingOnRemoved>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.9</partEfficiency>
+			<partEfficiency>1.1</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
 		<comps>
@@ -23,7 +23,7 @@
 						</capacities>
 						<linkedBodyPartsGroup>Arms</linkedBodyPartsGroup>
 						<power>18</power>
-						<cooldownTime>3</cooldownTime>
+						<cooldownTime>2</cooldownTime>
 					</li>
 				</tools>
 			</li>
@@ -45,7 +45,7 @@
 		<costList>
 			<Plasteel>2</Plasteel>
 			<RVFFA_Ferrogel>2</RVFFA_Ferrogel>
-			<ComponentSpacer>1</ComponentSpacer>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<RVFFA_ProcessedTungsten>5</RVFFA_ProcessedTungsten>
 		</costList>
 		<thingSetMakerTags>

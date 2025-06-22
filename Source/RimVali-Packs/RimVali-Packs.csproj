@@ -20,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RimVali-Defs\RimVali-DefOfs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="RVCRestructured">
       <HintPath>..\..\..\Vine\1.6\Assemblies\RVCRestructured.dll</HintPath>
       <Private>False</Private>
