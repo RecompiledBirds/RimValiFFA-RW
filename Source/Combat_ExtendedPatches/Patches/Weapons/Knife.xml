@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RVFFA_Knife"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>2</power>
+					<chanceFactor>0.33</chanceFactor>
+					<cooldownTime>1.44</cooldownTime>
+					<armorPenetrationBlunt>0.425</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>Knife point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.2</cooldownTime>
+					<armorPenetrationBlunt>0.425</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.48</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>Knife Blade</label>
+					<capacities>
+						<li>Cut</li>
+						<li>Stab</li>
+					</capacities>
+					<power>13</power>
+					<cooldownTime>1.4</cooldownTime>
+					<armorPenetrationBlunt>0.425</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.48</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="RVFFA_Knife"]/statBases</xpath>
+		<value>
+			<Bulk>0.05</Bulk>
+			<MeleeCounterParryBonus>0.05</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="RVFFA_Knife"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.2</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+				<MeleeDodgeChance>0.2</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="RVFFA_Knife"]/weaponTags</xpath>
+		<value>
+			<li>CE_Sidearm_Melee</li>
+			<li>CE_OneHandedWeapon</li>
+		</value>
+	</Operation>
+</Patch>

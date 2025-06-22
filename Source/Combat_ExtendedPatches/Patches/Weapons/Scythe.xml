@@ -40,8 +40,8 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="RVFFA_Scythe"]/statBases</xpath>
 		<value>
-			<Bulk>3.5</Bulk>
-			<MeleeCounterParryBonus>0.35</MeleeCounterParryBonus>
+			<Bulk>1.5</Bulk>
+			<MeleeCounterParryBonus>0.6</MeleeCounterParryBonus>
 		</value>
 	</Operation>
 
