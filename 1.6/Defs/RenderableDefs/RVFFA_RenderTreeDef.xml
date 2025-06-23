@@ -2,12 +2,12 @@
 <Defs>
 	<PawnRenderTreeDef Name="RVFFA_BaseRenderTree">
 		<defName>RVFFA_RenderTree</defName>
-		<root Class="RenderableDefNodeProperties_Parent">
+		<root Class="PawnRenderNodeProperties_Parent">
 			<debugLabel>Root</debugLabel>
 			<tagDef>Root</tagDef>
 			<drawData>
 				<scale>0.5</scale>
-				<childScale>0.5</childScale>
+				<childScale>0.7</childScale>
 				<defaultData>
 					<offset>(0,0,-.2)</offset>
 				</defaultData>

@@ -2,12 +2,12 @@
 <Defs>
 	<PawnRenderTreeDef Name="RVFFA_BaseRenderTree">
 		<defName>RVFFA_RenderTree</defName>
-		<root Class="RenderableDefNodeProperties_Parent">
+		<root Class="PawnRenderNodeProperties_Parent">
 			<debugLabel>Root</debugLabel>
 			<tagDef>Root</tagDef>
 			<drawData>
 				<scale>0.5</scale>
-				<childScale>1.0</childScale>
+				<childScale>0.7</childScale>
 				<defaultData>
 					<offset>(0,0,-.2)</offset>
 				</defaultData>
@@ -17,6 +17,20 @@
 					<def>RVFFA_Body</def>
 					<tagDef>Body</tagDef>
 					<skipFlag>Body</skipFlag>
+					<lifeStageScaleOverrides>
+						<li>
+							<lifeStage>HumanlikeBaby</lifeStage>
+							<scale>3</scale>
+						</li>
+						<li>
+							<lifeStage>HumanlikeChild</lifeStage>
+							<scale>10</scale>
+						</li>
+						<li  MayRequire="Ludeon.RimWorld.Biotech">
+							<lifeStage>HumanlikePreTeenager</lifeStage>
+							<scale>8</scale>
+						</li>
+					</lifeStageScaleOverrides>
 					<children>
 						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 							<debugLabel>Head</debugLabel>
