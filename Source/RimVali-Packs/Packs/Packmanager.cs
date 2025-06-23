@@ -65,7 +65,7 @@ namespace RimValiFFARW.Packs
         {
             if (Find.TickManager.TicksGame % packCheckTickDelay != 0) return;
             if (packsList.Count == 0) return;
-            if (lastWorkedOnPackListIndex > packsList.Count) lastWorkedOnPackListIndex = 0;
+            if (lastWorkedOnPackListIndex >= packsList.Count) lastWorkedOnPackListIndex = 0;
             Pack pack = packsList[lastWorkedOnPackListIndex];
             if (pack == null)
             {
