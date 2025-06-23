@@ -17,25 +17,12 @@
 					<def>RVFFA_Body</def>
 					<tagDef>Body</tagDef>
 					<skipFlag>Body</skipFlag>
-					<!--<lifeStageScaleOverrides>
-						<li>
-							<lifeStage>HumanlikeBaby</lifeStage>
-							<scale>3</scale>
-						</li>
-						<li>
-							<lifeStage>HumanlikeChild</lifeStage>
-							<scale>10</scale>
-						</li>
-						<li  MayRequire="Ludeon.RimWorld.Biotech">
-							<lifeStage>HumanlikePreTeenager</lifeStage>
-							<scale>8</scale>
-						</li>
-					</lifeStageScaleOverrides>-->
+
 					<children>
-						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
+						<li Class="RVCRestructured.RVR.RNodeWorker_Head">
 							<debugLabel>Head</debugLabel>
 							<def>RVFFA_Head</def>
-							<!--<extraOffset>(0,0,-.16)</extraOffset>-->
+							<extraOffset>(0,0,-.16)</extraOffset>
 							<tagDef>Head</tagDef>
 							<skipFlag>Head</skipFlag>
 							<baseLayer>10</baseLayer>
