@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
+		<defName>RVFFA_Farmer</defName>
+		<label>Illuminate farmer</label>
+		<combatPower>35</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>0.2~2.0</gearHealthRange>
+		<weaponMoney>65~125</weaponMoney>
+		<apparelMoney>200~400</apparelMoney>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<techHediffsMoney>1000~1000</techHediffsMoney>
+		<techHediffsTags>
+			<li>FieldHand</li>
+		</techHediffsTags>
+		<techHediffsChance>0.8</techHediffsChance>
+		<techHediffsMaxAmount>1</techHediffsMaxAmount>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
+		<defName>RVFFA_Logger</defName>
+		<label>Illuminate logger</label>
+		<combatPower>35</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>0.2~2.0</gearHealthRange>
+		<weaponMoney>65~125</weaponMoney>
+		<apparelMoney>200~400</apparelMoney>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<techHediffsChance>0.06</techHediffsChance>
+		<techHediffsMoney>50~600</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
+		<defName>RVFFA_Hunter</defName>
+		<label>Illuminate hunter</label>
+		<combatPower>52</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>0.2~2.0</gearHealthRange>
+		<weaponMoney>140~250</weaponMoney>
+		<apparelMoney>200~400</apparelMoney>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<techHediffsChance>0.06</techHediffsChance>
+		<techHediffsMoney>50~600</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
+		<defName>RVFFA_Miner</defName>
+		<label>Illuminate miner</label>
+		<combatPower>40</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>0.2~2.0</gearHealthRange>
+		<weaponMoney>65~125</weaponMoney>
+		<apparelMoney>200~400</apparelMoney>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<techHediffsMoney>1000~1000</techHediffsMoney>
+		<techHediffsTags>
+			<li>DrillArm</li>
+		</techHediffsTags>
+		<techHediffsChance>0.8</techHediffsChance>
+		<techHediffsMaxAmount>1</techHediffsMaxAmount>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+</Defs>
