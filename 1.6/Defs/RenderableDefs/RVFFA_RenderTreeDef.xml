@@ -19,7 +19,7 @@
 					<skipFlag>Body</skipFlag>
 
 					<children>
-						<li Class="RVCRestructured.RVR.RNodeWorker_Head">
+						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties_Head">
 							<debugLabel>Head</debugLabel>
 							<def>RVFFA_Head</def>
 							<extraOffset>(0,0,-.16)</extraOffset>
