@@ -17,7 +17,7 @@
 					<def>RVFFA_Body</def>
 					<tagDef>Body</tagDef>
 					<skipFlag>Body</skipFlag>
-					<lifeStageScaleOverrides>
+					<!--<lifeStageScaleOverrides>
 						<li>
 							<lifeStage>HumanlikeBaby</lifeStage>
 							<scale>3</scale>
@@ -30,7 +30,7 @@
 							<lifeStage>HumanlikePreTeenager</lifeStage>
 							<scale>8</scale>
 						</li>
-					</lifeStageScaleOverrides>
+					</lifeStageScaleOverrides>-->
 					<children>
 						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 							<debugLabel>Head</debugLabel>
