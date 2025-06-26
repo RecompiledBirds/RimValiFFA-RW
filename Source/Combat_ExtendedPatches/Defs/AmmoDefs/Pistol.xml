@@ -49,7 +49,7 @@
 		<defName>RVFFA_IlluminateCommonAmmoFMJ</defName>
 		<label>Common Pattern Illuminate Ammo (FMJ)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/FMJ</texPath>
+			<texPath>RimValiFFA/Buildings/Turrets/MingiGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -65,7 +65,7 @@
 		<defName>RVFFA_IlluminateCommonAmmoAP</defName>
 		<label>Common Pattern Illuminate Ammo (AP)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/AP</texPath>
+			<texPath>RimValiFFA/Buildings/Turrets/MingiGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -81,7 +81,7 @@
 		<defName>RVFFA_IlluminateCommonAmmoHP</defName>
 		<label>Common Pattern Illuminate Ammo (HP)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/HP</texPath>
+			<texPath>RimValiFFA/Buildings/Turrets/MingiGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>

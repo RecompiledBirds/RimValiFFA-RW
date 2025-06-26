@@ -116,7 +116,7 @@
 		<description>Aerotungsten's unique properties can be exploited to create flexible computers on a molecular scale.</description>
 		<researchViewX>7.00</researchViewX>
 		<researchViewY>5.70</researchViewY>
-		<baseCost>10000</baseCost>
+		<baseCost>15000</baseCost>
 		<prerequisites>
 			<li>RVFFA_MicrodronesTech</li>
 		</prerequisites>

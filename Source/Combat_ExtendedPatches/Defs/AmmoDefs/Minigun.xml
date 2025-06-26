@@ -44,7 +44,7 @@
 		<defName>RVFFA_MinigunAmmoFMJ</defName>
 		<label>Illuminate Minigun Ammunition (FMJ)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/FMJ</texPath>
+			<texPath>RimValiFFA/Buildings/Turrets/MingiGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -60,7 +60,7 @@
 		<defName>RVFFA_MinigunAmmoAP</defName>
 		<label>Illuminate Minigun Ammunition (AP)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/AP</texPath>
+			<texPath>RimValiFFA/Buildings/Turrets/MingiGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -76,7 +76,7 @@
 		<defName>RVFFA_MinigunAmmoHP</defName>
 		<label>Illuminate Minigun Ammunition (HP)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/HP</texPath>
+			<texPath>RimValiFFA/Buildings/Turrets/MingiGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>

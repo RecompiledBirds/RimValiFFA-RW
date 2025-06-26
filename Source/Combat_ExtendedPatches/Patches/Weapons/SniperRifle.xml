@@ -3,7 +3,7 @@
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>
-			Defs/ThingDef[defName="RVFFA_Rifle"]/tools <!-- This works the same as patching a melee weapon. -->
+			Defs/ThingDef[defName="RVFFA_SniperRifle"]/tools <!-- This works the same as patching a melee weapon. -->
 		</xpath>
 		<value>
 			<tools>
@@ -43,7 +43,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-		<defName>RVFFA_Rifle</defName>
+		<defName>RVFFA_SniperRifle</defName>
 		<statBases>
 			<Mass>3.5</Mass>
 			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
