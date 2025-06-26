@@ -19,6 +19,13 @@
 				<categories>
 					<li>RVFFA_Illuminate</li>
 				</categories>
+				<commonality>0.20</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Outlander</li>
+				</categories>
+				<commonality>0.80</commonality>
 			</li>
 		</backstoryFilters>
 		

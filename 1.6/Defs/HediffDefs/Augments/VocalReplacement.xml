@@ -22,6 +22,7 @@
 		</thingSetMakerTags>
 		<statBases>
 			<Mass>5</Mass>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_AdvancedImplantsTech</researchPrerequisite>

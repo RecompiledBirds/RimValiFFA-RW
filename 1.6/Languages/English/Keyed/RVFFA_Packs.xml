@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<!--PackWorker Class-->
+	<RVFFA_HasPackReplacement>{0} has a pack relacement AI, and cannot join a pack.</RVFFA_HasPackReplacement>
 	<RVFFA_PawnIsPackBroken>{0} is packbroken and cannot join a pack.</RVFFA_PawnIsPackBroken>
+	<RVFFA_PawnBecamePackBroken>{0} has become packbroken.</RVFFA_PawnBecamePackBroken>
+	<RVFFA_PawnHadPackReplacementInstalled>{0} has had a pack replacement AI installed.</RVFFA_PawnHadPackReplacementInstalled>
 	<RVFFA_PackWorker_DoesNotExist>A pawn can't join, because they don't exist.</RVFFA_PackWorker_DoesNotExist>
 	<RVFFA_PackWorker_CanNotJoin>{0} can't join, because {1}</RVFFA_PackWorker_CanNotJoin>																<!--{Name} can't join, because {reason}-->
 	<RVFFA_PackWorker_SubjectIsDead>{0} is dead.</RVFFA_PackWorker_SubjectIsDead>																		<!--{Name} is dead.-->
@@ -17,7 +20,6 @@
 	<RVFFA_PackWorker_CountLowerThanMin>This set of pawns is too small for this type of Pack! You have {0} and need at least {1} pawns.</RVFFA_PackWorker_CountLowerThanMin>
 	<RVFFA_PackWorker_CountHigherThanMax>This set of pawns is too big for this type of Pack! You have {0} and can have at max {1} pawns.</RVFFA_PackWorker_CountHigherThanMax>
 	<RVFFA_PackWorker_PawnWentMissing>they went missing. (Did you or a mod remove a packmember somehow?)</RVFFA_PackWorker_PawnWentMissing>
-	
 	<!--Pack Inspection Window Class-->
 	<RVFFA_PackInspectionWindow_LabelKey>Pack</RVFFA_PackInspectionWindow_LabelKey>
 	<RVFFA_PackInspectionWindow_PawnNotInPackLabel>{0} is not in any pack!</RVFFA_PackInspectionWindow_PawnNotInPackLabel>

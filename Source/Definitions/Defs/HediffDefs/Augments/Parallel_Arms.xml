@@ -8,13 +8,13 @@
 		<spawnThingOnRemoved>RVFFA_Parrallel_Arm</spawnThingOnRemoved>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>1.5</partEfficiency>
+			<partEfficiency>2.0</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
 		<stages>
 			<li>
 				<statOffsets>
-					<RVC_HealthOffset>-0.05</RVC_HealthOffset>
+					<RVC_HealthOffset>-0.1</RVC_HealthOffset>
 				</statOffsets>
 			</li>
 		</stages>

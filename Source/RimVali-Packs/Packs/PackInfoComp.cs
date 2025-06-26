@@ -49,9 +49,14 @@ namespace RimValiFFARW.Packs
             if (!parent.Spawned || parent is not Pawn pawn) return;
             //check every 150 ticks
             if (!pawn.IsHashIntervalTick(150, delta)) return;
+            if (pawn.health.hediffSet.HasHediff(RVFFA_Defs.RVFFA_PackReplacement))
+            {
+                packLossProgression = 0;
+                return;
+            }
             int day = GenDate.DayOfYear(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(parent.Map.Tile).x);
             bool isInPack = pawn.IsInPack(out Pack? pack);
-
+            
 
             bool activelySeeingPackMate = isInPack
                                         && pack!=null 
@@ -97,7 +102,7 @@ namespace RimValiFFARW.Packs
         /// <param name="onBroken"></param>
         private void DoPackBreakingChance(Pawn pawn, Action? onBroken = null)
         {
-            if (pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken)) return;
+            if (!pawn.CanJoinAPack()) return;
             if (!Rand.Chance(PackLossProgression / 30))
             {
                 return;

@@ -13,6 +13,10 @@ namespace RimValiFFARW.Packs
 {
     public static class PackExtensions
     {
+        public static bool CanJoinAPack(this Pawn pawn)
+        {
+            return !(pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken) || pawn.health.hediffSet.HasHediff(RVFFA_Defs.RVFFA_PackReplacement));
+        }
         /// <summary>
         ///     Checks if a given <see cref="Pawn"/> <paramref name="pawn"/> is a member in any given <see cref="Pack"/>.
         ///     The <see cref="Pack"/>s checked are handled by the <see cref="Packmanager"/>.
@@ -39,7 +43,6 @@ namespace RimValiFFARW.Packs
         {
             bool isInPack = Packmanager.GetLastActivePackmanager.TryGetPackForPawn(pawn, out pack);
 
-            //RVCLog.Log($"Pawn: {pawn.NameFullColored} is in Pack: {isInPack}");
 
             return isInPack;
         }
