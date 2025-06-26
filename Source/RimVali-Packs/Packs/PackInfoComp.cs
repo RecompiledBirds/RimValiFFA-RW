@@ -92,11 +92,12 @@ namespace RimValiFFARW.Packs
 
         private void DoPackBreakingChance(Pawn pawn, Action? onBroken = null)
         {
-            if (Rand.Chance(PackLossProgression / 30) && !pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken))
+            if (!Rand.Chance(PackLossProgression / 30) || pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken))
             {
-                onBroken?.Invoke();
-                pawn.story.traits.GainTrait(new Trait(RVFFA_Defs.RVFFA_PackBroken, forced: true), true);
+                return;
             }
+            onBroken?.Invoke();
+            pawn.story.traits.GainTrait(new Trait(RVFFA_Defs.RVFFA_PackBroken, forced: true), true);
         }
 
         public override void PostExposeData()
