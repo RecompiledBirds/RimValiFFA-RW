@@ -90,9 +90,15 @@ namespace RimValiFFARW.Packs
 
         }
 
+        /// <summary>
+        /// Rolls <see cref="Rand.Chance(this.PackLossProgression/30)"/>, and if the pawn is not packbroken + roll passes, pack-breaks pawn and executes a given action.
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="onBroken"></param>
         private void DoPackBreakingChance(Pawn pawn, Action? onBroken = null)
         {
-            if (!Rand.Chance(PackLossProgression / 30) || pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken))
+            if (pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken)) return;
+            if (!Rand.Chance(PackLossProgression / 30))
             {
                 return;
             }
