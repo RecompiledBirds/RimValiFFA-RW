@@ -442,7 +442,7 @@
 		<label>Minigun Ammunition</label>
 		<description>Ammunition for a large minigun.</description>
 		<graphicData>
-			<texPath>RimValiFFA/Buildings/Turrets/MingiGunAmmo</texPath>
+			<texPath>RimValiFFA/Buildings/Turrets/MiniGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>

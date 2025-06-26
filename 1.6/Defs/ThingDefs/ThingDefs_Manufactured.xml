@@ -170,8 +170,8 @@
 		<label>nanomachines</label>
 		<comps>
 			<li Class= "RVCRestructured.Comps.HealableMaterialCompProperties">
-				<amountHealed>20</amountHealed>
-				<ticksBetweenHeal>30</ticksBetweenHeal>
+				<amountHealed>10</amountHealed>
+				<ticksBetweenHeal>1800</ticksBetweenHeal>
 			</li>
 		</comps>
 		<description>A group of specialised nanomachines, capable of reshaping and reparing themselves.</description>
@@ -422,6 +422,28 @@
 		<graphicData>
 			<texPath>RimValiFFA/Buildings/Turrets/BFG/BFG_sabot</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>2</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0.1</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+			<StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+		</statBases>
+	</ThingDef>
+
+<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_MinigunTurretAmmo</defName>
+		<label>Minigun Ammunition</label>
+		<description>Ammunition for a large minigun.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Turrets/MiniGunAmmo</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>
 

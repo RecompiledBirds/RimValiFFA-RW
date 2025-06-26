@@ -576,7 +576,7 @@
 		<label>AERIAL System</label>
 		<description>AERIAL is a high accuracy rocket system, that can hold up to six rockets, and fire two at once.</description>
 		<designationCategory>RVFFA_Security</designationCategory>
-		<thingClass>RimValiFFARW.AERIALSYSTEM</thingClass>
+		<thingClass>RimValiFFARW.AERIALSystem</thingClass>
 		<graphicData>
 			<texPath>RimValiFFA/Buildings/Turrets/AERIAL/AERIAL_TURRET_BASE_3X3</texPath>
 			<drawSize>(3,3)</drawSize>
@@ -591,10 +591,13 @@
 				<explosiveRadius>4.9</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 			</li>
-			<li Class="RimValiFFARW.AerialProps"/>
+			
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+			<li Class="RimValiFFARW.AERIALProps">
+				
 			</li>
 		</comps>
 		<designationHotKey>Misc4</designationHotKey>
@@ -623,7 +626,7 @@
 		</weaponTags>
 		<verbs>
 			<li>
-				<verbClass>RimValiFFARW.AERIALLaunch</verbClass>
+				<verbClass>Verb_Shoot</verbClass>
 				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
 				<warmupTime>4.0</warmupTime>
 				<forcedMissRadius>0.5</forcedMissRadius>
@@ -642,9 +645,7 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="RimValiFFARW.AERIALChangeable">
-				<maxShellCount>6</maxShellCount>
-			</li>
+			<li Class="CompProperties_ChangeableProjectile" />
 		</comps>
 		<building>
 			<fixedStorageSettings>

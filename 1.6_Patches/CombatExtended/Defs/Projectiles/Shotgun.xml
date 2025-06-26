@@ -23,7 +23,7 @@
 
 	<ThingDef ParentName="RVFFA_ShotgunBullet">
 		<defName>RVFFA_ShotgunBuckshotBullet</defName>
-		<label>Illuminate Pistol Ammunition (FMJ)</label>
+		<label>Illuminate Shotgun Bullet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>10</damageAmountBase>
 			<pelletCount>13</pelletCount>
