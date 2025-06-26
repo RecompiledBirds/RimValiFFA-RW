@@ -29,9 +29,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>
-		<techHediffsTags>
-			<li>AdvancedAvali</li>
-		</techHediffsTags>
+
 		<descriptionHyperlinks>
 			<RecipeDef>RVFFA_InstallMiningDrones</RecipeDef>
 		</descriptionHyperlinks>

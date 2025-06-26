@@ -22,11 +22,15 @@
 		<hitPoints>10</hitPoints>
 		<permanentInjuryChanceFactor>18</permanentInjuryChanceFactor>
 		<delicate>true</delicate>
+		<solid>false</solid>
 		<skinCovered>false</skinCovered>
 		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 		<canSuggestAmputation>true</canSuggestAmputation>
 		<beautyRelated>true</beautyRelated>
 		<bleedRate>0.3</bleedRate>
+		<tags>
+			<li>ManipulationLimbSegment</li>
+		</tags>
 	</BodyPartDef>
 	
 	<ThingDef ParentName="BodyPartNaturalBase">
@@ -48,10 +52,11 @@
 		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 		<canSuggestAmputation>true</canSuggestAmputation>
 		<skinCovered>true</skinCovered>
+		<solid>false</solid>
 		<beautyRelated>true</beautyRelated>
 		<bleedRate>0.5</bleedRate>
 		<tags>
-			<li>MovingLimbCore</li>
+			<li>MovingLimbSegment</li>
 		</tags>
 		<spawnThingOnRemoved>RVFFA_Tail</spawnThingOnRemoved>
 		<destroyableByDamage>true</destroyableByDamage>

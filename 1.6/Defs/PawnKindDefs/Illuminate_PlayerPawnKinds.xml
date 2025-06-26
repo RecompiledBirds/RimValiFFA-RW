@@ -11,13 +11,13 @@
 		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
 		<apparelMoney>350~1000</apparelMoney>
 		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
-		<techHediffsChance>0.03</techHediffsChance>
-		<techHediffsMoney>100~1000</techHediffsMoney>
+		<techHediffsChance>0.7</techHediffsChance>
+		<techHediffsMoney>4500~6500</techHediffsMoney>
 		<techHediffsTags>
-			<li>Poor</li>
-			<li>Simple</li>
-			<li>ImplantEmpireCommon</li>
-			<li>RVFFA_Spawnable</li>
+			<li>RVFFA_Basic</li>
+			<li>RVFFA_Advanced</li>
+			<li>Advanced</li>
+			<li>Spacer</li>
 		</techHediffsTags>
 		<techHediffsDisallowTags>
 			<li>PainCauser</li>

@@ -7,8 +7,36 @@
 
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
-		</comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>4554</analysisID>
+				<requiresMechanitor>false</requiresMechanitor>
 
+				<!-- Analyzable -->
+
+				<analysisDurationHours>5.5</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Ferrogel studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the ferrogel's design, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the Ferrogel.</activateDescString>
+				<jobString>Analyze ferrogel</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
         <graphicData>
             <texPath>RimValiFFA/Things/Aerogel/BaseAerogel/Aerogel</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>

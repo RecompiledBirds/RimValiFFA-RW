@@ -14,12 +14,12 @@
 			<rulesStrings>
 				<li>subject->basic Illuminate implants</li>
 
-				<li>subject_story->downloaded and modified blueprints for Illuminate blueprints</li>
+				<li>subject_story->downloaded and modified blueprints for Illuminate implants</li>
 				<li>subject_story->designed several implant prototypes</li>
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>
-
+	
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_AdvancedImplantsTech</defName>
 		<label>Advanced Implant Technology</label>
@@ -28,16 +28,20 @@
 		<researchViewY>5.60</researchViewY>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>RVFFA_TungstenProcessingTech</li>
+			<li>RVFFA_BasicImplantsTech</li>
 		</prerequisites>
 		<generalRules>
 			<rulesStrings>
 				<li>subject->advanced Illuminate implants</li>
 
-				<li>subject_story->downloaded and modified blueprints for Illuminate blueprints</li>
+				<li>subject_story->downloaded and modified blueprints for Illuminate implants</li>
 				<li>subject_story->designed several implant prototypes</li>
 			</rulesStrings>
 		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_ScoutArmor</li>
+			<li>RVFFA_ScoutHelmet</li>
+		</requiredAnalyzed>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -82,7 +86,7 @@
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
 		<defName>RVFFA_AdvancedBionicsTech</defName>
-		<label>Advanced Bionics technolgies</label>
+		<label>Advanced Bionics</label>
 		<description>We can further specialize our colonists with powerful, high-end bionic limbs.</description>
 		<researchViewX>7.00</researchViewX>
 		<researchViewY>4.90</researchViewY>

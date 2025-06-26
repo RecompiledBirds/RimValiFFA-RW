@@ -2,8 +2,8 @@
 <Defs>
 	<RVCRestructured.FactionRestrictionsDef>
 		<defName>RVFFA_IWResearchRestrictions</defName>
-		<factionDef>RVFFA_IWPlayer</factionDef>
-		<disallowedResearch>
+		<factionDef>RVFFA_IlluminatePlayer</factionDef>
+		<unlocksResearch>
 			<li>RVFFA_BasicStartTech</li>
 			<li>RVFFA_LathingTech</li>
 			<li>RVFFA_FerrogelTech</li>
@@ -20,6 +20,7 @@
 			<li>RVFFA_BasicTurretTech</li>
 			<li>RVFFA_SniperTurretTech</li>
 			<li>RVFFA_AIMSTech</li>
+			<li>RVFFA_VirobladeTech</li>
 			<li>RVFFA_AERIALTech</li>
 			<li>RVFFA_AdvancedMeleeWeaponsTech</li>
 			<li>RVFFA_AeroTungstenTech</li>
@@ -33,6 +34,6 @@
 			<li>RVFFA_FerroweaveTech</li>
 			<li>RVFFA_AeroTungstenFiberTech</li>
 			<li>RVFFA_BasicImplantsTech</li>
-		</disallowedResearch>
+		</unlocksResearch>
 	</RVCRestructured.FactionRestrictionsDef>
 </Defs>

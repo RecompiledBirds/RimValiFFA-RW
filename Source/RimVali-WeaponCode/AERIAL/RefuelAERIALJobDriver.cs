@@ -62,7 +62,7 @@ namespace RimValiFFARW
                 {
                     return;
                 }
-
+                if (ammoNeeded <1) ammoNeeded = 1;
                 Thing? thing = FindAmmo(pawn, building_TurretGun);
                 if (thing == null)
                 {
@@ -84,7 +84,7 @@ namespace RimValiFFARW
                 }
             };
             yield return loadIfNeeded;
-            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, GetActor().CurJob.count);
+            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, stackCount: 1);
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell)
                 .FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);

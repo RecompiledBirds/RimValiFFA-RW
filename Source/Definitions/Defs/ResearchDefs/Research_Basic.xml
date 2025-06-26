@@ -26,6 +26,10 @@
 				<li>subject_story->built a facility for downloading nexus blueprints</li>
 			</rulesStrings>
 		</generalRules>
+		
+		<requiredAnalyzed>
+			<li>RVFFA_Ferrogel</li>
+		</requiredAnalyzed>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -46,6 +50,9 @@
 				<li>subject_story->built a prototype molecular lathe</li>
 			</rulesStrings>
 		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_Ferrogel</li>
+		</requiredAnalyzed>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -66,6 +73,9 @@
 				<li>subject_story->designed a method to synthesize ferrogel</li>
 			</rulesStrings>
 		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_Ferrogel</li>
+		</requiredAnalyzed>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -138,7 +148,7 @@
 		<description>Now that we have access to tungsten, we can start manufacturing weapons to defend ourselves.</description>
 		<researchViewX>5.00</researchViewX>
 		<researchViewY>4.05</researchViewY>
-		<baseCost>350</baseCost>
+		<baseCost>800</baseCost>
 		<prerequisites>
 			<li>RVFFA_TungstenProcessingTech</li>
 		</prerequisites>
@@ -150,6 +160,10 @@
 				<li>subject_story->downloaded a nanoforge configuration for a scythe</li>
 			</rulesStrings>
 		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_IlluminatePistol</li>
+			<li>RVFFA_Knife</li>
+		</requiredAnalyzed>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -158,18 +172,20 @@
 		<description>With significant improvements to our coilgun designs, we can create more powerful, specialized weaponry.</description>
 		<researchViewX>6.00</researchViewX>
 		<researchViewY>4.05</researchViewY>
-		<baseCost>700</baseCost>
+		<baseCost>3500</baseCost>
 		<prerequisites>
 			<li>RVFFA_BasicWeaponsTech</li>
 		</prerequisites>
 		<generalRules>
 			<rulesStrings>
-				<li>subject->simple Illuminate bionics</li>
+				<li>subject->advanced Illuminate Weaponry</li>
 
-				<li>subject_story->built themselves a improved leg with the help of digital tools</li>
-				<li>subject_story->downloaded a new leg blueprint</li>
+				<li>subject_story->built a advanced piece of railgun-based weaponry</li>
 			</rulesStrings>
 		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_IlluminateMachineGun</li>
+		</requiredAnalyzed>
 	</ResearchProjectDef>
 
 
@@ -179,8 +195,8 @@
 		<label>Advanced Melee Tech</label>
 		<description>We can use ferrogel and tungsten to make higher-end Illuminate weaponry.</description>
 		<researchViewX>6.00</researchViewX>
-		<researchViewY>3.10</researchViewY>
-		<baseCost>650</baseCost>
+		<researchViewY>2.80</researchViewY>
+		<baseCost>2400</baseCost>
 		<prerequisites>
 			<li>RVFFA_BasicWeaponsTech</li>
 		</prerequisites>
@@ -188,13 +204,40 @@
 			<rulesStrings>
 				<li>subject->advanced Illuminate melee weapons</li>
 
-				<li>subject_story->downloaded a blueprint for a Viroblade</li>
-				<li>subject_story->downloaded a nanoforge configureation for a Viroblade</li>
 
 				<li>subject_story->downloaded a blueprint for a Illuminate Axe</li>
 				<li>subject_story->downloaded a nanoforge configureation for a Illuminate Axe</li>
+				<li>subject_story->downloaded a blueprint for a Illuminate Spear</li>
+				<li>subject_story->downloaded a nanoforge configureation for a Illuminate Spear</li>
 			</rulesStrings>
 		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_Axe</li>
+		</requiredAnalyzed>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_VirobladeTech</defName>
+		<label>Viroblades</label>
+		<description>Highly advanced Illumiante swords, capable of vibrating to achieve an effect similar to a chainsaw.</description>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>2.80</researchViewY>
+		<baseCost>3500</baseCost>
+		<prerequisites>
+			<li>RVFFA_AdvancedMeleeWeaponsTech</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->advanced Illuminate melee weapons</li>
+
+				<li>subject_story->downloaded a blueprint for a Viroblade</li>
+				<li>subject_story->downloaded a nanoforge configureation for a Viroblade</li>
+			</rulesStrings>
+		</generalRules>
+
+		<requiredAnalyzed>
+			<li>RVFFA_Viroblade</li>
+		</requiredAnalyzed>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
@@ -286,8 +329,8 @@
 			<li>RVFFA_NanoFiberTech</li>
 		</prerequisites>
 		<baseCost>1500</baseCost>
-		<researchViewX>4.00</researchViewX>
-		<researchViewY>0.40</researchViewY>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.60</researchViewY>
 		<generalRules>
 			<rulesStrings>
 				<li>subject->ferroweaving</li>
