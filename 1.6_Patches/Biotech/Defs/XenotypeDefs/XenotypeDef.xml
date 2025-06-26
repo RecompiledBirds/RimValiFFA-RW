@@ -3,7 +3,7 @@
 	<XenotypeDef>
 		<defName>RVFFA_BaseAvaliXenoType</defName>
 		<label>Avalonian</label>
-		<description>A baseline avali from avalon. While not adapted to this planet, they have undergone various genetic modifiations to help them on any colonization project.</description>
+		<description>A avali hailing from avalon. While Guardian nanites and other various augments improve their chances of survival on this world, they are not fully adapted to this environment.</description>
 		<iconPath>RimValiFFA/Symbols/avali_ideo_angy</iconPath>
 		<inheritable>true</inheritable>
 		<chanceToUseNameMaker>1</chanceToUseNameMaker>

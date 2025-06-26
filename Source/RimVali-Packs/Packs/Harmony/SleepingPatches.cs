@@ -7,7 +7,7 @@ namespace RimValiFFARW.Packs
     {
         public static void SleepingPostfix(Pawn actor, Building_Bed bed)
         {
-            if (!Packmanager.GetLastActivePackmanager.TryGetPackForPawn(actor, out Pack pack)) return;
+            if (!actor.IsInPack(out Pack? pack)) return;
             actor.needs.mood.thoughts.memories.RemoveMemoriesOfDef(RVFFA_Defs.RVFFA_AvaliSleptAlone);
             actor.needs.mood.thoughts.memories.RemoveMemoriesOfDef(RVFFA_Defs.RVFFA_AvaliSleptNotAlone);
             actor.needs.mood.thoughts.memories.RemoveMemoriesOfDef(RVFFA_Defs.RVFFA_AvaliSleptWithPack);
@@ -16,6 +16,7 @@ namespace RimValiFFARW.Packs
 
             int roomScore = RoomStatDefOf.Impressiveness.GetScoreStageIndex(room.GetStat(RoomStatDefOf.Impressiveness));
             List<Pawn> pawns = [];
+            
             foreach(Building_Bed foundBed in room.ContainedBeds)
             {
                 pawns.AddRange(foundBed.CurOccupants.Where(other => other != actor));

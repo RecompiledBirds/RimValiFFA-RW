@@ -11,6 +11,15 @@ namespace RimValiFFARW.Packs
 {
     public class PackInfoCompProps : CompProperties
     {
+        public bool canGetPackBroken = true;
+
+        public bool CanGetPackBroken
+        {
+            get
+            {
+                return canGetPackBroken;
+            }
+        }
         public PackInfoCompProps()
         {
             this.compClass = typeof(PackInfoComp);
@@ -21,42 +30,72 @@ namespace RimValiFFARW.Packs
         private int packLossProgression;
         private int lastSawPackmateOn;
         private int lastUpdateDay;
-        public int PackLossProgression => packLossProgression;
+        public int PackLossProgression {
+            get
+            {
+                return packLossProgression;
+            }
+            set
+            {
+                if (value < 0) value = 0;
+                packLossProgression = value;
+            }
+        }
 
        
         public override void CompTickInterval(int delta)
         {
-            
+
             if (!parent.Spawned || parent is not Pawn pawn) return;
             //check every 150 ticks
             if (!pawn.IsHashIntervalTick(150, delta)) return;
             int day = GenDate.DayOfYear(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(parent.Map.Tile).x);
-            if (lastSawPackmateOn == day)
+            bool isInPack = pawn.IsInPack(out Pack? pack);
+
+
+            bool activelySeeingPackMate = isInPack
+                                        && pack!=null 
+                                        && pack.Members.Any(other => other != pawn 
+                                                                    && (other.GetRoom() == pawn.GetRoom()
+                                                                        || (other.Spawned
+                                                                        && other.GetRoom() == null
+                                                                        && other.Map == pawn.Map 
+                                                                        && pawn.GetRoom() != null)));
+            if (activelySeeingPackMate && lastSawPackmateOn != day)
             {
-                if (lastUpdateDay==day || PackLossProgression == 0) return;
+                lastSawPackmateOn = day;
+            }
+
+            if (lastUpdateDay == day)
+            {
+                return;
+            }
+            // if pawn saw a packmate or is not in a pack, fade over time
+            if (lastSawPackmateOn == day || !isInPack)
+            {
                 packLossProgression--;
-
-                lastUpdateDay = day;
-                return;
             }
-            if (!Packmanager.GetLastActivePackmanager.TryGetPackForPawn(pawn, out Pack pack))
+            else
             {
-                //allows pack loss to fade over time if a pack is disbanded, without being too easy to cheese.
-                lastSawPackmateOn = day;
-                return;
-            };
-
-
-            
-            bool activelySeeingPackMate = pack.Members.Any(other => other != pawn && other.GetRoom() == pawn.GetRoom());
-            if (activelySeeingPackMate && lastSawPackmateOn!=day)
-            {
-                lastSawPackmateOn = day;
-            }
-            if (lastSawPackmateOn != day && lastUpdateDay!=day)
-            {
-                lastUpdateDay = day;
                 packLossProgression++;
+            }
+            DoPackBreakingChance(pawn, () => pack?.RemoveMember(pawn));
+            
+
+
+            lastUpdateDay = day;
+            return;
+
+
+
+        }
+
+        private void DoPackBreakingChance(Pawn pawn, Action? onBroken = null)
+        {
+            if (Rand.Chance(PackLossProgression / 30) && !pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken))
+            {
+                onBroken?.Invoke();
+                pawn.story.traits.GainTrait(new Trait(RVFFA_Defs.RVFFA_PackBroken, forced: true), true);
             }
         }
 

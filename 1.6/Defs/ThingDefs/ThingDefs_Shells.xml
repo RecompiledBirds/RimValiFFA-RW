@@ -266,7 +266,7 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<damageDef>Bomb</damageDef>
+			<damageDef>Vaporize</damageDef>
 			<!-- damage amount is the damage def default -->
 			<speed>30</speed>
 			<explosionRadius>56</explosionRadius>

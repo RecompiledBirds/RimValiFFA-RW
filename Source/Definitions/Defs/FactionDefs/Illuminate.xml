@@ -128,7 +128,7 @@
 				</options>
 			</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">
-				<kindDef>RVFFA_Loggers</kindDef>
+				<kindDef>Loggers</kindDef>
 				<commonality>1</commonality>
 				<options>
 					<RVFFA_Logger>1</RVFFA_Logger>

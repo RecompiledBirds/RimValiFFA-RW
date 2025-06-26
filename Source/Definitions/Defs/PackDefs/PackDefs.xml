@@ -2,14 +2,13 @@
 <Defs>
 	<RimValiFFARW.Packs.PackDef>
 		<defName>RVFFA_StarterPack</defName>
-		<label>starter pack</label>
+		<label>general pack</label>
 		<description>This pack may have existed for a long time, or it only started when your pawns first came into contact. Whatever happened, these pawns share a bond unique to them.</description>
 
 		<memberHediffs>
 			<li>RVFFA_StarterPackHediff</li>
 		</memberHediffs>
 
-		<unique>true</unique>
 
 		<minSizeToCreate>2</minSizeToCreate>
 		<minSizeToSustain>2</minSizeToSustain>
