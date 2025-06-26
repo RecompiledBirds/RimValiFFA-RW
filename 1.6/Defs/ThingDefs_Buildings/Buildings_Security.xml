@@ -147,7 +147,7 @@
           <turretTopDrawSize>3</turretTopDrawSize>
         </building>
 		<researchPrerequisites>
-			<li>RVFFA_BasicWeaponsTech</li>
+			<li>RVFFA_BasicTurretTech</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -283,7 +283,7 @@
           <turretTopDrawSize>3</turretTopDrawSize>
         </building>
 		<researchPrerequisites>
-			<li>RVFFA_TurretTech</li>
+			<li>RVFFA_MinigunTurretTech</li>
 		</researchPrerequisites>
     </ThingDef>
 
@@ -419,7 +419,8 @@
           <turretTopDrawSize>3.5</turretTopDrawSize>
         </building>
 		<researchPrerequisites>
-			<li>RVFFA_TurretTech</li>
+			<li>RVFFA_SniperTurretTech</li>
+			
 		</researchPrerequisites>
 	</ThingDef>
 

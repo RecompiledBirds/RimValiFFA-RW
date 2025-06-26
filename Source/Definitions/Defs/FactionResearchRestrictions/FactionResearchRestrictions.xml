@@ -12,11 +12,13 @@
 			<li>RVFFA_AdvancedImplantsTech</li>
 			<li>RVFFA_MicrodronesTech</li>
 			<li>RVFFA_Nanomachines</li>
+			<li>RVFFA_MinigunTurretTech</li>
 			<li>RVFFA_BasicBionicsTech</li>
 			<li>RVFFA_AdvancedBionicsTech</li>
 			<li>RVFFA_BasicWeaponsTech</li>
 			<li>RVFFA_AdvancedWeaponryTech</li>
-			<li>RVFFA_TurretTech</li>
+			<li>RVFFA_BasicTurretTech</li>
+			<li>RVFFA_SniperTurretTech</li>
 			<li>RVFFA_AIMSTech</li>
 			<li>RVFFA_AERIALTech</li>
 			<li>RVFFA_AdvancedMeleeWeaponsTech</li>
@@ -29,7 +31,6 @@
 			<li>RVFFA_SpecOpsTech</li>
 			<li>RVFFA_CarbonNanoFiberTech</li>
 			<li>RVFFA_FerroweaveTech</li>
-			<li>RVFFA_ThermalWrapsTech</li>
 			<li>RVFFA_AeroTungstenFiberTech</li>
 			<li>RVFFA_BasicImplantsTech</li>
 		</disallowedResearch>

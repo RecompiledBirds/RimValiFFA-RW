@@ -170,8 +170,8 @@
 		<label>nanomachines</label>
 		<comps>
 			<li Class= "RVCRestructured.Comps.HealableMaterialCompProperties">
-				<amountHealed>20</amountHealed>
-				<ticksBetweenHeal>30</ticksBetweenHeal>
+				<amountHealed>10</amountHealed>
+				<ticksBetweenHeal>1800</ticksBetweenHeal>
 			</li>
 		</comps>
 		<description>A group of specialised nanomachines, capable of reshaping and reparing themselves.</description>

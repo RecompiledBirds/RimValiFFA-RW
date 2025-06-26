@@ -151,7 +151,7 @@
             </defaultOutfitTags>
         </apparel>
 		<researchPrerequisites Inherit="False">
-			<li>RVFFA_ThermalWrapsTech</li>
+			<li>RVFFA_FerroweaveTech</li>
 		</researchPrerequisites>
     </ThingDef>
 
@@ -250,7 +250,7 @@
             </defaultOutfitTags>
         </apparel>
 		<researchPrerequisites Inherit="False">
-			<li>RVFFA_ThermalWrapsTech</li>
+			<li>RVFFA_FerroweaveTech</li>
 		</researchPrerequisites>
     </ThingDef>
 

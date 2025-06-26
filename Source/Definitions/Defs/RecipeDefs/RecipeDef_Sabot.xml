@@ -32,7 +32,7 @@
 		</products>
 
 		<researchPrerequisites>
-			<li>RVFFA_TurretTech</li>
+			<li>RVFFA_SniperTurretTech</li>
 		</researchPrerequisites>
 	</RecipeDef>
 </Defs>

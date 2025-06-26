@@ -6,7 +6,6 @@
 		<labelNoun>a advanced bionic tail</labelNoun>
 		<description>A advanced bionic avali tail.</description>
 		<spawnThingOnRemoved>RVFFA_AdvTail</spawnThingOnRemoved>
-		<hediffClass>HediffWithComps</hediffClass>
 		<addedPartProps>
 			<solid>true</solid>
 			<partEfficiency>1.5</partEfficiency>
@@ -21,8 +20,6 @@
 				</statOffsets>
 			</li>
 		</stages>
-		<comps>
-		</comps>
 	</HediffDef>
 
 	<ThingDef ParentName="RVFFA_BaseBionicPart">

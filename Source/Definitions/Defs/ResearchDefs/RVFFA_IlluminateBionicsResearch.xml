@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_BasicImplantsTech</defName>
+		<label>Implant Technology</label>
+		<description>Implants have always been a key component to the Illuminate's success. If we want to continue to be successful, we should study them ourselves as well.</description>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>4.90</researchViewY>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>RVFFA_TungstenProcessingTech</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->basic Illuminate implants</li>
+
+				<li>subject_story->downloaded and modified blueprints for Illuminate blueprints</li>
+				<li>subject_story->designed several implant prototypes</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AdvancedImplantsTech</defName>
+		<label>Advanced Implant Technology</label>
+		<description>Our current implant technologies are useful, but we could use them to do so much more.</description>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>5.60</researchViewY>
+		<baseCost>1500</baseCost>
+		<prerequisites>
+			<li>RVFFA_TungstenProcessingTech</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->advanced Illuminate implants</li>
+
+				<li>subject_story->downloaded and modified blueprints for Illuminate blueprints</li>
+				<li>subject_story->designed several implant prototypes</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_MicrodronesTech</defName>
+		<label>Micro-drones</label>
+		<description>Micro-drones are minature computer systems, though not quite small enough to justify the name "nanomachine". We can equip them to help the user in several tasks.</description>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>5.70</researchViewY>
+		<baseCost>1500</baseCost>
+		<prerequisites>
+			<li>RVFFA_AdvancedImplantsTech</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Illuminate microdrones</li>
+
+				<li>subject_story->developed software to coordinate miniature drone swarms</li>
+				<li>subject_story->downloaded a system to coordinate drones using a nervous interface</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_BasicBionicsTech</defName>
+		<label>Simple Bionics</label>
+		<description>Many avali also have bionic limbs to compliment their augmentations. While we cannot manufacture anything near the Illuminate's production quality yet, we can produce simplistic bionics that give us slight improvements over organic limbs.</description>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>4.90</researchViewY>
+		<baseCost>1300</baseCost>
+		<prerequisites>
+			<li>RVFFA_BasicImplantsTech</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->simple Illuminate bionics</li>
+
+				<li>subject_story->built themselves a improved leg with the help of digital tools</li>
+				<li>subject_story->downloaded a new leg blueprint</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_AdvancedBionicsTech</defName>
+		<label>Advanced Bionics technolgies</label>
+		<description>We can further specialize our colonists with powerful, high-end bionic limbs.</description>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>4.90</researchViewY>
+		<baseCost>2500</baseCost>
+		<prerequisites>
+			<li>RVFFA_BasicBionicsTech</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->simple Illuminate bionics</li>
+
+				<li>subject_story->built themselves a highly advanced leg with the help of digital tools</li>
+				<li>subject_story->downloaded an advanced new leg blueprint</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+</Defs>

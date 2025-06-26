@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using LudeonTK;
+using RimWorld;
 using RVCRestructured;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,15 @@ namespace RimValiFFARW.Packs
             packmanager.AddPack(pack);
         }
 
+        [DebugAction("RimValiFFARW", "Reset Pack Loss Progression for all Pawns", allowedGameStates = AllowedGameStates.Playing)]
+        public static void ResetPackLoss()
+        {
+            foreach(Pawn pawn in PawnsFinder.AllMapsAndWorld_Alive)
+            {
+                if (!pawn.TryGetComp(out PackInfoComp comp)) continue;
+                comp.PackLossProgression = 0;
+            }
+        }
         [DebugAction("RimValiFFARW", "Print list of packs", allowedGameStates = AllowedGameStates.IsCurrentlyOnMap)]
         public static void PrintPackList() => VineLog.Log(Packmanager.GetLastActivePackmanager.PacksReadOnly.Join(pack => pack.NameColored));
     }
