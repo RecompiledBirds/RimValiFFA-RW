@@ -30,7 +30,7 @@
 		</recipeMaker>
 	</ThingDef>
 	
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallAutophagicSystemRewrite</defName>
 		<label>Install autophagic system rewrite</label>
 		<description>Install autophagic system rewrite.</description>

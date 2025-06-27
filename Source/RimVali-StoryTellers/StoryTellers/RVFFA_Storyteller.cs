@@ -260,7 +260,7 @@ namespace RimValiFFARW.StoryTellers
             incidents.Add(IncidentDefOf.ShipChunkDrop);
 
             IncidentDef incident = incidents.RandomElement();
-            if (Rand.Chance(0.05f))
+            if (Rand.Chance(0.2f))
             {
                 parms.points *= parms.points * RatioDislikedLiked;
             }

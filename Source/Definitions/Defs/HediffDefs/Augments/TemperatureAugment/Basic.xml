@@ -27,7 +27,7 @@
 		</recipeMaker>
 	</ThingDef>
 	
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallBasicTemperatureControl</defName>
 		<label>Install basic Temperature Control Augment (T.C.A.)</label>
 		<description>Install basic Temperature Control Augment (T.C.A.).</description>

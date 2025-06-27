@@ -18,4 +18,15 @@
 			<li>RVFFA_Spawnable</li>
 		</techHediffsTags>
 	</ThingDef>
+
+	<RecipeDef Abstract="True" ParentName="SurgeryInstallBodyPartArtificialBase" Name="RVFFA_InstallBodyPartArtificalBase">
+		<recipeUsers Inherit="False">
+			<li>RVFFA_Avali</li>
+		</recipeUsers>
+	</RecipeDef>
+	<RecipeDef Abstract="True" ParentName="SurgeryInstallImplantBase" Name="RVFFA_InstallImplantBase">
+		<recipeUsers Inherit="False">
+			<li>RVFFA_Avali</li>
+		</recipeUsers>
+	</RecipeDef>
 </Defs>

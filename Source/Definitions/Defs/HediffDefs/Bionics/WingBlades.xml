@@ -60,7 +60,7 @@
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="RVFFA_InstallBodyPartArtificalBase">
 		<defName>RVFFA_InstallWingBlades</defName>
 		<label>Install wing blades</label>
 		<description>Install wing blades.</description>

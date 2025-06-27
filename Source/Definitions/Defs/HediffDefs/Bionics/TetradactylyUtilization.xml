@@ -46,7 +46,7 @@
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="RVFFA_InstallBodyPartArtificalBase">
 		<defName>RVFFA_Install_Tetradactyly_Utilitizer</defName>
 		<label>Install Tetradactyly Utilitizer</label>
 		<description>Install a Tetradactyly Utilitizer.</description>

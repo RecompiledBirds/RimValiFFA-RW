@@ -54,7 +54,7 @@
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallPackReplacement</defName>
 		<label>Install pack replacement chip</label>
 		<description>Install apack replacement chip</description>

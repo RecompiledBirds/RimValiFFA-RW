@@ -50,7 +50,7 @@
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallConstructionDrones</defName>
 		<label>Install micro drone swarm (contruction)</label>
 		<description>Install micro drone swarm (contruction).</description>
