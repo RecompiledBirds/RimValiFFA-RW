@@ -16,6 +16,7 @@
 		<castEdgeShadows>true</castEdgeShadows>
 		<fillPercent>0.5</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<thingCategories>
@@ -46,6 +47,9 @@
 					<ResearchSpeedFactor>0.1</ResearchSpeedFactor>
 				</statOffsets>
 				<maxSimultaneous>2</maxSimultaneous>
+			</li>
+			<li Class="Rimvali_Terraforming.TerraformingCompProperties">
+				
 			</li>
 		</comps>
 		<placeWorkers>

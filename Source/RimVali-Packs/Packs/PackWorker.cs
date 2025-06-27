@@ -58,7 +58,7 @@ namespace RimValiFFARW.Packs
             if (pawn.NonHumanlikeOrWildMan()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild");
             if (pawn.IsInPack() && !ignoreIsInPack) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
             if (def.minGroupOpinionNeededCreation > avgOpinionOfMember) reason = "RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup".Translate(pawn.NameShortColored, avgOpinionOfMember.ToString("0.##"), def.minGroupOpinionNeededCreation.ToString("0.##"));
-            if (!pawn.IsAvali()) reason = "RVFFA_PackWorker_SubjectIsNotAvali".Translate();
+            if (!pawn.IsPackable()) reason = "RVFFA_PackWorker_SubjectIsNotAvali".Translate();
 
             if (reason != null)
             {

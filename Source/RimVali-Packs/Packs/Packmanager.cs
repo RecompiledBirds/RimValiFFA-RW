@@ -23,9 +23,10 @@ namespace RimValiFFARW.Packs
         [AllowNull]
         private static Packmanager packmanager;
 
-        private Dictionary<Pawn, Pack> memberPackTable = new Dictionary<Pawn, Pack>();
-        private HashSet<Pack> packs = new HashSet<Pack>();
-        private List<Pack> packsList = new List<Pack>();
+        private Dictionary<Pawn, PackInfoComp> infoCompCache = [];
+        private Dictionary<Pawn, Pack> memberPackTable = [];
+        private HashSet<Pack> packs = [];
+        private List<Pack> packsList = [];
 
         private int lastWorkedOnPackListIndex = 0;
         private int nextPackLoadID = -1;
@@ -55,6 +56,19 @@ namespace RimValiFFARW.Packs
         /// <param name="world">The given <see cref="World"/></param>
         public Packmanager(World world) : base(world) => packmanager = this;
         
+        public bool GetCachedCompFor(Pawn pawn, [NotNullWhen(true)]out PackInfoComp comp)
+        {
+            if(!infoCompCache.TryGetValue(pawn, out comp)){
+                if(pawn.TryGetComp(out comp))
+                {
+                    infoCompCache[pawn] = comp;
+                    return true;
+                }
+                return false;
+            }
+            
+            return true;
+        }
         public override void FinalizeInit(bool fromLoad)
         {
             packsList = packs.ToList();
@@ -121,7 +135,7 @@ namespace RimValiFFARW.Packs
         /// <param name="pawn">The given <see cref="Pawn"/></param>
         /// <param name="pack">The found <see cref="Pack"/></param>
         /// <returns>True if a <see cref="Pack"/> was found, False otherwise</returns>
-        public bool TryGetPackForPawn(Pawn pawn, out Pack pack)
+        public bool TryGetPackForPawn(Pawn pawn, [NotNullWhen(true)]out Pack? pack)
         {
             //Log.Message($"Dictionary: {memberPackTable.Join(kvp => $"{kvp.Value.GetUniqueLoadID()}", ", ")}");
             return memberPackTable.TryGetValue(pawn, out pack);

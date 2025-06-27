@@ -21,7 +21,7 @@ namespace RimValiFFARW.Packs
 
             if (!currentMap.IsPlayerHome) return;
 
-            List<Pawn> colonists = currentMap.mapPawns.FreeColonistsSpawned.InRandomOrder().Where(pawn => !pawn.IsInPack() && pawn.IsAvali()).ToList();
+            List<Pawn> colonists = currentMap.mapPawns.FreeColonistsSpawned.InRandomOrder().Where(pawn => !pawn.IsInPack() && pawn.IsPackable()).ToList();
             PackDef def = DefDatabase<PackDef>.GetRandom();
             colonists.TruncateToLength(def.MaxSize);
 
@@ -35,8 +35,8 @@ namespace RimValiFFARW.Packs
         {
             foreach(Pawn pawn in PawnsFinder.AllMapsAndWorld_Alive)
             {
-                if (!pawn.TryGetComp(out PackInfoComp comp)) continue;
-                comp.PackLossProgression = 0;
+                if (!pawn.TryGetPackInfoContainer(out PackInfoContainer? container)) continue;
+                container.TriggerUpdate();
             }
         }
         [DebugAction("RimValiFFARW", "Print list of packs", allowedGameStates = AllowedGameStates.IsCurrentlyOnMap)]

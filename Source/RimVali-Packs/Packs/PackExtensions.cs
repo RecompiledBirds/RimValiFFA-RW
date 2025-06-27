@@ -41,16 +41,38 @@ namespace RimValiFFARW.Packs
         /// <returns>If the <see cref="Pawn"/> <paramref name="pawn"/> is part of a <see cref="Pack"/></returns>
         public static bool IsInPack(this Pawn pawn, [NotNullWhen(true)] out Pack? pack)
         {
-            bool isInPack = Packmanager.GetLastActivePackmanager.TryGetPackForPawn(pawn, out pack);
+            return Packmanager.GetLastActivePackmanager.TryGetPackForPawn(pawn, out pack);
 
+        }
 
-            return isInPack;
+        public static bool GetPackInfoComp(this Pawn pawn, [NotNullWhen(true)] out PackInfoComp? comp)
+        {
+            return Packmanager.GetLastActivePackmanager.GetCachedCompFor(pawn, out comp);
         }
         /// <summary>
         ///     Checks if a <see cref="Pawn"/> is an Avali
         /// </summary>B
         /// <param name="pawn"></param>
         /// <returns></returns>
-        public static bool IsAvali(this Pawn pawn) =>  pawn.def.defName == "RVFFA_Avali";
+        public static bool IsPackable(this Pawn pawn) => pawn.TryGetPackInfoContainer(out PackInfoContainer? _);
+        public static bool TryGetPackInfoContainer(this Pawn pawn, [NotNullWhen(true)] out PackInfoContainer? packInfoContainer)
+        {
+            packInfoContainer = null;
+            if (ModsConfig.BiotechActive&&pawn.genes.GenesListForReading.Any(x=>x is PackGene gene))
+            {
+                PackGene? packGene = (PackGene?)pawn.genes.GenesListForReading.FirstOrFallback(x => x is PackGene, null);
+                if (packGene != null)
+                {
+                    packInfoContainer = packGene.PackInfoContainer;
+                    return true;
+                }
+            }
+            if(pawn.GetPackInfoComp(out PackInfoComp? comp))
+            {
+                packInfoContainer = comp.PackInfoContainer;
+                return true;
+            }
+            return false;
+        }
     }
 }

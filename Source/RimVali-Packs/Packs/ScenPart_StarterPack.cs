@@ -17,7 +17,7 @@ namespace RimValiFFARW.Packs
 
             if (!currentMap.IsPlayerHome) return;
 
-            List<Pawn> colonists = currentMap.mapPawns.FreeColonists.InRandomOrder().Where(pawn => !pawn.IsInPack() && pawn.IsAvali()).ToList();
+            List<Pawn> colonists = currentMap.mapPawns.FreeColonists.InRandomOrder().Where(pawn => !pawn.IsInPack() && pawn.IsPackable()).ToList();
             PackDef def = DefDatabase<PackDef>.GetRandom();
             colonists.TruncateToLength(def.MaxSize);
 

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>RVFFA_PackGene</defName>
+		<label>Pack Creature</label>
+		<description>Carriers of this gene can form extremely strong social bonds, which can both harm and benefit them.</description>
+		<geneClass>RimValiFFARW.Packs.PackGene</geneClass>
+	
+		<resourceDescription>Carriers of this gene can form extremely strong social bonds, which can both harm and benefit them.</resourceDescription>
+		<iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+		<selectionWeight>0</selectionWeight>
+		<displayCategory>Hemogen</displayCategory>
+		<displayOrderInCategory>-2</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Allows creature to form packs.</li>
+		</customEffectDescriptions>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>hemo</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<minAgeActive>3</minAgeActive>
+		<resourceLossPerDay>0.02</resourceLossPerDay>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>1</biostatMet>
+	</GeneDef>
+
+</Defs>

@@ -14,7 +14,7 @@
 				<minAcceptablePawnThreshold>0.0</minAcceptablePawnThreshold>
 				<onDays>10</onDays>
 				<offDays>0.5</offDays>
-				<minSpacingDays>0.5</minSpacingDays>
+				<minSpacingDays>2</minSpacingDays>
 				<acceptFractionByDaysPassedCurve>
 					<points>
 						<li>(1, 10)</li>

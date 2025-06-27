@@ -58,7 +58,7 @@
 		</comps>
 	</HediffDef>
 
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallSocialEnhancer</defName>
 		<label>Install social capability enhancer</label>
 		<description>Install a social capability enhancer.</description>

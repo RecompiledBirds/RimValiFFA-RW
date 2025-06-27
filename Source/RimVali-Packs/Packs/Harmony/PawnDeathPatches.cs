@@ -11,13 +11,13 @@ namespace RimValiFFARW.Packs
             {
 
                 if (packmate == __instance) continue;
-                if (!packmate.TryGetComp(out PackInfoComp packInfoComp)) continue;
+                if (!packmate.TryGetPackInfoContainer(out PackInfoContainer? container)) continue;
                 if (packmate.Map == __instance.Map && __instance.GetRoom() == packmate.GetRoom())
                 {
-                    packInfoComp.PackLossProgression += 10;
+                    container.PackLossProgression += 10;
                     continue;
                 }
-                packInfoComp.PackLossProgression += 5;
+                container.PackLossProgression += 5;
             }
 
         }

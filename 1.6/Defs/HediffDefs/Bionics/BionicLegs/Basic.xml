@@ -32,7 +32,7 @@
 		</statBases>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="RVFFA_InstallBodyPartArtificalBase">
 		<defName>RVFFA_InstallBasicBionicLeg</defName>
 		<label>Install basic bionic leg</label>
 		<description>Install a basic bionic leg.</description>

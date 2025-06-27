@@ -1,5 +1,7 @@
 ﻿using RimValiFFARW.Packs;
 using RimWorld;
+using RVCRestructured;
+using RVCRestructured.RVR.Harmony;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +27,19 @@ namespace RimValiFFARW.Packs
             this.compClass = typeof(PackInfoComp);
         }
     }
-    public class PackInfoComp : ThingComp
+    public class PackInfoContainer : IExposable
     {
         private int packLossProgression;
         private int lastSawPackmateOn;
         private int lastUpdateDay;
-        public int PackLossProgression {
+        public void TriggerUpdate()
+        {
+            packLossProgression = 0;
+            lastSawPackmateOn = -1;
+            lastUpdateDay = -1;
+        }
+        public int PackLossProgression
+        {
             get
             {
                 return packLossProgression;
@@ -42,57 +51,33 @@ namespace RimValiFFARW.Packs
             }
         }
 
-       
-        public override void CompTickInterval(int delta)
-        {
 
-            if (!parent.Spawned || parent is not Pawn pawn) return;
-            //check every 150 ticks
-            if (!pawn.IsHashIntervalTick(150, delta)) return;
+        public void CompTickInterval(int delta, Pawn pawn)
+        {
+            if (!pawn.Spawned) return;
+            //check every X ticks
+            if (!pawn.IsHashIntervalTick(1000, delta)) return;
             if (pawn.health.hediffSet.HasHediff(RVFFA_Defs.RVFFA_PackReplacement))
             {
                 packLossProgression = 0;
                 return;
             }
-            int day = GenDate.DayOfYear(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(parent.Map.Tile).x);
-            bool isInPack = pawn.IsInPack(out Pack? pack);
-            
+            int day = GenDate.DayOfYear(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(pawn.Map.Tile).x);
+            if (lastSawPackmateOn == day) return;
 
-            bool activelySeeingPackMate = isInPack
-                                        && pack!=null 
-                                        && pack.Members.Any(other => other != pawn 
-                                                                    && (other.GetRoom() == pawn.GetRoom()
-                                                                        || (other.Spawned
-                                                                        && other.GetRoom() == null
-                                                                        && other.Map == pawn.Map 
-                                                                        && pawn.GetRoom() != null)));
-            if (activelySeeingPackMate && lastSawPackmateOn != day)
+            if (pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken) || (pawn.IsInPack(out Pack? pack) && pack.Members.Any(otherPawn => otherPawn.Spawned && otherPawn != pawn && ((otherPawn.GetRoom() == pawn.GetRoom()) || pawn.Map == otherPawn.Map))))
             {
+                PackLossProgression--;
+                //If we ticked pack loss today, roll it back 1 extra point.
+                if (lastUpdateDay == day) PackLossProgression--;
                 lastSawPackmateOn = day;
-            }
-
-            if (lastUpdateDay == day)
-            {
                 return;
             }
-            // if pawn saw a packmate or is not in a pack, fade over time
-            if (lastSawPackmateOn == day || !isInPack)
-            {
-                packLossProgression--;
-            }
-            else
-            {
-                packLossProgression++;
-            }
+            if (lastUpdateDay == day) return;
             DoPackBreakingChance(pawn, () => pack?.RemoveMember(pawn));
-            
-
-
+            packLossProgression++;
             lastUpdateDay = day;
             return;
-
-
-
         }
 
         /// <summary>
@@ -111,11 +96,35 @@ namespace RimValiFFARW.Packs
             pawn.story.traits.GainTrait(new Trait(RVFFA_Defs.RVFFA_PackBroken, forced: true), true);
         }
 
-        public override void PostExposeData()
+        public virtual void ExposeData()
         {
             Scribe_Values.Look(ref lastUpdateDay, nameof(lastUpdateDay));
             Scribe_Values.Look(ref packLossProgression, nameof(packLossProgression));
             Scribe_Values.Look(ref lastSawPackmateOn, nameof(lastSawPackmateOn));
+        }
+    }
+    public class PackInfoComp : ThingComp
+    {
+
+        private PackInfoContainer packContainer = new();
+        public PackInfoContainer PackInfoContainer
+        {
+            get
+            {
+                return packContainer;
+            }
+        }
+        public override void CompTickInterval(int delta)
+        {
+            if (!parent.Spawned || parent is not Pawn pawn) return;
+            if (ModsConfig.BiotechActive && !pawn.genes.GenesListForReading.Any(x=>x is PackGene)) return;
+            packContainer.CompTickInterval(delta, pawn);
+        }
+     
+
+        public override void PostExposeData()
+        {
+            Scribe_Deep.Look(ref packContainer, nameof(packContainer));
             base.PostExposeData();
         }
     }

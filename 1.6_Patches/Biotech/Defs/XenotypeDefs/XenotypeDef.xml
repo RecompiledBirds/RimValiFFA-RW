@@ -14,6 +14,7 @@
 			<li>Sleepy</li>
 			<li>Immunity_Strong</li>
 			<li>RVFFA_NanobotMetabolism</li>
+			<li>RVFFA_PackGene</li>
 		</genes>
 	</XenotypeDef>
 	
@@ -28,6 +29,7 @@
 			<li>DarkVision</li>
 			<li>MoveSpeed_Slow</li>
 			<li>ToxicEnvironmentResistance_Partial</li>
+			<li>RVFFA_PackGene</li>
 		</genes>
 	</XenotypeDef>
 </Defs>

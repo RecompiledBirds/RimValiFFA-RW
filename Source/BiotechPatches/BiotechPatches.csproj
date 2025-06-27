@@ -10,7 +10,6 @@
 		<CleanPath>$(OutputPath)</CleanPath>
 	</PropertyGroup>
 	<ItemGroup>
-	  <Folder Include="Defs\" />
 	  <Folder Include="Patches\" />
 	</ItemGroup>
 

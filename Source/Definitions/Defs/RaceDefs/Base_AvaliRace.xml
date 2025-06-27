@@ -254,9 +254,9 @@
 
 			</li>
 
-			<li Class="RimValiFFARW.Packs.PackInfoCompProps">
+			<!--<li Class="RimValiFFARW.Packs.PackInfoCompProps">
 				
-			</li>
+			</li>-->
 		</comps>
 		<tools>
 			<li>
@@ -449,9 +449,9 @@
 			<li>RVFFA_InstallMiningDrones</li>
 			<li>RVFFA_InstallConstructionDrones</li>
 		</recipes>
-		<inspectorTabs>
+		<!--<inspectorTabs>
 			<li>RimValiFFARW.Packs.PackInspectionWindow</li>
-		</inspectorTabs>
+		</inspectorTabs>-->
 		<ingredient>
 			<mergeCompatibilityTags>
 				<li>AvaliMeat</li>

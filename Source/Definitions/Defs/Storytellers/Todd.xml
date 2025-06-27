@@ -15,7 +15,7 @@
 				<minDaysPassed>0.6</minDaysPassed>
 				<onDays>7</onDays>
 				<offDays>0.5</offDays>
-				<minSpacingDays>0.5</minSpacingDays>
+				<minSpacingDays>1</minSpacingDays>
 				<acceptFractionByDaysPassedCurve>
 					<points>
 						<li>(1, 15)</li>
