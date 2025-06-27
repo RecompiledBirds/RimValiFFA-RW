@@ -259,7 +259,7 @@ namespace RimValiFFARW.StoryTellers
       //      incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.OrbitalVisitor, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.GiveQuest, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.Misc, parms));
-      //      incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.ShipChunkDrop, parms));
+            incidents.Add(IncidentDefOf.ShipChunkDrop);
 
             IncidentDef incident = incidents.RandomElement();
             if (Rand.Chance(0.05f))

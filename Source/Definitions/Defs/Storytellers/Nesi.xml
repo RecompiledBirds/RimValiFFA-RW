@@ -104,7 +104,7 @@
 				<incident>VisitorGroup</incident>
 				<minDaysPassed>3</minDaysPassed>
 				<baseIncidentsPerYear>2</baseIncidentsPerYear>
-				<minSpacingDays>5</minSpacingDays>
+				<minSpacingDays>2</minSpacingDays>
 				<allowedTargetTags>
 					<li>Map_PlayerHome</li>
 				</allowedTargetTags>
@@ -113,7 +113,7 @@
 				<incident>TravelerGroup</incident>
 				<minDaysPassed>1</minDaysPassed>
 				<baseIncidentsPerYear>3</baseIncidentsPerYear>
-				<minSpacingDays>1</minSpacingDays>
+				<minSpacingDays>0.9</minSpacingDays>
 				<allowedTargetTags>
 					<li>Map_PlayerHome</li>
 				</allowedTargetTags>
