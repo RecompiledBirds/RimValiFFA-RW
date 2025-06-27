@@ -12,7 +12,7 @@
 				<minDaysPassed>0.6</minDaysPassed>
 				<dislikesNonAvali>True</dislikesNonAvali>
 				<minAcceptablePawnThreshold>0.0</minAcceptablePawnThreshold>
-				<onDays>0.5</onDays>
+				<onDays>3</onDays>
 				<offDays>0.5</offDays>
 				<minSpacingDays>0.5</minSpacingDays>
 				<acceptFractionByDaysPassedCurve>

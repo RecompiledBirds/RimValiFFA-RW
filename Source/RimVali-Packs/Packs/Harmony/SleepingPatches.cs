@@ -11,6 +11,7 @@ namespace RimValiFFARW.Packs
             actor.needs.mood.thoughts.memories.RemoveMemoriesOfDef(RVFFA_Defs.RVFFA_AvaliSleptAlone);
             actor.needs.mood.thoughts.memories.RemoveMemoriesOfDef(RVFFA_Defs.RVFFA_AvaliSleptNotAlone);
             actor.needs.mood.thoughts.memories.RemoveMemoriesOfDef(RVFFA_Defs.RVFFA_AvaliSleptWithPack);
+            if (bed == null) return;
             Room room = bed.GetRoom(RegionType.Set_All);
             if (room == null) return;
 
