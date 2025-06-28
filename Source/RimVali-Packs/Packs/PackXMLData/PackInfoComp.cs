@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RVCRestructured;
 using System.Diagnostics.CodeAnalysis;
 using Verse;
 
@@ -16,7 +17,7 @@ namespace RimValiFFARW.Packs
             }
         }
         [AllowNull]
-        public PackXMLInfo packXMLInfo;
+        public PackDataDef packXMLInfo;
         public PackInfoCompProps()
         {
             compClass = typeof(PackInfoComp);
@@ -24,8 +25,8 @@ namespace RimValiFFARW.Packs
     }
     public class PackInfoContainer : IExposable
     {
-        private PackXMLInfo? info;
-        public PackXMLInfo? PackXMLInfo
+        private PackDataDef? info;
+        public PackDataDef? PackXMLInfo
         {
             get
             {
@@ -119,6 +120,7 @@ namespace RimValiFFARW.Packs
         {
             get
             {
+                if (packContainer == null) packContainer = new PackInfoContainer();
                 return packContainer;
             }
         }
@@ -126,14 +128,15 @@ namespace RimValiFFARW.Packs
         public override void Initialize(CompProperties props)
         {
             base.Initialize(props);
-            packContainer.PackXMLInfo = Props.packXMLInfo;
+            PackInfoContainer.PackXMLInfo = Props.packXMLInfo;
 
         }
         public override void CompTickInterval(int delta)
         {
             if (!parent.Spawned || parent is not Pawn pawn) return;
-            if (ModsConfig.BiotechActive && !pawn.genes.GenesListForReading.Any(x => x is PackGene)) return;
-            packContainer.CompTickInterval(delta, pawn);
+            if (ModsConfig.BiotechActive && pawn.genes.GenesListForReading.Any(x => x is PackGene)) return;
+            
+            PackInfoContainer.CompTickInterval(delta, pawn);
         }
 
 

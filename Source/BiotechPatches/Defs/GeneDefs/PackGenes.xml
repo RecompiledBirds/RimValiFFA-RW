@@ -4,7 +4,7 @@
 	<GeneCategoryDef>
 		<defName>RVFFA_Packs</defName>
 		<label>packs</label>
-		<displayPriorityInXenotype>490</displayPriorityInXenotype>
+		<displayPriorityInXenotype>600</displayPriorityInXenotype>
 	</GeneCategoryDef>
 	<GeneDef>
 		<defName>RVFFA_PackGene</defName>
@@ -15,8 +15,43 @@
 		<resourceDescription>Carriers of this gene can form extremely strong social bonds, which can both harm and benefit them.</resourceDescription>
 		<iconPath>RimValiFFA/Symbols/avali_ideo_collectivist</iconPath>
 		<selectionWeight>0</selectionWeight>
-		<displayCategory>Hemogen</displayCategory>
-		<displayOrderInCategory>-2</displayOrderInCategory>
+		<displayCategory>RVFFA_Packs</displayCategory>
+		<displayOrderInCategory>0</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Allows creature to form packs.</li>
+			<li>Creatures with this gene who are seperated from their pack too long get pack loss.</li>
+			<li>Creatures with this gene prefer to sleep with others</li>
+		</customEffectDescriptions>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>pack</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		<minAgeActive>3</minAgeActive>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<exclusionTags>
+			<li>Packs</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="RimValiFFARW.Packs.PackModExtension">
+				<packXMLInfo>RVFFA_PackData</packXMLInfo>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>RVFFA_WeakPackGene</defName>
+		<label>Pack bonder</label>
+		<description>Carriers of this gene can form social bonds that are stronger than usual, which can both harm and benefit them.</description>
+		<geneClass>RimValiFFARW.Packs.PackGene</geneClass>
+
+		<resourceDescription>Carriers of this gene can form extremely strong social bonds, which can both harm and benefit them.</resourceDescription>
+		<iconPath>RimValiFFA/Symbols/avali_ideo_collectivist</iconPath>
+		<selectionWeight>0</selectionWeight>
+		<displayCategory>RVFFA_Packs</displayCategory>
+		<displayOrderInCategory>1</displayOrderInCategory>
 		<customEffectDescriptions>
 			<li>Allows creature to form packs.</li>
 		</customEffectDescriptions>
@@ -30,12 +65,13 @@
 		<minAgeActive>3</minAgeActive>
 		<biostatCpx>0</biostatCpx>
 		<biostatMet>0</biostatMet>
-
+		<exclusionTags>
+			<li>Packs</li>
+		</exclusionTags>
 		<modExtensions>
-			<li Class="">
-				
+			<li Class="RimValiFFARW.Packs.PackModExtension">
+				<packXMLInfo>RVFFA_PackData</packXMLInfo>
 			</li>
 		</modExtensions>
 	</GeneDef>
-
 </Defs>

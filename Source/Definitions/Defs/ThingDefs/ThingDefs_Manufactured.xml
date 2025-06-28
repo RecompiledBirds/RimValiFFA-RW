@@ -104,11 +104,11 @@
 			<MarketValue>12</MarketValue>
 			<Mass>1.2</Mass>
 			<Flammability>0</Flammability>
-			<StuffPower_Armor_Sharp>1.0</StuffPower_Armor_Sharp>
-			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
-			<StuffPower_Armor_Heat>0.25</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Sharp>1.2</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.1</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
 
-			<StuffPower_Insulation_Cold>0.7</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Cold>0.1</StuffPower_Insulation_Cold>
 			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
 			<BluntDamageMultiplier>1.5</BluntDamageMultiplier>
 		</statBases>

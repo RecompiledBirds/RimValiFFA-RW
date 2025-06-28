@@ -14,6 +14,30 @@
 			</statBases>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="SleptInBedroom"]</xpath>
+		<value>
+			<nullifyingGenes>
+				<li>RVFFA_PackGene</li>
+			</nullifyingGenes>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="SleptInBarracks"]</xpath>
+		<value>
+			<nullifyingGenes>
+				<li>RVFFA_PackGene</li>
+			</nullifyingGenes>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="SleepDisturbed"]</xpath>
+		<value>
+			<nullifyingGenes>
+				<li>RVFFA_PackGene</li>
+			</nullifyingGenes>
+		</value>
+	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ScenarioDef[defName="RVFFA_IlluminateColonyStarter"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns"]</xpath>
 		<value>

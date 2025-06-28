@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.PawnKindSwapDef>
+		<defName>RVFFA_AvaliSwapper</defName>
+		<forFactions>
+			<li>RVFFA_IlluminatePlayer</li>
+			<li>RVFFA_IWPlayer</li>
+		</forFactions>
+		<swapOptions>
+			<li>
+				<pawnKindDef>SpaceRefugee</pawnKindDef>
+				<swapWithOptions>
+					<li>RVFFA_SpaceRefugee</li>
+				</swapWithOptions>
+			</li>
+			<li>
+				<pawnKindDef>SpaceRefugee_Clothed</pawnKindDef>
+				<swapWithOptions>
+					<li>RVFFA_SpaceRefugee_Clothed</li>
+				</swapWithOptions>
+			</li>
+			<li>
+				<pawnKindDef>Villager</pawnKindDef>
+				<swapWithOptions>
+					<li>RVFFA_IlluminateVillager</li>
+				</swapWithOptions>
+			</li>
+		</swapOptions>
+	</RVCRestructured.PawnKindSwapDef>
+</Defs>

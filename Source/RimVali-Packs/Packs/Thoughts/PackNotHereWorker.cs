@@ -24,7 +24,7 @@ namespace RimValiFFARW.Packs
             {
                 return ThoughtState.ActiveAtStage(1);
             }
-            if (stage >= 3)
+            if (stage >= 1)
             {
                 return ThoughtState.ActiveAtStage(0);
             }

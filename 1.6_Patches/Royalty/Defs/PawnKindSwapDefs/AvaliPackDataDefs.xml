@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RVCRestructured.PawnKindSwapDef>
+		<defName>RVFFA_RoyaltyAvaliSwapper</defName>
+		<forFactions>
+			<li>RVFFA_IlluminatePlayer</li>
+			<li>RVFFA_IWPlayer</li>
+		</forFactions>
+		<swapOptions>
+			<li>
+				<pawnKindDef>Refugee</pawnKindDef>
+				<swapWithOptions>
+					<li>RVFFA_Refugee</li>
+				</swapWithOptions>
+			</li>
+		</swapOptions>
+	</RVCRestructured.PawnKindSwapDef>
+</Defs>

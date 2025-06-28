@@ -71,14 +71,15 @@ namespace RimValiFFARW.Packs
 
         public override void OnOpen()
         {
-            renameMode = false;
-            base.OnOpen();
-            if (Packmanager.GetLastActivePackmanager.TryGetPackForPawn(SelPawn, out Pack? pack)) return;
+            Packmanager.GetLastActivePackmanager.TryGetPackForPawn(SelPawn, out Pack? pack);
 
             pawn = SelPawn;
             this.pack = pack;
+            renameMode = false;
+            base.OnOpen();
 
-            packMembers = [.. pack.Members];
+            if (pack is null) return;
+            packMembers = pack.Members.ToList();
 
             float memberListHeight = Mathf.Min(MaxMemberListHeight, ListRectTemplateHeight * (pack.Members.Count - 1));
             memberListPartOuter = new Rect(titlePart.x, boniListPartOuter.yMax + CommonMargin * 2f, main.width, memberListHeight);

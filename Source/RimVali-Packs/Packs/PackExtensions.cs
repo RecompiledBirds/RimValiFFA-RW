@@ -50,14 +50,11 @@ namespace RimValiFFARW.Packs
         public static bool TryGetPackInfoContainer(this Pawn pawn, [NotNullWhen(true)] out PackInfoContainer? packInfoContainer)
         {
             packInfoContainer = null;
-            if (ModsConfig.BiotechActive && pawn.genes.GenesListForReading.Any(x => x is PackGene gene))
+            if (ModsConfig.BiotechActive)
             {
                 PackGene? packGene = (PackGene?)pawn.genes.GenesListForReading.FirstOrFallback(x => x is PackGene, null);
-                if (packGene != null)
-                {
-                    packInfoContainer = packGene.PackInfoContainer;
-                    return true;
-                }
+                packInfoContainer = packGene?.PackInfoContainer;
+                return packGene!=null;
             }
             if (pawn.GetPackInfoComp(out PackInfoComp? comp))
             {

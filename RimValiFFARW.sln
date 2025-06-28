@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeologyPatches", "Source\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rimvali-Terraforming", "Source\Rimvali-Terraforming\Rimvali-Terraforming.csproj", "{5012CE2E-B784-4490-B22E-2D4826B2C8EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoyaltyPatches", "Source\RoyaltyPatches\RoyaltyPatches.csproj", "{99D9B015-AB6C-2CA5-855F-39A5318E07E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{5012CE2E-B784-4490-B22E-2D4826B2C8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5012CE2E-B784-4490-B22E-2D4826B2C8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5012CE2E-B784-4490-B22E-2D4826B2C8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D9B015-AB6C-2CA5-855F-39A5318E07E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D9B015-AB6C-2CA5-855F-39A5318E07E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D9B015-AB6C-2CA5-855F-39A5318E07E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D9B015-AB6C-2CA5-855F-39A5318E07E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
