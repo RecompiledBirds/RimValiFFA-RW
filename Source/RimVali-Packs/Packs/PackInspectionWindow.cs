@@ -52,7 +52,7 @@ namespace RimValiFFARW.Packs
             set => pack = value;
         }
 
-        public override bool IsVisible => SelPawn.GetPackInfoComp(out PackInfoComp? comp) || (ModsConfig.BiotechActive && SelPawn.genes.GenesListForReading.Any(x => x is PackGene));
+        public override bool IsVisible =>SelPawn.Faction==Faction.OfPlayer && SelPawn.TryGetPackInfoContainer(out PackInfoContainer? _);
         //public override bool IsVisible => SelPawn.IsInPack();
 
         public PackInspectionWindow()
