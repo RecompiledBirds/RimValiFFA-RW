@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="BaseInsect">
+	<!--	<ThingDef ParentName="BaseInsect">
 		<defName>RVFFA_Mosquito</defName>
 		<label>Mosquito</label>
 		<description>A large mosquito, originally found on the planet Avalon.</description>
@@ -129,5 +129,5 @@
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
-	</PawnKindDef>
+	</PawnKindDef>-->
 </Defs>
