@@ -2,11 +2,6 @@
 using LudeonTK;
 using RimWorld;
 using RVCRestructured;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace RimValiFFARW.Packs
@@ -33,7 +28,7 @@ namespace RimValiFFARW.Packs
         [DebugAction("RimValiFFARW", "Reset Pack Loss Progression for all Pawns", allowedGameStates = AllowedGameStates.Playing)]
         public static void ResetPackLoss()
         {
-            foreach(Pawn pawn in PawnsFinder.AllMapsAndWorld_Alive)
+            foreach (Pawn pawn in PawnsFinder.AllMapsAndWorld_Alive)
             {
                 if (!pawn.TryGetPackInfoContainer(out PackInfoContainer? container)) continue;
                 container.TriggerUpdate();

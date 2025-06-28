@@ -50,7 +50,7 @@ public class PackDef : Def
     ///     Creates a new object of type <see cref="PackWorker"/> with the type as stated in the def file at <see cref="packWorkerType"/>
     /// </summary>
     public PackWorker GetNewPackWorker => (PackWorker)packWorkerType.GetConstructor([typeof(PackDef)]).Invoke([this]);
-
+    public List<string> tags = [];
     public override IEnumerable<string> ConfigErrors()
     {   
         foreach (string error in base.ConfigErrors()) 

@@ -168,16 +168,27 @@ namespace RimValiFFARW.Packs
             }
             foreach(Pawn pawn in pawns)
             {
-                if (pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken))
+                if (!pawn.TryGetPackInfoContainer(out PackInfoContainer? container)) continue;
+                if (container.PackXMLInfo == null) continue;
+                foreach(HediffPackPrevention hediffPackPrevention in container.PackXMLInfo.hediffsThatPreventPacking)
                 {
-                    reason = "RVFFA_PawnIsPackBroken".Translate(pawn.Name.ToStringShort);
+                    if (!pawn.health.hediffSet.HasHediff(hediffPackPrevention.hediff)) continue;
+                    reason = hediffPackPrevention.reasonKey.Translate(pawn.Name.ToStringShort);
                     MessageOf(new LookTargets(pawn), reason, quietError);
 
                     return false;
                 }
-                if (pawn.health.hediffSet.HasHediff(RVFFA_Defs.RVFFA_PackReplacement))
+                foreach(TraitPackPrevention traitPackPrevention in container.PackXMLInfo.traitsThatPreventPacking)
                 {
-                    reason = "RVFFA_HasPackReplacement".Translate(pawn.Name.ToStringShort);
+                    if (!pawn.story.traits.HasTrait(traitPackPrevention.trait)) continue;
+                    reason = traitPackPrevention.reasonKey.Translate(pawn.Name.ToStringShort);
+                    MessageOf(new LookTargets(pawn), reason, quietError);
+
+                    return false;
+                }
+                if (!container.PackXMLInfo?.allowedPackDefs.Contains(def) ?? true)
+                {
+                    reason = "RVFFA_PackNotAllowed".Translate(pawn.Name.ToStringShort);
                     MessageOf(new LookTargets(pawn), reason, quietError);
 
                     return false;

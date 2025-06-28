@@ -180,7 +180,7 @@ namespace RimValiFFARW.Packs
         {
             if (!worker.PawnCanJoinPack(members, member, ignoreIsInPack, quietError, out string? _)) return false;
             if (!members.Add(member)) return false;
-
+            memberHediffDic.Add(member, new PackMemberHediffTracker(member));
             Packmanager.GetLastActivePackmanager.AddMemberRelation(member, this);
             worker.NotifyMemberAdded(member); 
             ApplyHeddifsToMember(member);

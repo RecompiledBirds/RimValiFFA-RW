@@ -1,14 +1,6 @@
-﻿using HarmonyLib;
-using Mono.Math;
-using RimWorld;
+﻿using RimWorld;
 using RimWorld.Planet;
-using RVCRestructured;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace RimValiFFARW.Packs
@@ -55,18 +47,19 @@ namespace RimValiFFARW.Packs
         /// </summary>
         /// <param name="world">The given <see cref="World"/></param>
         public Packmanager(World world) : base(world) => packmanager = this;
-        
-        public bool GetCachedCompFor(Pawn pawn, [NotNullWhen(true)]out PackInfoComp comp)
+
+        public bool GetCachedCompFor(Pawn pawn, [NotNullWhen(true)] out PackInfoComp comp)
         {
-            if(!infoCompCache.TryGetValue(pawn, out comp)){
-                if(pawn.TryGetComp(out comp))
+            if (!infoCompCache.TryGetValue(pawn, out comp))
+            {
+                if (pawn.TryGetComp(out comp))
                 {
                     infoCompCache[pawn] = comp;
                     return true;
                 }
                 return false;
             }
-            
+
             return true;
         }
         public override void FinalizeInit(bool fromLoad)
@@ -89,14 +82,14 @@ namespace RimValiFFARW.Packs
             lastWorkedOnPackListIndex++;
 
             bool anyReasonsExist = false;
-            foreach(string reason in pack.Worker.IsPackStillValid(pack))
+            foreach (string reason in pack.Worker.IsPackStillValid(pack))
             {
                 anyReasonsExist = true;
                 Messages.Message(reason, MessageTypeDefOf.NegativeEvent);
             }
 
             if (!anyReasonsExist) return;
-            if (PackInspectionWindow.GetCurrentPackInspectionWindow?.CurrentPack == pack) 
+            if (PackInspectionWindow.GetCurrentPackInspectionWindow?.CurrentPack == pack)
                 PackInspectionWindow.GetCurrentPackInspectionWindow.CurrentPack = null;
             pack.Worker.Disband(pack);
 
@@ -111,7 +104,7 @@ namespace RimValiFFARW.Packs
         public bool AddPack(Pack pack)
         {
             if (!packs.Add(pack)) return false;
-            foreach(Pawn member in pack.Members) memberPackTable.Add(member, pack);
+            foreach (Pawn member in pack.Members) memberPackTable.Add(member, pack);
             packsList.Add(pack);
             return true;
         }
@@ -135,7 +128,7 @@ namespace RimValiFFARW.Packs
         /// <param name="pawn">The given <see cref="Pawn"/></param>
         /// <param name="pack">The found <see cref="Pack"/></param>
         /// <returns>True if a <see cref="Pack"/> was found, False otherwise</returns>
-        public bool TryGetPackForPawn(Pawn pawn, [NotNullWhen(true)]out Pack? pack)
+        public bool TryGetPackForPawn(Pawn pawn, [NotNullWhen(true)] out Pack? pack)
         {
             //Log.Message($"Dictionary: {memberPackTable.Join(kvp => $"{kvp.Value.GetUniqueLoadID()}", ", ")}");
             return memberPackTable.TryGetValue(pawn, out pack);

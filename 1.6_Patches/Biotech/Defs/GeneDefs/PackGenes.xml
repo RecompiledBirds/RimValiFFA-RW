@@ -7,7 +7,7 @@
 		<geneClass>RimValiFFARW.Packs.PackGene</geneClass>
 	
 		<resourceDescription>Carriers of this gene can form extremely strong social bonds, which can both harm and benefit them.</resourceDescription>
-		<iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+		<iconPath>RimValiFFA/Symbols/avali_ideo_collectivist</iconPath>
 		<selectionWeight>0</selectionWeight>
 		<displayCategory>Hemogen</displayCategory>
 		<displayOrderInCategory>-2</displayOrderInCategory>
@@ -17,14 +17,13 @@
 		<symbolPack>
 			<prefixSymbols>
 				<li>
-					<symbol>hemo</symbol>
+					<symbol>pack</symbol>
 				</li>
 			</prefixSymbols>
 		</symbolPack>
 		<minAgeActive>3</minAgeActive>
-		<resourceLossPerDay>0.02</resourceLossPerDay>
-		<biostatCpx>1</biostatCpx>
-		<biostatMet>1</biostatMet>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
 	</GeneDef>
 
 </Defs>

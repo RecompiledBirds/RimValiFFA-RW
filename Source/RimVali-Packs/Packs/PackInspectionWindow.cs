@@ -1,15 +1,7 @@
-﻿using JetBrains.Annotations;
-using RimWorld;
+﻿using RimWorld;
 using RVCRestructured;
-using RVCRestructured.RVR;
 using RVCRestructured.Windows;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -46,7 +38,7 @@ namespace RimValiFFARW.Packs
 
         private bool playerWasNotifiedOfPackMissing = false;
         private bool renameMode = false;
-        private List<Pawn> packMembers =new List<Pawn>();
+        private List<Pawn> packMembers = new List<Pawn>();
         [AllowNull]
         private Pack? pack;
         [AllowNull]
@@ -60,7 +52,7 @@ namespace RimValiFFARW.Packs
             set => pack = value;
         }
 
-        public override bool IsVisible => SelPawn.GetPackInfoComp(out PackInfoComp? comp) || (ModsConfig.BiotechActive && SelPawn.genes.GenesListForReading.Any(x=>x is PackGene));
+        public override bool IsVisible => SelPawn.GetPackInfoComp(out PackInfoComp? comp) || (ModsConfig.BiotechActive && SelPawn.genes.GenesListForReading.Any(x => x is PackGene));
         //public override bool IsVisible => SelPawn.IsInPack();
 
         public PackInspectionWindow()
@@ -79,15 +71,14 @@ namespace RimValiFFARW.Packs
 
         public override void OnOpen()
         {
-            Packmanager.GetLastActivePackmanager.TryGetPackForPawn(SelPawn, out Pack pack);
+            renameMode = false;
+            base.OnOpen();
+            if (Packmanager.GetLastActivePackmanager.TryGetPackForPawn(SelPawn, out Pack? pack)) return;
 
             pawn = SelPawn;
             this.pack = pack;
-            renameMode = false;
-            base.OnOpen();
 
-            if (pack is null) return;
-            packMembers = pack.Members.ToList();
+            packMembers = [.. pack.Members];
 
             float memberListHeight = Mathf.Min(MaxMemberListHeight, ListRectTemplateHeight * (pack.Members.Count - 1));
             memberListPartOuter = new Rect(titlePart.x, boniListPartOuter.yMax + CommonMargin * 2f, main.width, memberListHeight);
@@ -136,7 +127,7 @@ namespace RimValiFFARW.Packs
             Widgets.Label(statusBar, "RVFFA_PackInspectionWindow_StatusBar".Translate(SelPawn.NameShortColored, pack?.Worker.EvaluateAverageOpinionForPawn(SelPawn, pack.Members).ToString("0.##"), pack?.Worker.EvaluateAverageOpinionForEveryPawn(pack).ToString("0.##")));
 
             Text.Anchor = TextAnchor.UpperCenter;
-            
+
             Rect tempDeleteButtonLabel = new Rect(statusBar.xMax - 90f, statusBar.y, 90f, statusBar.height);
             Rect tempDeleteButton = new Rect(statusBar.xMax - 90f, statusBar.y + 2f, 90f, statusBar.height - 6f);
             Widgets.DrawBoxSolidWithOutline(tempDeleteButton, new Color(1f, 0f, 0f, .2f), Color.gray);
@@ -145,11 +136,11 @@ namespace RimValiFFARW.Packs
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
             GUI.color = Color.white;
-            
+
             if (Widgets.ButtonInvisible(tempDeleteButton))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();
-                Find.WindowStack.Add(new ConfirmationWindow(DisbandAction, () => { }, "RVFFA_PackInspectionWindow_DeletePackSure".Translate(pack?.NameColored??"Unknown"), "RVFFA_PackInspectionWindow_DeletePackSureTitle".Translate()));
+                Find.WindowStack.Add(new ConfirmationWindow(DisbandAction, () => { }, "RVFFA_PackInspectionWindow_DeletePackSure".Translate(pack?.NameColored ?? "Unknown"), "RVFFA_PackInspectionWindow_DeletePackSureTitle".Translate()));
             }
         }
 
@@ -241,11 +232,11 @@ namespace RimValiFFARW.Packs
                 Widgets.Label(titlePart, "RVFFA_PackInspectionWindow_PawnNotInPackLabel".Translate(SelPawn.NameShortColored));
                 Text.Font = GameFont.Small;
 
-                if (Widgets.ButtonText(new Rect(size - newPackButtonSize - new Vector2(CommonMargin, CommonMargin), newPackButtonSize), "RVFFA_PackInspectionWindow_Creation".Translate(SelPawn.LabelShortCap))) 
+                if (Widgets.ButtonText(new Rect(size - newPackButtonSize - new Vector2(CommonMargin, CommonMargin), newPackButtonSize), "RVFFA_PackInspectionWindow_Creation".Translate(SelPawn.LabelShortCap)))
                 {
                     Find.WindowStack.Add(new PackCreationWindow(SelPawn));
-                } 
-                
+                }
+
                 Widgets.LabelScrollable(descriptionPart, "RVFFA_PackInspectionWindow_PawnNotInPackDescription".Translate(), ref descriptionScrollVector);
                 if (playerWasNotifiedOfPackMissing) return;
 
@@ -268,7 +259,7 @@ namespace RimValiFFARW.Packs
             }
 
             TooltipHandler.TipRegion(packEditButton, "RVFFA_PackInspectionWindow_Edit".Translate());
-            if(Widgets.ButtonImage(packEditButton, IconTextures.iconCustomize))
+            if (Widgets.ButtonImage(packEditButton, IconTextures.iconCustomize))
             {
                 SoundDefOf.Click.PlayOneShotOnCamera();
                 Find.WindowStack.Add(new PackEditWindow(pack));

@@ -1,12 +1,4 @@
-﻿using RVCRestructured;
-using RVCRestructured.RVR;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics.CodeAnalysis;
 using Verse;
 
 namespace RimValiFFARW.Packs
@@ -58,7 +50,7 @@ namespace RimValiFFARW.Packs
         public static bool TryGetPackInfoContainer(this Pawn pawn, [NotNullWhen(true)] out PackInfoContainer? packInfoContainer)
         {
             packInfoContainer = null;
-            if (ModsConfig.BiotechActive&&pawn.genes.GenesListForReading.Any(x=>x is PackGene gene))
+            if (ModsConfig.BiotechActive && pawn.genes.GenesListForReading.Any(x => x is PackGene gene))
             {
                 PackGene? packGene = (PackGene?)pawn.genes.GenesListForReading.FirstOrFallback(x => x is PackGene, null);
                 if (packGene != null)
@@ -67,7 +59,7 @@ namespace RimValiFFARW.Packs
                     return true;
                 }
             }
-            if(pawn.GetPackInfoComp(out PackInfoComp? comp))
+            if (pawn.GetPackInfoComp(out PackInfoComp? comp))
             {
                 packInfoContainer = comp.PackInfoContainer;
                 return true;
