@@ -261,7 +261,7 @@
 				</restrictions>
 			</li>
 			<li Class="RVCRestructured.RVRCP">
-
+				<disableGeneFurRendering>true</disableGeneFurRendering>
 			</li>
 
 			<li Class="RimValiFFARW.Packs.PackInfoCompProps">

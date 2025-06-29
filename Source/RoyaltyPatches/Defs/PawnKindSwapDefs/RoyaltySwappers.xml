@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!--<RVCRestructured.PawnKindSwapDef>
+	<RVCRestructured.PawnKindSwapDef>
 		<defName>RVFFA_RoyaltyAvaliSwapper</defName>
 		<forFactions>
 			<li>RVFFA_IlluminatePlayer</li>
@@ -20,23 +20,4 @@
 		</swapOptions>
 	</RVCRestructured.PawnKindSwapDef>
 
-	<RVCRestructured.PawnKindSwapDef>
-		<defName>RVFFA_RoyaltyNonAvaliSwapper</defName>
-		<forAllFactionsExcept>
-			<li>RVFFA_IlluminatePlayer</li>
-			<li>RVFFA_IWPlayer</li>
-		</forAllFactionsExcept>
-		<swapOptions>
-			<li>
-				<pawnKindDef>Refugee</pawnKindDef>
-				<chanceOfSwap>0.2</chanceOfSwap>
-				<swapWithOptions>
-					<li>
-						<pawnKindDef>RVFFA_Refugee</pawnKindDef>
-						<xenotypeDef  MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</xenotypeDef>
-					</li>
-				</swapWithOptions>
-			</li>
-		</swapOptions>
-	</RVCRestructured.PawnKindSwapDef>-->
 </Defs>
