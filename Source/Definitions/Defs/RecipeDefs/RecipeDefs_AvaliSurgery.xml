@@ -31,4 +31,19 @@
 			<li>RVFFA_Tail</li>
 		</appliedOnFixedBodyParts>
 	</RecipeDef>
+
+
+	<RecipeDef ParentName="RVFFA_SurgeryInstallBodyPartNaturalBase">
+		<defName>RVFFA_PreenWingFeathers</defName>
+		<label>preen wing feathers</label>
+		<description>Preen an avali's wing feathers.</description>
+		<jobString>Preening wing feathers.</jobString>
+		<deathOnFailedSurgeryChance>0.0</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>0</Medicine>
+		</skillRequirements>
+		<appliedOnFixedBodyParts>
+			<li>RimValiArmFeathers</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
 </Defs>
