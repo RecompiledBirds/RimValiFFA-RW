@@ -173,7 +173,6 @@ namespace RimValiFFARW.Packs
                 if (acceptPack && isDefSwitched && Pack.TryMakeNewPackFromPawns(newPackDef, fullCurrentTempPackMembers, true, true, out Pack? newPack))
                 {
                     Packmanager manager = Packmanager.GetLastActivePackmanager;
-
                     manager.RemovePack(pack);
                     manager.AddPack(newPack);
                     PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();

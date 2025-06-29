@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef ParentName="RVFFA_SurgeryInstallBodyPartNaturalBase">
+		<defName>RVFFA_InstallNaturalAvaliTail</defName>
+		<label>install tail</label>
+		<description>Install a biological tail.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RVFFA_Tail</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Installing tail.</jobString>
+		<deathOnFailedSurgeryChance>0.0</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_Tail</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RVFFA_Tail</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RVFFA_Tail</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+</Defs>

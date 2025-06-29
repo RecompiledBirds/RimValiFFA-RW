@@ -44,7 +44,10 @@
 					<li>RVFFA_IlluminateEndTable</li>
 				</linkableFacilities>
 			</li>
-			<li Class="RVCRestructured.RVCBeds.ResizedBedCompProperties"/>
+			<li Class="RVCRestructured.RVCBeds.ResizedBedCompProperties">
+				<isPile>true</isPile>
+				<rotationRange>-360~360</rotationRange>
+			</li>
 		</comps>
 	</ThingDef>
 

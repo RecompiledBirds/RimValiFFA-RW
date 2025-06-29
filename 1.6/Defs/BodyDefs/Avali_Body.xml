@@ -138,6 +138,7 @@
 									<groups>
 										<li>UpperHead</li>
 										<li>FullHead</li>
+										<li>RVFFA_GroupRUEar</li>
 									</groups>
 								</li>
 								<li>
@@ -147,6 +148,7 @@
 									<groups>
 										<li>UpperHead</li>
 										<li>FullHead</li>
+										<li>RVFFA_GroupRLEar</li>
 									</groups>
 								</li>
 								<li>
@@ -156,6 +158,7 @@
 									<groups>
 										<li>UpperHead</li>
 										<li>FullHead</li>
+										<li>RVFFA_GroupLLEar</li>
 									</groups>
 								</li>
 								<li>
@@ -165,6 +168,7 @@
 									<groups>
 										<li>UpperHead</li>
 										<li>FullHead</li>
+										<li>RVFFA_GroupLUEar</li>
 									</groups>
 									<parts>
 										<li>

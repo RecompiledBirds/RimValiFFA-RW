@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RVCRestructured.PawnKindSwapDef>
+	<!--<RVCRestructured.PawnKindSwapDef>
 		<defName>RVFFA_AvaliSwapper</defName>
 		<forFactions>
 			<li>RVFFA_IlluminatePlayer</li>
@@ -9,22 +9,64 @@
 		<swapOptions>
 			<li>
 				<pawnKindDef>SpaceRefugee</pawnKindDef>
+				<chanceOfSwap>0.7</chanceOfSwap>
 				<swapWithOptions>
-					<li>RVFFA_SpaceRefugee</li>
+					<li>
+						<pawnKindDef>RVFFA_SpaceRefugee</pawnKindDef>
+						<xenotypeDef  MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</xenotypeDef>
+					</li>
 				</swapWithOptions>
 			</li>
 			<li>
 				<pawnKindDef>SpaceRefugee_Clothed</pawnKindDef>
+				<chanceOfSwap>0.7</chanceOfSwap>
 				<swapWithOptions>
-					<li>RVFFA_SpaceRefugee_Clothed</li>
+					<li>
+						<pawnKindDef>RVFFA_SpaceRefugee_Clothed</pawnKindDef>
+						<xenotypeDef  MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</xenotypeDef>
+					</li>
 				</swapWithOptions>
 			</li>
 			<li>
 				<pawnKindDef>Villager</pawnKindDef>
+				<chanceOfSwap>1.0</chanceOfSwap>
 				<swapWithOptions>
-					<li>RVFFA_IlluminateVillager</li>
+					<li>
+						<pawnKindDef>RVFFA_IlluminateVillager</pawnKindDef>
+						<xenotypeDef  MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</xenotypeDef>
+					</li>
 				</swapWithOptions>
 			</li>
 		</swapOptions>
 	</RVCRestructured.PawnKindSwapDef>
+	<RVCRestructured.PawnKindSwapDef>
+		<defName>RVFFA_NonAvaliSwapper</defName>
+		<forAllFactionsExcept>
+			<li>RVFFA_IlluminatePlayer</li>
+			<li>RVFFA_IWPlayer</li>
+		</forAllFactionsExcept>
+		<swapOptions>
+			<li>
+				<pawnKindDef>SpaceRefugee</pawnKindDef>
+				<chanceOfSwap>0.2</chanceOfSwap>
+				<swapWithOptions>
+					<li>
+						<pawnKindDef>RVFFA_SpaceRefugee</pawnKindDef>
+						<xenotypeDef  MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</xenotypeDef>
+					</li>
+				</swapWithOptions>
+			</li>
+			<li>
+				<pawnKindDef>SpaceRefugee_Clothed</pawnKindDef>
+				<chanceOfSwap>0.2</chanceOfSwap>
+				<swapWithOptions>
+					<li>
+						<pawnKindDef>RVFFA_SpaceRefugee_Clothed</pawnKindDef>
+						<xenotypeDef  MayRequire="Ludeon.RimWorld.Biotech">RVFFA_BaseAvaliXenoType</xenotypeDef>
+					</li>
+				</swapWithOptions>
+			</li>
+		</swapOptions>
+	</RVCRestructured.PawnKindSwapDef>-->
+	
 </Defs>

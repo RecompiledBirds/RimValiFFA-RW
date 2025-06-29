@@ -147,21 +147,33 @@ namespace RimValiFFARW.Packs
         ///     Removes a given <paramref name="member"/> from the <see cref="Pack"/>
         /// </summary>
         /// <param name="member">The member to be removed</param>
+        /// <param name="forced">Forces removal, even if the worker would not allow it.</param>
         /// <returns>True if successful, false if a member couldn't be removed for any reason.</returns>
-        public bool RemoveMember(Pawn member)
+        public bool RemoveMember(Pawn member, bool forced = false)
         {
             if (member == null)
             {
                 RemoveNullMembers();
                 return false;
             }
-            if (!worker.MemberCanLeave(member, this)) return false;
+            if (!worker.MemberCanLeave(member, this)||forced) return false;
             if (!members.Remove(member)) return false;
 
             Packmanager.GetLastActivePackmanager.RemoveMemberRelation(member);
             worker.RemoveMemberHediffs(memberHediffDic[member]);
             worker.NotifyMemberRemoved(member);
             return true;
+        }
+
+        public void ForceRemoveAllMembers()
+        {
+            foreach(Pawn pawn in members)
+            {
+                Packmanager.GetLastActivePackmanager.RemoveMemberRelation(pawn);
+                worker.RemoveMemberHediffs(memberHediffDic[pawn]);
+                worker.NotifyMemberRemoved(pawn);
+            }
+            members = [];
         }
 
         private void RemoveNullMembers()

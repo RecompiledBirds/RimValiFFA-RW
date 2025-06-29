@@ -24,6 +24,11 @@
 			<li>RVFFA_Avali</li>
 		</recipeUsers>
 	</RecipeDef>
+	<RecipeDef Abstract="True" ParentName="SurgeryInstallBodyPartNaturalBase" Name="RVFFA_SurgeryInstallBodyPartNaturalBase">
+		<recipeUsers Inherit="False">
+			<li>RVFFA_Avali</li>
+		</recipeUsers>
+	</RecipeDef>
 	<RecipeDef Abstract="True" ParentName="SurgeryInstallImplantBase" Name="RVFFA_InstallImplantBase">
 		<recipeUsers Inherit="False">
 			<li>RVFFA_Avali</li>

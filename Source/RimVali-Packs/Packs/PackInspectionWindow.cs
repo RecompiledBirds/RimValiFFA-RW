@@ -14,8 +14,8 @@ namespace RimValiFFARW.Packs
         private const float MaxMemberListHeight = 140f;
         private const float CommonMargin = 5f;
 
-        private static readonly Vector2 winSize = new Vector2(600, 333);
-        private static readonly Rect main = new Rect(CommonMargin, 0f, winSize.x - CommonMargin * 2f, winSize.y - CommonMargin); //695 x 390
+        private static readonly Vector2 winSize = new(600, 333);
+        private static readonly Rect main = new(CommonMargin, 0f, winSize.x - CommonMargin * 2f, winSize.y - CommonMargin); //695 x 390
         //private readonly Color otherGrey = new Color(.15f, .15f, .15f, .10f);
         private readonly Rect titlePart;
         private readonly Rect contentPart;
@@ -24,7 +24,7 @@ namespace RimValiFFARW.Packs
         private readonly Rect packRenameButton;
         private readonly Rect boniListPartOuter;
 
-        private Vector2 newPackButtonSize = new Vector2(250f, 30f);
+        private Vector2 newPackButtonSize = new(250f, 30f);
         private Vector2 descriptionScrollVector;
         private Vector2 memberScrollVector;
         private Vector2 boniScrollVector;
@@ -38,7 +38,7 @@ namespace RimValiFFARW.Packs
 
         private bool playerWasNotifiedOfPackMissing = false;
         private bool renameMode = false;
-        private List<Pawn> packMembers = new List<Pawn>();
+        private List<Pawn> packMembers = [];
         [AllowNull]
         private Pack? pack;
         [AllowNull]

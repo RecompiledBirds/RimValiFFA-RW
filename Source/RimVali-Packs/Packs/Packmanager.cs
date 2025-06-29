@@ -117,6 +117,8 @@ namespace RimValiFFARW.Packs
         public bool RemovePack(Pack pack)
         {
             if (!packs.Remove(pack)) return false;
+            //ensures members dont get pack benefits after it's destroyed
+            pack.ForceRemoveAllMembers();
             memberPackTable.RemoveAll(kvp => kvp.Key == null || pack.Members.Contains(kvp.Key));
             packsList.Remove(pack);
             return true;

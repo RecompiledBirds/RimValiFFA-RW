@@ -2,6 +2,7 @@
 using LudeonTK;
 using RimWorld;
 using RVCRestructured;
+using UnityEngine;
 using Verse;
 
 namespace RimValiFFARW.Packs
@@ -36,5 +37,16 @@ namespace RimValiFFARW.Packs
         }
         [DebugAction("RimValiFFARW", "Print list of packs", allowedGameStates = AllowedGameStates.IsCurrentlyOnMap)]
         public static void PrintPackList() => VineLog.Log(Packmanager.GetLastActivePackmanager.PacksReadOnly.Join(pack => pack.NameColored));
+        [DebugAction("RimValiFFARW", "Dump dbg pawn atlas", allowedGameStates = AllowedGameStates.IsCurrentlyOnMap)]
+        public static void Dump()
+        {
+            string text = Application.dataPath + "\\atlasDump_Pawn";
+            if (!Directory.Exists(text))
+            {
+                Directory.CreateDirectory(text);
+            }
+            GlobalTextureAtlasManager.DumpPawnAtlases(text);
+            GlobalTextureAtlasManager.DumpStaticAtlases(text);
+        }
     }
 }

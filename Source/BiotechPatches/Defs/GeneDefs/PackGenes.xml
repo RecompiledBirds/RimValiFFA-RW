@@ -32,12 +32,27 @@
 		<minAgeActive>3</minAgeActive>
 		<biostatCpx>0</biostatCpx>
 		<biostatMet>0</biostatMet>
+		<suppressedTraits>
+			<li>
+				<def>Recluse</def>
+			</li>
+		</suppressedTraits>
 		<exclusionTags>
 			<li>Packs</li>
 		</exclusionTags>
 		<modExtensions>
 			<li Class="RimValiFFARW.Packs.PackModExtension">
 				<packXMLInfo>RVFFA_PackData</packXMLInfo>
+			</li>
+			<li Class="RVCRestructured.RestrictionModExtension">
+				<restrictions>
+					<defRestrictions>
+						<ThoughtDef>
+							<SleptInBedroom>BlackListSelf</SleptInBedroom>
+							<SleptInBarracks>BlackListSelf</SleptInBarracks>
+						</ThoughtDef>
+					</defRestrictions>
+				</restrictions>
 			</li>
 		</modExtensions>
 	</GeneDef>

@@ -60,38 +60,45 @@
 						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 							<def>RVFFA_EarLL</def>
 							<baseLayer>11</baseLayer>
+							<linkedBodyPartsGroup>RVFFA_GroupLLEar</linkedBodyPartsGroup>
 							<drawData>
 								<dataEast>
-									<offset>(-.34,-.1,.1)</offset>
+									<offset>(-0.3,0,0)</offset>
+									<layer>9</layer>
 								</dataEast>
 								<dataWest>
-									<offset>(.34,.1,.1)</offset>
+									<offset>(0.3,0,0)</offset>
+									<layer>11</layer>
 								</dataWest>
 							</drawData>
 						</li>
 						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 							<def>RVFFA_EarRL</def>
-
+							<linkedBodyPartsGroup>RVFFA_GroupRLEar</linkedBodyPartsGroup>
 							<baseLayer>11</baseLayer>
 							<drawData>
 								<dataEast>
-									<offset>(-.34,.1,.1)</offset>
+									<offset>(-0.3,0,0)</offset>
+									<layer>11</layer>
 								</dataEast>
 								<dataWest>
-									<offset>(.34,-.1,.1)</offset>
+									<offset>(0.3,0,0)</offset>
+									<layer>9</layer>
 								</dataWest>
 							</drawData>
 						</li>
 						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 							<def>RVFFA_EarLU</def>
-
+							<linkedBodyPartsGroup>RVFFA_GroupLUEar</linkedBodyPartsGroup>
 							<baseLayer>11</baseLayer>
 							<drawData>
 								<dataEast>
-									<offset>(-.27,-.1,0)</offset>
+									<offset>(-.27,0,0)</offset>
+									<layer>9</layer>
 								</dataEast>
 								<dataWest>
-									<offset>(.27,.1,0)</offset>
+									<offset>(.27,0,0)</offset>
+									<layer>11</layer>
 								</dataWest>
 							</drawData>
 						</li>
@@ -99,12 +106,15 @@
 
 							<def>RVFFA_EarRU</def>
 							<baseLayer>11</baseLayer>
+							<linkedBodyPartsGroup>RVFFA_GroupRUEar</linkedBodyPartsGroup>
 							<drawData>
 								<dataEast>
-									<offset>(-.27,.1,0)</offset>
+									<offset>(-.27,0,0)</offset>
+									<layer>11</layer>
 								</dataEast>
 								<dataWest>
-									<offset>(.27,-.1,0)</offset>
+									<offset>(.27,0,0)</offset>
+									<layer>9</layer>
 								</dataWest>
 							</drawData>
 						</li>

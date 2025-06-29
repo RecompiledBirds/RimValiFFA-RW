@@ -52,7 +52,7 @@ namespace RimValiFFARW.Packs
             packInfoContainer = null;
             if (ModsConfig.BiotechActive)
             {
-                PackGene? packGene = (PackGene?)pawn.genes.GenesListForReading.FirstOrFallback(x => x is PackGene, null);
+                PackGene? packGene = (PackGene?)pawn.genes?.GenesListForReading.FirstOrFallback(x => x is PackGene, null);
                 packInfoContainer = packGene?.PackInfoContainer;
                 return packGene!=null;
             }

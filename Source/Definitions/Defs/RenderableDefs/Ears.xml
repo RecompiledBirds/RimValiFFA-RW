@@ -3,6 +3,7 @@
 	
 	<RVCRestructured.Defs.RenderableDef ParentName="RVFFA_BaseAvaliFleshPart">
 		<defName>RVFFA_EarLL</defName>
+		<linkedBodyPartsGroup>
 		<showsInBed>true</showsInBed>
 		<textures>
 			<li>

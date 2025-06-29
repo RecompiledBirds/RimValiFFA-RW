@@ -11,9 +11,19 @@
 			<ComfyTemperatureMax>10</ComfyTemperatureMax>
 			<LeatherAmount>75</LeatherAmount>
 			<RoyalFavorValue>3</RoyalFavorValue>
+			<Wildness>0.86</Wildness>
 		</statBases>
 
 		<comps>
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_HoldingPlatformTarget">
+				<baseEscapeIntervalMtbDays>120</baseEscapeIntervalMtbDays>
+				<getsColdContainmentBonus>true</getsColdContainmentBonus>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<requiresImprisonment>true</requiresImprisonment>
+			</li>
 			<li Class="RVCRestructured.RVRCannibalismComp">
 				<thoughts>
 					<li>
@@ -336,7 +346,11 @@
 			<meatMarketValue>0.8</meatMarketValue>
 			<manhunterOnDamageChance>0.50</manhunterOnDamageChance>
 			<manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
-			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundCallIntervalRange>2000~5000</soundCallIntervalRange>
+			<canBecomeShambler>true</canBecomeShambler>
+			<knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+			<anomalyKnowledge>1</anomalyKnowledge>
+			<hasUnnaturalCorpse>true</hasUnnaturalCorpse>
 			<litterSizeCurve>
 				<points>
 					<li>(0.5, 0)</li>
@@ -390,9 +404,6 @@
 				<Cleaning>3</Cleaning>
 				<Research>13</Research>
 			</lifeStageWorkSettings>
-			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
 			<specialShadowData>
 				<volume>(0.3, 0.8, 0.4)</volume>
