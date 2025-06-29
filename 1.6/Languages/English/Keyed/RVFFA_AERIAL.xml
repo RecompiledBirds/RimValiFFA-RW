@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<LanguageData>
-	<RVFFA_AERIALSystem_AERIALShellSpaceLeft>Shells loaded: {0}/{1}</RVFFA_AERIALSystem_AERIALShellSpaceLeft>
-	<RVFFA_AERIALSystem_AERIALNextShell>Firing next: {0}</RVFFA_AERIALSystem_AERIALNextShell>
-
-	<RVFFA_AERIALTurretComp_Refuel>Refuel {0}</RVFFA_AERIALTurretComp_Refuel>
-</LanguageData>
