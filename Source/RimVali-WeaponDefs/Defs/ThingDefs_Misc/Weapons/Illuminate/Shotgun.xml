@@ -4,6 +4,7 @@
 		<defName>RVFFA_ShotgunBullet</defName>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/ShotgunBullet</texPath>
+			
 		</graphicData>
 		<projectile>
 			<stoppingPower>3</stoppingPower>

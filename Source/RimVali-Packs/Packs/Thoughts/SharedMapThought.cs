@@ -16,8 +16,7 @@ namespace RimValiFFARW.Packs
             if (!p.IsInPack(out Pack? pack))
                 return ThoughtState.Inactive;
             if (p.GetRoom() == null) return ThoughtState.Inactive;
-            if (pack.Members.Any(x => x.Map == p.Map)) return ThoughtState.ActiveAtStage(1);
-
+            if (pack.Members.Any(x => x.Map == p.Map)) return ThoughtState.Inactive;
             return ThoughtState.ActiveAtStage(0);
         }
     }
