@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rimvali-Terraforming", "Sou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoyaltyPatches", "Source\RoyaltyPatches\RoyaltyPatches.csproj", "{99D9B015-AB6C-2CA5-855F-39A5318E07E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimVali-RimLanguagesPatches", "Source\RimVali-RimLanguages-Patches\RimVali-RimLanguagesPatches.csproj", "{4CEE8225-9168-6489-D9A3-FC01AF13B1EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{99D9B015-AB6C-2CA5-855F-39A5318E07E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99D9B015-AB6C-2CA5-855F-39A5318E07E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99D9B015-AB6C-2CA5-855F-39A5318E07E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CEE8225-9168-6489-D9A3-FC01AF13B1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CEE8225-9168-6489-D9A3-FC01AF13B1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CEE8225-9168-6489-D9A3-FC01AF13B1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CEE8225-9168-6489-D9A3-FC01AF13B1EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

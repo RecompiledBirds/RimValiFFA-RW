@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionLanguages.RaceLanguageDef>
+		<defName>RVFFA_Avalonian</defName>
+		<label>Avalonian</label>
+		<description>A complex and multifaceted system of communication characterized by combinations of hisses, chirps, and similar sounds.</description>
+		<nameMaker>HumanLanguage</nameMaker>
+	</FactionLanguages.RaceLanguageDef>
+</Defs>

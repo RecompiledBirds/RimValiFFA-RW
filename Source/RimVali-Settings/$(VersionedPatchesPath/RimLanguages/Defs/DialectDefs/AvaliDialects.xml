@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionLanguages.DialectDef>
+		<defName>RVFFA_IlluminateStandard</defName>
+		<label>Illuminate Standard</label>
+		<description>A simplified version of the standard language, designed to be as easy to understand and learn as possible for it's native species, though others may find it more difficult. It uses a limited vocabulary, simple grammatical constructions, and a minimum number of exceptions. This dialect simplifies communication between people of different cultural backgrounds, reduces the likelihood of misunderstandings, and makes the language more accessible to learn.</description>
+		<nameMaker>HumanDialect_Standard</nameMaker>
+		<learningDifficulty>2</learningDifficulty>
+		<difficultyByTechLevel>
+			<points>
+				<!-- Undefined -->
+				<li>0, 0.5</li>
+				<!-- Animal -->
+				<li>1, 0.25</li>
+				<!-- Neolithic -->
+				<li>2, 0.25</li>
+				<!-- Medieval -->
+				<li>3, 0.5</li>
+				<!-- Industrial -->
+				<li>4, 0.75</li>
+				<!-- Spacer -->
+				<li>5, 1</li>
+				<!-- Ultra -->
+				<li>6, 1</li>
+				<!-- Archotech -->
+				<li>7, 2</li>
+			</points>
+		</difficultyByTechLevel>
+	</FactionLanguages.DialectDef>
+
+	<FactionLanguages.DialectDef>
+		<defName>RVFFA_IWStandard</defName>
+		<label>Independent Worlds Standard</label>
+		<description>A simplified version of the standard language, designed to be as easy to understand and learn as possible. It uses a limited vocabulary, simple grammatical constructions, and a minimum number of exceptions. This dialect simplifies communication between people of different cultural backgrounds, reduces the likelihood of misunderstandings, and makes the language more accessible to learn.</description>
+		<nameMaker>HumanDialect_Standard</nameMaker>
+		<learningDifficulty>1.5</learningDifficulty>
+		<difficultyByTechLevel>
+			<points>
+				<!-- Undefined -->
+				<li>0, 1</li>
+				<!-- Animal -->
+				<li>1, 0.5</li>
+				<!-- Neolithic -->
+				<li>2, 0.5</li>
+				<!-- Medieval -->
+				<li>3, 0.75</li>
+				<!-- Industrial -->
+				<li>4, 1</li>
+				<!-- Spacer -->
+				<li>5, 1.25</li>
+				<!-- Ultra -->
+				<li>6, 1.5</li>
+				<!-- Archotech -->
+				<li>7, 4</li>
+			</points>
+		</difficultyByTechLevel>
+	</FactionLanguages.DialectDef>
+</Defs>

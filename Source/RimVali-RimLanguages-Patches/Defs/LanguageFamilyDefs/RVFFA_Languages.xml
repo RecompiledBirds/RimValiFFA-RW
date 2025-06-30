@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!---->
+	<FactionLanguages.LanguageFamilyDef>
+		<defName>RVFFA_AvaliLanguages</defName>
+		<forcedLanguage>RVFFA_Avalonian</forcedLanguage>
+		<linkedRace>RVFFA_Avali</linkedRace>
+		<factionDialects>
+			<li>
+				<dialectDef>RVFFA_IlluminateStandard</dialectDef>
+				<factions>
+					<li>RVFFA_IlluminateFaction</li>
+					<li>RVFFA_IlluminatePlayer</li>
+				</factions>
+			</li>
+			<li>
+				<dialectDef>RVFFA_IWStandard</dialectDef>
+				<factions>
+					<li>RVFFA_IWPlayer</li>
+				</factions>
+			</li>
+		</factionDialects>
+	</FactionLanguages.LanguageFamilyDef>
+	<!---->
+</Defs>

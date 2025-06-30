@@ -53,7 +53,7 @@
 		<label>Nanolathe</label>
 		<description>The Nanolathe is a specialized 3D printer, like most Avali crafting utilities. It works with immense heat, and nanotechnologies able to rearrange the structure and molecues of the items put in. Caution: Do not stick fingers, toes, feet, hands, tails, or other limbs inside, even if the device appears to be powered off.</description>
 		
-		<size>(3,1)</size>
+		<size>(2,1)</size>
 
 		<stuffCategories>
 			<li>Metallic</li>
@@ -94,7 +94,7 @@
 			<texPath>RimValiFFA/Buildings/Production/NanoForge</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(3,2)</drawSize>
+			<drawSize>(2,2)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
