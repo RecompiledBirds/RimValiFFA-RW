@@ -24,6 +24,7 @@
 		<li>brrainz.harmony</li>
 		<li>RimVali.Rewritten.Core</li>
 		<li>CETeam.CombatExtended</li>
+		<li>DimonSever000.FactionLanguages</li>
 	</loadAfter>
 	<supportedVersions>
 		<li>1.4</li>

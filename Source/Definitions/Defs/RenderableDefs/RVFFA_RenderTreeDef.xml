@@ -33,30 +33,30 @@
 					</drawData>
 					<children>
 						<li Class="PawnRenderNodeProperties_Overlay">
-					<debugLabel>Head wounds</debugLabel>
-					<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
-					<overlayLayer>Head</overlayLayer>
-					<baseLayer>65</baseLayer>
-				</li>
-				<li Class="PawnRenderNodeProperties_Parent">
-					<debugLabel>Apparel root</debugLabel>
-					<tagDef>ApparelHead</tagDef>
-					<baseLayer>70</baseLayer>
-					<drawData>
-						<scale>1.75</scale>
-					</drawData>
-				</li>
-				<li Class="PawnRenderNodeProperties_Overlay">
-					<debugLabel>Firefoam</debugLabel>
-					<workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
-					<overlayLayer>Head</overlayLayer>
-					<baseLayer>85</baseLayer>
-				</li>
-				<li Class="PawnRenderNodeProperties_Overlay">
-					<debugLabel>Status overlay</debugLabel>
-					<workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
-					<baseLayer>100</baseLayer>
-				</li>
+							<debugLabel>Head wounds</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+							<overlayLayer>Head</overlayLayer>
+							<baseLayer>65</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Parent">
+							<debugLabel>Apparel root</debugLabel>
+							<tagDef>ApparelHead</tagDef>
+							<baseLayer>70</baseLayer>
+							<drawData>
+								<scale>1.75</scale>
+							</drawData>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Firefoam</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+							<overlayLayer>Head</overlayLayer>
+							<baseLayer>85</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Status overlay</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
+							<baseLayer>100</baseLayer>
+						</li>
 						<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 							<def>RVFFA_EarLL</def>
 							<baseLayer>11</baseLayer>
@@ -136,7 +136,7 @@
 						</li>
 					</children>
 				</li>
-				
+
 				<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 					<def>RVFFA_Body</def>
 					<tagDef>Body</tagDef>
