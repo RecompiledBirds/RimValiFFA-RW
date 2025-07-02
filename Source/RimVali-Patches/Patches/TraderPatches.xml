@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>RVFFA_Weapons</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>RVFFA_WeaponMelee</tag>
+			</li>
+			
+		</value>
+	</Operation>
+</Patch>

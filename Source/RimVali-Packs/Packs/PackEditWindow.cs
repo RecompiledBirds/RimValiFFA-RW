@@ -21,9 +21,9 @@ namespace RimValiFFARW.Packs
         private const float CommonMargin = 5f;
         private const int ButtonOutlineWidth = 3;
 
-        private readonly List<Pawn> curPackMates = new List<Pawn>();
-        private readonly List<Pawn> oldPackMates = new List<Pawn>();
-        private readonly List<Pawn> newPackMates = new List<Pawn>();
+        private readonly List<Pawn> curPackMates = [];
+        private readonly List<Pawn> oldPackMates = [];
+        private readonly List<Pawn> newPackMates = [];
 
         private readonly Rect mainPart;
         private readonly Rect titlePart;
@@ -54,7 +54,7 @@ namespace RimValiFFARW.Packs
 
         protected override float Margin => 0f;
 
-        public override Vector2 InitialSize => new Vector2(600, 378);
+        public override Vector2 InitialSize => new(600, 378);
 
         private bool CanAddMorePawnsToPack => curPackMates.Count + newPackMates.Count < (newPackDef?.maxSize ?? 0) && cachedAvailablePawns.Any();
 
@@ -62,11 +62,11 @@ namespace RimValiFFARW.Packs
         {
             get
             {
-                List<FloatMenuOption> options = new List<FloatMenuOption>();
+                List<FloatMenuOption> options = [];
 
                 foreach (PackDef def in DefDatabase<PackDef>.AllDefsListForReading.Where(def => !def.unique))
                 {
-                    FloatMenuOption option = new FloatMenuOption(def.LabelCap, () =>
+                    FloatMenuOption option = new(def.LabelCap, () =>
                     {
                         newPackDef = def;
                         newPackWorker = def.GetNewPackWorker;
@@ -175,7 +175,7 @@ namespace RimValiFFARW.Packs
                     Packmanager manager = Packmanager.GetLastActivePackmanager;
                     manager.RemovePack(pack);
                     manager.AddPack(newPack);
-                    PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
+                    PackInspectionWindow.GetCurrentPackInspectionWindow?.OnOpen();
                     Close();
                 } 
                 else if(acceptPack && !isDefSwitched)
@@ -190,7 +190,7 @@ namespace RimValiFFARW.Packs
                         pack.RemoveMember(pawn);
                     }
 
-                    PackInspectionWindow.GetCurrentPackInspectionWindow.OnOpen();
+                    PackInspectionWindow.GetCurrentPackInspectionWindow?.OnOpen();
                     Close();
                 }
                 else
@@ -215,28 +215,29 @@ namespace RimValiFFARW.Packs
             Widgets.Label(temp.MoveRect(new Vector2(CommonMargin, 0f)), "RVFFA_PackCreationWindow_AddAnotherPawn".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
 
-            if (Widgets.ButtonInvisible(temp))
+            if (!Widgets.ButtonInvisible(temp))
             {
-                List<FloatMenuOption> potentialPawnOptions = new List<FloatMenuOption>();
-                foreach (Pawn pawn in cachedAvailablePawns)
-                {
-                    FloatMenuOption option = new FloatMenuOption(pawn.NameShortColored, () =>
-                    {
-                        if (pack.Members.Contains(pawn))
-                        {
-                            oldPackMates.Remove(pawn);
-                            curPackMates.Add(pawn);
-                        }
-                        else
-                            newPackMates.Add(pawn);
-
-
-                        RefreshBoniInnerHeight();
-                    }, pawn, Color.white);
-                    potentialPawnOptions.Add(option);
-                }
-                Find.WindowStack.Add(new FloatMenu(potentialPawnOptions));
+                return;
             }
+            List<FloatMenuOption> potentialPawnOptions = [];
+            foreach (Pawn pawn in cachedAvailablePawns)
+            {
+                FloatMenuOption option = new(pawn.NameShortColored, () =>
+                {
+                    if (pack.Members.Contains(pawn))
+                    {
+                        oldPackMates.Remove(pawn);
+                        curPackMates.Add(pawn);
+                    }
+                    else
+                        newPackMates.Add(pawn);
+
+
+                    RefreshBoniInnerHeight();
+                }, pawn, Color.white);
+                potentialPawnOptions.Add(option);
+            }
+            Find.WindowStack.Add(new FloatMenu(potentialPawnOptions));
         }
 
         private bool DrawOpinionBar(Pawn otherMember, IEnumerable<Pawn> otherMembers, PackDef def, Rect rect, int locationModif, OpinionBarType type, [NotNullWhen(false)] out string? reason)
@@ -316,35 +317,36 @@ namespace RimValiFFARW.Packs
             acceptPack = true;
             failreason0 = null;
 
-            if (newPackDef != null)
+            if (newPackDef == null)
             {
-                int total = 0;
-                IEnumerable<Pawn> union = curPackMates.Union(newPackMates);
-
-                PackInspectionWindow.DrawBoniList(boniListPartOuter, boniListPartInner, newPackDef, ref boniScrollVector);
-                Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
-
-                for (int i = 0; i < curPackMates.Count; i++)
-                {
-                    Pawn pawn = curPackMates[i];
-                    DrawOpinionBar(pawn, union, newPackDef, memberListPartInner, total++, OpinionBarType.curMember, out _);
-                }
-
-                for (int i = 0; i < newPackMates.Count; i++)
-                {
-                    Pawn pawn = newPackMates[i];
-                    acceptPack &= DrawOpinionBar(pawn, union, newPackDef, memberListPartInner, total++, OpinionBarType.newMember, out failreason0);
-                }
-
-                for (int i = 0; i < oldPackMates.Count; i++)
-                {
-                    Pawn pawn = oldPackMates[i];
-                    DrawOpinionBar(pawn, union, newPackDef, memberListPartInner, total++, OpinionBarType.oldMember, out _);
-                }
-
-                DrawAddPawnButton();
-                Widgets.EndScrollView();
+                return;
             }
+            int total = 0;
+            IEnumerable<Pawn> union = curPackMates.Union(newPackMates);
+
+            PackInspectionWindow.DrawBoniList(boniListPartOuter, boniListPartInner, newPackDef, ref boniScrollVector);
+            Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
+
+            for (int i = 0; i < curPackMates.Count; i++)
+            {
+                Pawn pawn = curPackMates[i];
+                DrawOpinionBar(pawn, union, newPackDef, memberListPartInner, total++, OpinionBarType.curMember, out _);
+            }
+
+            for (int i = 0; i < newPackMates.Count; i++)
+            {
+                Pawn pawn = newPackMates[i];
+                acceptPack &= DrawOpinionBar(pawn, union, newPackDef, memberListPartInner, total++, OpinionBarType.newMember, out failreason0);
+            }
+
+            for (int i = 0; i < oldPackMates.Count; i++)
+            {
+                Pawn pawn = oldPackMates[i];
+                DrawOpinionBar(pawn, union, newPackDef, memberListPartInner, total++, OpinionBarType.oldMember, out _);
+            }
+
+            DrawAddPawnButton();
+            Widgets.EndScrollView();
         }
 
         private void DrawDescription()

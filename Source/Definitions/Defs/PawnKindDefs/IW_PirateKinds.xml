@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Abstract="True" Name="RVFFA_IWDrifterBase" ParentName="DrifterBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IWDrifterBase">
+		<defName>RVFFA_IW_Drifter</defName>
+		<label>drifter</label>
+	
+	</PawnKindDef>
+
+	<PawnKindDef Abstract="True" Name="RVFFA_IWPirateScavBase" ParentName="PirateScavTierBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IWPirateScavBase">
+		<defName>RVFFA_IW_Scavenger</defName>
+		<label>scavenger gunner</label>
+		<apparelMoney>300~500</apparelMoney>
+		<weaponMoney>200~300</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<initialResistanceRange>17~26</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="ThrasherBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+		<defName>RVFFA_IW_Thrasher</defName>
+		<label>scavenger thrasher</label>
+		<canBeSapper>true</canBeSapper>
+		<apparelMoney>300~800</apparelMoney>
+		<apparelTags>
+			<li>Outlander</li>
+		</apparelTags>
+		<weaponMoney>100~160</weaponMoney>
+		<weaponTags>
+			<li>NeolithicMeleeBasic</li>
+			<li>MedievalMeleeBasic</li>
+			<li>MedievalMeleeDecent</li>
+		</weaponTags>
+		<initialResistanceRange>14~23</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentNameName="RVFFA_IWPirateScavBase" ParentName="PirateKindBase">
+		<race>RVFFA_Avali</race>
+		<defName>RVFFA_IW_Pirate</defName>
+		<label>pirate gunner</label>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+	
+</Defs>

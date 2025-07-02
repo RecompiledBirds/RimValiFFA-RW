@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="RVFFA_BaseIWFaction">
+		<defName>RVFFA_IWPirate</defName>
+		<label>Pirate Avali Colony</label>
+		<description>A Pirate Avali Colony.</description>
+		<naturalEnemy>true</naturalEnemy>
+		<permanentEnemy>true</permanentEnemy>
+		<colorSpectrum>
+			<li>(1, 0, 0)</li>
+			<li>(1,0.25,0.25)</li>
+		</colorSpectrum>
+		<minSettlementTemperatureChanceCurve>
+			<points>
+				<li>(0,0)</li>
+				<li>(10,70)</li>
+			</points>
+		</minSettlementTemperatureChanceCurve>
+
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Pirate</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<RVFFA_IW_Drifter>10</RVFFA_IW_Drifter>
+					<RVFFA_IW_Thrasher>3</RVFFA_IW_Thrasher>
+					<RVFFA_IW_Scavenger>10</RVFFA_IW_Scavenger>
+					<RVFFA_IW_Pirate>10</RVFFA_IW_Pirate>
+					<RVFFA_IW_Grenadier_EMP>0.25</RVFFA_IW_Grenadier_EMP>
+					<RVFFA_IW_Grenadier_Smoke>0.25</RVFFA_IW_Grenadier_Smoke>
+					<RVFFA_IW_Grenadier_Destructive>2</RVFFA_IW_Grenadier_Destructive>
+					<RVFFA_IW_Mercenary_Gunner>10</RVFFA_IW_Mercenary_Gunner>
+					<RVFFA_IW_Mercenary_Heavy>6</RVFFA_IW_Mercenary_Heavy>
+					<RVFFA_IW_Mercenary_Slasher>3</RVFFA_IW_Mercenary_Slasher>
+					<RVFFA_IW_Mercenary_Sniper>7</RVFFA_IW_Mercenary_Sniper>
+					<RVFFA_IW_Mercenary_Elite>10</RVFFA_IW_Mercenary_Elite>
+					<RVFFA_IW_PirateBoss>5</RVFFA_IW_PirateBoss>
+
+
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, melee-only -->
+				<kindDef>Combat</kindDef>
+				<commonality>30</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<RVFFA_IW_Thrasher>10</RVFFA_IW_Thrasher>
+					<RVFFA_IW_Mercenary_Slasher>10</RVFFA_IW_Mercenary_Slasher>
+					<RVFFA_IW_PirateBoss>5</RVFFA_IW_PirateBoss>
+
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged only -->
+				<kindDef>Combat</kindDef>
+				<commonality>20</commonality>
+				<options>
+					<RVFFA_IW_Scavenger>10</RVFFA_IW_Scavenger>
+					<RVFFA_IW_Pirate>10</RVFFA_IW_Pirate>
+					<RVFFA_IW_Grenadier_EMP>0.25</RVFFA_IW_Grenadier_EMP>
+					<RVFFA_IW_Grenadier_Smoke>0.25</RVFFA_IW_Grenadier_Smoke>
+					<RVFFA_IW_Grenadier_Destructive>2</RVFFA_IW_Grenadier_Destructive>
+					<RVFFA_IW_Mercenary_Gunner>10</RVFFA_IW_Mercenary_Gunner>
+					<RVFFA_IW_Mercenary_Heavy>6</RVFFA_IW_Mercenary_Heavy>
+					<RVFFA_IW_Mercenary_Sniper>7</RVFFA_IW_Mercenary_Sniper>
+					<RVFFA_IW_Mercenary_Elite>10</RVFFA_IW_Mercenary_Elite>
+					<RVFFA_IW_PirateBoss>5</RVFFA_IW_PirateBoss>
+
+
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, explosives with ranged mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<RVFFA_IW_Grenadier_EMP>0.5</RVFFA_IW_Grenadier_EMP>
+					<RVFFA_IW_Grenadier_Smoke>0.5</RVFFA_IW_Grenadier_Smoke>
+					<RVFFA_IW_Grenadier_Destructive>10</RVFFA_IW_Grenadier_Destructive>
+					<RVFFA_IW_Mercenary_Gunner>1</RVFFA_IW_Mercenary_Gunner>
+					<RVFFA_IW_Mercenary_Heavy>10</RVFFA_IW_Mercenary_Heavy>
+					<RVFFA_IW_Mercenary_Elite>1</RVFFA_IW_Mercenary_Elite>
+					<PirateBoss>1</PirateBoss>
+
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, snipers only -->
+				<kindDef>Combat</kindDef>
+				<commonality>10</commonality>
+				<options>
+					<RVFFA_IW_Mercenary_Sniper>10</RVFFA_IW_Mercenary_Sniper>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, drifters only (very rare) -->
+				<kindDef>Combat</kindDef>
+				<commonality>2.5</commonality>
+				<maxTotalPoints>1000</maxTotalPoints>
+				<options>
+					<RVFFA_IW_Drifter>10</RVFFA_IW_Drifter>
+				</options>
+			</li>
+			<li>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
+				<options>
+					<RVFFA_IW_Thrasher>3</RVFFA_IW_Thrasher>
+					<RVFFA_IW_Pirate>10</RVFFA_IW_Pirate>
+					<RVFFA_IW_Grenadier_Destructive>2</RVFFA_IW_Grenadier_Destructive>
+					<RVFFA_IW_Mercenary_Slasher>3</RVFFA_IW_Mercenary_Slasher>
+					<RVFFA_IW_Mercenary_Sniper>10</RVFFA_IW_Mercenary_Sniper>
+					<RVFFA_IW_Mercenary_Gunner>10</RVFFA_IW_Mercenary_Gunner>
+					<RVFFA_IW_Mercenary_Elite>10</RVFFA_IW_Mercenary_Elite>
+					<RVFFA_IW_PirateBoss>10</RVFFA_IW_PirateBoss>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<factionIconPath>RimValiFFA/Symbols/avali_ideo_angy</factionIconPath>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		</requiredMemes>
+
+		<raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+	</FactionDef>
+</Defs>

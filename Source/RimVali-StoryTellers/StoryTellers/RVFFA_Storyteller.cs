@@ -153,6 +153,7 @@ namespace RimValiFFARW.StoryTellers
                 switch (storytellerData.StorytellerState)
                 {
                     case StorytellerState.Angered:
+
                         FiringIncident? incidentAngry = GenAngry(target);
                         if (incidentAngry != null) yield return incidentAngry;
                         break;

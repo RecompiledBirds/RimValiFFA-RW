@@ -24,11 +24,11 @@ namespace RimValiFFARW.Packs
 
         [AllowNull]
         private PackDef def;
-        private HashSet<Pawn> members = new HashSet<Pawn>();
-        private Dictionary<Pawn, PackMemberHediffTracker> memberHediffDic = new Dictionary<Pawn, PackMemberHediffTracker>();
+        private HashSet<Pawn> members = [];
+        private Dictionary<Pawn, PackMemberHediffTracker> memberHediffDic = [];
 
-        private List<Pawn> workingListPawn = new List<Pawn>();
-        private List<PackMemberHediffTracker> workingListTracker = new List<PackMemberHediffTracker>();
+        private List<Pawn> workingListPawn = [];
+        private List<PackMemberHediffTracker> workingListTracker = [];
 
         [AllowNull]
         private string packName;

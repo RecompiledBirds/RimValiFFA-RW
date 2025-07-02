@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="RVFFA_IW_Villager_Child" ParentName="Villager_Child">
+		<race>RVFFA_Avali</race>
+		<defName>RVFFA_IW_VillagerChild</defName>
+	</PawnKindDef>
+
+</Defs>

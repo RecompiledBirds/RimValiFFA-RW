@@ -3,7 +3,6 @@
 	<ThingDef ParentName="BenchBase" Name="RVFFA_BaseProductionBench" Abstract="True">
 		<thingClass>Building_WorkTable</thingClass>
 		<designationCategory>RVFFA_Production</designationCategory>
-		<minifiedDef>MinifiedThing</minifiedDef>
 		
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>

@@ -43,6 +43,9 @@
 				</allowedBodyTypes>
 			</li>
 
+			<li Class="RVCRestructured.VineSpeciesConfig">
+				<disableGeneFurRendering>true</disableGeneFurRendering>
+			</li>
 			<li Class="RVCRestructured.RVRGraphicsComp">
 				<renderableDefs>
 					<li>RVFFA_EyeL</li>
@@ -259,9 +262,6 @@
 						<Apparel/>
 					</alwaysAllowed>
 				</restrictions>
-			</li>
-			<li Class="RVCRestructured.RVRCP">
-				<disableGeneFurRendering>true</disableGeneFurRendering>
 			</li>
 
 			<li Class="RimValiFFARW.Packs.PackInfoCompProps">

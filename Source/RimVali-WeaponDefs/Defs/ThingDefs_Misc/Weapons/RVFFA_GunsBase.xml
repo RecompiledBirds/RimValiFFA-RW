@@ -25,6 +25,9 @@
 				<compClass>CompQuality</compClass>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>RVFFA_WeaponMelee</li>
+		</tradeTags>
 		<weaponTags>
 			<li>RVFFA_Weapons</li>
 		</weaponTags>

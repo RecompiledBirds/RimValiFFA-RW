@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="RVFFA_GrenadierBase" Abstract="True" ParentName="GrenadierBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_GrenadierBase">
+		<defName>RVFFA_IW_Grenadier_Destructive</defName>
+		<label>grenadier</label>
+		<combatPower>70</combatPower>
+		<canBeSapper>true</canBeSapper>
+		<isGoodBreacher>true</isGoodBreacher>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<initialResistanceRange>10~16</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_GrenadierBase">
+		<defName>RVFFA_IW_Grenadier_EMP</defName>
+		<label>EMP grenadier</label>
+		<combatPower>55</combatPower>
+		<weaponTags>
+			<li>GrenadeEMP</li>
+		</weaponTags>
+		<initialResistanceRange>15~24</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_GrenadierBase">
+		<defName>RVFFA_IW_Grenadier_Smoke</defName>
+		<label>smoke grenadier</label>
+		<combatPower>55</combatPower>
+		<weaponTags>
+			<li>GrenadeSmoke</li>
+		</weaponTags>
+		<weaponMoney>400~400</weaponMoney>
+		<initialResistanceRange>18~28</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RVFFA_MercenaryGunner" Abstract="True" ParentName="MercenaryGunnerBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_MercenaryGunner">
+		<defName>RVFFA_IW_Mercenary_Gunner</defName>
+		<initialResistanceRange>6~10</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_MercenaryGunner">
+		<defName>RVFFA_IW_Mercenary_Gunner_Acidifier</defName>
+		<techHediffsRequired>
+			<li>DeathAcidifier</li>
+		</techHediffsRequired>
+		<initialResistanceRange>10~16</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RVFFA_MercenarySniper" Abstract="True" ParentName="MercenarySniperBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+	<PawnKindDef ParentName="RVFFA_MercenarySniper">
+		<defName>RVFFA_IW_Mercenary_Sniper</defName>
+		<initialResistanceRange>13~20</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_MercenarySniper">
+		<defName>RVFFA_IW_Mercenary_Sniper_Acidifier</defName>
+		<techHediffsRequired>
+			<li>DeathAcidifier</li>
+		</techHediffsRequired>
+		<initialResistanceRange>14~23</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RVFFA_MercenarySlasher" Abstract="True" ParentName="MercenarySlasherBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_MercenarySlasher">
+		<defName>RVFFA_IW_Mercenary_Slasher</defName>
+		<initialResistanceRange>10~16</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_MercenarySlasher">
+		<defName>RVFFA_IW_Mercenary_Slasher_Acidifier</defName>
+		<techHediffsRequired>
+			<li>DeathAcidifier</li>
+		</techHediffsRequired>
+		<initialResistanceRange>9~15</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RVFFA_MercenaryHeavy" ParentName="MercenaryHeavyBase">
+		<race>RVFFA_Avali</race>
+		<defName>RVFFA_IW_Mercenary_Heavy</defName>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="RVFFA_MercenaryElite" Abstract="True" ParentName="MercenaryEliteTierBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+	<PawnKindDef ParentName="RVFFA_MercenaryElite">
+		<defName>RVFFA_IW_PirateBoss</defName>
+		<label>boss</label>
+		<labelPlural>bosses</labelPlural>
+		<factionLeader>true</factionLeader>
+		<canBeSapper>true</canBeSapper>
+		<initialResistanceRange>17~27</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MercenaryEliteBase" Name="RVFFA_MercenaryEliteBase" Abstract="True">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWPirate</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_MercenaryEliteBase">
+		<defName>RVFFA_IW_Mercenary_Elite</defName>
+		<initialResistanceRange>15~23</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_MercenaryEliteBase">
+		<defName>RVFFA_IW_Mercenary_Elite_Acidifier</defName>
+		<techHediffsRequired>
+			<li>DeathAcidifier</li>
+		</techHediffsRequired>
+		<initialResistanceRange>12~20</initialResistanceRange>
+	</PawnKindDef>
+
+</Defs>
