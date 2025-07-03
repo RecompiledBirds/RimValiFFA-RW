@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+	<!-- Pack Scen Part-->
+	<RVFFA_Scen_MinimumPawnsToCreate>Minimum pawns to create: {MinSizeToCreate}</RVFFA_Scen_MinimumPawnsToCreate>
+	<RVFFA_Scen_MinimumPawnsToSustain>Minimum pawns to create: {MinSizeToSustain}</RVFFA_Scen_MinimumPawnsToSustain>
 	<!--PackWorker Class-->
 	<RVFFA_HasPackReplacement>{0} has a pack relacement AI, and cannot join a pack.</RVFFA_HasPackReplacement>
 	<RVFFA_PawnIsPackBroken>{0} is packbroken and cannot join a pack.</RVFFA_PawnIsPackBroken>

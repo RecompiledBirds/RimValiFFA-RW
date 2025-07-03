@@ -35,8 +35,15 @@ namespace RimValiFFARW.Packs
         }
         public override void DoEditInterface(Listing_ScenEdit listing)
         {
-            Rect scenPartRect = listing.GetScenPartRect(this, RowHeight);
-            if (!Widgets.ButtonText(scenPartRect, packDef.LabelCap)) return;
+            Rect scenPartRect = listing.GetScenPartRect(this, RowHeight*3);
+         
+            Widgets.Label(new Rect(scenPartRect.x, scenPartRect.y + RowHeight, scenPartRect.width, RowHeight), "RVFFA_Scen_MinimumPawnsToCreate".Translate(packDef.MinSizeToCreate.Named("MinSizeToCreate")));
+            Widgets.Label(new Rect(scenPartRect.x, scenPartRect.y + (RowHeight * 2), scenPartRect.width, RowHeight), "RVFFA_Scen_MinimumPawnsToSustain".Translate(packDef.MinSizeToSustain.Named("MinSizeToSustain")));
+            if (!Widgets.ButtonText(new Rect(scenPartRect.x,scenPartRect.y,scenPartRect.width, RowHeight), packDef.LabelCap))
+            {
+
+                return;
+            }
             List<FloatMenuOption> options = [];
             foreach (PackDef pDef in DefDatabase<PackDef>.AllDefsListForReading)
             {
