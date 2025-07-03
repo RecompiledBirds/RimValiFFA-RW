@@ -1,13 +1,18 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using RVCRestructured;
+using System.Diagnostics.CodeAnalysis;
 using Verse;
 
 namespace RimValiFFARW.Packs
 {
     public static class PackExtensions
     {
-        public static bool CanJoinAPack(this Pawn pawn)
+        public static bool CanJoinAPack(this Pawn pawn, PackDef? packDef=null)
         {
-            return !(pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken) || pawn.health.hediffSet.HasHediff(RVFFA_Defs.RVFFA_PackReplacement));
+            return
+                pawn.TryGetPackInfoContainer(out PackInfoContainer? container)
+                && !pawn.story.traits.allTraits.Any(x => container.PackXMLInfo?.traitsThatPreventPacking.Any(y => y.trait == x.def) ?? false)
+                && !pawn.health.hediffSet.hediffs.Any(x => container.PackXMLInfo?.hediffsThatPreventPacking.Any(y => y.hediff == x.def) ?? false);
+            
         }
         /// <summary>
         ///     Checks if a given <see cref="Pawn"/> <paramref name="pawn"/> is a member in any given <see cref="Pack"/>.
@@ -46,7 +51,7 @@ namespace RimValiFFARW.Packs
         /// </summary>B
         /// <param name="pawn"></param>
         /// <returns></returns>
-        public static bool IsPackable(this Pawn pawn) => pawn.TryGetPackInfoContainer(out PackInfoContainer? _);
+        public static bool IsPackable(this Pawn pawn, PackDef packDef) => pawn.TryGetPackInfoContainer(out PackInfoContainer? container)&&(container.PackXMLInfo?.allowedPackDefs.Contains(packDef)??false);
         public static bool TryGetPackInfoContainer(this Pawn pawn, [NotNullWhen(true)] out PackInfoContainer? packInfoContainer)
         {
             packInfoContainer = null;

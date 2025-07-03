@@ -26,5 +26,6 @@ namespace RimValiFFARW
         public static TraitDef RVFFA_PackBroken;
         [AllowNull]
         public static HediffDef RVFFA_PackReplacement;
+        
     }
 }

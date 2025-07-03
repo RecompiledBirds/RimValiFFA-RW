@@ -133,7 +133,7 @@ namespace RimValiFFARW.Packs
         public bool TryGetPackForPawn(Pawn pawn, [NotNullWhen(true)] out Pack? pack)
         {
             //Log.Message($"Dictionary: {memberPackTable.Join(kvp => $"{kvp.Value.GetUniqueLoadID()}", ", ")}");
-            return memberPackTable.TryGetValue(pawn, out pack);
+            return memberPackTable.TryGetValue(pawn, out pack) && pack!=null;
         }
 
         public override void ExposeData()

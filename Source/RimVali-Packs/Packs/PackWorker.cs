@@ -58,7 +58,7 @@ namespace RimValiFFARW.Packs
             if (pawn.NonHumanlikeOrWildMan()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild");
             if (pawn.IsInPack() && !ignoreIsInPack) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
             if (def.minGroupOpinionNeededCreation > avgOpinionOfMember) reason = "RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup".Translate(pawn.NameShortColored, avgOpinionOfMember.ToString("0.##"), def.minGroupOpinionNeededCreation.ToString("0.##"));
-            if (!pawn.IsPackable()) reason = "RVFFA_PackWorker_SubjectIsNotAvali".Translate();
+            if (!pawn.IsPackable(def)) reason = "RVFFA_PackWorker_SubjectIsNotAvali".Translate();
 
             if (reason != null)
             {
@@ -321,7 +321,7 @@ namespace RimValiFFARW.Packs
         public virtual void Disband(Pack pack)
         {
             Packmanager.GetLastActivePackmanager.RemovePack(pack);
-            List<Pawn> membersToRemove = pack.Members.ToList();
+            List<Pawn> membersToRemove = [.. pack.Members];
 
             while (membersToRemove.Count > 0)
             {
