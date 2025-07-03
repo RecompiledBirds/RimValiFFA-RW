@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using RVCRestructured;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using Verse;
 
@@ -26,6 +27,11 @@ namespace RimValiFFARW.Packs
     public class PackInfoContainer : IExposable
     {
         private PackDataDef? info;
+        public bool CanJoinPack(Pawn pawn)
+        {
+          return  !pawn.story.traits.allTraits.Any(x => PackXMLInfo?.traitsThatPreventPacking.Any(y => y.trait == x.def) ?? false)
+                && !pawn.health.hediffSet.hediffs.Any(x => PackXMLInfo?.hediffsThatPreventPacking.Any(y => y.hediff == x.def) ?? false);
+        }
         public PackDataDef? PackXMLInfo
         {
             get

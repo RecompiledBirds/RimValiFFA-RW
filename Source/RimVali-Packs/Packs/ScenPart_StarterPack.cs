@@ -12,8 +12,7 @@ namespace RimValiFFARW.Packs
 {
     public class ScenPart_StarterPack : ScenPart
     {
-        [AllowNull]
-        public PackDef packDef;
+        public PackDef packDef=RVFFA_PackDefs.RVFFA_StarterPack;
         public override void PostGameStart()
         {
             Map currentMap = Find.AnyPlayerHomeMap;
