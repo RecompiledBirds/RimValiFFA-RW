@@ -106,7 +106,7 @@
 					<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 					<tagDef>Head</tagDef>
 					<skipFlag>Head</skipFlag>
-					<baseLayer>10</baseLayer>
+					<baseLayer>30</baseLayer>
 					<drawData>
 						<dataNorth>
 							<offset>(0,0,0.75)</offset>
@@ -125,7 +125,7 @@
 									<def>RVFFA_EarLL</def>
 									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-									<baseLayer>15</baseLayer>
+									<baseLayer>35</baseLayer>
 									<drawData>
 										<dataEast>
 											<offset>(-.34,-.1,.1)</offset>
@@ -139,7 +139,7 @@
 									<def>RVFFA_EarRL</def>
 									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-									<baseLayer>15</baseLayer>
+									<baseLayer>35</baseLayer>
 									<drawData>
 										<dataEast>
 											<offset>(-.34,.1,.1)</offset>
@@ -153,7 +153,7 @@
 									<def>RVFFA_EarLU</def>
 									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-									<baseLayer>15</baseLayer>
+									<baseLayer>35</baseLayer>
 									<drawData>
 										<dataEast>
 											<offset>(-.27,-.1,0)</offset>
@@ -167,7 +167,7 @@
 									<def>RVFFA_EarRU</def>
 									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
-									<baseLayer>15</baseLayer>
+									<baseLayer>35</baseLayer>
 									<drawData>
 										<dataEast>
 											<offset>(-.27,.1,0)</offset>
@@ -180,19 +180,19 @@
 
 								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 									<def>RVFFA_Mouth</def>
-									<baseLayer>15</baseLayer>
+									<baseLayer>35</baseLayer>
 									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 								</li>
 								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 									<def>RVFFA_EyeL</def>
-									<baseLayer>15</baseLayer>
+									<baseLayer>35</baseLayer>
 									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 								</li>
 								<li Class="RVCRestructured.RVR.RenderableDefNodeProperties">
 									<def>RVFFA_EyeR</def>
-									<baseLayer>15</baseLayer>
+									<baseLayer>35</baseLayer>
 									<workerClass>RVCRestructured.RVR.RNodeWorker</workerClass>
 									<nodeClass>RVCRestructured.RVR.RenderableDefNode</nodeClass>
 								</li>
