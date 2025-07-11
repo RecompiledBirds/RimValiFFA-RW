@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RimValiFFARW.Packs.PackDef>
+	<RimValiFFARW.Packs.PackDef Abstract="True" Name="RVFFA_Pack">
+		<tags>
+			<li>RVFFA_AvaliPack</li>
+		</tags>
+	</RimValiFFARW.Packs.PackDef>
+	<RimValiFFARW.Packs.PackDef ParentName="RVFFA_Pack">
 		<defName>RVFFA_StarterPack</defName>
-		<label>starter pack</label>
+		<label>general pack</label>
 		<description>This pack may have existed for a long time, or it only started when your pawns first came into contact. Whatever happened, these pawns share a bond unique to them.</description>
 
 		<memberHediffs>
 			<li>RVFFA_StarterPackHediff</li>
 		</memberHediffs>
 
-		<unique>true</unique>
 
 		<minSizeToCreate>2</minSizeToCreate>
 		<minSizeToSustain>2</minSizeToSustain>
@@ -20,7 +24,7 @@
 		<minGroupOpinionNeededSustain>-10</minGroupOpinionNeededSustain>
 	</RimValiFFARW.Packs.PackDef>
 	
-	<RimValiFFARW.Packs.PackDef>
+	<RimValiFFARW.Packs.PackDef ParentName="RVFFA_Pack">
 		<defName>RVFFA_MilitaryPack</defName>
 		<label>militarized pack</label>
 		<description>This pack concerns itself more with protection than anything else. In their pursuit of becoming the perfect weapon however, they started to become a little disfunctional in social environments, tending to get angered more frequently than your average pawn.</description>
@@ -38,7 +42,7 @@
 		<minGroupOpinionNeededSustain>-10</minGroupOpinionNeededSustain>
 	</RimValiFFARW.Packs.PackDef>
 
-	<RimValiFFARW.Packs.PackDef>
+	<RimValiFFARW.Packs.PackDef ParentName="RVFFA_Pack">
 		<defName>RVFFA_MiningPack</defName>
 		<label>mining pack</label>
 		<description>Rock and Stone! The pawns in this pack specialized themselves on the mining of ore and thus manage to squeeze out just that little extra ore out of every rock, faster than anyone else could!</description>
@@ -56,7 +60,7 @@
 		<minGroupOpinionNeededSustain>20</minGroupOpinionNeededSustain>
 	</RimValiFFARW.Packs.PackDef>
 
-	<RimValiFFARW.Packs.PackDef>
+	<RimValiFFARW.Packs.PackDef ParentName="RVFFA_Pack">
 		<defName>RVFFA_AnimalPack</defName>
 		<label>animal handling pack</label>
 		<description>This pack is full of animal lovers. If they could, they would probably spend all their time with and around their animals and pets. As such, they are a lot better than your average pawn at taming, training and maintaining your animal population.</description>
@@ -74,7 +78,7 @@
 		<minGroupOpinionNeededSustain>30</minGroupOpinionNeededSustain>
 	</RimValiFFARW.Packs.PackDef>
 
-	<RimValiFFARW.Packs.PackDef>
+	<RimValiFFARW.Packs.PackDef ParentName="RVFFA_Pack">
 		<defName>RVFFA_FarmingPack</defName>
 		<label>farming pack</label>
 		<description>With a heavy focus on agriculture, this pack peaks when placed in fields. Not only do they clear fields faster than other pawns would be able to manage, they also gather slightly more yield.</description>
@@ -92,7 +96,7 @@
 		<minGroupOpinionNeededSustain>10</minGroupOpinionNeededSustain>
 	</RimValiFFARW.Packs.PackDef>
 
-	<RimValiFFARW.Packs.PackDef>
+	<RimValiFFARW.Packs.PackDef ParentName="RVFFA_Pack">
 		<defName>RVFFA_ConstructionPack</defName>
 		<label>construction pack</label>
 		<description>After watching countless hours of bob the builder, these pawns have realized fundemental construction techniques that allow them to build at unprecedented rates, while keeping their error rate remarkably low.</description>

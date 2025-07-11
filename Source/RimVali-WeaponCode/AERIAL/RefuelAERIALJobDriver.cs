@@ -11,24 +11,23 @@ namespace RimValiFFARW
         private static bool GunNeedsLoading(Building b, out int ammoNeeded)
         {
             ammoNeeded = 0;
-            if (!(b is AERIALSystem aerialSystem))
+            if (b is not AERIALSystem aerialSystem)
             {
                 return false;
             }
 
-            var compChangeableProjectile = aerialSystem.gun.TryGetComp<AERIALChangeableProjectile>();
+            var compChangeableProjectile = aerialSystem.gun.TryGetComp<CompChangeableProjectile>();
             if (compChangeableProjectile == null)
             {
                 return false;
             }
 
-            ammoNeeded = AERIALChangeableProjectile.maxShells - compChangeableProjectile.ShellsLoaded;
-            return !compChangeableProjectile.FullyLoaded;
+            return compChangeableProjectile.loadedCount<6;
         }
 
         public static Thing FindAmmo(Pawn pawn, AERIALSystem aerial)
         {
-            StorageSettings? allowed = pawn.IsColonist ? aerial.gun.TryGetComp<AERIALChangeableProjectile>().allowedShellsSettings : null;
+            StorageSettings? allowed = pawn.IsColonist ? aerial.gun.TryGetComp<CompChangeableProjectile>().allowedShellsSettings : null;
 
             bool Validator(Thing t)
             {
@@ -43,7 +42,7 @@ namespace RimValiFFARW
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
+            return pawn.Reserve(job.targetA, job, 1, 1, null, errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -63,7 +62,7 @@ namespace RimValiFFARW
                 {
                     return;
                 }
-
+                if (ammoNeeded <1) ammoNeeded = 1;
                 Thing? thing = FindAmmo(pawn, building_TurretGun);
                 if (thing == null)
                 {
@@ -85,7 +84,7 @@ namespace RimValiFFARW
                 }
             };
             yield return loadIfNeeded;
-            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, GetActor().CurJob.count);
+            yield return Toils_Reserve.Reserve(TargetIndex.B, 10, stackCount: 1);
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell)
                 .FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);
@@ -97,8 +96,8 @@ namespace RimValiFFARW
                     Pawn actor = loadIfNeeded.actor;
                     AERIALSystem building_TurretGun = (AERIALSystem)actor.CurJob.targetA.Thing;
 
-                    building_TurretGun.gun.TryGetComp<AERIALChangeableProjectile>()
-                        .NewLoadShell(actor.CurJob.targetB.Thing.def, actor.CurJob.count);
+                    building_TurretGun.gun.TryGetComp<CompChangeableProjectile>()
+                        .LoadShell(actor.CurJob.targetB.Thing.def, actor.CurJob.count);
                     actor.carryTracker.innerContainer.ClearAndDestroyContents();
                 },
             };

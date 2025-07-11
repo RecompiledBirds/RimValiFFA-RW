@@ -7,8 +7,36 @@
 
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
-		</comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>4554</analysisID>
+				<requiresMechanitor>false</requiresMechanitor>
 
+				<!-- Analyzable -->
+
+				<analysisDurationHours>5.5</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Ferrogel studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the ferrogel's design, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the Ferrogel.</activateDescString>
+				<jobString>Analyze ferrogel</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
         <graphicData>
             <texPath>RimValiFFA/Things/Aerogel/BaseAerogel/Aerogel</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -76,11 +104,11 @@
 			<MarketValue>12</MarketValue>
 			<Mass>1.2</Mass>
 			<Flammability>0</Flammability>
-			<StuffPower_Armor_Sharp>1.0</StuffPower_Armor_Sharp>
-			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
-			<StuffPower_Armor_Heat>0.25</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Sharp>1.2</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.1</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
 
-			<StuffPower_Insulation_Cold>0.7</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Cold>0.1</StuffPower_Insulation_Cold>
 			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
 			<BluntDamageMultiplier>1.5</BluntDamageMultiplier>
 		</statBases>
@@ -170,8 +198,8 @@
 		<label>nanomachines</label>
 		<comps>
 			<li Class= "RVCRestructured.Comps.HealableMaterialCompProperties">
-				<amountHealed>20</amountHealed>
-				<ticksBetweenHeal>30</ticksBetweenHeal>
+				<amountHealed>10</amountHealed>
+				<ticksBetweenHeal>1800</ticksBetweenHeal>
 			</li>
 		</comps>
 		<description>A group of specialised nanomachines, capable of reshaping and reparing themselves.</description>
@@ -422,6 +450,28 @@
 		<graphicData>
 			<texPath>RimValiFFA/Buildings/Turrets/BFG/BFG_sabot</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MarketValue>2</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0.1</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+			<StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+		</statBases>
+	</ThingDef>
+
+<ThingDef ParentName="RVFFA_BaseItem">
+		<defName>RVFFA_MinigunTurretAmmo</defName>
+		<label>Minigun Ammunition</label>
+		<description>Ammunition for a large minigun.</description>
+		<graphicData>
+			<texPath>RimValiFFA/Buildings/Turrets/MiniGunAmmo</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>
 

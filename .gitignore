@@ -5,7 +5,8 @@
 
 #Rimvali custom ignores
 *.dll
-
+1.6/
+1.6_Patches/
 # User-specific files
 *.rsuser
 *.suo

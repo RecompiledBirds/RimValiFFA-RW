@@ -9,11 +9,6 @@
 				<description>My packmates aren't here. This makes me feel anxious.</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
-			<li>
-				<label>With my pack</label>
-				<description>I'm with my pack! They always make me feel a bit better.</description>
-				<baseMoodEffect>5</baseMoodEffect>
-			</li>
 		</stages>
 	</ThoughtDef>
 

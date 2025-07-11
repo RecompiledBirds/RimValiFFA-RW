@@ -25,10 +25,7 @@ namespace RimValiFFARW.StoryTellers
 
         [AllowNull]
         public SimpleCurve acceptPercentFactorPerThreatPointsCurve;
-
-        public int maxIncidents = 5;
-
-        public int minIncidents = 1;
+        public IntRange incidentsRange = new(1,2);
 
         public float minSpacingDays;
 
@@ -149,22 +146,26 @@ namespace RimValiFFARW.StoryTellers
                     StorytellerUtility.GetProgressScore(target));
             }
 
-            int incCount = IncidentCycleUtility.IncidentCountThisInterval(target, index, Props.minDaysPassed, Props.onDays, Props.offDays, Props.minSpacingDays, Props.minIncidents, Props.maxIncidents, num);
+            int incCount = IncidentCycleUtility.IncidentCountThisInterval(target, index, Props.minDaysPassed, Props.onDays, Props.offDays, Props.minSpacingDays, Props.incidentsRange.min, Props.incidentsRange.max, num);
 
             for(int i =0; i < incCount; i++)
             {
                 switch (storytellerData.StorytellerState)
                 {
                     case StorytellerState.Angered:
-                        yield return GenAngry(target);
+
+                        FiringIncident? incidentAngry = GenAngry(target);
+                        if (incidentAngry != null) yield return incidentAngry;
                         break;
 
                     case StorytellerState.Neutral:
-                        yield return GenNeutral(target);
+                        FiringIncident? incidentNeutral = GenNeutral(target);
+                        if (incidentNeutral != null) yield return incidentNeutral;
                         break;
 
                     case StorytellerState.Friendly:
-                        yield return GenFriend(target);
+                        FiringIncident? incidentFriend = GenFriend(target);
+                        if (incidentFriend != null) yield return incidentFriend;
                         break;
                 }
             }
@@ -216,7 +217,7 @@ namespace RimValiFFARW.StoryTellers
             likedPawns = GetLikedPawns(map);
         }
 
-        private FiringIncident GenAngry(IIncidentTarget targ)
+        private FiringIncident? GenAngry(IIncidentTarget targ)
         {
             IncidentParms parms = this.GenerateParms(IncidentCategoryDefOf.ThreatBig, targ);
             List<IncidentDef> incidents = base.UsableIncidentsInCategory(IncidentCategoryDefOf.ThreatBig,parms).ToList();
@@ -224,7 +225,7 @@ namespace RimValiFFARW.StoryTellers
        //     incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseAnimal, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DeepDrillInfestation, parms));
             IncidentDef incident = incidents.RandomElement();
-
+            if (incidents.Count == 0) return null;
             if (Rand.Chance(0.5f))
             {
                 parms.points *= parms.points * RatioLikedDisliked;
@@ -233,15 +234,13 @@ namespace RimValiFFARW.StoryTellers
             return new FiringIncident(incident, this, parms);
         }
 
-        private FiringIncident GenNeutral(IIncidentTarget targ)
+        private FiringIncident? GenNeutral(IIncidentTarget targ)
         {
             IncidentParms parms = this.GenerateParms(IncidentCategoryDefOf.ThreatBig, targ);
             List<IncidentDef> incidents = base.UsableIncidentsInCategory(IncidentCategoryDefOf.ThreatSmall, parms).ToList();
-         /*   incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseHuman,parms));
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.DiseaseAnimal, parms));
-            incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.GiveQuest, parms));*/
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.Misc, parms));
 
+            if (incidents.Count == 0) return null;
             IncidentDef incident = incidents.RandomElement();
             if (Rand.Chance(0.2f))
             {
@@ -251,7 +250,7 @@ namespace RimValiFFARW.StoryTellers
             return new FiringIncident(incident, this, parms);
         }
 
-        private FiringIncident GenFriend(IIncidentTarget targ)
+        private FiringIncident? GenFriend(IIncidentTarget targ)
         {
             IncidentParms parms = this.GenerateParms(IncidentCategoryDefOf.ThreatBig, targ);
             List<IncidentDef> incidents = base.UsableIncidentsInCategory(IncidentCategoryDefOf.ThreatSmall, parms).ToList();
@@ -259,10 +258,10 @@ namespace RimValiFFARW.StoryTellers
       //      incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.OrbitalVisitor, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.GiveQuest, parms));
             incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.Misc, parms));
-      //      incidents.AddRange(UsableIncidentsInCategory(IncidentCategoryDefOf.ShipChunkDrop, parms));
+            incidents.Add(IncidentDefOf.ShipChunkDrop);
 
             IncidentDef incident = incidents.RandomElement();
-            if (Rand.Chance(0.05f))
+            if (Rand.Chance(0.2f))
             {
                 parms.points *= parms.points * RatioDislikedLiked;
             }

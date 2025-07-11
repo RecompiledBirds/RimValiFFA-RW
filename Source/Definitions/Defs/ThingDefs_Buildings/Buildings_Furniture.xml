@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef Name="RVFFA_BasePillowPile" ParentName="FurnitureWithQualityBase" Abstract="True">
+	<ThingDef Name="RVFFA_BasePillowPile" ParentName="BasicBedBase" Abstract="True">
 		<thingClass>Building_Bed</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<designationCategory>RVFFA_Furniture</designationCategory>
@@ -11,7 +11,7 @@
 		<canOverlapZones>false</canOverlapZones>
 		<castEdgeShadows>true</castEdgeShadows>
 		<uiIconScale>0.80</uiIconScale>
-		<stuffCategories>
+		<stuffCategories Inherit="False">
 			<li>Fabric</li>
 			<li>Leathery</li>
 		</stuffCategories>
@@ -19,11 +19,7 @@
 		<building>
 			<bed_humanlike>true</bed_humanlike>
 			<bed_showSleeperBody>true</bed_showSleeperBody>
-			<bed_healPerDay>4</bed_healPerDay>
 			<destroySound>BuildingDestroyed_Soft_Small</destroySound>
-			<buildingTags>
-				<li>Bed</li>
-			</buildingTags>
 		</building>
 
 
@@ -33,18 +29,10 @@
 		</researchPrerequisites>
 
 		<comps>
-			<li Class="CompProperties_AssignableToPawn">
-				<drawAssignmentOverlay>false</drawAssignmentOverlay>
-				<compClass>CompAssignableToPawn_Bed</compClass>
+			<li Class="RVCRestructured.RVCBeds.ResizedBedCompProperties">
+				<isPile>true</isPile>
+				<rotationRange>-360~360</rotationRange>
 			</li>
-			<li Class="CompProperties_AffectedByFacilities">
-				<linkableFacilities>
-					<li>EndTable</li>
-					<li>Dresser</li>
-					<li>RVFFA_IlluminateEndTable</li>
-				</linkableFacilities>
-			</li>
-			<li Class="RVCRestructured.RVCBeds.ResizedBedCompProperties"/>
 		</comps>
 	</ThingDef>
 
@@ -127,7 +115,7 @@
 		</statBases>
 	</ThingDef>
 
-	<ThingDef Parentname="FurnitureWithQualityBase" Name="RVFFA_BedWithQualityBase" Abstract="True">
+	<ThingDef Parentname="BasicBedBase" Name="RVFFA_BedWithQualityBase" Abstract="True">
 		<thingClass>Building_Bed</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<designationCategory>RVFFA_Furniture</designationCategory>
@@ -149,19 +137,6 @@
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
 
-		<comps>
-			<li Class="CompProperties_AssignableToPawn">
-				<drawAssignmentOverlay>false</drawAssignmentOverlay>
-				<compClass>CompAssignableToPawn_Bed</compClass>
-			</li>
-			<li Class="CompProperties_AffectedByFacilities">
-				<linkableFacilities>
-					<li>EndTable</li>
-					<li>Dresser</li>
-					<li>RVFFA_IlluminateEndTable</li>
-				</linkableFacilities>
-			</li>
-		</comps>
 	</ThingDef>
 <!--
 	<ThingDef ParentName="RVFFA_BedWithQualityBase">

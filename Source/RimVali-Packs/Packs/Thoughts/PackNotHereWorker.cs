@@ -5,10 +5,12 @@ namespace RimValiFFARW.Packs
 {
     public class PackNotHereWorker : ThoughtWorker
     {
+
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            if (!p.TryGetComp(out PackInfoComp comp)) return ThoughtState.Inactive;
-            int stage = comp.PackLossProgression;
+
+            if (!p.TryGetPackInfoContainer(out PackInfoContainer? container)) return ThoughtState.Inactive;
+            int stage = container.PackLossProgression;
 
             if (stage >= 15)
             {
@@ -22,7 +24,7 @@ namespace RimValiFFARW.Packs
             {
                 return ThoughtState.ActiveAtStage(1);
             }
-            if (stage >= 3)
+            if (stage >= 1)
             {
                 return ThoughtState.ActiveAtStage(0);
             }

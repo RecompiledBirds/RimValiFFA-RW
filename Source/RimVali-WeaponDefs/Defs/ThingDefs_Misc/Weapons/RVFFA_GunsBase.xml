@@ -25,6 +25,9 @@
 				<compClass>CompQuality</compClass>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>RVFFA_WeaponMelee</li>
+		</tradeTags>
 		<weaponTags>
 			<li>RVFFA_Weapons</li>
 		</weaponTags>
@@ -48,6 +51,7 @@
 		<label>bullet</label>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>

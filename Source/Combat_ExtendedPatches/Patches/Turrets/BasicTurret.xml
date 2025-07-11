@@ -67,7 +67,7 @@
 			<recoilAmount>1.02</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>RVFFA_BasicTurretBullet</defaultProjectile>
+			<defaultProjectile>RVFFA_PistolBulletFMJ</defaultProjectile>
 			<warmupTime>1.3</warmupTime>
 			<range>55</range>
 			<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
@@ -80,7 +80,7 @@
 		<AmmoUser>
 			<magazineSize>300</magazineSize>
 			<reloadTime>7.8</reloadTime>
-			<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+			<ammoSet>RVFFA_PistolAmmoSetCommon</ammoSet>
 		</AmmoUser>
 		<FireModes>
 			<aiAimMode>AimedShot</aiAimMode>

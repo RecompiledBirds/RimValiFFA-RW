@@ -12,9 +12,9 @@
 				<minDaysPassed>0.6</minDaysPassed>
 				<dislikesNonAvali>True</dislikesNonAvali>
 				<minAcceptablePawnThreshold>0.0</minAcceptablePawnThreshold>
-				<onDays>0.5</onDays>
+				<onDays>6</onDays>
 				<offDays>0.5</offDays>
-				<minSpacingDays>0.5</minSpacingDays>
+				<minSpacingDays>2</minSpacingDays>
 				<acceptFractionByDaysPassedCurve>
 					<points>
 						<li>(1, 10)</li>
@@ -104,7 +104,7 @@
 				<incident>VisitorGroup</incident>
 				<minDaysPassed>3</minDaysPassed>
 				<baseIncidentsPerYear>2</baseIncidentsPerYear>
-				<minSpacingDays>5</minSpacingDays>
+				<minSpacingDays>2</minSpacingDays>
 				<allowedTargetTags>
 					<li>Map_PlayerHome</li>
 				</allowedTargetTags>
@@ -113,7 +113,7 @@
 				<incident>TravelerGroup</incident>
 				<minDaysPassed>1</minDaysPassed>
 				<baseIncidentsPerYear>3</baseIncidentsPerYear>
-				<minSpacingDays>1</minSpacingDays>
+				<minSpacingDays>0.9</minSpacingDays>
 				<allowedTargetTags>
 					<li>Map_PlayerHome</li>
 				</allowedTargetTags>

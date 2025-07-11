@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RimValiFFARW.Packs.PackDataDef>
+		<defName>RVFFA_PackData</defName>
+		<traitsThatPreventPacking>
+			<li>
+				<trait>RVFFA_PackBroken</trait>
+				<reasonKey>RVFFA_PawnIsPackBroken</reasonKey>
+			</li>
+		</traitsThatPreventPacking>
+		<hediffsThatPreventPacking>
+			<li>
+				<hediff>RVFFA_PackReplacement</hediff>
+				<reasonKey>RVFFA_HasPackReplacement</reasonKey>
+			</li>
+		</hediffsThatPreventPacking>
+		<packLossThought>RVFFA_PackNotHere</packLossThought>
+		<sleptAloneThought>RVFFA_AvaliSleptAlone</sleptAloneThought>
+		<sleptNotAloneThought>RVFFA_AvaliSleptNotAlone</sleptNotAloneThought>
+		<sleptWithPackThought>RVFFA_AvaliSleptWithPack</sleptWithPackThought>
+
+		<packDefsWithTags>
+			<li>RVFFA_AvaliPack</li>
+		</packDefsWithTags>
+	</RimValiFFARW.Packs.PackDataDef>
+</Defs>

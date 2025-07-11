@@ -1,17 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RVFFA_Avali"]/statBases</xpath>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimVali: Biotech</li>
+		</mods>
+		<nomatch Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RVFFA_Avali"]/statBases</xpath>
+			<value>
+				<statBases>
+					<MarketValue>1750</MarketValue>
+					<MoveSpeed>4.6</MoveSpeed>
+					<ComfyTemperatureMin>16</ComfyTemperatureMin>
+					<ComfyTemperatureMax>26</ComfyTemperatureMax>
+					<LeatherAmount>75</LeatherAmount>
+					<RoyalFavorValue>3</RoyalFavorValue>
+				</statBases>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="SleptInBedroom"]</xpath>
 		<value>
-			<statBases>
-				<MarketValue>1750</MarketValue>
-				<MoveSpeed>4.6</MoveSpeed>
-				<ComfyTemperatureMin>16</ComfyTemperatureMin>
-				<ComfyTemperatureMax>26</ComfyTemperatureMax>
-				<LeatherAmount>75</LeatherAmount>
-				<RoyalFavorValue>3</RoyalFavorValue>
-			</statBases>
+			<nullifyingGenes>
+				<li>RVFFA_PackGene</li>
+			</nullifyingGenes>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="SleptInBarracks"]</xpath>
+		<value>
+			<nullifyingGenes>
+				<li>RVFFA_PackGene</li>
+			</nullifyingGenes>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="SleepDisturbed"]</xpath>
+		<value>
+			<nullifyingGenes>
+				<li>RVFFA_PackGene</li>
+			</nullifyingGenes>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">

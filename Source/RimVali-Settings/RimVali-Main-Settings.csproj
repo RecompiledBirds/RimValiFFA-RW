@@ -26,8 +26,9 @@
 		<VersionedPatchesPath>../../$(RimworldVersion)_Patches</VersionedPatchesPath>
 		<BiotechPatchOutputPath>$(VersionedPatchesPath)/Biotech/</BiotechPatchOutputPath>
 		<IdeologyPatchOutputPath>$(VersionedPatchesPath)/Ideology/</IdeologyPatchOutputPath>
-	
+		<RoyaltyPatchOutputPatch>$(VersionedPatchesPath)/Royalty/</RoyaltyPatchOutputPatch>
 		<CEPatchOutputPath>$(VersionedPatchesPath)/CombatExtended/</CEPatchOutputPath>
+		<RimLanguagesPatchOutputPath>$(VersionedPatchesPath)/RimLanguages/</RimLanguagesPatchOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -46,9 +47,13 @@
 		<AboutPath>..\RimValiAboutInfo\About</AboutPath>
 		<LoadFolderPath>..\RimValiAboutInfo\LoadFolders.xml</LoadFolderPath>
 		<!-- Optional patches-->
-		<CEPatchesPath>..\Combat_ExtendedPatches\</CEPatchesPath>
+		<!-- DLC -->
 		<BiotechPatchesPath>..\BiotechPatches\</BiotechPatchesPath>
 		<IdeologyPatchesPath>..\IdeologyPatches\</IdeologyPatchesPath>
+		<RoyaltyPatchesPath>..\RoyaltyPatches\</RoyaltyPatchesPath>
+		<!-- Mods -->
+		<CEPatchesPath>..\Combat_ExtendedPatches\</CEPatchesPath>
+		<RimLanguagesPatchesPath>..\RimVali-RimLanguages-Patches\</RimLanguagesPatchesPath>
 	</PropertyGroup>
 
 		<!--Original Files-->
@@ -65,7 +70,9 @@
 		<!-- Optional patches-->
 		<CEPatches Include="$(CEPatchesPath)**\*.xml" />
 		<BiotechPatches Include="$(BiotechPatchesPath)**\*.xml" />
-		<IdeologyPatchesPath Include="$(IdeologyPatchesPath)**\*.xml" />
+		<IdeologyPatches Include="$(IdeologyPatchesPath)**\*.xml" />
+		<RoyaltyPatches Include="$(RoyaltyPatchesPath)**\*.xml"/>
+		<RimLanguagesPatches Include="$(RimLanguagesPatchesPath)**\*.xml"></RimLanguagesPatches>
 	</ItemGroup>
 	
 	<Target Name="CustomAfterBuildTarget" AfterTargets="Build">
@@ -100,10 +107,20 @@
 		</Copy>
 		<Message Text="Copied Files:%0A@(BiotechPatchesCopiedList, '%0D')" Importance="high" />
 
-		<Copy SourceFiles="@(IdeologyPatchesPath)" DestinationFolder="$(IdeologyPatchOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+		<Copy SourceFiles="@(IdeologyPatches)" DestinationFolder="$(IdeologyPatchOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
 			<Output TaskParameter="CopiedFiles" ItemName="IdeologyPatchesCopiedList" />
 		</Copy>
 		<Message Text="Copied Files:%0A@(IdeologyPatchesCopiedList, '%0D')" Importance="high" />
+
+		<Copy SourceFiles="@(RoyaltyPatches)" DestinationFolder="$(RoyaltyPatchOutputPatch)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="RoyaltyPatchesCopiedList" />
+		</Copy>
+		<Message Text="Copied Files:%0A@(RoyaltyPatchesCopiedList, '%0D')" Importance="high" />
+		
+		<Copy SourceFiles="@(RimLanguagesPatches)" DestinationFolder="$(RimLanguagesPatchOutputPath)%(RecursiveDir)" SkipUnchangedFiles="True">
+			<Output TaskParameter="CopiedFiles" ItemName="RimLanguagesPatchesCopiedList" />
+		</Copy>
+		<Message Text="Copied Files:%0A@(RimLanguagesPatchesCopiedList, '%0D')" Importance="high" />
 	</Target>
 
 
@@ -132,5 +149,10 @@
 
 		<Message Text="Deleting Ideology patches directory" Importance="high" />
 		<Delete Files="$(IdeologyPatchOutputPath)" />
+
+		<Message Text="Deleting Royalty patches directory" Importance="high" />
+		<Delete Files="$(RoyaltyPatchOutputPatch)" />
+		<Message Text="Deleting Rim Languages patches directory" Importance="high" />
+		<Delete Files="$(RimLanguagesPatchOutputPath)" />
 	</Target>
 </Project>

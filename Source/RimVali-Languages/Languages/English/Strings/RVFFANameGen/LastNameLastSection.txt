@@ -1,0 +1,7 @@
+﻿claw
+talon
+feather
+pack
+wing
+foot
+tail

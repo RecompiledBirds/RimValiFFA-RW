@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
+	<ThingDef ParentName="RVFFA_BaseBionicPart">
 		<defName>RVFFA_AdvancedBionicLeg</defName>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Cybernetics/Leg</texPath>
@@ -31,7 +31,7 @@
 		</recipeMaker>
 	</ThingDef>
 	
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="RVFFA_InstallBodyPartArtificalBase">
 		<defName>RVFFA_InstallAdvancedBionicLeg</defName>
 		<label>Install advanced bionic leg</label>
 		<description>Install a advanced bionic leg.</description>

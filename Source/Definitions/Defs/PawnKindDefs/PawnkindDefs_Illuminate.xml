@@ -16,6 +16,7 @@
 
 		<apparelTags>
 			<li>AvaliApparel</li>
+			<li>RVFFA_ScoutGear</li>
 			<li>RVFFA_IlluminateApparel</li>
 		</apparelTags>
 		<apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
@@ -26,8 +27,8 @@
 		</weaponTags>
 		<techHediffsMoney>1500~2000</techHediffsMoney>
 		<techHediffsTags>
-			<li>Advanced</li>
-			<li>Simple</li>
+			<li>RVFFA_Basic</li>
+			<li>RVFFA_Advanced</li>
 		</techHediffsTags>
 		<techHediffsChance>2.0</techHediffsChance>
 		<invNutrition>2</invNutrition>
@@ -67,7 +68,8 @@
 		<techHediffsChance>1.2</techHediffsChance>
 		<techHediffsMoney>800~2300</techHediffsMoney>
 		<techHediffsTags>
-			<li>Advanced</li>
+			<li>RVFFA_Basic</li>
+			<li>RVFFA_Advanced</li>
 		</techHediffsTags>
 	</PawnKindDef>
 
@@ -104,8 +106,8 @@
 		</weaponTags>
 		<techHediffsMoney>2000~3000</techHediffsMoney>
 		<techHediffsTags>
-			<li>Simple</li>
-			<li>Advanced</li>
+			<li>RVFFA_Basic</li>
+			<li>RVFFA_Advanced</li>
 		</techHediffsTags>
 		<techHediffsChance>1</techHediffsChance>
 		<inventoryOptions>
@@ -124,7 +126,7 @@
 	</PawnKindDef>
 	
 	<PawnKindDef ParentName="RVFFA_IlluminateColonist">
-		<defName>RVFFA_IlluminateRocketerr</defName>
+		<defName>RVFFA_IlluminateRocketer</defName>
 		<label>Illuminate Solider</label>
 		<combatPower>70</combatPower>
 		<isFighter>true</isFighter>
@@ -138,11 +140,13 @@
 		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
 		<weaponMoney>2020~2000</weaponMoney>
 		<weaponTags>
-			<li>AvaliRocketeerWeapon</li>
+			<li>RVFFA_RocketeerWeapon</li>
 		</weaponTags>
 		<techHediffsMoney>5000~8000</techHediffsMoney>
 		<techHediffsTags>
+			<li>RVFFA_Advanced</li>
 			<li>Advanced</li>
+			<li>Spacer</li>
 		</techHediffsTags>
 		<techHediffsChance>2</techHediffsChance>
 		<invNutrition>5</invNutrition>
@@ -168,7 +172,10 @@
 		</weaponTags>
 		<techHediffsMoney>5000~8000</techHediffsMoney>
 		<techHediffsTags>
+			<li>RVFFA_Basic</li>
+			<li>RVFFA_Advanced</li>
 			<li>Advanced</li>
+			<li>Spacer</li>
 		</techHediffsTags>
 		<techHediffsChance>2</techHediffsChance>
 		<invNutrition>5</invNutrition>
@@ -186,19 +193,19 @@
 		<maxGenerationAge>45</maxGenerationAge>
 		<gearHealthRange>1~2.3</gearHealthRange>
 		<apparelTags>
-			<li>AvaliSpecOps</li>
-			<li>AvaliArmor</li>
+			<li>RVFFA_SpecOps</li>
 		</apparelTags>
 		<apparelMoney>1000~5000</apparelMoney>
 		<apparelAllowHeadgearChance>0.6</apparelAllowHeadgearChance>
 		<weaponMoney>1700~2000</weaponMoney>
 		<weaponTags>
-			<li>AvaliRifle</li>
 			<li>RVFFA_Sniper</li>
 		</weaponTags>
 		<techHediffsMoney>1000~2000</techHediffsMoney>
 		<techHediffsTags>
+			<li>RVFFA_Advanced</li>
 			<li>Advanced</li>
+			<li>Spacer</li>
 		</techHediffsTags>
 		<techHediffsChance>2.4</techHediffsChance>
 		<inventoryOptions>
@@ -230,8 +237,8 @@
 		<maxGenerationAge>45</maxGenerationAge>
 		<gearHealthRange>1~2.3</gearHealthRange>
 		<apparelTags>
-			<li>Avali</li>
-			<li>AvaliScout</li>
+			<li>RVFFA_IlluminateApparel</li>
+			<li>RVFFA_ScoutArmor</li>
 		</apparelTags>
 		<apparelMoney>1500~7000</apparelMoney>
 		<apparelAllowHeadgearChance>0.6</apparelAllowHeadgearChance>
@@ -241,7 +248,10 @@
 		</weaponTags>
 		<techHediffsMoney>1000~2000</techHediffsMoney>
 		<techHediffsTags>
+			<li>RVFFA_Basic</li>
+			<li>RVFFA_Advanced</li>
 			<li>Advanced</li>
+			<li>Spacer</li>
 		</techHediffsTags>
 		<techHediffsChance>2.4</techHediffsChance>
 		<inventoryOptions>
@@ -281,6 +291,7 @@
 		</weaponTags>
 		<techHediffsMoney>5000~99999</techHediffsMoney>
 		<techHediffsTags>
+			<li>RVFFA_Advanced</li>
 			<li>Advanced</li>
 			<li>Spacer</li>
 		</techHediffsTags>

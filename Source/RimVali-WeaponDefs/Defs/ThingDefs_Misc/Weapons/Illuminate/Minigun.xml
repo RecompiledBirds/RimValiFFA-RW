@@ -40,7 +40,37 @@
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
 		</costList>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>4557</analysisID>
+				<requiresMechanitor>false</requiresMechanitor>
 
+				<!-- Analyzable -->
+
+				<analysisDurationHours>60.5</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Illuminate Minigun studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the miniguns's design, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the Illuminate Minigun.</activateDescString>
+				<jobString>Analyze miniguns</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>

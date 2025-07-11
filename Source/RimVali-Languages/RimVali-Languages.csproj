@@ -1,4 +1,4 @@
-<Project>
+﻿<Project>
 	<Sdk Name="Microsoft.Build.NoTargets" Version="3.7.56" />
 	<PropertyGroup>
 		<TargetFramework>net472</TargetFramework>
@@ -9,5 +9,9 @@
 		<PackageOutputPath>$(OutputPath)\..\</PackageOutputPath>
 		<CleanPath>$(OutputPath)</CleanPath>
 	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Include="Languages\English\Strings\RVFFANameGen\LastNameLastSection.txt" />
+	  <Compile Include="Languages\English\Strings\RVFFANameGen\LastNameFirstSection.txt" />
+	</ItemGroup>
 
 </Project>

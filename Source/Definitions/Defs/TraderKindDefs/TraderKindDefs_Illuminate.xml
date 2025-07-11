@@ -22,6 +22,14 @@
 				<countRange>250~400</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
+				<thingDef>RVFFA_Ferrogel</thingDef>
+				<countRange>250~400</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RVFFA_ProcessedTungsten</thingDef>
+				<countRange>100~200</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
 				<thingDef>Cloth</thingDef>
 				<countRange>250~400</countRange>
 			</li>

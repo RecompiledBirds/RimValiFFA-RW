@@ -24,11 +24,11 @@ namespace RimValiFFARW.Packs
 
         [AllowNull]
         private PackDef def;
-        private HashSet<Pawn> members = new HashSet<Pawn>();
-        private Dictionary<Pawn, PackMemberHediffTracker> memberHediffDic = new Dictionary<Pawn, PackMemberHediffTracker>();
+        private HashSet<Pawn> members = [];
+        private Dictionary<Pawn, PackMemberHediffTracker> memberHediffDic = [];
 
-        private List<Pawn> workingListPawn = new List<Pawn>();
-        private List<PackMemberHediffTracker> workingListTracker = new List<PackMemberHediffTracker>();
+        private List<Pawn> workingListPawn = [];
+        private List<PackMemberHediffTracker> workingListTracker = [];
 
         [AllowNull]
         private string packName;
@@ -147,21 +147,33 @@ namespace RimValiFFARW.Packs
         ///     Removes a given <paramref name="member"/> from the <see cref="Pack"/>
         /// </summary>
         /// <param name="member">The member to be removed</param>
+        /// <param name="forced">Forces removal, even if the worker would not allow it.</param>
         /// <returns>True if successful, false if a member couldn't be removed for any reason.</returns>
-        public bool RemoveMember(Pawn member)
+        public bool RemoveMember(Pawn member, bool forced = false)
         {
             if (member == null)
             {
                 RemoveNullMembers();
                 return false;
             }
-            if (!worker.MemberCanLeave(member, this)) return false;
+            if (!worker.MemberCanLeave(member, this)||forced) return false;
             if (!members.Remove(member)) return false;
 
             Packmanager.GetLastActivePackmanager.RemoveMemberRelation(member);
             worker.RemoveMemberHediffs(memberHediffDic[member]);
             worker.NotifyMemberRemoved(member);
             return true;
+        }
+
+        public void ForceRemoveAllMembers()
+        {
+            foreach(Pawn pawn in members)
+            {
+                Packmanager.GetLastActivePackmanager.RemoveMemberRelation(pawn);
+                worker.RemoveMemberHediffs(memberHediffDic[pawn]);
+                worker.NotifyMemberRemoved(pawn);
+            }
+            members = [];
         }
 
         private void RemoveNullMembers()
@@ -180,7 +192,7 @@ namespace RimValiFFARW.Packs
         {
             if (!worker.PawnCanJoinPack(members, member, ignoreIsInPack, quietError, out string? _)) return false;
             if (!members.Add(member)) return false;
-
+            memberHediffDic.Add(member, new PackMemberHediffTracker(member));
             Packmanager.GetLastActivePackmanager.AddMemberRelation(member, this);
             worker.NotifyMemberAdded(member); 
             ApplyHeddifsToMember(member);

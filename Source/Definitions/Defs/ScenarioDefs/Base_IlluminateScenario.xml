@@ -105,7 +105,8 @@
 				</li>
 				
 				<li Class="RimValiFFARW.Packs.ScenPart_StarterPack">
-					<def>RVFFA_StarterPack</def>
+					<def>RVFFA_StarterPackScenPart</def>
+					<packDef>RVFFA_StarterPack</packDef>
 				</li>
 			</parts>
 		</scenario>

@@ -6,7 +6,6 @@
 		<labelNoun>a basic bionic tail</labelNoun>
 		<description>A basic bionic avali tail.</description>
 		<spawnThingOnRemoved>RVFFA_BasicTail</spawnThingOnRemoved>
-		<hediffClass>HediffWithComps</hediffClass>
 		<addedPartProps>
 			<solid>true</solid>
 			<partEfficiency>1.30</partEfficiency>
@@ -21,8 +20,6 @@
 				</statOffsets>
 			</li>
 		</stages>
-		<comps>
-		</comps>
 	</HediffDef>
 
 	<ThingDef ParentName="RVFFA_BasicBionicPartBase">
@@ -54,7 +51,7 @@
 		</statBases>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="RVFFA_InstallBodyPartArtificalBase">
 		<defName>RVFFA_InstallBasicBionicTail</defName>
 		<label>Install basic bionic tail</label>
 		<description>Install a basic bionic tail.</description>

@@ -11,4 +11,25 @@
 		<label>right leg</label>
 		<listOrder>10</listOrder>
 	</BodyPartGroupDef>
+
+	<BodyPartGroupDef>
+		<defName>RVFFA_GroupRUEar</defName>
+		<label>right upper ear</label>
+		<listOrder>10</listOrder>
+	</BodyPartGroupDef>
+	<BodyPartGroupDef>
+		<defName>RVFFA_GroupLUEar</defName>
+		<label>left upper ear</label>
+		<listOrder>10</listOrder>
+	</BodyPartGroupDef>
+	<BodyPartGroupDef>
+		<defName>RVFFA_GroupRLEar</defName>
+		<label>right lower ear</label>
+		<listOrder>10</listOrder>
+	</BodyPartGroupDef>
+	<BodyPartGroupDef>
+		<defName>RVFFA_GroupLLEar</defName>
+		<label>left lower ear</label>
+		<listOrder>10</listOrder>
+	</BodyPartGroupDef>
 </Defs>

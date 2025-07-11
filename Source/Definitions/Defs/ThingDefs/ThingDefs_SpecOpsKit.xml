@@ -31,7 +31,37 @@
 			<Plasteel>45</Plasteel>
 			<RVFFA_AeroTungstenCarbide>60</RVFFA_AeroTungstenCarbide>
 		</costList>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>4552</analysisID>
+				<requiresMechanitor>false</requiresMechanitor>
 
+				<!-- Analyzable -->
+
+				<analysisDurationHours>45.5</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Illuminate Spec Ops Armor studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the armor's design, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the Illuminate Spec Ops Armor.</activateDescString>
+				<jobString>Analyze armor</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
 		<apparel>
 			<tags>
 				<li>RVFFA_SpecOps</li>
@@ -51,6 +81,37 @@
 		<graphicData>
 			<texPath>RimValiFFA/Things/Apparel/SpecOpsHelmet/SpecOpsHelmet_south</texPath>
 		</graphicData>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>4553</analysisID>
+				<requiresMechanitor>false</requiresMechanitor>
+
+				<!-- Analyzable -->
+
+				<analysisDurationHours>45.5</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Illuminate Spec Ops Helmet studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the helmet's design, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the Illuminate Spec Ops Helmet.</activateDescString>
+				<jobString>Analyze helmet</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
 		<statBases>
 			<WorkToMake>21000</WorkToMake>
 			<MaxHitPoints>5000</MaxHitPoints>

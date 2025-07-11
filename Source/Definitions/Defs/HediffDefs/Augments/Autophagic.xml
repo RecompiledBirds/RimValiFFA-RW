@@ -7,9 +7,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>
-		<techHediffsTags>
-			<li>RVFFA_Basic</li>
-		</techHediffsTags>
+
 
 		<label>Autophagic system rewrite augment</label>
 		<description>An autophagic system rewrite augment. This augment, as the name suggests will rewrite functions of the wearer’s autophagic system. Altering the body’s lymph nodes to generate new products from cell waste which are then redistributed throughout the body. Generally improving most of the bodily functions in some way or another.</description>
@@ -32,7 +30,7 @@
 		</recipeMaker>
 	</ThingDef>
 	
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallAutophagicSystemRewrite</defName>
 		<label>Install autophagic system rewrite</label>
 		<description>Install autophagic system rewrite.</description>

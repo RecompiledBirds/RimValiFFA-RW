@@ -44,13 +44,14 @@
 		</thingSetMakerTags>
 		<statBases>
 			<Mass>5</Mass>
+			<MarketValue>1100</MarketValue>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_BasicImplantsTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallPositiveEnforcement</defName>
 		<label>Install positive enforcement augment</label>
 		<description>Install a positive enforcement augment.</description>

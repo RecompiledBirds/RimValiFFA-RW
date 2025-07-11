@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="RVFFA_IW_VillagerBase" Abstract="True" ParentName="VillagerBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWNeutral</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IW_VillagerBase">
+		<defName>RVFFA_IW_Villager</defName>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RVFFA_IW_GuardBase" Abstract="True" ParentName="GuardBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWNeutral</defaultFactionDef>
+
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IW_GuardBase">
+		<defName>RVFFA_IW_Town_Guard</defName>
+		<defaultFactionDef>RVFFA_IWNeutral</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RVFFA_IW_TraderBase" Abstract="True" ParentName="TraderBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWNeutral</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IW_TraderBase">
+		<defName>RVFFA_IW_Town_Trader</defName>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RVFFA_IW_CouncilmanBase" Abstract="True" ParentName="CouncilmanBase">
+		<race>RVFFA_Avali</race>
+		<defaultFactionDef>RVFFA_IWNeutral</defaultFactionDef>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RVFFA_IW_CouncilmanBase">
+		<defName>RVFFA_IW_Town_Councilman</defName>
+	</PawnKindDef>
+</Defs>

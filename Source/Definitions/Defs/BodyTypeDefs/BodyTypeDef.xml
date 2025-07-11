@@ -6,6 +6,7 @@
 		<bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Naked_Thin</bodyNakedGraphicPath>
 		<bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</bodyDessicatedGraphicPath>
 		<label>Avali</label>
+		<bodyGraphicScale>(0.6, 1)</bodyGraphicScale>
 		<woundAnchors>
 			<li>
 				<rotation>South</rotation>

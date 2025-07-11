@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_BasicApparelTech</defName>
+		<label>Common Illuminate Apparel</label>
+		<description>We can also use our nanoloom like a normal loom; it is equally capable of creating clothing.</description>
+		<prerequisites>
+			<li>RVFFA_NanoFiberTech</li>
+		</prerequisites>
+		<baseCost>600</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->apparel weaving</li>
+
+				<li>subject_story->learned how to weave apparel on a nanoloom</li>
+				<li>subject_story->used a nanoloom to weave apparel for their pack</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_ScoutingTech</defName>
+		<label>Scouting Equipment</label>
+		<description>It is highly likely that we will have to explore beyond our colony, for one reason or another. We should design armour to protect our scouts, while keeping them lightweight.</description>
+		<prerequisites>
+			<li>RVFFA_BasicApparelTech</li>
+		</prerequisites>
+		<baseCost>950</baseCost>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+
+		<generalRules>
+			<rulesStrings>
+				<li>subject->recon equipment</li>
+
+				<li>subject_story->developed recon equipment for their pack</li>
+			</rulesStrings>
+		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_ScoutArmor</li>
+			<li>RVFFA_ScoutHelmet</li>
+		</requiredAnalyzed>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_CombatTech</defName>
+		<label>Combat-ready Armour</label>
+		<description>We need to be ready for any type of opponent. With how frail the Avali are, combat armour will play a critical role in our survival.</description>
+		<prerequisites>
+			<li>RVFFA_ScoutingTech</li>
+		</prerequisites>
+		<baseCost>2300</baseCost>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->combat equipment</li>
+
+				<li>subject_story->developed combat equipment for their pack</li>
+			</rulesStrings>
+		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_CombatArmor</li>
+			<li>RVFFA_CombatHelmet</li>
+		</requiredAnalyzed>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RVFFA_BaseResearch">
+		<defName>RVFFA_SpecOpsTech</defName>
+		<label>Elite Operations</label>
+		<description>We can take our combat capabilities even further. This suits powerful augmentations and user integration make it one of the most powerful Illuminate designs we can access.</description>
+		<prerequisites>
+			<li>RVFFA_CombatTech</li>
+		</prerequisites>
+		<baseCost>3000</baseCost>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.10</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->spec-ops equipment</li>
+
+				<li>subject_story->developed spec-ops equipment for their pack</li>
+			</rulesStrings>
+		</generalRules>
+		<requiredAnalyzed>
+			<li>RVFFA_SpecOpsHelm</li>
+			<li>RVFFA_SpecOpsArmor</li>
+		</requiredAnalyzed>
+	</ResearchProjectDef>
+
+</Defs>

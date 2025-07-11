@@ -1,11 +1,8 @@
 ﻿using HarmonyLib;
 using LudeonTK;
+using RimWorld;
 using RVCRestructured;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 
 namespace RimValiFFARW.Packs
@@ -20,7 +17,7 @@ namespace RimValiFFARW.Packs
 
             if (!currentMap.IsPlayerHome) return;
 
-            List<Pawn> colonists = currentMap.mapPawns.FreeColonistsSpawned.InRandomOrder().Where(pawn => !pawn.IsInPack() && pawn.IsAvali()).ToList();
+            List<Pawn> colonists = [.. currentMap.mapPawns.FreeColonistsSpawned.InRandomOrder().Where(pawn => !pawn.IsInPack() && pawn.IsPackable(RVFFA_PackDefs.RVFFA_StarterPack))];
             PackDef def = DefDatabase<PackDef>.GetRandom();
             colonists.TruncateToLength(def.MaxSize);
 
@@ -29,7 +26,27 @@ namespace RimValiFFARW.Packs
             packmanager.AddPack(pack);
         }
 
+        [DebugAction("RimValiFFARW", "Reset Pack Loss Progression for all Pawns", allowedGameStates = AllowedGameStates.Playing)]
+        public static void ResetPackLoss()
+        {
+            foreach (Pawn pawn in PawnsFinder.AllMapsAndWorld_Alive)
+            {
+                if (!pawn.TryGetPackInfoContainer(out PackInfoContainer? container)) continue;
+                container.TriggerUpdate();
+            }
+        }
         [DebugAction("RimValiFFARW", "Print list of packs", allowedGameStates = AllowedGameStates.IsCurrentlyOnMap)]
         public static void PrintPackList() => VineLog.Log(Packmanager.GetLastActivePackmanager.PacksReadOnly.Join(pack => pack.NameColored));
+        [DebugAction("RimValiFFARW", "Dump dbg pawn atlas", allowedGameStates = AllowedGameStates.IsCurrentlyOnMap)]
+        public static void Dump()
+        {
+            string text = Application.dataPath + "\\atlasDump_Pawn";
+            if (!Directory.Exists(text))
+            {
+                Directory.CreateDirectory(text);
+            }
+            GlobalTextureAtlasManager.DumpPawnAtlases(text);
+            GlobalTextureAtlasManager.DumpStaticAtlases(text);
+        }
     }
 }

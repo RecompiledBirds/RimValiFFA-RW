@@ -58,7 +58,7 @@ namespace RimValiFFARW.Packs
             if (pawn.NonHumanlikeOrWildMan()) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsWild");
             if (pawn.IsInPack() && !ignoreIsInPack) reason = MakeCanNotJoinReasonStringForPawn(pawn, "RVFFA_PackWorker_SubjectIsInPackAlready");
             if (def.minGroupOpinionNeededCreation > avgOpinionOfMember) reason = "RVFFA_PackCreationWindow_PawnIsNotLikedEnoughByGoup".Translate(pawn.NameShortColored, avgOpinionOfMember.ToString("0.##"), def.minGroupOpinionNeededCreation.ToString("0.##"));
-            if (!pawn.IsAvali()) reason = "RVFFA_PackWorker_SubjectIsNotAvali".Translate();
+            if (!pawn.IsPackable(def)) reason = "RVFFA_PackWorker_SubjectIsNotAvali".Translate();
 
             if (reason != null)
             {
@@ -92,7 +92,7 @@ namespace RimValiFFARW.Packs
         /// <param name="member">The given <see cref="Pawn"/></param>
         /// <param name="pack">The given <see cref="Pack"/></param>
         /// <returns></returns>
-        public virtual bool MemberShouldLeave(Pawn member, Pack pack,/* [NotNullWhen(true)] */out string? reason)
+        public virtual bool MemberShouldLeave(Pawn member, Pack pack, [NotNullWhen(true)] out string? reason)
         {
             reason = null;
             if (member is null)
@@ -100,7 +100,16 @@ namespace RimValiFFARW.Packs
                 reason = "RVFFA_PackWorker_PawnWentMissing".Translate();
                 return true;
             }
-
+            if (member.health.hediffSet.HasHediff(RVFFA_Defs.RVFFA_PackReplacement))
+            {
+                reason = "RVFFA_PawnHadPackReplacementInstalled".Translate(member.Name.ToStringShort);
+                return true;
+            }
+            if (member.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken))
+            {
+                reason = "RVFFA_PawnBecamePackBroken".Translate(member.Name.ToStringShort);
+                return true;
+            }
             double avgOpinionOfMember = EvaluateAverageOpinionForPawn(member, pack.Members);
             if (def.minGroupOpinionNeededSustain > avgOpinionOfMember)
             {
@@ -159,11 +168,31 @@ namespace RimValiFFARW.Packs
             }
             foreach(Pawn pawn in pawns)
             {
-                if (!pawn.story.traits.HasTrait(RVFFA_Defs.RVFFA_PackBroken)) continue;
-                reason = "RVFFA_PawnIsPackBroken".Translate(pawn.Name.ToStringShort);
-                MessageOf(new LookTargets(pawn), reason, quietError);
-                return false;
-                
+                if (!pawn.TryGetPackInfoContainer(out PackInfoContainer? container)) continue;
+                if (container.PackXMLInfo == null) continue;
+                foreach(HediffPackPrevention hediffPackPrevention in container.PackXMLInfo.hediffsThatPreventPacking)
+                {
+                    if (!pawn.health.hediffSet.HasHediff(hediffPackPrevention.hediff)) continue;
+                    reason = hediffPackPrevention.reasonKey.Translate(pawn.Name.ToStringShort);
+                    MessageOf(new LookTargets(pawn), reason, quietError);
+
+                    return false;
+                }
+                foreach(TraitPackPrevention traitPackPrevention in container.PackXMLInfo.traitsThatPreventPacking)
+                {
+                    if (!pawn.story.traits.HasTrait(traitPackPrevention.trait)) continue;
+                    reason = traitPackPrevention.reasonKey.Translate(pawn.Name.ToStringShort);
+                    MessageOf(new LookTargets(pawn), reason, quietError);
+
+                    return false;
+                }
+                if (!container.PackXMLInfo?.allowedPackDefs.Contains(def) ?? true)
+                {
+                    reason = "RVFFA_PackNotAllowed".Translate(pawn.Name.ToStringShort);
+                    MessageOf(new LookTargets(pawn), reason, quietError);
+
+                    return false;
+                }
             }
             return true;
         }
@@ -277,8 +306,7 @@ namespace RimValiFFARW.Packs
             foreach (Pawn member in pack.Members)
             {
                 if (member == null) continue;
-                pack.Worker.MemberShouldLeave(member, pack, out string? reason);
-                if (reason == null) continue;
+                if (!pack.Worker.MemberShouldLeave(member, pack, out string? reason)) continue;
 
                 Messages.Message("RVFFA_PackWorker_MemberLeavesBecause".Translate(member?.NameShortColored ?? "???", pack.NameColored, reason), MessageTypeDefOf.NegativeEvent, true);
                 CleanUpMember(member, pack);
@@ -293,7 +321,7 @@ namespace RimValiFFARW.Packs
         public virtual void Disband(Pack pack)
         {
             Packmanager.GetLastActivePackmanager.RemovePack(pack);
-            List<Pawn> membersToRemove = pack.Members.ToList();
+            List<Pawn> membersToRemove = [.. pack.Members];
 
             while (membersToRemove.Count > 0)
             {

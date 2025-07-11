@@ -47,13 +47,14 @@
 		</thingSetMakerTags>
 		<statBases>
 			<Mass>5</Mass>
+			<MarketValue>3000</MarketValue>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_AdvancedImplantsTech</researchPrerequisite>
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallPackReplacement</defName>
 		<label>Install pack replacement chip</label>
 		<description>Install apack replacement chip</description>

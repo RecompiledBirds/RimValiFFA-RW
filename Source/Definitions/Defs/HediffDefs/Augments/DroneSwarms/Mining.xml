@@ -29,9 +29,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>
-		<techHediffsTags>
-			<li>AdvancedAvali</li>
-		</techHediffsTags>
+
 		<descriptionHyperlinks>
 			<RecipeDef>RVFFA_InstallMiningDrones</RecipeDef>
 		</descriptionHyperlinks>
@@ -51,7 +49,7 @@
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallMiningDrones</defName>
 		<label>Install micro drone swarm (mining)</label>
 		<description>Install micro drone swarm (mining).</description>

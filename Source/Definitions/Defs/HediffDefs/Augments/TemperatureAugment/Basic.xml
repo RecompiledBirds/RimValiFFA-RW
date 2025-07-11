@@ -7,9 +7,6 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>
-		<techHediffsTags>
-			<li>RVFFA_BasicAvali</li>
-		</techHediffsTags>
 		<label>Basic Temperature Control Augment (T.C.A.)</label>
 		<description>A basic Temperature Control Augment (or just TCA). This augment uses cooling and heating systems to regulate and keep the wearer within temperature ranges where the egg-whites won’t start decaying. This is only the basic version of it and isn’t very powerful, but it may just be enough to keep the pawn from overheating or freezing.</description>
 		<descriptionHyperlinks>
@@ -30,7 +27,7 @@
 		</recipeMaker>
 	</ThingDef>
 	
-	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="RVFFA_InstallImplantBase">
 		<defName>RVFFA_InstallBasicTemperatureControl</defName>
 		<label>Install basic Temperature Control Augment (T.C.A.)</label>
 		<description>Install basic Temperature Control Augment (T.C.A.).</description>

@@ -44,7 +44,7 @@
 		</recipeMaker>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="RVFFA_InstallBodyPartArtificalBase">
 		<defName>RVFFA_InstallAdvEar</defName>
 		<label>Install advanced bionic Ear</label>
 		<description>Install a advanced bionic Ear.</description>

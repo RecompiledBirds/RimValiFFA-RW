@@ -4,18 +4,8 @@
         <defName>RVFFA_AvaliNamer</defName>
         <rulePack>
             <rulesStrings>
-                <li>Name->[FirstPartName][OtherPartName][OtherPartName] [FirstPartName][OtherPartName][OtherPartName]</li>
-                <li>Name->[FirstPartName][OtherPartName][OtherPartName] '[FirstPartName][OtherPartName]' [FirstPartName][OtherPartName][OtherPartName]</li>
-                <li>Name->[FirstPartName][OtherPartName][OtherPartName] '[FirstPartName]' [FirstPartName][OtherPartName][OtherPartName]</li>
-
-                <li>Name->[FirstPartName][OtherPartName] [FirstPartName][OtherPartName][OtherPartName]</li>
-                <li>Name->[FirstPartName][OtherPartName][OtherPartName] '[FirstPartName][OtherPartName]' [FirstPartName][OtherPartName]</li>
-                <li>Name->[FirstPartName][OtherPartName][OtherPartName] '[FirstPartName]' [FirstPartName][OtherPartName]</li>
-                <li>Name->[FirstPartName][OtherPartName][OtherPartName] '[FirstPartName]' [FirstPartName][OtherPartName][OtherPartName]</li>
-
-                <li>Name->[FirstPartName][OtherPartName] [FirstPartName][OtherPartName]</li>
-
-                <li>Name->[FirstPartName][OtherPartName] '[FirstPartName]' [FirstPartName][OtherPartName]</li>
+                <li>Name->[FirstPartName][OtherPartName] [LastNameFirstPart][LastNameLastPart]</li>
+				<li>Name->[FirstPartName][OtherPartName] '[NickName]' [LastNameFirstPart][LastNameLastPart]</li>
             </rulesStrings>
             <rulesRaw>
                 <li Class="Rule_File">
@@ -26,6 +16,18 @@
                     <keyword>OtherPartName</keyword>
                     <path>RVFFANameGen/LastSectionName</path>
                 </li>
+				<li Class="Rule_File">
+					<keyword>LastNameFirstPart</keyword>
+					<path>RVFFANameGen/LastNameFirstSection</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>LastNameLastPart</keyword>
+					<path>RVFFANameGen/LastNameLastSection</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>NickName</keyword>
+					<path>RVFFANameGen/NickNames</path>
+				</li>
             </rulesRaw>
         </rulePack>
         

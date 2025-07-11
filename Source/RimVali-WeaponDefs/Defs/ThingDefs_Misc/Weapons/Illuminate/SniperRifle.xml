@@ -4,6 +4,7 @@
 		<defName>RVFFA_SniperBullet</defName>
 		<graphicData>
 			<texPath>RimValiFFA/Things/Weapons/Guns/Bullet/SniperBullet</texPath>
+			
 		</graphicData>
 		<projectile>
 			<damageAmountBase>33</damageAmountBase>

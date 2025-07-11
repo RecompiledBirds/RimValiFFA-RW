@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<BodyDef>
+<!--	<BodyDef>
 		<defName>RVFFA_MosquitoBody</defName>
 		<label>Mosquito</label>
 		<corePart>
@@ -127,5 +127,5 @@
 	<BodyPartGroupDef>
 		<defName>MosquitoTailAttackTool</defName>
 		<label>tail</label>
-	</BodyPartGroupDef>
+	</BodyPartGroupDef>-->
 </Defs>

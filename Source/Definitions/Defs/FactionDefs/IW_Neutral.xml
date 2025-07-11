@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef Name="RVFFA_BaseIWFaction" Abstract="True" ParentName="FactionBase">
+		<pawnSingular>Avali</pawnSingular>
+		<pawnsPlural>Avali</pawnsPlural>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>20</configurationListOrderPriority>
+		<allowedCultures>
+			<li>Astropolitan</li>
+		</allowedCultures>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>Colony Leader</leaderTitle>
+		<minSettlementTemperatureChanceCurve>
+			<points>
+				<li>(-20,0)</li>
+				<li>(0,60)</li>
+				<li>(10,70)</li>
+				<li>(20,5)</li>
+				<li>(30,0)</li>
+			</points>
+		</minSettlementTemperatureChanceCurve>
+
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+
+		<techLevel>Spacer</techLevel>
+
+		<backstoryCategories>
+			<li>RVFFA_Illuminate</li>
+		</backstoryCategories>
+
+		<allowedArrivalTemperatureRange>-20~30</allowedArrivalTemperatureRange>
+
+		<structureMemeWeights>
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">5</Structure_Archist>
+		</structureMemeWeights>
+
+		<styles>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RVFFA_IWStyle</li>
+		</styles>
+		<xenotypeSet>
+			<xenotypeChances>
+				<RVFFA_BaseAvaliXenoType MayRequire="Ludeon.RimWorld.Biotech">0.05</RVFFA_BaseAvaliXenoType>
+				<RVFFA_Solfeather MayRequire="Ludeon.RimWorld.Biotech">1</RVFFA_Solfeather>
+			</xenotypeChances>
+		</xenotypeSet>
+
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+		</disallowedMemes>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0, 35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(10000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+	</FactionDef>
+	
+	<FactionDef ParentName="RVFFA_BaseIWFaction">
+		<defName>RVFFA_IWNeutral</defName>
+		<label>Independent Avali Colony</label>
+		<description>An Independent Avali Colony.</description>
+		
+		
+		<colorSpectrum>
+			<li>(1, 0.52, 0.05)</li>
+			<li>(1, 1, 1)</li>
+			<li>(0,0,0)</li>
+			<li>(0,1,0)</li>
+			<li>(1,0,0)</li>
+			<li>(0,0,1)</li>
+		</colorSpectrum>
+
+
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Outlander_PirateMerchant</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Visitor_Outlander_Standard</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+
+
+
+
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, standard mix -->
+				<kindDef>Combat</kindDef>
+				<options>
+					<RVFFA_IW_Villager>5</RVFFA_IW_Villager>
+					<RVFFA_IW_Town_Guard>10</RVFFA_IW_Town_Guard>
+					<RVFFA_IW_Grenadier_Destructive>1.5</RVFFA_IW_Grenadier_Destructive>
+					<RVFFA_IW_Mercenary_Slasher>7</RVFFA_IW_Mercenary_Slasher>
+					<RVFFA_IW_Mercenary_Gunner>10</RVFFA_IW_Mercenary_Gunner>
+					<RVFFA_IW_Mercenary_Elite>10</RVFFA_IW_Mercenary_Elite>
+					<RVFFA_IW_Town_Councilman>10</RVFFA_IW_Town_Councilman>
+			</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<RVFFA_IW_Villager>20</RVFFA_IW_Villager>
+					<RVFFA_IW_Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</RVFFA_IW_Villager_Child>
+					<RVFFA_IW_Town_Guard>10</RVFFA_IW_Town_Guard>
+					<RVFFA_IW_Town_Councilman>10</RVFFA_IW_Town_Councilman>
+				
+			</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<RVFFA_IW_Town_Trader>1</RVFFA_IW_Town_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>6</Muffalo>
+					<Dromedary>5</Dromedary>
+					<Alpaca>2</Alpaca>
+					<Elephant>1</Elephant>
+				</carriers>
+				<guards>
+					<RVFFA_IW_Villager>3</RVFFA_IW_Villager>
+					<RVFFA_IW_Town_Guard>10</RVFFA_IW_Town_Guard>
+					<RVFFA_IW_Grenadier_Destructive>1.5</RVFFA_IW_Grenadier_Destructive>
+					<RVFFA_IW_Mercenary_Slasher>7</RVFFA_IW_Mercenary_Slasher>
+					<RVFFA_IW_Mercenary_Gunner>10</RVFFA_IW_Mercenary_Gunner>
+					<RVFFA_IW_Mercenary_Elite>10</RVFFA_IW_Mercenary_Elite>
+			
+			
+			</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<RVFFA_IW_Villager>10</RVFFA_IW_Villager>
+					<RVFFA_IW_Town_Guard>10</RVFFA_IW_Town_Guard>
+					<RVFFA_IW_Grenadier_Destructive>1.5</RVFFA_IW_Grenadier_Destructive>
+					<RVFFA_IW_Mercenary_Slasher>7</RVFFA_IW_Mercenary_Slasher>
+					<RVFFA_IW_Mercenary_Gunner>10</RVFFA_IW_Mercenary_Gunner>
+					<RVFFA_IW_Mercenary_Elite>10</RVFFA_IW_Mercenary_Elite>
+					<RVFFA_IW_Town_Councilman>10</RVFFA_IW_Town_Councilman>
+				
+			</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_IW_Miner>1</RVFFA_IW_Miner>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_IW_Hunter>1</RVFFA_IW_Hunter>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_IW_Logger>1</RVFFA_IW_Logger>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Farmers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_IW_Farmer>1</RVFFA_IW_Farmer>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<factionIconPath>RimValiFFA/Symbols/avali_ideo_collectivist</factionIconPath>
+
+		
+	</FactionDef>
+
+</Defs>

@@ -42,6 +42,37 @@
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_ScoutingTech</researchPrerequisite>
 		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>4549</analysisID>
+				<requiresMechanitor>false</requiresMechanitor>
+
+				<!-- Analyzable -->
+
+				<analysisDurationHours>15.5</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Illuminate Scout Armor studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the armor's design, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the Illuminate Scout Armor.</activateDescString>
+				<jobString>Analyze armor</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="RVFFA_BaseArmorHelmet">
@@ -83,6 +114,37 @@
 			</tags>
 			<wornGraphicPath>RimValiFFA/Things/Apparel/ScoutHelmet/ScoutHelmet</wornGraphicPath>
 		</apparel>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>4548</analysisID>
+				<requiresMechanitor>false</requiresMechanitor>
+
+				<!-- Analyzable -->
+
+				<analysisDurationHours>15.5</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Illuminate Scout Helmet studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the helmet's design, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the Illuminate Scout Helmet.</activateDescString>
+				<jobString>Analyze helmet</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_ScoutingTech</researchPrerequisite>
 		</recipeMaker>

@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-	<RVCRestructured.ExcludedRaceFactionShuffleDef>
-		<defName>RVFFA_AvaliFactionSwapExclusions</defName>
-		<excludedFactions>
-			<li>RVFFA_IlluminateFaction</li>
-		</excludedFactions>
-	</RVCRestructured.ExcludedRaceFactionShuffleDef>
-</Defs>

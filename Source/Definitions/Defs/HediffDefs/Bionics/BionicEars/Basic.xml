@@ -45,7 +45,7 @@
 		</statBases>
 	</ThingDef>
 
-	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<RecipeDef ParentName="RVFFA_InstallBodyPartArtificalBase">
 		<defName>RVFFA_InstallBasicBionicEar</defName>
 		<label>Install basic bionic Ear</label>
 		<description>Install a basic bionic Ear.</description>

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RVCRestructured;
 using RVCRestructured.Windows;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
@@ -15,7 +16,7 @@ namespace RimValiFFARW.Packs
         private const int ButtonOutlineWidth = 3;
 
         private readonly List<Pawn> fullTempPackMembers = [];
-        private readonly List<Pawn> potentialMembers = [];
+        private readonly List<Pawn> potentialMembers;
 
         private readonly Rect mainPart;
         private readonly Rect titlePart;
@@ -63,10 +64,12 @@ namespace RimValiFFARW.Packs
             defSelectorButton = new Rect(descriptionAndSelectionPart.x, descriptionAndSelectionPart.y, descriptionAndSelectionPart.width - CommonMargin, 30f);
             descriptionPart = new Rect(descriptionAndSelectionPart.x, defSelectorButton.yMax + CommonMargin, defSelectorButton.width, descriptionAndSelectionPart.height - CommonMargin - defSelectorButton.height);
 
+            potentialMembers = [];
             boniListPartOuter = new Rect(descriptionAndSelectionPart.xMax + CommonMargin, descriptionAndSelectionPart.y, InitialSize.x * .4f - CommonMargin * 4f, descriptionAndSelectionPart.height);
             memberListPartOuter = new Rect(descriptionAndSelectionPart.x, descriptionAndSelectionPart.yMax + CommonMargin * 2f, contentPart.width, PackInspectionWindow.ListRectTemplateHeight * 5);
             confirmationPart = new Rect(descriptionAndSelectionPart.x, memberListPartOuter.yMax + CommonMargin, contentPart.width, 30f);
             fullTempPackMembers.Add(firstPawn);
+            VineLog.Log("Refreshing pack bonuses");
             RefreshBoniInnerHeight();
         }
 
@@ -118,20 +121,23 @@ namespace RimValiFFARW.Packs
             acceptPack = true;
             failreason0 = null;
 
-            if (packDef != null)
+            if (packDef == null)
             {
-                PackInspectionWindow.DrawBoniList(boniListPartOuter, boniListPartInner, packDef, ref boniScrollVector);
-                Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
-
-                for (int i = 0; i < potentialMembers.Count; i++)
-                {
-                    Pawn pawn = potentialMembers[i];
-                    acceptPack &= DrawOpinionBar(pawn, fullTempPackMembers, packDef, memberListPartInner, i, out failreason0);
-                }
-
-                DrawAddPawnButton();
-                Widgets.EndScrollView();
+                return;
             }
+            PackInspectionWindow.DrawBoniList(boniListPartOuter, boniListPartInner, packDef, ref boniScrollVector);
+            Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
+
+            for (int i = 0; i < potentialMembers.Count; i++)
+            {
+                Pawn pawn = potentialMembers[i];
+                acceptPack &= DrawOpinionBar(pawn, fullTempPackMembers, packDef, memberListPartInner, i, out failreason0);
+            }
+
+
+
+            DrawAddPawnButton();
+            Widgets.EndScrollView();
         }
 
         private void DrawDescription()
@@ -197,6 +203,7 @@ namespace RimValiFFARW.Packs
 
                         RefreshBoniInnerHeight();
                     }, pawn, Color.white);
+                    
                     potentialPawnOptions.Add(option);
                 }
                 Find.WindowStack.Add(new FloatMenu(potentialPawnOptions));
@@ -268,7 +275,20 @@ namespace RimValiFFARW.Packs
 
         private void RefreshBoniInnerHeight()
         {
-            cachedAvailablePawns = firstPawn.Map.mapPawns.FreeColonistsSpawned.Where(pawn => !pawn.IsInPack() && pawn != firstPawn && !potentialMembers.Contains(pawn));
+
+            // In some cases when loading a save that had mods that are no longer loaded, pawns in the gene pod things can be both spawned and not spawned (pawn.Spawed=true but pawn.Map==null) until
+            // the gene pod is deconstructed
+            // So we should assume other situations might happen...
+            if (firstPawn?.Map?.mapPawns?.FreeColonistsSpawned == null)
+            {
+                cachedAvailablePawns = [];
+
+            }
+            else
+            {
+
+                cachedAvailablePawns = firstPawn.Map.mapPawns.FreeColonistsSpawned.Where(pawn => pawn != null && !pawn.IsInPack() && pawn != firstPawn && pawn.IsPackable(packDef) && !potentialMembers.Contains(pawn));
+            }
             boniListPartInner = boniListPartOuter.GetInnerScrollRect(PackInspectionWindow.ListRectTemplateHeight * packDef?.memberHediffs.Count ?? 0);
             memberListPartInner = memberListPartOuter.GetInnerScrollRect(PackInspectionWindow.ListRectTemplateHeight * (potentialMembers.Count + (CanAddMorePawnsToPack ? 1 : 0)));
         }

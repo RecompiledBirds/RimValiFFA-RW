@@ -113,6 +113,34 @@
 					<RVFFA_IlluminateEnhancedSoldier>10</RVFFA_IlluminateEnhancedSoldier>
 				</options>
 			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_Miner>1</RVFFA_Miner>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_Hunter>1</RVFFA_Hunter>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_Logger>1</RVFFA_Logger>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Farmers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<RVFFA_Farmer>1</RVFFA_Farmer>
+				</options>
+			</li>
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<factionIconPath>RimValiFFA/WorldIcons/Town</factionIconPath>
