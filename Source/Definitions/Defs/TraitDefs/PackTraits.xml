@@ -3,13 +3,13 @@
     <TraitDef>
         <defName>RVFFA_PackBroken</defName>
         <disabledWorkTags>Social</disabledWorkTags>
-        <commonality>5</commonality>
+        <commonality>1</commonality>
         <degreeDatas>
             <li>
                 <label>Pack broken</label>
                 <description>[PAWN_nameDef] has had a painful life, over and over again every pack they join has been destroyed, [PAWN_nameDef] has been so scarred by the repeated loss of their pack that they refuse to let themselves join another, even if otherwise willing.</description>
                 <statOffsets>
-                    <MentalBreakThreshold>-0.9</MentalBreakThreshold>
+                    <MentalBreakThreshold>0.1</MentalBreakThreshold>
                     <PainShockThreshold>0.4</PainShockThreshold>
                 </statOffsets>
             </li>
@@ -18,5 +18,6 @@
             <li>Kind</li>
             <li>Psychopath</li>
         </conflictingTraits>
+		<canBeSuppresed>false</canBeSuppresed>
     </TraitDef>
 </Defs>

@@ -52,7 +52,7 @@ namespace RimValiFFARW.Packs
             set => pack = value;
         }
 
-        public override bool IsVisible =>SelPawn.Faction==Faction.OfPlayer && SelPawn.TryGetPackInfoContainer(out PackInfoContainer? _) && SelPawn.CanJoinAPack();
+        public override bool IsVisible => SelPawn.Faction == Faction.OfPlayer && SelPawn.TryGetPackInfoContainer(out PackInfoContainer? _) && SelPawn.CanJoinAPack();
         //public override bool IsVisible => SelPawn.IsInPack();
 
         public PackInspectionWindow()
@@ -161,7 +161,7 @@ namespace RimValiFFARW.Packs
             }
             Widgets.BeginScrollView(memberListPartOuter, ref memberScrollVector, memberListPartInner);
             int index = 0;
-            foreach(Pawn packmate in pack.Members)
+            foreach (Pawn packmate in pack.Members)
             {
                 if (packmate == SelPawn) continue;
                 DrawOpinionBar(packmate, pack.Def, memberListPartInner, index++, SelPawn.relations.OpinionOf(packmate), out Rect _);
@@ -228,7 +228,7 @@ namespace RimValiFFARW.Packs
                 Text.Font = GameFont.Medium;
                 Widgets.Label(titlePart, "RVFFA_PackInspectionWindow_PawnNotInPackLabel".Translate(SelPawn.NameShortColored));
                 Text.Font = GameFont.Small;
-                
+
                 if (Widgets.ButtonText(new Rect(size - newPackButtonSize - new Vector2(CommonMargin, CommonMargin), newPackButtonSize), "RVFFA_PackInspectionWindow_Creation".Translate(SelPawn.LabelShortCap)))
                 {
                     VineLog.Log("Creating pack creation window");

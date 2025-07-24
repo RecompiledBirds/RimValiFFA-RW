@@ -26,6 +26,7 @@
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>0.2</MoveSpeed>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentIndustrial>5</ComponentIndustrial>
@@ -109,6 +110,9 @@
 			</tags>
 			<wornGraphicPath>RimValiFFA/Things/Apparel/CombatHelmet/CombatHelmet</wornGraphicPath>
 		</apparel>
+		<equippedStatOffsets>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.65</VacuumResistance>
+		</equippedStatOffsets>
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_CombatTech</researchPrerequisite>
 		</recipeMaker>

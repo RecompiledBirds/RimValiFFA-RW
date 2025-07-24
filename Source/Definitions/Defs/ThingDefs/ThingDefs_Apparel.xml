@@ -11,8 +11,8 @@
 
         <costStuffCount>60</costStuffCount>
         <stuffCategories>
-        <li>Fabric</li>
-        <li>Leathery</li>
+            <li>Fabric</li>
+            <li>Leathery</li>
         </stuffCategories>
 
         <statBases>
@@ -35,9 +35,6 @@
             <layers>
                 <li>OnSkin</li>
             </layers>
-            <tags>
-                <li>Avali</li>
-            </tags>
             <defaultOutfitTags>
                 <li>Worker</li>
             </defaultOutfitTags>
