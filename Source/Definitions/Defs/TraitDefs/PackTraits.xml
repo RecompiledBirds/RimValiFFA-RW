@@ -18,6 +18,6 @@
             <li>Kind</li>
             <li>Psychopath</li>
         </conflictingTraits>
-		<canBeSuppresed>false</canBeSuppresed>
+		<canBeSuppressed>false</canBeSuppressed>
     </TraitDef>
 </Defs>

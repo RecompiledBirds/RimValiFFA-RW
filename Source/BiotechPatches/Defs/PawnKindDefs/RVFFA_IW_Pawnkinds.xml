@@ -2,7 +2,7 @@
 <Defs>
 	<PawnKindDef Name="RVFFA_IW_Villager_Child" ParentName="Villager_Child">
 		<race>RVFFA_Avali</race>
-		<defName>RVFFA_IW_VillagerChild</defName>
+		<defName>RVFFA_IW_Villager_Child</defName>
 		<defaultFactionDef>RVFFA_IWNeutral</defaultFactionDef>
 	</PawnKindDef>
 
