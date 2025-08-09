@@ -16,33 +16,6 @@
 	<RecipeDef ParentName="RVFFA_BaseTungstenRecipe">
 		<defName>RVFFA_SinterTungsten</defName>
 		<label>Sinter Tungsten</label>
-		<workAmount>50</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>5</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>RVFFA_Tungsten</li>
-					</thingDefs>
-				</filter>
-				<count>10</count>
-			</li>
-		</ingredients>
-		<products>
-			<RVFFA_ProcessedTungsten>8</RVFFA_ProcessedTungsten>
-		</products>
-	</RecipeDef>
-
-	<RecipeDef ParentName="RVFFA_BaseTungstenRecipe">
-		<defName>RVFFA_SinterTungstenTwo</defName>
-		<label>Sinter Tungsten (16)</label>
 		<workAmount>250</workAmount>
 		<ingredients>
 			<li>
@@ -63,34 +36,9 @@
 			</li>
 		</ingredients>
 		<products>
-			<RVFFA_ProcessedTungsten>6</RVFFA_ProcessedTungsten>
+			<RVFFA_ProcessedTungsten>16</RVFFA_ProcessedTungsten>
 		</products>
 	</RecipeDef>
 
-	<RecipeDef ParentName="RVFFA_BaseTungstenRecipe">
-		<defName>RVFFA_SinterTungstenThree</defName>
-		<label>Sinter Tungsten (40)</label>
-		<workAmount>500</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>15</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>RVFFA_Tungsten</li>
-					</thingDefs>
-				</filter>
-				<count>50</count>
-			</li>
-		</ingredients>
-		<products>
-			<RVFFA_ProcessedTungsten>40</RVFFA_ProcessedTungsten>
-		</products>
-	</RecipeDef>
+
 </Defs>

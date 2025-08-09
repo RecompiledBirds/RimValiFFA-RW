@@ -12,28 +12,10 @@
 		</researchPrerequisites>
     </RecipeDef>
 
+
     <RecipeDef ParentName="RVFFA_BaseNanofiberRecipe">
         <defName>RVFFA_NanofiberRecipe</defName>
         <label>Weave Nano-Fiber</label>
-        <ingredients>
-            <li>
-                <filter>
-                <thingDefs>
-                    <li>Cloth</li>
-                </thingDefs>
-                </filter>
-                <count>10</count>
-            </li>
-        </ingredients>
-        <products>
-            <RVFFA_NanoFiber>8</RVFFA_NanoFiber>
-        </products>
-    </RecipeDef>
-
-
-    <RecipeDef ParentName="RVFFA_BaseNanofiberRecipe">
-        <defName>RVFFA_NanofiberRecipeTwo</defName>
-        <label>Weave Nano-Fiber (40)</label>
         <ingredients>
             <li>
                 <filter>
@@ -49,21 +31,5 @@
         </products>
     </RecipeDef>
 
-    <RecipeDef ParentName="RVFFA_BaseNanofiberRecipe">
-        <defName>RVFFA_NanofiberRecipeThree</defName>
-        <label>Weave Nano-Fiber (80)</label>
-        <ingredients>
-            <li>
-                <filter>
-                <thingDefs>
-                    <li>Cloth</li>
-                </thingDefs>
-                </filter>
-                <count>100</count>
-            </li>
-        </ingredients>
-        <products>
-            <RVFFA_NanoFiber>80</RVFFA_NanoFiber>
-        </products>
-    </RecipeDef>
+  
 </Defs>
