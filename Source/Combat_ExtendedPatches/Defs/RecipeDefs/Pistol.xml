@@ -4,9 +4,9 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_IlluminateCommonAmmoFMJ</defName>
-		<label>make Illuminate Pistol Ammo (FMJ) x500</label>
-		<description>Craft 500 Illuminate Pistol Ammo cartridges.</description>
-		<jobString>Making Illuminate Pistol Ammo cartridges.</jobString>
+		<label>make 6x15mm Illuminate (FMJ) x500</label>
+		<description>Craft 500 rounds of 6x15mm Illuminate.</description>
+		<jobString>Making Illuminate Pistol rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -31,9 +31,9 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_IlluminateCommonAmmoAP</defName>
-		<label>make Illuminate Pistol Ammo (AP) x500</label>
-		<description>Craft 500 Illuminate Pistol Ammo cartridges.</description>
-		<jobString>Making Illuminate Pistol Ammo cartridges.</jobString>
+		<label>make 6x15mm Illuminate (AP) x500</label>
+		<description>Craft 500 rounds of 6x15mm Illuminate.</description>
+		<jobString>Making Illuminate Pistol rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -57,9 +57,9 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_IlluminateCommonAmmoHP</defName>
-		<label>make Illuminate Pistol Ammo (AP) x500</label>
-		<description>Craft 500 Illuminate Pistol Ammo cartridges.</description>
-		<jobString>Making Illuminate Pistol Ammo cartridges.</jobString>
+		<label>make 6x15mm Illuminate (AP) x500</label>
+		<description>Craft 500 rounds of 6x15mm Illuminate.</description>
+		<jobString>Making Illuminate Pistol rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
