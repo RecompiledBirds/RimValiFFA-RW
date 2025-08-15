@@ -46,28 +46,26 @@
 		<defName>RVFFA_IlluminateShotgun</defName>
 		<statBases>
 			<Mass>3.5</Mass>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.98</RangedWeapon_Cooldown>
 			<SightsEfficiency>0.9</SightsEfficiency>
-			<ShotSpread>0.15</ShotSpread>
+			<ShotSpread>0.12</ShotSpread>
 			<SwayFactor>1.38</SwayFactor>
-			<Bulk>1.90</Bulk>
+			<Bulk>8.90</Bulk>
 			<WorkToMake>22000</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>70</Steel>
 			<ComponentIndustrial>4</ComponentIndustrial>
-			<RVFFA_ProcessedTungsten>3</RVFFA_ProcessedTungsten>
+			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
 		</costList>
 		<Properties>
 			<recoilAmount>1.1</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>RVFFA_ShotgunBuckshotBullet</defaultProjectile>
-			<warmupTime>1.6</warmupTime>
-			<range>26</range>
+			<warmupTime>0.6</warmupTime>
+			<range>22</range>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-			<burstShotCount>1</burstShotCount>
-			<!-- Deleting this field will make the weapon fire single shots. -->
 			<soundCast>Shot_Autopistol</soundCast>
 			<soundCastTail>GunTail_Medium</soundCastTail>
 			<muzzleFlashScale>1</muzzleFlashScale>
@@ -77,8 +75,8 @@
 			</targetParams>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>6</magazineSize>
-			<reloadTime>0.9</reloadTime>
+			<magazineSize>8</magazineSize>
+			<reloadTime>0.8</reloadTime>
 			<ammoSet>RVFFA_ShotgunAmmoSet</ammoSet>
 			<reloadOneAtATime>True</reloadOneAtATime>
 		</AmmoUser>
