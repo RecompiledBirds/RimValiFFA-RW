@@ -3,7 +3,7 @@
 	<ThingCategoryDef>
 		<defName>RVFFA_ShotgunAmmo</defName>
 		<!-- This is just for stockpile purposes. -->
-		<label>Illuminate Shotgun Ammunition</label>
+		<label>Illuminate Shotgun Ammo</label>
 		<parent>AmmoShotguns</parent>
 		<iconPath>UI/Icons/ThingCategories/CaliberShotgun</iconPath>
 	</ThingCategoryDef>
@@ -12,7 +12,7 @@
 
 	<CombatExtended.AmmoSetDef>
 		<defName>RVFFA_ShotgunAmmoSet</defName>
-		<label>Illuminate Shotgun Ammo</label>
+		<label>20x50mm Illuminate</label>
 		<ammoTypes>
 			<!-- This list ties ammo items together to corresponding projectile. -->
 			<RVFFA_ShotgunBuckshot>RVFFA_ShotgunBuckshotBullet</RVFFA_ShotgunBuckshot>
@@ -22,7 +22,7 @@
 	<!-- ==================== Ammo ========================== -->
 
 	<ThingDef Class="CombatExtended.AmmoDef" Name="RVFFA_AmmoShotgun" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Railgun-based ammunition found in only the most elite Illuminate minigun patterns.</description>
+		<description>Saboted flechette scattershot ammunition for illuminate shotguns</description>
 		<statBases>
 			<Mass>0.026</Mass>
 			<Bulk>0.03</Bulk>
@@ -30,8 +30,9 @@
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<!-- This lets traders stock this kind of ammo. -->
-			<li>CE_AutoEnableCrafting</li>
-			<!-- This adds the ammo recipes to the Loading Bench when the ammo set is in-use. -->
+			<li>CE_AutoEnableCrafting_FabricationBench</li>
+			<li>CE_AutoEnableCrafting_TableMachining</li>
+			<!-- Railgun ammo isn't handloaded because it contains no propellant, and the sabots must be precision-machined anyway -->
 		</tradeTags>
 		<thingCategories>
 			<li>RVFFA_ShotgunAmmo</li>
@@ -41,7 +42,7 @@
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="RVFFA_AmmoShotgun">
 		<defName>RVFFA_ShotgunBuckshot</defName>
-		<label>Illuminate Shotgun Ammunition (Buckshot)</label>
+		<label>20x50mm Illuminate (Flechette)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Shotgun/Shot</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -51,8 +52,6 @@
 		</statBases>
 		<ammoClass>BuckShot</ammoClass>
 		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
-		<cookOffProjectile>RVFFA_ShotgunBuckshotBullet</cookOffProjectile>
-		<!-- If this round cooks off without `Realistic Cookoff` enabled, what projectile spawns? -->
 	</ThingDef>
 
 </Defs>
