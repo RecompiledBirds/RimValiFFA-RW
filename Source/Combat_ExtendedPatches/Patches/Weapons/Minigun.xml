@@ -45,32 +45,32 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>RVFFA_IlluminateMachineGun</defName>
 		<statBases>
-			<Mass>5.7</Mass>
-			<RangedWeapon_Cooldown>1.56</RangedWeapon_Cooldown>
+			<Mass>15.7</Mass>
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
 			<SightsEfficiency>1.4</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.6</NightVisionEfficiency_Weapon>
 			<!-- Some weapons have have advanced optics that reduce the penalty for shooting in the dark. -->
-			<ShotSpread>0.3</ShotSpread>
-			<SwayFactor>1.17</SwayFactor>
+			<ShotSpread>0.05</ShotSpread>
+			<SwayFactor>3.17</SwayFactor>
 			<Bulk>13.1</Bulk>
 			<WorkToMake>37500</WorkToMake>
 		</statBases>
 		<costList>
-			<Steel>150</Steel>
-			<ComponentSpacer>3</ComponentSpacer>
+			<Steel>100</Steel>
+			<ComponentSpacer>1</ComponentSpacer>
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
 		</costList>
 
 		<Properties>
-			<recoilAmount>1.1</recoilAmount>
+			<recoilAmount>0.8</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>RVFFA_MinigunBulletFMJ</defaultProjectile>
-			<warmupTime>1.3</warmupTime>
-			<range>80</range>
-			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-			<burstShotCount>32</burstShotCount>
+			<defaultProjectile>RVFFA_RifleBulletFMJ</defaultProjectile>
+			<warmupTime>1.9</warmupTime>
+			<range>60</range>
+			<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+			<burstShotCount>50</burstShotCount>
 			<!-- Deleting this field will make the weapon fire single shots. -->
 			<soundCast>Shot_CE_BattleRifle</soundCast>
 			<soundCastTail>GunTail_Medium</soundCastTail>
@@ -81,23 +81,20 @@
 			</targetParams>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>120</magazineSize>
+			<magazineSize>300</magazineSize>
 			<reloadTime>8.9</reloadTime>
-			<ammoSet>RVFFA_MinigunAmmoSet</ammoSet>
+			<ammoSet>RVFFA_RifleAmmoSet</ammoSet>
 		</AmmoUser>
 		<FireModes>
-			<aimedBurstShotCount>30</aimedBurstShotCount>
+			<aimedBurstShotCount>25</aimedBurstShotCount>
 			<aiUseBurstMode>FALSE</aiUseBurstMode>
 			<aiAimMode>SuppressFire</aiAimMode>
 			<noSingleShot>true</noSingleShot>
 			<!-- If true, prevents automatic weapons from firing single shots, useful for forcing burst fire.-->
-			<noSnapshot>true</noSnapshot>
-			<!-- If true, prevents the weapon using the `Snapshot` aiming mode. -->
 		</FireModes>
 		<weaponTags>
-			<li>CE_MachineGun</li>
-			<li>CE_AI_LMG</li>
-			<li>Bipod_LMG</li>
+			<li>CE_AI_Suppressive</li>
+			<li>Advanced_Weapon</li>
 		</weaponTags>
 		<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
