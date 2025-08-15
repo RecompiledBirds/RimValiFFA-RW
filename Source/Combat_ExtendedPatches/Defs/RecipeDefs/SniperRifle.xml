@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeRVFFA_SniperRifleAmmoFMJ</defName>
-		<label>make Illuminate Sniper Rifle Ammo (FMJ) x500</label>
-		<description>Craft 500 Illuminate Rifle Ammo cartridges.</description>
-		<jobString>Making Illuminate Sniper Rifle Ammo cartridges.</jobString>
+		<defName>MakeRVFFA_SniperRifleAmmoSabot</defName>
+		<label>make 15x300mm Illuminate x200</label>
+		<description>Craft 200 rounds of 15x300mm Illuminate</description>
+		<jobString>Making Illuminate Sniper Ammo.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -12,7 +12,15 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>158</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RVFFA_ProcessedTungsten</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -21,60 +29,10 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<RVFFA_SniperRifleAmmoFMJ>500</RVFFA_SniperRifleAmmoFMJ>
+			<RVFFA_SniperRifleAmmoSabot>200</RVFFA_SniperRifleAmmoSabot>
 		</products>
 		<workAmount>2800</workAmount>
 	</RecipeDef>
 
-	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeRVFFA_SniperRifleAmmoAP</defName>
-		<label>make Illuminate Sniper Rifle Ammo (AP) x500</label>
-		<description>Craft 500 Illuminate Sniper Rifle Ammo cartridges.</description>
-		<jobString>Making Illuminate Sniper Rifle Ammo cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>28</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<products>
-			<RVFFA_SniperRifleAmmoAP>500</RVFFA_SniperRifleAmmoAP>
-		</products>
-		<workAmount>3360</workAmount>
-	</RecipeDef>
-
-	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeRVFFA_SniperRifleAmmoHP</defName>
-		<label>make Illuminate Sniper Rifle Ammo (HP) x500</label>
-		<description>Craft 500 Illuminate Sniper Rifle Ammo cartridges.</description>
-		<jobString>Making Illuminate Sniper Rifle Ammo cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>28</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<products>
-			<RVFFA_SniperRifleAmmoHP>500</RVFFA_SniperRifleAmmoHP>
-		</products>
-		<workAmount>2800</workAmount>
-	</RecipeDef>
+	
 </Defs>
