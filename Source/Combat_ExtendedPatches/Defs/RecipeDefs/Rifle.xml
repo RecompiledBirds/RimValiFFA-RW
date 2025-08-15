@@ -2,9 +2,9 @@
 <Defs>
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_RifleAmmoFMJ</defName>
-		<label>make Illuminate Rifle Ammo (FMJ) x500</label>
-		<description>Craft 500 Illuminate Rifle Ammo cartridges.</description>
-		<jobString>Making Illuminate Rifle Ammo cartridges.</jobString>
+		<label>make 8x40mm Illuminate (FMJ) x500</label>
+		<description>Craft 500 rounds of 8x40mm Illuminate.</description>
+		<jobString>Making Illuminate Rifle rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -12,7 +12,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>48</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -28,9 +28,9 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_RifleAmmoAP</defName>
-		<label>make Illuminate Rifle Ammo (AP) x500</label>
-		<description>Craft 500 Illuminate Rifle Ammo cartridges.</description>
-		<jobString>Making Illuminate Rifle Ammo cartridges.</jobString>
+		<label>make 8x40mm Illuminate (AP) x500</label>
+		<description>Craft 500 rounds of 8x40mm Illuminate.</description>
+		<jobString>Making Illuminate Rifle rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -38,7 +38,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>48</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -54,9 +54,9 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_RifleAmmoHP</defName>
-		<label>make Illuminate Rifle Ammo (HP) x500</label>
-		<description>Craft 500 Illuminate Rifle Ammo cartridges.</description>
-		<jobString>Making Illuminate Rifle Ammo cartridges.</jobString>
+		<label>make 8x40mm Illuminate (HP) x500</label>
+		<description>Craft 500 rounds of 8x40mm Illuminate</description>
+		<jobString>Making Illuminate Rifle rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -64,7 +64,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>48</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
