@@ -15,9 +15,7 @@
 		<label>15x300mm Illuminate</label>
 		<ammoTypes>
 			<!-- This list ties ammo items together to corresponding projectile. -->
-			<RVFFA_SniperRifleAmmoFMJ>RVFFA_SniperRifleBulletFMJ</RVFFA_SniperRifleAmmoFMJ>
-			<RVFFA_SniperRifleAmmoAP>RVFFA_SniperRifleBulletAP</RVFFA_SniperRifleAmmoAP>
-			<RVFFA_SniperRifleAmmoHP>RVFFA_SniperRifleBulletHP</RVFFA_SniperRifleAmmoHP>
+			<RVFFA_SniperRifleAmmoSabot>RVFFA_SniperRifleBulletSabot</RVFFA_SniperRifleAmmoSabot>
 		</ammoTypes>
 		<similarTo>AmmoSet_Rifle</similarTo>
 	</CombatExtended.AmmoSetDef>
