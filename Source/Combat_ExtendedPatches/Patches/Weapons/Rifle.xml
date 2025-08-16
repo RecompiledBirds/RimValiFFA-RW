@@ -65,7 +65,7 @@
 			<defaultProjectile>RVFFA_RifleBulletFMJ</defaultProjectile>
 			<warmupTime>1.4</warmupTime>
 			<range>58</range>
-			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<burstShotCount>4</burstShotCount>
 			<!-- Deleting this field will make the weapon fire single shots. -->
 			<soundCast>Shot_Autopistol</soundCast>
@@ -77,7 +77,7 @@
 			</targetParams>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>50</magazineSize>
+			<magazineSize>40</magazineSize>
 			<reloadTime>4.9</reloadTime>
 			<ammoSet>RVFFA_RifleAmmoSet</ammoSet>
 			<reloadOneAtATime>false</reloadOneAtATime>
