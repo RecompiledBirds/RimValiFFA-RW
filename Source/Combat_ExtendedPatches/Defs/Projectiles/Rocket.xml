@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Name="BaseIlluminateRocket" ParentName="BaseExplosiveBullet" Abstract="true">
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>73</speed>
+			<soundAmbient>RocketPropelledLoop_Small</soundAmbient>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ProjectileFleck">
+				<FleckDatas>
+					<li>
+						<fleck>Fleck_CERocketFlame</fleck>
+						<emissionsPerTick>7</emissionsPerTick>
+						<flecksPerEmission>3</flecksPerEmission>
+						<scale>1</scale>
+						<cutoffTickRange>25~30</cutoffTickRange>
+						<originOffset>0.4</originOffset>
+						<startDelayTick>2</startDelayTick>
+					</li>
+					<li>
+						<fleck>Fleck_CERocketSmokeTrail</fleck>
+						<emissionsPerTick>2</emissionsPerTick>
+						<rotation>0~360</rotation>
+						<scale>0.5</scale>
+						<flecksPerEmission>1</flecksPerEmission>
+						<startDelayTick>2</startDelayTick>						
+					</li>
+					<li>
+						<fleck>Fleck_CERocketSmoke</fleck>
+						<emissionsPerTick>2</emissionsPerTick>
+						<rotation>0~360</rotation>
+						<flecksPerEmission>2</flecksPerEmission>
+						<cutoffTickRange>25~60</cutoffTickRange>
+					</li>
+				</FleckDatas>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseIlluminateRocket">
+		<defName>Bullet_IlluminateRocket_HEAT</defName>
+		<label>Illuminate Rocket (HEAT)</label>
+		<graphicData>
+			<texPath>Things/Projectile/RPG/HEAT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>304</damageAmountBase>
+			<armorPenetrationSharp>500</armorPenetrationSharp>
+			<armorPenetrationBlunt>44.956</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>150</damageAmountBase>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveRadius>1.5</explosiveRadius>
+				<explosionSound>MortarBomb_Explode</explosionSound>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Large>3</Fragment_Large>
+					<Fragment_Small>12</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseIlluminateRocket">
+		<defName>Bullet_IlluminateRocket_Thermobaric</defName>
+		<label>Illuminate Rocket (Thermobaric)</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<!-- Use "CombatExtended.ProjectileCE_BunkerBuster" for the special bunker buster property -->
+		<graphicData>
+			<texPath>Things/Projectile/RPG/Thermobaric</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Thermobaric</damageDef>
+			<damageAmountBase>275</damageAmountBase>
+			<explosionRadius>5</explosionRadius>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<!-- <fuze_delay>2</fuze_delay>
+      		<HP_penetration>true</HP_penetration>
+     		<HP_penetration_ratio>300</HP_penetration_ratio> -->
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseIlluminateRocket">
+		<defName>Bullet_IlluminateRocket_Frag</defName>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<label>Illuminate Rocket (Frag)</label>
+		<graphicData>
+			<texPath>Things/Projectile/RPG/Frag</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>58</damageAmountBase>
+			<explosionRadius>1.5</explosionRadius>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>80</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+</defs>
