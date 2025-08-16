@@ -4,15 +4,15 @@
 		<defName>RVFFA_SniperRifleAmmo</defName>
 		<!-- This is just for stockpile purposes. -->
 		<label>Illuminate Sniper Ammunition</label>
-		<parent>AmmoRifles</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+		<parent>AmmoAdvanced</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRailgunHghCaliber</iconPath>
 	</ThingCategoryDef>
 
 	<!-- ==================== AmmoSet ========================== -->
 
 	<CombatExtended.AmmoSetDef>
 		<defName>RVFFA_SniperRifleAmmoSet</defName>
-		<label>15x300mm Illuminate</label>
+		<label>15x70mm Illuminate</label>
 		<ammoTypes>
 			<!-- This list ties ammo items together to corresponding projectile. -->
 			<RVFFA_SniperRifleAmmoSabot>RVFFA_SniperRifleBulletSabot</RVFFA_SniperRifleAmmoSabot>
@@ -22,10 +22,10 @@
 	<!-- ==================== Ammo ========================== -->
 
 	<ThingDef Class="CombatExtended.AmmoDef" Name="RVFFA_AmmoSniperRifle" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Long metal rods, manufactured for use in heavy-duty illuminate railguns. Effectively military-grade rebar</description>
+		<description>Armour piercing, fin stabilised sabot projectiles, manufactured for use in Illuminate sniper rifles. Capable of easily punching through most power armour, and even some armoured vehicles.</description>
 		<statBases>
-			<Mass>0.05</Mass>
-			<Bulk>0.08</Bulk>
+			<Mass>0.11</Mass>
+			<Bulk>0.10</Bulk>
 		</statBases>
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
@@ -41,9 +41,9 @@
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="RVFFA_AmmoSniperRifle">
 		<defName>RVFFA_SniperRifleAmmoSabot</defName>
-		<label>15x300mm Illuminate (Sabot)</label>
+		<label>15x70mm Illuminate (Sabot)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/AP</texPath>
+			<texPath>Things/Ammo/Railgun/HighCaliber</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -51,8 +51,6 @@
 		</statBases>
 		<ammoClass>RailgunSabot</ammoClass>
 		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
-		<cookOffProjectile>RVFFA_SniperRifleBulletAP</cookOffProjectile>
-		<!-- If this round cooks off without `Realistic Cookoff` enabled, what projectile spawns? -->
 	</ThingDef>
 
 </Defs>
