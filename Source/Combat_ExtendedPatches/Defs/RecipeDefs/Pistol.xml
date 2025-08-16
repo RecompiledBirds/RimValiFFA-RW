@@ -14,7 +14,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>8</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -25,7 +25,7 @@
 		<products>
 			<RVFFA_IlluminateCommonAmmoFMJ>500</RVFFA_IlluminateCommonAmmoFMJ>
 		</products>
-		<workAmount>2800</workAmount>
+		<workAmount>900</workAmount>
 	</RecipeDef>
 
 
@@ -41,7 +41,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>8</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -52,7 +52,7 @@
 		<products>
 			<RVFFA_IlluminateCommonAmmoAP>500</RVFFA_IlluminateCommonAmmoAP>
 		</products>
-		<workAmount>3360</workAmount>
+		<workAmount>1100</workAmount>
 	</RecipeDef>
 
 	<RecipeDef ParentName="AmmoRecipeBase">
@@ -67,7 +67,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>8</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -78,6 +78,6 @@
 		<products>
 			<RVFFA_IlluminateCommonAmmoHP>500</RVFFA_IlluminateCommonAmmoHP>
 		</products>
-		<workAmount>2800</workAmount>
+		<workAmount>900</workAmount>
 	</RecipeDef>
 </Defs>
