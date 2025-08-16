@@ -84,3 +84,4 @@
 		<ammoClass>RocketFrag</ammoClass>
 		<detonateProjectile>Bullet_IlluminateRocket_Frag</detonateProjectile>
 	</ThingDef>
+</Defs>
