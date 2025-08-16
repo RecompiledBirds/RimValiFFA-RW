@@ -29,10 +29,10 @@
 	<!-- ==================== Ammo ========================== -->
 
 	<ThingDef Class="CombatExtended.AmmoDef" Name="RVFFA_AmmoCommonBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Small-caliber railgun sabots used in most Illuminate sidearms and SMGs</description>
+		<description>Small-caliber ferrous projectiles used in most Illuminate sidearms and SMGs</description>
 		<statBases>
-			<Mass>0.026</Mass>
-			<Bulk>0.03</Bulk>
+			<Mass>0.008</Mass>
+			<Bulk>0.01</Bulk>
 		</statBases>
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
@@ -53,9 +53,6 @@
 			<texPath>RimValiFFA/Buildings/Turrets/MiniGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<statBases>
-			<MarketValue>0.12</MarketValue>
-		</statBases>
 		<ammoClass>FullMetalJacket</ammoClass>
 		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
 	</ThingDef>
@@ -67,9 +64,6 @@
 			<texPath>RimValiFFA/Buildings/Turrets/MiniGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<statBases>
-			<MarketValue>0.12</MarketValue>
-		</statBases>
 		<ammoClass>ArmorPiercing</ammoClass>
 		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
 		<cookOffProjectile>RVFFA_PistolBulletAP</cookOffProjectile>
@@ -83,9 +77,6 @@
 			<texPath>RimValiFFA/Buildings/Turrets/MiniGunAmmo</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<statBases>
-			<MarketValue>0.12</MarketValue>
-		</statBases>
 		<ammoClass>HollowPoint</ammoClass>
 		<!-- What ammo type appears on the ammo selector when loading it? Note: AmmoClass must be unique within the ammo set, or the system cannot distinguish between the two items. -->
 		<cookOffProjectile>RVFFA_PistolBulletHP</cookOffProjectile>
