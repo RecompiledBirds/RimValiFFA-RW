@@ -2,8 +2,8 @@
 <Defs>
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_SniperRifleAmmoSabot</defName>
-		<label>make 15x300mm Illuminate x200</label>
-		<description>Craft 200 rounds of 15x300mm Illuminate</description>
+		<label>make 15x70mm Illuminate x200</label>
+		<description>Craft 200 rounds of 15x70mm Illuminate</description>
 		<jobString>Making Illuminate Sniper Ammo.</jobString>
 		<ingredients>
 			<li>
@@ -12,7 +12,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>158</count>
+				<count>38</count>
 			</li>
 			<li>
 				<filter>
@@ -20,7 +20,7 @@
 						<li>RVFFA_ProcessedTungsten</li>
 					</thingDefs>
 				</filter>
-				<count>40</count>
+				<count>38</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -31,7 +31,7 @@
 		<products>
 			<RVFFA_SniperRifleAmmoSabot>200</RVFFA_SniperRifleAmmoSabot>
 		</products>
-		<workAmount>2800</workAmount>
+		<workAmount>9120</workAmount>
 	</RecipeDef>
 
 	
