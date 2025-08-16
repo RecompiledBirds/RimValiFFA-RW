@@ -20,10 +20,10 @@
 
 	<ThingDef ParentName="RVFFA_SniperRifleBullet">
 		<defName>RVFFA_SniperRifleBulletSabot</defName>
-		<label>15x300mm Illuminate</label>
+		<label>15x70mm Illuminate</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>33</damageAmountBase>
-			<armorPenetrationSharp>36</armorPenetrationSharp>
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationSharp>90</armorPenetrationSharp>
 			<armorPenetrationBlunt>630</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
