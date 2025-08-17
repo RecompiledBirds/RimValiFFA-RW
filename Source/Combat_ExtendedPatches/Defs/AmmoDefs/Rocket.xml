@@ -80,7 +80,6 @@
 			<Mass>2.7</Mass>
 			<Bulk>7.4</Bulk>
 		</statBases>
-		<stackLimit>100</stackLimit>
 		<ammoClass>RocketFrag</ammoClass>
 		<detonateProjectile>Bullet_IlluminateRocket_Frag</detonateProjectile>
 	</ThingDef>
