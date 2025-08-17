@@ -50,14 +50,14 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="RVFFA_BasicTurret"]/building/turretBurstCooldownTime</xpath>
 		<value>
-			<turretBurstCooldownTime>4.8</turretBurstCooldownTime>
+			<turretBurstCooldownTime>0.4</turretBurstCooldownTime>
 		</value>
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>RVFFA_BasicTurretGun</defName>
 		<statBases>
-			<RangedWeapon_Cooldown>5.8</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
 			<SightsEfficiency>0.9</SightsEfficiency>
 			<ShotSpread>0.09</ShotSpread>
 			<SwayFactor>0.08</SwayFactor>
@@ -68,7 +68,7 @@
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>RVFFA_PistolBulletFMJ</defaultProjectile>
-			<warmupTime>1.3</warmupTime>
+			<warmupTime>0.5</warmupTime>
 			<range>55</range>
 			<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
 			<burstShotCount>1</burstShotCount>
@@ -78,7 +78,7 @@
 			<recoilPattern>Mounted</recoilPattern>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>300</magazineSize>
+			<magazineSize>60</magazineSize>
 			<reloadTime>7.8</reloadTime>
 			<ammoSet>RVFFA_PistolAmmoSetCommon</ammoSet>
 		</AmmoUser>
