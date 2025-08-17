@@ -48,7 +48,7 @@
 		</graphicData>
 		<statBases>
 			<Mass>2.8</Mass>
-			<Bulk>7.14</Bulk>
+			<Bulk>7.54</Bulk>
 		</statBases>
 		<ammoClass>RocketHEAT</ammoClass>
 		<detonateProjectile>Bullet_IlluminateRocket_HEAT</detonateProjectile>
@@ -62,8 +62,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<Mass>4.7</Mass>
-			<Bulk>8.61</Bulk>
+			<Mass>3.1</Mass>
+			<Bulk>7.61</Bulk>
 		</statBases>
 		<ammoClass>RocketThermobaric</ammoClass>
 		<detonateProjectile>Bullet_IlluminateRocket_Thermobaric</detonateProjectile>
@@ -77,8 +77,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<Mass>2.2</Mass>
-			<Bulk>3.4</Bulk>
+			<Mass>2.7</Mass>
+			<Bulk>7.4</Bulk>
 		</statBases>
 		<stackLimit>100</stackLimit>
 		<ammoClass>RocketFrag</ammoClass>
