@@ -5,7 +5,7 @@
 		<xpath>Defs/ThingDef[defName="RVFFA_IlluminatePistol"]/tools</xpath>
 		<value>
 			<tools>
-				li Class="CombatExtended.ToolCE">
+				<li Class="CombatExtended.ToolCE">
 					<label>grip</label>
 					<capacities>
 						<li>Blunt</li>
