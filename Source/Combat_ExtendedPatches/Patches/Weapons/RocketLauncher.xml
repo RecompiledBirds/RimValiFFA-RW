@@ -72,4 +72,13 @@
 		<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
 		
   </Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>An unguided shoulderfire rocket launcher of Illuminate design. This one seems to be an older, reusable model, and while it may have somewhat reduced power compared to the newer disposable models, the increased variety of warheads available brings an additional layer of adaptability that is much appreciated out here on the rim.</description>
+		</value>
+	</Operation>
 </Patch>
