@@ -3,7 +3,7 @@
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>
-			Defs/ThingDef[defName="RVFFA_IlluminateRocket"]/tools
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/tools
     	</xpath>
 		<value>
 			<tools>
@@ -21,7 +21,7 @@
 		</value>
 	</Operation>
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-		<defName>RVFFA_IlluminateRocket</defName>
+		<defName>RVFFA_IlluminateRocketLauncher</defName>
 		
 		<weaponClasses>
 			<li>RangedHeavy</li>
