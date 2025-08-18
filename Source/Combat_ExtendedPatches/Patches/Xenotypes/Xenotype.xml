@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<patch>
+<Patch>
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Biotech</li>
@@ -16,4 +16,4 @@
       </value>
     </match>
   </Operation>
-</patch>
+</Patch>
