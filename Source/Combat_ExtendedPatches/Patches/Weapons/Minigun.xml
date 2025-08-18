@@ -110,4 +110,12 @@
 			</li>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateMachineGun"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A large, unwieldy Illuminate machine gun, capable of outputting near-unparalleled suppressive firepower. Burns through ammunition rather quickly - A fact that makes its compatibility with standard 8x40mm rifle projectiles all the more welcome.</description>
+		</value>
+	</Operation>
 </Patch>
