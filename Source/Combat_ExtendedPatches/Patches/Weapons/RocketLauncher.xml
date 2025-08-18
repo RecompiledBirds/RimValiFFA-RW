@@ -63,7 +63,7 @@
 				<magazineSize>1</magazineSize>
 				<reloadTime>6.6</reloadTime>
 				<ammoSet>AmmoSet_IlluminateRocket</ammoSet>
-			<AmmoUser>
+			</AmmoUser>
 			<FireModes>
 				<aiUseBurstMode>FALSE</aiUseBurstMode>
 				<aiAimMode>AimedShot</aiAimMode>
