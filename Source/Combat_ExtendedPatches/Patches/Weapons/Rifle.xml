@@ -94,5 +94,14 @@
 		<AllowWithRunAndGun>true</AllowWithRunAndGun>
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
 	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_Rifle"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A standard, reliable Illuminate service rifle. While its raw firepower may pale in comparison to some of the heavier weapons the Illuminate may have to offer, this weapon's reputation is well earned, as an accurate, practical workhorse prized by soldiers and hunters alike.</description>
+		</value>
+	</Operation>
 
 </Patch>
