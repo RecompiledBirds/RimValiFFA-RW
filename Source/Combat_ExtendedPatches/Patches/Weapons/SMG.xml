@@ -92,4 +92,12 @@
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateSMG"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A compact Illuminate coilgun filling the role of a submachine gun. Compact enough to be carried as a secondary weapon, but powerful enough to be used as a primary, what it lacks in range it makes up for with a rapid firerate, high capacity, and armour piercing rivalling human assault rifles.</description>
+		</value>
+	</Operation>
 </Patch>
