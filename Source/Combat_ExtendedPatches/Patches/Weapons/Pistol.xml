@@ -79,5 +79,14 @@
 		<AllowWithRunAndGun>true</AllowWithRunAndGun>
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
 	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminatePistol"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A compact, practical sidearm of Illuminate design. What this miniature coilgun lacks in stopping power, it makes up for with a high capacity and impressive anti-armour capabilities for a sidearm, along with its solid accuracy pushing its effective range slightly beyond that of comparable human weapons.</description>
+		</value>
+	</Operation>
 
 </Patch>
