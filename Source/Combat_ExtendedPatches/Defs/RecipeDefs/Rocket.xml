@@ -48,7 +48,7 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="AdvancedLauncherAmmoRecipeBase">
-		<defName>MakeAmmo_RPG7Grenade_Thermobaric</defName>
+		<defName>MakeAmmo_IlluminateRocket_Thermobaric</defName>
 		<label>make Illuminate (Thermobaric) rockets x5</label>
 		<description>Craft 5 Illuminate (Thermobaric) rockets.</description>
 		<jobString>Making Illuminate (Thermobaric) rockets.</jobString>
