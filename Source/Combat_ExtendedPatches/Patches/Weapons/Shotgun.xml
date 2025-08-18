@@ -91,4 +91,12 @@
 		<AllowWithRunAndGun>true</AllowWithRunAndGun>
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
 	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateShotgun"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A powerful shotgun of Illuminate design. While its effective range may not be that of a rifle, a tighter spread and faster projectiles offers this shotgun a longer effective range than comparable human weapons, as well as greater armour piercing, and while its power may suffer in comparison it is still not to be underestimated.</description>
+		</value>
+	</Operation>
 </Patch>
