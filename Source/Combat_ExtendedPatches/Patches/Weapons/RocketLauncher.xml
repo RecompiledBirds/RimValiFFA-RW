@@ -4,81 +4,83 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>
 			Defs/ThingDef[defName="RVFFA_IlluminateRocket"]
-    </xpath>
-
-<label>Illuminate Rocket Launcher</label>
-		<description>An unguided shoulderfire rocket launcher of Illuminate design. This one seems to be an older, reusable model, and while it may have somewhat reduced power compared to the newer disposable models, the increased variety of warheads available brings an additional layer of adaptability that is much appreciated out here on the rim.</description>
-		<graphicData>
-			<texPath>Things/Weapons/RPG</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(1.38,1.38)</drawSize>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<weaponClasses>
-			<li>RangedHeavy</li>
-		</weaponClasses>
-		<statBases>
-			<WorkToMake>35500</WorkToMake>
-			<SightsEfficiency>2.16</SightsEfficiency>
-			<ShotSpread>0.14</ShotSpread>
-			<SwayFactor>1.68</SwayFactor>
-			<Bulk>10.50</Bulk>
-			<Mass>7.00</Mass>
-			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
-		</statBases>
-		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
-			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
-		</costList>
-		<weaponTags Inherit="False">
-			<li>GunHeavy</li>
-			<li>CE_AI_AOE</li>
-		</weaponTags>
-		<verbs>
-			<li Class="CombatExtended.VerbPropertiesCE">
-				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_IlluminateRocket_HEAT</defaultProjectile>
-				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-				<warmupTime>2.035</warmupTime>
-				<range>45</range><!-- grenades at 12.9, rockets at 40 -->
-				<minRange>5</minRange>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-				<soundCast>InfernoCannon_Fire</soundCast>
-				<muzzleFlashScale>14</muzzleFlashScale>
-			</li>
-		</verbs>
-		<comps>
-			<li Class="CombatExtended.CompProperties_AmmoUser">
-				<magazineSize>1</magazineSize>
-				<reloadTime>6.6</reloadTime>
-				<ammoSet>AmmoSet_IlluminateRocket</ammoSet>
-			</li>
-			<li Class="CombatExtended.CompProperties_FireModes">
-				<aiUseBurstMode>FALSE</aiUseBurstMode>
-				<aiAimMode>AimedShot</aiAimMode>
-			</li>
-		</comps>
-		<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
-		<tools>
-			<li Class="CombatExtended.ToolCE">
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2.44</cooldownTime>
-				<armorPenetrationBlunt>3.5</armorPenetrationBlunt>
-				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
-			</li>
-		</tools>
-		<modExtensions>
-			<li Class="CombatExtended.GunDrawExtension">
-				<DrawOffset>-0.2,0.0</DrawOffset>
-			</li>
-		</modExtensions>
+    	</xpath>
+	
+		<value>
+			<label>Illuminate Rocket Launcher</label>
+			<description>An unguided shoulderfire rocket launcher of Illuminate design. This one seems to be an older, reusable model, and while it may have somewhat reduced power compared to the newer disposable models, the increased variety of warheads available brings an additional layer of adaptability that is much appreciated out here on the rim.</description>
+			<graphicData>
+				<texPath>Things/Weapons/RPG</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<drawSize>(1.38,1.38)</drawSize>
+			</graphicData>
+			<soundInteract>Interact_Rifle</soundInteract>
+			<weaponClasses>
+				<li>RangedHeavy</li>
+			</weaponClasses>
+			<statBases>
+				<WorkToMake>35500</WorkToMake>
+				<SightsEfficiency>2.16</SightsEfficiency>
+				<ShotSpread>0.14</ShotSpread>
+				<SwayFactor>1.68</SwayFactor>
+				<Bulk>10.50</Bulk>
+				<Mass>7.00</Mass>
+				<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			</statBases>
+			<costList>
+				<Steel>60</Steel>
+				<ComponentIndustrial>4</ComponentIndustrial>
+				<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
+			</costList>
+			<weaponTags Inherit="False">
+				<li>GunHeavy</li>
+				<li>CE_AI_AOE</li>
+			</weaponTags>
+			<verbs>
+				<li Class="CombatExtended.VerbPropertiesCE">
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_IlluminateRocket_HEAT</defaultProjectile>
+					<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+					<warmupTime>2.035</warmupTime>
+					<range>45</range><!-- grenades at 12.9, rockets at 40 -->
+					<minRange>5</minRange>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					<soundCast>InfernoCannon_Fire</soundCast>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</li>
+			</verbs>
+			<comps>
+				<li Class="CombatExtended.CompProperties_AmmoUser">
+					<magazineSize>1</magazineSize>
+					<reloadTime>6.6</reloadTime>
+					<ammoSet>AmmoSet_IlluminateRocket</ammoSet>
+				</li>
+				<li Class="CombatExtended.CompProperties_FireModes">
+					<aiUseBurstMode>FALSE</aiUseBurstMode>
+					<aiAimMode>AimedShot</aiAimMode>
+				</li>
+			</comps>
+			<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>2.44</cooldownTime>
+					<armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				</li>
+			</tools>
+			<modExtensions>
+				<li Class="CombatExtended.GunDrawExtension">
+					<DrawOffset>-0.2,0.0</DrawOffset>
+				</li>
+			</modExtensions>
+		</value>
   </Operation>
 </Patch>
