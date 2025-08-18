@@ -93,4 +93,12 @@
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateSniperRifle"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A heavy Illuminate anti-materiel sniper railgun, providing accurate firepower at long range, with an extreme degree of armour piercing capable of easily punching through almost any personal armour, and even light vehicle armour.</description>
+		</value>
+	</Operation>
 </Patch>
