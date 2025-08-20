@@ -45,19 +45,18 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>RVFFA_IlluminateMachineGun</defName>
 		<statBases>
-			<Mass>15.7</Mass>
+			<Mass>14.3</Mass>
 			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
 			<SightsEfficiency>1.4</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.6</NightVisionEfficiency_Weapon>
 			<!-- Some weapons have have advanced optics that reduce the penalty for shooting in the dark. -->
 			<ShotSpread>0.05</ShotSpread>
 			<SwayFactor>3.17</SwayFactor>
-			<Bulk>13.1</Bulk>
+			<Bulk>12.8</Bulk>
 			<WorkToMake>37500</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>100</Steel>
-			<ComponentSpacer>1</ComponentSpacer>
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
 		</costList>
