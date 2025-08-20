@@ -75,10 +75,16 @@
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>
-			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/description <!-- This works the same as patching a melee weapon. -->
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/description 
 		</xpath>
 		<value>
 			<description>An unguided shoulderfire rocket launcher of Illuminate design. This one seems to be an older, reusable model, and while it may have somewhat reduced power compared to the newer disposable models, the increased variety of warheads available brings an additional layer of adaptability that is much appreciated out here on the rim.</description>
 		</value>
+	</Operation>
+	<!-- Given this patch makes it craftable, having the price be based on parts & labour seems reasonable to make sure one weirdly-priced weapon doesnt completely break the economy -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/statBases/MarketValue
+		</xpath>
 	</Operation>
 </Patch>
