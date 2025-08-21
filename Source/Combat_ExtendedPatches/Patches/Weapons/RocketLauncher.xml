@@ -87,4 +87,22 @@
 			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/statBases/MarketValue
 		</xpath>
 	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]
+		</xpath>
+		<value>
+			<recipeMaker>
+				<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+				<workSkill>Crafting</workSkill>
+				<effectWorking>Smith</effectWorking>
+				<soundWorking>Recipe_Smith</soundWorking>
+				<recipeUsers>
+					<li>RVFFA_NanoForge</li>
+				</recipeUsers>
+				<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+				<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
+			</recipeMaker>
+		</value>
+	</Operation>
 </Patch>
