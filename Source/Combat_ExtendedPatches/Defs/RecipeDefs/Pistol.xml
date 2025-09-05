@@ -57,7 +57,7 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_IlluminateCommonAmmoHP</defName>
-		<label>make 6x15mm Illuminate (AP) x500</label>
+		<label>make 6x15mm Illuminate (HP) x500</label>
 		<description>Craft 500 rounds of 6x15mm Illuminate.</description>
 		<jobString>Making Illuminate Pistol rounds.</jobString>
 		<ingredients>
