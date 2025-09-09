@@ -46,27 +46,27 @@
 		<defName>RVFFA_Rifle</defName>
 		<statBases>
 			<Mass>3.5</Mass>
-			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
-			<SightsEfficiency>0.9</SightsEfficiency>
-			<ShotSpread>0.01</ShotSpread>
-			<SwayFactor>1.78</SwayFactor>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.1</SightsEfficiency>
+			<ShotSpread>0.06</ShotSpread>
+			<SwayFactor>1.28</SwayFactor>
 			<Bulk>10.90</Bulk>
 			<WorkToMake>34000</WorkToMake>
 		</statBases>
 		<costList>
 			<Steel>50</Steel>
 			<ComponentIndustrial>4</ComponentIndustrial>
-			<RVFFA_ProcessedTungsten>7</RVFFA_ProcessedTungsten>
+			<RVFFA_ProcessedTungsten>15</RVFFA_ProcessedTungsten>
 		</costList>
 		<Properties>
-			<recoilAmount>1.1</recoilAmount>
+			<recoilAmount>1.4</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>RVFFA_RifleBulletFMJ</defaultProjectile>
-			<warmupTime>1.6</warmupTime>
-			<range>48</range>
-			<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-			<burstShotCount>1</burstShotCount>
+			<warmupTime>1.4</warmupTime>
+			<range>58</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>4</burstShotCount>
 			<!-- Deleting this field will make the weapon fire single shots. -->
 			<soundCast>Shot_Autopistol</soundCast>
 			<soundCastTail>GunTail_Medium</soundCastTail>
@@ -77,21 +77,31 @@
 			</targetParams>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>50</magazineSize>
+			<magazineSize>40</magazineSize>
 			<reloadTime>4.9</reloadTime>
 			<ammoSet>RVFFA_RifleAmmoSet</ammoSet>
 			<reloadOneAtATime>false</reloadOneAtATime>
 		</AmmoUser>
 		<FireModes>
 			<aiUseBurstMode>FALSE</aiUseBurstMode>
-			<aiAimMode>Snapshot</aiAimMode>
+			<aimedBurstShotCount>2</aimedBurstShotCount>
+			<aiAimMode>AimedShot</aiAimMode>
 		</FireModes>
 		<weaponTags>
-			<li>CE_AI_BROOM</li>
+			<li>CE_AI_AR</li>
 		</weaponTags>
 		<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
-		<AllowWithRunAndGun>false</AllowWithRunAndGun>
+		<AllowWithRunAndGun>true</AllowWithRunAndGun>
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_Rifle"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A standard, reliable Illuminate service rifle. While its raw firepower may pale in comparison to some of the heavier weapons the Illuminate may have to offer, this weapon's reputation is well earned, as an accurate, practical workhorse prized by soldiers and hunters alike.</description>
+		</value>
 	</Operation>
 
 </Patch>

@@ -44,27 +44,27 @@
 		<defName>RVFFA_IlluminateSMG</defName>
 		<statBases>
 			<Mass>2.5</Mass>
-			<RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
-			<SightsEfficiency>0.9</SightsEfficiency>
+			<RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.1</SightsEfficiency>
 			<ShotSpread>0.12</ShotSpread>
 			<SwayFactor>0.92</SwayFactor>
 			<Bulk>4.90</Bulk>
 			<WorkToMake>34000</WorkToMake>
 		</statBases>
 		<costList>
-			<Steel>150</Steel>
+			<Steel>25</Steel>
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<RVFFA_ProcessedTungsten>12</RVFFA_ProcessedTungsten>
 		</costList>
 
 		<Properties>
-			<recoilAmount>1.1</recoilAmount>
+			<recoilAmount>1.4</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>RVFFA_MinigunBulletFMJ</defaultProjectile>
+			<defaultProjectile>RVFFA_IlluminateCommonAmmoFMJ</defaultProjectile>
 			<warmupTime>0.7</warmupTime>
-			<range>50</range>
-			<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<range>28</range>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 			<burstShotCount>6</burstShotCount>
 			<!-- Deleting this field will make the weapon fire single shots. -->
 			<soundCast>Shot_Autopistol</soundCast>
@@ -74,13 +74,13 @@
 			</targetParams>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>120</magazineSize>
+			<magazineSize>48</magazineSize>
 			<reloadTime>4.2</reloadTime>
-			<ammoSet>RVFFA_MinigunAmmoSet</ammoSet>
-			<reloadOneAtATime>True</reloadOneAtATime>
+			<ammoSet>RVFFA_PistolAmmoSetCommon</ammoSet>
 		</AmmoUser>
 		<FireModes>
 			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
 			<aiAimMode>Snapshot</aiAimMode>
 		</FireModes>
 		<weaponTags>
@@ -88,8 +88,16 @@
 			<li>CE_AI_BROOM</li>
 		</weaponTags>
 		<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
-		<AllowWithRunAndGun>false</AllowWithRunAndGun>
+		<AllowWithRunAndGun>true</AllowWithRunAndGun>
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateSMG"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A compact Illuminate coilgun filling the role of a submachine gun. Compact enough to be carried as a secondary weapon, but powerful enough to be used as a primary, what it lacks in range it makes up for with a rapid firerate, high capacity, and armour piercing rivalling human assault rifles.</description>
+		</value>
+	</Operation>
 </Patch>

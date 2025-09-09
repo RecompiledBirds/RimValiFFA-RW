@@ -3,7 +3,7 @@
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>
-			Defs/ThingDef[defName="RVFFA_SniperRifle"]/tools <!-- This works the same as patching a melee weapon. -->
+			Defs/ThingDef[defName="RVFFA_IlluminateSniperRifle"]/tools <!-- This works the same as patching a melee weapon. -->
 		</xpath>
 		<value>
 			<tools>
@@ -43,26 +43,27 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-		<defName>RVFFA_SniperRifle</defName>
+		<defName>RVFFA_IlluminateSniperRifle</defName>
 		<statBases>
-			<Mass>3.5</Mass>
-			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
-			<SightsEfficiency>3.0</SightsEfficiency>
-			<ShotSpread>0.03</ShotSpread>
+			<Mass>5.5</Mass>
+			<RangedWeapon_Cooldown>0.49</RangedWeapon_Cooldown>
+			<SightsEfficiency>3.2</SightsEfficiency>
+			<ShotSpread>0.02</ShotSpread>
 			<SwayFactor>1.2</SwayFactor>
-			<Bulk>10.90</Bulk>
+			<Bulk>8.90</Bulk>
 			<WorkToMake>66000</WorkToMake>
 		</statBases>
 		<costList>
-			<Steel>250</Steel>
-			<ComponentSpacer>5</ComponentSpacer>
+			<Steel>70</Steel>
+			<ComponentSpacer>3</ComponentSpacer>
+			<!--Toned it down but this still feels expensive, although given it fires with the rough power of a 14.5x115mm round, while otherwise behaving like a relatively standard 7.62x51mm DMR, this thing may still be pretty scary -->
 			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
 		</costList>
 		<Properties>
 			<recoilAmount>1.1</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>RVFFA_SniperRifleBulletFMJ</defaultProjectile>
+			<defaultProjectile>RVFFA_SniperRifleBulletSabot</defaultProjectile>
 			<warmupTime>1.6</warmupTime>
 			<range>90</range>
 			<soundCast>Shot_SniperRifle</soundCast>
@@ -73,22 +74,31 @@
 			</targetParams>
 		</Properties>
 		<AmmoUser>
-			<magazineSize>7</magazineSize>
-			<reloadTime>4.9</reloadTime>
+			<magazineSize>4</magazineSize>
+			<reloadTime>1.3</reloadTime>
 			<ammoSet>RVFFA_SniperRifleAmmoSet</ammoSet>
 			<reloadOneAtATime>True</reloadOneAtATime>
 		</AmmoUser>
 		<FireModes>
 			<aiUseBurstMode>FALSE</aiUseBurstMode>
-			<aiAimMode>Snapshot</aiAimMode>
+			<aiAimMode>AimedShot</aiAimMode>
 		</FireModes>
 		<weaponTags>
-			<li>CE_AI_BROOM</li>
+			<li>CE_AI_SR</li>
 			<li>Bipod_DMR</li>
+			<li>Advanced_Weapom</li>
 		</weaponTags>
 		<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
 		<!-- When the Run And Gun mod is enabled, can this weapon be fired on the move? -->
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateSniperRifle"]/description <!-- This works the same as patching a melee weapon. -->
+		</xpath>
+		<value>
+			<description>A heavy Illuminate anti-materiel sniper railgun, providing accurate firepower at long range, with an extreme degree of armour piercing capable of easily punching through almost any personal armour, and even light vehicle armour.</description>
+		</value>
+	</Operation>
 </Patch>

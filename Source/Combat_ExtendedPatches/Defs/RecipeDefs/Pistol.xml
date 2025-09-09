@@ -4,9 +4,9 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_IlluminateCommonAmmoFMJ</defName>
-		<label>make Illuminate Pistol Ammo (FMJ) x500</label>
-		<description>Craft 500 Illuminate Pistol Ammo cartridges.</description>
-		<jobString>Making Illuminate Pistol Ammo cartridges.</jobString>
+		<label>make 6x15mm Illuminate (FMJ) x500</label>
+		<description>Craft 500 rounds of 6x15mm Illuminate.</description>
+		<jobString>Making Illuminate Pistol rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -14,7 +14,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>8</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -25,15 +25,15 @@
 		<products>
 			<RVFFA_IlluminateCommonAmmoFMJ>500</RVFFA_IlluminateCommonAmmoFMJ>
 		</products>
-		<workAmount>2800</workAmount>
+		<workAmount>900</workAmount>
 	</RecipeDef>
 
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_IlluminateCommonAmmoAP</defName>
-		<label>make Illuminate Pistol Ammo (AP) x500</label>
-		<description>Craft 500 Illuminate Pistol Ammo cartridges.</description>
-		<jobString>Making Illuminate Pistol Ammo cartridges.</jobString>
+		<label>make 6x15mm Illuminate (AP) x500</label>
+		<description>Craft 500 rounds of 6x15mm Illuminate.</description>
+		<jobString>Making Illuminate Pistol rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -41,7 +41,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>8</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -52,14 +52,14 @@
 		<products>
 			<RVFFA_IlluminateCommonAmmoAP>500</RVFFA_IlluminateCommonAmmoAP>
 		</products>
-		<workAmount>3360</workAmount>
+		<workAmount>1100</workAmount>
 	</RecipeDef>
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeRVFFA_IlluminateCommonAmmoHP</defName>
-		<label>make Illuminate Pistol Ammo (AP) x500</label>
-		<description>Craft 500 Illuminate Pistol Ammo cartridges.</description>
-		<jobString>Making Illuminate Pistol Ammo cartridges.</jobString>
+		<label>make 6x15mm Illuminate (HP) x500</label>
+		<description>Craft 500 rounds of 6x15mm Illuminate.</description>
+		<jobString>Making Illuminate Pistol rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -67,7 +67,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>8</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -78,6 +78,6 @@
 		<products>
 			<RVFFA_IlluminateCommonAmmoHP>500</RVFFA_IlluminateCommonAmmoHP>
 		</products>
-		<workAmount>2800</workAmount>
+		<workAmount>900</workAmount>
 	</RecipeDef>
 </Defs>

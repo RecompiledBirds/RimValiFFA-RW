@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/tools
+    	</xpath>
+		<value>
+			<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>2.44</cooldownTime>
+					<armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>RVFFA_IlluminateRocketLauncher</defName>
+		
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<statBases>
+			<WorkToMake>35500</WorkToMake>
+			<SightsEfficiency>2.16</SightsEfficiency>
+			<ShotSpread>0.14</ShotSpread>
+			<SwayFactor>1.68</SwayFactor>
+			<Bulk>10.50</Bulk>
+			<Mass>7.00</Mass>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<RVFFA_ProcessedTungsten>25</RVFFA_ProcessedTungsten>
+		</costList>
+		<weaponTags Inherit="False">
+			<li>GunHeavy</li>
+			<li>CE_AI_AOE</li>
+		</weaponTags>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_IlluminateRocket_HEAT</defaultProjectile>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<warmupTime>2.035</warmupTime>
+			<range>45</range><!-- grenades at 12.9, rockets at 40 -->
+			<minRange>5</minRange>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		</Properties>
+		
+			<AmmoUser>
+				<magazineSize>1</magazineSize>
+				<reloadTime>6.6</reloadTime>
+				<ammoSet>AmmoSet_IlluminateRocket</ammoSet>
+			</AmmoUser>
+			<FireModes>
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiAimMode>AimedShot</aiAimMode>
+			</FireModes>
+	
+		<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
+		
+  </Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/description 
+		</xpath>
+		<value>
+			<description>An unguided shoulderfire rocket launcher of Illuminate design. This one seems to be an older, reusable model, and while it may have somewhat reduced power compared to the newer disposable models, the increased variety of warheads available brings an additional layer of adaptability that is much appreciated out here on the rim.</description>
+		</value>
+	</Operation>
+	<!-- Given this patch makes it craftable, having the price be based on parts & labour seems reasonable to make sure one weirdly-priced weapon doesnt completely break the economy -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]/statBases/MarketValue
+		</xpath>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			Defs/ThingDef[defName="RVFFA_IlluminateRocketLauncher"]
+		</xpath>
+		<value>
+			<recipeMaker>
+				<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+				<workSkill>Crafting</workSkill>
+				<effectWorking>Smith</effectWorking>
+				<soundWorking>Recipe_Smith</soundWorking>
+				<recipeUsers>
+					<li>RVFFA_NanoForge</li>
+				</recipeUsers>
+				<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+				<researchPrerequisite>RVFFA_AdvancedWeaponryTech</researchPrerequisite>
+			</recipeMaker>
+		</value>
+	</Operation>
+</Patch>
