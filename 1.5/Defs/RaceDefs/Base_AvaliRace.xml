@@ -477,6 +477,10 @@
 			<li>RVFFA_InstallMiningDrones</li>
 			<li>RVFFA_InstallConstructionDrones</li>
 
+			<li>InstallBionicHeart</li>
+			<li>InstallBionicEye</li>
+			<li>InstallBionicSpine</li>
+
 			<!-- epoe-->
 			<li MayRequire="ykara.elstrages.epoe">InstallAdvancedBionicEye</li>
 			<li MayRequire="ykara.elstrages.epoe">InstallAdvancedBionicJaw</li>
