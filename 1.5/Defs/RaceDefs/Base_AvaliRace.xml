@@ -540,42 +540,6 @@
 			<li MayRequire="ykara.elstrages.epoe">InstallBionicStomach</li>
 			<li MayRequire="ykara.elstrages.epoe">InstallSyntheticLiver</li>
 			<li MayRequire="ykara.elstrages.epoe">InstallSyntheticKidney</li>
-
-			<!-- DE Surgery -->
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryBurn</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryCrush</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryCrack</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryCut</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjurySurgicalCut</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryScratch</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryBite</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryStab</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryGunshot</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryShredded</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryBruise</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureInjuryFrostbite</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesClavicle</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairToe</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicHearingLoss</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicCataract</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesRibCage</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesSternum</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesRadius</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesHumerus</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesFemur</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesTibia</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicAsthma</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureMuscleParasites</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureGutWorms</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicHeartArteryBlockage</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureWoundInfections</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBoneSpine</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">RepairBonesPelvis</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicDementia</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicAlzheimers</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicBadBack</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureChronicFrail</li>
-			<li MayRequire="proxyer.desurgeries.desurgeries">CureCirrhosis</li>
 		</recipes>
 		<inspectorTabs>
 			<li>RimValiFFARW.Packs.PackInspectionWindow</li>
