@@ -485,6 +485,70 @@
 			<li>RVFFA_InstallMicroPlantingDrones</li>
 			<li>RVFFA_InstallMiningDrones</li>
 			<li>RVFFA_InstallConstructionDrones</li>
+
+			<li>InstallBionicHeart</li>
+			<li>InstallBionicEye</li>
+			<li>InstallBionicSpine</li>
+
+			<!-- epoe-->
+			<li MayRequire="ykara.elstrages.epoe">InstallAdvancedBionicEye</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallAdvancedBionicJaw</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallAdvancedBionicSpine</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallExoskeletonSuit</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveExoskeletonSuit</li>
+
+			<li MayRequire="ykara.elstrages.epoe">InstallMuscleStimulatorArms</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveMuscleStimulatorArms</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallMuscleStimulatorLegs</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveMuscleStimulatorLegs</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallTacticalCorneaImplant</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveTacticalCorneaImplant</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallConstructorCore</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveConstructorCore</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallFarmerCore</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveFarmerCore</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallMinerCore</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveMinerCore</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallDoctorCore</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveDoctorCore</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallDiplomatCore</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveDiplomatCore</li>
+
+			<li MayRequire="ykara.elstrages.epoe">InstallEyePatch</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallHookHand</li>
+
+			<li MayRequire="ykara.elstrages.epoe">InstallBionicJaw</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSilentJaw</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallMedicalRib</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallDruggedRib</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallAdrenalineRib</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallPainkillerRib</li>
+
+			<li MayRequire="ykara.elstrages.epoe">RemoveBrainStimulator</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveAIChip</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveMedicalRib</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveDruggedRib</li>
+			<li MayRequire="ykara.elstrages.epoe">RemoveAdrenalineRib</li>
+			<li MayRequire="ykara.elstrages.epoe">RemovePainkillerRib</li>
+
+			<li MayRequire="ykara.elstrages.epoe">InstallGoldenEye</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallLightReceptor</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallHydraulicJaw</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallArtificialPelvis</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallArtificialClavicle</li>
+			
+			<li MayRequire="ykara.elstrages.epoe">InstallBrainStimulator</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSurrogateLung</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSurrogateStomach</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSurrogateLiver</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSurrogateKidney</li>
+
+			<li MayRequire="ykara.elstrages.epoe">InstallAIChip</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallAIPersonaCore</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSyntheticLung</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallBionicStomach</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSyntheticLiver</li>
+			<li MayRequire="ykara.elstrages.epoe">InstallSyntheticKidney</li>
 		</recipes>
 		<inspectorTabs>
 			<li>RimValiFFARW.Packs.PackInspectionWindow</li>
