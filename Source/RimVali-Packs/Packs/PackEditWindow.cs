@@ -1,13 +1,6 @@
 ﻿using RimWorld;
-using RVCRestructured;
-using RVCRestructured.RVR;
 using RVCRestructured.Windows;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -149,7 +142,7 @@ namespace RimValiFFARW.Packs
             if (isDefSwitched)
             {
                 acceptPack &= Pack.CanPawnsMakePack(newPackDef, fullCurrentTempPackMembers, true, out failReason1);
-            } 
+            }
             else
             {
                 acceptPack &= newPackMates.All(pawn => pack.Worker.PawnCanJoinPack(curPackMates, pawn, false, true, out failReason1));
@@ -177,10 +170,10 @@ namespace RimValiFFARW.Packs
                     manager.AddPack(newPack);
                     PackInspectionWindow.GetCurrentPackInspectionWindow?.OnOpen();
                     Close();
-                } 
-                else if(acceptPack && !isDefSwitched)
+                }
+                else if (acceptPack && !isDefSwitched)
                 {
-                    foreach (Pawn pawn in fullCurrentTempPackMembers) 
+                    foreach (Pawn pawn in fullCurrentTempPackMembers)
                     {
                         pack.AddMember(pawn, false);
                     }
@@ -206,7 +199,7 @@ namespace RimValiFFARW.Packs
         {
             if (!CanAddMorePawnsToPack) return;
             Vector2 tempPos = new Vector2(0f, PackInspectionWindow.ListRectTemplateHeight) * (newPackMates.Count + oldPackMates.Count + curPackMates.Count) + memberListPartInner.position;
-            Rect temp = new Rect(tempPos, new Vector2(memberListPartInner.width, PackInspectionWindow.ListRectTemplateHeight));
+            Rect temp = new(tempPos, new Vector2(memberListPartInner.width, PackInspectionWindow.ListRectTemplateHeight));
 
             Widgets.DrawBoxSolidWithOutline(temp, otherGrey, Color.gray, 2);
             Widgets.DrawHighlightIfMouseover(temp);

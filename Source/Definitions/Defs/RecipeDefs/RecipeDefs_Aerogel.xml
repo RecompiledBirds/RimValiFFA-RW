@@ -14,36 +14,10 @@
 		</researchPrerequisites>
 	</RecipeDef>
 	
+
 	<RecipeDef ParentName="RVFFA_BaseFerogelRecipe">
 		<defName>RVFFA_PrintFerrogel</defName>
 		<label>Print ferrogel</label>
-		<workAmount>10</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>5</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Plasteel</li>
-					</thingDefs>
-				</filter>
-				<count>5</count>
-			</li>
-		</ingredients>
-		<products>
-			<RVFFA_Ferrogel>10</RVFFA_Ferrogel>
-		</products>
-	</RecipeDef>
-
-	<RecipeDef ParentName="RVFFA_BaseFerogelRecipe">
-		<defName>RVFFA_PrintFerrogelTwo</defName>
-		<label>Print ferrogel (20)</label>
 		<ingredients>
 			<li>
 				<filter>
@@ -67,29 +41,4 @@
 		</products>
 	</RecipeDef>
 
-	<RecipeDef ParentName="RVFFA_BaseFerogelRecipe">
-		<defName>RVFFA_PrintFerrogelThree</defName>
-		<label>Print ferrogel (40)</label>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>30</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Plasteel</li>
-					</thingDefs>
-				</filter>
-				<count>20</count>
-			</li>
-		</ingredients>
-		<products>
-			<RVFFA_Ferrogel>40</RVFFA_Ferrogel>
-		</products>
-	</RecipeDef>
 </Defs>

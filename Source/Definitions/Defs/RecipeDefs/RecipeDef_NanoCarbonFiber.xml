@@ -12,35 +12,10 @@
 		</researchPrerequisites>
     </RecipeDef>
 
+
     <RecipeDef ParentName="RVFFA_BaseNanoCRecipe">
         <defName>RVFFA_NanoCarbonFiberRecipe</defName>
         <label>Weave nano-carbon fiber</label>
-        <ingredients>
-            <li>
-                <filter>
-                <thingDefs>
-                    <li>RVFFA_NanoFiber</li>
-                </thingDefs>
-                </filter>
-                <count>2</count>
-            </li>
-            <li>
-                <filter>
-                <thingDefs>
-                    <li>RVFFA_RefinedCarbon</li>
-                </thingDefs>
-                </filter>
-                <count>5</count>
-            </li>
-        </ingredients>
-        <products>
-            <RVFFA_NanoCarbonFiber>10</RVFFA_NanoCarbonFiber>
-        </products>
-    </RecipeDef>
-
-    <RecipeDef ParentName="RVFFA_BaseNanoCRecipe">
-        <defName>RVFFA_NanoCarbonFiberRecipeTwo</defName>
-        <label>Weave nano-carbon fiber (10)</label>
         <ingredients>
             <li>
                 <filter>
@@ -61,32 +36,6 @@
         </ingredients>
         <products>
             <RVFFA_NanoCarbonFiber>10</RVFFA_NanoCarbonFiber>
-        </products>
-    </RecipeDef>
-
-    <RecipeDef ParentName="RVFFA_BaseNanoCRecipe">
-        <defName>RVFFA_NanoCarbonFiberRecipeThree</defName>
-        <label>Weave nano-carbon fiber (50)</label>
-        <ingredients>
-            <li>
-                <filter>
-                <thingDefs>
-                    <li>RVFFA_NanoFiber</li>
-                </thingDefs>
-                </filter>
-                <count>50</count>
-            </li>
-            <li>
-                <filter>
-                <thingDefs>
-                    <li>RVFFA_RefinedCarbon</li>
-                </thingDefs>
-                </filter>
-                <count>100</count>
-            </li>
-        </ingredients>
-        <products>
-            <RVFFA_NanoCarbonFiber>50</RVFFA_NanoCarbonFiber>
         </products>
     </RecipeDef>
 </Defs>

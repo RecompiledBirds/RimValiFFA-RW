@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <BackstoryDef Name="RVFFA_BaseAvaliStory" Abstract="True">
-    <bodyTypeGlobal>RVFFA_Avali</bodyTypeGlobal>
+    <!--<bodyTypeGlobal>RVFFA_Avali</bodyTypeGlobal>-->
   </BackstoryDef>
   <BackstoryDef Name="RVFFA_BaseIlluminateStory" Abstract="True">
-    <bodyTypeGlobal>RVFFA_Avali</bodyTypeGlobal>
+    <!--<bodyTypeGlobal>RVFFA_Avali</bodyTypeGlobal>-->
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RVFFA_Illuminate</li>

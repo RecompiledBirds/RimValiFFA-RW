@@ -20,11 +20,10 @@
 			<Insulation_Cold>15</Insulation_Cold>
 			<Insulation_Heat>15</Insulation_Heat>
 		</statBases>
-
 		<equippedStatOffsets>
-			<MoveSpeed>-1</MoveSpeed>
+			<MoveSpeed>0.1</MoveSpeed>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.75</VacuumResistance>
 		</equippedStatOffsets>
-
 		<costList>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
@@ -126,9 +125,8 @@
 		</statBases>
 		<equippedStatOffsets>
 			<ShootingAccuracyPawn>+0.2</ShootingAccuracyPawn>
-			<MoveSpeed>-1.5</MoveSpeed>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.98</VacuumResistance>
 		</equippedStatOffsets>
-
 		<recipeMaker>
 			<researchPrerequisite>RVFFA_SpecOpsTech</researchPrerequisite>
 		</recipeMaker>

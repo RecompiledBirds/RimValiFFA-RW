@@ -137,10 +137,4 @@
 		<initialWillRange>1~2</initialWillRange>
 		<initialResistanceRange>10~17</initialResistanceRange>
 	</PawnKindDef>
-
-	<PawnKindDef ParentName="Villager_Child">
-		<defName>RVFFA_IW_Villager_Child</defName>
-		<race>RVFFA_Avali</race>
-		<defaultFactionDef>RVFFA_IWNeutral</defaultFactionDef>
-	</PawnKindDef>
 </Defs>

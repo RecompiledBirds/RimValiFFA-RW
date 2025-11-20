@@ -66,23 +66,16 @@
 
 		<recipes>
 			<li>RVFFA_PrintFerrogel</li>
-			<li>RVFFA_PrintFerrogelTwo</li>
-			<li>RVFFA_PrintFerrogelThree</li>
 
 			<li>RVFFA_SinterTungsten</li>
-			<li>RVFFA_SinterTungstenTwo</li>
-			<li>RVFFA_SinterTungstenThree</li>
 
 			<li>RVFFA_ForgeAeroTungstenCarbide</li>
-			<li>RVFFA_ForgeAeroTungstenCarbideTwo</li>
-			<li>RVFFA_ForgeAeroTungstenCarbideThree</li>
 
 			<li>RVFFA_RefineCarbon</li>
-			<li>RVFFA_RefineCarbonTwo</li>
-			<li>RVFFA_RefineCarbonThree</li>
-
 
 			<li>RVFFA_MakeSabot</li>
+
+			<li>RVFFA_AssembleNanoMachines</li>
 
 		</recipes>
 		<researchPrerequisites>
