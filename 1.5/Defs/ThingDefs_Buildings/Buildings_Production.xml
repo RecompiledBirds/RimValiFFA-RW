@@ -90,6 +90,12 @@
 			<li>RVFFA_LathingTech</li>
 		</researchPrerequisites>
 
+		<building>
+    		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    		<workTableRoomRole>Workshop</workTableRoomRole>
+    		<workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    	</building>
+
 		<graphicData>
 			<texPath>RimValiFFA/Buildings/Production/NanoForge</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -146,6 +152,12 @@
 		<researchPrerequisites>
 			<li>RVFFA_LoomTech</li>
 		</researchPrerequisites>
+
+		<building>
+    		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    		<workTableRoomRole>Workshop</workTableRoomRole>
+    		<workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    	</building>
 
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 	</ThingDef>
@@ -216,6 +228,11 @@
 		<surfaceType>Item</surfaceType>
 		<designationHotKey>Misc4</designationHotKey>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+
+    	<building>
+    		<workTableRoomRole>Laboratory</workTableRoomRole>
+    		<workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    	</building>
 
 		<researchPrerequisites>
 			<li>RVFFA_BasicStartTech</li>
