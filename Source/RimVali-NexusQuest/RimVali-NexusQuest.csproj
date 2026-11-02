@@ -11,7 +11,7 @@
 	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	  <Nullable>enable</Nullable>
 	  <LangVersion>12.0</LangVersion>
-	  <OutputPath>../../1.6/Assemblies</OutputPath>
+	  <OutputPath>../../1.7/Assemblies</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

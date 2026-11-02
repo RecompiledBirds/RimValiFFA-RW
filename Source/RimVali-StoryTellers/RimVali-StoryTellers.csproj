@@ -10,7 +10,7 @@
 		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<OutputPath>../../1.6/Assemblies</OutputPath>
+		<OutputPath>../../1.7/Assemblies</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>

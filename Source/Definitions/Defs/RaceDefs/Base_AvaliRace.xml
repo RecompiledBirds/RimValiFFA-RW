@@ -46,6 +46,11 @@
 			<li Class="RVCRestructured.VineSpeciesConfig">
 				<disableGeneFurRendering>true</disableGeneFurRendering>
 			</li>
+
+			<li Class="RVCRestructured.RVRCP">
+				
+			</li>
+			
 			<li Class="RVCRestructured.RVRGraphicsComp">
 				<renderableDefs>
 					<li>RVFFA_EyeL</li>

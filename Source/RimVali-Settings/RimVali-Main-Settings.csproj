@@ -11,7 +11,7 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>12.0</LangVersion>
 		<!-- Target version paths -->
-		<RimworldVersion>1.6</RimworldVersion>
+		<RimworldVersion>1.7</RimworldVersion>
 		<VersionPath>../../$(RimworldVersion)</VersionPath>
 		<OutputPath>$(VersionPath)/Assemblies</OutputPath>
 		<DefOutputPath>$(VersionPath)/Defs/</DefOutputPath>

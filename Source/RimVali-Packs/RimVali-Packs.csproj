@@ -10,7 +10,7 @@
 	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Nullable>enable</Nullable>
 	 <LangVersion>12.0</LangVersion>
-	  <OutputPath>../../1.6/Assemblies</OutputPath>
+	  <OutputPath>../../1.7/Assemblies</OutputPath>
 
   </PropertyGroup>
 
@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <Reference Include="RVCRestructured">
-      <HintPath>..\..\..\Vine\1.6\Assemblies\RVCRestructured.dll</HintPath>
+      <HintPath>..\..\..\Vine\1.7\Assemblies\RVCRestructured.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
